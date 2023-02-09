@@ -1,0 +1,77 @@
+.row {
+    width: 1927px;
+    height: 950px;
+    left: 0px;
+    top: 0;
+    padding-left: -2.0px;
+}
+
+.img {
+    width: 1927px;
+    height: 950px;
+    left: 0px;
+    top: 0;
+
+}
+
+.h1 {
+    position: absolute;
+    height: 191px;
+    left: 11.1%;
+    right: 56.48%;
+    top: 525px;
+    font-family: 'Klavika';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -1.2px;
+    text-transform: uppercase;
+
+}
+
+.text-primary {
+    position: absolute;
+    height: 191px;
+    left: 11.1%;
+    right: 56.48%;
+    top: 525px;
+    font-family: 'Klavika';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -1.2px;
+    text-transform: uppercase;
+
+    color: #2D8DD5;
+
+}
+
+.col-md-6 {
+    width: 0px;
+    height: 0px;
+}
+
+.text-left,
+.text-right {
+    width: 1920px;
+    height: 930px;
+    left: 0px;
+    top: 953px;
+
+}
+
+.Rectangle {
+    width: 9.33px;
+    height: 26px;
+    top: 1011px;
+    left: 123.07px;
+    border-radius: 2px;
+    color: rgb(51, 122, 230);
+
+}

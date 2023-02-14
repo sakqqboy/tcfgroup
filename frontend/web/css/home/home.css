@@ -1,4 +1,4 @@
-.text-primary {
+.text1 {
     position: absolute;
     height: 191px;
     left: 11.1%;
@@ -10,15 +10,25 @@
     line-height: 10px;
     letter-spacing: -1px;
     text-transform: uppercase;
+    color: #2D8DD5;
 
 }
 
-.text {
+.text2 {
     position: absolute;
-    width: 200px;
+    width: 600px;
     height: 191px;
     left: 9%;
     top: 720px;
+    color: white;
+}
+
+.text3 {
+    position: absolute;
+    width: 600px;
+    height: 191px;
+    left: 1%;
+    top: 130px;
     color: white;
 }
 
@@ -36,7 +46,7 @@
     left: 8%;
     top: 800px;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 
@@ -47,6 +57,7 @@
     right: 40%;
     top: 800px;
     color: white;
+    font-size: 14px;
 }
 
 .img4 {
@@ -64,11 +75,149 @@
 }
 
 
+.icon-1 {
+    position: absolute;
+    left: 45.5%;
+    top: 1040px;
+}
+
+.icon-2 {
+    position: absolute;
+    left: 50%;
+    top: 1100px;
+}
+
+.icon-3 {
+    position: absolute;
+    left: 50%;
+    top: 1140px;
+}
+
+.icon-4 {
+    position: absolute;
+    left: 54%;
+    top: 1130px;
+}
+
+.icon-5 {
+    position: absolute;
+    left: 57%;
+    top: 1019px;
+}
+
+.icon-6 {
+    position: absolute;
+    left: 60%;
+    top: 1084px;
+}
+
+.icon-7 {
+    position: absolute;
+    left: 63%;
+    top: 1188px;
+}
+
+.icon-8 {
+    position: absolute;
+    left: 65%;
+    top: 1110px;
+}
+
+.icon-9 {
+    position: absolute;
+    left: 68%;
+    top: 950px;
+}
+
+.icon-10 {
+    position: absolute;
+    left: 64%;
+    top: 1000px;
+}
+
+.icon-11 {
+    position: absolute;
+    left: 69%;
+    top: 1033px;
+}
+
+.icon-12 {
+    position: absolute;
+    left: 71%;
+    top: 1040px;
+}
+
+.icon-13 {
+    position: absolute;
+    left: 72%;
+    top: 1060px;
+}
+
+.icon-14 {
+    position: absolute;
+    left: 72%;
+    top: 1085px;
+}
+
+.icon-15 {
+    position: absolute;
+    left: 75%;
+    top: 960px;
+}
+
+.icon-16 {
+    position: absolute;
+    left: 74%;
+    top: 1010px;
+}
+
+.icon-17 {
+    position: absolute;
+    left: 75%;
+    top: 1029px;
+}
+
+.icon-18 {
+    position: absolute;
+    left: 75%;
+    top: 1049px;
+}
+
+.icon-19 {
+    position: absolute;
+    left: 75%;
+    top: 1070px;
+}
+
+.icon-20 {
+    position: absolute;
+    left: 74%;
+    top: 1049px;
+}
+
+.icon-21 {
+    position: absolute;
+    left: 74%;
+    top: 1027px;
+}
+
+.icon-22 {
+    position: absolute;
+    left: 78%;
+    top: 1015px;
+}
+
+.icon-23 {
+    position: absolute;
+    left: 78%;
+    top: 1061px;
+}
+
 .col-md-5 {
     position: absolute;
     width: 670px;
     left: 11.5%;
-    top: 1800px;
+    top: 1750px;
     color: white;
     font-family: 'Klavika';
 }
@@ -77,17 +226,42 @@
     position: absolute;
     width: 650px;
     left: 11.5%;
-    top: 2650px;
+    top: 2500px;
     color: white;
     font-family: 'Klavika';
 }
+
+.mt-5 {
+    position: absolute;
+    height: 0px;
+    left: 1%;
+    top: 210px;
+    color: white;
+    font-family: 'Klavika';
+}
+
+
 
 .col-md-6 {
     position: absolute;
     width: 650px;
     left: 11.5%;
-    top: 3180px;
+    top: 3140px;
     color: white;
+    font-family: 'Klavika';
+}
+
+.img13 {
+    position: absolute;
+    left: 5%;
+    top: 1392px;
+    font-family: 'Klavika';
+}
+
+.img14 {
+    position: absolute;
+    left: 3.50%;
+    top: 1470px;
     font-family: 'Klavika';
 }
 
@@ -99,9 +273,9 @@
 
 .card {
     position: absolute;
-    width: 455px;
+    width: 440px;
     height: 50px;
-    left: 14%;
+    left: 15%;
     top: 4667px;
     border: white;
     font-family: 'Klavika';
@@ -112,7 +286,7 @@
     width: 45px;
     height: 35px;
     left: 10%;
-    top: 5271px;
+    top: 5265px;
     color: white;
     font-family: 'Klavika';
 }
@@ -122,7 +296,7 @@
     width: 900px;
     height: 35px;
     left: 25%;
-    top: 5269px;
+    top: 5255px;
     color: white;
     font-family: 'Klavika';
 }

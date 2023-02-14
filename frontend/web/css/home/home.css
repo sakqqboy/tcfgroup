@@ -133,13 +133,3 @@
     left: 58%;
     top: 4510px;
 }
-
-.col-md-4 {
-    position: absolute;
-    width: 650px;
-    height: 600px;
-    left: 11.5%;
-    top: 3180px;
-    color: white;
-    font-family: 'Klavika';
-}

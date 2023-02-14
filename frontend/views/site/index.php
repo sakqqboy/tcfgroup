@@ -231,135 +231,131 @@
              <li><a class="dropdown-item" href="#Thailad">Thailad</a></li>
              <li><a class="dropdown-item" href="#Turkey">Turkey</a></li>
          </ul>
-         <div class="col-md-4">
-             <label for="inputState" class="form-label">Your Business</label>
-             <select id="inputState" class="form-select">
-                 <option selected>Choose...</option>
-                 <option>...</option>
-             </select>
-         </div>
-         <div class="col-6 col-md-4">
-             <form>
-                 <div class="mb-3">
-                     <label for="exampleInputQuestions" class="form-label">Questions & Concern</label>
-                     <input type="Questions" class="form-control" id="exampleInputQuestions" aria-describedby="Questions">
-                 </div>
-                 <div class="mb-3">
-                     <label for="exampleFormControlTextarea1" class="form-label">Details of Inquiry</label>
-                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                 </div>
-                 <br>
-                 <div class="mb-3">
-                     ATTACHMENT (IF ANY) <img src="<?= Yii::$app->homeUrl ?>image/files.png" style="width: 3%;" height="4%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary">Get Free Appointment</button>
-                 </div>
 
-                 <h4>Whatsapp</h4>
-                 <p><a href="#whatsapp"><img src="<?= Yii::$app->homeUrl ?>image/whatsapp.png" style="width: 4%;" height="6%"> inquarrytcf</a></p>
-                 <br>
-                 <h4>Skype</h4>
-                 <p><a href="#skype"><img src="<?= Yii::$app->homeUrl ?>image/skype.png" style="width: 4%;" height="6%"> inquarrytcf</a></p>
-                 <br>
-                 <h4>Email</h4>
-                 <p><img src="<?= Yii::$app->homeUrl ?>image/letter.png" style="width: 4%;" height="6%"> &nbsp;&nbsp;&nbsp; f-info@tokyoconsultinggroup.com</a></p>
-                 <br>
-                 <h4>Phone</h4>
-                 <p><img src="<?= Yii::$app->homeUrl ?>image/phone-call.png" style="width: 4%;" height="6%">&nbsp;&nbsp;&nbsp; +090-111-222</a></p>
-             </form>
-         </div>
      </div>
 
-     <div class="row">
-         <div class="col-12">
-             <img src="<?= Yii::$app->homeUrl ?>image/blue.png" style="width: 100%;">
+     <div class="col-6 col-md-4">
+         <form>
+             <div class="mb-3">
+                 <label for="exampleInputQuestions" class="form-label">Questions & Concern</label>
+                 <input type="Questions" class="form-control" id="exampleInputQuestions" aria-describedby="Questions">
+             </div>
+             <div class="mb-3">
+                 <label for="exampleFormControlTextarea1" class="form-label">Details of Inquiry</label>
+                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+             </div>
+             <br>
+             <div class="mb-3">
+                 ATTACHMENT (IF ANY) <img src="<?= Yii::$app->homeUrl ?>image/files.png" style="width: 3%;" height="4%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary">Get Free Appointment</button>
+             </div>
 
-             <div class="card">
-                 <div class="mb-0 row" style="padding-left: 5px;">
-                     <label for="staticEmail" class="col-sm-2 col-form-label"><img src="<?= Yii::$app->homeUrl ?>image/letter.png" style="width: 50%;" height="81%"></label>
-                     <div class="col-auto mt-2">
-                         <label for="inputEmail" class="visually-hidden">Your Email address</label>
-                         <input type="email" class="form-control" id="inputEmail" placeholder="Your Email address">
-                     </div>
-                     <div class="col  mt-2">
-                         <button type="submit" class="btn btn-primary mb-3">Subscribe Now</button>
-                     </div>
+             <h4>Whatsapp</h4>
+             <p><a href="#whatsapp"><img src="<?= Yii::$app->homeUrl ?>image/whatsapp.png" style="width: 4%;" height="6%"> inquarrytcf</a></p>
+             <br>
+             <h4>Skype</h4>
+             <p><a href="#skype"><img src="<?= Yii::$app->homeUrl ?>image/skype.png" style="width: 4%;" height="6%"> inquarrytcf</a></p>
+             <br>
+             <h4>Email</h4>
+             <p><img src="<?= Yii::$app->homeUrl ?>image/letter.png" style="width: 4%;" height="6%"> &nbsp;&nbsp;&nbsp; f-info@tokyoconsultinggroup.com</a></p>
+             <br>
+             <h4>Phone</h4>
+             <p><img src="<?= Yii::$app->homeUrl ?>image/phone-call.png" style="width: 4%;" height="6%">&nbsp;&nbsp;&nbsp; +090-111-222</a></p>
+         </form>
+     </div>
+ </div>
+
+ <div class="row">
+     <div class="col-12">
+         <img src="<?= Yii::$app->homeUrl ?>image/blue.png" style="width: 100%;">
+
+         <div class="card">
+             <div class="mb-0 row" style="padding-left: 5px;">
+                 <label for="staticEmail" class="col-sm-2 col-form-label"><img src="<?= Yii::$app->homeUrl ?>image/letter.png" style="width: 50%;" height="81%"></label>
+                 <div class="col-auto mt-2">
+                     <label for="inputEmail" class="visually-hidden">Your Email address</label>
+                     <input type="email" class="form-control" id="inputEmail" placeholder="Your Email address">
+                 </div>
+                 <div class="col  mt-2">
+                     <button type="submit" class="btn btn-primary mb-3">Subscribe Now</button>
                  </div>
              </div>
          </div>
-         <div class="text-right">
-             <img src="<?= Yii::$app->homeUrl ?>image/book.png" style="width: 90%;">
+     </div>
+     <div class="text-right">
+         <img src="<?= Yii::$app->homeUrl ?>image/book.png" style="width: 90%;">
+     </div>
+ </div>
+
+
+
+ <div class="row" style="margin-top: 200px;">
+     <div class="col-3">
+         <img src="<?= Yii::$app->homeUrl ?>image/FUl lTCF With Bangladesh2.png" class="img6" style="width: 200px" height="85px">
+     </div>
+     <div class="col-2">
+         <h2>Explore TCF</h2>
+         <br>
+         <p><a href="#home">Home</a></p>
+         <p><a href="#Webinar">Webinar</a></p>
+         <p><a href="#Monthly Newsletter">Monthly Newsletter</a></p>
+         <p><a href="#Weekly Newsletter">Weekly Newsletter</a></p>
+         <p> <a href="#Services">Services</a></p>
+         <p><a href="#Resources">Resources</a></p>
+     </div>
+     <div class="col-2">
+         <h2>Popalar links</h2>
+         <br>
+         <p><a href="#for Webinar">for Webinar</a></p>
+         <p><a href="#Accounts & Taxatation">Accounts & Taxatation</a></p>
+         <p><a href="#Jinji-no-Butai">Jinji-no-Butai</a></p>
+         <p><a href="#Kuno Method">Kuno Method</a></p>
+         <p><a href="#Human Matrix">Human Matrix</a></p>
+         <p><a href="#Recorded Webinars">Recorded Webinars</a></p>
+     </div>
+     <div class="col-5">
+         <p> <a href="#facebook"><img src="<?= Yii::$app->homeUrl ?>image/facebook.png"></a>
+             <a href="#twitter"><img src="<?= Yii::$app->homeUrl ?>image/twitter.png"></a>
+             <a href="#Instagram"><img src="<?= Yii::$app->homeUrl ?>image/Instagram.png"></a>
+             <a href="#LinkedIn"><img src="<?= Yii::$app->homeUrl ?>image/LinkedIn.png"></a>
+             <a href="#YouTube"><img src="<?= Yii::$app->homeUrl ?>image/YouTube.png"></a>
+
+         </p>
+         <h6>Stay tuned, get all the business updates, newsletters</h6>
+         <br>
+         <div class="card-white">
+             <div class="mb-3 row">
+                 <label for="staticEmail" class="col-sm-2 col-form-label"><img src="<?= Yii::$app->homeUrl ?>image/letter.png" style="width: 50%;" height="99%"></label>
+                 <div class="col-auto">
+                     <label for="inputEmail" class="visually-hidden">Your Email address</label>
+                     <input type="email" class="form-control" id="inputEmail" placeholder="Your Email address">
+                 </div>
+                 <div class="col-auto">
+                     <button type="submit" class="btn btn-primary mb-3">Notify Me</button>
+                 </div>
+             </div>
          </div>
      </div>
+ </div>
 
-
-
-     <div class="row" style="margin-top: 200px;">
-         <div class="col-3">
-             <img src="<?= Yii::$app->homeUrl ?>image/FUl lTCF With Bangladesh2.png" class="img6" style="width: 200px" height="85px">
-         </div>
+ <div class="row">
+     <div class="col-12">
+         <img src="<?= Yii::$app->homeUrl ?>image/footer.png" style="width: 100%" height="150%">
          <div class="col-2">
-             <h2>Explore TCF</h2>
-             <br>
-             <p><a href="#home">Home</a></p>
-             <p><a href="#Webinar">Webinar</a></p>
-             <p><a href="#Monthly Newsletter">Monthly Newsletter</a></p>
-             <p><a href="#Weekly Newsletter">Weekly Newsletter</a></p>
-             <p> <a href="#Services">Services</a></p>
-             <p><a href="#Resources">Resources</a></p>
+             <div class="btn-group" role="group">
+                 <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                     <img src="<?= Yii::$app->homeUrl ?>image/erd.png"> GLOBAL
+                 </button>
+                 <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                     <li><a class="dropdown-item" href="#">English</a></li>
+                     <li><a class="dropdown-item" href="#">Thailand</a></li>
+                 </ul>
+             </div>
          </div>
-         <div class="col-2">
-             <h2>Popalar links</h2>
-             <br>
-             <p><a href="#for Webinar">for Webinar</a></p>
-             <p><a href="#Accounts & Taxatation">Accounts & Taxatation</a></p>
-             <p><a href="#Jinji-no-Butai">Jinji-no-Butai</a></p>
-             <p><a href="#Kuno Method">Kuno Method</a></p>
-             <p><a href="#Human Matrix">Human Matrix</a></p>
-             <p><a href="#Recorded Webinars">Recorded Webinars</a></p>
-         </div>
-         <div class="col-5">
-             <p> <a href="#facebook"><img src="<?= Yii::$app->homeUrl ?>image/facebook.png"></a>
-                 <a href="#twitter"><img src="<?= Yii::$app->homeUrl ?>image/twitter.png"></a>
-                 <a href="#Instagram"><img src="<?= Yii::$app->homeUrl ?>image/Instagram.png"></a>
-                 <a href="#LinkedIn"><img src="<?= Yii::$app->homeUrl ?>image/LinkedIn.png"></a>
-                 <a href="#YouTube"><img src="<?= Yii::$app->homeUrl ?>image/YouTube.png"></a>
-
-             </p>
-             <h6>Stay tuned, get all the business updates, newsletters</h6>
-             <br>
-             <div class="card-white">
-                 <div class="mb-3 row">
-                     <label for="staticEmail" class="col-sm-2 col-form-label"><img src="<?= Yii::$app->homeUrl ?>image/letter.png" style="width: 50%;" height="99%"></label>
-                     <div class="col-auto">
-                         <label for="inputEmail" class="visually-hidden">Your Email address</label>
-                         <input type="email" class="form-control" id="inputEmail" placeholder="Your Email address">
-                     </div>
-                     <div class="col-auto">
-                         <button type="submit" class="btn btn-primary mb-3">Notify Me</button>
-                     </div>
-                 </div>
+         <div class="col-10">
+             <div class="text-white">
+                 <p>@ Copyright 2022 Tokyo Consulting Group, All Rights Reserved, 10, Ataturk Tower, Flat #11/A (Lift, 22 Kemal Ataturk Ave, Dhaka 1213</p>
+                 <p>Legal Terms of Service Responsible Disclosure Privacy Information Cookie Preferences Contact Sitema</p>
              </div>
          </div>
      </div>
-
-     <div class="row">
-         <div class="col-12">
-             <img src="<?= Yii::$app->homeUrl ?>image/footer.png" style="width: 100%" height="150%">
-             <div class="col-2">
-                 <div class="btn-group" role="group">
-                     <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                         <img src="<?= Yii::$app->homeUrl ?>image/erd.png"> GLOBAL
-                     </button>
-                     <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                         <li><a class="dropdown-item" href="#">English</a></li>
-                         <li><a class="dropdown-item" href="#">Thailand</a></li>
-                     </ul>
-                 </div>
-             </div>
-             <div class="col-10">
-                 <div class="text-white">
-                     <p>@ Copyright 2022 Tokyo Consulting Group, All Rights Reserved, 10, Ataturk Tower, Flat #11/A (Lift, 22 Kemal Ataturk Ave, Dhaka 1213</p>
-                     <p>Legal Terms of Service Responsible Disclosure Privacy Information Cookie Preferences Contact Sitema</p>
-                 </div>
-             </div>
-         </div>
-     </div>
+ </div>

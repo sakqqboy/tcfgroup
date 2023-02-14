@@ -1,53 +1,145 @@
-.row>.txt-primary {
+.text-primary {
     position: absolute;
     height: 191px;
     left: 11.1%;
-    right: 60.90%;
-    top: 330px;
+    right: 56.48%;
+    top: 400px;
     font-family: 'Klavika';
-    font-weight: 300;
-    font-size: 50px;
-    line-height: 1px;
-    color: #2D8DD5;
+    font-weight: 40px;
+    font-size: 60px;
+    line-height: 10px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
 
 }
 
-.row {
-    width: 1927px;
-    height: 950px;
-    left: px;
-    top: 0px;
-    padding: 1px;
-    margin: 0px;
-}
-
-
-/* .img {
+.text {
     position: absolute;
-    width: 728px;
-    height: 222px;
-    left: 144px;
-    top: 0px;
-    font-family: 'Klavika';
-    font-style: normal;
-    font-weight: 200;
-    font-size: 16px;
-    line-height: 100%;
-    color: white;
-} */
-
-.img {
-    position: absolute;
-    width: 1140px;
-    height: 300px;
-    left: 120px;
-    top: 3090px;
-    font-size: 16px;
-    line-height: 150%;
+    width: 200px;
+    height: 191px;
+    left: 9%;
+    top: 720px;
     color: white;
 }
 
-.header {
+.text-left {
     position: absolute;
-    color: #2D8DD5;
+    height: 191px;
+    left: 9%;
+    top: 760px;
+    color: white;
+}
+
+.col-4 {
+    position: absolute;
+    height: 230px;
+    left: 8%;
+    top: 800px;
+    color: white;
+    font-size: 16px;
+}
+
+
+.col-md-2 {
+    position: absolute;
+    height: 1000px;
+    left: 22%;
+    right: 40%;
+    top: 800px;
+    color: white;
+}
+
+.img4 {
+    position: absolute;
+    width: 700px;
+    height: 816px;
+    left: 1220px;
+    top: 1884px;
+}
+
+.img3 {
+    position: absolute;
+    left: 35%;
+    top: 840px;
+}
+
+
+.col-md-5 {
+    position: absolute;
+    width: 670px;
+    left: 11.5%;
+    top: 1800px;
+    color: white;
+    font-family: 'Klavika';
+}
+
+.col-md-7 {
+    position: absolute;
+    width: 650px;
+    left: 11.5%;
+    top: 2650px;
+    color: white;
+    font-family: 'Klavika';
+}
+
+.col-md-6 {
+    position: absolute;
+    width: 650px;
+    left: 11.5%;
+    top: 3180px;
+    color: white;
+    font-family: 'Klavika';
+}
+
+.col-5 {
+    position: absolute;
+    width: 600px;
+    left: 65%;
+}
+
+.card {
+    position: absolute;
+    width: 455px;
+    height: 50px;
+    left: 14%;
+    top: 4667px;
+    border: white;
+    font-family: 'Klavika';
+}
+
+.btn-group {
+    position: absolute;
+    width: 45px;
+    height: 35px;
+    left: 10%;
+    top: 5271px;
+    color: white;
+    font-family: 'Klavika';
+}
+
+.text-white {
+    position: absolute;
+    width: 900px;
+    height: 35px;
+    left: 25%;
+    top: 5269px;
+    color: white;
+    font-family: 'Klavika';
+}
+
+.text-right {
+    position: absolute;
+    width: 600px;
+    left: 58%;
+    top: 4510px;
+}
+
+.col-md-4 {
+    position: absolute;
+    width: 650px;
+    height: 600px;
+    left: 11.5%;
+    top: 3180px;
+    color: white;
+    font-family: 'Klavika';
 }

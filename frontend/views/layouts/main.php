@@ -33,13 +33,16 @@ AppAsset::register($this);
             'brandLabel' => Yii::$app->name,
             'brandUrl' => Yii::$app->homeUrl,
             'options' => [
-                'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
+                'class' => 'navbar navbar-expand-md navbar-back bg-white fixed-top',
             ],
         ]);
         $menuItems = [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => 'Philosophy', 'url' => ['/site/Philosophy']],
+            ['label' => 'Services', 'url' => ['/site/services']],
+            ['label' => 'People', 'url' => ['/site/people']],
+            ['label' => 'Career & Recruitment', 'url' => ['/site/Career&Recruitment']],
+            ['label' => 'About us', 'url' => ['/site/about']],
+            ['label' => 'Contct Us', 'url' => ['/site/contact us']],
         ];
         if (Yii::$app->user->isGuest) {
             $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
@@ -64,13 +67,14 @@ AppAsset::register($this);
     </header>
 
     <main role="main" class="flex-shrink-0">
-        <div class="container">
-            <?= Breadcrumbs::widget([
-                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-            ]) ?>
-            <?= Alert::widget() ?>
-            <?= $content ?>
-        </div>
+
+
+        <!-- <?= Breadcrumbs::widget([
+                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                ]) ?>
+            <?= Alert::widget() ?> -->
+        <?= $content ?>
+
     </main>
 
     <footer class="footer mt-auto py-3 text-muted">

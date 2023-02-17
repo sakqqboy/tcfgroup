@@ -2,7 +2,7 @@
     position: absolute;
     margin-top: -25%;
     font-family: 'Klavika';
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 200;
     line-height: 60px;
     color: #2D8DD5;
@@ -20,10 +20,10 @@
 .col-lg-5 {
     position: absolute;
     margin-top: -46%;
-    left: 9%;
+    left: 9.2%;
     font-family: 'Klavika';
     font-weight: 100;
-    font-size: 15px;
+    font-size: 18px;
     color: white;
 }
 
@@ -36,21 +36,6 @@
     font-family: 'Klavika';
 
 }
-
-/* .col-4 {
-    position: absolute;
-    margin-top: -50%;
-    font-size: 15px;
-    font-weight: 100px;
-    line-height: 15px;
-} */
-
-/* .text5 {
-    position: absolute;
-    margin-top: -40%;
-    line-height: 30px;
-} */
-
 
 .text1 {
     position: absolute;
@@ -80,34 +65,31 @@
     position: absolute;
     margin-top: -45%;
     color: white;
-    font-size: 22px;
+    font-size: 23px;
     font-family: 'Klavika';
 }
 
 .text3 {
     position: absolute;
-    margin-top: -33%;
-    font-size: 38px;
-    font-weight: 200;
+    margin-top: -40%;
+    left: -1%;
     color: white;
-    font-family: 'Klavika';
+
 }
-
-
 
 .text4 {
     position: absolute;
     margin-top: -35%;
-    font-size: 14.5px;
-    font-weight: 100;
+    font-size: 25px;
+    font-weight: 200px;
     color: white;
     font-family: 'Klavika';
 }
 
 .col-md-5 {
     position: absolute;
-    margin-top: -20%;
-    font-size: 12.5px;
+    margin-top: -25%;
+    font-size: 14px;
     font-weight: 100px;
     line-height: 20px;
     color: white;
@@ -117,6 +99,15 @@
     position: absolute;
     margin-top: -25%;
     font-size: 12.5px;
+    font-weight: 100px;
+    line-height: 20px;
+    color: white;
+}
+
+.col-sm-5 {
+    position: absolute;
+    margin-top: -25%;
+    font-size: 14px;
     font-weight: 100px;
     line-height: 20px;
     color: white;
@@ -135,7 +126,6 @@
 .col-sm-2 {
     position: absolute;
     margin-top: 25.30%;
-    left: 20%;
 }
 
 .text8 {
@@ -177,43 +167,77 @@
     font-weight: 200px;
     line-height: 20px;
     color: white;
-
-
 }
 
-.text-end {
+.book {
     position: absolute;
-    margin-top: -18%;
-    left: 50%;
-
+    margin-top: -1%;
+    left: 49%;
+    width: 713px;
+    height: 590px;
 }
+
+.text10 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+.btn-group {
+    position: absolute;
+    margin-top: -5%;
+    left: 3%;
+}
+
+.text-white {
+    position: absolute;
+    margin-top: -5%;
+    left: 25%;
+    line-height: 15px;
+    font-size: 15px;
+    color: #2D8DD5;
+}
+
+.a {
+    color: #2D8DD5;
+}
+
 
 
 @media(max-width: 768px) {
     .text-star {
-        font-size: 20px;
-        line-height: 30px;
+        font-size: 15px;
+        line-height: 25px;
 
     }
 
     .btn-primary {
         font-size: 9px;
         line-height: 8px;
-        margin-top: -1%;
+        margin-top: 1%;
     }
 
     .col-lg-5 {
         margin-top: -48%;
-        font-size: 10px;
+        font-size: 8px;
+        line-height: 5px;
+
+    }
+
+    .col-lg-4 {
+        margin-top: -48%;
+        font-size: 8px;
         line-height: 10px;
+        width: 400px;
 
     }
 
     .col-6 {
-        font-style: normal;
-        font-size: 10px;
-        line-height: 0px;
+        margin-top: -10%;
+        line-height: 10px;
     }
+
+
 
     .text1 {
         font-size: 15px;
@@ -221,11 +245,15 @@
         color: white;
     }
 
-    /* .give {
-        width: 40px;
-        height: 30px;
+    .give {
+        width: 100px;
+        height: 100px;
         margin-top: -60%;
-    } */
+    }
+
+    .col-sm-5 {
+        font-size: 12px;
+    }
 
 
     .btn-info {
@@ -244,15 +272,14 @@
     }
 
     .text3 {
-        margin-top: -15%;
-        font-size: 10px;
-        font-weight: 10px;
+        margin-top: -60px;
+        left: 1%;
+
     }
 
     .text4 {
-        position: absolute;
-        margin-top: -35%;
-        font-size: 14.5px;
+
+        font-size: 12px;
         font-weight: 100;
         color: white;
         font-family: 'Klavika';
@@ -260,8 +287,8 @@
 
     .col-4 {
         margin-top: 15%;
-        font-size: 14px;
-        font-weight: 2px;
+        font-size: 12px;
+
 
     }
 
@@ -273,20 +300,48 @@
     }
 
     .col-md-5 {
-
-        font-size: 8.10px;
-        width: 330px;
-        line-height: 11px;
-
+        font-size: 8px;
+        width: 250px;
+        margin-top: -25%;
+        line-height: 8px;
     }
 
-}
-
-
-@media(max-width: 414px) {
-    .text-star {
+    .card {
+        margin-top: -29px;
         font-size: 10px;
-        line-height: 30px;
+        width: 250px;
+        height: 25px;
+        /* line-height: 10px; */
     }
+
+    .btn-info {
+        margin-top: 1%;
+        left: 150px;
+        border-radius: 5px;
+        font-size: 10px;
+        line-height: 5px;
+
+    }
+
+    .contact {
+        width: 20px;
+        height: 30px;
+        left: 7%;
+        margin-top: -1%;
+
+    }
+
+    .col-auto {
+        font-size: 8.7px;
+        left: 20%;
+    }
+
+    .book {
+        left: 10%;
+        margin-top: 15%;
+        width: 378px;
+        height: 290px;
+    }
+
 
 }

@@ -13,28 +13,108 @@
     margin-top: 2%;
     font-size: 18px;
     font-weight: 200px;
+    font-family: 'Klavika';
     line-height: 32px
 }
 
+.mt-5 {
+    padding-left: 40px;
+    font-size: 30px;
+    color: white;
 
-.col-lg-5 {
+
+}
+
+.text-TCG {
+    color: white;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+.col-background {
+    background-color: #031022;
+}
+
+
+.form-Questions {
+    padding-left: 30px;
+}
+
+.text-japan {
     position: absolute;
-    margin-top: -46%;
-    left: 9.2%;
+    margin-top: -50%;
+    font-size: 50px;
+    font-weight: 200px;
+    line-height: 25px;
     font-family: 'Klavika';
-    font-weight: 100;
-    font-size: 18px;
     color: white;
 }
 
-.col-lg-4 {
+.text-Unlock {
     position: absolute;
-    margin-top: -47%;
-    font-size: 14px;
+    width: 500px;
+    margin-top: -40%;
+    font-size: 13px;
     font-weight: 100px;
     color: white;
+}
+
+.button-contact {
+    position: absolute;
+    width: 200px;
+    margin-top: -30%;
+    font-size: 13px;
+    font-weight: 100px;
     font-family: 'Klavika';
 
+}
+
+.text-establish {
+    padding-left: 40px;
+}
+
+.img-background {
+    width: 100%;
+}
+
+.mt-4 {
+    font-size: 18px;
+    padding-left: 40px;
+    font-family: 'Klavika';
+    margin-bottom: 35px;
+
+}
+
+.button-get {
+    font-size: 15px;
+    margin-left: 20%;
+    margin-top: 1%;
+}
+
+.text-email {
+    font-size: 15px;
+    margin-left: 60%;
+    margin-top: -25%;
+    text-align: end;
+    color: #A0A0A0;
+
+}
+
+.text-tokyo {
+    position: absolute;
+    margin-top: -20%;
+    color: white;
+    font-size: 13px;
+
+}
+
+.text-Yasunari {
+    position: absolute;
+    margin-top: -30%;
+    left: 9%;
+    width: 550px;
+    font-size: 14px;
+    color: white;
 }
 
 .text1 {
@@ -71,10 +151,20 @@
 
 .text3 {
     position: absolute;
-    margin-top: -40%;
-    left: -1%;
+    margin-top: -37%;
+    font-size: 45px;
     color: white;
+    font-family: 'Klavika';
 
+}
+
+.give {
+    width: 110px;
+
+}
+
+.get {
+    width: 110px;
 }
 
 .text4 {
@@ -86,32 +176,6 @@
     font-family: 'Klavika';
 }
 
-.col-md-5 {
-    position: absolute;
-    margin-top: -25%;
-    font-size: 14px;
-    font-weight: 100px;
-    line-height: 20px;
-    color: white;
-}
-
-.col-5 {
-    position: absolute;
-    margin-top: -25%;
-    font-size: 12.5px;
-    font-weight: 100px;
-    line-height: 20px;
-    color: white;
-}
-
-.col-sm-5 {
-    position: absolute;
-    margin-top: -25%;
-    font-size: 14px;
-    font-weight: 100px;
-    line-height: 20px;
-    color: white;
-}
 
 .button-7 {
     position: absolute;
@@ -123,16 +187,12 @@
     font-family: 'Klavika';
 }
 
-.col-sm-2 {
-    position: absolute;
-    margin-top: 25.30%;
-}
 
 .text8 {
+    margin-top: 10%;
     font-family: 'Klavika';
     font-size: 14px;
     line-height: 26px;
-    align-items: end;
     color: #A0A0A0;
 }
 
@@ -202,6 +262,28 @@
     color: #2D8DD5;
 }
 
+nav.navbar {
+    font-size: 20px;
+}
+
+.img-country {
+    width: 18px;
+    height: 18px;
+}
+
+.country-index {
+    margin-top: 30px;
+    padding-left: 40px;
+    color: white;
+    line-height: 15px;
+    font-size: 14px;
+}
+
+.form-select1 {
+    margin-top: -9%;
+    margin-left: 45%;
+    width: 240px;
+}
 
 
 @media(max-width: 768px) {
@@ -217,14 +299,7 @@
         margin-top: 1%;
     }
 
-    .col-lg-5 {
-        margin-top: -48%;
-        font-size: 8px;
-        line-height: 5px;
-
-    }
-
-    .col-lg-4 {
+    .text-legal {
         margin-top: -48%;
         font-size: 8px;
         line-height: 10px;
@@ -232,11 +307,18 @@
 
     }
 
-    .col-6 {
-        margin-top: -10%;
+    .text-tokyo {
+        font-size: 7px;
         line-height: 10px;
+        width: 260px;
     }
 
+    .text-Yasunari {
+        margin-top: -27%;
+        font-size: 7px;
+        line-height: 8px;
+        width: 270px;
+    }
 
 
     .text1 {
@@ -244,17 +326,6 @@
         line-height: 60px;
         color: white;
     }
-
-    .give {
-        width: 100px;
-        height: 100px;
-        margin-top: -60%;
-    }
-
-    .col-sm-5 {
-        font-size: 12px;
-    }
-
 
     .btn-info {
         margin-top: 10%;
@@ -272,9 +343,20 @@
     }
 
     .text3 {
-        margin-top: -60px;
-        left: 1%;
 
+        font-size: 11px;
+        line-height: 10px;
+        left: 5%;
+        margin-top: -40%;
+
+    }
+
+    .give {
+        width: 50px;
+    }
+
+    .get {
+        width: 50px;
     }
 
     .text4 {
@@ -285,33 +367,21 @@
         font-family: 'Klavika';
     }
 
-    .col-4 {
-        margin-top: 15%;
-        font-size: 12px;
-
-
-    }
-
     .text5 {
         position: absolute;
-        margin-top: 5%;
+        margin-top: 2%;
         width: 350px;
         line-height: 20px;
+
     }
 
-    .col-md-5 {
-        font-size: 8px;
-        width: 250px;
-        margin-top: -25%;
-        line-height: 8px;
-    }
 
     .card {
         margin-top: -29px;
         font-size: 10px;
         width: 250px;
         height: 25px;
-        /* line-height: 10px; */
+
     }
 
     .btn-info {
@@ -343,5 +413,47 @@
         height: 290px;
     }
 
+    .text-japan {
+        margin-top: -45%;
+        font-size: 20px;
+        line-height: 10px;
 
+    }
+
+    .text-Unlock {
+        width: 280px;
+        margin-top: -35%;
+        font-size: 8px;
+        line-height: 10px;
+    }
+
+    .button-contact {
+        width: 100px;
+        margin-top: -20%;
+        font-size: 10px;
+        font-weight: 100px;
+        font-family: 'Klavika';
+
+    }
+
+    .country-index {
+        margin-top: 5%;
+    }
+
+    .text-legal {
+        font-size: 15px;
+        margin-top: 5%;
+        line-height: 25px;
+        padding-left: 45px;
+    }
+
+    .form-Questions {
+        padding-right: 10px;
+    }
+
+    .text-tokyo {
+        margin-top: -35%;
+        color: white;
+
+    }
 }

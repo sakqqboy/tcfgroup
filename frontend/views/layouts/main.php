@@ -28,60 +28,31 @@ AppAsset::register($this);
     <?php $this->beginBody() ?>
 
     <header>
-        <?php
-        NavBar::begin([
-            'brandLabel' => Yii::$app->name,
-            'brandUrl' => Yii::$app->homeUrl,
-            'options' => [
-                'class' => 'navbar navbar-expand-md navbar-back bg-white fixed-top',
-            ],
-        ]);
-        $menuItems = [
-            ['label' => 'Philosophy', 'url' => ['/site/Philosophy']],
-            ['label' => 'Services', 'url' => ['/site/services']],
-            ['label' => 'People', 'url' => ['/site/people']],
-            ['label' => 'Career & Recruitment', 'url' => ['/site/Career&Recruitment']],
-            ['label' => 'About us', 'url' => ['/site/about']],
-            ['label' => 'Contct Us', 'url' => ['/site/contact us']],
-        ];
-        if (Yii::$app->user->isGuest) {
-            $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        }
+        <div class="container">
 
-        echo Nav::widget([
-            'options' => ['class' => 'navbar-nav me-auto mb-2 mb-md-0'],
-            'items' => $menuItems,
-        ]);
-        if (Yii::$app->user->isGuest) {
-            echo Html::tag('div', Html::a('Login', ['/site/login'], ['class' => ['btn btn-link login text-decoration-none']]), ['class' => ['d-flex']]);
-        } else {
-            echo Html::beginForm(['/site/logout'], 'post', ['class' => 'd-flex'])
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout text-decoration-none']
-                )
-                . Html::endForm();
-        }
-        NavBar::end();
-        ?>
+        </div>
     </header>
 
     <main role="main" class="flex-shrink-0">
 
+        <div class="row">
 
-        <!-- <?= Breadcrumbs::widget([
-                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-                ]) ?>
-            <?= Alert::widget() ?> -->
-        <?= $content ?>
+            <?php
+            echo $this->render("@frontend/views/site/header")
+            ?>
 
+
+            <?= $content ?>
+
+        </div>
     </main>
 
     <footer class="footer mt-auto py-3 text-muted">
-        <!-- <div class="container">
-            <p class="float-start">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-            <p class="float-end"><?= Yii::powered() ?></p>
-        </div> -->
+
+        <div class="footer">
+
+        </div>
+
     </footer>
 
     <?php

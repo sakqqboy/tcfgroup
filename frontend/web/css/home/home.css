@@ -18,17 +18,18 @@
 }
 
 .mt-5 {
-    padding-left: 40px;
+    padding-left: 60px;
     font-size: 30px;
+    font-family: 'klavika';
     color: white;
-
 
 }
 
 .text-TCG {
     color: white;
-    padding-left: 40px;
+    padding-left: 60px;
     padding-top: 20px;
+    font-family: 'klavika';
 }
 
 .col-background {
@@ -49,6 +50,7 @@
     font-family: 'Klavika';
     color: white;
 }
+
 
 .text-Unlock {
     position: absolute;
@@ -71,10 +73,24 @@
 
 .text-establish {
     padding-left: 40px;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'klavika';
+}
+
+.Company {
+    margin-top: 10%;
+    padding-left: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    font-family: 'Klavika';
+    font-style: normal;
 }
 
 .img-background {
     width: 100%;
+    font-family: 'klavika';
 }
 
 .mt-4 {
@@ -100,6 +116,23 @@
 
 }
 
+.Our {
+    margin-top: 50px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 20px;
+
+}
+
+.text-legal {
+    margin-top: 10%;
+    font-size: 33px;
+    line-height: 40px;
+    font-weight: 700;
+    font-family: 'klavika';
+
+}
+
 .text-tokyo {
     position: absolute;
     margin-top: -20%;
@@ -118,10 +151,10 @@
 }
 
 .text1 {
-    position: absolute;
+
     margin-top: -20%;
     font-family: 'Klavika';
-    font-size: 15px;
+    font-size: 12px;
     color: white;
 }
 
@@ -130,16 +163,6 @@
     margin-top: -25%;
 }
 
-
-.btn-info {
-    position: absolute;
-    margin-top: 10%;
-    left: 13px;
-    border-radius: 5px;
-    background-color: #2D8DD5;
-    color: white;
-    font-family: 'Klavika';
-}
 
 .text2 {
     position: absolute;
@@ -196,15 +219,6 @@
     color: #A0A0A0;
 }
 
-.card {
-    position: absolute;
-    margin-top: -5%;
-    left: 11.1%;
-    width: 500px;
-    height: 45px;
-    font-size: 15px;
-    font-family: 'klavika';
-}
 
 .contact {
     position: absolute;
@@ -212,58 +226,9 @@
     left: 8%;
 }
 
-
-.col-auto {
-    position: absolute;
-    margin-top: -5%;
-    left: 15%;
-}
-
-.btn-info {
-    position: absolute;
-    margin-top: 1%;
-    left: 70%;
-    font-size: 15px;
-    font-weight: 200px;
-    line-height: 20px;
-    color: white;
-}
-
-.book {
-    position: absolute;
-    margin-top: -1%;
-    left: 49%;
-    width: 713px;
-    height: 590px;
-}
-
-.text10 {
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-
-.btn-group {
-    position: absolute;
-    margin-top: -5%;
-    left: 3%;
-}
-
-.text-white {
-    position: absolute;
-    margin-top: -5%;
-    left: 25%;
-    line-height: 15px;
-    font-size: 15px;
-    color: #2D8DD5;
-}
-
-.a {
-    color: #2D8DD5;
-}
-
-nav.navbar {
-    font-size: 20px;
+.image-book {
+    padding-left: 50%;
+    margin-top: -15%;
 }
 
 .img-country {
@@ -277,12 +242,89 @@ nav.navbar {
     color: white;
     line-height: 15px;
     font-size: 14px;
+    font-family: 'klavika';
 }
 
 .form-select1 {
     margin-top: -9%;
     margin-left: 45%;
     width: 240px;
+}
+
+.image-gol1 {
+    margin-top: -10px;
+}
+
+.blue {
+    background-color: #0B4A8E;
+    color: white;
+}
+
+.text-update {
+    font-family: 'klavika';
+    font-size: 34px;
+    line-height: 25px;
+    padding-top: 20px;
+
+}
+
+.text-project {
+    font-family: 'klavika';
+    font-size: 12px;
+}
+
+.txt-internal {
+
+    color: #08427B;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: 'klavika';
+
+
+}
+
+.country-footer {
+    color: #0B58A4;
+    font-family: 'klavika';
+    font-size: 14px;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.txt-stay {
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 10%;
+}
+
+.button-notify-me {
+    padding-left: 30px;
+}
+
+.footer {
+    background-color: #032E61;
+}
+
+.input-group {
+    font-size: 10px;
+    font-weight: 100;
+    font-family: 'klavika';
+
+}
+
+.dropdown-toggle {
+    margin-top: 10%;
+    font-size: 13px;
+    font-weight: 200;
+    line-height: 20px;
+}
+
+.text-white {
+    padding-top: 10px;
+}
+
+.footer-links {
+    padding-top: -1px;
 }
 
 
@@ -327,14 +369,7 @@ nav.navbar {
         color: white;
     }
 
-    .btn-info {
-        margin-top: 10%;
-        left: 13px;
-        border-radius: 5px;
-        background-color: #2D8DD5;
-        color: white;
-        font-family: 'Klavika';
-    }
+
 
     .text2 {
         margin-top: -45%;
@@ -367,50 +402,12 @@ nav.navbar {
         font-family: 'Klavika';
     }
 
-    .text5 {
-        position: absolute;
-        margin-top: 2%;
-        width: 350px;
-        line-height: 20px;
-
-    }
-
-
-    .card {
-        margin-top: -29px;
-        font-size: 10px;
-        width: 250px;
-        height: 25px;
-
-    }
-
-    .btn-info {
-        margin-top: 1%;
-        left: 150px;
-        border-radius: 5px;
-        font-size: 10px;
-        line-height: 5px;
-
-    }
-
     .contact {
         width: 20px;
         height: 30px;
         left: 7%;
         margin-top: -1%;
 
-    }
-
-    .col-auto {
-        font-size: 8.7px;
-        left: 20%;
-    }
-
-    .book {
-        left: 10%;
-        margin-top: 15%;
-        width: 378px;
-        height: 290px;
     }
 
     .text-japan {
@@ -441,10 +438,25 @@ nav.navbar {
     }
 
     .text-legal {
+        font-size: 25px;
+        padding-left: 10%;
+        margin-top: 25px;
+    }
+
+    .Our {
         font-size: 15px;
+        line-height: 15px;
         margin-top: 5%;
-        line-height: 25px;
-        padding-left: 45px;
+        padding-left: 10%;
+
+    }
+
+    .text5 {
+        font-size: 15px;
+        padding-left: 10%;
+        margin-top: 10px;
+        margin-bottom: 50px;
+
     }
 
     .form-Questions {
@@ -452,8 +464,14 @@ nav.navbar {
     }
 
     .text-tokyo {
-        margin-top: -35%;
+        margin-top: -25%;
         color: white;
 
+    }
+
+
+    .image-book {
+        margin-top: -10%;
+        padding-left: 2%;
     }
 }

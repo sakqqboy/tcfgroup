@@ -7,12 +7,9 @@ use Codeception\Lib\Connector\Yii2;
 $this->title = 'TCFGROUP';
 ?>
 
-<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-<div class="col-12">
+<div class="col-12" style="padding-top: 1x;">
     <img src="<?= Yii::$app->homeUrl ?>image/TCG.png" alt="TCG" style="width: 100%;">
     <div class="offset-1 col-7 text-star">
         LET'S ACCELERATE AND <br>
@@ -67,39 +64,47 @@ $this->title = 'TCFGROUP';
             </div>
         </div>
         <div class="col-lg-6 col-12">
-            <img src="<?= Yii::$app->homeUrl ?>image/gol1.png" style="width: 100%;">
+            <img src="<?= Yii::$app->homeUrl ?>image/gol1.png" class="image-gol1" style="width: 100%;">
         </div>
     </div>
 </div>
 
-<div class="col-12 border">
+<div class="col-12">
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-12 text-establish">
-            <h3><img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> Our Professional Services</h3>
-            <li>Establish Company</li><br>
-            <li>Cross Border M&A Services</li><br>
-            <h5>
-                <li> Legal & Secretarial</li>
-            </h5><br>
-            <li>Accounts & Taxation</li><br>
-            <li>Human Resource</li><br>
-            <li>Recruitment & Placement</li><br>
+        <div class="col-lg-4 col-md-6 col-12" style="margin-top: 20px;">
+            <div class="text-establish">
+                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> Our Professional Services
+            </div>
+            <div class="Company">
+                <li>Establish Company</li><br>
+                <li>Cross Border M&A Services</li><br>
+                <h3>
+                    <li> Legal & Secretarial</li><br>
+                </h3>
+                <li>Accounts & Taxation</li><br>
+                <li>Human Resource</li><br>
+                <li>Recruitment & Placement</li>
+            </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-12 text-legal">
-            <h3>Legal & Secretarial</h3>
-            Our consulting firm specializes in providing legal and
-            secretarial support to multinational companies. Our
-            services include - Compliance Support, Corporate
-            Governance, Document Preparation, Secretarial
-            Services, corporate laws, contract laws, labor laws,
-            intellectual property laws, and compliance with local
-            laws and regulations.
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="text-legal">
+                Legal & Secretarial
+            </div>
+            <div class="Our">
+                Our consulting firm specializes in providing legal and
+                secretarial support to multinational companies. Our
+                services include - Compliance Support, Corporate
+                Governance, Document Preparation, Secretarial
+                Services, corporate laws, contract laws, labor laws,
+                intellectual property laws, and compliance with local
+                laws and regulations.
+            </div>
             <div class="text5">
                 <button type="button" class="btn btn-primary">Get Free Appointment</button>
             </div>
         </div>
-        <div class="col-lg-4 img-background" style="margin-top: 50px;">
-            <img src="<?= Yii::$app->homeUrl ?>image/background.png">
+        <div class="col-lg-4">
+            <img src="<?= Yii::$app->homeUrl ?>image/background.png" class="img-background" style="width: 100%">
         </div>
     </div>
 </div>
@@ -130,7 +135,7 @@ $this->title = 'TCFGROUP';
 <div class="col-12">
     <img src="<? Yii::$app->homeUrl ?>image/Boat1.png" style="width: 100%;">
     <div class="offset-1 text2">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img5">Our Philosophy: Contributing to Society, Driving Growth
+        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img5 mr-1">Our Philosophy: Contributing to Society, Driving Growth
     </div>
     <div class="offset-1 text3">
         <p> ❝ What we <img src="<?= Yii::$app->homeUrl ?>image/GIVE.png" class="give"> is</p>
@@ -204,9 +209,9 @@ $this->title = 'TCFGROUP';
                     <div class="col-7 form-select1">
                         <select class="form-select" aria-label="Default select example">
                             <option selected>Select business Type</option>
-                            <option value="1"></option>
-                            <option value="2"></option>
-                            <option value="3"></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
                         </select>
                     </div>
                 </div>
@@ -257,69 +262,118 @@ $this->title = 'TCFGROUP';
         </div>
     </div>
 </div>
-</div>
 
-
-<div class="col-12">
-    <img src="<?= Yii::$app->homeUrl ?>image/blue.png" style="width: 100%;">
-    <div class="card" style="padding-left: 25px;">
-        <img src="<?= Yii::$app->homeUrl ?>image/letter.png" class="contact" style="width: 25px;" height="30px">
-        <div class="col-auto mt-2">
-            Your Email address
-        </div>
-        <button type="submit" class="btn btn-info">Subscribe Now</button>
-    </div>
-    <img src="<?= Yii::$app->homeUrl ?>image/book.png" class="book">
-</div>
-
-
-<div class="footer" style="margin-top: 300px;">
+<div class="col-12 blue">
     <div class="row">
-        <div class="col-lg-2 col-md-6 col-12" style="margin-top: 60px;">
-            <img src="<?= Yii::$app->homeUrl ?>image/Tokyo.png" class="image-tokyo" style="width: 100px">
-        </div>
-        <div class="col-lg-3 col-md-6 col-12">
-            <h5>International Branches</h5>
-            <p><a href="#">Bangladesh</a> &nbsp;&nbsp;&nbsp;<a href="#">Dubai (UAE)</a>&nbsp;&nbsp;&nbsp; <a href="#">Brazil</a>&nbsp;&nbsp;&nbsp; <a href="#">Japan</a></p>
-            <p><a href="#">Hong Kong</a> &nbsp;&nbsp;&nbsp;<a href="#">Laos</a> &nbsp;&nbsp;&nbsp;<a href="#">Cambodia</a> &nbsp;&nbsp;&nbsp;<a href="#">Kenya</a></p>
-            <p><a href="#">India</a>&nbsp;&nbsp;&nbsp;<a href="#">Mexico </a> &nbsp;&nbsp;&nbsp;<a href="#">China</a> &nbsp;&nbsp;&nbsp;<a href="#">Malaysia </a></p>
-            <p><a href="#">India</a>&nbsp;&nbsp;&nbsp;<a href="#">Mongolia </a> &nbsp;&nbsp;&nbsp;<a href="#">Columbia </a>&nbsp;&nbsp;&nbsp;<a href="#">Morocco </a></p>
-            <p><a href="#">Philippines</a>&nbsp;&nbsp;&nbsp;<a href="#">Russia</a>&nbsp;&nbsp;&nbsp;<a href="#">South Africa </a>&nbsp;&nbsp;&nbsp;<a href="#">Singapore </a></p>
-            <p><a href="#">Sir Lanka</a>&nbsp;&nbsp;&nbsp;<a href="#">Thailand</a>&nbsp;&nbsp;&nbsp;<a href="#">Turkey </a></p>
-
-        </div>
-        <div class="col-lg-2 col-md-6 col-12">
-            <h5> Explore TCF</h5>
-            <p><a href="#home">Home</a></p>
-            <p><a href="#Webinar">Webinar</a></p>
-            <p><a href="#Monthly Newsletter">Monthly Newsletter</a></p>
-            <p><a href="#Weekly Newsletter">Weekly Newsletter</a></p>
-            <p> <a href="#Services">Services</a></p>
-            <p><a href="#Resources">Resources</a></p>
-        </div>
-        <div class="col-lg-2 col-md-6 col-12">
-            <h5> Popalar links</h5>
-            <p><a href="#for Webinar">for Webinar</a></p>
-            <p><a href="#Accounts & Taxatation">Accounts & Taxatation</a></p>
-            <p><a href="#Jinji-no-Butai">Jinji-no-Butai</a></p>
-            <p><a href="#Kuno Method">Kuno Method</a></p>
-            <p><a href="#Human Matrix">Human Matrix</a></p>
-            <p><a href="#Recorded Webinars">Recorded Webinars</a></p>
-        </div>
-        <div class="col-lg-3 col-md-6 col-12" style="margin-top: 90px;">
-            <a href="#facebook"><img src="<?= Yii::$app->homeUrl ?>image/facebook.png"></a> &nbsp;
-            <a href="#twitter"><img src="<?= Yii::$app->homeUrl ?>image/twitter.png"></a>&nbsp;
-            <a href="#Instagram"><img src="<?= Yii::$app->homeUrl ?>image/Instagram.png"></a>&nbsp;
-            <a href="#LinkedIn"><img src="<?= Yii::$app->homeUrl ?>image/LinkedIn.png"></a>&nbsp;
-            <a href="#YouTube"><img src="<?= Yii::$app->homeUrl ?>image/YouTube.png"></a>&nbsp;
-            <div class="text10">
-                Stay tuned, get all the business updates, newsletters
+        <div class="offset-1 col-11">
+            <div class="text-update">
+                <p>GET UPDATE FROM</p>
+                <p> All OVER THE WORLD</p>
             </div>
-            <br>
-            <div class="alert alert-secondary">
-                <img src="<?= Yii::$app->homeUrl ?>image/letter.png" class="letter" style="width: 25px;" height="30px">
-                Your Email address
-                <button type="submit" class="btn btn-info">Notify Me</button>
+            <div class="text-project">
+                <p>Project starts fall but small spots of hope indicate green shoots of recovery are there.</p>
+            </div>
+            <div class="col-lg-5 col-md col-12">
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
+                    <input type="text" class="form-control" placeholder="Your Email address" aria-label="Your Email address with two button addons">
+                    <button class="btn btn-outline-primary" type="button">Subscribe Now</button>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-end">
+    <img src="<?= Yii::$app->homeUrl ?>image/book.png" class="image-book" style="width: 100%px">
+</div>
+<div class="container">
+    <div class="col-12">
+        <div class="row">
+            <div class="offset-1 col-lg-2 col-md-6 col-12 " style="margin-top: 60px;">
+                <img src="<?= Yii::$app->homeUrl ?>image/tcg-group.png" style="width: 200px">
+            </div>
+            <div class="col-lg-2 col-md-6 col-12">
+                <div class="txt-internal">
+                    International Branches
+                </div>
+                <div class="country-footer">
+                    <p><a href="#Bangladesh">Bangladesh</a></p>
+                    <p><a href="#Dubai (UAE)">Dubai (UAE)</a></p>
+                    <p><a href="#Brazil">Brazil</a></p>
+                    <p><a href="#Japan">Japan</a></p>
+                    <p><a href="#Hong Kong">Hong Kong</a></p>
+                    <p><a href="#Laos">Laos</a></p>
+                    <a href="#Cambodia">Cambodia</a>
+
+                    <a href="#Kenya">Kenya</a>
+                    <a href="#India">India</a>
+                    <a href="#Mexico">Mexico </a>
+                    <a href="#China">China</a>
+                    <a href="#Malaysia">Malaysia </a>
+                    <a href="#India">India</a>
+                    <a href="#Nigeria">Nigeria</a>
+                    <a href="#Mongolia">Mongolia </a>
+                    <a href="#Peru">Peru </a>
+
+                    <a href="#Columbia">Columbia </a>
+                    <a href="#Morocco">Morocco </a>
+                    <a href="#Philippines">Philippines</a>
+                    <a href="#Russia">Russia</a>
+                    <a href="#South Africa">South Africa </a>
+                    <a href="#Singapore">Singapore </a>
+                    <a href="#Sir Lanka">Sir Lanka</a>
+                    <a href="#Thailand">Thailand</a>
+                    <a href="#Turkey">Turkey </a>
+
+
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-12">
+                <div class="txt-internal">
+                    Explore TCF
+                </div>
+                <div class="country-footer">
+                    <p><a href="#Home"> Home</a></p>
+                    <p><a href="#Webinar">Webinar</a></p>
+                    <p><a href="#Monthly Newsletter">Monthly Newsletter</a></p>
+                    <p><a href="#Weekly Newsletter">Weekly Newsletter</a></p>
+                    <p><a href="#Services">Services</a></p>
+                    <p><a href="#Resources">Resources</a></p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-12">
+                <div class="txt-internal">
+                    Popalar links
+                </div>
+                <div class="country-footer">
+                    <p><a href="#for Webinar">for Webinar</a></p>
+                    <p><a href="#Accounts & Taxatation">Accounts & Taxatation</a></p>
+                    <p><a href="#Jinji-no-Butai">Jinji-no-Butai</a></p>
+                    <p><a href="#Kuno Method">Kuno Method</a></p>
+                    <p><a href="#Human Matrix">Human Matrix</a></p>
+                    <p><a href="#Recorded Webinars">Recorded Webinars</a></p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12" style="margin-top: 60px;">
+                <p> <a href="#facebook"><img src="<?= Yii::$app->homeUrl ?>image/facebook.png"></a>
+                    <a href="#twitter"><img src="<?= Yii::$app->homeUrl ?>image/twitter.png"></a>
+                    <a href="#Instagram"><img src="<?= Yii::$app->homeUrl ?>image/Instagram.png"></a>
+                    <a href="#LinkedIn"><img src="<?= Yii::$app->homeUrl ?>image/LinkedIn.png"></a>
+                    <a href="#YouTube"><img src="<?= Yii::$app->homeUrl ?>image/YouTube.png"></a>
+
+                <div class="txt-stay">
+                    Stay tuned, get all the business updates, newsletters
+                </div>
+                <div class="col-lg-10 col-md-6 col-12" style="margin-top: 20px;">
+                    <div class="input-group">
+                        <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
+                        <input type="text" class="form-control" placeholder="Your Email address" aria-label="Your Email address with two button addons">
+                        <button class="btn btn-outline-primary" type="button">Notify Me</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -327,30 +381,34 @@ $this->title = 'TCFGROUP';
 
 
 
-<!-- <div class="row">
-    <img src="<?= Yii::$app->homeUrl ?>image/footer.png">
-    <div class="col-lg-6 col-md-6 col-12">
-        <div class="btn-group" role="group">
-            <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="<?= Yii::$app->homeUrl ?>image/erd.png">GLOBAL
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                <li><a class="dropdown-item" href="#">English</a></li>
-                <li><a class="dropdown-item" href="#">Thailand</a></li>
-            </ul>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-1 col-lg-2 col-md-6 col-12">
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-globe"></i> GLOBAL
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a class="dropdown-item" href="#English">English</a></li>
+                        <li><a class="dropdown-item" href="#Thailand">Thailand</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-6 col-12">
+                <div class="text-white">
+                    <p>@ Copyright 2022 Tokyo Consulting Group, <a href="#All Rights Reserved" class="links">All Rights Reserved</a> , 10, Ataturk Tower, Flat #11/A (Lift, 22 Kemal Ataturk Ave, Dhaka 1213</p>
+                </div>
+                <div class="footer-links">
+                    <p> <a href="Legal" target="_blank">Legal</a>
+                        <a href="Terms of Service" target="_blank">Terms of Service</a>
+                        <a href="Responsible Disclosure" target="_blank">Responsible Disclosure</a>
+                        <a href="Privacy Information" target="_blank">Privacy Information</a>
+                        <a href="Cookie Preferences" target="_blank">Cookie Preferences</a>
+                        <a href="Contact" target="_blank">Contact</a>
+                        <a href="Sitemap" target="_blank">Sitemap</a>
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="col-lg-6 col-md-6 col-12">
-        <div class="text-white">
-            <p>@ Copyright 2022 Tokyo Consulting Group, <a href="#All Rights Reserved" class="links">All Rights Reserved</a> , 10, Ataturk Tower, Flat #11/A (Lift, 22 Kemal Ataturk Ave, Dhaka 1213</p>
-            <p><b><a href="Legal" target="_blank">Legal</a></b>
-                <b><a href="Terms of Service" target="_blank">Terms of Service</a></b>
-                <b><a href="Responsible Disclosure" target="_blank">Responsible Disclosure</a></b>
-                <b><a href="Privacy Information" target="_blank">Privacy Information</a></b>
-                <b><a href="Cookie Preferences" target="_blank">Cookie Preferences</a></b>
-                <b><a href="Contact" target="_blank">Contact</a></b>
-                <b><a href="Sitemap" target="_blank">Sitemap</a></b>
-            </p>
-        </div>
-    </div>
-</div> -->
+</footer>

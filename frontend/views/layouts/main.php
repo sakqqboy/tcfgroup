@@ -28,9 +28,7 @@ AppAsset::register($this);
     <?php $this->beginBody() ?>
 
     <header>
-        <div class="container">
 
-        </div>
     </header>
 
     <main role="main" class="flex-shrink-0">
@@ -47,11 +45,7 @@ AppAsset::register($this);
         </div>
     </main>
 
-    <footer class="footer mt-auto py-3 text-muted">
-
-        <div class="footer">
-
-        </div>
+    <footer class="footer mt-auto  text-muted">
 
     </footer>
 

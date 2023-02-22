@@ -114,7 +114,7 @@ $this->title = 'TCFGROUP';
                     <p> Business in Japan</p>
                 </div>
                 <div class="text-Unlock">
-                    <p>Unlock the full potential of your business in Japan with our comprehensive
+                    <p> Unlock the full potential of your business in Japan with our comprehensive
                         and customized support services. From market research and regulatory
                         compliance to local representation and cultural integration, our team of
                         experts will guide you every step of the way to ensure a seamless entry and
@@ -153,7 +153,7 @@ $this->title = 'TCFGROUP';
             personal development.</p>
         <p> As a thought leader in the business world, Yasunari Kuno is known for his innovative ideas and forward thinking approach to solving complex business challenges. He is passionate about helping others achieve
             their full potential and has dedicated his career to helping businesses succeed and thrive.</p>
-        <div class="col-12 text-end kuno" style="margin-top: 60px;">
+        <div class="col-12 text-end kuno">
             YASUNARI KUNO, CEO, TOKYO CONSULTING GROUP
         </div>
     </div>

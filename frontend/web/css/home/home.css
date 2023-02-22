@@ -141,7 +141,6 @@
 
 .img-background {
     width: 100%;
-    font-family: 'klavika';
 }
 
 
@@ -420,7 +419,7 @@
 
     .kuno {
 
-        padding-top: -10%;
+        padding-top: 30px;
     }
 
 
@@ -500,27 +499,27 @@
 
     .text-legal {
         font-size: 25px;
-        padding-left: 10%;
+        padding-left: 40px;
         margin-top: 25px;
     }
 
     .Our {
         font-size: 15px;
-        line-height: 15px;
-        margin-top: 5%;
-        padding-left: 10%;
+        line-height: 18px;
+        margin-top: 30px;
+        padding-left: 40px;
 
     }
 
     .button-text5 {
 
-        font-size: 12px;
         margin-top: 20px;
 
     }
 
     .form-Questions {
         padding-right: 10px;
+        ;
     }
 
     .text-tokyo {
@@ -600,5 +599,12 @@
     .form-check-inline {
         padding-left: 60px;
     }
+
+    .img-background {
+        width: 100%;
+
+
+    }
+
 
 }

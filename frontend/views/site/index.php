@@ -19,162 +19,162 @@ $this->title = 'TCFGROUP';
         TOGETHER<br>
         <button type="button" class="btn btn-primary">Get Free Appointment</button>
     </div>
+</div>
 
 
 
+<div class="col-12 col-background">
+    <div class="col-12 pt-20 Global-Business">
+        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Global Business Environment
+    </div>
+    <div class="col-12 text-TCG">
 
-    <div class="col-12 col-background">
-        <div class="col-12 pt-20 Global-Business">
-            <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Global Business Environment
+        Browse TCG Services by contry
+    </div>
+    <div class="col-12">
+        <div class="row col-12">
+            <div class="col-lg-6 col-12">
+                <div class="row">
+                    <div class="col-6 country-index">
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/Bangladesh.png" class="img-country"> Bangladesh</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/brazil.png" class="img-country"> Brazil</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/combodia.png" class="img-country"> Combodia</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/china.png" class="img-country"> China</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/columbia.png" class="img-country"> Columbia</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/Dubai.png" class="img-country"> Dubai(UAE)</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/hong kong.png" class="img-country"> Hong kong</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/india.png" class="img-country"> India</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/indonesia.png" class="img-country"> Indonesia</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/kenya.png" class="img-country"> kenya</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/japan.png" class="img-country"> Japan</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/laos.png" class="img-country"> Laos</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/malaysia.png" class="img-country"> Malaysia</p>
+                    </div>
+                    <div class="col-6 country-index">
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/maxico.png" class="img-country"> Mexico</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/mongolia.png" class="img-country"> Mongolia</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/nigeria.png" class="img-country"> Nigeria</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/mayanmar.png" class="img-country"> Mayanmar</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/nigeria.png" class="img-country"> Nigeria</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/peru.png" class="img-country"> Peru</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/philippines.png" class="img-country"> Philippines</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/russia.png" class="img-country"> Russia</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/south africa.png" class="img-country"> South Afroca</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/singapore.png" class="img-country"> Singapore</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/sir lanka.png" class="img-country"> Sir Lanka</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/thailand.png" class="img-country"> Thailad</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/turkey.png" class="img-country"> Turkey</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <img src="<?= Yii::$app->homeUrl ?>image/gol1.png" class="image-gol1">
+            </div>
         </div>
-        <div class="col-12 text-TCG">
+    </div>
+</div>
 
-            Browse TCG Services by contry
+
+
+
+<div class="col-12 pr12">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
+            <div class="col-lg-12 text-establish">
+                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> Our Professional Services
+            </div>
+            <div class="col-lg-12 Company">
+                <li>Establish Company</li> <br>
+                <li>Cross Border M&A Services</li> <br>
+                <li>Legal & Secretarial</li> <br>
+                <li>Accounts & Taxation</li> <br>
+                <li>Human Resource</li> <br>
+                <li> Recruitment & Placement </li><br>
+
+            </div>
         </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 show-text-home">
+            <div class="col-12 text-legal pl-20">
+                Legal & Secretarial
+            </div>
+            <div class="col-12 Our pt-20 pl-20">
+                Our consulting firm specializes in providing legal and
+                secretarial support to multinational companies. Our
+                services include - Compliance Support, Corporate
+                Governance, Document Preparation, Secretarial
+                Services, corporate laws, contract laws, labor laws,
+                intellectual property laws, and compliance with local
+                laws and regulations.<br>
+                <button type="button" class="btn btn-primary button-text5">Get Free Appointment</button>
+            </div>
+        </div>
+        <div class="col-lg-4 col-12">
+            <img src="<?= Yii::$app->homeUrl ?>image/background.png" class="img-background">
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="col-12">
+    <img src="<?= Yii::$app->homeUrl ?>image/Yokhohamaa.png" class="w-100">
+    <div class="row">
         <div class="col-12">
-            <div class="row col-12">
-                <div class="col-lg-6 col-12">
-                    <div class="row">
-                        <div class="col-6 country-index">
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/Bangladesh.png" class="img-country"> Bangladesh</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/brazil.png" class="img-country"> Brazil</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/combodia.png" class="img-country"> Combodia</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/china.png" class="img-country"> China</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/columbia.png" class="img-country"> Columbia</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/Dubai.png" class="img-country"> Dubai(UAE)</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/hong kong.png" class="img-country"> Hong kong</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/india.png" class="img-country"> India</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/indonesia.png" class="img-country"> Indonesia</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/kenya.png" class="img-country"> kenya</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/japan.png" class="img-country"> Japan</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/laos.png" class="img-country"> Laos</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/malaysia.png" class="img-country"> Malaysia</p>
-                        </div>
-                        <div class="col-6 country-index">
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/maxico.png" class="img-country"> Mexico</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/mongolia.png" class="img-country"> Mongolia</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/nigeria.png" class="img-country"> Nigeria</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/mayanmar.png" class="img-country"> Mayanmar</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/nigeria.png" class="img-country"> Nigeria</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/peru.png" class="img-country"> Peru</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/philippines.png" class="img-country"> Philippines</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/russia.png" class="img-country"> Russia</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/south africa.png" class="img-country"> South Afroca</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/singapore.png" class="img-country"> Singapore</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/sir lanka.png" class="img-country"> Sir Lanka</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/thailand.png" class="img-country"> Thailad</p>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/turkey.png" class="img-country"> Turkey</p>
-                        </div>
-                    </div>
+            <div class="offset-1 col-lg-4 col-md-6 col-12 ">
+                <div class="text-japan">
+                    <p> Establish</p>
+                    <p> Business in Japan</p>
                 </div>
-                <div class="col-lg-6 col-12">
-                    <img src="<?= Yii::$app->homeUrl ?>image/gol1.png" class="image-gol1">
+                <div class="text-Unlock">
+                    <p> Unlock the full potential of your business in Japan with our comprehensive
+                        and customized support services. From market research and regulatory
+                        compliance to local representation and cultural integration, our team of
+                        experts will guide you every step of the way to ensure a seamless entry and
+                        successful establishment in the Japanese market.</p>
                 </div>
+                <button type="button" class="btn btn-primary button-contact">Contact Experts</button>
             </div>
         </div>
     </div>
+</div>
 
 
 
 
-    <div class="col-12 pr12">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
-                <div class="col-lg-12 text-establish">
-                    <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> Our Professional Services
-                </div>
-                <div class="col-lg-12 Company">
-                    <li>Establish Company</li> <br>
-                    <li>Cross Border M&A Services</li> <br>
-                    <li>Legal & Secretarial</li> <br>
-                    <li>Accounts & Taxation</li> <br>
-                    <li>Human Resource</li> <br>
-                    <li> Recruitment & Placement </li><br>
-
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 show-text-home">
-                <div class="col-12 text-legal pl-20">
-                    Legal & Secretarial
-                </div>
-                <div class="col-12 Our pt-20 pl-20">
-                    Our consulting firm specializes in providing legal and
-                    secretarial support to multinational companies. Our
-                    services include - Compliance Support, Corporate
-                    Governance, Document Preparation, Secretarial
-                    Services, corporate laws, contract laws, labor laws,
-                    intellectual property laws, and compliance with local
-                    laws and regulations.<br>
-                    <button type="button" class="btn btn-primary button-text5">Get Free Appointment</button>
-                </div>
-            </div>
-            <div class="col-lg-4 col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/background.png" class="img-background">
-            </div>
-        </div>
+<div class="col-12">
+    <img src="<?= Yii::$app->homeUrl ?>image/Boat1.png" style="width: 100%;">
+    <div class="offset-1 text2">
+        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img5 mr-1">Our Philosophy: Contributing to Society, Driving Growth
     </div>
-
-
-
-
-    <div class="col-12">
-        <img src="<?= Yii::$app->homeUrl ?>image/Yokhohamaa.png" class="w-100">
-        <div class="row">
-            <div class="col-12">
-                <div class="offset-1 col-lg-4 col-md-6 col-12 ">
-                    <div class="text-japan">
-                        <p> Establish</p>
-                        <p> Business in Japan</p>
-                    </div>
-                    <div class="text-Unlock">
-                        <p> Unlock the full potential of your business in Japan with our comprehensive
-                            and customized support services. From market research and regulatory
-                            compliance to local representation and cultural integration, our team of
-                            experts will guide you every step of the way to ensure a seamless entry and
-                            successful establishment in the Japanese market.</p>
-                    </div>
-                    <button type="button" class="btn btn-primary button-contact">Contact Experts</button>
-                </div>
-            </div>
-        </div>
+    <div class="offset-1 text3">
+        <img src="<?= Yii::$app->homeUrl ?>image/what-we.png" class="image-what-we-give">
     </div>
-
-
-
-
-    <div class="col-12">
-        <img src="<?= Yii::$app->homeUrl ?>image/Boat1.png" style="width: 100%;">
-        <div class="offset-1 text2">
-            <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img5 mr-1">Our Philosophy: Contributing to Society, Driving Growth
-        </div>
-        <div class="offset-1 text3">
-            <img src="<?= Yii::$app->homeUrl ?>image/what-we.png" class="image-what-we-give">
-        </div>
-        <div class="offset-1 col-md-5 col-12 text-tokyo">
-            At Tokyo Consulting Group, our philosophy is centered around making a positive impact on society. We believe that this is the ultimate goal of any company and we strive to develop human resources to fulfill this purpose. Our management principles and philosophies are dynamic, adapting to the changing times, but our commitment to contributing to society remains steadfast. Our vision, strategies and tactics are continuously evolving to stay ahead of the curve, but never at the cost of our core values. Our company's growth is measured not just by profits, but also by our ability to fulfill our social mission. As a responsible corporate citizen, we believe in finding the appropriate size that balances our growth aspirations with our obligation to society. Join us in our journey to create a better future for all."
-        </div>
+    <div class="offset-1 col-md-5 col-12 text-tokyo">
+        At Tokyo Consulting Group, our philosophy is centered around making a positive impact on society. We believe that this is the ultimate goal of any company and we strive to develop human resources to fulfill this purpose. Our management principles and philosophies are dynamic, adapting to the changing times, but our commitment to contributing to society remains steadfast. Our vision, strategies and tactics are continuously evolving to stay ahead of the curve, but never at the cost of our core values. Our company's growth is measured not just by profits, but also by our ability to fulfill our social mission. As a responsible corporate citizen, we believe in finding the appropriate size that balances our growth aspirations with our obligation to society. Join us in our journey to create a better future for all."
     </div>
+</div>
 
 
 
-    <div class="col-12">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle4239.png" class="image-Rectangle" style="width:100%">
-        <div class="offset-1 text4">
-            <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> About Yasunari Kuno
-        </div>
-        <div class="col-lg-8 col-md-6 col-12 text-Yasunari">
-            <p> Yasunari Kuno is a seasoned business professional with over two decades of experience in the industry.
-                He has a strong track record of success and is respected for his leadership skills, strategic vision, and
-                ability to drive growth and profitability. In addition to his work as the chairman and founder of TCF and
-                TCG, Yasunari Kuno is also an accomplished author, having published several books on business and
-                personal development.</p>
-            <p> As a thought leader in the business world, Yasunari Kuno is known for his innovative ideas and forward thinking approach to solving complex business challenges. He is passionate about helping others achieve
-                their full potential and has dedicated his career to helping businesses succeed and thrive.</p>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; YASUNARI KUNO, CEO, TOKYO CONSULTING GROUP
-        </div>
+<div class="col-12">
+    <img src="<?= Yii::$app->homeUrl ?>image/Rectangle4239.png" class="image-Rectangle" style="width:100%">
+    <div class="offset-1 text4">
+        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> About Yasunari Kuno
     </div>
+    <div class="col-lg-8 col-md-6 col-12 text-Yasunari">
+        <p> Yasunari Kuno is a seasoned business professional with over two decades of experience in the industry.
+            He has a strong track record of success and is respected for his leadership skills, strategic vision, and
+            ability to drive growth and profitability. In addition to his work as the chairman and founder of TCF and
+            TCG, Yasunari Kuno is also an accomplished author, having published several books on business and
+            personal development.</p>
+        <p> As a thought leader in the business world, Yasunari Kuno is known for his innovative ideas and forward thinking approach to solving complex business challenges. He is passionate about helping others achieve
+            their full potential and has dedicated his career to helping businesses succeed and thrive.</p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; YASUNARI KUNO, CEO, TOKYO CONSULTING GROUP
+    </div>
+</div>
 
 </div>
 
@@ -196,7 +196,6 @@ $this->title = 'TCFGROUP';
                 <div class="row">
                     <div class="col-7">
                         <p class="If-you2">Do you prefer to communicate as an entity or an individual?</p>
-
                     </div>
                     <div class="col-5">
                         <label for="formGroupExampleInput" class="form-label label-thin"><img src="<?= Yii::$app->homeUrl ?>image/Bangladesh.png"> &nbsp;&nbsp;Select Country</label>
@@ -318,5 +317,4 @@ $this->title = 'TCFGROUP';
             <img src="<?= Yii::$app->homeUrl ?>image/book.png" class="image-book">
         </div>
     </div>
-</div>
 </div>

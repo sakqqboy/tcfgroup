@@ -102,6 +102,7 @@
 
 .form-Questions {
     padding-left: 30px;
+    font-family: 'klavika';
 }
 
 .text-japan {
@@ -507,7 +508,7 @@
 
     .form-Questions {
         padding-right: 10px;
-        ;
+        font-family: 'klavika';
     }
 
     .text-tokyo {
@@ -521,7 +522,7 @@
         text-align: center; */
 
         width: 30%;
-        margin-top: -70%;
+        margin-top: -69%;
         margin-left: 70%;
     }
 

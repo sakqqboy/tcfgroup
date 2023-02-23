@@ -66,21 +66,14 @@ AppAsset::register($this);
     </header>
 
     <main role="main" class="flex-shrink-0">
-
-        <div class="row">
-
-            <?php
-            echo $this->render("@frontend/views/site/header")
-            ?>
-
-
-            <?= $content ?>
-
-        </div>
+        <?php
+        echo $this->render("@frontend/views/site/header")
+        ?>
+        <?= $content ?>
     </main>
 
-    <footer class="footer mt-auto  text-muted">
-
+    <footer class="">
+        <?= $this->render("@frontend/views/layouts/footer") ?>
     </footer>
 
     <?php

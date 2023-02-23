@@ -49,6 +49,11 @@ return [
             'showScriptName' => false,
             'rules' => [],
         ],
+        'assetManager' => [
+            'appendTimestamp' => true,
+            'bundles' => [],
+            //            'forceCopy' => TRUE
+        ],
 
     ],
     'params' => $params,

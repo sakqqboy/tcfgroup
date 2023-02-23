@@ -9,30 +9,31 @@
 			</div>
 			<div class="country-footer">
 				<p><a href="#Bangladesh" class="no-underline">Bangladesh</a></p>
-				<p><a href="#Dubai (UAE)" class="no-underline">Dubai (UAE)</a></p>
 				<p><a href="#Brazil" class="no-underline">Brazil</a></p>
-				<p><a href="#Japan" class="no-underline">Japan</a></p>
-				<p><a href="#Hong Kong" class="no-underline">Hong Kong</a></p>
-				<p><a href="#Laos" class="no-underline">Laos</a></p>
 				<p><a href="#Cambodia" class="no-underline">Cambodia</a></p>
+				<p><a href="#Morocco" class="no-underline">Morocco</a></p>
+				<p><a href="#China" class="no-underline">China</a></p>
+				<p><a href="#Columbia" class="no-underline">Columbia</a></p>
+				<p><a href="#Dubai (UAE)" class="no-underline">Dubai (UAE)</a></p>
+				<p><a href="#Malaysia" class="no-underline">Malaysia</a></p>
+				<p><a href="#Hong Kong" class="no-underline">Hong Kong</a></p>
+				<p><a href="#Indonesia" class="no-underline">Indonesia</a></p>
+				<p><a href="#Japan" class="no-underline">Japan</a></p>
+				<p><a href="#Laos" class="no-underline">Laos</a></p>
 				<p><a href="#Kenya" class="no-underline">Kenya</a></p>
-				<!-- <p><a href="#India">India</a></p>
-                    <p><a href="#Mexico">Mexico </a></p>
-                    <p><a href="#China">China</a></p>
-                    <p><a href="#Malaysia">Malaysia </a></p>
-                    <p><a href="#India">India</a></p>
-                    <p><a href="#Nigeria">Nigeria</a></p>
-                    <p><a href="#Mongolia">Mongolia </a></p>
-                    <p><a href="#Peru">Peru </a></p>
-                    <p><a href="#Columbia">Columbia </a></p>
-                    <p><a href="#Morocco">Morocco </a></p>
-                    <p><a href="#Philippines">Philippines</a></p>
-                    <p><a href="#Russia">Russia</a></p>
-                    <p><a href="#South Africa">South Africa </a></p>
-                    <p><a href="#Singapore">Singapore </a></p>
-                    <p><a href="#Sir Lanka">Sir Lanka</a></p>
-                    <p><a href="#Thailand">Thailand</a></p>
-                    <p><a href="#Turkey">Turkey </a></p> -->
+				<p><a href="#India" class="no-underline">India</a></p>
+				<p><a href="#Mexico" class="no-underline">Mexico</a></p>
+				<p><a href="#Mongolia" class="no-underline">Mongolia</a></p>
+				<p><a href="#Mayanma" class="no-underline">Mayanma</a></p>
+				<p><a href="#Niggeria" class="no-underline">Niggeria</a></p>
+				<p><a href="#Peru" class="no-underline">Peru</a></p>
+				<p><a href="#Philippines" class="no-underline">Philippines</a></p>
+				<p><a href="#Russia" class="no-underline">Russia</a></p>
+				<p><a href="#South Africa" class="no-underline">South Africa</a></p>
+				<p><a href="#Singapore" class="no-underline">Singapore</a></p>
+				<p><a href="#Sir Lanka" class="no-underline">Sir Lanka</a></p>
+				<p><a href="#Thailand" class="no-underline">Thailand</a></p>
+				<p><a href="#Turkey" class="no-underline">Turkey</a></p>
 			</div>
 		</div>
 		<div class="col-lg-2 col-md-6 col-6 footer-box">

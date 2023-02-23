@@ -11,7 +11,7 @@ $this->title = 'TCFGROUP';
 <div class="">
 
     <div class="col-12">
-        <img src="<?= Yii::$app->homeUrl ?>image/TCG.png" style="width: 100%;">
+        <img src="<?= Yii::$app->homeUrl ?>image/TCG.png" class="image-TCG" style="width: 100%;">
     </div>
     <div class="offset-1 col-10 text-star">
         LET'S ACCELERATE AND <br>
@@ -28,6 +28,7 @@ $this->title = 'TCFGROUP';
             <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Global Business Environment
         </div>
         <div class="col-12 text-TCG">
+
             Browse TCG Services by contry
         </div>
         <div class="col-12">
@@ -147,8 +148,7 @@ $this->title = 'TCFGROUP';
             <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img5 mr-1">Our Philosophy: Contributing to Society, Driving Growth
         </div>
         <div class="offset-1 text3">
-            <p> ❝ What we <img src="<?= Yii::$app->homeUrl ?>image/GIVE.png" class="give"> is</p>
-            <p> &nbsp; &nbsp;What we <img src="<?= Yii::$app->homeUrl ?>image/GET.png" class="get"> ❞</p>
+            <img src="<?= Yii::$app->homeUrl ?>image/what-we.png" class="image-what-we-give">
         </div>
         <div class="offset-1 col-md-5 col-12 text-tokyo">
             At Tokyo Consulting Group, our philosophy is centered around making a positive impact on society. We believe that this is the ultimate goal of any company and we strive to develop human resources to fulfill this purpose. Our management principles and philosophies are dynamic, adapting to the changing times, but our commitment to contributing to society remains steadfast. Our vision, strategies and tactics are continuously evolving to stay ahead of the curve, but never at the cost of our core values. Our company's growth is measured not just by profits, but also by our ability to fulfill our social mission. As a responsible corporate citizen, we believe in finding the appropriate size that balances our growth aspirations with our obligation to society. Join us in our journey to create a better future for all."
@@ -157,9 +157,8 @@ $this->title = 'TCFGROUP';
 
 
 
-
     <div class="col-12">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle4239.png" style="width:100%">
+        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle4239.png" class="image-Rectangle" style="width:100%">
         <div class="offset-1 text4">
             <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> About Yasunari Kuno
         </div>
@@ -171,152 +170,153 @@ $this->title = 'TCFGROUP';
                 personal development.</p>
             <p> As a thought leader in the business world, Yasunari Kuno is known for his innovative ideas and forward thinking approach to solving complex business challenges. He is passionate about helping others achieve
                 their full potential and has dedicated his career to helping businesses succeed and thrive.</p>
-            <div class="col-12 text-end kuno">
-                YASUNARI KUNO, CEO, TOKYO CONSULTING GROUP
-            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; YASUNARI KUNO, CEO, TOKYO CONSULTING GROUP
         </div>
-
     </div>
 
+</div>
 
 
-    <div class="col-12 pb-50">
-        <div class="col-12 connect-experts mt-40 pl-40">
-            <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> Connect Experts
-        </div>
-        <div class="col-12 Get-free mt-30 pl-40">
-            Get Free Appointment on your Business Issuefa-spin
-        </div>
-        <div class="col-12 If-you pl-40 mt-10">
-            If you would like to discuss a project or have a question, please fill in the form and we ll get right back to you.
-        </div>
-        <div class="col-12 mt-30 pr-12 pr12">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-12 mt-50 box-left">
-                    <div class="row">
-                        <div class="col-7">
-                            <p class="If-you2">Do you prefer to communicate as an entity or an individual?</p>
 
-                        </div>
-                        <div class="col-5">
-                            <label for="formGroupExampleInput" class="form-label label-thin"><img src="<?= Yii::$app->homeUrl ?>image/Bangladesh.png"> &nbsp;&nbsp;Select Country</label>
-                            <select class="form-select mt-10" aria-label="Default select example">
-                                <option selected>Bangladesh</option>
-                                <option value="1">Brazil</option>
-                                <option value="2">Combodia</option>
-                                <option value="3">China</option>
-                            </select>
-                        </div>
-                        <div class="col-12 ">
-                            <div class="row mt-20">
-                                <div class="col-6 left-box-select ">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label ml-10" for="inlineRadio1">Legal Entity</label>
-                                </div>
-                                <div class="col-6">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label ml-10" for="inlineRadio2">Individual</label>
-                                </div>
-                            </div>
-                        </div>
+<div class="col-12 pb-50">
+    <div class="col-12 connect-experts mt-40 pl-40">
+        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> Connect Experts
+    </div>
+    <div class="col-12 Get-free mt-30 pl-40">
+        Get Free Appointment on your Business Issuefa-spin
+    </div>
+    <div class="col-12 If-you pl-40 mt-10">
+        If you would like to discuss a project or have a question, please fill in the form and we ll get right back to you.
+    </div>
+    <div class="col-12 mt-30 pr-12 pr12">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-12 mt-50 box-left">
+                <div class="row">
+                    <div class="col-7">
+                        <p class="If-you2">Do you prefer to communicate as an entity or an individual?</p>
+
                     </div>
-                    <div class="mb-3 your-company" style="margin-top: 30px;">
-                        <label for="exampleInputCompany" class="form-label label-thin">Your Company*</label>
-                        <input type="Company" class="form-control" id="exampleInputCompany" aria-describedby="company">
+                    <div class="col-5">
+                        <label for="formGroupExampleInput" class="form-label label-thin"><img src="<?= Yii::$app->homeUrl ?>image/Bangladesh.png"> &nbsp;&nbsp;Select Country</label>
+                        <select class="form-select mt-10" aria-label="Default select example">
+                            <option selected>Bangladesh</option>
+                            <option value="1">Brazil</option>
+                            <option value="2">Combodia</option>
+                            <option value="3">China</option>
+                        </select>
                     </div>
-                    <div class="mb-3 your-company">
-                        <label for="exampleInputName" class="form-label label-thin">Your Name*</label>
-                        <input type="Name" class="form-control" id="exampleInputName" aria-describedby="name">
-                    </div>
-                    <div class="mb-3 your-company">
-                        <label for="exampleInputPosition" class="form-label label-thin">Position*</label>
-                        <input type="Position" class="form-control" id="exampleInputPosition" aria-describedby="position">
-                    </div>
-                    <div class="mb-3 your-company">
-                        <label for="exampleInputEmail" class="form-label label-thin">Your e-mail*</label>
-                        <input type="Email" class="form-control" id="exampleInputEmail" aria-describedby="email">
-                    </div>
-                    <div class="mb-3 your-company">
-                        <div class="row">
-                            <div class="col-6 text-end">
-                                <label for="exampleInputEmail" class="form-label label-thin">Phone Number*</label>
-                                <input type="text" class="form-control" placeholder="+880" aria-label="Phone">
+                    <div class="col-12 ">
+                        <div class="row mt-20">
+                            <div class="col-6 left-box-select ">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label ml-10" for="inlineRadio1">Legal Entity</label>
                             </div>
                             <div class="col-6">
-                                <label for="exampleInputEmail" class="form-label label-thin">Your Business </label>
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Select business Type</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                </select>
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label ml-10" for="inlineRadio2">Individual</label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-12 form-Questions mt-50 pr-40">
-                    <div class="mb-3">
-                        <label for="exampleInputQuestions" class="form-label label-thin">Questions & Concern</label>
-                        <input type="Questions" class="form-control" id="exampleInputQuestions" aria-describedby="Questions">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label label-thin">Details of Inquiry</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
+                <div class="mb-3 your-company" style="margin-top: 30px;">
+                    <label for="exampleInputCompany" class="form-label label-thin">Your Company*</label>
+                    <input type="Company" class="form-control" id="exampleInputCompany" aria-describedby="company">
+                </div>
+                <div class="mb-3 your-company">
+                    <label for="exampleInputName" class="form-label label-thin">Your Name*</label>
+                    <input type="Name" class="form-control" id="exampleInputName" aria-describedby="name">
+                </div>
+                <div class="mb-3 your-company">
+                    <label for="exampleInputPosition" class="form-label label-thin">Position*</label>
+                    <input type="Position" class="form-control" id="exampleInputPosition" aria-describedby="position">
+                </div>
+                <div class="mb-3 your-company">
+                    <label for="exampleInputEmail" class="form-label label-thin">Your e-mail*</label>
+                    <input type="Email" class="form-control" id="exampleInputEmail" aria-describedby="email">
+                </div>
+                <div class="mb-3 your-company">
                     <div class="row">
-                        <div class="col-6 text-start label-thin mt-4">
-                            ATTACHMENT (IF ANY) <img src="<?= Yii::$app->homeUrl ?>image/files.png">
+                        <div class="col-6 text-start">
+                            <label for="exampleInputEmail" class="form-label label-thin">Phone Number*</label>
+                            <input type="text" class="form-control" placeholder="+880" aria-label="Phone">
                         </div>
-                        <div class="col-lg-6 mt-4 text-end">
-                            <button type="button" class="btn btn-primary button-get">Get Free Appointment</button>
+                        <div class="col-6">
+                            <label for="exampleInputEmail" class="form-label label-thin">Your Business </label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Select business Type</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
                         </div>
-                        <div class="col-6 text-start mt-4">
-                            <div class="contact-social mb-2">Whatsapp</div>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/whatsapp.png" class="social-icon mr-10"> inquarrytcf</p>
-                        </div>
-                        <div class="col-6 text-end mt-4">
-                            <div class="contact-social mb-2">Email</div>
-                            <p>f-info@tokyoconsultinggroup.com <img src="<?= Yii::$app->homeUrl ?>image/letter.png" class="social-icon ml-10"></p>
-                        </div>
-                        <div class="col-6 text-start mt-4">
-                            <div class="contact-social mb-2">Skype</div>
-                            <p><img src="<?= Yii::$app->homeUrl ?>image/skype.png" class="social-icon mr-10"> inquarrytcf</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 form-Questions mt-50 pr-40">
+                <div class="mb-3">
+                    <label for="exampleInputQuestions" class="form-label label-thin">Questions & Concern</label>
+                    <input type="Questions" class="form-control" id="exampleInputQuestions" aria-describedby="Questions">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label label-thin">Details of Inquiry</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-start label-thin mt-4">
+                        ATTACHMENT (IF ANY) <img src="<?= Yii::$app->homeUrl ?>image/files.png">
+                    </div>
+                    <div class="col-lg-6 mt-4 text-end">
+                        <button type="button" class="btn btn-primary button-get">Get Free Appointment</button>
+                    </div>
+                    <div class="col-6 text-start mt-4">
+                        <div class="contact-social mb-2">Whatsapp</div>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/whatsapp.png" class="social-icon mr-10"> inquarrytcf</p>
+                    </div>
+                    <div class="col-6 text-end mt-4">
+                        <div class="contact-social mb-2">Email</div>
+                        <p>f-info@tokyoconsultinggroup.com <img src="<?= Yii::$app->homeUrl ?>image/letter.png" class="social-icon ml-10"></p>
+                    </div>
+                    <div class="col-6 text-start mt-4">
+                        <div class="contact-social mb-2">Skype</div>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/skype.png" class="social-icon mr-10"> inquarrytcf</p>
 
-                        </div>
-                        <div class="col-6 text-end mt-4">
-                            <div class="contact-social mb-2">Phone</div>
-                            <p> +090-111-222<img src="<?= Yii::$app->homeUrl ?>image/phone-call.png" class="social-icon ml-10"></p>
-                        </div>
+                    </div>
+                    <div class="col-6 text-end mt-4">
+                        <div class="contact-social mb-2">Phone</div>
+                        <p> +090-111-222<img src="<?= Yii::$app->homeUrl ?>image/phone-call.png" class="social-icon ml-10"></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="col-12 pr12 blue pt-20 pb-10">
-        <div class="row">
-            <div class="offset-lg-1 offset-md-1 col-1g-10 col-md-10 col-12 text-update">
-                <p>GET UPDATE FROM</p>
-                <p> All OVER THE WORLD</p>
+<div class="col-12 pr12 blue pt-20 pb-10">
+    <div class="row">
+        <div class="offset-lg-1 offset-md-1 col-1g-10 col-md-10 col-12 text-update">
+            <p>GET UPDATE FROM</p>
+            <p> All OVER THE WORLD</p>
+        </div>
+        <div class="offset-lg-1 offset-md-1 col-1g-10 col-md-10 col-12 text-project">
+            <p>Project starts fall but small spots of hope indicate green shoots of recovery are there.</p>
+        </div>
+        <div class="offset-lg-1 offset-md-1 col-lg-5 col-md-6 col-12 mt-10 input-group-form">
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
+                <input type="text" class="form-control" placeholder="Your Email address" aria-label="Your Email address with two button addons">
+                <button class="btn btn-outline-primary" type="button">Subscribe Now</button>
             </div>
-            <div class="offset-lg-1 offset-md-1 col-1g-10 col-md-10 col-12 text-project">
-                <p>Project starts fall but small spots of hope indicate green shoots of recovery are there.</p>
-            </div>
-            <div class="offset-lg-1 offset-md-1 col-lg-5 col-md-6 col-12 mt-10">
-                <div class="input-group flex-nowrap">
-                    <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
-                    <input type="text" class="form-control" placeholder="Your Email address" aria-label="Your Email address with two button addons">
-                    <button class="btn btn-outline-primary" type="button">Subscribe Now</button>
-                </div>
-                <br>
-            </div>
+            <br>
         </div>
     </div>
-    <div class="col-12 pr12"><!-- ตรงนี้หน้าจอเล็ก ไม่แสดง-->
-        <div class="row">
-            <div class="offset-lg-6 col-lg-6 text-center">
-                <img src="<?= Yii::$app->homeUrl ?>image/book.png" class="image-book">
-            </div>
+</div>
+<div class="col-12 pr12"><!-- ตรงนี้หน้าจอเล็ก ไม่แสดง-->
+    <div class="row">
+        <div class="offset-lg-6 col-lg-6 col-12 text-center">
+            <img src="<?= Yii::$app->homeUrl ?>image/book.png" class="image-book">
         </div>
     </div>
+</div>
 </div>

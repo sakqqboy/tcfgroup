@@ -4,8 +4,8 @@
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
              <span class="snavbar-toggler-icon"></span>
          </button>
-         <div class="collapse navbar-collapse" id="navbarScroll">
-             <ul class="navbar-nav me-auto  navbar-nav-scroll" style="--bs-scroll-height: 100px; margin: top 20px;padding-left:20px;">
+         <div class="collapse navbar-collapse mt-3" id="navbarScroll">
+             <ul class="navbar-nav me-auto  navbar-nav-scroll" style="--bs-scroll-height: 100px; margin: top 20px;padding-left: 140px;font-family:'klavika';font-size: 18px;">
                  <li class="nav-item">
                      <a class="nav-link" href="Philosophy">Philosophy</a>
                  </li>

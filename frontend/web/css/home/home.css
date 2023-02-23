@@ -1,6 +1,6 @@
 .text-star {
-    /* position: absolute; */
-    margin-top: -25%;
+    position: absolute;
+    margin-top: -30%;
     font-family: 'Klavika';
     font-size: 50px;
     font-weight: 200;
@@ -9,8 +9,18 @@
     z-index: 99;
 }
 
+.image-TCG {
+    padding-top: 80px;
+}
+
+.image-what-we-give {
+    width: 480px;
+    height: 160px;
+}
+
+
 .Global-Business {
-    font-size: 25px;
+    font-size: 28px;
     color: white;
     padding-left: 70px;
     font-weight: 700;
@@ -41,6 +51,7 @@
     /* line-height: 60px; */
     display: flex;
     align-items: center;
+    font-family: 'klavika';
     color: #313131;
 }
 
@@ -48,6 +59,7 @@
     font-size: 19px;
     font-weight: 300;
     line-height: 29px;
+    font-family: 'klavika';
     color: #5E5E5E;
 }
 
@@ -68,10 +80,11 @@
 }
 
 .connect-experts {
+
     font-weight: 700;
     font-size: 32px;
     line-height: 55px;
-    letter-spacing: -1.5px;
+    font-family: 'klavika';
     color: #0F2137;
 }
 
@@ -84,7 +97,7 @@
 
 .col-background {
     background-color: #031022;
-    margin-top: 8%;
+    /* margin-top: 8%; */
 }
 
 .form-Questions {
@@ -105,17 +118,17 @@
     position: absolute;
     width: 500px;
     margin-top: -40%;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 100px;
     color: white;
-    text-align: justify;
+
 }
 
 .button-contact {
     position: absolute;
     width: 200px;
     margin-top: -30%;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 100px;
     font-family: 'Klavika';
 }
@@ -181,9 +194,9 @@
 .text-Yasunari {
     position: absolute;
     margin-top: -30%;
-    left: 9%;
+    left: 8%;
     width: 550px;
-    font-size: 14px;
+    font-size: 13px;
     color: white;
 }
 
@@ -203,7 +216,7 @@
     position: absolute;
     margin-top: -45%;
     color: white;
-    font-size: 25px;
+    font-size: 30px;
     font-family: 'Klavika';
     font-weight: 700;
 }
@@ -216,18 +229,10 @@
     font-family: 'Klavika';
 }
 
-.give {
-    width: 110px;
-}
-
-.get {
-    width: 110px;
-}
-
 .text4 {
     position: absolute;
     margin-top: -35%;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700;
     color: white;
     font-family: 'Klavika';
@@ -295,11 +300,13 @@
     font-size: 34px;
     line-height: 25px;
     padding-top: 20px;
+    padding-left: 40px;
 }
 
 .text-project {
     font-family: 'klavika';
     font-size: 12px;
+    padding-left: 40px;
 }
 
 .logo-footer {
@@ -350,9 +357,9 @@
     padding-bottom: 20px;
 }
 
-.input-group {
+.input-group-form {
+    padding-left: 40px;
     font-size: 10px;
-    font-weight: 100;
     font-family: 'klavika';
 }
 
@@ -374,6 +381,7 @@
 }
 
 .box-left {
+    font-family: 'klavika';
     padding-left: 50px;
     padding-right: 50px
 }
@@ -394,80 +402,87 @@
 
 @media(max-width: 768px) {
     .text-star {
-        font-size: 15px;
+        font-size: 20px;
+        margin-top: -130px;
         line-height: 25px;
+
     }
+
     .div-row {
         display: inline-block;
     }
+
     .footer-box {
         padding-left: 40px;
         padding-top: 20px;
     }
+
     .text-legal {
         margin-top: -48%;
         font-size: 8px;
         line-height: 10px;
         width: 400px;
     }
+
     .text-tokyo {
-        font-size: 7px;
+        font-size: 6px;
         line-height: 10px;
         width: 260px;
     }
+
     .text-Yasunari {
         margin-top: -135px;
-        font-size: 7px;
+        font-size: 6px;
         line-height: 10px;
         width: 270px;
     }
-    .kuno {
-        padding-top: 30px;
-    }
+
     .text1 {
         font-size: 15px;
         line-height: 60px;
         color: white;
     }
+
     .text2 {
         margin-top: -45%;
         font-size: 14px;
     }
+
     .text3 {
         font-size: 11px;
         line-height: 10px;
         left: 5%;
         margin-top: -40%;
     }
-    .give {
-        width: 50px;
-    }
-    .get {
-        width: 50px;
-    }
+
+
     .text4 {
         font-size: 14px;
         font-weight: 100;
         color: white;
         font-family: 'Klavika';
     }
+
     .contact {
         width: 20px;
         height: 30px;
         left: 7%;
         margin-top: -1%;
     }
+
     .text-japan {
         margin-top: -45%;
         font-size: 20px;
         line-height: 10px;
     }
+
     .text-Unlock {
         width: 280px;
-        margin-top: -35%;
-        font-size: 8px;
+        margin-top: -33%;
+        font-size: 7px;
         line-height: 10px;
     }
+
     .button-contact {
         width: 100px;
         margin-top: -20%;
@@ -475,76 +490,103 @@
         font-weight: 100px;
         font-family: 'Klavika';
     }
+
     .country-index {
         margin-top: 5%;
     }
+
     .text-legal {
         font-size: 25px;
         padding-left: 40px;
         margin-top: 25px;
     }
+
     .button-text5 {
         margin-top: 20px;
     }
+
     .form-Questions {
         padding-right: 10px;
         ;
     }
+
     .text-tokyo {
         margin-top: -25%;
         color: white;
     }
+
     .image-book {
-        margin-top: 0px;
+        /* margin-top: 0px;
         width: 80%;
-        text-align: center;
+        text-align: center; */
+
+        width: 30%;
+        margin-top: -70%;
+        margin-left: 70%;
     }
+
     .text-white {
         color: white;
     }
+
     .footer-links {
         font-size: 10px;
         color: #06ACF6;
     }
+
     .btn-group {
         padding-top: 15px;
     }
+
     .txt-internal {
         padding-left: 20px;
     }
+
     .country-footer {
         padding-left: 20px;
     }
+
     .image-tokyo {
         width: 20%;
     }
+
     .Get-free {
         font-size: 20px;
         padding-left: 40px;
     }
+
     .connect-experts {
         padding-left: 40px;
         font-size: 18px;
     }
+
     .If-you {
         padding-left: 40px;
         font-size: 14px;
     }
+
     .If-you2 {
         padding-left: 40px;
     }
+
     .your-company {
         padding-left: 40px;
     }
+
     .form-check-inline {
         padding-left: 60px;
     }
+
     .img-background {
         width: 102.5%;
+        height: 400px;
     }
+
     .col-background {
-        margin-top: 4%;
+        margin-top: 0px;
+
     }
+
     .show-text-home {
         padding-top: 0px;
         padding-bottom: 20px;
@@ -553,21 +595,93 @@
         border-left: none;
         margin-bottom: 10px;
     }
+
     .box-left {
         padding-left: 0px;
     }
+
     .left-box-select {
         padding-left: 50px;
     }
+
     .footer-custom {
         padding-top: 20px;
     }
+
     .text-footer {
         font-size: 10px;
         padding-left: 50px;
     }
+
     .footer-links {
         font-size: 10px;
         padding-left: 50px;
     }
+
+    .image-TCG {
+        padding-top: 90px;
+    }
+
+    .image-what-we-give {
+        margin-top: 20px;
+        width: 120px;
+        height: 45px;
+    }
+
+    .text-update {
+        font-size: 23px;
+        line-height: 10px;
+    }
+
+    .text-project {
+        font-size: 10px;
+    }
+
+    .input-group-form {
+        padding-left: 40px;
+    }
+
+    .footer-bottom {
+        padding-top: 104px;
+    }
+
+
+}
+
+@media screen and(min-width: 992px) {
+    .text-Unlock {
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .button-contact {
+        margin-top: 20px;
+    }
+
+    .text2 {
+        font-size: 20px;
+    }
+
+    .image-what-we-give {
+        width: 100px;
+        height: 40px;
+    }
+
+    .text-Yasunari {
+        margin-top: 10px;
+        width: 210%;
+        font-size: 11px;
+    }
+
+    .image-book {
+        /* margin-top: 0px;
+        width: 80%;
+        text-align: center; */
+
+        width: 30%;
+        margin-top: -70%;
+        margin-left: 70%;
+    }
+
 }

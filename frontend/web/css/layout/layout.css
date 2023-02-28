@@ -176,6 +176,10 @@
     padding-bottom: 50px;
 }
 
+.pr-0 {
+    padding-right: 0px;
+}
+
 .pr-10 {
     padding-right: 10px;
 }
@@ -255,10 +259,12 @@
         margin-top: 90px;
         font-size: 12px;
     }
+
     .page-title {
         font-size: 24px;
         padding-left: 60px;
     }
+
     .page-list-menu {
         text-align: center;
         font-size: 14px;

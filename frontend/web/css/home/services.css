@@ -1,0 +1,220 @@
+.background-home {
+    background-color: #EBEBEB;
+}
+
+.home-form {
+    font-size: 24px;
+    font-family: 'klavika';
+    font-weight: 700;
+    color: #0F2137;
+    line-height: 24px;
+    padding-left: 10px;
+    padding-left: 60px
+}
+
+.home-form-one {
+    padding-top: 80px;
+    text-align: end;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'klavika';
+}
+
+.home-two {
+    font-family: 'klavika';
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.form-two {
+    font-size: 20px;
+    font-family: 'klavika';
+    font-weight: 500;
+    line-height: 100px;
+}
+
+.form-tree {
+    font-size: 12px;
+    line-height: 10px;
+    font-weight: 500;
+    font-family: 'klavika';
+}
+
+.img-tree {
+    width: 100%;
+}
+
+.form-select-one {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    font-family: 'klavika';
+
+}
+
+.page-two {
+    padding-left: 60px;
+}
+
+.form-select-two {
+    font-size: 15px;
+    font-family: 'klavika';
+    font-weight: 300;
+    margin-top: 80px;
+}
+
+.form-select-tree {
+    font-size: 15px;
+    font-family: 'klavika';
+    font-weight: 300;
+}
+
+.page-tree {
+    padding-left: 60px;
+}
+
+.image-Group-2 {
+    width: 100%;
+}
+
+.card-body {
+    background-color: #FAFAFA;
+
+}
+
+.card-img-top {
+    width: 30%;
+
+}
+
+.card {
+    border: none;
+    width: 18rem;
+}
+
+.image-Group-6 {
+    width: 100%;
+}
+
+.button-link-submit {
+    margin-left: 130px;
+    margin-top: 30px;
+}
+
+.backgroup-submit {
+    background: #F0F3F8;
+    padding-left: 60px;
+}
+
+.image-boat-1 {
+    width: 100%;
+}
+
+
+.form-services {
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26px;
+    margin-top: 30px;
+    /* color: #0F2137; */
+}
+
+.form-services-page {
+    font-family: 'Klavika';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    /* color: #0F2137; */
+}
+
+.form-page-text {
+    font-family: 'Klavika';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0D0D0D;
+}
+
+.text-Goal {
+    font-size: 16px;
+    font-family: 'klavika';
+    font-weight: 700;
+}
+
+.text-one {
+    font-size: 12px;
+    font-family: 'klavika';
+    font-weight: 100;
+}
+
+.home-name-one {
+    margin-top: -50%;
+    font-size: 24px;
+    color: white;
+    padding-left: 60px;
+    font-family: 'Klavika';
+}
+
+.icon {
+
+    color: white;
+}
+
+.txt-icon {
+
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.text-icon-menu {
+    font-family: 'Klavika';
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
+}
+
+.menu-icon-home {
+    padding-left: 60px;
+}
+
+.download-button {
+    padding-top: 15px;
+    background: #005BA0;
+    border-radius: 5px;
+    color: white;
+    width: 521px;
+    height: 59px;
+    left: 135px;
+    top: 4958px;
+}
+
+.txt-button-get {
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 52px;
+    align-items: center;
+    color: #313131;
+
+}
+
+.txt-you {
+    font-family: 'Klavika';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 29px;
+    align-items: center;
+    color: #5E5E5E;
+}
+
+.txt-do-you {
+    padding-left: 40px;
+}

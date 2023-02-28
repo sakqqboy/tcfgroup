@@ -5,10 +5,10 @@
 		</div>
 		<div class="col-lg-2 col-md-6 col-6 footer-box">
 			<div class="row">
+				<div class="txt-internal mb-20">
+					International Branches
+				</div>
 				<div class="col-6  text-start">
-					<div class="txt-internal mb-20">
-						International Branches
-					</div>
 					<div class="country-footer">
 						<p><a href="#Bangladesh" class="no-underline">Bangladesh</a></p>
 						<p><a href="#Brazil" class="no-underline">Brazil</a></p>
@@ -16,7 +16,7 @@
 						<p><a href="#Morocco" class="no-underline">Morocco</a></p>
 						<p><a href="#China" class="no-underline">China</a></p>
 						<p><a href="#Columbia" class="no-underline">Columbia</a></p>
-						<p><a href="#Dubai (UAE)" class="no-underline">Dubai (UAE)</a></p>
+						<p><a href="#Dubai (UAE)" class="no-underline">Dubai(UAE)</a></p>
 						<p><a href="#Malaysia" class="no-underline">Malaysia</a></p>
 						<p><a href="#Hong Kong" class="no-underline">Hong Kong</a></p>
 						<p><a href="#Indonesia" class="no-underline">Indonesia</a></p>
@@ -25,7 +25,7 @@
 						<p><a href="#Kenya" class="no-underline">Kenya</a></p>
 					</div>
 				</div>
-				<div class="col-6  text-start country-footer">
+				<div class="col-6 text-start country-footer">
 					<p><a href="#India" class="no-underline">India</a></p>
 					<p><a href="#Mexico" class="no-underline">Mexico</a></p>
 					<p><a href="#Mongolia" class="no-underline">Mongolia</a></p>
@@ -70,11 +70,11 @@
 			</div>
 		</div>
 		<div class="col-lg-3 col-md-6 col-6 footer-bottom">
-			<a href="#facebook"><img src="<?= Yii::$app->homeUrl ?>image/facebook.png"></a> &nbsp;
-			<a href="#twitter"><img src="<?= Yii::$app->homeUrl ?>image/twitter.png"></a> &nbsp;
-			<a href="#Instagram"><img src="<?= Yii::$app->homeUrl ?>image/Instagram.png"></a> &nbsp;
-			<a href="#LinkedIn"><img src="<?= Yii::$app->homeUrl ?>image/LinkedIn.png"></a> &nbsp;
-			<a href="#YouTube"><img src="<?= Yii::$app->homeUrl ?>image/YouTube.png"></a> &nbsp;
+			<a href="#facebook"><img src="<?= Yii::$app->homeUrl ?>image/facebook.png"></a>
+			<a href="#twitter"><img src="<?= Yii::$app->homeUrl ?>image/twitter.png"></a>
+			<a href="#Instagram"><img src="<?= Yii::$app->homeUrl ?>image/Instagram.png"></a>
+			<a href="#LinkedIn"><img src="<?= Yii::$app->homeUrl ?>image/LinkedIn.png"></a>
+			<a href="#YouTube"><img src="<?= Yii::$app->homeUrl ?>image/YouTube.png"></a>
 			<div class="txt-stay">
 				Stay tuned, get all the business updates, newsletters
 			</div>

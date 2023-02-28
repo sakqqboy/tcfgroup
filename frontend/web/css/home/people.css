@@ -1,0 +1,104 @@
+.image-philosophy {
+    width: 100%;
+}
+
+.text-home {
+    margin-top: -350px;
+    position: absolute;
+    font-family: 'Klavika';
+    font-weight: 300;
+    font-size: 45px;
+    line-height: 55px;
+    color: #8795C9;
+}
+
+.text-box-one {
+    position: absolute;
+    margin-top: -290px;
+    font-family: 'Klavika';
+    font-weight: 500;
+    font-size: 80px;
+    line-height: 55px;
+    color: #8795C9;
+}
+
+.blackground-page-people {
+    background: #F8F8F8;
+    margin-top: 70px;
+    padding-left: 40px;
+
+}
+
+.picture-text {
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 55px;
+    letter-spacing: -1.5px;
+    color: #0F2137;
+}
+
+.picture-icon {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 55px;
+    letter-spacing: -1.5px;
+    color: #0F2137;
+    margin-top: 30px;
+
+}
+
+.box-1 {
+    padding-left: 0px;
+}
+
+.Why-We-Work {
+    font-family: 'Klavika';
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 55px;
+    padding-left: 40px;
+    letter-spacing: -1.5px;
+    color: #0F2137;
+}
+
+.everyone {
+    font-family: 'Klavika';
+    font-weight: 300;
+    padding-left: 40px;
+    font-size: 14px;
+    line-height: 150%;
+    color: #000000;
+}
+
+.YASUNARI {
+    font-family: 'Klavika';
+    font-weight: 500;
+    font-size: 11px;
+    padding-left: 40px;
+    line-height: 26px;
+    letter-spacing: 0.94992px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.People {
+    font-family: 'Klavika';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: right;
+    color: #000000;
+}
+
+.TOKYO {
+    font-family: 'Klavika';
+    font-weight: 500;
+    font-size: 11px;
+    padding-left: 40px;
+    line-height: 26px;
+    letter-spacing: 0.94992px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #000000;
+}

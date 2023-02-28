@@ -1,0 +1,158 @@
+.image-Vision-page {
+    width: 100%;
+}
+
+.text-Our {
+    position: absolute;
+    font-family: 'Klavika';
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 55px;
+    color: #8795C9;
+    margin-top: -470px;
+    padding-left: 60px;
+}
+
+.home-Our {
+    position: absolute;
+    font-family: 'Klavika';
+    font-weight: 500;
+    font-size: 80px;
+    line-height: 55px;
+    margin-top: -410px;
+    padding-left: 60px;
+    color: rgba(135, 149, 201, 0.5);
+
+}
+
+.vlog-1 {
+    position: absolute;
+    font-family: 'Klavika';
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: -330px;
+    padding-left: 60px;
+    color: #565F7E;
+
+}
+
+.vlog-box-two {
+    position: absolute;
+    color: #8795C9;
+    margin-top: -220px;
+    font-size: 11px;
+    line-height: 26px;
+    padding-left: 60px;
+    font-family: 'klavika';
+}
+
+.image-bali {
+    width: 100%;
+}
+
+.box-data-1 {
+    position: absolute;
+    margin-top: -300px;
+    padding-left: 60px;
+    font-family: 'klavika';
+    letter-spacing: -1.5px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.box-data-2 {
+    position: absolute;
+    margin-top: -260px;
+    padding-left: 70px;
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 300;
+    font-family: 'klavika';
+}
+
+.box-data-3 {
+    position: absolute;
+    margin-top: -200px;
+    padding-left: 60px;
+    font-size: 14px;
+    font-family: 'klavika';
+    font-weight: 300;
+}
+
+.image-yogendra-singh {
+    width: 100%;
+}
+
+.Block-1 {
+    position: absolute;
+    margin-top: -310px;
+    padding-left: 60px;
+    font-family: 'klavika';
+    letter-spacing: -1.5px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.Block-2 {
+    position: absolute;
+    margin-top: -270px;
+    padding-left: 70px;
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 300;
+    font-family: 'klavika';
+}
+
+.Block-3 {
+    position: absolute;
+    margin-top: -215px;
+    padding-left: 60px;
+    font-size: 14px;
+    font-family: 'klavika';
+    font-weight: 300;
+}
+
+.image-whale {
+    width: 100%;
+}
+
+.Type-home-page-one {
+    position: absolute;
+    margin-top: -350px;
+    padding-left: 60px;
+    color: white;
+    font-family: 'klavika';
+    letter-spacing: -1.5px;
+    font-size: 29px;
+    font-weight: 700;
+}
+
+.Type-home-page-two {
+    position: absolute;
+    margin-top: -290px;
+    padding-left: 60px;
+    font-size: 12px;
+    font-family: 'klavika';
+    font-weight: 300;
+    color: white;
+    line-height: 16px;
+}
+
+.padding-box {
+    position: absolute;
+    padding-left: 60px;
+    margin-top: 50px;
+    font-family: 'klavika';
+    letter-spacing: -1.5px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.padding-text {
+    text-align: center;
+    padding-top: 180px;
+    padding-left: 200px;
+    font-size: 26px;
+    font-family: 'klavika';
+    font-weight: 300;
+}

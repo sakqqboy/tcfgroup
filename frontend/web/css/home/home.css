@@ -1,10 +1,11 @@
 .text-star {
     position: absolute;
-    margin-top: -30%;
+    margin-top: -25%;
     font-family: 'Klavika';
     font-size: 50px;
     font-weight: 200;
     line-height: 60px;
+
     color: #2D8DD5;
     z-index: 99;
 }
@@ -22,7 +23,7 @@
 .Global-Business {
     font-size: 28px;
     color: white;
-    padding-left: 70px;
+    padding-left: 50px;
     font-weight: 700;
     font-family: 'klavika';
     line-height: 55px;
@@ -108,12 +109,14 @@
 .text-japan {
     position: absolute;
     margin-top: -50%;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 200px;
-    line-height: 25px;
+    line-height: 35px;
     font-family: 'Klavika';
     color: white;
 }
+
+
 
 .text-Unlock {
     position: absolute;
@@ -125,14 +128,7 @@
 
 }
 
-.button-contact {
-    position: absolute;
-    width: 200px;
-    margin-top: -30%;
-    font-size: 15px;
-    font-weight: 100px;
-    font-family: 'Klavika';
-}
+
 
 .text-establish {
     padding-left: 40px;
@@ -401,12 +397,40 @@
     color: white;
 }
 
-@media(max-width: 768px) {
-    .text-star {
-        font-size: 20px;
-        margin-top: -130px;
-        line-height: 25px;
+@media(max-width: 992px) {
+    .image-book {
+        margin-top: -27%;
+        width: 30%;
+        margin-left: 70%;
+    }
 
+    .text-tokyo {
+        padding-top: 20%;
+        width: 500px;
+    }
+
+    .button-get {
+        font-size: 12px;
+    }
+
+}
+
+@media(max-width: 768px) {
+
+    .text-star {
+        font-size: 16px;
+        margin-top: -120px;
+        line-height: 20px;
+
+    }
+
+    .button-start {
+        margin-top: 4px;
+        font-size: 10px;
+    }
+
+    .Global-Business {
+        font-size: 25px;
     }
 
     .div-row {
@@ -426,17 +450,28 @@
     }
 
     .text-tokyo {
-        font-size: 6px;
-        line-height: 10px;
-        width: 260px;
+        margin-top: -200px;
+        font-size: 5px;
+        line-height: 7px;
+        width: 200px;
+
     }
 
     .text-Yasunari {
-        margin-top: -135px;
-        font-size: 6px;
-        line-height: 10px;
-        width: 270px;
+        /* margin-top: -40%; */
+        font-size: 5px;
+        line-height: 7px;
+        width: 200px;
+        padding-top: 10px;
     }
+
+    .button-contact {
+        margin-top: -10px;
+        font-size: 8px;
+        line-height: 5px;
+        font-family: 'klavika';
+    }
+
 
     .text1 {
         font-size: 15px;
@@ -446,7 +481,7 @@
 
     .text2 {
         margin-top: -45%;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .text3 {
@@ -458,7 +493,7 @@
 
 
     .text4 {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 100;
         color: white;
         font-family: 'Klavika';
@@ -484,13 +519,15 @@
         line-height: 10px;
     }
 
-    .button-contact {
-        width: 100px;
-        margin-top: -20%;
-        font-size: 10px;
-        font-weight: 100px;
-        font-family: 'Klavika';
+    .text-establish {
+        font-size: 31px;
     }
+
+    .button-get {
+        font-size: 12px;
+    }
+
+
 
     .country-index {
         margin-top: 5%;
@@ -511,10 +548,6 @@
         font-family: 'klavika';
     }
 
-    .text-tokyo {
-        margin-top: -25%;
-        color: white;
-    }
 
     .image-book {
         /* margin-top: 0px;
@@ -522,7 +555,7 @@
         text-align: center; */
 
         width: 30%;
-        margin-top: -69%;
+        margin-top: -68%;
         margin-left: 70%;
     }
 
@@ -624,7 +657,7 @@
     }
 
     .image-what-we-give {
-        margin-top: 20px;
+        margin-top: 10px;
         width: 120px;
         height: 45px;
     }
@@ -644,45 +677,6 @@
 
     .footer-bottom {
         padding-top: 104px;
-    }
-
-
-}
-
-@media screen and(min-width: 992px) {
-    .text-Unlock {
-        margin-top: 20px;
-        font-size: 16px;
-        line-height: 20px;
-    }
-
-    .button-contact {
-        margin-top: 20px;
-    }
-
-    .text2 {
-        font-size: 20px;
-    }
-
-    .image-what-we-give {
-        width: 100px;
-        height: 40px;
-    }
-
-    .text-Yasunari {
-        margin-top: 10px;
-        width: 210%;
-        font-size: 11px;
-    }
-
-    .image-book {
-        /* margin-top: 0px;
-        width: 80%;
-        text-align: center; */
-
-        width: 30%;
-        margin-top: -70%;
-        margin-left: 70%;
     }
 
 }

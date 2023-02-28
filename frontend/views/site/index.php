@@ -17,7 +17,7 @@ $this->title = 'TCFGROUP';
         LET'S ACCELERATE AND <br>
         SHAPE THE FUTURE <br>
         TOGETHER<br>
-        <button type="button" class="btn btn-primary">Get Free Appointment</button>
+        <button type="button" class="btn btn-primary button-start">Get Free Appointment</button>
     </div>
 </div>
 
@@ -132,8 +132,8 @@ $this->title = 'TCFGROUP';
                         compliance to local representation and cultural integration, our team of
                         experts will guide you every step of the way to ensure a seamless entry and
                         successful establishment in the Japanese market.</p>
+                    <button type="button" class="btn btn-primary button-contact">Contact Experts</button>
                 </div>
-                <button type="button" class="btn btn-primary button-contact">Contact Experts</button>
             </div>
         </div>
     </div>
@@ -151,7 +151,15 @@ $this->title = 'TCFGROUP';
         <img src="<?= Yii::$app->homeUrl ?>image/what-we.png" class="image-what-we-give">
     </div>
     <div class="offset-1 col-md-5 col-12 text-tokyo">
-        At Tokyo Consulting Group, our philosophy is centered around making a positive impact on society. We believe that this is the ultimate goal of any company and we strive to develop human resources to fulfill this purpose. Our management principles and philosophies are dynamic, adapting to the changing times, but our commitment to contributing to society remains steadfast. Our vision, strategies and tactics are continuously evolving to stay ahead of the curve, but never at the cost of our core values. Our company's growth is measured not just by profits, but also by our ability to fulfill our social mission. As a responsible corporate citizen, we believe in finding the appropriate size that balances our growth aspirations with our obligation to society. Join us in our journey to create a better future for all."
+        At Tokyo Consulting Group, our philosophy is centered around making a positive impact on society.
+        We believe that this is the ultimate goal of any company and we strive to develop human resources
+        to fulfill this purpose. Our management principles and philosophies are dynamic, adapting to the
+        changing times, but our commitment to contributing to society remains steadfast.
+        Our vision,strategies and tactics are continuously evolving to stay ahead of the curve,
+        but never at thecost of our core values. Our company's growth is measured not just by profits,
+        but also by our ability to fulfill our social mission. As a responsible corporate citizen,
+        we believe in findingthe appropriate size that balances our growth aspirations with our
+        obligation to society.Join us in our journey to create a better future for all."
     </div>
 </div>
 
@@ -163,20 +171,19 @@ $this->title = 'TCFGROUP';
         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> About Yasunari Kuno
     </div>
     <div class="col-lg-8 col-md-6 col-12 text-Yasunari">
-        <p> Yasunari Kuno is a seasoned business professional with over two decades of experience in the industry.
+        <p>Yasunari Kuno is a seasoned business professional with over two decades of experience in the industry.
             He has a strong track record of success and is respected for his leadership skills, strategic vision, and
             ability to drive growth and profitability. In addition to his work as the chairman and founder of TCF and
             TCG, Yasunari Kuno is also an accomplished author, having published several books on business and
             personal development.</p>
-        <p> As a thought leader in the business world, Yasunari Kuno is known for his innovative ideas and forward thinking approach to solving complex business challenges. He is passionate about helping others achieve
-            their full potential and has dedicated his career to helping businesses succeed and thrive.</p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; YASUNARI KUNO, CEO, TOKYO CONSULTING GROUP
+        <p> As a thought leader in the business world, Yasunari Kuno is known for his innovative ideas and forward
+            thinking approach to solving complex business challenges. He is passionate about helping others achieve
+            their full potential and has dedicated his career to helping businesses succeed and thrive. </p>
+        <p class="text-end">YASUNARI KUNO, CEO, TOKYO CONSULTING GROUP</p>
+
     </div>
 </div>
 
-</div>
 
 
 
@@ -266,7 +273,7 @@ $this->title = 'TCFGROUP';
                     <div class="col-6 text-start label-thin mt-4">
                         ATTACHMENT (IF ANY) <img src="<?= Yii::$app->homeUrl ?>image/files.png">
                     </div>
-                    <div class="col-lg-6 mt-4 text-end">
+                    <div class="col-6 mt-4 text-end">
                         <button type="button" class="btn btn-primary button-get">Get Free Appointment</button>
                     </div>
                     <div class="col-6 text-start mt-4">

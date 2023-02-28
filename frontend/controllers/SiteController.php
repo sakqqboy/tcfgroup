@@ -77,6 +77,18 @@ class SiteController extends Controller
     {
         return $this->render('index');
     }
+    public function actionServices()
+    {
+        return $this->render('services');
+    }
+    public function actionPeople()
+    {
+        return $this->render('people');
+    }
+    public function actionCareer()
+    {
+        return $this->render('career');
+    }
 
     /**
      * Logs in a user.

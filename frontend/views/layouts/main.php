@@ -69,6 +69,7 @@ AppAsset::register($this);
         <?php
         echo $this->render("@frontend/views/site/header")
         ?>
+
         <?= $content ?>
     </main>
 

@@ -8,8 +8,8 @@ $this->title = 'services';
 ?>
 
 
-<div class="col-12" style="margin-top:50px;">
-    <img src="<?= Yii::$app->homeUrl ?>image/Linkedin-Cover.png" style="width: 100%;">
+<div class="col-12" style="margin-top: 80px;">
+    <img src="<?= Yii::$app->homeUrl ?>image/Linkedin-Cover.png" class="bl-Linkedin-Cover">
 </div>
 
 <div class="col-12 pr12 background-home">
@@ -106,7 +106,7 @@ $this->title = 'services';
                 Accounting & Taxation
             </div>
             <div class="col-12">
-                <div class="row">
+                <div class="row select-box">
                     <div class="card text-center mt-20 form-page-text">
                         <div class="text-center"><img src="<?= Yii::$app->homeUrl ?>image/accounting.png" class="card-img-top"></div>
                         <div class="card-body">
@@ -170,7 +170,6 @@ $this->title = 'services';
 
 
 
-
 <div class="col-12 pr12 backgroup-submit">
     <div class="row">
         <div class="col-lg-5 col-md-6  col-12 mt-20">
@@ -217,7 +216,7 @@ $this->title = 'services';
 
 <div class="col-12">
     <div class="col-12">
-        <img src="<?= Yii::$app->homeUrl ?>image/boat-1.png" class="image-boat-1">
+        <img src="<?= Yii::$app->homeUrl ?>image/boat-2.png" class="image-boat-2">
     </div>
     <div class="col-12 pt-20 home-name-one">
         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> THE BEST OF TCF
@@ -227,15 +226,14 @@ $this->title = 'services';
             <div class="col-lg-6 col-12">
                 <div class="row mt-20">
                     <div class="col-6 icon">
-                        <p class="txt-icon"><img src="<?= Yii::$app->homeUrl ?>image/account.png" style="width: 60px;">
-                            Speed & Quality
-                        </p>
+                        <p class="txt-icon"><img src="<?= Yii::$app->homeUrl ?>image/account.png" class="image-account">Speed & Quality</p>
+
                         <p class="text-icon-menu">Accuracy in work is of the utmost importance in any profession.
                             Whether it is a simple task or a complex project, making sure
                             that everything is done correctly is essential for success.
                             This means paying attention to detail.</p>
 
-                        <p class="txt-icon"><img src="<?= Yii::$app->homeUrl ?>image/account-1.png" style="width: 60px;">
+                        <p class="txt-icon"><img src="<?= Yii::$app->homeUrl ?>image/account-1.png" class="image-account">
                             Composite
                             Consulting Services
                         </p>
@@ -244,9 +242,8 @@ $this->title = 'services';
                             asset for businesses that are looking for comprehensive support in these
                             areas, as they can receive all of their consulting needs from one reliable source.</p>
 
-                        <p class="txt-icon"><img src="<?= Yii::$app->homeUrl ?>image/account-2.png" style="width: 60px;">
-                            Composite
-                            Consulting Services
+                        <p class="txt-icon"><img src="<?= Yii::$app->homeUrl ?>image/account-2.png" class="image-account">
+                            Independent Business Consultant
                         </p>
                         <p class="text-icon-menu">a comprehensive consulting firm that offers a range of services
                             related to human resources, accounting, tax, and VAT. This is
@@ -255,37 +252,39 @@ $this->title = 'services';
                             needs from one reliable source.</p>
                     </div>
                     <div class="col-6 icon">
-                        <p class="txt-icon"><img src="<?= Yii::$app->homeUrl ?>image/account-3.png" style="width: 60px;">
-                            Speed & Quality
+                        <p class="txt-icon"><img src="<?= Yii::$app->homeUrl ?>image/account-3.png" class="image-account">
+                            Development
+                            Partner
                         </p>
+                        <p class="text-icon-menu">to being a development partner for its clients,
+                            rather than just a service provider. This means that we take a long-term,
+                            holistic approach to consulting and work closely with our clients to
+                            support their growth and development</p>
 
-                        <p class="text-icon-menu">Accuracy in work is of the utmost importance in any profession.
-                            Whether it is a simple task or a complex project, making sure
-                            that everything is done correctly is essential for success.
-                            This means paying attention to detail.</p>
-
-                        <p class="txt-icon"><img src="<?= Yii::$app->homeUrl ?>image/account-4.png" style="width: 60px;">
-                            Composite
-                            Consulting Services
+                        <p class="txt-icon"><img src="<?= Yii::$app->homeUrl ?>image/account-4.png" class="image-account">
+                            Secured &
+                            Trusted
                         </p>
-                        <p class="text-icon-menu">a comprehensive consulting firm that offers a range of services
-                            related to human resources, accounting, tax, and VAT. This is a valuable
-                            asset for businesses that are looking for comprehensive support in these
-                            areas, as they can receive all of their consulting needs from one reliable source.</p>
+                        <p class="text-icon-menu">our clients can feel confident that their data and
+                            projects are being handled with the utmost care and confidentiality.
+                            We have implemented strict security protocols and safeguards to protect
+                            our clients' data, and we are committed to maintaining the highest
+                            standards of professionalism.</p>
 
-                        <p class="txt-icon"><img src="<?= Yii::$app->homeUrl ?>image/account-5.png" style="width: 60px;">
-                            Composite
-                            Consulting Services
+                        <p class="txt-icon"><img src="<?= Yii::$app->homeUrl ?>image/account-5.png" class="image-account">
+                            Commitment
+                            of Deadline
                         </p>
-                        <p class="text-icon-menu">a comprehensive consulting firm that offers a range of services
-                            related to human resources, accounting, tax, and VAT. This is
-                            a valuable asset for businesses that are looking for comprehensive
-                            support in these areas, as they can receive all of their consulting
-                            needs from one reliable source.</p>
+                        <p class="text-icon-menu">our clients can feel confident that their data and
+                            projects are being handled with the utmost care and confidentiality.
+                            We have implemented strict security protocols and safeguards to
+                            protect our clients' data, and we are committed to maintaining
+                            the highest standards of professionalism.</p>
                     </div>
-                    <div class="col-9 download-button mt-30">
-                        Download the TCG e-Book and learn more about us <button type="button" class="btn btn-primary btn-sm">Download <i class="fa fa-download" aria-hidden="true"></i></button>
+                    <div class="col-10 download-button mt-30">
+                        Download the TCG e-Book and learn more about us <button type="button" class="btn btn-primary btn-sm"> Download &nbsp;&nbsp; <i class="fa fa-download" aria-hidden="true"></i></button>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -293,7 +292,7 @@ $this->title = 'services';
 </div>
 
 
-<div class="col-12 pb-50">
+<div class="col-12 pb-50" style="margin-top: 145px;">
     <div class="col-12 connect-experts mt-40 pl-40">
         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> Connect Experts
     </div>

@@ -145,7 +145,7 @@ $this->title = 'TCFGROUP';
 <div class="col-12">
     <img src="<?= Yii::$app->homeUrl ?>image/Boat1.png" style="width: 100%;">
     <div class="offset-1 text2">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img5 mr-1">Our Philosophy: Contributing to Society, Driving Growth
+        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img5 mr-1"> Our Philosophy: Contributing to Society, Driving Growth
     </div>
     <div class="offset-1 text3">
         <img src="<?= Yii::$app->homeUrl ?>image/what-we.png" class="image-what-we-give">

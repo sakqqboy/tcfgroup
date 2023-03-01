@@ -81,3 +81,30 @@ $this->title = 'Career&Recruitment ';
         </div>
     </div>
 </div>
+
+<div class="col-12 pr12 blue pt-20 pb-10 mt-50">
+    <div class="row">
+        <div class="offset-lg-1 offset-md-1 col-1g-10 col-md-10 col-12 text-update">
+            <p>GET UPDATE FROM</p>
+            <p> All OVER THE WORLD</p>
+        </div>
+        <div class="offset-lg-1 offset-md-1 col-1g-10 col-md-10 col-12 text-project">
+            <p>Project starts fall but small spots of hope indicate green shoots of recovery are there.</p>
+        </div>
+        <div class="offset-lg-1 offset-md-1 col-lg-5 col-md-6 col-12 mt-10 input-group-form">
+            <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
+                <input type="text" class="form-control" placeholder="Your Email address" aria-label="Your Email address with two button addons">
+                <button class="btn btn-outline-primary" type="button">Subscribe Now</button>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<div class="col-12 pr12"><!-- ตรงนี้หน้าจอเล็ก ไม่แสดง-->
+    <div class="row">
+        <div class="offset-lg-6 col-lg-6 col-12 text-center">
+            <img src="<?= Yii::$app->homeUrl ?>image/book.png" class="image-book">
+        </div>
+    </div>
+</div>

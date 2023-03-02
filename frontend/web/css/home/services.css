@@ -6,8 +6,29 @@
     width: 100%;
 }
 
+
 .image-account {
     width: 70px;
+}
+
+
+.the-one {
+    margin-top: -60%;
+    color: white;
+    font-family: 'klavika';
+}
+
+.text-two {
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.text-data-icon {
+    margin-top: -255px;
+    font-family: 'klavika';
+    color: white;
+    font-weight: 300;
+    font-size: 15px;
 }
 
 .home-form {
@@ -33,14 +54,6 @@
     font-size: 28px;
     font-weight: 700;
     line-height: 20px;
-}
-
-.btn-sm {
-    /* position: absolute; */
-    font-size: 11px;
-    width: 110px;
-    height: 30px;
-    margin-left: 25px;
 }
 
 .form-two {
@@ -104,6 +117,16 @@
 
 }
 
+.link-download {
+    background: #005BA0;
+    border-radius: 5px;
+    width: 35rem;
+}
+
+.btn-download {
+    font-size: 12px;
+}
+
 .card {
     border: none;
     width: 18rem;
@@ -111,11 +134,6 @@
 
 .image-Group-6 {
     width: 100%;
-}
-
-.button-link-submit {
-    margin-left: 130px;
-    margin-top: 30px;
 }
 
 .backgroup-submit {
@@ -126,7 +144,6 @@
 .image-boat-2 {
     width: 100%;
 }
-
 
 .form-services {
     font-family: 'Klavika';
@@ -166,74 +183,43 @@
     font-weight: 100;
 }
 
-.home-name-one {
+
+.page-1 {
     font-size: 24px;
+    font-family: 'klavika';
+    font-weight: 700;
+}
+
+.page-2 {
+
+    font-size: 23px;
+    font-family: 'klavika';
+    font-weight: 500;
+}
+
+.page-3 {
+
+    font-size: 14px;
+    font-family: 'klavika';
+    font-weight: 300;
+    line-height: 120%;
+
+}
+
+.data-type {
+    font-size: 12px;
+    font-family: 'klavika';
+    font-weight: 100;
+}
+
+
+.data-1 {
+    margin-top: -850px;
     color: white;
     padding-left: 60px;
-    font-family: 'Klavika';
-    margin-top: -35%;
 }
 
-.icon {
 
-    color: white;
-}
-
-.txt-icon {
-
-    font-family: 'Klavika';
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 24px;
-    color: #FFFFFF;
-}
-
-.text-icon-menu {
-    font-family: 'Klavika';
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 14px;
-    color: #FFFFFF;
-}
-
-.menu-icon-home {
-    margin-top: -300px;
-    padding-left: 40px;
-
-}
-
-.download-button {
-    padding-top: 10px;
-    background: #005BA0;
-    border-radius: 5px;
-    width: 530px;
-    height: 50px;
-    color: white;
-}
-
-.txt-button-get {
-    font-family: 'Klavika';
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 52px;
-    align-items: center;
-    color: #313131;
-
-}
-
-.txt-you {
-    font-family: 'Klavika';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 19px;
-    line-height: 29px;
-    align-items: center;
-    color: #5E5E5E;
-}
-
-.txt-do-you {
-    padding-left: 40px;
-}
 
 @media(max-width: 768px) {
     .bl-Linkedin-Cover {
@@ -257,59 +243,29 @@
         padding-left: 80px;
     }
 
-    .text-icon-menu {
-        font-size: 8px;
-        padding-top: -20px;
-        line-height: 9px;
-    }
-
     .image-account {
-        width: 30px;
+        width: 25px;
     }
 
-    .home-name-one {
-        margin-top: -300px;
-        font-size: 16px;
+    .page-3 {
+        font-size: 10px;
     }
 
-    .menu-icon-home {
-        margin-top: 500px;
-    }
-
-    .txt-icon {
-        font-size: 12px;
-    }
-
-    .download-button {
-        width: 370px;
-        height: 45px;
+    .link-download {
+        width: 25rem;
         font-size: 11px;
     }
 
-    .btn-sm {
-        margin-top: -4px;
-        margin-left: 10px;
+    .btn-download {
         font-size: 10px;
-        width: 85px;
-        height: 30px;
     }
+
+    .data-1 {
+        margin-top: -300px;
+
+    }
+
+
 }
 
-/* @media(max-width: 992px) {
-    .home-name-one {
-        margin-top: -600px;
-    }
-
-    .menu-icon-home {
-        margin-top: -550px;
-        width: 150%;
-    }
-
-    .image-account {
-        width: 40px;
-    }
-
-    .text-icon-menu {
-        font-size: 10px;
-    }
-} */
+@media(max-width: 992px) {}

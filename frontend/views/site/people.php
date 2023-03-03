@@ -9,7 +9,7 @@ $this->title = 'people';
 
 
 
-<div class="">
+<div class="col-12 text-philosophy">
     <div class="col-12">
         <img src="<?= Yii::$app->homeUrl ?>image/philosophy.png" class="image-philosophy">
     </div>

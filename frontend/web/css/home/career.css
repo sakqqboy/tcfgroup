@@ -6,8 +6,9 @@
     position: absolute;
     font-family: 'Klavika';
     font-weight: 300;
-    font-size: 50px;
+    font-size: 55px;
     line-height: 55px;
+    width: 600px;
     color: #8795C9;
     margin-top: -470px;
     padding-left: 60px;
@@ -30,6 +31,7 @@
     font-family: 'Klavika';
     font-weight: 300;
     font-size: 14px;
+    width: 600px;
     margin-top: -330px;
     padding-left: 60px;
     color: #565F7E;
@@ -75,6 +77,7 @@
     margin-top: -200px;
     padding-left: 60px;
     font-size: 14px;
+    width: 600px;
     font-family: 'klavika';
     font-weight: 300;
 }
@@ -97,7 +100,7 @@
     position: absolute;
     margin-top: -270px;
     padding-left: 70px;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 40px;
     font-weight: 300;
     font-family: 'klavika';
@@ -108,6 +111,7 @@
     margin-top: -215px;
     padding-left: 60px;
     font-size: 14px;
+    width: 600px;
     font-family: 'klavika';
     font-weight: 300;
 }
@@ -132,6 +136,7 @@
     margin-top: -400px;
     padding-left: 60px;
     font-size: 14px;
+    width: 700px;
     font-family: 'klavika';
     font-weight: 300;
     color: white;
@@ -162,24 +167,25 @@
 
 @media(max-width: 768px) {
     .text-Our {
-        margin-top: -210px;
+        margin-top: -200px;
         font-size: 20px;
     }
 
     .home-Our {
-        margin-top: -190px;
-        font-size: 30px;
+        margin-top: -170px;
+        font-size: 40px;
     }
 
     .vlog-1 {
-        margin-top: -140px;
+        margin-top: -120px;
         width: 400px;
-        font-size: 11px;
-        line-height: 13px;
+        font-size: 10px;
+        line-height: 12px;
     }
 
     .vlog-box-two {
-        margin-top: -70px;
+        margin-top: -60px;
+        font-size: 10px;
         padding-left: 255px;
     }
 
@@ -243,90 +249,60 @@
 
 }
 
+
 @media(max-width: 992px) {
-
-
     .text-Our {
-        /* margin-top: -350px; */
-        font-size: 50px;
-
+        padding-top: 150px;
     }
 
     .home-Our {
-        /* margin-top: -300px; */
-        font-size: 80px;
+        padding-top: 150px;
     }
 
     .vlog-1 {
-        /* margin-top: -220px; */
-        /* width: 400px; */
-        font-size: 12px;
-        line-height: 15px;
+        padding-top: 150px;
+
     }
 
     .vlog-box-two {
-        /* margin-top: -120px; */
-        padding-left: 255px;
+        margin-top: -80px;
+        padding-left: 500px;
     }
 
     .box-data-1 {
-        /* margin-top: -230px; */
-        font-size: 22px;
+        padding-top: 50px;
     }
 
     .box-data-2 {
-        /* margin-top: -210px; */
-        font-size: 15px;
+        padding-top: 40px;
     }
 
     .box-data-3 {
-        /* margin-top: -155px; */
-        /* width: 500px; */
-        font-size: 12px;
-        line-height: 18px;
+        padding-top: 30px;
     }
 
     .Block-1 {
-        /* margin-top: -235px; */
-        font-size: 22px;
+        padding-top: 60px;
     }
 
     .Block-2 {
-        /* margin-top: -215px; */
-        font-size: 15px;
-
+        padding-top: 50px;
     }
 
     .Block-3 {
-        /* margin-top: -160px; */
-        font-size: 12px;
-        /* width: 500px; */
-        line-height: 15px;
+
+        padding-top: 50px;
     }
 
     .Type-home-page-one {
-        /* margin-top: -320px; */
-        font-size: 22px;
-        font-weight: 500;
+        padding-top: 140px;
+
     }
 
     .Type-home-page-two {
-        /* margin-top: -270px; */
+        padding-top: 130px;
         font-size: 12px;
-        /* width: 600px; */
         line-height: 15px;
     }
-
-    .padding-box {
-        /* margin-top: 10px; */
-        font-size: 18px;
-    }
-
-    .padding-text {
-        /* width: 450px; */
-        padding-top: 50px;
-        font-size: 14px;
-    }
-
 
 }

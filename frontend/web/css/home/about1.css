@@ -1,0 +1,308 @@
+.image-Vision-page {
+    width: 100%;
+}
+
+.text-Our {
+    position: absolute;
+    font-family: 'Klavika';
+    font-weight: 300;
+    font-size: 55px;
+    line-height: 55px;
+    width: 600px;
+    color: #8795C9;
+    margin-top: -470px;
+    padding-left: 60px;
+}
+
+.home-Our {
+    position: absolute;
+    font-family: 'Klavika';
+    font-weight: 500;
+    font-size: 80px;
+    line-height: 55px;
+    margin-top: -410px;
+    padding-left: 60px;
+    color: rgba(135, 149, 201, 0.5);
+
+}
+
+.vlog-1 {
+    position: absolute;
+    font-family: 'Klavika';
+    font-weight: 300;
+    font-size: 14px;
+    width: 600px;
+    margin-top: -330px;
+    padding-left: 60px;
+    color: #565F7E;
+
+}
+
+.vlog-box-two {
+    position: absolute;
+    color: #8795C9;
+    margin-top: -220px;
+    font-size: 11px;
+    line-height: 26px;
+    padding-left: 30%;
+    font-family: 'klavika';
+}
+
+.image-bali {
+    width: 100%;
+}
+
+.box-data-1 {
+    position: absolute;
+    margin-top: -300px;
+    padding-left: 60px;
+    font-family: 'klavika';
+    letter-spacing: -1.5px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.box-data-2 {
+    position: absolute;
+    margin-top: -260px;
+    padding-left: 70px;
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 300;
+    font-family: 'klavika';
+}
+
+.box-data-3 {
+    position: absolute;
+    margin-top: -200px;
+    padding-left: 60px;
+    font-size: 14px;
+    width: 600px;
+    font-family: 'klavika';
+    font-weight: 300;
+}
+
+.image-yogendra-singh {
+    width: 100%;
+}
+
+.Block-1 {
+    position: absolute;
+    margin-top: -310px;
+    padding-left: 60px;
+    font-family: 'klavika';
+    letter-spacing: -1.5px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.Block-2 {
+    position: absolute;
+    margin-top: -270px;
+    padding-left: 70px;
+    font-size: 22px;
+    line-height: 40px;
+    font-weight: 300;
+    font-family: 'klavika';
+}
+
+.Block-3 {
+    position: absolute;
+    margin-top: -215px;
+    padding-left: 60px;
+    font-size: 14px;
+    width: 600px;
+    font-family: 'klavika';
+    font-weight: 300;
+}
+
+.image-whale {
+    width: 100%;
+}
+
+.Type-home-page-one {
+    position: absolute;
+    margin-top: -480px;
+    padding-left: 60px;
+    color: white;
+    font-family: 'klavika';
+    letter-spacing: -1.5px;
+    font-size: 29px;
+    font-weight: 700;
+}
+
+.Type-home-page-two {
+    position: absolute;
+    margin-top: -400px;
+    padding-left: 60px;
+    font-size: 14px;
+    width: 700px;
+    font-family: 'klavika';
+    font-weight: 300;
+    color: white;
+    line-height: 19px;
+}
+
+.padding-box {
+    position: absolute;
+    padding-left: 60px;
+    margin-top: 50px;
+    font-family: 'klavika';
+    letter-spacing: -1.5px;
+    font-size: 29px;
+    font-weight: 700;
+}
+
+.padding-text {
+
+    text-align: center;
+    padding-top: 120px;
+    padding-left: 200px;
+    font-size: 26px;
+    font-family: 'klavika';
+    font-weight: 300;
+}
+
+
+
+@media(max-width: 768px) {
+    .text-Our {
+        margin-top: -200px;
+        font-size: 20px;
+    }
+
+    .home-Our {
+        margin-top: -170px;
+        font-size: 40px;
+    }
+
+    .vlog-1 {
+        margin-top: -120px;
+        width: 400px;
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .vlog-box-two {
+        margin-top: -60px;
+        font-size: 10px;
+        padding-left: 255px;
+    }
+
+    .box-data-1 {
+        margin-top: -125px;
+        font-size: 18px;
+    }
+
+    .box-data-2 {
+        margin-top: -115px;
+        font-size: 11px;
+    }
+
+    .box-data-3 {
+        margin-top: -75px;
+        width: 350px;
+        font-size: 8px;
+        line-height: 10px;
+    }
+
+    .Block-1 {
+        margin-top: -120px;
+        font-size: 18px;
+    }
+
+    .Block-2 {
+        margin-top: -110px;
+        font-size: 11px;
+    }
+
+    .Block-3 {
+        margin-top: -70px;
+        font-size: 8px;
+        width: 350px;
+        line-height: 10px;
+    }
+
+    .Type-home-page-one {
+        margin-top: -170px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .Type-home-page-two {
+        margin-top: -135px;
+        font-size: 6px;
+        width: 380px;
+        line-height: 8.5px;
+    }
+
+    .padding-box {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .padding-text {
+        width: 450px;
+        padding-top: 50px;
+        font-size: 14px;
+    }
+
+}
+
+
+@media(max-width: 992px) {
+    .text-Our {
+        padding-top: 150px;
+    }
+
+    .home-Our {
+        padding-top: 150px;
+    }
+
+    .vlog-1 {
+        padding-top: 150px;
+
+    }
+
+    .vlog-box-two {
+        margin-top: -80px;
+        padding-left: 500px;
+    }
+
+    .box-data-1 {
+        padding-top: 50px;
+    }
+
+    .box-data-2 {
+        padding-top: 40px;
+    }
+
+    .box-data-3 {
+        padding-top: 30px;
+    }
+
+    .Block-1 {
+        padding-top: 60px;
+    }
+
+    .Block-2 {
+        padding-top: 50px;
+    }
+
+    .Block-3 {
+
+        padding-top: 50px;
+    }
+
+    .Type-home-page-one {
+        padding-top: 140px;
+
+    }
+
+    .Type-home-page-two {
+        padding-top: 130px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+}

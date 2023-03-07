@@ -7,7 +7,7 @@
          <div class="collapse navbar-collapse mt-3" id="navbarScroll">
              <ul class="navbar-nav me-auto  navbar-nav-scroll" style="--bs-scroll-height: 100px; margin: top 20px;padding-left: 140px;font-family:'klavika';font-size: 18px;">
                  <li class="nav-item">
-                     <a href="<?= Yii::$app->homeUrl ?>site/index" class="nav-link">Philosophy</a>
+                     <a href="<?= Yii::$app->homeUrl ?>site/philosophy" class="nav-link">Philosophy</a>
                  </li>
                  <li class="nav-item">
                      <a href="<?= Yii::$app->homeUrl ?>site/services" class="nav-link">Services</a>
@@ -19,7 +19,7 @@
                      <a href="<?= Yii::$app->homeUrl ?>site/career" class="nav-link">Career & Recruitment </a>
                  </li>
                  <li class="nav-item">
-                     <a href="<?= Yii::$app->homeUrl ?>site/about us" class="nav-link">About us</a>
+                     <a href="<?= Yii::$app->homeUrl ?>site/about1" class="nav-link">About us</a>
                  </li>
                  <li class="nav-item">
                      <a href="<?= Yii::$app->homeUrl ?>site/contact Us" class="nav-link">Contact Us</a>

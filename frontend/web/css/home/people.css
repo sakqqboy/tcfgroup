@@ -1,137 +1,73 @@
-.image-philosophy {
+.image-working {
     width: 100%;
 }
 
-.text-home {
-    margin-top: -350px;
-    position: absolute;
-    font-family: 'Klavika';
-    font-weight: 300;
-    font-size: 45px;
-    line-height: 55px;
-    color: #8795C9;
-}
-
-.text-box-one {
-    position: absolute;
-    margin-top: -290px;
-    font-family: 'Klavika';
-    font-weight: 500;
-    font-size: 80px;
-    line-height: 55px;
-    color: #8795C9;
-}
-
-.blackground-page-people {
-    background: #F8F8F8;
-    margin-top: 70px;
+.blackground-black {
+    margin-top: 60px;
+    background: #0A0A0A;
+    color: white;
     padding-left: 40px;
-
-}
-
-.picture-text {
     font-family: 'Klavika';
     font-weight: 700;
     font-size: 24px;
-    line-height: 55px;
-    letter-spacing: -1.5px;
-    color: #0F2137;
+    line-height: 26px;
+    letter-spacing: -0.48px;
+    text-transform: uppercase;
+
 }
 
-.picture-icon {
-    font-weight: 300;
+.image-no {
+    width: 100%;
+}
+
+.text-name-kuno {
+    font-size: 14px;
+    text-align: end;
+}
+
+
+.image-icon-name {
+    padding-top: 100px;
+    width: 80%;
+}
+
+.title-empowering {
+    padding-top: 80px;
+    font-family: 'klavika';
+    font-size: 30px;
+    font-weight: 100;
+    line-height: 60px;
+
+}
+
+.title-enployees {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'klavika';
+    padding-left: 40px;
+}
+
+.tcf-type {
     font-size: 20px;
-    line-height: 55px;
-    letter-spacing: -1.5px;
-    color: #0F2137;
+    padding-left: 40px;
+    font-family: 'klavika';
+    color: #5E5E5E;
+    margin-top: 40px;
+}
+
+.image-ceo {
     margin-top: 30px;
-
+    width: 100%;
 }
 
-.box-1 {
-    padding-left: 0px;
-}
-
-.Why-We-Work {
-    font-family: 'Klavika';
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 55px;
+.title-culture {
+    margin-top: 30px;
     padding-left: 40px;
-    letter-spacing: -1.5px;
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: -0.48px;
     color: #0F2137;
-}
-
-.everyone {
-    font-family: 'Klavika';
-    font-weight: 300;
-    padding-left: 40px;
-    font-size: 14px;
-    line-height: 150%;
-    color: #000000;
-}
-
-.YASUNARI {
-    font-family: 'Klavika';
-    font-weight: 500;
-    font-size: 11px;
-    padding-left: 40px;
-    line-height: 26px;
-    letter-spacing: 0.94992px;
-    text-transform: uppercase;
-    color: #000000;
-}
-
-.People {
-    font-family: 'Klavika';
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 150%;
-    text-align: right;
-    color: #000000;
-}
-
-.TOKYO {
-    font-family: 'Klavika';
-    font-weight: 500;
-    font-size: 11px;
-    padding-left: 40px;
-    line-height: 26px;
-    letter-spacing: 0.94992px;
-    text-align: right;
-    text-transform: uppercase;
-    color: #000000;
-}
-
-@media(max-width: 992px) {
-    .text-philosophy {
-        padding-top: 50px;
-    }
-
-    .text-home {
-        padding-top: 80px;
-    }
-
-    .text-box-one {
-        padding-top: 90px;
-
-    }
-}
-
-@media(max-width: 768px) {
-    .text-philosophy {
-        padding-top: 90px;
-    }
-
-    .text-home {
-        padding-top: 180px;
-        font-size: 30px;
-    }
-
-    .text-box-one {
-        padding-top: 165px;
-        font-size: 55px;
-
-    }
 
 }

@@ -81,13 +81,21 @@ class SiteController extends Controller
     {
         return $this->render('services');
     }
-    public function actionPeople()
+    public function actionPhilosophy()
     {
-        return $this->render('people');
+        return $this->render('philosophy');
+    }
+    public function actionAbout1()
+    {
+        return $this->render('about1');
     }
     public function actionCareer()
     {
         return $this->render('career');
+    }
+    public function actionPeople()
+    {
+        return $this->render('people');
     }
 
     /**

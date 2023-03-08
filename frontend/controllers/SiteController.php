@@ -97,6 +97,10 @@ class SiteController extends Controller
     {
         return $this->render('people');
     }
+    public function actionContact1()
+    {
+        return $this->render('contact1');
+    }
 
     /**
      * Logs in a user.

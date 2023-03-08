@@ -7,29 +7,29 @@ use Codeception\Lib\Connector\Yii2;
 $this->title = 'About Us';
 ?>
 
+<div class="col-12">
+    <img src="<?= Yii::$app->homeUrl ?>image/Vision-page.png" class="image-Vision-page">
+</div>
 
-<div class="col-12 img-Vision" style="margin-top: 80px;">
-    <div class="col-12 img-Vision">
-        <img src="<?= Yii::$app->homeUrl ?>image/Vision-page.png" class="image-Vision-page">
-    </div>
-    <div class="col-10 text-Our">
+<div class="col-12 box-all">
+    <div class="col-12 text-Our">
         Our
     </div>
-    <div class="col-10 home-Our">
+    <div class="col-12 text-vision">
         Vision
     </div>
     <div class="col-12 vlog-1">
         Now that the average age of tax accountants is over 60 and the industry has completely matured (or declined), what kind of vision should we have and how should we change the industry? Before thinking about this, I think that there are things that companies must not change and things that must be changed. I would like to think first so as not to confuse the two.
-    </div>
-    <div class="col-12 vlog-box-two">
-        YASUNARI KUNO, CEO
+        <p class="title-color">YASUNARI KUNO, CEO</p>
     </div>
 </div>
 
 <div class="col-12">
-    <div class="col-12">
-        <img src="<?= Yii::$app->homeUrl ?>image/bali.png" class="image-bali">
-    </div>
+    <img src="<?= Yii::$app->homeUrl ?>image/bali.png" class="image-bali">
+</div>
+
+
+<div class="col-12">
     <div class="col-12 box-data-1">
         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Reason for Existence, Philosophy
     </div>
@@ -41,11 +41,12 @@ $this->title = 'About Us';
     </div>
 </div>
 
-<div class="col-12">
+
+<div class="col-12 mt-20">
     <div class="col-12">
         <img src="<?= Yii::$app->homeUrl ?>image/yogendra-singh.png" class="image-yogendra-singh">
     </div>
-    <div class="col-12 Block-1">
+    <div class="col-12  Block-1">
         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Vision & Strategy
     </div>
     <div class="col-12 Block-2">
@@ -57,7 +58,7 @@ $this->title = 'About Us';
 
 <div class="col-12">
     <div class="col-12">
-        <img src="<?= Yii::$app->homeUrl ?>image/whale-1.png" class="image-whale">
+        <img src="<?= Yii::$app->homeUrl ?>image/whale2.png" class="image-whale">
     </div>
     <div class="col-12 Type-home-page-one">
         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> How Far Should the Company Grow?
@@ -68,11 +69,11 @@ $this->title = 'About Us';
 </div>
 
 <div class="col-12 pr12">
-    <div class="row">
-        <div class="col-12 padding-box">
-            <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Tokyo Consulting Group Strategy
-        </div>
+
+    <div class="col-12 padding-box">
+        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Tokyo Consulting Group Strategy
     </div>
+
     <div class="col-12">
         <div class="col-8 padding-text">
             ❝Following the trend of "borderless", we will continue to
@@ -101,7 +102,9 @@ $this->title = 'About Us';
         </div>
     </div>
 </div>
-<div class="col-12 pr12"><!-- ตรงนี้หน้าจอเล็ก ไม่แสดง-->
+
+
+<div class="col-12 pr12">
     <div class="row">
         <div class="offset-lg-6 col-lg-6 col-12 text-center">
             <img src="<?= Yii::$app->homeUrl ?>image/book.png" class="image-book">

@@ -13,8 +13,8 @@ $this->title = 'People';
     <img src="<?= Yii::$app->homeUrl ?>image/working.png" class="image-working">
 </div>
 
-<div class="col-8 text-center mt-50 ml-40">
-    <p>"For more than a decade, Tokyo Consulting Firm Limited has been partnering with businesses and organizations of all sizes to drive positive change, empower their teams, and build a better tomorrow. Our team of dedicated experts works tirelessly to turn vision into action, delivering tangible results and making a lasting impact on the communities we serve."</p>
+<div class="col-8 text-center form-data-block">
+    "For more than a decade, Tokyo Consulting Firm Limited has been partnering with businesses and organizations of all sizes to drive positive change, empower their teams, and build a better tomorrow. Our team of dedicated experts works tirelessly to turn vision into action, delivering tangible results and making a lasting impact on the communities we serve."
 </div>
 
 <div class="col-12 pr12 blackground-black mt-50">
@@ -27,23 +27,23 @@ $this->title = 'People';
         <div class="col-lg-6 col-md-6 col-12">
             <img src="<?= Yii::$app->homeUrl ?>image/icon-name.png" class="image-icon-name">
             <div class="col-12 title-empowering">
-                <p> “ Empowering Impactful
-                    Solutions Together</p>
+                <p> “ Empowering Impactful </p>
+                <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solutions Together</p>
             </div>
         </div>
     </div>
 </div>
 
-<div class="col-12  title-enployees mt-50">
+<div class="col-12  title-employees mt-50">
     <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> MEET GLOBAL EMPLOYEES
 </div>
 
 <div class="col-12 pr12 tcf-type">
     <div class="row">
-        <div class="col-2">
+        <div class="col-3">
             TCF Global People
         </div>
-        <div class="col-2">
+        <div class="col-3">
             <select class="form-select" aria-label="Default select example">
                 <option selected>Bangladesh</option>
                 <option value="1">Brazil</option>
@@ -96,3 +96,4 @@ $this->title = 'People';
         </div>
     </div>
 </div>
+<div class="col-12" style="margin-top: 20px;"></div>

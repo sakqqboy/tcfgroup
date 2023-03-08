@@ -22,7 +22,7 @@
                      <a href="<?= Yii::$app->homeUrl ?>site/about1" class="nav-link">About us</a>
                  </li>
                  <li class="nav-item">
-                     <a href="<?= Yii::$app->homeUrl ?>site/contact Us" class="nav-link">Contact Us</a>
+                     <a href="<?= Yii::$app->homeUrl ?>site/contact1" class="nav-link">Contact Us</a>
                  </li>
              </ul>
              <form class="d-flex">

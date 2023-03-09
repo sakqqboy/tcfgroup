@@ -81,7 +81,7 @@ $this->title = 'TCFGROUP';
     <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
             <div class="col-lg-12 text-establish">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> Our Professional Services
+                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Our Professional Services
             </div>
             <div class="col-lg-12 Company">
                 <li>Establish Company</li> <br>
@@ -189,7 +189,7 @@ $this->title = 'TCFGROUP';
 
 <div class="col-12 pb-50">
     <div class="col-12 connect-experts mt-40 pl-40">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> Connect Experts
+        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Connect Experts
     </div>
     <div class="col-12 Get-free mt-30 pl-40">
         Get Free Appointment on your Business Issuefa-spin

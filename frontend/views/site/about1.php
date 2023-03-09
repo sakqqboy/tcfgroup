@@ -111,3 +111,43 @@ $this->title = 'About Us';
         </div>
     </div>
 </div>
+
+<div class="col-12 pr12 mt-50 form-text-footer">
+    <div class="row">
+        <div class="col">
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="col-12 title-more">
+                    <p>More About us</p>
+                </div>
+                <div class="col-12 title-form-text">
+                    <p><a href="#" class="no-underline">About us </a></p>
+                    <p><a href="#" class="no-underline">Conotact us</a></p>
+                    <p><a href="#" class="no-underline">Work life at TCF</a></p>
+                    <p><a href="#" class="no-underline">Our Work Philosopy</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col box-form-media">
+            <div class="col-lg-4  col-md-6 col-12">
+                <div class="col-12 from-text-media">
+                    “TCF Equal Opportunity Statement”
+                </div>
+                <div class="col-12 form-text-google">
+                    <p>Google is proud to be an equal opportunity workplace and is an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status. We also consider qualified applicants regardless of criminal histories, consistent with legal requirements. See also Google's EEO Policy and EEO is the Law. If you have a need that requires accommodation, please let us know by completing our Accommodations for Applicants form.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="col-12 media-picture">
+                    Follow Career in
+                    <a href="#facebook"><img src="<?= Yii::$app->homeUrl ?>image/facebook.png"></a>
+                    <a href="#twitter"><img src="<?= Yii::$app->homeUrl ?>image/twitter.png"></a>
+                    <a href="#Instagram"><img src="<?= Yii::$app->homeUrl ?>image/Instagram.png"></a>
+                    <a href="#LinkedIn"><img src="<?= Yii::$app->homeUrl ?>image/LinkedIn.png"></a>
+                    <a href="#YouTube"><img src="<?= Yii::$app->homeUrl ?>image/YouTube.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

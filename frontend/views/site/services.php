@@ -9,7 +9,7 @@ $this->title = 'services';
 
 
 <div class="col-12" style="margin-top: 80px;">
-    <img src="<?= Yii::$app->homeUrl ?>image/Linkedin-Cover.png" class="bl-Linkedin-Cover">
+    <img src="<?= Yii::$app->homeUrl ?>image/Linkedin-Cover.png" class="image-Linkedin-Cover">
 </div>
 
 <div class="col-12 pr12 background-home">
@@ -54,7 +54,7 @@ $this->title = 'services';
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12 mt-20">
             <div class="col-12 form-select-one mt-20">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> Understanding Business & Our Service
+                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Understanding Business & Our Service
             </div>
             <div class="col-12 pt-20 form-select-two">
                 <p> An inevitable fact of this world is that today or tomorrow, every person has to die at some point of time. But unlike the sudden ending of human life, tax compliance does not end all of a sudden.
@@ -79,7 +79,7 @@ $this->title = 'services';
     <div class="row mt-20">
         <div class="col-md-4 col-12">
             <div class="col-12 form-services">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> Service at Every Stage
+                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Service at Every Stage
             </div>
             <div class="row mt-40 form-services-page">
                 <div class="col-4">
@@ -168,13 +168,11 @@ $this->title = 'services';
 </div>
 
 
-
-
 <div class="col-12 pr12 backgroup-submit">
     <div class="row">
         <div class="col-lg-5 col-md-6  col-12 mt-20">
             <div class="col-12 form-select-one mt-20">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> Business Continuation Method (Kuno Method)
+                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Business Continuation Method (Kuno Method)
             </div>
             <div class="col-12 mt-20">
                 <img src="<?= Yii::$app->homeUrl ?>image/Group-4.png">
@@ -212,106 +210,63 @@ $this->title = 'services';
     </div>
 </div>
 
-
-
-<!-- <div class="col-12">
-    <div class="col-12">
-        <img src="<?= Yii::$app->homeUrl ?>image/boat-1.png" class="image-boat-2">
-    </div>
-    <div class="col-12 text-the-best">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> THE BEST OF TCF
-    </div>
-    <div class="col-12 pr12 data-1">
-        <div class="row">
-            <div class="col-1">
-                <img src="<?= Yii::$app->homeUrl ?>image/account.png" class="image-account">
-            </div>
-            <div class="col-1 page-2">
-                Speed & Quality
-            </div>
-            <div class="col-1 page-4">
-                <img src="<?= Yii::$app->homeUrl ?>image/account-3.png" class="image-account">
-            </div>
-            <div class="col-1 page-2 mt-10">
-                Development
-                Partner
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2  page-3">
-                Accuracy in work is of the utmost importance in any profession.
-                Whether it is a simple task or a complex project, making sure
-                that everything is done correctly is essential for success.
-                This means paying attention to detail.
-            </div>
-            <div class="col-2 page-3">
-                to being a development partner for its clients, rather than just a service provider.
-                This means that we take a long-term, holistic approach to consulting and work closely
-                with our clients to support their growth and development
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-1">
-                <img src="<?= Yii::$app->homeUrl ?>image/account-1.png" class="image-account">
-            </div>
-            <div class="col-1 page-2">
-                Composite
-                Consulting Services
-            </div>
-            <div class="col-1 page-4">
-                <img src="<?= Yii::$app->homeUrl ?>image/account-4.png" class="image-account">
-            </div>
-            <div class="col-1 page-2">
-                Secured &
-                Trusted
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2 page-3">
-                a comprehensive consulting firm that offers a range of services related to human resources, accounting, tax, and VAT. This is a valuable asset for businesses that are looking for comprehensive support in these areas, as they can receive all of their consulting needs from one reliable source.
-            </div>
-            <div class="col-2 page-3">
-                our clients can feel confident that their data and projects are being handled with the utmost care and confidentiality. We have implemented strict security protocols and safeguards to protect our clients' data, and we are committed to maintaining the highest standards of professionalism.
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-1">
-                <img src="<?= Yii::$app->homeUrl ?>image/account-1.png" class="image-account">
-            </div>
-            <div class="col-1 page-2">
-                Independent Business Consultant
-            </div>
-            <div class="col-1 page-4">
-                <img src="<?= Yii::$app->homeUrl ?>image/account-5.png" class="image-account">
-            </div>
-            <div class="col-1 page-2">
-                Commitment
-                of Deadline
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-2 page-3">
-                a comprehensive consulting firm that offers a range of services related to human resources, accounting, tax, and VAT. This is a valuable asset for businesses that are looking for comprehensive support in these areas, as they can receive all of their consulting needs from one reliable source. </div>
-            <div class="col-2 page-3">
-                our clients can feel confident that their data and projects are being handled with the utmost care and confidentiality. We have implemented strict security protocols and safeguards to protect our clients' data, and we are committed to maintaining the highest standards of professionalism. </div>
-        </div>
-        <div class="card-body link-download">
-            Download the TCG e-Book and learn more about us <button type="button" class="btn btn-primary btn-download">Download &nbsp;<i class="fa fa-download" aria-hidden="true"></i></button>
-        </div>
-    </div>
-</div> -->
-
-
 <div class="col-12">
     <img src="<?= Yii::$app->homeUrl ?>image/boat-1.png" class="image-boat-2">
 </div>
-
-<div class="col-12">
-
+<div class="col-12 pr12 main-page">
+    <div class="row">
+        <div class="col-lg-5 col-md-6 col-12">
+            <div class="col-12  text-the-best">
+                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img5 mr-1"> THE BEST OF TCF
+            </div>
+            <div class="col-12 mt-30 page-1">
+                <img src="<?= Yii::$app->homeUrl ?>image/account.png" class="image-account"> Speed & Quality
+            </div>
+            <div class="col-12 select-project">
+                Accuracy in work is of the utmost importance in any profession. Whether it is a simple task or a complex project, making sure that everything is done correctly is essential for success. This means paying attention to detail.
+            </div>
+            <div class="col-12 page-1">
+                <img src="<?= Yii::$app->homeUrl ?>image/account-1.png" class="image-account">Composite Consulting Services
+            </div>
+            <div class="col-12 select-project">
+                a comprehensive consulting firm that offers a range of services related to human resources, accounting, tax, and VAT. This is a valuable asset for businesses that are looking for comprehensive support in these areas, as they can receive all of their consulting needs from one reliable source.
+            </div>
+            <div class="col-12 page-1">
+                <img src="<?= Yii::$app->homeUrl ?>image/account-2.png" class="image-account">Independent Business Consultant
+            </div>
+            <div class="col-12 select-project">
+                a comprehensive consulting firm that offers a range of services related to human resources, accounting, tax, and VAT. This is a valuable asset for businesses that are looking for comprehensive support in these areas, as they can receive all of their consulting needs from one reliable source.
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-6 col-12">
+            <div class="col-12 form-large">
+                It is always the most vital time to provide the entire picture of company and remind the mission in society. We believe that the purpose of business is ultimately the same all over the world. Let’s grow together.
+            </div>
+            <div class="col-12 page-1">
+                <img src="<?= Yii::$app->homeUrl ?>image/account-3.png" class="image-account">Development Partner
+            </div>
+            <div class="col-12 select-project">
+                to being a development partner for its clients, rather than just a service provider. This means that we take a long-term, holistic approach to consulting and work closely with our clients to support their growth and development
+            </div>
+            <div class="col-12 page-1">
+                <img src="<?= Yii::$app->homeUrl ?>image/account-4.png" class="image-account">Secured & Trusted
+            </div>
+            <div class="col-12 select-project">
+                our clients can feel confident that their data and projects are being handled with the utmost care and confidentiality. We have implemented strict security protocols and safeguards to protect our clients' data, and we are committed to maintaining the highest standards of professionalism.
+            </div>
+            <div class="col-12 page-1">
+                <img src="<?= Yii::$app->homeUrl ?>image/account-5.png" class="image-account">Commitment of Deadline
+            </div>
+            <div class="col-12 select-project">
+                our clients can feel confident that their data and projects are being handled with the utmost care and confidentiality. We have implemented strict security protocols and safeguards to protect our clients' data, and we are committed to maintaining the highest standards of professionalism.
+            </div>
+        </div>
+    </div>
 </div>
 
 
-<div class="col-12 pb-50" style="margin-top: 145px;">
+
+<div class="col-12 pb-50" style="margin-top: 90px;">
     <div class="col-12 connect-experts mt-40 pl-40">
         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> Connect Experts
     </div>
@@ -411,7 +366,6 @@ $this->title = 'services';
                     <div class="col-6 text-start mt-4">
                         <div class="contact-social mb-2">Skype</div>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/skype.png" class="social-icon mr-10"> inquarrytcf</p>
-
                     </div>
                     <div class="col-6 text-end mt-4">
                         <div class="contact-social mb-2">Phone</div>

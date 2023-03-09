@@ -60,15 +60,25 @@ $this->title = 'Career';
     <img src="<?= Yii::$app->homeUrl ?>image/Untitled.png" class="image-code">
 </div>
 
-<div class="card card-title2">
-    <div class="card-body">
-        <h5 class="card-title-page">27 Doctrines of Work</h5>
-        <p class="title4">Integrity. Quality. Professionalism.</p>
-        <p class="title5"> Our Shared Values, Global Principles of Business Conduct,
-            and Responsible Business Principles are the foundation
-            of our culture, shaping who we are, what we believe and how we behave. </p>
-        <div class="card-body title6">
-            <a href="#" class="card-link">Learn More</a>
+<div class="col-12">
+    <div class="card card-title2">
+        <div class="card-body">
+            <div class="col-12">
+                <h5 class="card-title-page">27 Doctrines of Work</h5>
+            </div>
+            <div class="col-12">
+                <p class="title4">Integrity. Quality. Professionalism.</p>
+            </div>
+            <div class="col-12">
+                <p class="title5"> Our Shared Values, Global Principles of Business Conduct,
+                    and Responsible Business Principles are the foundation
+                    of our culture, shaping who we are, what we believe and how we behave. </p>
+            </div>
+            <div class="col-12">
+                <div class="card-body title6">
+                    <a href="#" class="card-link">Learn More</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

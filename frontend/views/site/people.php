@@ -14,7 +14,9 @@ $this->title = 'People';
 </div>
 
 <div class="col-10 text-center form-data-block">
-    "For more than a decade, Tokyo Consulting Firm Limited has been partnering with businesses and organizations of all sizes to drive positive change, empower their teams, and build a better tomorrow. Our team of dedicated experts works tirelessly to turn vision into action, delivering tangible results and making a lasting impact on the communities we serve."
+    <div class="col-12">
+        "For more than a decade, Tokyo Consulting Firm Limited has been partnering with businesses and organizations of all sizes to drive positive change, empower their teams, and build a better tomorrow. Our team of dedicated experts works tirelessly to turn vision into action, delivering tangible results and making a lasting impact on the communities we serve."
+    </div>
 </div>
 
 <div class="col-12 pr12 blackground-black mt-50">

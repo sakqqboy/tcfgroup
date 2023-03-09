@@ -1,0 +1,188 @@
+.image-Google-Forms-Job {
+    width: 100%;
+    margin-top: 90px;
+}
+
+.fa-chevron-left {
+    text-decoration: none;
+    padding-left: 40px;
+}
+
+
+.name-text-applying {
+    font-size: 38px;
+    padding-left: 40px;
+    font-family: 'klavika';
+    font-weight: 200;
+
+}
+
+.txt-cousultant {
+    font-size: 38px;
+    font-family: 'klavika';
+    font-weight: 500;
+
+}
+
+.form-range {
+    padding-left: 40px;
+}
+
+.no-name-1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.name-box-one {
+    padding-left: 40px;
+    font-family: 'klavika';
+}
+
+.font-name-one {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.moon {
+    color: red;
+    font-size: 18px;
+}
+
+.form-input-detail {
+    padding-left: 40px;
+}
+
+.form-label-type {
+    font-family: 'klavika';
+    font-size: 13px;
+    font-weight: 100;
+}
+
+.select-name-dis {
+    padding-left: 40px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'klavika';
+}
+
+.select-name-privacy {
+    font-family: 'klavika';
+    font-size: 13px;
+    font-weight: 200;
+    padding-left: 40px;
+    width: 700px;
+}
+
+.title-read {
+    color: #007CDB;
+    font-weight: 500;
+}
+
+.image-upload {
+    width: 250px;
+}
+
+.text-upload {
+    padding-left: 20px;
+    font-size: 26px;
+    font-family: 'klavika';
+}
+
+.text-drop {
+    font-size: 14px;
+    color: black;
+    font-family: 'klavika';
+    font-weight: 600;
+    margin-left: -200px;
+}
+
+.tex-Or {
+    font-size: 18px;
+    font-weight: 100;
+    font-family: 'klavika';
+    margin-top: -130px;
+    padding-left: 120px;
+}
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.btn-button {
+    /* border: 2px solid rgb(41, 140, 239); */
+    color: white;
+    background-color: rgb(29, 147, 226);
+    /* padding: 8px 20px; */
+    /* border-radius: 8px; */
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 80px;
+
+}
+
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.title-file {
+    font-size: 12px;
+    font-weight: 100;
+    color: gray;
+    padding-left: 60px;
+    font-family: 'klavika';
+    padding-top: 5px;
+}
+
+.form-check-label-home {
+    padding-left: 200px;
+}
+
+.form-image-upload {
+    margin-top: -190px;
+}
+
+.line-back,
+.name-text-applying,
+.font-name-one,
+.form-input-detail,
+.name-box-one {
+    margin-top: 30px;
+}
+
+@media(max-width: 992px) {
+    .form-image-upload {
+        margin-left: 400px;
+        padding-left: 100px;
+        margin-top: -230px;
+    }
+
+}
+
+@media(max-width: 768px) {
+    .image-Google-Forms-Job {
+        margin-top: 90px;
+    }
+
+    .name-text-applying {
+        font-size: 25px;
+    }
+
+    .txt-cousultant {
+        font-size: 25px;
+    }
+
+    .form-image-upload {
+        margin-top: 30px;
+        margin-left: -10px;
+    }
+
+    .select-name-privacy {
+        width: 450px;
+    }
+}

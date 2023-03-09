@@ -314,152 +314,6 @@
     padding-left: 10px;
 }
 
-@media(max-width: 768px) {
-    .text-shape {
-        font-size: 23px;
-        margin-top: -150px;
-        line-height: 25px;
-
-    }
-
-    .image-job-postd {
-        margin-top: 90px;
-    }
-
-    .card-title1 {
-        width: 13rem;
-        margin-left: 100px;
-        margin-top: -200px;
-        margin-left: 250px;
-
-    }
-
-    .button-apply {
-        font-size: 18px;
-    }
-
-    .card-title-home {
-        font-size: 15px;
-        line-height: 14px;
-    }
-
-    .title1 {
-        font-size: 12px;
-        line-height: 10px;
-    }
-
-    .title2 {
-        font-size: 10px;
-        line-height: 14px;
-    }
-
-    .title3 {
-        font-size: 10px;
-        line-height: 12px;
-    }
-
-    .image-code {
-        width: 60%;
-        /* height: 120%; */
-    }
-
-    .card-title-page {
-        font-size: 15px;
-        line-height: 14px;
-    }
-
-    .title4 {
-        font-size: 12px;
-        line-height: 10px;
-    }
-
-    .title5 {
-        font-size: 9px;
-        line-height: 10px;
-
-    }
-
-    .title6 {
-        font-size: 10px;
-        line-height: 1px;
-        margin-top: -20px;
-    }
-
-    .card-title2 {
-        width: 13rem;
-        margin-left: -100px;
-        margin-top: -200px;
-        margin-left: -150px;
-
-    }
-
-    .title-txt1,
-    .title-txt2 {
-        font-size: 14px;
-        line-height: 20px;
-        width: 25rem;
-    }
-
-    .name-explore {
-        font-size: 14px;
-        width: 25rem;
-    }
-
-    .button-BG {
-        margin-top: -20px;
-        width: 200px;
-    }
-
-    .image-TCF-GROUP {
-        margin-top: 20px;
-        width: 390px;
-    }
-
-    .from-input-search {
-        width: 400px;
-    }
-
-    .form-text {
-        margin-top: 30px;
-        width: 400px;
-    }
-
-    .text-future {
-        font-size: 22px;
-    }
-
-    .from-text-media {
-        font-size: 24px;
-        margin-top: 20px;
-    }
-
-    .form-text-google {
-        width: 400px;
-        font-size: 13px;
-    }
-
-    .media-picture {
-        margin-top: 30px;
-    }
-
-
-    .cb-1 {
-        margin-top: 20px;
-        margin-left: 30px;
-    }
-
-    .cb-2 {
-        padding-left: 0px;
-    }
-
-
-    .cb-3 {
-        padding-left: 0px;
-    }
-
-
-}
-
 @media(max-width: 992px) {
     .text-shape {
         font-size: 40px;
@@ -581,6 +435,153 @@
 
     .form-text-google {
         width: 350px;
+    }
+
+
+}
+
+
+@media(max-width: 768px) {
+    .text-shape {
+        font-size: 35px;
+        margin-top: -110px;
+        line-height: 35px;
+
+
+    }
+
+    .image-job-postd {
+        margin-top: 90px;
+    }
+
+    .card-title1 {
+        width: 13rem;
+        margin-left: 100px;
+        margin-top: -200px;
+        margin-left: 250px;
+
+    }
+
+    .button-apply {
+        font-size: 14px;
+    }
+
+    .card-title-home {
+        font-size: 15px;
+        line-height: 14px;
+    }
+
+    .title1 {
+        font-size: 12px;
+        line-height: 10px;
+    }
+
+    .title2 {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .title3 {
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .image-code {
+        width: 60%;
+    }
+
+    .card-title-page {
+        font-size: 15px;
+        line-height: 14px;
+    }
+
+    .title4 {
+        font-size: 12px;
+        line-height: 10px;
+    }
+
+    .title5 {
+        font-size: 9px;
+        line-height: 10px;
+
+    }
+
+    .title6 {
+        font-size: 10px;
+        line-height: 1px;
+        margin-top: -20px;
+    }
+
+    .card-title2 {
+        width: 13rem;
+        margin-left: -100px;
+        margin-top: -200px;
+        margin-left: -150px;
+
+    }
+
+    .title-txt1,
+    .title-txt2 {
+        font-size: 14px;
+        line-height: 20px;
+        width: 25rem;
+    }
+
+    .name-explore {
+        font-size: 14px;
+        width: 25rem;
+    }
+
+    .button-BG {
+        margin-top: -20px;
+        width: 200px;
+    }
+
+    .image-TCF-GROUP {
+        margin-top: 20px;
+        width: 390px;
+    }
+
+    .from-input-search {
+        width: 400px;
+    }
+
+    .form-text {
+        margin-top: 30px;
+        width: 400px;
+    }
+
+    .text-future {
+        font-size: 22px;
+    }
+
+    .from-text-media {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    .form-text-google {
+        width: 400px;
+        font-size: 13px;
+    }
+
+    .media-picture {
+        margin-top: 30px;
+    }
+
+
+    .cb-1 {
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+
+    .cb-2 {
+        padding-left: 0px;
+    }
+
+
+    .cb-3 {
+        padding-left: 0px;
     }
 
 

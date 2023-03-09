@@ -214,8 +214,10 @@ $this->title = 'services';
 
 
 
-<div class="col-12">
-    <img src="<?= Yii::$app->homeUrl ?>image/boat-1.png" class="image-boat-2">
+<!-- <div class="col-12">
+    <div class="col-12">
+        <img src="<?= Yii::$app->homeUrl ?>image/boat-1.png" class="image-boat-2">
+    </div>
     <div class="col-12 text-the-best">
         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> THE BEST OF TCF
     </div>
@@ -297,8 +299,16 @@ $this->title = 'services';
             Download the TCG e-Book and learn more about us <button type="button" class="btn btn-primary btn-download">Download &nbsp;<i class="fa fa-download" aria-hidden="true"></i></button>
         </div>
     </div>
+</div> -->
+
+
+<div class="col-12">
+    <img src="<?= Yii::$app->homeUrl ?>image/boat-1.png" class="image-boat-2">
 </div>
 
+<div class="col-12">
+
+</div>
 
 
 <div class="col-12 pb-50" style="margin-top: 145px;">

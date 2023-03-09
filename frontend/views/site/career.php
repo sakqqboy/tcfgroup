@@ -45,7 +45,7 @@ $this->title = 'Career';
 </div>
 
 
-<div class="col-12 text-end">
+<div class="col-12 mt-20 text-end">
     <img src="<?= Yii::$app->homeUrl ?>image/Untitled.png" class="image-code">
 </div>
 

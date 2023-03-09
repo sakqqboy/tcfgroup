@@ -13,7 +13,7 @@ $this->title = 'People';
     <img src="<?= Yii::$app->homeUrl ?>image/working.png" class="image-working">
 </div>
 
-<div class="col-8 text-center form-data-block">
+<div class="col-10 text-center form-data-block">
     "For more than a decade, Tokyo Consulting Firm Limited has been partnering with businesses and organizations of all sizes to drive positive change, empower their teams, and build a better tomorrow. Our team of dedicated experts works tirelessly to turn vision into action, delivering tangible results and making a lasting impact on the communities we serve."
 </div>
 

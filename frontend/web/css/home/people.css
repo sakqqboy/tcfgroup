@@ -30,8 +30,8 @@
     font-family: 'klavika';
     font-weight: 100;
     margin-top: 50px;
-    font-size: 12px;
-    width: 350px;
+    font-size: 18px;
+
 
 }
 
@@ -83,6 +83,15 @@
 
 }
 
+@media(max-width: 992px) {
+    .title-empowering {
+        font-size: 25px;
+        padding-left: 40px;
+    }
+
+
+}
+
 @media(max-width: 768px) {
     .image-working {
         margin-top: 90px;
@@ -112,7 +121,7 @@
     .card-title1 {
         width: 12rem;
         margin-top: -150px;
-        margin-left: 250px;
+        margin-left: 260px;
 
     }
 
@@ -135,8 +144,8 @@
 
     .title3 {
         font-size: 10px;
-        padding-top: -10px;
         margin-top: -10px;
+        line-height: 1px;
     }
 
 
@@ -161,13 +170,13 @@
 
     .title6 {
         font-size: 10px;
-        line-height: 14px;
+        line-height: 1px;
     }
 
     .card-title2 {
         width: 12rem;
         margin-left: -100px;
-        margin-top: -155px;
+        margin-top: -145px;
         margin-left: 100px;
     }
 
@@ -175,14 +184,5 @@
         padding-top: 20px;
         font-size: 12px;
     }
-
-}
-
-@media(max-width: 992px) {
-    .title-empowering {
-        font-size: 25px;
-        padding-left: 40px;
-    }
-
 
 }

@@ -8,7 +8,7 @@ $this->title = 'services';
 ?>
 
 
-<div class="col-12" style="margin-top: 80px;">
+<div class="col-12">
     <img src="<?= Yii::$app->homeUrl ?>image/Linkedin-Cover.png" class="image-Linkedin-Cover">
 </div>
 
@@ -102,17 +102,17 @@ $this->title = 'services';
             <div class="col-12 form-select-tree">
                 It is always the most vital time to provide the entire picture of company and remind the mission in society. We believe that the purpose of business is ultimately the same all over the world. Let’s grow together.
             </div>
-            <div class="col-12 mt-30 text-center form-services">
+            <div class="col-12 mt-30 text-center  form-services">
                 Accounting & Taxation
             </div>
             <div class="col-12">
-                <div class="row select-box">
+                <div class="row">
                     <div class="card text-center mt-20 form-page-text">
                         <div class="text-center"><img src="<?= Yii::$app->homeUrl ?>image/accounting.png" class="card-img-top"></div>
                         <div class="card-body">
-                            <h5 class="card-title"> Company
+                            <h5> Company
                                 Accounting & Taxation Compliance</h5>
-                            <p class="card-text">Accounting & Taxation Compliance is a crucial service that helps companies meet their financial reporting obligations and maintain compliance with tax laws. This service ensures accurate record keeping, tax filing, and financial reporting to minimize the risk of audits and penalties.</p>
+                            <p>Accounting & Taxation Compliance is a crucial service that helps companies meet their financial reporting obligations and maintain compliance with tax laws. This service ensures accurate record keeping, tax filing, and financial reporting to minimize the risk of audits and penalties.</p>
                             <button type="button" class="btn btn-outline-primary">Explore Service</button>
                         </div>
                     </div>
@@ -121,43 +121,43 @@ $this->title = 'services';
                         <div class="card-body">
                             <h5 class="card-title"> Corporate Tax Assessment
                                 & Returns </h5>
-                            <p class="card-text">Corporate Tax Assessment & Returns is a comprehensive service that helps companies accurately calculate their tax liability and file returns in compliance with relevant tax laws. This service helps businesses minimize their tax burden, maintain compliance, and avoid penalties and audits.</p>
+                            <p>Corporate Tax Assessment & Returns is a comprehensive service that helps companies accurately calculate their tax liability and file returns in compliance with relevant tax laws. This service helps businesses minimize their tax burden, maintain compliance, and avoid penalties and audits.</p>
                             <button type="button" class="btn btn-outline-primary">Explore Service</button>
                         </div>
                     </div>
                     <div class="card text-center mt-20 form-page-text">
                         <div class="text-center"><img src="<?= Yii::$app->homeUrl ?>image/accounting.png" class="card-img-top"></div>
                         <div class="card-body">
-                            <h5 class="card-title"> Accounting & Audit
+                            <h5> Accounting & Audit
                             </h5>
-                            <p class="card-text">"Streamline financial management with our user-friendly accounting system and assure transparency through our comprehensive auditing process."</p>
+                            <p>"Streamline financial management with our user-friendly accounting system and assure transparency through our comprehensive auditing process."</p>
                             <button type="button" class="btn btn-outline-primary" style="margin-top: 100px;">Explore Service</button>
                         </div>
                     </div>
                     <div class="card text-center mt-20 form-page-text">
                         <div class="text-center"><img src="<?= Yii::$app->homeUrl ?>image/accounting.png" class="card-img-top"></div>
                         <div class="card-body">
-                            <h5 class="card-title"> Monthly, Quarterly,
+                            <h5> Monthly, Quarterly,
                                 Yearly Accounts </h5>
-                            <p class="card-text">"Stay on top of your finances with our flexible account management options - choose from monthly, quarterly, or yearly account reviews to ensure financial stability and peace of mind."</p>
+                            <p>"Stay on top of your finances with our flexible account management options - choose from monthly, quarterly, or yearly account reviews to ensure financial stability and peace of mind."</p>
                             <button type="button" class="btn btn-outline-primary" style="margin-top: 60px;">Explore Service</button>
                         </div>
                     </div>
                     <div class="card text-center mt-20 form-page-text">
                         <div class="text-center"><img src="<?= Yii::$app->homeUrl ?>image/accounting.png" class="card-img-top"></div>
                         <div class="card-body">
-                            <h5 class="card-title"> Transfer Pricing
+                            <h5> Transfer Pricing
                                 & Outward Remittance </h5>
-                            <p class="card-text">Accounting & Taxation Compliance is a crucial service that helps companies meet their financial reporting obligations and maintain compliance with </p>
+                            <p>Accounting & Taxation Compliance is a crucial service that helps companies meet their financial reporting obligations and maintain compliance with </p>
                             <button type="button" class="btn btn-outline-primary" style="margin-top: 80px;">Explore Service</button>
                         </div>
                     </div>
                     <div class="card text-center mt-20 form-page-text">
                         <div class="text-center"><img src="<?= Yii::$app->homeUrl ?>image/accounting.png" class="card-img-top"></div>
                         <div class="card-body">
-                            <h5 class="card-title"> Accounting &
+                            <h5> Accounting &
                                 TAX Advisory</h5>
-                            <p class="card-text">Accounting & Taxation Compliance is a crucial service that helps companies meet their financial reporting obligations and maintain compliance with tax laws. This service ensures accura</p>
+                            <p>Accounting & Taxation Compliance is a crucial service that helps companies meet their financial reporting obligations and maintain compliance with tax laws. This service ensures accura</p>
                             <button type="button" class="btn btn-outline-primary" style="margin-top: 80px;">Explore Service</button>
                         </div>
                     </div>
@@ -213,51 +213,56 @@ $this->title = 'services';
 <div class="col-12">
     <img src="<?= Yii::$app->homeUrl ?>image/boat-1.png" class="image-boat-2">
 </div>
-<div class="col-12 pr12 main-page">
+<div class="col-12 pr12">
     <div class="row">
-        <div class="col-lg-5 col-md-6 col-12">
+        <div class="col-lg-5 col-md-6 col-12 main-page">
             <div class="col-12  text-the-best">
                 <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img5 mr-1"> THE BEST OF TCF
             </div>
-            <div class="col-12 mt-30 page-1">
+            <div class="col-12 mt-20  page-1">
                 <img src="<?= Yii::$app->homeUrl ?>image/account.png" class="image-account"> Speed & Quality
             </div>
             <div class="col-12 select-project">
                 Accuracy in work is of the utmost importance in any profession. Whether it is a simple task or a complex project, making sure that everything is done correctly is essential for success. This means paying attention to detail.
             </div>
-            <div class="col-12 page-1">
+            <div class="col-12  page-1">
                 <img src="<?= Yii::$app->homeUrl ?>image/account-1.png" class="image-account">Composite Consulting Services
             </div>
-            <div class="col-12 select-project">
+            <div class="col-12   select-project">
                 a comprehensive consulting firm that offers a range of services related to human resources, accounting, tax, and VAT. This is a valuable asset for businesses that are looking for comprehensive support in these areas, as they can receive all of their consulting needs from one reliable source.
             </div>
-            <div class="col-12 page-1">
+            <div class="col-12  page-1">
                 <img src="<?= Yii::$app->homeUrl ?>image/account-2.png" class="image-account">Independent Business Consultant
             </div>
-            <div class="col-12 select-project">
+            <div class="col-12   select-project">
                 a comprehensive consulting firm that offers a range of services related to human resources, accounting, tax, and VAT. This is a valuable asset for businesses that are looking for comprehensive support in these areas, as they can receive all of their consulting needs from one reliable source.
             </div>
+            <div class="col-12  mt-50">
+                <div class="card form-card">
+                    Download the TCG e-Book and learn more about us <a href="#" class="btn btn-primary button-card">Download <i class="fa fa-download" aria-hidden="true"></i></a>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-5 col-md-6 col-12">
-            <div class="col-12 form-large">
+        <div class="col-lg-5 col-md-6 col-12 form-large">
+            <div class="col-12 text-form-most">
                 It is always the most vital time to provide the entire picture of company and remind the mission in society. We believe that the purpose of business is ultimately the same all over the world. Let’s grow together.
             </div>
-            <div class="col-12 page-1">
+            <div class="col-12 mt-30 page-2">
                 <img src="<?= Yii::$app->homeUrl ?>image/account-3.png" class="image-account">Development Partner
             </div>
-            <div class="col-12 select-project">
+            <div class="col-12 select-project-1">
                 to being a development partner for its clients, rather than just a service provider. This means that we take a long-term, holistic approach to consulting and work closely with our clients to support their growth and development
             </div>
-            <div class="col-12 page-1">
+            <div class="col-12 page-2">
                 <img src="<?= Yii::$app->homeUrl ?>image/account-4.png" class="image-account">Secured & Trusted
             </div>
-            <div class="col-12 select-project">
+            <div class="col-12 select-project-1">
                 our clients can feel confident that their data and projects are being handled with the utmost care and confidentiality. We have implemented strict security protocols and safeguards to protect our clients' data, and we are committed to maintaining the highest standards of professionalism.
             </div>
-            <div class="col-12 page-1">
+            <div class="col-12 page-2">
                 <img src="<?= Yii::$app->homeUrl ?>image/account-5.png" class="image-account">Commitment of Deadline
             </div>
-            <div class="col-12 select-project">
+            <div class="col-12 select-project-1">
                 our clients can feel confident that their data and projects are being handled with the utmost care and confidentiality. We have implemented strict security protocols and safeguards to protect our clients' data, and we are committed to maintaining the highest standards of professionalism.
             </div>
         </div>
@@ -266,7 +271,7 @@ $this->title = 'services';
 
 
 
-<div class="col-12 pb-50" style="margin-top: 90px;">
+<div class="col-12 pb-50" style="margin-top: 130px;">
     <div class="col-12 connect-experts mt-40 pl-40">
         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> Connect Experts
     </div>

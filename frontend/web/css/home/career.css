@@ -3,13 +3,12 @@
 }
 
 .text-shape {
-    position: absolute;
     font-family: 'Klavika';
     font-weight: 700;
+    margin-top: -400px;
+    padding-left: 40px;
     font-size: 50px;
     line-height: 60px;
-    top: 300px;
-    left: 40px;
     color: #0A3C83;
 
 }
@@ -31,39 +30,42 @@
 
 .image-code {
     margin-top: 50px;
-    width: 60%;
-    height: 90%;
+    width: 100%
+}
+
+.image-philosophy {
+    margin-top: 50px;
+    width: 100%;
 }
 
 .text-future {
     padding-left: 40px;
-    /* font-family: 'klavika'; */
     line-height: 25px;
     font-weight: 800;
     font-size: 24px;
+    margin-top: 350px;
     line-height: 26px;
-    /* identical to box height, or 108% */
     letter-spacing: -0.48px;
     text-transform: uppercase;
     color: #000000;
 }
 
 .card-title1 {
-    margin-top: -400px;
-    margin-left: 690px;
-    width: 26rem;
+    margin-top: 100px;
+    margin-left: -100px;
+    width: 22rem;
 }
 
 .card-title2 {
-    margin-top: -400px;
-    margin-left: 400px;
-    width: 25rem;
+    margin-top: 80px;
+    margin-left: 250px;
+    width: 22rem;
 }
 
 .card-title-home {
     font-family: 'Klavika';
     font-weight: 300;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 48px;
     color: #000000;
 }
@@ -71,7 +73,7 @@
 .card-title-page {
     font-family: 'Klavika';
     font-weight: 300;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 48px;
     color: #000000;
 }
@@ -79,7 +81,7 @@
 .title1 {
     font-family: 'Klavika';
     font-weight: 700;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 24px;
     color: #000000;
 
@@ -89,7 +91,7 @@
     font-family: 'Klavika';
     font-weight: 300;
     font-size: 15px;
-    line-height: 35px;
+    line-height: 25px;
     color: #000000;
 
 }
@@ -105,15 +107,16 @@
 .title4 {
     font-family: 'Klavika';
     font-weight: 500;
-    font-size: 20px;
-    line-height: 35px;
+    font-size: 15px;
+    line-height: 25px;
 }
 
 .title5 {
     font-family: 'Klavika';
-    font-weight: 100;
+    font-weight: 300;
     font-size: 15px;
-    line-height: 35px;
+    line-height: 25px;
+    color: #000000;
 }
 
 .title6 {
@@ -314,6 +317,11 @@
     padding-left: 10px;
 }
 
+.image-Vector3,
+.image-Vector2 {
+    width: 20px;
+}
+
 @media(max-width: 992px) {
     .text-shape {
         font-size: 40px;
@@ -322,16 +330,9 @@
 
     }
 
-    .card-title1 {
-        margin-top: -250px;
-        margin-left: 350px;
-        width: 300px;
 
-    }
 
-    .card-title2 {
-        width: 300px;
-    }
+
 
     .card-title-home {
         font-size: 16px;
@@ -353,10 +354,7 @@
         line-height: 1px;
     }
 
-    .card-title2 {
-        margin-top: -250px;
-        margin-left: 120px;
-    }
+
 
     .card-title-page {
         font-size: 16px;
@@ -442,89 +440,38 @@
 
 
 @media(max-width: 768px) {
-    .text-shape {
-        font-size: 35px;
-        margin-top: -110px;
-        line-height: 35px;
-
-
-    }
-
     .image-job-postd {
         margin-top: 90px;
     }
 
+    .text-shape {
+        margin-top: -150px;
+        font-size: 29px;
+        line-height: 35px;
+    }
+
+    .text-future {
+        margin-top: 90px;
+    }
+
     .card-title1 {
-        width: 13rem;
-        margin-left: 100px;
-        margin-top: -200px;
-        margin-left: 250px;
-
+        margin-top: 50px;
     }
 
-    .button-apply {
+    .image-BG-4 {
+        margin-top: -10px;
+        width: 100px;
+    }
+
+    .title-txt1 {
         font-size: 14px;
+        line-height: 20px;
     }
 
-    .card-title-home {
-        font-size: 15px;
-        line-height: 14px;
-    }
-
-    .title1 {
-        font-size: 12px;
-        line-height: 10px;
-    }
-
-    .title2 {
-        font-size: 10px;
-        line-height: 14px;
-    }
-
-    .title3 {
-        font-size: 10px;
-        line-height: 12px;
-    }
-
-    .image-code {
-        width: 60%;
-    }
-
-    .card-title-page {
-        font-size: 15px;
-        line-height: 14px;
-    }
-
-    .title4 {
-        font-size: 12px;
-        line-height: 10px;
-    }
-
-    .title5 {
-        font-size: 9px;
-        line-height: 10px;
-
-    }
-
-    .title6 {
-        font-size: 10px;
-        line-height: 1px;
-        margin-top: -20px;
-    }
-
-    .card-title2 {
-        width: 13rem;
-        margin-left: -100px;
-        margin-top: -200px;
-        margin-left: -150px;
-
-    }
-
-    .title-txt1,
     .title-txt2 {
         font-size: 14px;
         line-height: 20px;
-        width: 25rem;
+        width: 24rem;
     }
 
     .name-explore {
@@ -532,14 +479,9 @@
         width: 25rem;
     }
 
-    .button-BG {
-        margin-top: -20px;
-        width: 200px;
-    }
-
     .image-TCF-GROUP {
-        margin-top: 20px;
-        width: 390px;
+        margin-top: 40px;
+        width: 350px;
     }
 
     .from-input-search {

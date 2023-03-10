@@ -4,6 +4,7 @@
 
 .image-Linkedin-Cover {
     width: 100%;
+    margin-top: 80px;
 }
 
 
@@ -124,6 +125,7 @@
     width: 18rem;
 }
 
+
 .image-Group-6 {
     width: 100%;
 }
@@ -143,7 +145,6 @@
     font-size: 24px;
     line-height: 26px;
     margin-top: 30px;
-    /* color: #0F2137; */
 }
 
 .form-services-page {
@@ -158,7 +159,7 @@
     font-family: 'Klavika';
     font-style: normal;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 19px;
     color: #0D0D0D;
 }
@@ -175,131 +176,204 @@
     font-weight: 100;
 }
 
-.text-the-best {
-    font-size: 24px;
-    font-family: 'klavika';
-    color: white;
-    font-weight: 700;
-}
-
 .select-project {
     width: 350px;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 10px;
+    margin-top: 30px;
+    line-height: 10px;
+    font-weight: 100;
+}
+
+.select-project-1 {
+    width: 350px;
+    font-size: 10px;
+    margin-top: 30px;
+    line-height: 10px;
     font-weight: 100;
 }
 
 .main-page {
-    margin-top: -800px;
+    margin-top: -700px;
     color: white;
-    padding-left: 40px;
     font-family: 'klavika';
-    font-weight: 100;
-    line-height: 20px;
-    font-size: 13px;
+    padding-left: 40px;
+}
+
+.text-the-best {
+    font-size: 24px;
+    font-weight: 700;
+
 }
 
 .form-large {
+    margin-top: -800px;
+    color: white;
+    font-family: 'klavika';
+    padding-left: 40px;
+
+}
+
+.text-form-most {
+    font-size: 12px;
     font-weight: 100;
-    line-height: 15px;
-    font-size: 13px;
-
-
 }
 
 .page-1 {
     font-size: 19px;
     font-family: 'klavika';
     font-weight: 700;
+    margin-top: 20px;
+}
 
+.page-2 {
+    font-size: 19px;
+    font-family: 'klavika';
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.form-card {
+    background: #005BA0;
+    border-radius: 5px;
+    width: 490px;
+    height: 50px;
+    padding-top: 10px;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.button-card {
+    margin-left: 340px;
+    width: 90px;
+    height: 50;
+    font-size: 12px;
+    margin-top: -25px;
 }
 
 
 @media(max-width: 992px) {
-    .text-the-best {
-        margin-top: -550px;
-    }
-
-    .data-1 {
-        margin-top: -480px;
-    }
-
-    .page-2 {
-        font-size: 10px;
-        line-height: 12px;
-        margin-top: 15px;
-    }
-
-    .image-account {
-        width: 60px;
-    }
-
-    .page-3 {
-        font-size: 11px;
-        line-height: 13px;
-        width: 350px;
-    }
-
-    .page-4 {
-        padding-left: 100px;
-    }
-
-    .link-download {
-        font-size: 14px;
-        padding-left: 30px;
-        padding-top: 10px;
-        width: 460px;
-        height: 49px;
-        margin-top: 20px;
-    }
-}
-
-@media(max-width: 768px) {
-    .image-Linkedin-Cover {
-        margin-top: 10px;
-        width: 100%;
-    }
-
-    .background-home {
-        padding-left: 10px;
-    }
-
-    .page-two {
-        padding-left: 30px;
-    }
-
-    .page-tree {
-        padding-left: 30px;
-    }
-
-    .select-box {
-        padding-left: 80px;
-    }
-
-    .image-account {
-        width: 25px;
-    }
-
     .main-page {
-        margin-top: 250px;
-    }
-
-    .text-the-best {
-        font-size: 13px;
-    }
-
-    .page-1 {
-        font-size: 12px;
-    }
-
-    .select-project {
-        font-size: 8px;
-        line-height: 8px;
-        width: 220px;
+        margin-top: -450px;
     }
 
     .form-large {
-        margin-top: -550px;
+        margin-top: -460px;
 
     }
+
+    .text-form-most {
+        font-size: 10px;
+        line-height: 10px;
+    }
+
+    .select-project {
+        font-size: 10px;
+        line-height: 10px;
+        width: 290px;
+
+    }
+
+    .image-account {
+        width: 50px;
+    }
+
+    .text-the-best {
+        padding-left: 0px;
+    }
+
+    .text-form-most {
+        font-size: 8px;
+        line-height: 10px;
+        margin-top: 20px;
+
+    }
+
+    .select-project-1 {
+        font-size: 8px;
+        line-height: 10px;
+        width: 290px;
+
+    }
+
+    .form-card {
+        margin-top: -30px;
+    }
+
+}
+
+
+@media(max-width: 768px) {
+
+    .main-page {
+        margin-top: -250px;
+    }
+
+    .text-the-best {
+        font-size: 10px;
+    }
+
+    .image-account {
+        width: 20px;
+    }
+
+    .page-1 {
+        font-size: 9px;
+    }
+
+    .select-project {
+        font-size: 5px;
+        line-height: 5px;
+        width: 140px;
+    }
+
+    .form-large {
+        margin-top: -260px;
+        margin-left: 190px;
+    }
+
+    .text-form-most {
+        font-size: 7px;
+        width: 210px;
+        line-height: 8px;
+        margin-top: 10px;
+    }
+
+    .page-2 {
+        font-size: 9px;
+    }
+
+    .select-project-1 {
+        font-size: 5px;
+        line-height: 5px;
+        width: 140px;
+    }
+
+    .button-card {
+        font-size: 10px;
+        margin-top: -10px;
+
+    }
+
+    .form-card {
+
+        width: 350px;
+        height: 40px;
+        padding-top: 10px;
+        font-weight: 100;
+        font-size: 10px;
+    }
+
+    .button-card {
+        margin-left: 210px;
+        width: 90px;
+        height: 50;
+        font-size: 11px;
+        margin-top: -20px;
+    }
+
+    .form-select-one {
+        font-size: 20px;
+
+    }
+
 }

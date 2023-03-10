@@ -64,38 +64,70 @@ $this->title = 'People';
     <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> OUR WORK CULTURE
 </div>
 
-<div class="col-12 text-start">
-    <img src="<?= Yii::$app->homeUrl ?>image/Code.png" class="image-code">
-</div>
 
-<div class="card card-title1">
-    <div class="card-body">
-        <h5 class="card-title-home">Code of Capable Person</h5>
-        <p class="title1">Integrity. Quality. Professionalism.</p>
-        <p class="title2"> Our Shared Values, Global Principles of Business Conduct,
-            and Responsible Business Principles are the foundation
-            of our culture, shaping who we are, what we believe and how we behave. </p>
-        <div class="card-body title3">
-            <a href="#" class="card-link">Learn More</a>
+<div class="col-12 pr12">
+    <div class="row">
+        <div class="col-7">
+            <img src="<?= Yii::$app->homeUrl ?>image/Code.png" class="image-code">
+        </div>
+        <div class="col-5">
+            <div class="card card-title1">
+                <div class="col-12">
+                    <div class="card-body">
+                        <div class="col-12">
+                            <h5 class="card-title-home">Code of Capable Person</h5>
+                        </div>
+                        <div class="col-12">
+                            <p class="title1">Integrity. Quality. Professionalism.</p>
+                        </div>
+                        <div class="col-12">
+                            <p class="title2"> Our Shared Values, Global Principles of Business Conduct,
+                                and Responsible Business Principles are the foundation
+                                of our culture, shaping who we are, what we believe and how we behave. </p>
+                        </div>
+                        <div class="col-12">
+                            <div class="title3">
+                                <a href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 
-<div class="col-12 text-end mt-30">
-    <img src="<?= Yii::$app->homeUrl ?>image/Untitled.png" class="image-code">
-</div>
-
-<div class="card card-title2">
-    <div class="card-body">
-        <h5 class="card-title-page">27 Doctrines of Work</h5>
-        <p class="title4">Integrity. Quality. Professionalism.</p>
-        <p class="title5"> Our Shared Values, Global Principles of Business Conduct,
-            and Responsible Business Principles are the foundation
-            of our culture, shaping who we are, what we believe and how we behave. </p>
-        <div class="card-body title6">
-            <a href="#" class="card-link">Learn More</a>
+<div class="col-12 pr12">
+    <div class="row">
+        <div class="col-5">
+            <div class="card card-title2">
+                <div class="card-body">
+                    <div class="col-12">
+                        <h5 class="card-title-page">27 Doctrines of Work</h5>
+                    </div>
+                    <div class="col-12">
+                        <p class="title4">Integrity. Quality. Professionalism.</p>
+                    </div>
+                    <div class="col-12">
+                        <p class="title5"> Our Shared Values, Global Principles of Business Conduct,
+                            and Responsible Business Principles are the foundation
+                            of our culture, shaping who we are, what we believe and how we behave. </p>
+                    </div>
+                    <div class="col-12">
+                        <div class="title6">
+                            <a href="#">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-7">
+            <img src="<?= Yii::$app->homeUrl ?>image/philosophy.png" class="image-philosophy">
         </div>
     </div>
 </div>
-<div class="col-12" style="margin-top: 20px;"></div>
+
+
+
+<div class="col-12" style="margin-top: 90px;"></div>

@@ -23,32 +23,37 @@ $this->title = 'Career';
 
 
 
-<div class="col-12  text-future" style="margin-top: 50px;">
+<div class="col-12  text-future">
     <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> The Future Awaits at Tokyo Consulting Group
 </div>
 
-<div class="col-12 text-start">
-    <img src="<?= Yii::$app->homeUrl ?>image/Code.png" class="image-code">
-</div>
 
-
-<div class="col-12">
-    <div class="card card-title1">
-        <div class="card-body">
-            <div class="col-12">
-                <h5 class="card-title-home">Code of Capable Person</h5>
-            </div>
-            <div class="col-12">
-                <p class="title1">Integrity. Quality. Professionalism.</p>
-            </div>
-            <div class="col-12">
-                <p class="title2"> Our Shared Values, Global Principles of Business Conduct,
-                    and Responsible Business Principles are the foundation
-                    of our culture, shaping who we are, what we believe and how we behave. </p>
-            </div>
-            <div class="col-12">
-                <div class="card-body title3">
-                    <a href="#" class="card-link">Learn More</a>
+<div class="col-12 pr12">
+    <div class="row">
+        <div class="col-7">
+            <img src="<?= Yii::$app->homeUrl ?>image/Code.png" class="image-code">
+        </div>
+        <div class="col-5">
+            <div class="card card-title1">
+                <div class="col-12">
+                    <div class="card-body">
+                        <div class="col-12">
+                            <h5 class="card-title-home">Code of Capable Person</h5>
+                        </div>
+                        <div class="col-12">
+                            <p class="title1">Integrity. Quality. Professionalism.</p>
+                        </div>
+                        <div class="col-12">
+                            <p class="title2"> Our Shared Values, Global Principles of Business Conduct,
+                                and Responsible Business Principles are the foundation
+                                of our culture, shaping who we are, what we believe and how we behave. </p>
+                        </div>
+                        <div class="col-12">
+                            <div class="title3">
+                                <a href="#">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -56,32 +61,36 @@ $this->title = 'Career';
 </div>
 
 
-<div class="col-12 mt-20 text-end">
-    <img src="<?= Yii::$app->homeUrl ?>image/Untitled.png" class="image-code">
-</div>
-
-<div class="col-12">
-    <div class="card card-title2">
-        <div class="card-body">
-            <div class="col-12">
-                <h5 class="card-title-page">27 Doctrines of Work</h5>
-            </div>
-            <div class="col-12">
-                <p class="title4">Integrity. Quality. Professionalism.</p>
-            </div>
-            <div class="col-12">
-                <p class="title5"> Our Shared Values, Global Principles of Business Conduct,
-                    and Responsible Business Principles are the foundation
-                    of our culture, shaping who we are, what we believe and how we behave. </p>
-            </div>
-            <div class="col-12">
-                <div class="card-body title6">
-                    <a href="#" class="card-link">Learn More</a>
+<div class="col-12 pr12">
+    <div class="row">
+        <div class="col-5">
+            <div class="card card-title2">
+                <div class="card-body">
+                    <div class="col-12">
+                        <h5 class="card-title-page">27 Doctrines of Work</h5>
+                    </div>
+                    <div class="col-12">
+                        <p class="title4">Integrity. Quality. Professionalism.</p>
+                    </div>
+                    <div class="col-12">
+                        <p class="title5"> Our Shared Values, Global Principles of Business Conduct,
+                            and Responsible Business Principles are the foundation
+                            of our culture, shaping who we are, what we believe and how we behave. </p>
+                    </div>
+                    <div class="col-12">
+                        <div class="title6">
+                            <a href="#">Learn More</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="col-7">
+            <img src="<?= Yii::$app->homeUrl ?>image/philosophy.png" class="image-philosophy">
+        </div>
     </div>
 </div>
+
 
 <div class="col-12 title-explore">
     <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Explore The Opportunities
@@ -172,11 +181,15 @@ $this->title = 'Career';
 
 <div class="col-12 pr12">
     <div class="row">
-        <div class="text-center">
-            <img src="<?= Yii::$app->homeUrl ?>image/Vector(3).png" class="image-Vector3"> <img src="<?= Yii::$app->homeUrl ?>image/TCF-Group.png" class="image-TCF-GROUP"> <img src="<?= Yii::$app->homeUrl ?>image/Vector(2).png" class="image-Vector2">
+        <div class="col-12">
+            <div class="text-center">
+                <img src="<?= Yii::$app->homeUrl ?>image/Vector(3).png" class="image-Vector3"> <img src="<?= Yii::$app->homeUrl ?>image/TCF-Group.png" class="image-TCF-GROUP"> <img src="<?= Yii::$app->homeUrl ?>image/Vector(2).png" class="image-Vector2">
+            </div>
         </div>
-        <div class="text-center">
-            <img src="<?= Yii::$app->homeUrl ?>image/BG-4.png" class="image-BG-4 button-BG">
+        <div class="col-12">
+            <div class="text-center">
+                <img src="<?= Yii::$app->homeUrl ?>image/BG-4.png" class="image-BG-4">
+            </div>
         </div>
     </div>
 </div>
@@ -238,7 +251,7 @@ $this->title = 'Career';
 <div class="col-12 pr12 mt-50 form-input">
     <div class="row">
         <div class="col-lg-5 col-md-6 col-12">
-            <input class="form-control form-control-lg from-input-search" type="text" placeholder="Search for jobs or keywords" aria-label="Search for jobs or keywords">
+            <!-- <input class="form-control form-control-lg from-input-search" type="text" placeholder="Search for jobs or keywords" aria-label="Search for jobs or keywords"> -->
             <div class="col-12">
                 <div class="row">
                     <div class="col-4">
@@ -287,31 +300,29 @@ $this->title = 'Career';
 </div>
 
 
-<div class="col-12 pr12 form-card">
+<!-- <div class="col-12 pr12 form-card">
     <div class="row">
         <div class="col-md-3">
-            <div class="card card-name">
-                <div class="row">
-                    <div class="col-4 cb-1">
-                        <span class="badge-1 badge-info text-dark"> Accounts & Taxation</span>
+            <div class="row">
+                <div class="col-4 cb-1">
+                    <span class="badge-1 badge-info text-dark"> Accounts & Taxation</span>
+                </div>
+                <div class="col-6 cb-2">
+                    Deadline 1st June 2023
+                </div>
+                <p class="cb-3">Consultant</p>
+                <p class="cb-4">Accounts & Taxation</p>
+                <p class="cb-7"><img src="<?= Yii::$app->homeUrl ?>image/check-in.png" class="image-check-in"> Banani, Dhaka</p> <br>
+                <p class="cb-5">Assessing HR needs: Conducting assessments of the
+                    HR function to identify areas for improvement, and
+                    making recommendations for enhancing processes,
+                    policies and procedures.</p>
+                <div class="row cb-6">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-info button-detail">See Details</button>
                     </div>
-                    <div class="col-6 cb-2">
-                        Deadline 1st June 2023
-                    </div>
-                    <p class="cb-3">Consultant</p>
-                    <p class="cb-4">Accounts & Taxation</p>
-                    <p class="cb-7"><img src="<?= Yii::$app->homeUrl ?>image/check-in.png" class="image-check-in"> Banani, Dhaka</p> <br>
-                    <p class="cb-5">Assessing HR needs: Conducting assessments of the
-                        HR function to identify areas for improvement, and
-                        making recommendations for enhancing processes,
-                        policies and procedures.</p>
-                    <div class="row cb-6">
-                        <div class="col-6">
-                            <button type="button" class="btn btn-info button-detail">See Details</button>
-                        </div>
-                        <div class="col-6">
-                            <button type="button" class="btn btn-primary button-apply-detail">Apply</button>
-                        </div>
+                    <div class="col-6">
+                        <button type="button" class="btn btn-primary button-apply-detail">Apply</button>
                     </div>
                 </div>
             </div>
@@ -400,7 +411,7 @@ $this->title = 'Career';
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
 

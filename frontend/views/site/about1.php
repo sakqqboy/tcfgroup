@@ -11,7 +11,7 @@ $this->title = 'About Us';
     <img src="<?= Yii::$app->homeUrl ?>image/Vision-page.png" class="image-Vision-page">
 </div>
 
-<div class="col-12 box-all">
+<div class="col-12 title-all">
     <div class="col-12 text-Our">
         Our
     </div>
@@ -20,16 +20,17 @@ $this->title = 'About Us';
     </div>
     <div class="col-12 vlog-1">
         Now that the average age of tax accountants is over 60 and the industry has completely matured (or declined), what kind of vision should we have and how should we change the industry? Before thinking about this, I think that there are things that companies must not change and things that must be changed. I would like to think first so as not to confuse the two.
-        <p class="title-color">YASUNARI KUNO, CEO</p>
+    </div>
+    <div class="col-12 title-color">
+        <p>YASUNARI KUNO, CEO</p>
     </div>
 </div>
 
-<div class="col-12">
-    <img src="<?= Yii::$app->homeUrl ?>image/bali.png" class="image-bali">
-</div>
-
 
 <div class="col-12">
+    <div class="col-12">
+        <img src="<?= Yii::$app->homeUrl ?>image/bali.png" class="image-bali">
+    </div>
     <div class="col-12 box-data-1">
         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Reason for Existence, Philosophy
     </div>
@@ -42,7 +43,8 @@ $this->title = 'About Us';
 </div>
 
 
-<div class="col-12 mt-20">
+
+<div class="col-12">
     <div class="col-12">
         <img src="<?= Yii::$app->homeUrl ?>image/yogendra-singh.png" class="image-yogendra-singh">
     </div>
@@ -57,7 +59,7 @@ $this->title = 'About Us';
 </div>
 
 <div class="col-12">
-    <div class="col-12">
+    <div class="col-12" style="margin-top: 70px;">
         <img src="<?= Yii::$app->homeUrl ?>image/whale2.png" class="image-whale">
     </div>
     <div class="col-12 Type-home-page-one">

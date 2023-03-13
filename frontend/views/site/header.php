@@ -1,11 +1,13 @@
  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
      <div class="container">
-         <a href="<?= Yii::$app->homeUrl ?>site/#home" class="nav-link"><img src="<?= Yii::$app->homeUrl ?>image/tcg-group.png" class="image-tokyo" style="width: 200px;"></a>
+         <a href="<?= Yii::$app->homeUrl ?>" class="nav-link"><img src="<?= Yii::$app->homeUrl ?>image/tcg-group.png" class="image-tokyo" style="width: 200px;"></a>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-             <span class="snavbar-toggler-icon"></span>
+             <span class="snavbar-toggler-icon">
+                 <i class="fa fa-bars" aria-hidden="true"></i>
+             </span>
          </button>
          <div class="collapse navbar-collapse mt-3" id="navbarScroll">
-             <ul class="navbar-nav me-auto  navbar-nav-scroll" style="--bs-scroll-height: 100px; margin: top 20px;padding-left: 140px;font-family:'klavika';font-size: 18px;">
+             <ul class="navbar-nav me-auto  navbar-nav-scroll" style="margin: top 40px;padding-left: 200px;font-family:'klavika';font-size: 18px;line-height:30px;">
                  <li class="nav-item">
                      <a href="<?= Yii::$app->homeUrl ?>site/philosophy" class="nav-link">Philosophy</a>
                  </li>
@@ -25,12 +27,6 @@
                      <a href="<?= Yii::$app->homeUrl ?>site/contact1" class="nav-link">Contact Us</a>
                  </li>
              </ul>
-             <form class="d-flex">
-                 <button class="btn" type="submit"><i class="fa fa-globe" href="#"></i></button>
-                 <button class="btn" type="submit"><i class="fa fa-search" href="#"></i></button>
-                 <button class="btn" type="submit"><i class="fa fa-user" href="#"></i></button>
-                 <button class="btn" type="submit"><i class="fa fa-bars" href="#"></i></button>
-             </form>
          </div>
      </div>
  </nav>

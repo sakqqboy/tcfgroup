@@ -41,7 +41,7 @@ $this->title = 'TCFGROUP';
                         <p><img src="<?= Yii::$app->homeUrl ?>image/combodia.png" class="img-country"> Combodia</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/china.png" class="img-country"> China</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/columbia.png" class="img-country"> Columbia</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/Dubai.png" class="img-country"> Dubai(UAE)</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/dubai.png" class="img-country"> Dubai(UAE)</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/hong kong.png" class="img-country"> Hong kong</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/india.png" class="img-country"> India</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/indonesia.png" class="img-country"> Indonesia</p>

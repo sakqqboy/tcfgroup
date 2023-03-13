@@ -1,24 +1,23 @@
 .image-Vision-page {
     width: 100%;
-
+    margin-top: 90px;
 }
 
 .text-Our {
-    font-size: 40px;
+    margin-top: -600px;
+    font-size: 60px;
     color: #8795C9;
     font-weight: 100;
     font-family: 'klavika';
     padding-left: 40px;
-    padding-top: 80px;
-
-
 }
 
 .text-vision {
-    font-size: 60px;
-    color: #8795C9;
+    font-size: 85px;
+    color: rgba(135, 149, 201, 0.5);
     font-family: 'klavika';
     padding-left: 40px;
+    margin-top: -30px;
 }
 
 .vlog-1 {
@@ -29,19 +28,19 @@
     padding-left: 40px;
 }
 
-.box-all {
-    margin-top: -590px;
-}
-
 .title-color {
     color: #8795C9;
     font-weight: 300;
+    padding-left: 300px;
+
 }
 
 .image-bali {
     width: 100%;
+    margin-top: 235px;
 
 }
+
 
 .box-data-1 {
     font-size: 24px;
@@ -67,6 +66,7 @@
 
 .image-yogendra-singh {
     width: 100%;
+    margin-top: 78px;
 
 }
 
@@ -77,6 +77,7 @@
     margin-top: -320px;
     font-family: 'klavika';
 }
+
 
 .Block-2 {
     font-family: 'klavika';
@@ -96,6 +97,7 @@
     width: 100%;
 
 }
+
 
 .Type-home-page-one {
     font-size: 24px;
@@ -132,6 +134,75 @@
     font-weight: 300;
 }
 
+@media(max-width: 992px) {
+    .image-Vision-page {
+        margin-top: 90px;
+
+    }
+
+    .text-Our {
+        margin-top: -320px;
+        font-size: 32px;
+    }
+
+    .text-vision {
+        margin-top: -15px;
+        font-size: 45px;
+    }
+
+    .vlog-1 {
+        line-height: 15px;
+        font-size: 12px;
+        width: 350px;
+        margin-top: 9px;
+    }
+
+    .title-color {
+        font-size: 10px;
+    }
+
+    .image-bali {
+        margin-top: 85px;
+    }
+
+    .box-data-1 {
+        margin-top: -210px;
+
+    }
+
+    .box-data-3 {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .image-yogendra-singh {
+        margin-top: 40px;
+    }
+
+    .Block-1 {
+        margin-top: -210px;
+    }
+
+    .Block-3 {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .image-whale {
+        margin-top: -15px;
+    }
+
+    .Type-home-page-one {
+        margin-top: -210px;
+    }
+
+    .Type-home-page-two {
+        font-size: 11px;
+        line-height: 12px;
+        padding-top: 10px;
+    }
+
+}
 
 @media(max-width: 768px) {
     .image-Vision-page {
@@ -139,7 +210,7 @@
     }
 
     .text-Our {
-        margin-top: 350px;
+        margin-top: -155px;
         font-size: 20px;
     }
 
@@ -156,12 +227,14 @@
     }
 
     .title-color {
-        margin-left: 220px;
-        padding-top: 20px;
+        margin-left: -60px;
+        padding-top: 10px;
+        font-size: 9px;
+
     }
 
     .box-data-1 {
-        margin-top: -170px;
+        margin-top: -125px;
         font-size: 13px;
     }
 
@@ -171,13 +244,14 @@
     }
 
     .image-bali {
-        margin-top: -20px;
+        margin-top: -15px;
     }
 
     .box-data-3 {
         font-size: 8px;
         padding-top: 16px;
         width: 400px;
+        line-height: 10px;
     }
 
     .Block-1 {
@@ -191,7 +265,7 @@
     }
 
     .image-yogendra-singh {
-        margin-top: -22px;
+        margin-top: 10px;
     }
 
     .Block-3 {
@@ -226,39 +300,8 @@
         padding-left: 40px;
     }
 
+    .image-whale {
+        margin-top: -45px;
+    }
+
 }
-
-/* 
-@media(max-width: 992px) {
-    .image-Vision-page {
-        margin-top: 100px;
-
-    }
-
-    .box-data-1 {
-        margin-top: -250px;
-
-    }
-
-    .box-data-3 {
-        font-size: 14px;
-    }
-
-    .Block-1 {
-        margin-top: -250px;
-    }
-
-    .Block-3 {
-        font-size: 14px;
-    }
-
-    .Type-home-page-one {
-        margin-top: -250px;
-    }
-
-    .Type-home-page-two {
-        font-size: 12px;
-        line-height: 15px;
-        padding-top: 10px;
-    }
-} */

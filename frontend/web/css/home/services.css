@@ -178,22 +178,22 @@
 
 .select-project {
     width: 350px;
-    font-size: 10px;
+    font-size: 14px;
     margin-top: 30px;
-    line-height: 10px;
+    line-height: 20px;
     font-weight: 100;
 }
 
 .select-project-1 {
     width: 350px;
-    font-size: 10px;
+    font-size: 14px;
     margin-top: 30px;
-    line-height: 10px;
+    line-height: 20px;
     font-weight: 100;
 }
 
 .main-page {
-    margin-top: -700px;
+    margin-top: -790px;
     color: white;
     font-family: 'klavika';
     padding-left: 40px;
@@ -203,6 +203,10 @@
     font-size: 24px;
     font-weight: 700;
 
+}
+
+.text-all {
+    margin-top: -50px;
 }
 
 .form-large {
@@ -257,20 +261,31 @@
     }
 
     .form-large {
-        margin-top: -460px;
+        margin-top: -480px;
 
     }
 
     .text-form-most {
         font-size: 10px;
-        line-height: 10px;
+        margin-top: 20px;
+    }
+
+    .page-1 {
+        margin-top: 10px;
+        font-size: 12px;
     }
 
     .select-project {
-        font-size: 10px;
+        font-size: 9px;
         line-height: 10px;
         width: 290px;
+        margin-top: 10px;
 
+    }
+
+    .page-2 {
+        margin-top: 10px;
+        font-size: 12px;
     }
 
     .image-account {
@@ -278,7 +293,8 @@
     }
 
     .text-the-best {
-        padding-left: 0px;
+        margin-top: -25px;
+
     }
 
     .text-form-most {
@@ -292,6 +308,7 @@
         font-size: 8px;
         line-height: 10px;
         width: 290px;
+        margin-top: 10px;
 
     }
 
@@ -310,6 +327,7 @@
 
     .text-the-best {
         font-size: 10px;
+        margin-top: -40px;
     }
 
     .image-account {
@@ -317,6 +335,7 @@
     }
 
     .page-1 {
+        margin-top: 10px;
         font-size: 9px;
     }
 
@@ -324,6 +343,7 @@
         font-size: 5px;
         line-height: 5px;
         width: 140px;
+        margin-top: 10px;
     }
 
     .form-large {
@@ -335,17 +355,19 @@
         font-size: 7px;
         width: 210px;
         line-height: 8px;
-        margin-top: 10px;
+        margin-top: -30px;
     }
 
     .page-2 {
         font-size: 9px;
+        margin-top: 10px;
     }
 
     .select-project-1 {
         font-size: 5px;
         line-height: 5px;
         width: 140px;
+        margin-top: 10px;
     }
 
     .button-card {

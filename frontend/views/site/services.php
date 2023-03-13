@@ -213,13 +213,13 @@ $this->title = 'services';
 <div class="col-12">
     <img src="<?= Yii::$app->homeUrl ?>image/boat-1.png" class="image-boat-2">
 </div>
-<div class="col-12 pr12">
+<div class="col-12 pr12 text-all">
     <div class="row">
         <div class="col-lg-5 col-md-6 col-12 main-page">
             <div class="col-12  text-the-best">
                 <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img5 mr-1"> THE BEST OF TCF
             </div>
-            <div class="col-12 mt-20  page-1">
+            <div class="col-12  page-1">
                 <img src="<?= Yii::$app->homeUrl ?>image/account.png" class="image-account"> Speed & Quality
             </div>
             <div class="col-12 select-project">
@@ -247,7 +247,7 @@ $this->title = 'services';
             <div class="col-12 text-form-most">
                 It is always the most vital time to provide the entire picture of company and remind the mission in society. We believe that the purpose of business is ultimately the same all over the world. Let’s grow together.
             </div>
-            <div class="col-12 mt-30 page-2">
+            <div class="col-12  page-2">
                 <img src="<?= Yii::$app->homeUrl ?>image/account-3.png" class="image-account">Development Partner
             </div>
             <div class="col-12 select-project-1">

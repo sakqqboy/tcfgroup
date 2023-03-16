@@ -24,7 +24,7 @@ $this->title = 'Philosophy';
 
 <div class="col-12 pr12 blackground-page-people">
     <div class="col-12 picture-text">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> Management Philosophy (The Meaning of Our Work)
+        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Management Philosophy (The Meaning of Our Work)
     </div>
     <div class="col-12 picture-icon">
         <div class="row">

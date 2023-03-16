@@ -4,8 +4,9 @@
 }
 
 .text-Our {
-    margin-top: -600px;
-    font-size: 60px;
+    position: absolute;
+    margin-top: -580px;
+    font-size: 40px;
     color: #8795C9;
     font-weight: 100;
     font-family: 'klavika';
@@ -13,36 +14,43 @@
 }
 
 .text-vision {
-    font-size: 85px;
+    position: absolute;
+    font-size: 95px;
     color: rgba(135, 149, 201, 0.5);
     font-family: 'klavika';
     padding-left: 40px;
-    margin-top: -30px;
+    margin-top: -570px;
 }
 
 .vlog-1 {
+    position: absolute;
     font-size: 14px;
-    width: 500px;
+    width: 550px;
     font-weight: 100;
+    margin-top: -440px;
     font-family: 'klavika';
     padding-left: 40px;
+    color: #8795C9;
 }
 
 .title-color {
+    position: absolute;
     color: #8795C9;
-    font-weight: 300;
-    padding-left: 300px;
+    font-weight: 500;
+    padding-left: 390px;
+    margin-top: -330px;
+    font-size: 10px;
 
 }
 
 .image-bali {
     width: 100%;
-    margin-top: 235px;
 
 }
 
 
 .box-data-1 {
+    position: absolute;
     font-size: 24px;
     font-weight: 500;
     font-family: 'klavika';
@@ -51,46 +59,53 @@
 }
 
 .box-data-2 {
+    position: absolute;
     font-family: 'klavika';
     padding-left: 50px;
     font-weight: 100;
+    margin-top: -310px;
 }
 
 .box-data-3 {
+    position: absolute;
     width: 600px;
     font-family: 'klavika';
-    padding-left: 50px;
+    padding-left: 40px;
     font-weight: 100;
-    padding-top: 20px;
+    margin-top: -250px;
+
 }
 
 .image-yogendra-singh {
     width: 100%;
-    margin-top: 78px;
-
 }
 
 .Block-1 {
+    position: absolute;
     font-size: 24px;
     padding-left: 40px;
     font-weight: 500;
-    margin-top: -320px;
+    margin-top: -350px;
     font-family: 'klavika';
 }
 
 
 .Block-2 {
+    position: absolute;
     font-family: 'klavika';
     padding-left: 50px;
     font-weight: 100;
+    margin-top: -310px;
+
 }
 
 .Block-3 {
+    position: absolute;
     width: 600px;
     font-family: 'klavika';
-    padding-left: 50px;
+    padding-left: 40px;
     font-weight: 100;
-    padding-top: 20px;
+    margin-top: -252px;
 }
 
 .image-whale {
@@ -100,25 +115,28 @@
 
 
 .Type-home-page-one {
+    position: absolute;
     font-size: 24px;
     font-family: 'klavika';
     font-weight: 500;
-    margin-top: -340px;
+    margin-top: -350px;
     padding-left: 40px;
     color: white;
 }
 
 .Type-home-page-two {
+    position: absolute;
     width: 800px;
     color: white;
     font-weight: 100;
-    font-size: 14px;
+    font-size: 13px;
     padding-left: 40px;
+    margin-top: -290px;
     font-family: 'klavika';
 }
 
 .padding-box {
-    margin-top: 60px;
+    margin-top: 70px;
     padding-left: 40px;
     font-size: 24px;
     font-family: 'klavika';
@@ -127,7 +145,7 @@
 
 .padding-text {
     text-align: center;
-    padding-top: 120px;
+    padding-top: 60px;
     padding-left: 200px;
     font-size: 26px;
     font-family: 'klavika';
@@ -141,157 +159,156 @@
     }
 
     .text-Our {
-        margin-top: -320px;
+        margin-top: -300px;
         font-size: 32px;
     }
 
     .text-vision {
-        margin-top: -15px;
-        font-size: 45px;
+        margin-top: -280px;
+        font-size: 70px;
+
     }
 
     .vlog-1 {
-        line-height: 15px;
+        margin-top: -190px;
         font-size: 12px;
-        width: 350px;
-        margin-top: 9px;
+        width: 450px;
+        line-height: 13px;
     }
 
     .title-color {
-        font-size: 10px;
+        margin-top: -110px;
+        font-size: 9px;
+        padding-left: 290px;
+
     }
 
-    .image-bali {
-        margin-top: 85px;
-    }
 
     .box-data-1 {
-        margin-top: -210px;
+        margin-top: -190px;
 
+    }
+
+    .box-data-2 {
+        font-size: 13px;
+        margin-top: -160px;
     }
 
     .box-data-3 {
         font-size: 12px;
-        line-height: 15px;
-    }
-
-    .image-yogendra-singh {
-        margin-top: 40px;
+        line-height: 12px;
+        margin-top: -120px;
     }
 
     .Block-1 {
-        margin-top: -210px;
+        margin-top: -190px;
+    }
+
+    .Block-2 {
+        margin-top: -160px;
+        font-size: 14px;
+
     }
 
     .Block-3 {
         font-size: 12px;
         line-height: 15px;
+        margin-top: -120px;
     }
 
-    .image-whale {
-        margin-top: -15px;
-    }
+
 
     .Type-home-page-one {
-        margin-top: -210px;
+        margin-top: -180px;
     }
 
     .Type-home-page-two {
-        font-size: 11px;
-        line-height: 12px;
-        padding-top: 10px;
+        font-size: 10px;
+        line-height: 10px;
+        margin-top: -130px;
+        width: 700px;
     }
 
 }
 
 @media(max-width: 768px) {
-    .image-Vision-page {
-        margin-top: 90px;
-    }
-
     .text-Our {
-        margin-top: -155px;
+
+        margin-top: -180px;
         font-size: 20px;
     }
 
     .text-vision {
-        margin-top: -15px;
-        font-size: 30px;
+        margin-top: -165px;
+        font-size: 30px
     }
 
     .vlog-1 {
-        line-height: 10px;
-        font-size: 8px;
-        width: 350px;
-        margin-top: 9px;
+        margin-top: -120px;
+        font-size: 6px;
+        width: 240px;
+        line-height: 7px;
     }
 
     .title-color {
-        margin-left: -60px;
-        padding-top: 10px;
-        font-size: 9px;
+        margin-top: -80px;
+        font-size: 6px;
+        padding-left: 140px;
 
     }
 
     .box-data-1 {
-        margin-top: -125px;
-        font-size: 13px;
+        margin-top: -100px;
+        font-size: 11px;
     }
 
     .box-data-2 {
-        font-size: 11px;
-        margin-top: -8px;
-    }
-
-    .image-bali {
-        margin-top: -15px;
+        font-size: 8px;
+        margin-top: -85px;
     }
 
     .box-data-3 {
-        font-size: 8px;
-        padding-top: 16px;
-        width: 400px;
-        line-height: 10px;
+        font-size: 6px;
+        margin-top: -60px;
+        width: 300px;
+        line-height: 8px;
     }
+
 
     .Block-1 {
         font-size: 11px;
-        margin-top: -120px;
+        margin-top: -100px;
+
+
     }
+
 
     .Block-2 {
-        font-size: 11px;
-        margin-top: -10px;
+        font-size: 8px;
+        margin-top: -85px;
     }
 
-    .image-yogendra-singh {
-        margin-top: 10px;
-    }
+
 
     .Block-3 {
-        line-height: 10px;
-        font-size: 8px;
-        width: 400px;
-        margin-top: -10px;
+        line-height: 8px;
+        font-size: 6px;
+        width: 300px;
+        margin-top: -70px;
 
     }
 
     .Type-home-page-one {
-        margin-top: -120px;
-        font-size: 12px;
+        margin-top: -100px;
+        font-size: 11px;
     }
 
     .Type-home-page-two {
+        margin-top: -70px;
         font-size: 5px;
-        line-height: 8px;
+        line-height: 6px;
         width: 400px;
-    }
 
-    .padding-text {
-        font-size: 14px;
-        width: 350px;
-        padding-left: 50px;
-        margin-top: -90px;
     }
 
     .padding-box {
@@ -300,8 +317,12 @@
         padding-left: 40px;
     }
 
-    .image-whale {
-        margin-top: -45px;
+    .padding-text {
+        font-size: 14px;
+        width: 350px;
+        padding-left: 50px;
+        margin-top: -30px;
     }
+
 
 }

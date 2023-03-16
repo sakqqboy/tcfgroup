@@ -19,10 +19,46 @@ $this->title = 'contact';
     Applying for the position of <span class="txt-cousultant">Consultant, Accounts & Taxation</span>
 </div>
 
-<div class="col-8 form-range">
-
-
+<div class="col-12 pr12 form-range2">
+    <div class="row">
+        <div class="col-2">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1"></label>
+            </div>
+            <p class="form-font-small">My Information</p>
+        </div>
+        <div class="col-2">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1"></label>
+            </div>
+            <p class="form-font-small">My Experience</p>
+        </div>
+        <div class="col-2">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1"></label>
+            </div>
+            <p class="form-font-small">Application Question</p>
+        </div>
+        <div class="col-2">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1"></label>
+            </div>
+            <p class="form-font-small">Attechments</p>
+        </div>
+        <div class="col-2">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1"></label>
+            </div>
+            <p class="form-font-small">Review & Submit</p>
+        </div>
+    </div>
 </div>
+
 <div class="col-12 name-box-one">
     <div class="col-12 no-name-1">
         My Information
@@ -54,7 +90,7 @@ $this->title = 'contact';
 
 <div class="col-12 pr12 form-input-detail">
     <div class="row">
-        <div class="col-lg-6 col-md-6 ol-12">
+        <div class="col-6">
             <div class="mb-3">
                 <label for="exampleInput" class="form-label form-label-type">First Name (Fast Name & Last Name)<span class="moon">*</span></label>
                 <input type="text" class="form-control" id="exampleInput" aria-describedby="Help">
@@ -140,41 +176,34 @@ $this->title = 'contact';
     </div>
 </div>
 
+
 <div class="col-12 pr12 mt-50 form-text-footer">
     <div class="row">
-        <div class="col">
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="col-12 title-more">
-                    <p>More About us</p>
-                </div>
-                <div class="col-12 title-form-text">
-                    <p><a href="#" class="no-underline">About us </a></p>
-                    <p><a href="#" class="no-underline">Conotact us</a></p>
-                    <p><a href="#" class="no-underline">Work life at TCF</a></p>
-                    <p><a href="#" class="no-underline">Our Work Philosopy</a></p>
-                </div>
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-12 title-more">
+                <p>More About us</p>
+            </div>
+            <div class="col-12 title-form-text">
+                <p><a href="#" class="no-underline">About us </a></p>
+                <p><a href="#" class="no-underline">Conotact us</a></p>
+                <p><a href="#" class="no-underline">Work life at TCF</a></p>
+                <p><a href="#" class="no-underline">Our Work Philosopy</a></p>
             </div>
         </div>
-        <div class="col box-form-media">
-            <div class="col-lg-4  col-md-6 col-12">
-                <div class="col-12 from-text-media">
-                    “TCF Equal Opportunity Statement”
-                </div>
-                <div class="col-12 form-text-google">
-                    <p>Google is proud to be an equal opportunity workplace and is an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status. We also consider qualified applicants regardless of criminal histories, consistent with legal requirements. See also Google's EEO Policy and EEO is the Law. If you have a need that requires accommodation, please let us know by completing our Accommodations for Applicants form.</p>
-                </div>
+        <div class="col-lg-4 col-md-6 col-12 form-tcf">
+            <div class="col-12">
+                <span class="title-tcf">“TCF Equal Opportunity Statement”</span>
+                <p class="title-tcf1">Google is proud to be an equal opportunity workplace and is an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status. We also consider qualified applicants regardless of criminal histories, consistent with legal requirements. See also Google's EEO Policy and EEO is the Law. If you have a need that requires accommodation, please let us know by completing our Accommodations for Applicants form.</p>
             </div>
         </div>
-        <div class="col">
-            <div class="col-lg-6 col-md-6 col-12">
-                <div class="col-12 media-picture">
-                    Follow Career in
-                    <a href="#facebook"><img src="<?= Yii::$app->homeUrl ?>image/facebook.png"></a>
-                    <a href="#twitter"><img src="<?= Yii::$app->homeUrl ?>image/twitter.png"></a>
-                    <a href="#Instagram"><img src="<?= Yii::$app->homeUrl ?>image/Instagram.png"></a>
-                    <a href="#LinkedIn"><img src="<?= Yii::$app->homeUrl ?>image/LinkedIn.png"></a>
-                    <a href="#YouTube"><img src="<?= Yii::$app->homeUrl ?>image/YouTube.png"></a>
-                </div>
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-12 media-picture">
+                Follow Career in
+                <a href="#facebook"><img src="<?= Yii::$app->homeUrl ?>image/facebook.png"></a>
+                <a href="#twitter"><img src="<?= Yii::$app->homeUrl ?>image/twitter.png"></a>
+                <a href="#Instagram"><img src="<?= Yii::$app->homeUrl ?>image/Instagram.png"></a>
+                <a href="#LinkedIn"><img src="<?= Yii::$app->homeUrl ?>image/LinkedIn.png"></a>
+                <a href="#YouTube"><img src="<?= Yii::$app->homeUrl ?>image/YouTube.png"></a>
             </div>
         </div>
     </div>

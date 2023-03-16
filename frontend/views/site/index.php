@@ -25,7 +25,7 @@ $this->title = 'TCFGROUP';
 
 <div class="col-12 col-background">
     <div class="col-12 pt-20 Global-Business">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Global Business Environment
+        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Global Business Environment
     </div>
     <div class="col-12 text-TCG">
 
@@ -46,7 +46,7 @@ $this->title = 'TCFGROUP';
                         <p><img src="<?= Yii::$app->homeUrl ?>image/india.png" class="img-country"> India</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/indonesia.png" class="img-country"> Indonesia</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/kenya.png" class="img-country"> kenya</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/japan.png" class="img-country"> Japan</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/123.png" class="img-country"> Japan</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/laos.png" class="img-country"> Laos</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/malaysia.png" class="img-country"> Malaysia</p>
                     </div>
@@ -55,7 +55,7 @@ $this->title = 'TCFGROUP';
                         <p><img src="<?= Yii::$app->homeUrl ?>image/mongolia.png" class="img-country"> Mongolia</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/nigeria.png" class="img-country"> Nigeria</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/mayanmar.png" class="img-country"> Mayanmar</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/nigeria.png" class="img-country"> Nigeria</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/morocco.png" class="img-country"> Morocco</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/peru.png" class="img-country"> Peru</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/philippines.png" class="img-country"> Philippines</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/russia.png" class="img-country"> Russia</p>
@@ -81,7 +81,7 @@ $this->title = 'TCFGROUP';
     <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
             <div class="col-lg-12 text-establish">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Our Professional Services
+                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Our Professional Services
             </div>
             <div class="col-lg-12 Company">
                 <li>Establish Company</li> <br>
@@ -145,7 +145,7 @@ $this->title = 'TCFGROUP';
 <div class="col-12">
     <img src="<?= Yii::$app->homeUrl ?>image/Boat1.png" style="width: 100%;">
     <div class="offset-1 text2">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img5 mr-1"> Our Philosophy: Contributing to Society, Driving Growth
+        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Our Philosophy: Contributing to Society, Driving Growth
     </div>
     <div class="offset-1 text3">
         <img src="<?= Yii::$app->homeUrl ?>image/what-we.png" class="image-what-we-give">
@@ -166,9 +166,9 @@ $this->title = 'TCFGROUP';
 
 
 <div class="col-12">
-    <img src="<?= Yii::$app->homeUrl ?>image/Rectangle4239.png" class="image-Rectangle" style="width:100%">
+    <img src="<?= Yii::$app->homeUrl ?>image/Rectangle4239.png" style="width:100%">
     <div class="offset-1 text4">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png"> About Yasunari Kuno
+        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> About Yasunari Kuno
     </div>
     <div class="col-lg-8 col-md-6 col-12 text-Yasunari">
         <p>Yasunari Kuno is a seasoned business professional with over two decades of experience in the industry.
@@ -189,7 +189,7 @@ $this->title = 'TCFGROUP';
 
 <div class="col-12 pb-50">
     <div class="col-12 connect-experts mt-40 pl-40">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Connect Experts
+        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Connect Experts
     </div>
     <div class="col-12 Get-free mt-30 pl-40">
         Get Free Appointment on your Business Issuefa-spin
@@ -211,6 +211,28 @@ $this->title = 'TCFGROUP';
                             <option value="1">Brazil</option>
                             <option value="2">Combodia</option>
                             <option value="3">China</option>
+                            <option value="4">Columbia</option>
+                            <option value="5">Dubai(UAE)</option>
+                            <option value="6">Hong kong</option>
+                            <option value="7">India</option>
+                            <option value="8">Indonesia</option>
+                            <option value="9">kenya</option>
+                            <option value="10">Japan</option>
+                            <option value="11">Laos</option>
+                            <option value="12">Malaysia</option>
+                            <option value="13">Mexico</option>
+                            <option value="14">Mongolia</option>
+                            <option value="15">Nigeria</option>
+                            <option value="16">Mayanmar</option>
+                            <option value="17">Morocco</option>
+                            <option value="18">Peru</option>
+                            <option value="19">Philippines</option>
+                            <option value="20">Russia</option>
+                            <option value="21">South Afroca</option>
+                            <option value="22">Singapore</option>
+                            <option value="23">Sir Lanka</option>
+                            <option value="24">Thailad</option>
+                            <option value="25">Turkey</option>
                         </select>
                     </div>
                     <div class="col-12 ">

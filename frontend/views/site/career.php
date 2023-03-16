@@ -24,7 +24,7 @@ $this->title = 'Career';
 
 
 <div class="col-12  text-future">
-    <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> The Future Awaits at Tokyo Consulting Group
+    <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> The Future Awaits at Tokyo Consulting Group
 </div>
 
 
@@ -93,7 +93,7 @@ $this->title = 'Career';
 
 
 <div class="col-12 title-explore">
-    <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Explore The Opportunities
+    <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Explore The Opportunities
 </div>
 
 <div class="col-12 pr12">
@@ -137,9 +137,6 @@ $this->title = 'Career';
     </div>
 </div>
 
-
-
-
 <div class="col-12 pr12">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12 title-txt1">
@@ -154,14 +151,13 @@ $this->title = 'Career';
     </div>
 </div>
 
-
 <div class="col-12 pr12">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12">
             <div class="col-12 name-explore">
                 <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> EXPLORE THE CULTURE
             </div>
-            <div class="col-12  mt-20 box-name">
+            <div class="col-12  mt-10 box-name">
                 <p>We are dedicated to supporting each other in achieving our professional goals. We believe that a strong work culture is key to success, and we strive to create a positive and inclusive environment for all of our employees. In addition to our regular work duties, we also have fun team-building events such as monthly dinner parties and sports programs. These events provide an opportunity for our team to bond and build stronger relationships with one another. </p>
                 <p class="title-end"><a href="#" class="no-underline">DISCOVER THE PHILOSOPHY</a></p>
             </div>
@@ -170,7 +166,7 @@ $this->title = 'Career';
             <div class="col-12 name-explore">
                 <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> LIFE AT TCF
             </div>
-            <div class="col-12 mt-20 box-name">
+            <div class="col-12 mt-10 box-name">
                 <p>We are dedicated to supporting each other in achieving our professional goals. We believe that a strong work culture is key to success, and we strive to create a positive and inclusive environment for all of our employees. In addition to our regular work duties, we also have fun team-building events such as monthly dinner parties and sports programs. These events provide an opportunity for our team to bond and build stronger relationships with one another. </p>
                 <p class="title-end"><a href="#" class="no-underline"> WHO WE ARE</a></p>
             </div>
@@ -196,7 +192,7 @@ $this->title = 'Career';
 
 <div class="col-12  mt-50 col-background">
     <div class="col-12 Global-Business">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Our Global Locations
+        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Our Global Locations
     </div>
     <div class="col-12 text-TCG">
         Discover Jobs In your Country
@@ -211,12 +207,12 @@ $this->title = 'Career';
                         <p><img src="<?= Yii::$app->homeUrl ?>image/combodia.png" class="img-country"> Combodia</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/china.png" class="img-country"> China</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/columbia.png" class="img-country"> Columbia</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/Dubai.png" class="img-country"> Dubai(UAE)</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/dubai.png" class="img-country"> Dubai(UAE)</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/hong kong.png" class="img-country"> Hong kong</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/india.png" class="img-country"> India</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/indonesia.png" class="img-country"> Indonesia</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/kenya.png" class="img-country"> kenya</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/japan.png" class="img-country"> Japan</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/123.png" class="img-country"> Japan</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/laos.png" class="img-country"> Laos</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/malaysia.png" class="img-country"> Malaysia</p>
                     </div>
@@ -225,7 +221,7 @@ $this->title = 'Career';
                         <p><img src="<?= Yii::$app->homeUrl ?>image/mongolia.png" class="img-country"> Mongolia</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/nigeria.png" class="img-country"> Nigeria</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/mayanmar.png" class="img-country"> Mayanmar</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/nigeria.png" class="img-country"> Nigeria</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/morocco.png" class="img-country"> Morocco</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/peru.png" class="img-country"> Peru</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/philippines.png" class="img-country"> Philippines</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/russia.png" class="img-country"> Russia</p>
@@ -245,14 +241,21 @@ $this->title = 'Career';
 </div>
 
 <div class="col-12 mt-50 title-open">
-    <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Open Vaca ncies
+    <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Open Vaca ncies
 </div>
 
 <div class="col-12 pr12 mt-50 form-input">
     <div class="row">
         <div class="col-lg-5 col-md-6 col-12">
-            <!-- <input class="form-control form-control-lg from-input-search" type="text" placeholder="Search for jobs or keywords" aria-label="Search for jobs or keywords"> -->
             <div class="col-12">
+                <div class="input-group rounded from-input-search">
+                    <span class="input-group-text border-0" id="search-addon">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </span>
+                    <input type="search" class="form-control rounded" placeholder="Search for jobs or keywords" aria-label="Search" aria-describedby="search-addon" />
+                </div>
+            </div>
+            <div class="col-12 mt-20">
                 <div class="row">
                     <div class="col-4">
                         <div class="btn-group">
@@ -299,157 +302,123 @@ $this->title = 'Career';
     </div>
 </div>
 
-
-<!-- <div class="col-12 pr12 form-card">
+<div class="col-12 pr12 mt-50 alert-all">
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-12">
             <div class="row">
-                <div class="col-4 cb-1">
-                    <span class="badge-1 badge-info text-dark"> Accounts & Taxation</span>
-                </div>
-                <div class="col-6 cb-2">
-                    Deadline 1st June 2023
-                </div>
-                <p class="cb-3">Consultant</p>
-                <p class="cb-4">Accounts & Taxation</p>
-                <p class="cb-7"><img src="<?= Yii::$app->homeUrl ?>image/check-in.png" class="image-check-in"> Banani, Dhaka</p> <br>
-                <p class="cb-5">Assessing HR needs: Conducting assessments of the
-                    HR function to identify areas for improvement, and
-                    making recommendations for enhancing processes,
-                    policies and procedures.</p>
-                <div class="row cb-6">
-                    <div class="col-6">
-                        <button type="button" class="btn btn-info button-detail">See Details</button>
-                    </div>
-                    <div class="col-6">
-                        <button type="button" class="btn btn-primary button-apply-detail">Apply</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card card-name">
-                <div class="row">
-                    <div class="col-4 cb-1">
-                        <span class="badge-1 badge-info text-dark"> Accounts & Taxation</span>
-                    </div>
-                    <div class="col-6 cb-2">
-                        Deadline 12th May 2023
+                <div class="col-lg-3 col-md-9">
+                    <div class="alert alert-info" role="alert">
+                        <span class="badge bg-info"> Accounts & Taxation</span> <span class="black">Deadline 1st June 2023</span>
+                        <p class="black-1">Consultant</p>
+                        <p>Accounts & Taxation</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/check-in.png" class="image-check-in"> Banani, Dhaka</p>
+                        <p class="">Assessing HR needs: Conducting assessments of the
+                            HR function to identify areas for improvement, and
+                            making recommendations for enhancing processes,
+                            policies and procedures.</p>
+                        <div class="row cb-6">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-info button-detail">See Details</button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn btn-primary button-apply-detail">Apply</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p class="cb-3">Senior Assiociate</p>
-                <p class="cb-4">Digital Marketing & IT</p>
-                <p class="cb-7"><img src="<?= Yii::$app->homeUrl ?>image/check-in.png" class="image-check-in"> Banani, Dhaka</p> <br>
-                <p class="cb-5">Assessing HR needs: Conducting assessments of the
-                    HR function to identify areas for improvement, and
-                    making recommendations for enhancing processes,
-                    policies and procedures.</p>
-                <div class="row cb-6">
-                    <div class="col-6">
-                        <button type="button" class="btn btn-info button-detail">See Details</button>
-                    </div>
-                    <div class="col-6">
-                        <button type="button" class="btn btn-primary button-apply-detail">Apply</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="col-md-3">
-            <div class="card card-name">
-                <div class="row">
-                    <div class="col-4 cb-1">
-                        <span class="badge-1 badge-info text-dark">Human Resource</span>
-                    </div>
-                    <div class="col-6  cb-2">
-                        Deadline 1st July 2023
+                <div class="col-lg-3 col-md-9">
+                    <div class="alert alert-info" role="alert">
+                        <span class="badge bg-info"> Accounts & Taxation</span><span class="black"> Deadline 12th May 2023</span>
+                        <p class="black-1">Senior Assiociates</p>
+                        <p>Digital Marketing & IT</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/check-in.png" class="image-check-in"> Banani, Dhaka</p>
+                        <p class="">Assessing HR needs: Conducting assessments of the
+                            HR function to identify areas for improvement, and
+                            making recommendations for enhancing processes,
+                            policies and procedures.</p>
+                        <div class="row cb-6">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-info button-detail">See Details</button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn btn-primary button-apply-detail">Apply</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p class="cb-3">Intern</p>
-                <p class="cb-4">Human Resource</p>
-                <p class="cb-7"><img src="<?= Yii::$app->homeUrl ?>image/check-in.png" class="image-check-in"> Banani, Dhaka</p> <br>
-                <p class="cb-5">Assessing HR needs: Conducting assessments of the
-                    HR function to identify areas for improvement, and
-                    making recommendations for enhancing processes,
-                    policies and procedures.</p>
-                <div class="row cb-6">
-                    <div class="col-6">
-                        <button type="button" class="btn btn-info button-detail">See Details</button>
-                    </div>
-                    <div class="col-6">
-                        <button type="button" class="btn btn-primary button-apply-detail">Apply</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card card-name">
-                <div class="row">
-                    <div class="col-4 cb-1">
-                        <span class="badge-1 badge-info text-dark">Legal & Secretarial</span>
-                    </div>
-                    <div class="col-6 cb-2">
-                        Deadline 1st February 2023
+                <div class="col-lg-3 col-md-9">
+                    <div class="alert alert-info" role="alert">
+                        <span class="badge bg-info">Human Resource</span><span class="black"> Deadline 1st July 2023</span>
+                        <p class="black-1">Intern</p>
+                        <p>Human Resource</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/check-in.png" class="image-check-in"> Banani, Dhaka</p>
+                        <p class="">Assessing HR needs: Conducting assessments of the
+                            HR function to identify areas for improvement, and
+                            making recommendations for enhancing processes,
+                            policies and procedures.</p>
+                        <div class="row cb-6">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-info button-detail">See Details</button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn btn-primary button-apply-detail">Apply</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p class="cb-3">Assiociate</p>
-                <p class="cb-4">Legal & Secretarial</p>
-                <p class="cb-7"><img src="<?= Yii::$app->homeUrl ?>image/check-in.png" class="image-check-in"> Banani, Dhaka</p> <br>
-                <p class="cb-5">Assessing HR needs: Conducting assessments of the
-                    HR function to identify areas for improvement, and
-                    making recommendations for enhancing processes,
-                    policies and procedures.</p>
-                <div class="row cb-6">
-                    <div class="col-6">
-                        <button type="button" class="btn btn-info button-detail">See Details</button>
-                    </div>
-                    <div class="col-6">
-                        <button type="button" class="btn btn-primary button-apply-detail">Apply</button>
+                <div class="col-lg-3 col-md-9">
+                    <div class="alert alert-info" role="alert">
+                        <span class="badge bg-info">Legal & Secretarial</span><span class="black"> Deadline 1st February 2023</span>
+                        <p class="black-1">Assiociate</p>
+                        <p>Legal & Secretarial</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/check-in.png" class="image-check-in"> Banani, Dhaka</p>
+                        <p class="">Assessing HR needs: Conducting assessments of the
+                            HR function to identify areas for improvement, and
+                            making recommendations for enhancing processes,
+                            policies and procedures.</p>
+                        <div class="row cb-6">
+                            <div class="col-6">
+                                <button type="button" class="btn btn-info button-detail">See Details</button>
+                            </div>
+                            <div class="col-6">
+                                <button type="button" class="btn btn-primary button-apply-detail">Apply</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div> -->
-
+</div>
 
 
 <div class="col-12 pr12 mt-50 form-text-footer">
     <div class="row">
-        <div class="col">
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="col-12 title-more">
-                    <p>More About us</p>
-                </div>
-                <div class="col-12 title-form-text">
-                    <p><a href="#" class="no-underline">About us </a></p>
-                    <p><a href="#" class="no-underline">Conotact us</a></p>
-                    <p><a href="#" class="no-underline">Work life at TCF</a></p>
-                    <p><a href="#" class="no-underline">Our Work Philosopy</a></p>
-                </div>
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-12 title-more">
+                <p>More About us</p>
+            </div>
+            <div class="col-12 title-form-text">
+                <p><a href="#" class="no-underline">About us </a></p>
+                <p><a href="#" class="no-underline">Conotact us</a></p>
+                <p><a href="#" class="no-underline">Work life at TCF</a></p>
+                <p><a href="#" class="no-underline">Our Work Philosopy</a></p>
             </div>
         </div>
-        <div class="col box-form-media">
-            <div class="col-lg-4  col-md-6 col-12">
-                <div class="col-12 from-text-media">
-                    “TCF Equal Opportunity Statement”
-                </div>
-                <div class="col-12 form-text-google">
-                    <p>Google is proud to be an equal opportunity workplace and is an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status. We also consider qualified applicants regardless of criminal histories, consistent with legal requirements. See also Google's EEO Policy and EEO is the Law. If you have a need that requires accommodation, please let us know by completing our Accommodations for Applicants form.</p>
-                </div>
+        <div class="col-lg-4 col-md-6 col-12 form-tcf">
+            <div class="col-12">
+                <span class="title-tcf">“TCF Equal Opportunity Statement”</span>
+                <p class="title-tcf1">Google is proud to be an equal opportunity workplace and is an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status. We also consider qualified applicants regardless of criminal histories, consistent with legal requirements. See also Google's EEO Policy and EEO is the Law. If you have a need that requires accommodation, please let us know by completing our Accommodations for Applicants form.</p>
             </div>
         </div>
-        <div class="col">
-            <div class="col-lg-6 col-md-6 col-12">
-                <div class="col-12 media-picture">
-                    Follow Career in
-                    <a href="#facebook"><img src="<?= Yii::$app->homeUrl ?>image/facebook.png"></a>
-                    <a href="#twitter"><img src="<?= Yii::$app->homeUrl ?>image/twitter.png"></a>
-                    <a href="#Instagram"><img src="<?= Yii::$app->homeUrl ?>image/Instagram.png"></a>
-                    <a href="#LinkedIn"><img src="<?= Yii::$app->homeUrl ?>image/LinkedIn.png"></a>
-                    <a href="#YouTube"><img src="<?= Yii::$app->homeUrl ?>image/YouTube.png"></a>
-                </div>
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-12 media-picture">
+                Follow Career in
+                <a href="#facebook"><img src="<?= Yii::$app->homeUrl ?>image/facebook.png"></a>
+                <a href="#twitter"><img src="<?= Yii::$app->homeUrl ?>image/twitter.png"></a>
+                <a href="#Instagram"><img src="<?= Yii::$app->homeUrl ?>image/Instagram.png"></a>
+                <a href="#LinkedIn"><img src="<?= Yii::$app->homeUrl ?>image/LinkedIn.png"></a>
+                <a href="#YouTube"><img src="<?= Yii::$app->homeUrl ?>image/YouTube.png"></a>
             </div>
         </div>
     </div>

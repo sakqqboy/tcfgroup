@@ -19,9 +19,6 @@
     font-weight: 300;
 }
 
-.form-card {
-    padding-left: 40px;
-}
 
 .form-text-footer {
     padding-left: 40px;
@@ -177,10 +174,19 @@
 }
 
 .name-explore {
-    margin-top: 100px;
+    margin-top: 70px;
     padding-left: 40px;
     font-size: 24px;
     font-weight: 700;
+}
+
+.alert-all {
+    padding-left: 40px;
+    font-family: 'klavika';
+}
+
+.button-detail {
+    color: white;
 }
 
 .box-name {
@@ -251,70 +257,28 @@
     font-family: 'klavika';
 }
 
-.from-text-media {
-    width: 28rem;
-    font-size: 30px;
-    font-weight: 700;
-    font-family: 'klavika';
-    letter-spacing: -1px;
-
-}
-
-.form-text-google {
-    width: 35rem;
-    font-family: 'klavika';
-    font-weight: 100;
-    font-size: 14px;
-}
-
-.card-name {
-    margin-top: 70px;
-    background: #F0F9FF;
-    border-radius: 10px;
-    width: 19rem;
-    height: 21rem;
-}
-
-.cb-1 {
-    background: #b5eff3;
-    font-size: 12px;
+.title-tcf {
+    font-size: 20px;
     font-weight: 500;
-    width: 150px;
     font-family: 'klavika';
-    padding-left: 10px;
-}
-
-.cb-2 {
-    font-size: 12px;
-    font-weight: 400;
-    font-family: 'klavika';
-    padding-left: 10px;
 
 }
 
-.cb-3 {
-    font-size: 22px;
-    font-weight: 700;
-    font-family: 'klavika';
-    padding-left: 10px;
-}
-
-.cb-4,
-.cb-5 {
+.title-tcf1 {
     font-family: 'klavika';
     font-weight: 100;
-    font-size: 14px;
-    padding-left: 10px;
+    font-size: 15px;
 }
 
-.cb-6 {
-    font-family: 'klavika';
-    font-size: 24px;
-    padding-left: 10px;
+
+.black {
+    color: #000000;
 }
 
-.cb-7 {
-    padding-left: 10px;
+.black-1 {
+    color: #000000;
+    font-weight: 700;
+    font-size: 25px;
 }
 
 .image-Vector3,
@@ -392,44 +356,14 @@
         margin-top: 50px;
     }
 
-    .card-name {
-        width: 11rem;
-    }
-
-    .cb-1 {
-        font-size: 10px;
-        margin-top: 10px;
-        margin-left: 1px;
-    }
-
-    .cb-2 {
-        font-size: 10px;
-        padding-top: 20px;
-    }
-
-    .cb-5 {
-        font-size: 11px;
-    }
-
-
-    .button-detail,
-    .button-apply-detail {
-        font-size: 10px;
-        width: 80px;
-    }
-
-    .button-apply {
-        font-size: 14px;
-        width: 200px;
-    }
-
     .from-text-media {
         font-size: 25px;
     }
 
-    .form-text-google {
+    .alert-info {
         width: 350px;
     }
+
 
 
 }
@@ -459,6 +393,14 @@
         width: 100px;
     }
 
+    .image-picture-1 {
+        width: 300px;
+    }
+
+    .image-picture-2 {
+        width: 360px;
+        padding-left: 30px;
+    }
 
     .title-txt1 {
         font-size: 14px;
@@ -478,11 +420,13 @@
 
     .image-TCF-GROUP {
         margin-top: 40px;
-        width: 350px;
+        width: 320px;
+
     }
 
     .from-input-search {
-        width: 400px;
+        width: 370px;
+        font-size: 12px;
     }
 
     .form-text {
@@ -494,33 +438,12 @@
         font-size: 22px;
     }
 
-    .from-text-media {
-        font-size: 24px;
-        margin-top: 20px;
-    }
-
-    .form-text-google {
-        width: 400px;
-        font-size: 13px;
+    .form-tcf {
+        margin-top: 30px;
     }
 
     .media-picture {
         margin-top: 30px;
-    }
-
-
-    .cb-1 {
-        margin-top: 20px;
-        margin-left: 30px;
-    }
-
-    .cb-2 {
-        padding-left: 0px;
-    }
-
-
-    .cb-3 {
-        padding-left: 0px;
     }
 
 

@@ -24,7 +24,8 @@
 
 }
 
-.form-range {
+.form-range2 {
+    margin-top: 50px;
     padding-left: 40px;
 }
 
@@ -184,5 +185,9 @@
 
     .select-name-privacy {
         width: 450px;
+    }
+
+    .form-font-small {
+        font-size: 8px;
     }
 }

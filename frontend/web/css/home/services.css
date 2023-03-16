@@ -85,7 +85,7 @@
 }
 
 .page-two {
-    padding-left: 60px;
+    padding-left: 40px;
 }
 
 .form-select-two {
@@ -102,7 +102,7 @@
 }
 
 .page-tree {
-    padding-left: 60px;
+    padding-left: 40px;
 }
 
 .image-Group-2 {
@@ -132,7 +132,7 @@
 
 .backgroup-submit {
     background: #F0F3F8;
-    padding-left: 60px;
+    padding-left: 40px;
 }
 
 .image-boat-2 {
@@ -179,155 +179,148 @@
 .select-project {
     width: 350px;
     font-size: 14px;
-    margin-top: 30px;
+    margin-top: 5px;
     line-height: 20px;
     font-weight: 100;
+    font-family: 'klavika';
 }
 
 .select-project-1 {
     width: 350px;
     font-size: 14px;
-    margin-top: 30px;
+    margin-top: 5px;
     line-height: 20px;
     font-weight: 100;
+    font-family: 'klavika';
 }
 
-.main-page {
-    margin-top: -790px;
-    color: white;
-    font-family: 'klavika';
-    padding-left: 40px;
-}
 
 .text-the-best {
     font-size: 24px;
     font-weight: 700;
-
-}
-
-.text-all {
-    margin-top: -50px;
-}
-
-.form-large {
-    margin-top: -800px;
-    color: white;
+    padding-top: 20px;
     font-family: 'klavika';
+
+}
+
+.title-all {
+    margin-top: -850px;
+    color: white;
     padding-left: 40px;
 
 }
 
 .text-form-most {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 100;
+    width: 600px;
+    font-family: 'klavika';
 }
 
 .page-1 {
     font-size: 19px;
     font-family: 'klavika';
     font-weight: 700;
-    margin-top: 20px;
+
 }
 
 .page-2 {
     font-size: 19px;
     font-family: 'klavika';
     font-weight: 700;
-    margin-top: 20px;
+
 }
 
 .form-card {
     background: #005BA0;
     border-radius: 5px;
-    width: 490px;
+    width: 570px;
     height: 50px;
     padding-top: 10px;
+    padding-left: 10px;
     font-weight: 100;
     font-size: 16px;
+    margin-top: 40px;
 }
 
-.button-card {
-    margin-left: 340px;
-    width: 90px;
-    height: 50;
+.download {
+    margin-left: 380px;
+    margin-top: -20px;
+    width: 120px;
+    height: 30px;
+    color: #005BA0;
+    font-weight: 500;
+    font-family: 'klavika';
     font-size: 12px;
-    margin-top: -25px;
+    border-radius: 5px;
+    padding-top: -10px;
+    padding-left: 10px;
 }
 
+.fa-download {
+    padding-left: 60px;
+    padding-top: 5px;
+    margin-top: -20px;
+}
 
-@media(max-width: 992px) {
-    .main-page {
-        margin-top: -450px;
-    }
-
-    .form-large {
-        margin-top: -480px;
-
+@media(max-width: 1280px) {
+    .title-all {
+        margin-top: -700px;
     }
 
     .text-form-most {
+        width: 340px;
+        line-height: 10px;
         font-size: 10px;
-        margin-top: 20px;
+        margin-top: 25px;
+    }
+}
+
+
+
+@media(max-width: 992px) {
+    .title-all {
+        margin-top: -470px;
     }
 
-    .page-1 {
-        margin-top: 10px;
-        font-size: 12px;
+
+    .text-form-most {
+        width: 340px;
+        line-height: 10px;
+        font-size: 10px;
     }
 
     .select-project {
         font-size: 9px;
-        line-height: 10px;
-        width: 290px;
-        margin-top: 10px;
-
-    }
-
-    .page-2 {
-        margin-top: 10px;
-        font-size: 12px;
-    }
-
-    .image-account {
-        width: 50px;
-    }
-
-    .text-the-best {
-        margin-top: -25px;
-
-    }
-
-    .text-form-most {
-        font-size: 8px;
-        line-height: 10px;
-        margin-top: 20px;
-
+        line-height: 11px;
     }
 
     .select-project-1 {
-        font-size: 8px;
-        line-height: 10px;
-        width: 290px;
-        margin-top: 10px;
-
+        font-size: 9px;
+        line-height: 11px;
     }
 
-    .form-card {
-        margin-top: -30px;
+    .image-account {
+        width: 30px;
     }
+
+    .page-2 {
+        margin-top: 0px;
+    }
+
 
 }
 
 
 @media(max-width: 768px) {
-
-    .main-page {
-        margin-top: -250px;
+    .title-all {
+        margin-top: -260px;
     }
 
+
     .text-the-best {
-        font-size: 10px;
-        margin-top: -40px;
+        font-size: 15px;
+        margin-top: -20px;
     }
 
     .image-account {
@@ -335,67 +328,58 @@
     }
 
     .page-1 {
-        margin-top: 10px;
-        font-size: 9px;
+        font-size: 8px;
     }
 
     .select-project {
         font-size: 5px;
-        line-height: 5px;
-        width: 140px;
-        margin-top: 10px;
+        line-height: 6px;
+        width: 150px;
     }
 
-    .form-large {
-        margin-top: -260px;
-        margin-left: 190px;
+    .form-card {
+        font-size: 8px;
+        padding-left: 5px;
+        width: 320px;
+        height: 0px;
+        margin-top: 20px;
+        padding-bottom: 20px;
+
     }
 
-    .text-form-most {
-        font-size: 7px;
-        width: 210px;
-        line-height: 8px;
-        margin-top: -30px;
+    .form-services {
+        margin-left: -60px;
+    }
+
+
+    .download {
+        margin-top: -15px;
+        font-size: 12px;
+        width: 95px;
+        margin-left: 210px;
+
     }
 
     .page-2 {
-        font-size: 9px;
-        margin-top: 10px;
+        font-size: 8px;
     }
 
     .select-project-1 {
         font-size: 5px;
-        line-height: 5px;
-        width: 140px;
-        margin-top: 10px;
+        line-height: 6px;
+        width: 150px;
     }
 
-    .button-card {
-        font-size: 10px;
-        margin-top: -10px;
-
+    .text-form-most {
+        font-size: 6px;
+        width: 200px;
+        line-height: 7px;
+        margin-top: 1px;
+        margin-left: -30px;
     }
 
-    .form-card {
-
-        width: 350px;
-        height: 40px;
-        padding-top: 10px;
-        font-weight: 100;
-        font-size: 10px;
-    }
-
-    .button-card {
-        margin-left: 210px;
-        width: 90px;
-        height: 50;
-        font-size: 11px;
-        margin-top: -20px;
-    }
-
-    .form-select-one {
-        font-size: 20px;
-
+    .form-page-text {
+        margin-left: 20px;
     }
 
 }

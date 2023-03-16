@@ -132,12 +132,12 @@
     }
 
     .everyone {
-        width: 400px;
+        width: 350px;
         padding-left: 10px;
     }
 
     .People {
-        width: 400px;
+        width: 370px;
     }
 
     .TOKYO {
@@ -165,19 +165,27 @@
     }
 
     .everyone {
-        width: 450px;
+        width: 400px;
+        padding-left: 10px;
     }
 
     .People {
-        width: 450px;
+        width: 400px;
+        padding-left: 10px;
     }
 
     .TOKYO {
-        width: 450px;
+        width: 400px;
     }
+
 
     .picture-text {
         font-size: 21px;
     }
+
+    .Why-We-Work {
+        font-size: 26px;
+    }
+
 
 }

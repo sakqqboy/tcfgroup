@@ -31,8 +31,10 @@
     font-weight: 100;
     margin-top: 50px;
     font-size: 18px;
+}
 
-
+.stye-people {
+    margin-top: 100px;
 }
 
 
@@ -128,8 +130,8 @@
 
     .card-title2 {
         width: 8rem;
-        margin-left: 120px;
-        margin-top: 60px;
+        margin-left: 100px;
+        margin-top: 55px;
     }
 
     .card-title-home {
@@ -173,12 +175,16 @@
 
     .title6 {
         font-size: 5px;
-        line-height: 5px;
+        line-height: 2px;
     }
 
     .text-name-kuno {
         padding-top: 20px;
         font-size: 12px;
+    }
+
+    .stye-people {
+        margin-top: 50px;
     }
 
 }

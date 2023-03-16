@@ -10,8 +10,7 @@ $this->title = 'About Us';
 <div class="col-12">
     <img src="<?= Yii::$app->homeUrl ?>image/Vision-page.png" class="image-Vision-page">
 </div>
-
-<div class="col-12 title-all">
+<div class="col-12">
     <div class="col-12 text-Our">
         Our
     </div>
@@ -26,13 +25,13 @@ $this->title = 'About Us';
     </div>
 </div>
 
+<div class="col-12">
+    <img src="<?= Yii::$app->homeUrl ?>image/bali.png" class="image-bali">
+</div>
 
 <div class="col-12">
-    <div class="col-12">
-        <img src="<?= Yii::$app->homeUrl ?>image/bali.png" class="image-bali">
-    </div>
     <div class="col-12 box-data-1">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Reason for Existence, Philosophy
+        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> Reason for Existence, Philosophy
     </div>
     <div class="col-12 box-data-2">
         “Things that must not be changed”
@@ -42,14 +41,12 @@ $this->title = 'About Us';
     </div>
 </div>
 
-
-
 <div class="col-12">
     <div class="col-12">
         <img src="<?= Yii::$app->homeUrl ?>image/yogendra-singh.png" class="image-yogendra-singh">
     </div>
     <div class="col-12  Block-1">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Vision & Strategy
+        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> Vision & Strategy
     </div>
     <div class="col-12 Block-2">
         “Things that must not be changed”
@@ -59,11 +56,11 @@ $this->title = 'About Us';
 </div>
 
 <div class="col-12">
-    <div class="col-12" style="margin-top: 70px;">
+    <div class="col-12">
         <img src="<?= Yii::$app->homeUrl ?>image/whale2.png" class="image-whale">
     </div>
     <div class="col-12 Type-home-page-one">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> How Far Should the Company Grow?
+        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> How Far Should the Company Grow?
     </div>
     <div class="col-12 Type-home-page-two">
         How much growth should be achieved is, in other words, the issue of the "appropriate size" of a company. In microeconomics, it is said that a company has an appropriate size (the size of the company that maximizes profits).However, if a company's purpose is to contribute to society, there should be no appropriate level of contribution. If there is, it is because the management has not found a way to contribute to society (this is called a growth opportunity).I am often asked ,"How far do you intend to grow the company?" To this question, I immediately answer, "Until the company goes bankrupt." The cause of the company's bankruptcy is the company's inability to contribute to society, in other words, the end of its social mission. Steering a company is like steering a ship: the bigger it gets, the more difficult it becomes. This is because it becomes difficult to respond to changes in the business environment. The bigger the ship, the more stable it looks, but the less it turns. Therefore, a small ship (company) is easier to maneuver and can respond quickly to environmental changes. Some managers consider the appropriate size of a company to be as long as they can steer it. However, if a company is a public institution, the scale of the company should be judged by the interests of society. Society expects us to make a greater contribution, so we must determine the size of our company from a social perspective. Therefore, as a company grows, it becomes less flexible and difficult to respond to social changes, and as a result, the risk of bankruptcy also increases. I believe that whether or not a company can dare to take that risk is the height of a manager's aspirations and sense of social mission. I want to be that kind of manager.
@@ -71,9 +68,8 @@ $this->title = 'About Us';
 </div>
 
 <div class="col-12 pr12">
-
     <div class="col-12 padding-box">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> Tokyo Consulting Group Strategy
+        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> Tokyo Consulting Group Strategy
     </div>
 
     <div class="col-12">
@@ -116,39 +112,31 @@ $this->title = 'About Us';
 
 <div class="col-12 pr12 mt-50 form-text-footer">
     <div class="row">
-        <div class="col">
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="col-12 title-more">
-                    <p>More About us</p>
-                </div>
-                <div class="col-12 title-form-text">
-                    <p><a href="#" class="no-underline">About us </a></p>
-                    <p><a href="#" class="no-underline">Conotact us</a></p>
-                    <p><a href="#" class="no-underline">Work life at TCF</a></p>
-                    <p><a href="#" class="no-underline">Our Work Philosopy</a></p>
-                </div>
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-12 title-more">
+                <p>More About us</p>
+            </div>
+            <div class="col-12 title-form-text">
+                <p><a href="#" class="no-underline">About us </a></p>
+                <p><a href="#" class="no-underline">Conotact us</a></p>
+                <p><a href="#" class="no-underline">Work life at TCF</a></p>
+                <p><a href="#" class="no-underline">Our Work Philosopy</a></p>
             </div>
         </div>
-        <div class="col box-form-media">
-            <div class="col-lg-4  col-md-6 col-12">
-                <div class="col-12 from-text-media">
-                    “TCF Equal Opportunity Statement”
-                </div>
-                <div class="col-12 form-text-google">
-                    <p>Google is proud to be an equal opportunity workplace and is an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status. We also consider qualified applicants regardless of criminal histories, consistent with legal requirements. See also Google's EEO Policy and EEO is the Law. If you have a need that requires accommodation, please let us know by completing our Accommodations for Applicants form.</p>
-                </div>
+        <div class="col-lg-4 col-md-6 col-12 form-tcf">
+            <div class="col-12">
+                <span class="title-tcf">“TCF Equal Opportunity Statement”</span>
+                <p class="title-tcf1">Google is proud to be an equal opportunity workplace and is an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status. We also consider qualified applicants regardless of criminal histories, consistent with legal requirements. See also Google's EEO Policy and EEO is the Law. If you have a need that requires accommodation, please let us know by completing our Accommodations for Applicants form.</p>
             </div>
         </div>
-        <div class="col">
-            <div class="col-lg-6 col-md-6 col-12">
-                <div class="col-12 media-picture">
-                    Follow Career in
-                    <a href="#facebook"><img src="<?= Yii::$app->homeUrl ?>image/facebook.png"></a>
-                    <a href="#twitter"><img src="<?= Yii::$app->homeUrl ?>image/twitter.png"></a>
-                    <a href="#Instagram"><img src="<?= Yii::$app->homeUrl ?>image/Instagram.png"></a>
-                    <a href="#LinkedIn"><img src="<?= Yii::$app->homeUrl ?>image/LinkedIn.png"></a>
-                    <a href="#YouTube"><img src="<?= Yii::$app->homeUrl ?>image/YouTube.png"></a>
-                </div>
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="col-12 media-picture">
+                Follow Career in
+                <a href="#facebook"><img src="<?= Yii::$app->homeUrl ?>image/facebook.png"></a>
+                <a href="#twitter"><img src="<?= Yii::$app->homeUrl ?>image/twitter.png"></a>
+                <a href="#Instagram"><img src="<?= Yii::$app->homeUrl ?>image/Instagram.png"></a>
+                <a href="#LinkedIn"><img src="<?= Yii::$app->homeUrl ?>image/LinkedIn.png"></a>
+                <a href="#YouTube"><img src="<?= Yii::$app->homeUrl ?>image/YouTube.png"></a>
             </div>
         </div>
     </div>

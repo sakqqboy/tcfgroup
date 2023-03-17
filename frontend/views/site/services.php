@@ -87,6 +87,28 @@ $this->title = 'services';
                         <option value="1">Brazil</option>
                         <option value="2">Combodia</option>
                         <option value="3">China</option>
+                        <option value="4">Columbia</option>
+                        <option value="5">Dubai(UAE)</option>
+                        <option value="6">Hong kong</option>
+                        <option value="7">India</option>
+                        <option value="8">Indonesia</option>
+                        <option value="9">kenya</option>
+                        <option value="10">Japan</option>
+                        <option value="11">Laos</option>
+                        <option value="12">Malaysia</option>
+                        <option value="13">Mexico</option>
+                        <option value="14">Mongolia</option>
+                        <option value="15">Nigeria</option>
+                        <option value="16">Mayanmar</option>
+                        <option value="17">Morocco</option>
+                        <option value="18">Peru</option>
+                        <option value="19">Philippines</option>
+                        <option value="20">Russia</option>
+                        <option value="21">South Afroca</option>
+                        <option value="22">Singapore</option>
+                        <option value="23">Sir Lanka</option>
+                        <option value="24">Thailad</option>
+                        <option value="25">Turkey</option>
                     </select>
                 </div>
             </div>
@@ -272,25 +294,25 @@ $this->title = 'services';
 </div>
 
 
-<div class="col-12 mt-40">
-    <div class="col-12 connect-experts mt-40 pl-40">
+<div class="col-12">
+    <div class="col-12 connect-experts mt-40">
         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Connect Experts
     </div>
-    <div class="col-12 Get-free mt-30 pl-40">
+    <div class="col-12 Get-free mt-30">
         Get Free Appointment on your Business Issuefa-spin
     </div>
-    <div class="col-12 If-you pl-40 mt-10">
+    <div class="col-12 If-you mt-10">
         If you would like to discuss a project or have a question, please fill in the form and we ll get right back to you.
     </div>
-    <div class="col-12 mt-30 pr-12 pr12">
+    <div class="col-12 mt-30 pr12">
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-12 mt-50 box-left">
+            <div class="col-lg-6 col-md-6 col-12 mt-50 pl-40 pr-40 form-input">
                 <div class="row">
                     <div class="col-7">
                         <p class="If-you2">Do you prefer to communicate as an entity or an individual?</p>
                     </div>
                     <div class="col-5">
-                        <label for="formGroupExampleInput" class="form-label label-thin"><img src="<?= Yii::$app->homeUrl ?>image/Bangladesh.png"> &nbsp;&nbsp;Select Country</label>
+                        <label for="formGroupExampleInput" class="form-label label-thin"> &nbsp;&nbsp;&nbsp;Select Country</label>
                         <select class="form-select mt-10" aria-label="Default select example">
                             <option selected>Bangladesh</option>
                             <option value="1">Brazil</option>
@@ -320,13 +342,13 @@ $this->title = 'services';
                             <option value="25">Turkey</option>
                         </select>
                     </div>
-                    <div class="col-12 ">
+                    <div class="col-12">
                         <div class="row mt-20">
-                            <div class="col-6 left-box-select ">
+                            <div class="col-4 left-box-select">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                                 <label class="form-check-label ml-10" for="inlineRadio1">Legal Entity</label>
                             </div>
-                            <div class="col-6">
+                            <div class="col-4 left-box-select">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                                 <label class="form-check-label ml-10" for="inlineRadio2">Individual</label>
                             </div>
@@ -334,31 +356,31 @@ $this->title = 'services';
                     </div>
                 </div>
                 <div class="mb-3 your-company" style="margin-top: 30px;">
-                    <label for="exampleInputCompany" class="form-label label-thin">Your Company*</label>
+                    <label for="exampleInputCompany" class="form-label label-thin"> Your Company<span class="moon">*</span></label>
                     <input type="Company" class="form-control" id="exampleInputCompany" aria-describedby="company">
                 </div>
                 <div class="mb-3 your-company">
-                    <label for="exampleInputName" class="form-label label-thin">Your Name*</label>
+                    <label for="exampleInputName" class="form-label label-thin"> Your Name<span class="moon">*</span></label>
                     <input type="Name" class="form-control" id="exampleInputName" aria-describedby="name">
                 </div>
                 <div class="mb-3 your-company">
-                    <label for="exampleInputPosition" class="form-label label-thin">Position*</label>
+                    <label for="exampleInputPosition" class="form-label label-thin"> Position<span class="moon">*</span></label>
                     <input type="Position" class="form-control" id="exampleInputPosition" aria-describedby="position">
                 </div>
                 <div class="mb-3 your-company">
-                    <label for="exampleInputEmail" class="form-label label-thin">Your e-mail*</label>
+                    <label for="exampleInputEmail" class="form-label label-thin"> Your e-mail<span class="moon">*</span></label>
                     <input type="Email" class="form-control" id="exampleInputEmail" aria-describedby="email">
                 </div>
                 <div class="mb-3 your-company">
                     <div class="row">
                         <div class="col-6 text-start">
-                            <label for="exampleInputEmail" class="form-label label-thin">Phone Number*</label>
+                            <label for="exampleInputEmail" class="form-label label-thin"> Phone Number<span class="moon">*</span></label>
                             <input type="text" class="form-control" placeholder="+880" aria-label="Phone">
                         </div>
                         <div class="col-6">
-                            <label for="exampleInputEmail" class="form-label label-thin">Your Business </label>
+                            <label for="exampleInputEmail" class="form-label label-thin"> Your Business<span class="moon">*</span></label>
                             <select class="form-select" aria-label="Default select example">
-                                <option selected>Select business Type</option>
+                                <option selected> Select business Type</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -378,26 +400,27 @@ $this->title = 'services';
                 </div>
                 <div class="row">
                     <div class="col-6 text-start label-thin mt-4">
-                        ATTACHMENT (IF ANY) <img src="<?= Yii::$app->homeUrl ?>image/files.png">
+                        ATTACHMENT (IF ANY) <i class="fa fa-paperclip" aria-hidden="true"></i>
                     </div>
                     <div class="col-6 mt-4 text-end">
                         <button type="button" class="btn btn-primary button-get">Get Free Appointment</button>
                     </div>
                     <div class="col-6 text-start mt-4">
                         <div class="contact-social mb-2">Whatsapp</div>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/whatsapp.png" class="social-icon mr-10"> inquarrytcf</p>
+                        <p class="info-tokyo"><i class="fa fa-whatsapp" aria-hidden="true"></i> inquarrytcf</p>
                     </div>
                     <div class="col-6 text-end mt-4">
                         <div class="contact-social mb-2">Email</div>
-                        <p>f-info@tokyoconsultinggroup.com <img src="<?= Yii::$app->homeUrl ?>image/letter.png" class="social-icon ml-10"></p>
+                        <p class="info-tokyo">f-info@tokyoconsultinggroup.com<i class="fa fa-envelope" aria-hidden="true"></i></p>
                     </div>
                     <div class="col-6 text-start mt-4">
                         <div class="contact-social mb-2">Skype</div>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/skype.png" class="social-icon mr-10"> inquarrytcf</p>
+                        <p class="info-tokyo"><i class="fa fa-skype" aria-hidden="true"></i> inquarrytcf</p>
+
                     </div>
                     <div class="col-6 text-end mt-4">
                         <div class="contact-social mb-2">Phone</div>
-                        <p> +090-111-222<img src="<?= Yii::$app->homeUrl ?>image/phone-call.png" class="social-icon ml-10"></p>
+                        <p class="info-tokyo">+090-111-222<i class="fa fa-phone" aria-hidden="true"></i></p>
                     </div>
                 </div>
             </div>

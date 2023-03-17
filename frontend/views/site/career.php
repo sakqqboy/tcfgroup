@@ -250,49 +250,9 @@ $this->title = 'Career';
             <div class="col-12">
                 <div class="input-group rounded from-input-search">
                     <span class="input-group-text border-0" id="search-addon">
-                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <a href="#search"><i class="fa fa-search" aria-hidden="true"></i></a>
                     </span>
                     <input type="search" class="form-control rounded" placeholder="Search for jobs or keywords" aria-label="Search" aria-describedby="search-addon" />
-                </div>
-            </div>
-            <div class="col-12 mt-20">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                COUNTRY
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                DEPARTMENT
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                TYPE
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -302,22 +262,66 @@ $this->title = 'Career';
     </div>
 </div>
 
+<div class="col-12 pr12 mt-20 form-dropdown">
+    <div class="col-lg-4 col-md-6 col-12">
+        <div class="row">
+            <div class="col-4">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        COUNTRY
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        DEPARTMENT
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4 mt-1">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        TRYE
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <div class="col-12 pr12 mt-50 alert-all">
     <div class="row">
         <div class="col-12">
             <div class="row">
-                <div class="col-lg-3 col-md-9">
-                    <div class="alert alert-info" role="alert">
+                <div class="col-lg-3 col-md-5 col-12">
+                    <div class="alert alert-info">
                         <span class="badge bg-info"> Accounts & Taxation</span> <span class="black">Deadline 1st June 2023</span>
-                        <p class="black-1">Consultant</p>
+                        <p class="black-1 mt-4">Consultant</p>
                         <p>Accounts & Taxation</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/check-in.png" class="image-check-in"> Banani, Dhaka</p>
                         <p class="">Assessing HR needs: Conducting assessments of the
                             HR function to identify areas for improvement, and
                             making recommendations for enhancing processes,
                             policies and procedures.</p>
-                        <div class="row cb-6">
-                            <div class="col-6">
+                        <div class="row">
+                            <div class="col-6 button-title-see">
                                 <button type="button" class="btn btn-info button-detail">See Details</button>
                             </div>
                             <div class="col-6">
@@ -326,10 +330,10 @@ $this->title = 'Career';
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-9">
-                    <div class="alert alert-info" role="alert">
+                <div class="col-lg-3 col-md-5 col-12">
+                    <div class="alert alert-info">
                         <span class="badge bg-info"> Accounts & Taxation</span><span class="black"> Deadline 12th May 2023</span>
-                        <p class="black-1">Senior Assiociates</p>
+                        <p class="black-1 mt-4">Senior Assiociates</p>
                         <p>Digital Marketing & IT</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/check-in.png" class="image-check-in"> Banani, Dhaka</p>
                         <p class="">Assessing HR needs: Conducting assessments of the
@@ -346,17 +350,17 @@ $this->title = 'Career';
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-9">
-                    <div class="alert alert-info" role="alert">
+                <div class="col-lg-3 col-md-5 col-12">
+                    <div class="alert alert-info">
                         <span class="badge bg-info">Human Resource</span><span class="black"> Deadline 1st July 2023</span>
-                        <p class="black-1">Intern</p>
+                        <p class="black-1 mt-4">Intern</p>
                         <p>Human Resource</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/check-in.png" class="image-check-in"> Banani, Dhaka</p>
                         <p class="">Assessing HR needs: Conducting assessments of the
                             HR function to identify areas for improvement, and
                             making recommendations for enhancing processes,
                             policies and procedures.</p>
-                        <div class="row cb-6">
+                        <div class="row">
                             <div class="col-6">
                                 <button type="button" class="btn btn-info button-detail">See Details</button>
                             </div>
@@ -366,17 +370,17 @@ $this->title = 'Career';
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-9">
-                    <div class="alert alert-info" role="alert">
+                <div class="col-lg-3 col-md-5 col-12">
+                    <div class="alert alert-info">
                         <span class="badge bg-info">Legal & Secretarial</span><span class="black"> Deadline 1st February 2023</span>
-                        <p class="black-1">Assiociate</p>
+                        <p class="black-1 mt-4">Assiociate</p>
                         <p>Legal & Secretarial</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/check-in.png" class="image-check-in"> Banani, Dhaka</p>
                         <p class="">Assessing HR needs: Conducting assessments of the
                             HR function to identify areas for improvement, and
                             making recommendations for enhancing processes,
                             policies and procedures.</p>
-                        <div class="row cb-6">
+                        <div class="row">
                             <div class="col-6">
                                 <button type="button" class="btn btn-info button-detail">See Details</button>
                             </div>

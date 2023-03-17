@@ -94,7 +94,7 @@ $this->title = 'About Us';
             <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
                 <input type="text" class="form-control" placeholder="Your Email address" aria-label="Your Email address with two button addons">
-                <button class="btn btn-outline-primary" type="button">Subscribe Now</button>
+                <button class="btn btn-primary" type="button">Subscribe Now</button>
             </div>
             <br>
         </div>

@@ -40,24 +40,27 @@
     font-weight: bold;
 }
 
-.social-icon {
+/* .social-icon {
     width: 20px;
     height: 20px;
     color: gray;
+} */
+
+.info-tokyo {
+    font-size: 13px;
 }
 
 .Get-free {
-    font-size: 34px;
+    font-size: 30px;
+    padding-left: 40px;
     font-weight: 700;
-    /* line-height: 60px; */
-    display: flex;
-    align-items: center;
     font-family: 'klavika';
     color: #313131;
 }
 
 .If-you {
-    font-size: 19px;
+    font-size: 18px;
+    padding-left: 40px;
     font-weight: 300;
     line-height: 29px;
     font-family: 'klavika';
@@ -81,9 +84,9 @@
 }
 
 .connect-experts {
-
+    padding-left: 40px;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 35px;
     line-height: 55px;
     font-family: 'klavika';
     color: #0F2137;
@@ -102,8 +105,13 @@
 }
 
 .form-Questions {
-    padding-left: 30px;
+    padding-left: 40px;
     font-family: 'klavika';
+}
+
+.left-box-select {
+    font-weight: 700;
+    font-size: 17px;
 }
 
 .text-japan {
@@ -280,6 +288,7 @@
 
 .label-thin {
     font-weight: 300;
+    font-size: 18px;
 }
 
 .image-gol1 {
@@ -367,6 +376,11 @@
     line-height: 20px;
 }
 
+.input-your-email {
+    font-size: 13px;
+    font-family: 'klavika';
+}
+
 .div-row {
     display: flex;
 }
@@ -377,11 +391,6 @@
     margin-top: 20px;
 }
 
-.box-left {
-    font-family: 'klavika';
-    padding-left: 50px;
-    padding-right: 50px
-}
 
 .footer-box {
     line-height: 20px;
@@ -395,6 +404,10 @@
     font-size: 14px;
     line-height: 20px;
     color: white;
+}
+
+.form-input {
+    font-family: 'klavika';
 }
 
 
@@ -419,10 +432,6 @@
         font-size: 29px;
 
     }
-
-    /* .text3 {
-        margin-top: -65%;
-    } */
 
     .image-what-we-give {
         margin-top: -10px;
@@ -480,7 +489,6 @@
     }
 
 
-
     .text-legal {
         margin-top: -48%;
         font-size: 8px;
@@ -494,6 +502,10 @@
         line-height: 7px;
         width: 200px;
 
+    }
+
+    .label-thin {
+        font-size: 13px;
     }
 
     .text-Yasunari {
@@ -584,19 +596,9 @@
         margin-top: 20px;
     }
 
-    .form-Questions {
-        padding-right: 10px;
-        font-family: 'klavika';
-    }
-
-
     .image-book {
-        /* margin-top: 0px;
-        width: 80%;
-        text-align: center; */
-
-        width: 30%;
-        margin-top: -68%;
+        width: 29%;
+        margin-top: -330px;
         margin-left: 70%;
     }
 
@@ -631,22 +633,13 @@
     }
 
     .connect-experts {
-        padding-left: 40px;
         font-size: 20px;
     }
 
     .If-you {
-        padding-left: 40px;
         font-size: 14px;
     }
 
-    .If-you2 {
-        padding-left: 40px;
-    }
-
-    .your-company {
-        padding-left: 40px;
-    }
 
     .form-check-inline {
         padding-left: 60px;
@@ -669,14 +662,6 @@
         border-top: lightgray solid thin;
         border-left: none;
         margin-bottom: 10px;
-    }
-
-    .box-left {
-        padding-left: 0px;
-    }
-
-    .left-box-select {
-        padding-left: 50px;
     }
 
     .footer-custom {
@@ -720,4 +705,15 @@
         padding-top: 104px;
     }
 
+    .input-your-email {
+        font-size: 11px;
+    }
+
+    .If-you2 {
+        font-size: 14px;
+    }
+
+    .left-box-select {
+        font-size: 14px;
+    }
 }

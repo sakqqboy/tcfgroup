@@ -273,6 +273,8 @@
 
 .black {
     color: #000000;
+    font-size: 12px;
+    padding-left: 20px;
 }
 
 .black-1 {
@@ -285,6 +287,11 @@
 .image-Vector2 {
     width: 20px;
 }
+
+.form-dropdown {
+    padding-left: 40px;
+}
+
 
 @media(max-width: 992px) {
     .text-shape {
@@ -359,11 +366,6 @@
     .from-text-media {
         font-size: 25px;
     }
-
-    .alert-info {
-        width: 350px;
-    }
-
 
 
 }
@@ -444,6 +446,10 @@
 
     .media-picture {
         margin-top: 30px;
+    }
+
+    .alert-info {
+        margin-right: 40px;
     }
 
 

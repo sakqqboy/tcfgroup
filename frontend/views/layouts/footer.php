@@ -81,8 +81,8 @@
 			<div class="col-lg-10 col-md-6 col-12" style="margin-top: 20px;">
 				<div class="input-group flex-nowrap">
 					<span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
-					<input type="text" class="form-control" placeholder="Your Email address" aria-label="Your Email address with two button addons">
-					<button class="btn btn-outline-primary" type="button">Notify Me</button>
+					<input type="text" class="form-control input-your-email" placeholder="Your Email address" aria-label="Your Email address with two button addons">
+					<button class="btn btn-primary input-your-email" type="button">Notify Me</button>
 				</div>
 			</div>
 		</div>

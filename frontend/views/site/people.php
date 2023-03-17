@@ -42,10 +42,10 @@ $this->title = 'People';
 
 <div class="col-12 pr12 tcf-type">
     <div class="row">
-        <div class="col-3">
+        <div class="col-md-3 col-5">
             TCF Global People
         </div>
-        <div class="col-3">
+        <div class="col-md-3 col-5">
             <select class="form-select" aria-label="Default select example">
                 <option selected>Bangladesh</option>
                 <option value="1">Brazil</option>

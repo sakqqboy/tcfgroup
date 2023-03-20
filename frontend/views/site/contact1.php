@@ -21,43 +21,30 @@ $this->title = 'contact';
 
 <div class="col-12 pr12 form-range2">
     <div class="row">
+        <div class="col-10">
+            <label for="customRange" class="form-label"></label>
+            <input type="range" class="form-range" min="1" max="5" step="1" id="customRange">
+        </div>
+    </div>
+    <div class="row">
         <div class="col-2">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1"></label>
-            </div>
             <p class="form-font-small">My Information</p>
         </div>
         <div class="col-2">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1"></label>
-            </div>
             <p class="form-font-small">My Experience</p>
         </div>
-        <div class="col-2">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1"></label>
-            </div>
+        <div class="col-3">
             <p class="form-font-small">Application Question</p>
         </div>
         <div class="col-2">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1"></label>
-            </div>
             <p class="form-font-small">Attechments</p>
         </div>
         <div class="col-2">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1"></label>
-            </div>
             <p class="form-font-small">Review & Submit</p>
         </div>
     </div>
 </div>
+
 
 <div class="col-12 name-box-one">
     <div class="col-12 no-name-1">

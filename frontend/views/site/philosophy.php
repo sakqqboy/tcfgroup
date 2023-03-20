@@ -46,7 +46,7 @@ $this->title = 'Philosophy';
 
 <div class="col-12 pr12 mt-50">
     <div class="row">
-        <div class="col-lg-6 col-md-6  col-12 mt-50">
+        <div class="col-lg-6 col-md-6 col-12 mt-50">
             <p class="Why-We-Work"> Why We Work? <img src="<?= Yii::$app->homeUrl ?>image/icon1.png" style="width: 60px;"></p>
             <p class="everyone">I believe that everyone has their own reasons for working as a member of society. For many people, the reason they work is to make a living, to gain experience, to gain knowledge, to earn money, and so on. In other words, you decide to work to “get” something. But we do not work for the purpose of getting something for ourselves. We work to give something of value to society. Working for the purpose of "giving" instead of "getting" means working for others (customers and society) instead of working for yourself. This is because we believe that professionals are those who can give value to society through their customers. </p>
             <p class="YASUNARI">YASUNARI KUNO, CEO, TOKYO CONSULTING GROUP</p>

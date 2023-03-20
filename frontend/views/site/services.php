@@ -16,7 +16,7 @@ $this->title = 'services';
     <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
             <div class="col-12 home-form mt-20">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> WHY DO WE WORK !
+                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> WHY DO WE WORK !
             </div>
             <div class="col-lg-12 home-form-one">
                 <p> Expanding Responsibilities</p>
@@ -32,7 +32,7 @@ $this->title = 'services';
                 <p>So We Receive</p>
             </div>
             <div class="col-12 pt-20 pl-20 form-two">
-                <img src="<?= Yii::$app->homeUrl ?>image/expand.png" style="width: 30px;">Expanding Responsibilities
+                <img src="<?= Yii::$app->homeUrl ?>image/expand.png" style="width: 30px;"> Expanding Responsibilities
             </div>
             <div class="col-12 pt-20 pl-20 form-tree">
                 <p> It's not just about our expertise,</p>
@@ -75,7 +75,7 @@ $this->title = 'services';
     <div class="row mt-20">
         <div class="col-md-4 col-12">
             <div class="col-12 form-services">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> Service at Every Stage
+                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Service at Every Stage
             </div>
             <div class="row mt-40 form-services-page">
                 <div class="col-4">
@@ -344,13 +344,17 @@ $this->title = 'services';
                     </div>
                     <div class="col-12">
                         <div class="row mt-20">
-                            <div class="col-4 left-box-select">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                <label class="form-check-label ml-10" for="inlineRadio1">Legal Entity</label>
+                            <div class="col-5 left-box-select">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label ml-10" for="flexRadioDefault1"> Legal Entity</label>
+                                </div>
                             </div>
-                            <div class="col-4 left-box-select">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                <label class="form-check-label ml-10" for="inlineRadio2">Individual</label>
+                            <div class="col-5 left-box-select">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                    <label class="form-check-label ml-10" for="flexRadioDefault2"> Individual</label>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -21,26 +21,26 @@ $this->title = 'contact';
 
 <div class="col-12 pr12 form-range2">
     <div class="row">
-        <div class="col-10">
-            <label for="customRange" class="form-label"></label>
-            <input type="range" class="form-range" min="1" max="5" step="1" id="customRange">
+        <div class="col-12">
+            <label for="customRange2" class="form-label"></label>
+            <input type="range" class="form-range" min="0" max="4" id="customRange2">
         </div>
     </div>
     <div class="row">
-        <div class="col-2">
-            <p class="form-font-small">My Information</p>
-        </div>
-        <div class="col-2">
-            <p class="form-font-small">My Experience</p>
-        </div>
         <div class="col-3">
-            <p class="form-font-small">Application Question</p>
+            <p class="form-font-small"> My Information</p>
         </div>
-        <div class="col-2">
-            <p class="form-font-small">Attechments</p>
+        <div class="col-3 fr-1">
+            <p class="form-font-small"> My Experience</p>
         </div>
-        <div class="col-2">
-            <p class="form-font-small">Review & Submit</p>
+        <div class="col-3 fr-2">
+            <p class="form-font-small"> Application Question</p>
+        </div>
+        <div class="col-2 fr-3">
+            <p class="form-font-small"> Attechments</p>
+        </div>
+        <div class="col-1 fr-4">
+            <p class="form-font-small"> Review & Submit</p>
         </div>
     </div>
 </div>
@@ -67,7 +67,6 @@ $this->title = 'contact';
         </div>
     </form>
 </div>
-
 
 <div class="col-12 name-box-one">
     <div class="col-6 no-name-1">

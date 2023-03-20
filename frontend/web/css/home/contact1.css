@@ -160,9 +160,34 @@
     margin-top: 30px;
 }
 
+.form-font-small {
+    font-family: 'klavika';
+    font-weight: 100;
+    font-size: 19px;
+
+}
+
+.fr-1 {
+    margin-left: -50px;
+}
+
+.fr-2 {
+    margin-left: -40px;
+}
+
+.fr-3 {
+    margin-left: 20px;
+}
+
+.fr-4 {
+    margin-left: 70px;
+    text-align: end;
+}
+
+
 @media(max-width: 992px) {
     .form-image-upload {
-        margin-left: 400px;
+        margin-left: 600px;
         padding-left: 100px;
         margin-top: -230px;
     }
@@ -184,14 +209,33 @@
 
     .form-image-upload {
         margin-top: 30px;
-        margin-left: -10px;
+        margin-left: -40px;
     }
 
     .select-name-privacy {
-        width: 450px;
+        width: 400px;
     }
 
     .form-font-small {
         font-size: 8px;
     }
+
+    .fr-1 {
+        margin-left: -20px;
+    }
+
+    .fr-2 {
+        margin-left: -20px;
+    }
+
+    .fr-3 {
+        margin-left: 2px;
+    }
+
+    .fr-4 {
+        margin-left: 30px;
+    }
+
+
+
 }

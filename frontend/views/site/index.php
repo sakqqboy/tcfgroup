@@ -234,11 +234,11 @@ $this->title = 'TCFGROUP';
                     </div>
                     <div class="col-12">
                         <div class="row mt-20">
-                            <div class="col-4 left-box-select">
+                            <div class="col-5 left-box-select">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                                 <label class="form-check-label ml-10" for="inlineRadio1">Legal Entity</label>
                             </div>
-                            <div class="col-4 left-box-select">
+                            <div class="col-5 left-box-select">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                                 <label class="form-check-label ml-10" for="inlineRadio2">Individual</label>
                             </div>

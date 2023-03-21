@@ -521,8 +521,10 @@
     .button-contact {
         margin-top: -10px;
         font-size: 8px;
-        /* line-height: 10px; */
         font-family: 'klavika';
+        border-radius: 4px;
+        width: 80px;
+        height: 25px;
     }
 
 

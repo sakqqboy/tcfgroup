@@ -55,6 +55,8 @@
 
 .form-input-detail {
     padding-left: 40px;
+    margin-top: 30px;
+    font-size: 16px;
 }
 
 .form-label-type {
@@ -64,15 +66,16 @@
 }
 
 .select-name-dis {
+    margin-top: 30px;
     padding-left: 40px;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 700;
     font-family: 'klavika';
 }
 
 .select-name-privacy {
     font-family: 'klavika';
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 200;
     padding-left: 40px;
     width: 700px;
@@ -91,6 +94,7 @@
     padding-left: 20px;
     font-size: 26px;
     font-family: 'klavika';
+    font-weight: 700;
 }
 
 .text-drop {
@@ -149,15 +153,17 @@
 }
 
 .form-image-upload {
-    margin-top: -190px;
+    margin-top: -80px;
+    padding-left: 50px;
 }
 
 .line-back,
 .name-text-applying,
 .font-name-one,
-.form-input-detail,
 .name-box-one {
     margin-top: 30px;
+    font-size: 16px;
+
 }
 
 .form-font-small {
@@ -187,9 +193,9 @@
 
 @media(max-width: 992px) {
     .form-image-upload {
-        margin-left: 600px;
-        padding-left: 100px;
-        margin-top: -230px;
+        margin-left: 400px;
+        padding-left: 90px;
+        margin-top: -300px;
     }
 
 }

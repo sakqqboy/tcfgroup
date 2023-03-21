@@ -55,7 +55,7 @@ $this->title = 'contact';
     </div>
 </div>
 
-<div class="col-6 form-input-detail">
+<div class="col-lg-6 col-md-6 col-11 form-input-detail">
     <form>
         <div class="mb-3">
             <label for="exampleInput" class="form-label form-label-type">How Did You Hear About Us? <span class="moon">*</span></label>
@@ -76,14 +76,17 @@ $this->title = 'contact';
 
 <div class="col-12 pr12 form-input-detail">
     <div class="row">
-        <div class="col-6">
+        <div class="col-lg-6 col-md-6 col-11">
             <div class="mb-3">
                 <label for="exampleInput" class="form-label form-label-type">First Name (Fast Name & Last Name)<span class="moon">*</span></label>
                 <input type="text" class="form-control" id="exampleInput" aria-describedby="Help">
             </div>
-            <div class="mb-3">
-                <label for="birthdaytime" class="form-label form-label-type">Date of Birth<span class="moon">*</span></label>
-                <p><input type="datetime-local" id="birthdaytime" name="birthdaytime"></p>
+
+            <div class="col-lg-12 col-md-12 col-12 text-start">
+                <div class="mb-3">
+                    <label for="birthdaytime" class="form-label form-label-type">Date of Birth<span class="moon">*</span></label>
+                    <p><input type="datetime-local" class="form-control" id="exampleinputbirthdaytime" name="birthdaytime"></p>
+                </div>
             </div>
         </div>
         <div class="offset-1 col-lg-5 col-md-6 col-12 form-image-upload">
@@ -106,7 +109,7 @@ $this->title = 'contact';
     </div>
 </div>
 
-<div class="col-6  form-input-detail">
+<div class="col-lg-6 col-md-6 col-11 form-input-detail">
     <form>
         <div class="mb-3">
             <label for="exampleInput" class="form-label form-label-type">Address Line 1<span class="moon">*</span></label>
@@ -130,7 +133,7 @@ $this->title = 'contact';
     </div>
 </div>
 
-<div class="col-6  form-input-detail">
+<div class="col-lg-6 col-md-6 col-11  form-input-detail">
     <form>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label form-label-type">Email<span class="moon">*</span></label>

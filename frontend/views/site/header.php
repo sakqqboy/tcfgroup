@@ -9,7 +9,8 @@
          <div class="collapse navbar-collapse mt-3" id="navbarScroll">
              <ul class="navbar-nav me-auto  navbar-nav-scroll" style="margin: top 40px;padding-left: 150px;font-family:'klavika';font-size: 18px;line-height:35px;">
                  <li class="nav-item">
-                     <a href="<?= Yii::$app->homeUrl ?>site/philosophy" class="nav-link">Philosophy</a>
+                     <a href="<?= Yii::$app->homeUrl ?>site/philosophy" class="nav-link">Philosophy</a>f
+
                  </li>
                  <li class="nav-item">
                      <a href="<?= Yii::$app->homeUrl ?>site/services" class="nav-link">Services</a>

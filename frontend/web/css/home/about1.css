@@ -152,6 +152,65 @@
     font-weight: 300;
 }
 
+@media(max-width: 1200px) {
+
+    .text-Our {
+        margin-top: -380px;
+    }
+
+    .text-vision {
+        margin-top: -370px;
+
+    }
+
+    .vlog-1 {
+        margin-top: -250px;
+    }
+
+    .title-color {
+        margin-top: -150px;
+
+    }
+
+    .box-data-1 {
+        margin-top: -280px;
+    }
+
+    .box-data-2 {
+        margin-top: -250px;
+    }
+
+    .box-data-3 {
+        margin-top: -210px;
+    }
+
+    .Block-1 {
+        margin-top: -290px;
+    }
+
+    .Block-2 {
+        margin-top: -260px;
+    }
+
+    .Block-3 {
+        margin-top: -220px;
+    }
+
+    .Type-home-page-one {
+        margin-top: -290px;
+    }
+
+    .Type-home-page-two {
+        margin-top: -220px;
+        line-height: 15px;
+    }
+
+    .padding-box {
+        margin-top: 20px;
+    }
+
+}
+
 @media(max-width: 992px) {
     .image-Vision-page {
         margin-top: 90px;
@@ -182,7 +241,6 @@
         padding-left: 290px;
 
     }
-
 
     .box-data-1 {
         margin-top: -190px;

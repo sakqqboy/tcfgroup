@@ -40,11 +40,11 @@
     font-weight: bold;
 }
 
-/* .social-icon {
-    width: 20px;
-    height: 20px;
-    color: gray;
-} */
+
+
+.button-contact {
+    font-family: 'klavika';
+}
 
 .info-tokyo {
     font-size: 13px;
@@ -101,7 +101,6 @@
 
 .col-background {
     background-color: #031022;
-    /* margin-top: 8%; */
 }
 
 .form-Questions {

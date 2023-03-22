@@ -82,6 +82,7 @@ $this->title = 'People';
     <img src="<?= Yii::$app->homeUrl ?>image/CEO.png" class="image-ceo">
 </div>
 
+
 <div class="col-12 title-culture">
     <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> OUR WORK CULTURE
 </div>

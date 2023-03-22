@@ -18,6 +18,7 @@ $this->title = 'Career';
     <div class="col-10 text-shape">
         RISE TO THE CHALLENGE, <br>
         SHAPE THE FUTURE <br>
+        <button type="button" class="btn btn-primary Explore-Job">Explore Job</button>
     </div>
 </div>
 

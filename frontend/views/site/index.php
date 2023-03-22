@@ -269,7 +269,7 @@ $this->title = 'TCFGROUP';
                     <div class="row">
                         <div class="col-6 text-start">
                             <label for="exampleInputEmail" class="form-label label-thin"> Phone Number<span class="moon">*</span></label>
-                            <input type="text" class="form-control" placeholder="+880" aria-label="Phone">
+                            <input type="number" class="form-control" placeholder="+880" aria-label="Phone">
                         </div>
                         <div class="col-6">
                             <label for="exampleInputEmail" class="form-label label-thin"> Your Business<span class="moon">*</span></label>
@@ -299,22 +299,22 @@ $this->title = 'TCFGROUP';
                     <div class="col-6 mt-4 text-end">
                         <button type="button" class="btn btn-primary button-get">Get Free Appointment</button>
                     </div>
-                    <div class="col-6 text-start mt-4">
+                    <div class="col-4 text-start mt-4">
                         <div class="contact-social mb-2">Whatsapp</div>
                         <p class="info-tokyo"><i class="fa fa-whatsapp" aria-hidden="true"></i> inquarrytcf</p>
                     </div>
-                    <div class="col-6 text-end mt-4">
+                    <div class="col-8 text-end mt-4">
                         <div class="contact-social mb-2">Email</div>
-                        <p class="info-tokyo">f-info@tokyoconsultinggroup.com<i class="fa fa-envelope" aria-hidden="true"></i></p>
+                        <p class="info-tokyo">f-info@tokyoconsultinggroup.com <i class="fa fa-envelope" aria-hidden="true"></i></p>
                     </div>
-                    <div class="col-6 text-start mt-4">
+                    <div class="col-4 text-start mt-4">
                         <div class="contact-social mb-2">Skype</div>
                         <p class="info-tokyo"><i class="fa fa-skype" aria-hidden="true"></i> inquarrytcf</p>
 
                     </div>
-                    <div class="col-6 text-end mt-4">
+                    <div class="col-8 text-end mt-4">
                         <div class="contact-social mb-2">Phone</div>
-                        <p class="info-tokyo">+090-111-222<i class="fa fa-phone" aria-hidden="true"></i></p>
+                        <p class="info-tokyo">+090-111-222 <i class="fa fa-phone" aria-hidden="true"></i></p>
                     </div>
                 </div>
             </div>

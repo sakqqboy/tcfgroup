@@ -182,7 +182,7 @@
 
 .text-legal {
     /* margin-top: 100px; */
-    font-size: 33px;
+    font-size: 28px;
     line-height: 40px;
     font-weight: 700;
     font-family: 'klavika';
@@ -244,6 +244,7 @@
 
 .button-text5 {
     margin-top: 40px;
+    font-family: 'klavika';
 }
 
 .button-7 {
@@ -339,7 +340,7 @@
 
 .no-underline {
     text-decoration: none;
-    color: #0B58A4;
+    color: #0B4A8E;
 }
 
 .txt-stay {

@@ -1,0 +1,179 @@
+.image-asdsadasdasd1 {
+    width: 100%;
+    margin-top: 90px;
+}
+
+.image-together {
+    width: 623px;
+    position: absolute;
+    padding-left: 40px;
+    margin-top: -430px;
+}
+
+.title-new1 {
+    text-transform: uppercase;
+    letter-spacing: -0.48px;
+    font-family: 'klavika';
+    line-height: 26px;
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 50px;
+    padding-left: 40px;
+}
+
+.image-Asset {
+    width: 100%;
+    padding-left: 40px;
+}
+
+.image-Asset-2 {
+    width: 100%;
+}
+
+.detail-asset {
+    padding-top: 190px;
+    padding-left: 40px;
+    font-family: 'klavika';
+    font-weight: 100;
+    font-size: 14px;
+    width: 600px;
+    text-align: justify;
+}
+
+.accordion-table {
+    padding-top: 130px;
+    margin-left: 100px;
+    padding-right: 50px;
+    padding-left: 80px;
+}
+
+.detail-text-sevices {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'klavika';
+}
+
+.button-name-Schedule {
+    font-family: 'klavika';
+}
+
+.image-image6 {
+    width: 100%;
+}
+
+.image-image7 {
+    width: 100%;
+}
+
+.title-new2 {
+    position: absolute;
+    letter-spacing: -0.48px;
+    font-family: 'klavika';
+    color: white;
+    margin-top: -650px;
+    line-height: 26px;
+    font-weight: 700;
+    font-size: 24px;
+    padding-left: 40px;
+}
+
+.image-account1 {
+    width: 60px;
+}
+
+.title-account1 {
+    text-align: justify;
+    padding-left: 40px;
+    font-family: 'Klavika';
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.picture-account {
+    padding-left: 40px;
+    font-family: 'klavika';
+}
+
+.all-picture-account {
+    position: absolute;
+    margin-top: -670px;
+    color: white;
+    padding-left: 40px;
+}
+
+.text-why {
+    text-transform: uppercase;
+    letter-spacing: -0.48px;
+    font-family: 'klavika';
+    line-height: 26px;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.download-button {
+    background-color: #265AA7;
+    font-size: 15px;
+    height: 50px;
+    margin-top: 40px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-family: 'klavika';
+}
+
+@media(max-width: 768px) {
+    .title-new1 {
+        font-size: 20px;
+    }
+
+    .image-together {
+        position: absolute;
+        margin-top: -150px;
+        width: 250px;
+    }
+
+    .detail-asset {
+        padding-top: 50px;
+    }
+
+    .accordion-table {
+        padding-top: 10px;
+        margin-left: -50px;
+        padding-right: 10px;
+    }
+
+    .detail-text-sevices {
+        padding-left: 40px;
+    }
+
+    .all-picture-account {
+        margin-top: -230px;
+
+    }
+
+    .text-why {
+        font-size: 15px;
+    }
+
+    .image-account1 {
+        width: 20px;
+    }
+
+    .title-account1 {
+        width: 190px;
+        font-size: 7px;
+        line-height: 8px;
+    }
+
+    .picture-account {
+        font-size: 9px;
+    }
+
+    .download-button {
+        height: 30px;
+        font-size: 10px;
+        width: 220px;
+        margin-top: 10px;
+    }
+
+}

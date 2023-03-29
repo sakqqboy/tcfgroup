@@ -22,6 +22,7 @@ class AppAsset extends AssetBundle
         'css/home/contact1.css',
         'css/layout/layout.css',
         'css/layout/font.css',
+        'css/home/country/home1.css',
 
     ];
     public $js = [];

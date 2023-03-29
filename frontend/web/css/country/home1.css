@@ -1,0 +1,228 @@
+.image-TCG-1 {
+    margin-top: 90px;
+    width: 100%;
+}
+
+.title-Trending {
+    padding-left: 40px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-family: 'klavika';
+    font-weight: 700;
+}
+
+.table-card {
+    font-size: 12px;
+    width: 14rem;
+
+}
+
+.card-body {
+    background: #EFF8FF;
+    border-radius: 8px;
+}
+
+.alert-secondary {
+    width: 17rem;
+    height: 9.9rem;
+    font-family: 'klavika';
+    font-weight: 100;
+    font-size: 15px;
+    margin-top: -110px;
+    margin-left: 80px;
+
+}
+
+.table-calendar {
+    color: #265AA7;
+    font-family: 'Klavika';
+    font-weight: 500;
+}
+
+
+.title-import {
+    font-family: 'klavika';
+    font-size: 28px;
+    width: 500px;
+    text-transform: uppercase;
+}
+
+.title-zero {
+    font-family: 'klavika';
+    font-size: 14px;
+    width: 500px;
+    font-weight: 100;
+}
+
+.circle-icon {
+    color: rgb(27, 96, 166);
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.card-home1 {
+    font-size: 15px;
+    font-weight: 700;
+    padding-top: 20px;
+    font-family: 'klavika';
+}
+
+.card-home2 {
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 100;
+    font-family: 'klavika';
+}
+
+
+.title-bangladesh {
+    font-family: 'klavika';
+    font-size: 28px;
+    line-height: 30px;
+    color: #074471;
+    font-weight: 300;
+    padding-left: 40px;
+}
+
+.img-woman {
+    width: 550px;
+    margin-left: -210px;
+    padding-top: 60px;
+}
+
+.img-button {
+    width: 60px;
+}
+
+.title-topic {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'klavika';
+}
+
+.button-register {
+    font-size: 14px;
+    font-family: 'klavika';
+}
+
+.title-sign-in {
+    padding-top: 10px;
+    font-size: 13px;
+    font-family: 'klavika';
+    font-weight: 100;
+}
+
+.title-join {
+    font-family: 'klavika';
+    font-weight: 100;
+}
+
+.calendar-button {
+    border-radius: 22px;
+}
+
+
+@media(max-width: 992px) {
+    .image-TCG-1 {
+        margin-top: 90px;
+    }
+
+    .table-card {
+        width: 280px;
+
+    }
+
+    .title-import {
+        width: 450px;
+        font-size: 24px;
+    }
+
+    .title-zero {
+        width: 400px;
+    }
+
+    .title-bangladesh {
+        font-size: 22px;
+    }
+
+
+    .img-woman {
+        width: 400px;
+        padding-left: 40px;
+    }
+
+    .img-button {
+        width: 40px;
+    }
+
+    .alert-secondary {
+        margin-left: 20px;
+        margin-top: -70px;
+        line-height: 5px;
+        width: 12rem;
+        height: 7rem;
+        font-size: 10px;
+    }
+
+}
+
+@media(max-width: 768px) {
+    .image-TCG-1 {
+        margin-top: 90px;
+    }
+
+    .table-card {
+        width: 210px;
+    }
+
+    .title-import {
+        padding-left: 20px;
+        width: 450px;
+    }
+
+    .title-zero {
+        width: 390px;
+        padding-left: 20px;
+    }
+
+    .circle-icon {
+        padding-left: 20px;
+    }
+
+    .title-bangladesh {
+        font-size: 22px;
+    }
+
+    .img-woman {
+        width: 400px;
+        padding-left: 40px;
+    }
+
+    .img-button {
+        width: 40px;
+    }
+
+    .title-bangladesh {
+        font-size: 22px;
+        padding-left: 40px;
+    }
+
+    .alert-secondary {
+        width: 14rem;
+        height: 8rem;
+        margin-left: 30px;
+        line-height: 15px;
+    }
+
+    .title-join {
+        padding-left: 40px;
+    }
+
+    .title-topic {
+        padding-left: 40px;
+    }
+
+    .accordion {
+        padding-left: 40px;
+    }
+}

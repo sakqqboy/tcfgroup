@@ -36,7 +36,7 @@ $this->title = 'TCFGROUP';
             <div class="col-lg-6 col-12">
                 <div class="row">
                     <div class="col-6 country-index">
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/Bangladesh.png" class="img-country"> Bangladesh</p>
+                        <p><a href="<? Yii::$app->homeUrl ?>site-country/index" class="no-underline"><img src="<?= Yii::$app->homeUrl ?>image/Bangladesh.png" class="img-country"> Bangladesh</a></p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/brazil.png" class="img-country"> Brazil</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/combodia.png" class="img-country"> Combodia</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/china.png" class="img-country"> China</p>

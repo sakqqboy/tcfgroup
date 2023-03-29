@@ -239,7 +239,7 @@ $this->title = 'services';
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-6">
                     <div class="col-12 text-the-best">
-                        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> THE BEST OF TCF
+                        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle.png" class="image mr-1"> THE BEST OF TCF
                     </div>
                     <div class="col-12 mt-10 page-1">
                         <img src="<?= Yii::$app->homeUrl ?>image/account.png" class="image-account"> Speed & Quality

@@ -1,0 +1,65 @@
+.seccondary-background {
+    margin-top: 90px;
+    background-color: #EBF1F5;
+}
+
+.img-webinar {
+    width: 600px;
+    margin-top: 90px;
+    padding-left: 80px;
+}
+
+.page-webinar {
+    font-size: 24px;
+    font-family: 'klavika';
+    width: 450px;
+    padding-top: 80px;
+}
+
+.page-webinar-home1 {
+    font-size: 15px;
+    font-weight: 100;
+    width: 450px;
+    font-family: 'klavika';
+}
+
+.img-calendar {
+    width: 40px;
+}
+
+.img-QA,
+.img-time {
+    width: 40px;
+    margin-left: 90px;
+}
+
+.image8 {
+    width: 280px;
+    margin-left: 205px;
+    margin-top: -30px;
+}
+
+.form-search1 {
+    font-family: 'klavika';
+}
+
+.img-video {
+    width: 200px;
+    padding-left: 40px;
+}
+
+.img-star {
+    width: 20px;
+}
+
+.text-art {
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 20px;
+}
+
+.font-mins {
+    font-family: 'klavika';
+    font-weight: 100;
+}

@@ -68,7 +68,12 @@ AppAsset::register($this);
 
     <main role="main" class="flex-shrink-0">
         <?php
-        echo $this->render("@frontend/views/site/header")
+        if (Yii::$app->controller->id == 'site-country') {
+
+            echo $this->render("@frontend/views/site-country/header");
+        } else {
+            echo $this->render("@frontend/views/site/header");
+        }
         ?>
         <?= $content ?>
     </main>

@@ -11,6 +11,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use Exception;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
@@ -47,6 +48,10 @@ class SiteCountryController extends Controller
     {
         return $this->render('index');
     }
+    public function actionNewsletter()
+    {
+        return $this->render('newsletter');
+    }
     public function actionServices()
     {
         return $this->render('services');
@@ -54,5 +59,9 @@ class SiteCountryController extends Controller
     public function actionWebinar()
     {
         return $this->render('webinar');
+    }
+    public function actionCareer()
+    {
+        return $this->render('career');
     }
 }

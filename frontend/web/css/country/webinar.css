@@ -63,3 +63,60 @@
     font-family: 'klavika';
     font-weight: 100;
 }
+
+.form-webinar {
+    padding-left: 600px;
+}
+
+.title-always {
+    font-family: 'klavika';
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.img-minnie,
+.img-Merryny,
+.img-veona,
+.img-paseka,
+.img-cherice {
+    width: 50px;
+    border-radius: 10px;
+}
+
+.img-ceo {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.img-google {
+    width: 60px;
+}
+
+.account-signin {
+    font-family: 'klavika';
+    color: #5D5A6F;
+    margin-top: 20px;
+}
+
+.sign-in {
+
+    font-weight: 500;
+    color: #265AA7;
+}
+
+.form-contact-webinar {
+    font-family: 'klavika';
+    color: black;
+}
+
+.form-contact-name {
+    color: black;
+}
+
+.google {
+    padding-left: 0px;
+}
+
+.LinkeIn {
+    padding-left: 0px;
+}

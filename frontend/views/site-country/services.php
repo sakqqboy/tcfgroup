@@ -271,58 +271,6 @@ $this->title = 'services';
     </div>
 </div>
 
-<!-- <div class="col-12 pr12 all-picture-account">
-    <div class="row">
-        <div class="col-12 text-why">
-            <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> WHY TO CHOOSE US
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-            <div class="col-12 picture-account">
-                <img src="<?= Yii::$app->homeUrl ?>img/account1.png" class="image-account1"> Speed & Quality
-            </div>
-            <div class="col-lg-10 col-5 title-account1">
-                Accuracy in work is of the utmost importance in any profession. Whether it is a simple task or a complex project, making sure that everything is done correctly is essential for success. This means paying attention to detail.
-            </div>
-            <div class="col-12 picture-account">
-                <img src="<?= Yii::$app->homeUrl ?>img/account2.png" class="image-account1"> Composite Consulting Services
-            </div>
-            <div class="col-lg-10 title-account1">
-                a comprehensive consulting firm that offers a range of services related to human resources, accounting, tax, and VAT. This is a valuable asset for businesses.
-            </div>
-            <div class="col-12 picture-account">
-                <img src="<?= Yii::$app->homeUrl ?>img/account3.png" class="image-account1"> Independent Business Consultant
-            </div>
-            <div class="col-lg-10 title-account1">
-                a comprehensive consulting firm that offers a range of services related to human resources, accounting, tax, and VAT. This is a valuable asset for businesses that are looking for comprehensive support in these areas, as they can receive all of their consulting needs from one reliable source.
-            </div>
-            <div class="col-lg-10 col-7 mt-50 pl-40">
-                <div class="alert alert-primary">
-                    <h6 class="alert-heading"> Download Company Profile <a href="#"><i class="fa fa-download" aria-hidden="true"></i></a></h6>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-12 mt-20">
-            <div class="col-12 picture-account">
-                <img src="<?= Yii::$app->homeUrl ?>img/account4.png" class="image-account1"> Development Partner
-            </div>
-            <div class="col-lg-10 title-account1">
-                to being a development partner for its clients, rather than just a service provider. This means that we take a long-term, holistic approach to consulting and work closely with our clients to support their growth and development
-            </div>
-            <div class="col-12 picture-account">
-                <img src="<?= Yii::$app->homeUrl ?>img/account5.png" class="image-account1"> Secured & Trusted
-            </div>
-            <div class="col-lg-10 title-account1">
-                our clients can feel confident that their data and projects are being handled with the utmost care and confidentiality. We have implemented strict security protocols and safeguards to protect our clients' data.
-            </div>
-            <div class="col-12 picture-account">
-                <img src="<?= Yii::$app->homeUrl ?>img/account6.png" class="image-account1"> Commitment of Deadline
-            </div>
-            <div class="col-lg-10 title-account1">
-                our clients can feel confident that their data and projects are being handled with the utmost care and confidentiality. We have implemented strict security protocols and safeguards to protect our clients' data, and we are committed to maintaining the highest standards of professionalism.
-            </div>
-        </div>
-    </div>
-</div> -->
 
 <div class="col-12">
     <div class="col-12 connect-experts mt-40">

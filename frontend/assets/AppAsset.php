@@ -26,6 +26,9 @@ class AppAsset extends AssetBundle
         'css/country/newsletter.css',
         'css/country/services.css',
         'css/country/webinar.css',
+        'css/country/taxassessment.css',
+        'css/country/about2.css',
+        'css/country/resources.css',
 
 
     ];

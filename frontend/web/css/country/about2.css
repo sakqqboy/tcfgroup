@@ -1,0 +1,41 @@
+.img-Grow-torgther {
+    width: 100%;
+    margin-top: 90px;
+}
+
+.page-about2 {
+    position: absolute;
+    margin-top: -350px;
+    font-family: 'Klavika';
+    font-weight: 300;
+    font-size: 52px;
+    width: 400px;
+    line-height: 100%;
+    color: #0B58A4;
+    padding-left: 40px;
+}
+
+.about-country {
+
+    background: #0E1727;
+    color: white;
+}
+
+.about-country1 {
+    font-family: 'Klavika';
+    font-weight: 100;
+    font-size: 13px;
+    line-height: 150%;
+    margin-top: 50px;
+    padding-left: 40px;
+    width: 500px;
+
+}
+
+.img-11 {
+    width: 100%;
+}
+
+.img-13 {
+    width: 100%;
+}

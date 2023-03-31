@@ -22,8 +22,12 @@ class AppAsset extends AssetBundle
         'css/home/contact1.css',
         'css/layout/layout.css',
         'css/layout/font.css',
-        'css/home/country/home1.css',
-
+        'css/country/newsletter.css',
+        'css/country/services.css',
+        'css/country/webinar.css',
+        'css/country/taxassessment.css',
+        'css/country/about2.css',
+        'css/country/resources.css',
     ];
     public $js = [];
     public $depends = [

@@ -1,8 +1,502 @@
 .img-1 {
-    margin-top: 90px;
     width: 100%;
+    margin-top: 90px;
 }
 
 .img-file {
     width: 40px;
+}
+
+.sletter-home {
+    position: absolute;
+    margin-top: -500px;
+}
+
+.sletter-text-Effective {
+    font-family: 'klavika';
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.sletter-text-Resolving {
+    font-family: 'Tiempos Headline';
+    font-weight: 300;
+    font-size: 80px;
+    line-height: 80px;
+    width: 800px;
+    color: #414042;
+}
+
+.sletter-text-corporate {
+    font-size: 16px;
+    font-family: 'klavika';
+    font-weight: 100;
+}
+
+.read-more {
+    font-size: 16px;
+    font-family: 'klavika';
+    font-weight: 700;
+    color: #0B58A4;
+}
+
+.sign-up {
+    font-size: 16px;
+    font-family: 'klavika';
+    font-weight: 700;
+    color: #0B58A4;
+}
+
+.title-our-newsletter {
+    font-size: 16px;
+    font-family: 'klavika';
+    font-weight: 100;
+    color: #0B58A4;
+}
+
+.btn-newsletter-signup {
+    padding-left: 40px;
+}
+
+/* .sletter-icon {
+    padding-left: 1200px;
+    font-size: 30px;
+    margin-top: -20px;
+} */
+
+.img-hunter {
+    width: 100%
+}
+
+.title-Human {
+    margin-top: 20px;
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    color: #0B58A4;
+
+}
+
+.title-Labor {
+    font-family: 'Klavika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 34px;
+    text-transform: uppercase;
+    color: #414042;
+}
+
+.title-Human1 {
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    color: #0B58A4;
+
+}
+
+.title-Human2 {
+    padding-top: 20px;
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    color: #0B58A4;
+
+}
+
+.title-Human3 {
+    padding-top: 40px;
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    color: #0B58A4;
+
+}
+
+.title-IAS1 {
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #414042;
+}
+
+.title-IAS2 {
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #414042;
+}
+
+.title-IAS3 {
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #414042;
+}
+
+.title-carbon1 {
+    font-family: 'Klavika';
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 150%;
+    color: #212121;
+}
+
+.title-carbon2 {
+    font-family: 'Klavika';
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 150%;
+    color: #212121;
+}
+
+.title-carbon3 {
+    font-family: 'Klavika';
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 150%;
+    color: #212121;
+}
+
+
+
+.title-import1 {
+    font-family: 'Klavika';
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 150%;
+    width: 500px;
+    color: #212121;
+}
+
+.img-daoudi {
+    width: 300px;
+}
+
+.img-2 {
+    width: 100%;
+}
+
+.title-1 {
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    width: 230px;
+    text-transform: uppercase;
+    color: #414042;
+}
+
+.title-2 {
+    font-family: 'Klavika';
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 150%;
+    width: 250px;
+    color: #212121;
+}
+
+.img-book {
+    width: 100%;
+    margin-top: -220px;
+}
+
+@media(max-width: 992px) {
+    .img-1 {
+        margin-top: 90px;
+    }
+
+    .sletter-home {
+        margin-top: -620px;
+    }
+
+    .sletter-text-Effective {
+        margin-top: 300px;
+        font-size: 15px;
+        width: 400px;
+    }
+
+    .sletter-text-Resolving {
+        width: 450px;
+        font-size: 40px;
+        line-height: 40px;
+        margin-top: -10px;
+    }
+
+    .sletter-text-corporate {
+        font-size: 11px;
+        line-height: 13px;
+        width: 400px;
+        padding-top: 15px;
+
+    }
+
+    .read-more {
+        font-size: 13px;
+    }
+
+    .sletter-icon {
+        padding-left: 790px;
+        margin-top: -80px;
+        font-size: 25px;
+    }
+
+    .title-zero {
+        font-size: 12px;
+        margin-top: -25px;
+    }
+
+    .circle-icon {
+        margin-top: -20px;
+    }
+
+    .title-import1 {
+        width: 350px;
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .img-daoudi {
+        width: 100%;
+    }
+
+
+    .title-Human1 {
+        line-height: 20px;
+    }
+
+    .title-IAS1 {
+        font-size: 15px;
+        margin-top: -5px;
+        line-height: 15px;
+    }
+
+    .title-carbon1 {
+        font-size: 9px;
+        line-height: 10px;
+    }
+
+    .title-Human2 {
+        margin-top: 55px;
+    }
+
+    .title-IAS2 {
+        font-size: 15px;
+        margin-top: -10px;
+        line-height: 15px;
+    }
+
+    .title-carbon2 {
+        font-size: 9px;
+        line-height: 10px;
+        margin-top: -10px;
+    }
+
+    .title-Human3 {
+        margin-top: 40px;
+    }
+
+    .title-IAS3 {
+        font-size: 13px;
+        margin-top: -10px;
+        line-height: 15px;
+    }
+
+    .title-carbon3 {
+        font-size: 8px;
+        line-height: 10px;
+        margin-top: -10px;
+    }
+
+    .title-Labor {
+        font-size: 28px;
+    }
+
+    .button-newsletter-explore {
+        font-size: 10px;
+    }
+
+    .button-newsletter-right {
+        font-size: 10px;
+    }
+
+    .title-our-newsletter,
+    .sign-up {
+        font-size: 12px;
+        margin-top: 8px;
+        line-height: 15px;
+    }
+
+    .title-1 {
+        width: 150px;
+    }
+
+    .title-2 {
+        width: 150px;
+    }
+
+    .img-2 {
+        width: 100%;
+    }
+
+    .img-book {
+        width: 30%;
+        margin-left: 520px;
+    }
+
+    .sletter-icon {
+        font-size: 15px;
+        padding-left: 680px;
+        margin-top: -40px;
+
+    }
+
+}
+
+
+@media(max-width: 768px) {
+    .img-1 {
+        margin-top: 90px;
+    }
+
+    .sletter-home {
+        margin-top: -510px;
+    }
+
+    .sletter-text-Effective {
+        margin-top: 290px;
+        font-size: 11px;
+        width: 250px;
+    }
+
+    .sletter-text-Resolving {
+        font-size: 16px;
+        width: 200px;
+        line-height: 20px;
+        margin-top: -10px;
+        font-weight: 700;
+    }
+
+    .sletter-text-corporate {
+        font-size: 8px;
+        line-height: 8px;
+        width: 240px;
+        margin-top: 5px;
+    }
+
+    .read-more {
+        font-size: 8px;
+    }
+
+    .button-newsletter-explore {
+        font-size: 8px;
+        margin-top: -40px;
+    }
+
+    .button-newsletter-right {
+        font-size: 8px;
+        margin-left: 120px;
+        margin-top: -89px;
+        width: 80px;
+    }
+
+    .title-our-newsletter {
+        margin-top: -35px;
+        font-size: 9px;
+        line-height: 10px;
+        width: 240px;
+    }
+
+    .sign-up {
+        font-size: 8px;
+    }
+
+    .title-Trending {
+        padding-left: 20px;
+    }
+
+    .img-hunter {
+        padding-left: -10px;
+        padding-right: 20px;
+    }
+
+    .img-daoudi {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .title-IAS {
+        font-size: 15px;
+        padding-top: -10px;
+    }
+
+    .title-carbon1 {
+        font-size: 10px;
+    }
+
+    .img-2 {
+        width: 100%;
+    }
+
+    .title-Human1 {
+        padding-top: 30px;
+    }
+
+    .title-Human2 {
+        font-size: 9px;
+        padding-top: 20px;
+    }
+
+    .title-Human3 {
+        padding-top: 50px;
+    }
+
+    .title-1 {
+        font-size: 10px;
+        width: 90px;
+        line-height: 15px;
+    }
+
+    .title-2 {
+        font-size: 10px;
+        width: 90px;
+        line-height: 10px;
+        text-align: justify;
+    }
+
+    .img-book {
+        width: 30%;
+        margin-left: 320px;
+        margin-top: -310px;
+    }
+
+    .sletter-icon {
+        padding-left: 380px;
+        margin-top: -35px;
+        font-size: 12px;
+    }
+
+    .title-import1 {
+        width: 420px;
+    }
+
+
 }

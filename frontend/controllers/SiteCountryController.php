@@ -64,4 +64,16 @@ class SiteCountryController extends Controller
     {
         return $this->render('career');
     }
+    public function acionNewsletterTaxassessment()
+    {
+        return $this->render('newslettertaxassessment');
+    }
+    public function actionAbout2()
+    {
+        return $this->render('about2');
+    }
+    public function actionResources()
+    {
+        return $this->render('resources');
+    }
 }

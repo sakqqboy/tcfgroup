@@ -52,10 +52,22 @@
     font-family: 'klavika';
     font-weight: 100;
     color: #0B58A4;
+    margin-top: 20px;
+}
+
+.border-redius {
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: #CAECFF;
 }
 
 .btn-newsletter-signup {
     padding-left: 40px;
+}
+
+.img-height {
+    width: 180px;
+    margin-left: -15px;
 }
 
 /* .sletter-icon {

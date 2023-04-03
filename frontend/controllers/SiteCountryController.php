@@ -60,10 +60,6 @@ class SiteCountryController extends Controller
     {
         return $this->render('webinar');
     }
-    public function actionCareer()
-    {
-        return $this->render('career');
-    }
     public function acionNewsletterTaxassessment()
     {
         return $this->render('newslettertaxassessment');
@@ -71,6 +67,10 @@ class SiteCountryController extends Controller
     public function actionAbout2()
     {
         return $this->render('about2');
+    }
+    public function actionContact2()
+    {
+        return $this->render('contact2');
     }
     public function actionResources()
     {

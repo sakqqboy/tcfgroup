@@ -16,7 +16,7 @@
 }
 
 .about-country {
-
+    width: 100%;
     background: #0E1727;
     color: white;
 }
@@ -32,10 +32,110 @@
 
 }
 
+.title-business {
+    padding-left: 40px;
+    font-family: 'klavika';
+    font-weight: 100;
+    margin-top: 50px;
+}
+
 .img-11 {
-    width: 100%;
+    width: 150%;
 }
 
 .img-13 {
     width: 100%;
+}
+
+.img-country1 {
+    width: 30px;
+}
+
+.country-about {
+    padding-left: 50px;
+}
+
+.title-the {
+    padding-left: 40px;
+    margin-top: 50px;
+    font-weight: 700;
+    font-family: 'Klavika';
+    font-size: 55px;
+    line-height: 104.52%;
+    text-align: right;
+    text-transform: uppercase;
+    margin-top: 150px;
+}
+
+.img-icon1 {
+    width: 60px;
+}
+
+.title-year {
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.title-ESTABLISHMENT {
+    font-family: 'Klavika';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: -180px;
+    padding-left: 100px;
+}
+
+.img-14 {
+
+    width: 20%;
+    margin-top: -80px;
+}
+
+.title-growth {
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 104.52%;
+    text-transform: uppercase;
+    margin-top: -180px;
+    padding-left: 100px;
+}
+
+.title-private {
+    font-family: 'klavika';
+    font-weight: 100;
+    margin-top: 200px;
+}
+
+.img-bg-kuno {
+    width: 100%;
+}
+
+.img-Kaicho-color {
+    width: 65%;
+    margin-top: -690px;
+    padding-left: 40px;
+}
+
+.detail-about {
+    text-align: justify;
+    color: white;
+    margin-top: 50px;
+    font-size: 13px;
+    font-family: 'Klavika';
+    font-weight: 300;
+
+}
+
+.home-about {
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: -0.48px;
+    text-transform: uppercase;
+    margin-top: -400px;
+    color: white;
 }

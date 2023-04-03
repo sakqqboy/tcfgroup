@@ -29,6 +29,7 @@ $this->title = 'bangladesh';
         <div class="row">
             <div class="card table-card mt-10">
                 <div class="card-body">
+                    <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                     <p class="card-home1">Compliance in TAX</p>
                     <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
 
@@ -36,30 +37,35 @@ $this->title = 'bangladesh';
             </div>
             <div class="card col-2 table-card mt-10">
                 <div class="card-body">
+                    <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                     <p class="card-home1">Finance Act 2023</p>
                     <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
                 </div>
             </div>
             <div class="card col-2 table-card mt-10">
                 <div class="card-body">
+                    <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                     <p class="card-home1">Human Rights at workplace</p>
                     <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
                 </div>
             </div>
             <div class="card col-2 table-card mt-10">
                 <div class="card-body">
+                    <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                     <p class="card-home1">Import Export Policy amendment 2023</p>
                     <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
                 </div>
             </div>
             <div class="card col-2 table-card mt-10">
                 <div class="card-body">
+                    <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                     <p class="card-home1">HS Code Updates</p>
                     <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
                 </div>
             </div>
             <div class="card col-2 table-card mt-10">
                 <div class="card-body">
+                    <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                     <p class="card-home1">Shipping Industry Growth Rate</p>
                     <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
                 </div>
@@ -118,40 +124,6 @@ $this->title = 'bangladesh';
                 <div class="col-12 title-topic mt-10">
                     <p> <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> ABOUT THE TOPIC</p>
                 </div>
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                Accordion Item #1
-                            </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                Accordion Item #2
-                            </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                Accordion Item #3
-                            </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                        </div>
-                    </div>
-                </div>
-
-
                 <div class="accordion mt-20" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
@@ -210,7 +182,7 @@ $this->title = 'bangladesh';
     </div>
 </div>
 
-<div class="col-12 pr12 mt-50">
+<div class="col-12 pr12 mt-50 background-site">
     <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
             <div class="col-lg-12 title-Trending">

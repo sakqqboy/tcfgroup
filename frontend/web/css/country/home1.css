@@ -17,6 +17,10 @@
 
 }
 
+.background-site {
+    background: #F9F9F9;
+}
+
 .card-body {
     background: #EFF8FF;
     border-radius: 8px;

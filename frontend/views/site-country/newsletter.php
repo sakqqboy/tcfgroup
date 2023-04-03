@@ -27,7 +27,7 @@ $this->title = 'newsletter';
                 <div class="col-5 mt-30">
                     <button type="button" class="btn btn-primary button-newsletter-explore"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button>
                     <button type="button" class="btn btn-primary button-newsletter-right"> Explore <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-                    <p class="mt-20 title-our-newsletter"> <span class="sign-up"> Sign up</span> to our Newsletter for the latest updates & Insights</p>
+                    <p class="title-our-newsletter"> <a href="#sing-up"><span class="sign-up"> Sign up</span></a> to our Newsletter for the latest updates & Insights</p>
                 </div>
                 <div class="col-12 sletter-icon text-end">
                     <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
@@ -45,6 +45,7 @@ $this->title = 'newsletter';
         <div class="row">
             <div class="card table-card mt-10">
                 <div class="card-body">
+                    <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                     <p class="card-home1">Compliance in TAX</p>
                     <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
 
@@ -52,30 +53,35 @@ $this->title = 'newsletter';
             </div>
             <div class="card col-2 table-card mt-10">
                 <div class="card-body">
+                    <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                     <p class="card-home1">Finance Act 2023</p>
                     <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
                 </div>
             </div>
             <div class="card col-2 table-card mt-10">
                 <div class="card-body">
+                    <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                     <p class="card-home1">Human Rights at workplace</p>
                     <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
                 </div>
             </div>
             <div class="card col-2 table-card mt-10">
                 <div class="card-body">
+                    <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                     <p class="card-home1">Import Export Policy amendment 2023</p>
                     <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
                 </div>
             </div>
             <div class="card col-2 table-card mt-10">
                 <div class="card-body">
+                    <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                     <p class="card-home1">HS Code Updates</p>
                     <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
                 </div>
             </div>
             <div class="card col-2 table-card mt-10">
                 <div class="card-body">
+                    <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                     <p class="card-home1">Shipping Industry Growth Rate</p>
                     <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
                 </div>

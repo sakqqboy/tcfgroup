@@ -80,6 +80,9 @@ AppAsset::register($this);
 
     <footer class="">
         <?= $this->render("@frontend/views/layouts/footer") ?>
+
+        <?= $this->render("@frontend/views/layouts/footer1") ?>
+
     </footer>
 
     <?php

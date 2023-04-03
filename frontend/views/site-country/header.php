@@ -17,9 +17,9 @@
                 <li class="nav-item">
                     <a href="<?= Yii::$app->homeUrl ?>site-country/webinar" class="nav-link">Webinar</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="<?= Yii::$app->homeUrl ?>site-country/career" class="nav-link">Career </a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a href="<?= Yii::$app->homeUrl ?>site-country/resources" class="nav-link">Resources</a>
                 </li>
@@ -27,7 +27,7 @@
                     <a href="<?= Yii::$app->homeUrl ?>site-country/about2" class="nav-link">About us</a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?= Yii::$app->homeUrl ?>site-country/contact Us" class="nav-link">Contact Us</a>
+                    <a href="<?= Yii::$app->homeUrl ?>site-country/contact2" class="nav-link">Contact Us</a>
                 </li>
                 <li class="nav-item">
                     <a href="<?= Yii::$app->homeUrl ?>site-country/store" class="nav-link">Store</a>

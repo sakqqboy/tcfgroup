@@ -16,24 +16,22 @@ $this->title = 'webinar';
             </div>
 
         </div>
-        <div class="col-lg-6 col-md-6 col-12 page-webinar">
-            <p>Discover the practical knowledge of experienced consultants in business </p>
+        <div class="col-lg-6 col-md-6 col-12 ">
+            <div class="col-12 page-webinar">
+                <p> Discover the practical knowledge of experienced consultants in business </p>
+            </div>
             <div class="col-12 page-webinar-home1">
                 Coworking offers beautifully crafted workspaces where people can create, connect, and grow their businesses at prime locations in multiple cities.
             </div>
-            <div class="col-12 pr12 mt-50">
-                <div class="row">
+            <div class="row">
+                <div class="col-12 pr12 mt-50 pl-40">
                     <div class="col-12">
                         <img src="<?= Yii::$app->homeUrl ?>img/calendar.png" class="img-calendar">
                         <p> Every Week</p>
                         <p> We discuss new topic every week</p>
-                    </div>
-                    <div class="col-12">
                         <img src="<?= Yii::$app->homeUrl ?>img/qa.png" class="img-QA">
                         <p> Live Q&A</p>
                         <p> Live Question and answer session</p>
-                    </div>
-                    <div class="col-12">
                         <img src="<?= Yii::$app->homeUrl ?>img/time.png" class="img-time">
                         <p> 30 Mins</p>
                         <p> We keep it short for your
@@ -44,6 +42,7 @@ $this->title = 'webinar';
         </div>
     </div>
 </div>
+
 
 <div class="col-12 pr12" style="margin-top: 80px;">
     <div class="col-12 title-Trending">
@@ -177,7 +176,7 @@ $this->title = 'webinar';
                     <div class="col-12 text-art">
                         Self-Development
                     </div>
-                    <div class="col-12 mt-10">
+                    <div class="col-12 mt-10 picture-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
@@ -199,7 +198,7 @@ $this->title = 'webinar';
                     <div class="col-12 text-art">
                         Service Operations Management
                     </div>
-                    <div class="col-12 mt-10">
+                    <div class="col-12 mt-10 picture-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
@@ -220,7 +219,7 @@ $this->title = 'webinar';
                     <div class="col-12 text-art">
                         Grow your Company
                     </div>
-                    <div class="col-12 mt-10">
+                    <div class="col-12 mt-10 picture-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
@@ -243,7 +242,7 @@ $this->title = 'webinar';
                     <div class="col-12 text-art">
                         Culture and you!
                     </div>
-                    <div class="col-12 mt-10">
+                    <div class="col-12 mt-10 picture-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                     </div>
@@ -263,7 +262,7 @@ $this->title = 'webinar';
                     <div class="col-12 text-art">
                         You can make the change
                     </div>
-                    <div class="col-12 mt-10">
+                    <div class="col-12 mt-10 picture-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
@@ -288,7 +287,7 @@ $this->title = 'webinar';
                     <div class="col-12 text-art">
                         The Art of Innovation
                     </div>
-                    <div class="col-12 mt-10">
+                    <div class="col-12 mt-10 picture-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
@@ -311,7 +310,7 @@ $this->title = 'webinar';
                     <div class="col-12 text-art">
                         Hiden Success
                     </div>
-                    <div class="col-12 mt-10">
+                    <div class="col-12 mt-10 picture-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
@@ -334,7 +333,7 @@ $this->title = 'webinar';
                     <div class="col-12 text-art">
                         Take Better Decission
                     </div>
-                    <div class="col-12 mt-10">
+                    <div class="col-12 mt-10 picture-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
@@ -357,7 +356,7 @@ $this->title = 'webinar';
                     <div class="col-12 text-art">
                         A corporate Story of success
                     </div>
-                    <div class="col-12 mt-10">
+                    <div class="col-12 mt-10 picture-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
@@ -380,7 +379,7 @@ $this->title = 'webinar';
                     <div class="col-12 text-art">
                         Three Golden Rules
                     </div>
-                    <div class="col-12 mt-10">
+                    <div class="col-12 mt-10 picture-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
                         <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
@@ -421,7 +420,7 @@ $this->title = 'webinar';
     <div class="row">
         <div class="col-lg-3 col-md-6 col-12 mt-50 pl-40">
             <div class="col-12 mt-20">
-                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px;">
+                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left:20px;">
                     <div class="card-body p-4" style="background-color: #FFFFFF;">
                         <div class="col-12">
                             I would like to take this oppertunity to thank SA Places for the great service rendered to us and in particular Estelle. You got me the best place ever in just a few moments after I spoke to you.
@@ -441,7 +440,7 @@ $this->title = 'webinar';
                 </div>
             </div>
             <div class="col-12 mt-20">
-                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px;">
+                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left:20px;">
                     <div class="card-body p-4" style="background-color: #FFFFFF;">
                         <div class="col-12">
                             Many thanks for you kind and efficient service. I have already and will definitely continue to recommend your services to others in the future. </div>
@@ -462,7 +461,7 @@ $this->title = 'webinar';
         </div>
         <div class="col-lg-3 col-md-6 col-12 mt-50 pl-30">
             <div class="col-12 mt-20">
-                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; width: 25rem;margin-left: -40px;">
+                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left:20px;">
                     <div class="card-body p-4" style="background-color: #FFFFFF;">
                         <div class="col-12">
                             I would just like to compliment Estelle Pestana. She has been most professional and gone to great lengths to assist me. Her patience with me as I continuously changed my plans is to be commended. Her service re-affirms why I always choose to book through an agency instead of directly. Thank you <div class="d-flex text-black mt-20">
@@ -481,7 +480,7 @@ $this->title = 'webinar';
                 </div>
             </div>
             <div class="col-12 mt-20">
-                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; width: 25rem;margin-left: -40px;">
+                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left:20px;">
                     <div class="card-body p-4" style="background-color: #FFFFFF;">
                         <div class="col-12">
                             I would just like to compliment Estelle Pestana. She has been most professional and gone to great lengths to assist me. Her patience with me as I continuously changed my plans is to be commended. Her service re-affirms why I always choose to book through an agency instead of directly. Thank you <div class="d-flex text-black mt-20">
@@ -579,6 +578,9 @@ $this->title = 'webinar';
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="col-12">
+
         </div>
     </div>
 </div>

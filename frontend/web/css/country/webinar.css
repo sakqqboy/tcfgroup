@@ -120,3 +120,43 @@
 .LinkeIn {
     padding-left: 0px;
 }
+
+@media(max-width: 768px) {
+    .img-webinar {
+        margin-left: -40px;
+        width: 500px;
+    }
+
+    .image8 {
+        margin-left: 100px;
+    }
+
+    .page-webinar {
+        padding-left: 40px;
+    }
+
+    .page-webinar-home1 {
+        padding-left: 40px;
+    }
+
+    .title-Trending {
+        padding-left: 40px;
+    }
+
+    .title-always {
+        margin-top: 30px;
+    }
+
+    .text-art {
+        padding-left: 50px;
+    }
+
+    .picture-star {
+        padding-left: 50px;
+    }
+
+    .font-mins {
+        padding-left: 50px;
+    }
+
+}

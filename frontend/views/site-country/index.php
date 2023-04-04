@@ -7,11 +7,9 @@ use Codeception\Lib\Connector\Yii2;
 $this->title = 'bangladesh';
 ?>
 
-
 <div class="">
-
     <div class="col-12">
-        <img src="<?= Yii::$app->homeUrl ?>img/TCG-1.png" class="image-TCG-1" style="width: 100%">
+        <img src="<?= Yii::$app->homeUrl ?>img/TCG.png" class="image-TCG">
     </div>
     <div class="offset-1 col-10 text-star">
         LET'S ACCELERATE AND <br>
@@ -25,7 +23,7 @@ $this->title = 'bangladesh';
     <div class="col-12 title-Trending">
         <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> Trending Topics
     </div>
-    <div class="col-12 mt-20 pl-40">
+    <div class="col-sm-12 mt-20 pl-40">
         <div class="row">
             <div class="card table-card mt-10">
                 <div class="card-body">
@@ -35,35 +33,35 @@ $this->title = 'bangladesh';
 
                 </div>
             </div>
-            <div class="card col-2 table-card mt-10">
+            <div class="card table-card mt-10">
                 <div class="card-body">
                     <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                     <p class="card-home1">Finance Act 2023</p>
                     <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
                 </div>
             </div>
-            <div class="card col-2 table-card mt-10">
+            <div class="card table-card mt-10">
                 <div class="card-body">
                     <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                     <p class="card-home1">Human Rights at workplace</p>
                     <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
                 </div>
             </div>
-            <div class="card col-2 table-card mt-10">
+            <div class="card  table-card mt-10">
                 <div class="card-body">
                     <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                     <p class="card-home1">Import Export Policy amendment 2023</p>
                     <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
                 </div>
             </div>
-            <div class="card col-2 table-card mt-10">
+            <div class="card  table-card mt-10">
                 <div class="card-body">
                     <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                     <p class="card-home1">HS Code Updates</p>
                     <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
                 </div>
             </div>
-            <div class="card col-2 table-card mt-10">
+            <div class="card  table-card mt-10">
                 <div class="card-body">
                     <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                     <p class="card-home1">Shipping Industry Growth Rate</p>
@@ -75,10 +73,11 @@ $this->title = 'bangladesh';
 </div>
 
 
+
 <div class="col-12  pr12 mt-50">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12">
-            <img src="<?= Yii::$app->homeUrl ?>img/transportation.png" style="width: 100%;">
+            <img src="<?= Yii::$app->homeUrl ?>img/transportation.png" class="img-transportation">
         </div>
         <div class="col-lg-6 col-md-6 col-12">
             <p class="title-import mt-10">Import Export Policy amendment 2023 - Bangladesh aspect</p> <br>
@@ -96,11 +95,11 @@ $this->title = 'bangladesh';
         <div class="row">
             <div class="col-lg-6 col-md-6 col-12 mt-50">
                 <div class="row">
-                    <div class="col-5 title-bangladesh">
+                    <div class="col-2 title-bangladesh">
                         <p>Bangladesh Business
                             Environment </p>
                     </div>
-                    <div class="col-2">
+                    <div class="col-4">
                         <img src="<?= Yii::$app->homeUrl ?>img/woman.png" class="img-woman">
                         <div class="alert alert-secondary  text-center">
                             <p class="table-calendar"> <i class="fa fa-calendar" aria-hidden="true"> June 2023</i></p>
@@ -108,13 +107,12 @@ $this->title = 'bangladesh';
                             <p> 3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;5 <button class="btn btn-primary calendar-button" type="button">6</button>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;9</p>
                         </div>
                     </div>
-
-                    <div class="col-5">
+                    <!-- <div class="col-6 picture-index">
                         <img src="<?= Yii::$app->homeUrl ?>img/button-1.png" class="img-button">
                         <img src="<?= Yii::$app->homeUrl ?>img/button-2.png" class="img-button">
                         <img src="<?= Yii::$app->homeUrl ?>img/button-4.png" class="img-button">
                         <img src="<?= Yii::$app->homeUrl ?>img/button-3.png" class="img-button">
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-12">
@@ -181,6 +179,7 @@ $this->title = 'bangladesh';
         </div>
     </div>
 </div>
+
 
 <div class="col-12 pr12 mt-50 background-site">
     <div class="row">

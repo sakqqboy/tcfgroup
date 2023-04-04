@@ -78,18 +78,18 @@ AppAsset::register($this);
         <?= $content ?>
     </main>
 
-    <footer class="">
-        <?= $this->render("@frontend/views/layouts/footer") ?>
+    <div class="">
+        <?php
+        if (Yii::$app->controller->id == 'site-country') {
 
-        <?= $this->render("@frontend/views/layouts/footer1") ?>
-
-    </footer>
-
-    <?php
-    if (class_exists('yii\debug\Module')) {
-        $this->off(\yii\web\View::EVENT_END_BODY, [\yii\debug\Module::getInstance(), 'renderToolbar']);
-    }
-    $this->endBody() ?>
+            echo $this->render("@frontend/views/layouts/footer1");
+        } else {
+            echo $this->render("@frontend/views/layouts/footer");
+        }
+        if (class_exists('yii\debug\Module')) {
+            $this->off(\yii\web\View::EVENT_END_BODY, [\yii\debug\Module::getInstance(), 'renderToolbar']);
+        }
+        $this->endBody() ?>
 </body>
 
 </html>

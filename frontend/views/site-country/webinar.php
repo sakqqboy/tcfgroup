@@ -7,6 +7,10 @@ use Codeception\Lib\Connector\Yii2;
 $this->title = 'webinar';
 ?>
 
+
+<!-- <div class="col-12">
+    <img src="<?= Yii::$app->homeUrl ?>img/img-background.png" class="img-background">
+</div> -->
 <div class="col-12 pr12 seccondary-background">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12">
@@ -23,24 +27,30 @@ $this->title = 'webinar';
             <div class="col-12 page-webinar-home1">
                 Coworking offers beautifully crafted workspaces where people can create, connect, and grow their businesses at prime locations in multiple cities.
             </div>
-            <div class="row">
-                <div class="col-12 pr12 mt-50 pl-40">
+            <div class="row mt-50">
+                <div class="col-4 detail-calendar">
                     <div class="col-12">
                         <img src="<?= Yii::$app->homeUrl ?>img/calendar.png" class="img-calendar">
-                        <p> Every Week</p>
-                        <p> We discuss new topic every week</p>
-                        <img src="<?= Yii::$app->homeUrl ?>img/qa.png" class="img-QA">
-                        <p> Live Q&A</p>
-                        <p> Live Question and answer session</p>
-                        <img src="<?= Yii::$app->homeUrl ?>img/time.png" class="img-time">
-                        <p> 30 Mins</p>
-                        <p> We keep it short for your
-                            busy schedule </p>
+                        <p class="text-1"> Every Week</p>
+                        <p class="text-2"> We discuss new topic every week</p>
                     </div>
+                </div>
+                <div class="col-4">
+                    <img src="<?= Yii::$app->homeUrl ?>img/qa.png" class="img-QA">
+                    <p class="text-1"> Live Q&A</p>
+                    <p class="text-2"> Live Question and answer session</p>
+                </div>
+                <div class="col-4">
+                    <img src="<?= Yii::$app->homeUrl ?>img/time.png" class="img-time">
+                    <p class="text-1"> 30 Mins</p>
+                    <p class="text-2"> We keep it short for your
+                        busy schedule </p>
                 </div>
             </div>
         </div>
     </div>
+</div>
+</div>
 </div>
 
 
@@ -172,7 +182,7 @@ $this->title = 'webinar';
                 <div class="col-4">
                     <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
                 </div>
-                <div class="col-5 mt-10">
+                <div class="col-6 mt-10">
                     <div class="col-12 text-art">
                         Self-Development
                     </div>
@@ -186,7 +196,7 @@ $this->title = 'webinar';
                         7:36 mins
                     </div>
                 </div>
-                <div class="col-3 mt-20 text-end">
+                <div class="col-2 mt-20 text-end">
                     <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
                 </div>
             </div>
@@ -194,7 +204,7 @@ $this->title = 'webinar';
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video2.png" class="img-video">
                 </div>
-                <div class="col-5 mt-50">
+                <div class="col-6 mt-50">
                     <div class="col-12 text-art">
                         Service Operations Management
                     </div>
@@ -207,7 +217,7 @@ $this->title = 'webinar';
                         20:54 mins
                     </div>
                 </div>
-                <div class="col-3 mt-50 text-end">
+                <div class="col-2 mt-50 text-end">
                     <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
                 </div>
             </div>
@@ -215,7 +225,7 @@ $this->title = 'webinar';
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
                 </div>
-                <div class="col-5 mt-50">
+                <div class="col-6 mt-50">
                     <div class="col-12 text-art">
                         Grow your Company
                     </div>
@@ -230,7 +240,7 @@ $this->title = 'webinar';
                         40:12 mins
                     </div>
                 </div>
-                <div class="col-3 mt-50 text-end">
+                <div class="col-2 mt-50 text-end">
                     <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
                 </div>
             </div>
@@ -238,7 +248,7 @@ $this->title = 'webinar';
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video2.png" class="img-video">
                 </div>
-                <div class="col-5 mt-50">
+                <div class="col-6 mt-50">
                     <div class="col-12 text-art">
                         Culture and you!
                     </div>
@@ -250,7 +260,7 @@ $this->title = 'webinar';
                         20:45 mins
                     </div>
                 </div>
-                <div class="col-3 mt-50 text-end">
+                <div class="col-2 mt-50 text-end">
                     <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
                 </div>
             </div>
@@ -258,7 +268,7 @@ $this->title = 'webinar';
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
                 </div>
-                <div class="col-5 mt-50">
+                <div class="col-6 mt-50">
                     <div class="col-12 text-art">
                         You can make the change
                     </div>
@@ -273,7 +283,7 @@ $this->title = 'webinar';
                         6:12 mins
                     </div>
                 </div>
-                <div class="col-3 mt-50 text-end">
+                <div class="col-2 mt-50 text-end">
                     <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
                 </div>
             </div>
@@ -283,7 +293,7 @@ $this->title = 'webinar';
                 <div class="col-4">
                     <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
                 </div>
-                <div class="col-5 mt-10">
+                <div class="col-6 mt-10">
                     <div class="col-12 text-art">
                         The Art of Innovation
                     </div>
@@ -298,7 +308,7 @@ $this->title = 'webinar';
                         10:45 mins
                     </div>
                 </div>
-                <div class="col-3 mt-20 text-end">
+                <div class="col-2 mt-20 text-end">
                     <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
                 </div>
             </div>
@@ -306,7 +316,7 @@ $this->title = 'webinar';
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video2.png" class="img-video">
                 </div>
-                <div class="col-5 mt-50">
+                <div class="col-6 mt-50">
                     <div class="col-12 text-art">
                         Hiden Success
                     </div>
@@ -321,7 +331,7 @@ $this->title = 'webinar';
                         17:12 mins
                     </div>
                 </div>
-                <div class="col-3 mt-50 text-end">
+                <div class="col-2 mt-50 text-end">
                     <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
                 </div>
             </div>
@@ -329,7 +339,7 @@ $this->title = 'webinar';
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
                 </div>
-                <div class="col-5 mt-50">
+                <div class="col-6 mt-50">
                     <div class="col-12 text-art">
                         Take Better Decission
                     </div>
@@ -344,7 +354,7 @@ $this->title = 'webinar';
                         25:45 mins
                     </div>
                 </div>
-                <div class="col-3 mt-50 text-end">
+                <div class="col-2 mt-50 text-end">
                     <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
                 </div>
             </div>
@@ -352,7 +362,7 @@ $this->title = 'webinar';
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video2.png" class="img-video">
                 </div>
-                <div class="col-5 mt-50">
+                <div class="col-6 mt-50">
                     <div class="col-12 text-art">
                         A corporate Story of success
                     </div>
@@ -367,7 +377,7 @@ $this->title = 'webinar';
                         3:45 mins
                     </div>
                 </div>
-                <div class="col-3 mt-50 text-end">
+                <div class="col-2 mt-50 text-end">
                     <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
                 </div>
             </div>
@@ -375,7 +385,7 @@ $this->title = 'webinar';
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
                 </div>
-                <div class="col-5 mt-50">
+                <div class="col-6 mt-50">
                     <div class="col-12 text-art">
                         Three Golden Rules
                     </div>
@@ -390,7 +400,7 @@ $this->title = 'webinar';
                         33:12 mins
                     </div>
                 </div>
-                <div class="col-3 mt-50 text-end">
+                <div class="col-2 mt-50 text-end">
                     <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
                 </div>
             </div>

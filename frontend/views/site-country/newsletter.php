@@ -29,7 +29,7 @@ $this->title = 'newsletter';
                     <button type="button" class="btn btn-primary button-newsletter-right"> Explore <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                     <p class="title-our-newsletter"> <a href="#sing-up"><span class="sign-up"> Sign up</span></a> to our Newsletter for the latest updates & Insights</p>
                 </div>
-                <div class="col-12 sletter-icon text-end">
+                <div class="col-10 sletter-icon">
                     <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
                 </div>
             </div>
@@ -105,7 +105,7 @@ $this->title = 'newsletter';
 </div>
 
 <div class="col-12 pr12">
-    <div class="col-12 title-Trending">
+    <div class="col-12 title-older">
         <p>Older Posts</p>
     </div>
     <div class="col-12">
@@ -149,7 +149,7 @@ $this->title = 'newsletter';
 </div>
 
 <div class="col-12 pr12 mt-50">
-    <div class="row pl-40">
+    <div class="row pl-40 pr-20">
         <div class="col-3">
             <div class="col-12">
                 <a href="<?= Yii::$app->homeUrl ?>site-country/newsletter-taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-2.png" class="img-2"></a>
@@ -186,8 +186,7 @@ $this->title = 'newsletter';
             </div>
             <p class="title-Human"> Industrial Relationship</p>
             <p class="title-1"> First-Aid Appliances in Factories in Bangladesh</p>
-            <p class="title-2">In the organizations</p>
-            <p class="title-2">establishments
+            <p class="title-2">In the organizations establishments
                 particularly where there are a huge
                 number of workers work, the employer should have
                 to ensure some safety measures. Because in working
@@ -200,7 +199,7 @@ $this->title = 'newsletter';
 </div>
 
 <div class="col-12 pr12 mt-50">
-    <div class="row pl-40">
+    <div class="row pl-40 pr-20">
         <div class="col-3">
             <div class="col-12">
                 <a href="<?= Yii::$app->homeUrl ?>site-country/newsletter-taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-6.png" class="img-2"></a>
@@ -236,8 +235,7 @@ $this->title = 'newsletter';
             </div>
             <p class="title-Human"> Industrial Relationship</p>
             <p class="title-1"> Health & Hygiene in the office space</p>
-            <p class="title-2">In the organizations</p>
-            <p class="title-2">establishments particularly where there are a huge
+            <p class="title-2">In the organizations establishments particularly where there are a huge
                 number of workers work, the employer should have to ensure some safety
                 measures. Because in working hours, some accident may arise from work
                 and in this situation first aid appliances are very vital to get well the situation.

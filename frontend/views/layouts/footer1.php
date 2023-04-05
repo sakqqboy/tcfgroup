@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-lg-5 col-md-6 col-12 text-start">
             <p class="title-contry-footer1">Stay tuned, get all the business updates, newsletters</p>
-            <div class="col-12 mt-50">
+            <div class="col-12 mt-30">
                 <a href="#facebook"><img src="<?= Yii::$app->homeUrl ?>image/facebook.png"></a>
                 <a href="#twitter"><img src="<?= Yii::$app->homeUrl ?>image/twitter.png"></a>
                 <a href="#Instagram"><img src="<?= Yii::$app->homeUrl ?>image/Instagram.png"></a>
@@ -22,7 +22,7 @@
 
 <div class="col-12 pr12 mt-50">
     <div class="row">
-        <div class="col-lg-2 col-md-6 col-6 footer-box">
+        <div class="col-lg-2 col-md-6 col-6 footer-box pl-40">
             <div class="row">
                 <div class="col-12 txt-internal mb-20">
                     More About us

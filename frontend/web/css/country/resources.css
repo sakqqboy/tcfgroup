@@ -53,7 +53,7 @@
 }
 
 .img-icon {
-    width: 70px;
+    width: 50px;
 }
 
 .form-dropdown-icon {
@@ -68,4 +68,12 @@
 
 .img-file {
     width: 20px;
+}
+
+.dropdown-toggle {
+    width: 250px;
+}
+
+.dropdown1 {
+    font-size: 12px;
 }

@@ -30,8 +30,7 @@ $this->title = 'contact';
         <div class="col-3">
             <div class="btn-group">
                 <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="<?= Yii::$app->homeUrl ?>img/icon3.png" class="img-icon"> National Board
-                    of Revenue
+                    <img src="<?= Yii::$app->homeUrl ?>img/icon3.png" class="img-icon"> National Board of Revenue
                 </button>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Action</a></li>
@@ -41,10 +40,11 @@ $this->title = 'contact';
             </div>
         </div>
 
-        <!-- <div class="col-3">
+        <div class="col-3">
             <div class="btn-group">
-                <button type="button" class="btn btn-outline-secondary dropdown-toggle form-dropdown1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="<?= Yii::$app->homeUrl ?>img/icon4.png" class="img-icon"><span class="form-dropdown1"> Bangladesh Investment Development Authority</span>
+                <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="<?= Yii::$app->homeUrl ?>img/icon4.png" class="img-icon"> Bangladesh Investment
+                    Development Authority
                 </button>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Action</a></li>
@@ -77,7 +77,7 @@ $this->title = 'contact';
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
             </div>
-        </div> -->
+        </div>
     </div>
 </div>
 

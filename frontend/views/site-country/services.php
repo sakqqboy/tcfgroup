@@ -32,7 +32,7 @@ $this->title = 'services';
 
 <div class="col-12 pr12">
     <div class="row mt-20">
-        <div class="col-md-4 col-12">
+        <div class="col-lg-6 col-md-6 col-12">
             <div class="col-12 title-new1">
                 <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> Service at Every Stage of Business
             </div>
@@ -71,11 +71,11 @@ $this->title = 'services';
                     </select>
                 </div>
             </div>
-            <div class="col-12 mt-20 pl-40">
+            <div class="col-12 mt-40 pl-40">
                 <img src="<?= Yii::$app->homeUrl ?>img/Asset-2.png" class="image-Asset-2">
             </div>
         </div>
-        <div class="col-md-7 col-12 accordion-table">
+        <div class="col-lg-6 col-md-6 col-12">
             <div class="col-12 detail-text-sevices">
                 Services of Accounts & Taxatation
             </div>
@@ -218,7 +218,7 @@ $this->title = 'services';
     <div class="row">
         <div class="col-12 all-picture-account">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-6 ">
+                <div class="col-lg-6 col-md-6 col-6">
                     <div class="col-12 text-why">
                         <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> WHY TO CHOOSE US
                     </div>
@@ -231,18 +231,18 @@ $this->title = 'services';
                     <div class="col-12  page-1">
                         <img src="<?= Yii::$app->homeUrl ?>image/account-1.png" class="image-account">Composite Consulting Services
                     </div>
-                    <div class="col-12   select-project">
+                    <div class="col-12  select-project">
                         a comprehensive consulting firm that offers a range of services related to human resources, accounting, tax, and VAT. This is a valuable asset for businesses that are looking for comprehensive support in these areas, as they can receive all of their consulting needs from one reliable source.
                     </div>
                     <div class="col-12  page-1">
                         <img src="<?= Yii::$app->homeUrl ?>image/account-2.png" class="image-account">Independent Business Consultant
                     </div>
-                    <div class="col-12   select-project">
+                    <div class="col-12 select-project">
                         a comprehensive consulting firm that offers a range of services related to human resources, accounting, tax, and VAT. This is a valuable asset for businesses that are looking for comprehensive support in these areas, as they can receive all of their consulting needs from one reliable source.
                     </div>
                     <div class="col-12">
                         <div class="card download-button">
-                            <p class="text-download1"> Download Company Profile <i class="fa fa-download" aria-hidden="true"></i> </p>
+                            <p class="text-download1"> Download Company Profile <i class="fa fa-download name-download3" aria-hidden="true"></i> </p>
                         </div>
                     </div>
                 </div>

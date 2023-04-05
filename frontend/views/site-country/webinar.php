@@ -8,9 +8,6 @@ $this->title = 'webinar';
 ?>
 
 
-<!-- <div class="col-12">
-    <img src="<?= Yii::$app->homeUrl ?>img/img-background.png" class="img-background">
-</div> -->
 <div class="col-12 pr12 seccondary-background">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12">
@@ -62,7 +59,7 @@ $this->title = 'webinar';
         <div class="row">
             <div class="col-lg-6 col-md-6 col-12 mt-50">
                 <div class="row">
-                    <div class="col-5 title-bangladesh">
+                    <div class="col-4 title-bangladesh">
                         <p>Bangladesh Business
                             Environment </p>
                     </div>
@@ -75,7 +72,7 @@ $this->title = 'webinar';
                         </div>
                     </div>
 
-                    <div class="col-5">
+                    <div class="col-6 img-iconday">
                         <img src="<?= Yii::$app->homeUrl ?>img/button-1.png" class="img-button">
                         <img src="<?= Yii::$app->homeUrl ?>img/button-2.png" class="img-button">
                         <img src="<?= Yii::$app->homeUrl ?>img/button-4.png" class="img-button">
@@ -158,13 +155,13 @@ $this->title = 'webinar';
         </div>
     </div>
     <form class="row g-3 pl-40 mt-50 form-search1">
-        <div class="col-3">
+        <div class="col-4">
             <input type="search" class="form-control" id="inputsearch" placeholder="Search, Business Videos">
         </div>
         <div class="col-auto">
             <button type="submit" class="btn btn-primary mb-3"><i class="fa fa-search" aria-hidden="true"> Search</i></button>
         </div>
-        <div class="col-lg-8 col-md-6 col-12 form-webinar">
+        <div class="col-lg-4 col-md-6 col-12 form-sort">
             <select class="form-select" aria-label="Default select example">
                 <option selected> Sort by: Latest</option>
                 <option value="1">One</option>
@@ -187,17 +184,20 @@ $this->title = 'webinar';
                         Self-Development
                     </div>
                     <div class="col-12 mt-10 picture-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
                     <div class="col-12 mt-10 font-mins">
                         7:36 mins
                     </div>
                 </div>
                 <div class="col-2 mt-20 text-end">
-                    <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
+                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    </a>
                 </div>
             </div>
             <div class="row">
@@ -209,9 +209,9 @@ $this->title = 'webinar';
                         Service Operations Management
                     </div>
                     <div class="col-12 mt-10 picture-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
                     <div class="col-12 mt-10 font-mins">
                         20:54 mins
@@ -230,11 +230,11 @@ $this->title = 'webinar';
                         Grow your Company
                     </div>
                     <div class="col-12 mt-10 picture-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
                     <div class="col-12 mt-10 font-mins">
                         40:12 mins
@@ -253,8 +253,8 @@ $this->title = 'webinar';
                         Culture and you!
                     </div>
                     <div class="col-12 mt-10 picture-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
                     <div class="col-12 mt-10 font-mins">
                         20:45 mins
@@ -273,11 +273,11 @@ $this->title = 'webinar';
                         You can make the change
                     </div>
                     <div class="col-12 mt-10 picture-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
                     <div class="col-12 mt-10 font-mins">
                         6:12 mins
@@ -298,11 +298,11 @@ $this->title = 'webinar';
                         The Art of Innovation
                     </div>
                     <div class="col-12 mt-10 picture-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
                     <div class="col-12 mt-10 font-mins">
                         10:45 mins
@@ -321,11 +321,11 @@ $this->title = 'webinar';
                         Hiden Success
                     </div>
                     <div class="col-12 mt-10 picture-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
                     <div class="col-12 mt-10 font-mins">
                         17:12 mins
@@ -344,11 +344,11 @@ $this->title = 'webinar';
                         Take Better Decission
                     </div>
                     <div class="col-12 mt-10 picture-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
                     <div class="col-12 mt-10 font-mins">
                         25:45 mins
@@ -367,11 +367,11 @@ $this->title = 'webinar';
                         A corporate Story of success
                     </div>
                     <div class="col-12 mt-10 picture-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
                     <div class="col-12 mt-10 font-mins">
                         3:45 mins
@@ -390,11 +390,11 @@ $this->title = 'webinar';
                         Three Golden Rules
                     </div>
                     <div class="col-12 mt-10 picture-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
-                        <img src="<?= Yii::$app->homeUrl ?>img/star.png" class="img-star">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
                     <div class="col-12 mt-10 font-mins">
                         33:12 mins
@@ -511,7 +511,7 @@ $this->title = 'webinar';
         </div>
         <div class="col-lg-3 col-md-6 col-12 mt-50 pl-30">
             <div class="col-12 mt-20">
-                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; width: 21rem;margin-left: 30px;">
+                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; width: 21rem;margin-left: 10px;">
                     <div class="card-body p-4" style="background-color: #FFFFFF;">
                         <div class="col-12">
                             I would just like to compliment Estelle Pestana. She has been most professional and gone to great lengths to assist me. Her patience with me as I continuously changed my plans is to be commended. Her service re-affirms why I always choose to book through an agency instead of directly. Thank you <div class="d-flex text-black mt-20">
@@ -530,7 +530,7 @@ $this->title = 'webinar';
                 </div>
             </div>
             <div class="col-12 mt-20">
-                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; width: 21rem;margin-left: 30px;">
+                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; width: 21rem;margin-left: 10px;">
                     <div class="card-body p-4" style="background-color: #FFFFFF;">
                         <div class="col-12">
                             I would just like to compliment Estelle Pestana. She has been most professional and gone to great lengths to assist me. Her patience with me as I continuously changed my plans is to be commended. Her service re-affirms why I always choose to book through an agency instead of directly. Thank you <div class="d-flex text-black mt-20">
@@ -589,8 +589,7 @@ $this->title = 'webinar';
                 </div>
             </div>
         </div>
-        <div class="col-12">
-
+        <div class="col-12 mt-50">
         </div>
     </div>
 </div>

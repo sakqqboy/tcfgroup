@@ -152,7 +152,7 @@ $this->title = 'newsletter';
     <div class="row pl-40 pr-20">
         <div class="col-3">
             <div class="col-12">
-                <a href="<?= Yii::$app->homeUrl ?>site-country/newsletter-taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-2.png" class="img-2"></a>
+                <a href="<?= Yii::$app->homeUrl ?>site-country/taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-2.png" class="img-2"></a>
             </div>
             <p class="title-Human"> legal and secretarial</p>
             <p class="title-1"> Redetermination of Fees Payable Against Import-Export</p>
@@ -160,7 +160,7 @@ $this->title = 'newsletter';
         </div>
         <div class="col-3">
             <div class="col-12">
-                <a href="<?= Yii::$app->homeUrl ?>site-country/newsletter-taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-3.png" class="img-2"></a>
+                <a href="<?= Yii::$app->homeUrl ?>site-country/taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-3.png" class="img-2"></a>
             </div>
             <p class="title-Human"> Human Resource</p>
             <p class="title-1"> Informing About Dangerous Building & Workers Obligation</p>
@@ -168,7 +168,7 @@ $this->title = 'newsletter';
         </div>
         <div class="col-3">
             <div class="col-12">
-                <a href="<?= Yii::$app->homeUrl ?>site-country/newsletter-taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-4.png" class="img-2"></a>
+                <a href="<?= Yii::$app->homeUrl ?>site-country/taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-4.png" class="img-2"></a>
             </div>
             <p class="title-Human"> Accounts & Taxation</p>
             <p class="title-1"> Environment Clearance Certificate</p>
@@ -182,7 +182,7 @@ $this->title = 'newsletter';
         </div>
         <div class="col-3">
             <div class="col-12">
-                <a href="<?= Yii::$app->homeUrl ?>site-country/newsletter-taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-5.png" class="img-2"></a>
+                <a href="<?= Yii::$app->homeUrl ?>site-country/taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-5.png" class="img-2"></a>
             </div>
             <p class="title-Human"> Industrial Relationship</p>
             <p class="title-1"> First-Aid Appliances in Factories in Bangladesh</p>
@@ -202,7 +202,7 @@ $this->title = 'newsletter';
     <div class="row pl-40 pr-20">
         <div class="col-3">
             <div class="col-12">
-                <a href="<?= Yii::$app->homeUrl ?>site-country/newsletter-taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-6.png" class="img-2"></a>
+                <a href="<?= Yii::$app->homeUrl ?>site-country/taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-6.png" class="img-2"></a>
             </div>
             <p class="title-Human"> legal and secretarial</p>
             <p class="title-1"> RJSC Return Filing: Limited and Foreign Company</p>
@@ -210,7 +210,7 @@ $this->title = 'newsletter';
         </div>
         <div class="col-3">
             <div class="col-12">
-                <a href="<?= Yii::$app->homeUrl ?>site-country/newsletter-taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-7.png" class="img-2"></a>
+                <a href="<?= Yii::$app->homeUrl ?>site-country/taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-7.png" class="img-2"></a>
             </div>
             <p class="title-Human"> Human Resource</p>
             <p class="title-1"> Precautions For Fire Incidents in The Workplace</p>
@@ -218,7 +218,7 @@ $this->title = 'newsletter';
         </div>
         <div class="col-3">
             <div class="col-12">
-                <a href="<?= Yii::$app->homeUrl ?>site-country/newsletter-taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-8.png" class="img-2"></a>
+                <a href="<?= Yii::$app->homeUrl ?>site-country/taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-8.png" class="img-2"></a>
             </div>
             <p class="title-Human"> Accounts & Taxation</p>
             <p class="title-1"> Withholding Tax Return (WTR)</p>
@@ -231,7 +231,7 @@ $this->title = 'newsletter';
         </div>
         <div class="col-3">
             <div class="col-12">
-                <a href="<?= Yii::$app->homeUrl ?>site-country/newsletter-taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-9.png" class="img-2"></a>
+                <a href="<?= Yii::$app->homeUrl ?>site-country/taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-9.png" class="img-2"></a>
             </div>
             <p class="title-Human"> Industrial Relationship</p>
             <p class="title-1"> Health & Hygiene in the office space</p>

@@ -1,3 +1,296 @@
 .img-10 {
     width: 100%;
+    margin-top: 90px;
+}
+
+.taxassessment-home {
+    margin-top: 80px;
+    padding-left: 40px;
+    font-size: 35px;
+}
+
+.no-underline2 {
+    color: #888888;
+    text-decoration: none;
+    font-family: 'klavika';
+}
+
+.text-Assessment-home {
+    font-size: 62px;
+    font-family: 'Tiempos Headline';
+    padding-left: 40px;
+    margin-top: 50px;
+    line-height: 60px;
+
+}
+
+.title-Accounts-Taxation {
+    font-family: 'Klavika';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 200%;
+    padding-left: 40px;
+    margin-top: 30px;
+    color: #888888;
+}
+
+.title-mins-read {
+    color: #0B58A4;
+}
+
+.btn-outline-icon1 {
+    color: black;
+}
+
+
+.title-Background {
+    padding-left: 40px;
+    margin-top: 80px;
+    font-family: 'klavika';
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.Background-abbreviation {
+    margin-top: 30px;
+    font-size: 12px;
+    padding-left: 40px;
+    font-family: 'klavika';
+    font-weight: 100;
+}
+
+.title-Assessee {
+    color: #0B58A4;
+    font-weight: 500;
+}
+
+.no-underline3 {
+    color: #0B58A4;
+    text-decoration: none;
+}
+
+.img-saito1 {
+    width: 120px;
+    padding-left: 40px;
+    margin-top: 40px;
+}
+
+.name-Kaorisaito {
+    margin-top: 40px;
+    font-weight: 700;
+    font-size: 28px;
+    font-family: 'klavika';
+}
+
+.name-international {
+    font-weight: 100;
+    margin-top: -10px;
+    font-family: 'klavika';
+}
+
+.button-cloud {
+    height: 20px;
+    font-size: 15px;
+    font-family: 'klavika';
+}
+
+.Previous-left {
+    padding-left: 40px;
+    margin-top: 70px;
+    font-size: 17px;
+    font-family: 'klavika';
+}
+
+.Previous-right {
+    margin-top: 70px;
+    font-size: 17px;
+    font-family: 'klavika';
+}
+
+.title-Advance {
+    font-family: 'Klavika';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 200%;
+    padding-left: 10px;
+    color: #0B58A4;
+}
+
+.title-right1 {
+    font-family: 'Klavika';
+    font-weight: 300;
+    color: #0B58A4;
+    font-size: 16px;
+    line-height: 200%;
+}
+
+.paragraph1 {
+    font-family: 'Klavika';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 200%;
+    color: #000000;
+    padding-left: 40px;
+    margin-top: 50px;
+}
+
+.paragraph2 {
+    font-family: 'Klavika';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 200%;
+    padding-left: 40px;
+    color: #000000;
+}
+
+.paragraph3 {
+    margin-top: 80px;
+    font-family: 'Klavika';
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    color: #265AA7;
+}
+
+.paragraph4 {
+    margin-top: 20px;
+    font-family: 'Klavika';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.3px;
+    color: #265AA7;
+
+}
+
+.paragraph-img {
+    left: 63.27%;
+    right: -12.81%;
+    top: 30.27%;
+    margin-top: 40px;
+
+}
+
+.paragraph5 {
+    margin-top: 30px;
+    width: 500px;
+    font-family: 'Klavika';
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 23px;
+    color: #0F2137;
+}
+
+.paragraph6 {
+    font-family: 'Klavika';
+    font-weight: 300;
+    margin-top: 30px;
+    font-size: 12px;
+    line-height: 150%;
+    color: #0F2137;
+}
+
+.img-Round {
+    margin-top: 30px;
+    width: 60px;
+}
+
+.name-Round {
+    margin-top: 40px;
+    font-size: 22px;
+    font-family: 'klavika';
+    color: #9E9CA9;
+
+}
+
+.name-Round1 {
+    font-size: 13px;
+    font-weight: 100;
+    margin-top: -15px;
+    font-family: 'klavika';
+    color: #9E9CA9;
+}
+
+.img-transportation1 {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.top-transport {
+    position: absolute;
+    margin-top: -350px;
+    margin-left: 10px;
+}
+
+.buttom-transport {
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 10px;
+
+}
+
+.img-blurred {
+    width: 100%;
+    margin-top: 40px;
+    border-radius: 15px;
+}
+
+@media(max-width: 768px) {
+    .img-10 {
+        margin-top: 90px;
+    }
+
+    .text-Assessment-home {
+        font-size: 30px;
+        line-height: 35px;
+        width: 400px;
+    }
+
+    .name-Kaorisaito {
+        padding-left: 30px;
+        padding-top: 10px;
+        font-size: 15px;
+    }
+
+    .name-international {
+        padding-left: 30px;
+        font-size: 10px;
+    }
+
+    .img-saito1 {
+        width: 100px;
+    }
+
+    .top-transport {
+        margin-top: -320px;
+    }
+
+    .paragraph6 {
+        width: 400px;
+    }
+
+    .taxassessment-home {
+        font-size: 19px;
+    }
+
+    .no-underline2 {
+        font-size: 15px;
+    }
+
+    .title-Advance {
+        font-size: 12px;
+    }
+
+    .title-right1 {
+        font-size: 12px;
+    }
+
+    .paragraph5 {
+        width: 400px;
+    }
+
 }

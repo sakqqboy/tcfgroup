@@ -60,9 +60,13 @@ class SiteCountryController extends Controller
     {
         return $this->render('webinar');
     }
-    public function acionNewsletterTaxassessment()
+    public function actionWebinarVideo()
     {
-        return $this->render('newslettertaxassessment');
+        return $this->render('webinar-video');
+    }
+    public function actionTaxassessment()
+    {
+        return $this->render('taxassessment');
     }
     public function actionAbout2()
     {

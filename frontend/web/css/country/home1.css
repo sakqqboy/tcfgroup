@@ -33,9 +33,13 @@
     font-weight: 100;
     font-size: 11px;
     margin-top: -110px;
-    margin-left: 210px;
+    margin-left: 170px;
     line-height: 8px;
 
+}
+
+.img-iconday {
+    margin-left: 60px;
 }
 
 .table-calendar {
@@ -91,7 +95,7 @@
 
 .img-woman {
     width: 500px;
-    margin-left: -70px;
+    margin-left: -120px;
     padding-top: 60px;
 }
 
@@ -164,6 +168,7 @@
 }
 
 .title-contry-footer1 {
+    margin-top: 150px;
     font-weight: 500;
     font-family: 'klavika';
 }
@@ -271,7 +276,7 @@
 
     .accordion {
         padding-left: 40px;
-        padding-right: 20px;
+        padding-right: 10px;
     }
 
     .picture-index {
@@ -303,5 +308,9 @@
 
     .footer-BD {
         padding-left: 50px;
+    }
+
+    .title-contry-footer1 {
+        margin-top: 80px;
     }
 }

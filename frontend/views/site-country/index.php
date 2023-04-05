@@ -95,11 +95,11 @@ $this->title = 'bangladesh';
         <div class="row">
             <div class="col-lg-6 col-md-6 col-12 mt-50">
                 <div class="row">
-                    <div class="col-2 title-bangladesh">
+                    <div class="col-4 title-bangladesh">
                         <p>Bangladesh Business
                             Environment </p>
                     </div>
-                    <div class="col-4">
+                    <div class="col-2">
                         <img src="<?= Yii::$app->homeUrl ?>img/woman.png" class="img-woman">
                         <div class="alert alert-secondary  text-center">
                             <p class="table-calendar"> <i class="fa fa-calendar" aria-hidden="true"> June 2023</i></p>
@@ -107,12 +107,12 @@ $this->title = 'bangladesh';
                             <p> 3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;5 <button class="btn btn-primary calendar-button" type="button">6</button>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;9</p>
                         </div>
                     </div>
-                    <!-- <div class="col-6 picture-index">
+                    <div class="col-6 img-iconday">
                         <img src="<?= Yii::$app->homeUrl ?>img/button-1.png" class="img-button">
                         <img src="<?= Yii::$app->homeUrl ?>img/button-2.png" class="img-button">
                         <img src="<?= Yii::$app->homeUrl ?>img/button-4.png" class="img-button">
                         <img src="<?= Yii::$app->homeUrl ?>img/button-3.png" class="img-button">
-                    </div> -->
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-12">

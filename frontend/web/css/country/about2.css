@@ -5,7 +5,7 @@
 
 .page-about2 {
     position: absolute;
-    margin-top: -350px;
+    margin-top: -380px;
     font-family: 'Klavika';
     font-weight: 300;
     font-size: 52px;
@@ -51,76 +51,19 @@
     width: 30px;
 }
 
-.country-about {
-    padding-left: 50px;
-}
+.picture-1 {
+    width: 150px;
+    padding-top: 150px;
+    margin-left: 150px;
 
-.title-the {
-    padding-left: 40px;
-    margin-top: 50px;
-    font-weight: 700;
-    font-family: 'Klavika';
-    font-size: 55px;
-    line-height: 104.52%;
-    text-align: right;
-    text-transform: uppercase;
-    margin-top: 150px;
-}
-
-.img-icon1 {
-    width: 60px;
-}
-
-.title-year {
-    font-family: 'Klavika';
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 22px;
-}
-
-.title-ESTABLISHMENT {
-    font-family: 'Klavika';
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 17px;
-    margin-top: -180px;
-    padding-left: 100px;
-}
-
-.img-14 {
-
-    width: 20%;
-    margin-top: -80px;
-}
-
-.title-growth {
-    font-family: 'Klavika';
-    font-weight: 700;
-    font-size: 55px;
-    line-height: 104.52%;
-    text-transform: uppercase;
-    margin-top: -180px;
-    padding-left: 100px;
-}
-
-.title-private {
-    font-family: 'klavika';
-    font-weight: 100;
-    margin-top: 200px;
 }
 
 .img-bg-kuno {
     width: 100%;
-}
-
-.img-Kaicho-color {
-    width: 65%;
-    margin-top: -690px;
-    padding-left: 40px;
+    margin-top: 250px;
 }
 
 .detail-about {
-    text-align: justify;
     color: white;
     margin-top: 50px;
     font-size: 13px;
@@ -136,6 +79,163 @@
     line-height: 26px;
     letter-spacing: -0.48px;
     text-transform: uppercase;
-    margin-top: -400px;
+    margin-top: 400px;
     color: white;
+}
+
+.img22 {
+    width: 20px;
+}
+
+.item1 {
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 104.52%;
+    width: 400px;
+    text-align: end;
+    padding-top: 150px;
+    text-transform: uppercase;
+}
+
+.item2 {
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.item3 {
+    padding-top: 150px;
+    font-family: 'Klavika';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.item5 {
+    padding-top: 150px;
+    font-family: 'Klavika';
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: end;
+    padding-top: 150px;
+    width: 400px;
+    text-transform: uppercase;
+}
+
+
+.item7 {
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 104.52%;
+    width: 400px;
+    text-align: left;
+    width: 250px;
+    padding-top: 150px;
+    text-transform: uppercase;
+}
+
+.Kaicho-color {
+    background: #0E1727;
+}
+
+.img-Kaicho-color {
+    margin-top: 20px;
+    margin-left: 40px;
+    width: 60%;
+}
+
+@media(max-width: 992px) {
+    .page-about2 {
+        margin-top: -180px;
+        font-size: 40px;
+        width: 320px;
+    }
+
+    .about-country1 {
+        width: 400px;
+    }
+
+    .item1 {
+        font-size: 14px;
+        margin-left: -250px;
+    }
+
+
+    .picture-1 {
+        margin-left: 350px;
+    }
+}
+
+
+@media(max-width: 768px) {
+    .img-Grow-torgther {
+        margin-top: 90px;
+    }
+
+    .page-about2 {
+        margin-top: -90px;
+        font-size: 23px;
+        width: 220px;
+    }
+
+    .about-country1 {
+        width: 380px;
+    }
+
+    .img22 {
+        width: 15px;
+    }
+
+    .item1 {
+        font-size: 13px;
+        width: 90px;
+    }
+
+    .picture-1 {
+        width: 130px;
+        margin-left: 30px;
+    }
+
+    .item3 {
+        font-size: 8px;
+        width: 90px;
+        line-height: 10px;
+    }
+
+    .item4 {
+        margin-left: 40px;
+    }
+
+    .item5 {
+        font-size: 10px;
+        width: 90px;
+    }
+
+    .item2 {
+        font-size: 13px;
+    }
+
+    .item7 {
+        font-size: 13px;
+        width: 90px;
+    }
+
+    .img-bg-kuno {
+        margin-top: -60px;
+    }
+
+    .home-about {
+        margin-top: 50px;
+        padding-left: 40px;
+    }
+
+    .detail-about {
+        padding-left: 40px;
+        width: 380px;
+    }
+
 }

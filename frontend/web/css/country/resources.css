@@ -6,8 +6,8 @@
 .page-resource {
     position: absolute;
     width: 253px;
+    margin-top: -450px;
     padding-left: 141px;
-    top: 415px;
     font-family: 'Klavika';
     font-weight: 700;
     font-size: 52px;
@@ -21,7 +21,7 @@
     position: absolute;
     width: 650px;
     padding-left: 141px;
-    top: 553px;
+    margin-top: -320px;
     font-family: 'Klavika';
     font-weight: 300;
     font-size: 16px;
@@ -34,8 +34,8 @@
     position: absolute;
     width: 532px;
     height: 52px;
-    left: 141px;
-    top: 639px;
+    left: 130px;
+    margin-top: -250px;
 
 }
 
@@ -56,24 +56,88 @@
     width: 50px;
 }
 
-.form-dropdown-icon {
-    padding-left: 40px;
-}
 
-/* .table-detail1 {
+.Templates-Search {
+    margin-top: -35px;
+    margin-left: 10px;
+    padding-left: 50px;
     font-family: 'klavika';
-    font-weight: 100;
-    font-size: 14px;
-} */
-
-.img-file {
-    width: 20px;
+    width: 400px;
 }
 
-.dropdown-toggle {
-    width: 250px;
+.form-select-search {
+    position: absolute;
+    margin-top: -180px;
+    padding-left: 141px;
+    font-family: 'klavika';
 }
 
-.dropdown1 {
-    font-size: 12px;
+.txt-search {
+    font-size: 13px;
+
+}
+
+.fot-sm {
+    width: 150px;
+}
+
+.of-13 {
+    font-weight: 700;
+    font-family: 'klavika';
+}
+
+@media(max-width: 768px) {
+    .img-Resources {
+        margin-top: 90px;
+    }
+
+    .page-resource {
+        margin-top: -200px;
+        padding-left: 40px;
+        font-size: 22px;
+        width: 200px;
+    }
+
+    .detail-resource {
+        margin-top: -150px;
+        padding-left: 40px;
+        width: 220px;
+        font-size: 7px;
+        line-height: 10px;
+    }
+
+    .title-resource {
+        margin-top: -70px;
+        padding-left: 20px;
+    }
+
+
+    .Templates-Search {
+        width: 140px;
+        margin-left: -110px;
+        font-size: 10px;
+        margin-top: -70px;
+    }
+
+    .button-forms-search {
+        margin-left: -115px;
+        font-size: 15px;
+    }
+
+    .form-select-search {
+        margin-top: -35px;
+        padding-left: 40px;
+    }
+
+    .txt-search {
+        font-size: 8px;
+    }
+
+    .dropdown-toggle-form {
+        width: 150px;
+    }
+
+    .fot-sm {
+        font-size: 10px;
+    }
 }

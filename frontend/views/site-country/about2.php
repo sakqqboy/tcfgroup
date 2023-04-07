@@ -39,7 +39,7 @@ $this->title = 'about';
             <div class="col-12 text-center">
                 <p> International Branches </p>
             </div>
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselExampleControls" class="carousel slide mt-40" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active text-center">
                         <img src="<?= Yii::$app->homeUrl ?>img/Bangladesh.png" class="img-country1">
@@ -96,56 +96,35 @@ $this->title = 'about';
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-
-            <!-- <div class="col-12 country-about">
-                <div class="row">
-                    <img src="<?= Yii::$app->homeUrl ?>img/Bangladesh.png" class="img-country1">
-                    <img src="<?= Yii::$app->homeUrl ?>img/thailand.png" class="img-country1">
-                    <img src="<?= Yii::$app->homeUrl ?>img/india.png" class="img-country1">
-                    <img src="<?= Yii::$app->homeUrl ?>img/south africa.png" class="img-country1">
-                    <img src="<?= Yii::$app->homeUrl ?>img/japan.png" class="img-country1">
-                    <img src="<?= Yii::$app->homeUrl ?>img/hong kong.png" class="img-country1">
-                    <img src="<?= Yii::$app->homeUrl ?>img/combodia.png" class="img-country1">
-                    <img src="<?= Yii::$app->homeUrl ?>img/indonesia.png" class="img-country1">
-                    <img src="<?= Yii::$app->homeUrl ?>img/kenya.png" class="img-country1">
-                    <img src="<?= Yii::$app->homeUrl ?>img/china.png" class="img-country1">
-                    <img src="<?= Yii::$app->homeUrl ?>img/dubai.png" class="img-country1">
-                    <img src="<?= Yii::$app->homeUrl ?>img/mayanmar.png" class="img-country1">
-                    <img src="<?= Yii::$app->homeUrl ?>img/maxico.png" class="img-country1">
-                </div>
-            </div> -->
+            <div class="col-12" style="margin-top:50px;"></div>
         </div>
     </div>
 </div>
 
 <div class="col-12 pr12 mt-50">
+    <div class="col-12 title-Trending">
+        <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> The Journey of Success
+    </div>
     <div class="row">
-        <div class="col-12 title-Trending ">
-            <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> The Journey of Success
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-            <div class="col-12 title-the">
-                THE
-                Establishment
-            </div>
-        </div>
-        <div class="col-lg-8 col-md-6 col-12">
-            <div class="row">
-                <div class="col-12 title-year">
-                    1998
+        <div class="col-lg-12 col-md-6 col-12">
+            <div class="row mt-50 pl-40">
+                <div class="col-4 item1">
+                    THE
+                    Establishment
                 </div>
-                <div class="col-12 text-start">
-                    <img src="<?= Yii::$app->homeUrl ?>img/icon-1.png" class="img-icon1">
-                    <div class="col-4 title-ESTABLISHMENT">
-                        ESTABLISHMENT of Kuno Yasunari
-                        CPA Firm which was the name
-                        organization on that time.
-                    </div>
+                <div class="col-1 item2">
+                    <p> 1998</p>
+                    <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
                 </div>
-                <div class="col-12 text-end">
-                    <img src="<?= Yii::$app->homeUrl ?>img/img-14.png" class="img-14">
-                    <hr>
+                <div class="col-2 item3">
+                    ESTABLISHMENT of Kuno Yasunari
+                    CPA Firm which was the name
+                    organization on that time.
                 </div>
+                <div class="col-5 item4">
+                    <img src="<?= Yii::$app->homeUrl ?>img/img-14.png" class="picture-1">
+                </div>
+                <hr>
             </div>
         </div>
     </div>
@@ -153,31 +132,27 @@ $this->title = 'about';
 
 <div class="col-12 pr12 mt-50">
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-12">
-            <div class="col-12 text-end title-private">
-                Establishment of
-                J.nzai Kaihatsu Ltd Expended
-                branch at Yokohama capital
-                increased 20M
+        <div class="col-lg-12 col-md-6 col-12">
+            <div class="row mt-50 pl-40">
+                <div class="col-4 item5">
+                    Establishment of
+                    J.nzai Kaihatsu Ltd Expended
+                    branch at Yokohama capital
+                    increased 20M
 
-            </div>
-        </div>
-        <div class="col-lg-8 col-md-6 col-12">
-            <div class="row">
-                <div class="col-12 title-year mt-50">
-                    1998
                 </div>
-                <div class="col-12 text-start">
-                    <img src="<?= Yii::$app->homeUrl ?>img/icon-1.png" class="img-icon1">
-                    <div class="col-4 title-growth">
-                        THE
-                        Growth
-                    </div>
+                <div class="col-1 item2">
+                    <p> 1998</p>
+                    <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
                 </div>
-                <div class="col-12 text-end">
-                    <img src="<?= Yii::$app->homeUrl ?>img/img-15.png" class="img-14">
-                    <hr>
+                <div class="col-2 item7">
+                    THE
+                    Growth
                 </div>
+                <div class="col-5 item4">
+                    <img src="<?= Yii::$app->homeUrl ?>img/img-15.png" class="picture-1">
+                </div>
+                <hr>
             </div>
         </div>
     </div>
@@ -185,29 +160,34 @@ $this->title = 'about';
 
 <div class="col-12 pr12 mt-50">
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-12">
-            <div class="col-12 title-the">
-                Global
-                Expansion
-            </div>
-        </div>
-        <div class="col-lg-8 col-md-6 col-12">
-            <div class="row">
-                <div class="col-12 title-year">
-                    1998
+        <div class="col-lg-12 col-md-6 col-12">
+            <div class="row mt-50 pl-40">
+                <div class="col-4 item1">
+                    Global
+                    Expansion
                 </div>
-                <div class="col-12 text-start">
-                    <img src="<?= Yii::$app->homeUrl ?>img/icon-1.png" class="img-icon1">
-                    <div class="col-4 title-ESTABLISHMENT">
-                        ESTABLISHMENT of Kuno Yasunari
-                        CPA Firm which was the name
-                        organization on that time.
-                    </div>
+                <div class="col-1 item2">
+                    <p> 1998</p>
+                    <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
                 </div>
-                <div class="col-12 text-end mt-50">
-                    <img src="<?= Yii::$app->homeUrl ?>img/img-16.png" class="img-14">
-                    <hr>
+                <div class="col-2 item3">
+                    Establishment of Tokyo Tax
+                    Accountant Corporation Tokyo
+                    Consulting Firm Limited Japan,
+                    India Branch Entity Convers on
+                    from SSGCO Ltd to Tokyo Venture
+                    Capital Co Ltd Throughout 2007 to
+                    2011 we established branches
+                    across the world namely,
+                    Establishment of Tokyo Consulting
+                    firm limited In India, Thailand,
+                    Mongolia. Vietnam, Singapore, Indonesia, Cambodia. Sri Lanka, Philippines, China, Laos
+
                 </div>
+                <div class="col-5 item4">
+                    <img src="<?= Yii::$app->homeUrl ?>img/img-16.png" class="picture-1">
+                </div>
+                <hr>
             </div>
         </div>
     </div>
@@ -215,90 +195,78 @@ $this->title = 'about';
 
 <div class="col-12 pr12 mt-50">
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-12">
-            <div class="col-12 text-end title-private">
-                Establishment of Tokyo Consulting Firm Private Limited (India) Bangalore Office. Establishment of Tokyo Consulting Firm Human Recourses Private Limited (India).
-            </div>
-        </div>
-        <div class="col-lg-8 col-md-6 col-12">
-            <div class="row">
-                <div class="col-12 title-year mt-50">
-                    1998
+        <div class="col-lg-12 col-md-6 col-12">
+            <div class="row mt-50 pl-40">
+                <div class="col-4 item5">
+                    Establishment of Tokyo Consulting Firm Private Limited (India) Bangalore Office. Establishment of Tokyo Consulting Firm Human Recourses Private Limited (India).
                 </div>
-                <div class="col-12 text-start">
-                    <img src="<?= Yii::$app->homeUrl ?>img/icon-1.png" class="img-icon1">
-                    <div class="col-4 title-growth">
-                        Extending
-                        Locations
-                    </div>
+                <div class="col-1 item2">
+                    <p> 1998</p>
+                    <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
                 </div>
-                <div class="col-12 text-end">
-                    <img src="<?= Yii::$app->homeUrl ?>img/img-17.png" class="img-14">
-                    <hr>
+                <div class="col-2 item7">
+                    Extending
+                    Locations
                 </div>
+                <div class="col-5 item4">
+                    <img src="<?= Yii::$app->homeUrl ?>img/img-17.png" class="picture-1">
+                </div>
+                <hr>
             </div>
         </div>
     </div>
 </div>
+
 
 <div class="col-12 pr12 mt-50">
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-12">
-            <div class="col-12 title-the">
-                Tokyo Consulting
-                Firm Limited
-            </div>
-        </div>
-        <div class="col-lg-8 col-md-6 col-12">
-            <div class="row">
-                <div class="col-12 title-year">
-                    1998
+        <div class="col-lg-12 col-md-6 col-12">
+            <div class="row mt-50 pl-40">
+                <div class="col-4 item1">
+                    Tokyo Consulting
+                    Firm Limited
                 </div>
-                <div class="col-12 text-start">
-                    <img src="<?= Yii::$app->homeUrl ?>img/icon-1.png" class="img-icon1">
-                    <div class="col-4 title-ESTABLISHMENT">
-                        Establishment of Tokyo Consulting firm limited in India, Thailand, Mongolia, Vietnam, Singapore, Indonesia, Cambodia, Sri Lanka, Philippines, China, Laos.
-                    </div>
+                <div class="col-1 item2">
+                    <p> 1998</p>
+                    <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
                 </div>
-                <div class="col-12 text-end">
-                    <img src="<?= Yii::$app->homeUrl ?>img/img-19.png" class="img-14">
-                    <hr>
+                <div class="col-2 item3">
+                    Establishment of Tokyo Consulting firm limited in India, Thailand, Mongolia, Vietnam, Singapore, Indonesia, Cambodia, Sri Lanka, Philippines, China, Laos.
                 </div>
+                <div class="col-5 item4">
+                    <img src="<?= Yii::$app->homeUrl ?>img/img-19.png" class="picture-1">
+                </div>
+                <hr>
             </div>
         </div>
     </div>
 </div>
+
 
 <div class="col-12 pr12 mt-50">
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-12">
-            <div class="col-12 text-end title-private">
-                Establishment of Tokyo Consulting Firm Private Limited (India) Bangalore Office. Establishment of Tokyo Consulting Firm Human Resourses Private Limited (India).
-            </div>
-        </div>
-        <div class="col-lg-8 col-md-6 col-12">
-            <div class="row">
-                <div class="col-12 title-year mt-50">
-                    1998
+        <div class="col-lg-12 col-md-6 col-12">
+            <div class="row mt-50 pl-40">
+                <div class="col-4 item5">
+                    Establishment of Tokyo Consulting Firm Private Limited (India) Bangalore Office. Establishment of Tokyo Consulting Firm Human Resourses Private Limited (India).
                 </div>
-                <div class="col-12 text-start">
-                    <img src="<?= Yii::$app->homeUrl ?>img/icon-1.png" class="img-icon1">
-                    <div class="col-4 title-growth">
-                        BRAND EXPANSION
+                <div class="col-1 item2">
+                    <p> 1998</p>
+                    <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
+                </div>
+                <div class="col-2 item7">
+                    BRAND EXPANSION
+                </div>
 
-                    </div>
-                    <hr>
-                </div>
+                <hr>
             </div>
         </div>
     </div>
 </div>
 
-<div class="col-12 mt-50">
-    <img src="<?= Yii::$app->homeUrl ?>img/bg-kuno.png" class="img-bg-kuno">
-</div>
 
-<div class="col-12 pr12">
+
+<div class="col-12 pr12 Kaicho-color">
     <div class="row">
         <div class="col-lg-6 col-md- col-12">
             <img src="<?= Yii::$app->homeUrl ?>img/Kaicho-color.png" class="img-Kaicho-color">

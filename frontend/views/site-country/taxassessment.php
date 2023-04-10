@@ -11,19 +11,20 @@ $this->title = 'taxassessment';
     <img src="<?= Yii::$app->homeUrl ?>img/img-10.png" class="img-10">
 </div>
 
+
 <div class="col-12 pr12">
     <div class="row">
+        <div class="col-12">
+            <i class="fa fa-home taxassessment-home" aria-hidden="true"></i>
+            <a href="" class="no-underline2"> Newsletters </a>
+            <a href="" class="no-underline2"> / Accounts & Taxation </a>
+            <a href="" class="no-underline2">/ Tax Assessment</a>
+        </div>
+        <div class=" col-7 text-Assessment-home">
+            Assessment in Case of
+            Income of a Deceased Person
+        </div>
         <div class="col-lg-8 col-md-6 col-12">
-            <div class="col-12">
-                <i class="fa fa-home taxassessment-home" aria-hidden="true"> </i>
-                <a href="" class="no-underline2"> Newsletters </a>
-                <a href="" class="no-underline2"> / Accounts & Taxation </a>
-                <a href="" class="no-underline2">/ Tax Assessment</a>
-            </div>
-            <div class=" col-10 text-Assessment-home">
-                Assessment in Case of
-                Income of a Deceased Person
-            </div>
             <div class="col-12 title-Accounts-Taxation">
                 <a href="" class="no-underline2">Accounts & Taxation</a> | <span class="title-mins-read"> 5 mins read</span>
             </div>
@@ -116,72 +117,63 @@ $this->title = 'taxassessment';
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-12 pl-40 pr-30">
-            <div class="col-12 paragraph3">
-                Overview of The Article
-            </div>
-            <div class="col-12 paragraph4">
-                <p> Background</p>
-                <p> Who will be the ‘Assessee’ instead
-                    of the deceased person?
-                <p> Other Local Storage</p>
-                <p> Do Not Track</p>
-            </div>
-            <hr>
-            <div class="col-12 paragraph-img">
-                <img src="<?= Yii::$app->homeUrl ?>img/transportation1.png" class="img-transportation1">
-            </div>
-            <div class="col-12 top-transport">
-                <span class="badge bg-secondary"> 2 Mins Read</span>
-            </div>
-            <div class="col-12 buttom-transport">
-                <span class="badge bg-secondary"> Legal & Secretarial </span>
-            </div>
 
-            <div class="col-12 paragraph5">
-                Import & Export Restrictions on products from foreign counties to Bangladesh
-            </div>
-            <div class="col-12 paragraph6">
-                Company is a separate legal entity but it (artificial legal person) cannot manage or direct its own affairs to run its functions. Section 2(1) (F) of the Companies Act, 1994 defines the term ‘director’. It depends on the directors who hold the most important position relating to the administration and management of the company. Ultimately, it is the directors who determine how the company will operate on a day-to-day basis
-            </div>
-            <hr>
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-2">
-                        <img src="<?= Yii::$app->homeUrl ?>img/Round.png" class="img-Round">
-                    </div>
-                    <div class="col-6">
-                        <p class="name-Round"> Mohammed Faruqe</p>
-                        <p class="name-Round1"> Human Resource & Manpower</p>
+        <div class="col-lg-4 col-md-6 col-12 pl-40 pr-20">
+            <div class="row">
+                <div class="col-12 paragraph3">
+                    Overview of The Article
+                </div>
+                <div class="col-12 paragraph4">
+                    <p> Background</p>
+                    <p> Who will be the 'Assessee' instead
+                        of the deceased person?
+                    <p> Other Local Storage</p>
+                    <p> Do Not Track</p>
+                    <hr>
+                </div>
+
+                <div class="col-12 paragraph-img">
+                    <img src="<?= Yii::$app->homeUrl ?>img/transportation1.png" class="img-transportation1">
+                </div>
+                <div class="col-12 paragraph5">
+                    Import & Export Restrictions on products from foreign counties to Bangladesh
+                </div>
+                <div class="col-12 paragraph6">
+                    Company is a separate legal entity but it (artificial legal person) cannot manage or direct its own affairs to run its functions. Section 2(1) (F) of the Companies Act, 1994 defines the term ‘director’. It depends on the directors who hold the most important position relating to the administration and management of the company. Ultimately, it is the directors who determine how the company will operate on a day-to-day basis
+                    <hr>
+                </div>
+
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="<?= Yii::$app->homeUrl ?>img/Round.png" class="img-Round">
+                        </div>
+                        <div class="col-6">
+                            <p class="name-Round"> Mohammed Faruqe</p>
+                            <p class="name-Round1"> Human Resource & Manpower</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12">
                 <div class="col-12">
                     <img src="<?= Yii::$app->homeUrl ?>img/blurred.png" class="img-blurred">
                 </div>
-                <div class="col-12 top-transport">
-                    <span class="badge bg-secondary"> 2 Mins Read</span>
+                <div class="col-12 paragraph5">
+                    Working Hours for Adult Workers & Procedures
                 </div>
-                <div class="col-12 buttom-transport">
-                    <span class="badge bg-secondary"> Legal & Secretarial </span>
+                <div class="col-12 paragraph6">
+                    Company is a separate legal entity but it (artificial legal person) cannot manage or direct its own affairs to run its functions. Section 2(1) (F) of the Companies Act, 1994 defines the term ‘director’. It depends on the directors who hold the most important position relating to the administration and management of the company. Ultimately, it is the directors who determine how the company will operate on a day-to-day basis
                 </div>
-            </div>
-            <div class="col-12 paragraph5">
-                Working Hours for Adult Workers & Procedures
-            </div>
-            <div class="col-12 paragraph6">
-                Company is a separate legal entity but it (artificial legal person) cannot manage or direct its own affairs to run its functions. Section 2(1) (F) of the Companies Act, 1994 defines the term ‘director’. It depends on the directors who hold the most important position relating to the administration and management of the company. Ultimately, it is the directors who determine how the company will operate on a day-to-day basis
-            </div>
-            <hr>
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-2">
-                        <img src="<?= Yii::$app->homeUrl ?>img/ehsan.png" class="img-Round">
-                    </div>
-                    <div class="col-6">
-                        <p class="name-Round"> Quazi Ehsan Hossain</p>
-                        <p class="name-Round1"> Administration & Marketing</p>
+                <hr>
+
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="<?= Yii::$app->homeUrl ?>img/ehsan.png" class="img-Round">
+                        </div>
+                        <div class="col-6">
+                            <p class="name-Round"> Quazi Ehsan Hossain</p>
+                            <p class="name-Round1"> Administration & Marketing</p>
+                        </div>
                     </div>
                 </div>
             </div>

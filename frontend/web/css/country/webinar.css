@@ -18,26 +18,27 @@
     font-size: 24px;
     font-family: 'klavika';
     width: 450px;
-    padding-top: 80px;
+    padding-top: 60px;
 }
 
 .page-webinar-home1 {
     font-size: 15px;
+    margin-top: 30px;
     font-weight: 100;
     width: 450px;
     font-family: 'klavika';
 }
 
 .img-calendar {
-    width: 40px;
+    width: 30px;
 }
 
 .img-QA {
-    width: 40px;
+    width: 30px;
 }
 
 .img-time {
-    width: 40px;
+    width: 30px;
 }
 
 .text-1 {
@@ -52,13 +53,13 @@
     font-size: 14px;
     line-height: 22px;
     opacity: 0.75;
+    width: 120px;
 }
 
-
 .image8 {
-    width: 280px;
-    margin-left: 205px;
-    margin-top: -30px;
+    width: 250px;
+    margin-top: -50px;
+    margin-left: 180px;
 }
 
 .form-search1 {
@@ -99,7 +100,7 @@
 .img-paseka,
 .img-cherice {
     width: 50px;
-    border-radius: 10px;
+
 }
 
 .img-ceo {
@@ -114,7 +115,7 @@
 .account-signin {
     font-family: 'klavika';
     color: #5D5A6F;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .sign-in {
@@ -145,15 +146,32 @@
     font-size: 25px;
 }
 
+.form-gooogle {
+    color: #E93E30;
+    font-size: 60px;
+}
+
+.form-linkedin {
+    color: #007EBB;
+    font-size: 60px;
+}
+
+.form-bg-media {
+    border-radius: 8px;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.no-underline-form {
+    text-decoration: none;
+    color: #5D5A6F;
+    padding-top: -10px;
+}
+
 
 @media(max-width: 992px) {
     .img-webinar {
         width: 100%;
-    }
-
-    .image8 {
-        width: 150px;
-        margin-left: 180px;
     }
 
     .form-sort {
@@ -174,7 +192,34 @@
         margin-left: 70px;
         font-size: 13px;
     }
+
+    .bg-white {
+        width: 180px;
+    }
+
+    .form-bg-media {
+        font-size: 13px;
+    }
+
+    .form-gooogle {
+        font-size: 40px;
+    }
+
+    .form-linkedin {
+        font-size: 40px;
+    }
+
+
+    .page-webinar-home1 {
+        width: 350px;
+    }
+
+    .image8 {
+        width: 180px;
+        margin-top: -40px;
+    }
 }
+
 
 @media(max-width: 768px) {
     .img-webinar {
@@ -184,7 +229,9 @@
     }
 
     .image8 {
-        margin-left: 130px;
+        margin-top: -40px;
+        width: 170px;
+        margin-left: 110px;
     }
 
     .page-webinar {
@@ -205,7 +252,7 @@
     }
 
     .text-art {
-        font-size: 15px;
+        font-size: 14px;
 
     }
 
@@ -228,5 +275,32 @@
 
     .fa-star {
         font-size: 20px;
+    }
+
+    .bg-white {
+        margin-top: 20px;
+    }
+
+    .form-bg-media {
+        width: 150px;
+        font-size: 10px;
+    }
+
+    .form-gooogle {
+        font-size: 40px;
+    }
+
+    .form-linkedin {
+        font-size: 40px;
+    }
+
+    .form-contact-webinar {
+        padding-left: 40px;
+        padding-right: 20px;
+    }
+
+    .text-2 {
+        font-size: 12px;
+
     }
 }

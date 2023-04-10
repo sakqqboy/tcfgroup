@@ -105,30 +105,29 @@ $this->title = 'about';
     <div class="col-12 title-Trending">
         <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> The Journey of Success
     </div>
-    <div class="row">
-        <div class="col-lg-12 col-md-6 col-12">
-            <div class="row mt-50 pl-40">
-                <div class="col-4 item1">
-                    THE
-                    Establishment
-                </div>
-                <div class="col-1 item2">
-                    <p> 1998</p>
-                    <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
-                </div>
-                <div class="col-2 item3">
-                    ESTABLISHMENT of Kuno Yasunari
-                    CPA Firm which was the name
-                    organization on that time.
-                </div>
-                <div class="col-5 item4">
-                    <img src="<?= Yii::$app->homeUrl ?>img/img-14.png" class="picture-1">
-                </div>
-                <hr>
+    <div class="col-lg-12 col-md-6 col-12">
+        <div class="row">
+            <div class="col-4 item1">
+                THE
+                Establishment
             </div>
+            <div class="col-1 item2">
+                <p class="number-year"> 1998</p>
+                <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
+            </div>
+            <div class="col-2 item3">
+                ESTABLISHMENT of Kuno Yasunari
+                CPA Firm which was the name
+                organization on that time.
+            </div>
+            <div class="col-5 item4">
+                <img src="<?= Yii::$app->homeUrl ?>img/img-14.png" class="picture-1">
+            </div>
+            <hr>
         </div>
     </div>
 </div>
+
 
 <div class="col-12 pr12 mt-50">
     <div class="row">
@@ -139,10 +138,9 @@ $this->title = 'about';
                     J.nzai Kaihatsu Ltd Expended
                     branch at Yokohama capital
                     increased 20M
-
                 </div>
                 <div class="col-1 item2">
-                    <p> 1998</p>
+                    <p class="number-year"> 1998</p>
                     <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
                 </div>
                 <div class="col-2 item7">
@@ -158,7 +156,7 @@ $this->title = 'about';
     </div>
 </div>
 
-<div class="col-12 pr12 mt-50">
+<div class="col-12 pr12">
     <div class="row">
         <div class="col-lg-12 col-md-6 col-12">
             <div class="row mt-50 pl-40">
@@ -167,7 +165,7 @@ $this->title = 'about';
                     Expansion
                 </div>
                 <div class="col-1 item2">
-                    <p> 1998</p>
+                    <p class="number-year"> 1998</p>
                     <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
                 </div>
                 <div class="col-2 item3">
@@ -193,7 +191,7 @@ $this->title = 'about';
     </div>
 </div>
 
-<div class="col-12 pr12 mt-50">
+<div class="col-12 pr12">
     <div class="row">
         <div class="col-lg-12 col-md-6 col-12">
             <div class="row mt-50 pl-40">
@@ -201,7 +199,7 @@ $this->title = 'about';
                     Establishment of Tokyo Consulting Firm Private Limited (India) Bangalore Office. Establishment of Tokyo Consulting Firm Human Recourses Private Limited (India).
                 </div>
                 <div class="col-1 item2">
-                    <p> 1998</p>
+                    <p class="number-year"> 1998</p>
                     <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
                 </div>
                 <div class="col-2 item7">
@@ -218,7 +216,7 @@ $this->title = 'about';
 </div>
 
 
-<div class="col-12 pr12 mt-50">
+<div class="col-12 pr12">
     <div class="row">
         <div class="col-lg-12 col-md-6 col-12">
             <div class="row mt-50 pl-40">
@@ -227,7 +225,7 @@ $this->title = 'about';
                     Firm Limited
                 </div>
                 <div class="col-1 item2">
-                    <p> 1998</p>
+                    <p class="number-year"> 1998</p>
                     <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
                 </div>
                 <div class="col-2 item3">
@@ -243,7 +241,7 @@ $this->title = 'about';
 </div>
 
 
-<div class="col-12 pr12 mt-50">
+<div class="col-12 pr12">
     <div class="row">
         <div class="col-lg-12 col-md-6 col-12">
             <div class="row mt-50 pl-40">
@@ -251,7 +249,7 @@ $this->title = 'about';
                     Establishment of Tokyo Consulting Firm Private Limited (India) Bangalore Office. Establishment of Tokyo Consulting Firm Human Resourses Private Limited (India).
                 </div>
                 <div class="col-1 item2">
-                    <p> 1998</p>
+                    <p class="number-year"> 1998</p>
                     <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
                 </div>
                 <div class="col-2 item7">
@@ -263,8 +261,6 @@ $this->title = 'about';
         </div>
     </div>
 </div>
-
-
 
 <div class="col-12 pr12 Kaicho-color">
     <div class="row">

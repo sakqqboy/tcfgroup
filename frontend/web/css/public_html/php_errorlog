@@ -1,0 +1,1289 @@
+[09-Mar-2023 07:15:16 UTC] PHP Fatal error:  require(): Failed opening required '/home/customer/www/tokyoconsulting-group.com/public_html/lower-management/frontend/web/index.php' (include_path='.:/usr/local/php74/pear') in /home/customer/www/tokyoconsulting-group.com/public_html/index.php on line 17
+[09-Mar-2023 07:16:47 UTC] PHP Fatal error:  require(): Failed opening required '/home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/../../vendor/autoload.php' (include_path='.:/usr/local/php74/pear') in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php on line 6
+[09-Mar-2023 08:17:03 UTC] PHP Fatal error:  require(): Failed opening required '/home/customer/www/tokyoconsulting-group.com/public_htmltcfgroup/frontend/web/index.php' (include_path='.:/usr/local/php74/pear') in /home/customer/www/tokyoconsulting-group.com/public_html/index.php on line 17
+[13-Mar-2023 07:11:34 UTC] An Error occurred while handling another error:
+yii\base\InvalidConfigException: The directory does not exist:  in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php:238
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(555): yii\web\AssetManager->checkBasePathPermission()
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(487): yii\web\AssetManager->publishDirectory('/home/customer/...', Array)
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(181): yii\web\AssetManager->publish('/home/customer/...', Array)
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(294): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#4 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(265): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#5 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(296): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#6 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(301): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#7 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#8 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#9 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(347): require('/home/customer/...')
+#10 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/customer/...', Array)
+#11 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/customer/...', Array, Object(frontend\controllers\SiteController))
+#12 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('<div class="sit...')
+#13 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#14 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#15 [internal function]: yii\web\ErrorAction->run()
+#16 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#17 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#18 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#19 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#20 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#21 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#22 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "robots.txt". in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('robots.txt', Array)
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#3 {main}
+$_SERVER = [
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_UNIQUE_ID' => 'ZA7MpsrYq10zLKniQs92YgAAAAA',
+    'REDIRECT_STATUS' => '200',
+    'HTTPS' => 'on',
+    'UNIQUE_ID' => 'ZA7MpsrYq10zLKniQs92YgAAAAA',
+    'HTTP_AUTHORIZATION' => '',
+    'HTTP_X_PORT' => '44992',
+    'HTTP_X_REAL_IP' => '40.77.167.181',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_HOST' => 'tokyoconsulting-group.com',
+    'HTTP_X_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_FROM' => 'bingbot(at)microsoft.com',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/103.0.5060.134 Safari/537.36',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'tokyoconsulting-group.com',
+    'SERVER_ADDR' => '35.213.180.74',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '40.77.167.181',
+    'DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/customer/www/tokyoconsulting-group.com/public_html/index.php',
+    'REMOTE_PORT' => '12136',
+    'REDIRECT_URL' => '/robots.txt',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/robots.txt',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1678691494.4924089908599853515625,
+    'REQUEST_TIME' => 1678691494,
+]
+[13-Mar-2023 07:12:00 UTC] An Error occurred while handling another error:
+yii\base\InvalidConfigException: The directory does not exist:  in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php:238
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(555): yii\web\AssetManager->checkBasePathPermission()
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(487): yii\web\AssetManager->publishDirectory('/home/customer/...', Array)
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(181): yii\web\AssetManager->publish('/home/customer/...', Array)
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(294): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#4 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(265): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#5 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(296): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#6 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(301): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#7 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#8 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#9 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(347): require('/home/customer/...')
+#10 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/customer/...', Array)
+#11 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/customer/...', Array, Object(frontend\controllers\SiteController))
+#12 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('<div class="sit...')
+#13 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#14 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#15 [internal function]: yii\web\ErrorAction->run()
+#16 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#17 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#18 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#19 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#20 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#21 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#22 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "assets/494f878/css/font-awesome.min.css". in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('assets/494f878/...', Array)
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#3 {main}
+$_SERVER = [
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_UNIQUE_ID' => 'ZA7MwMrYq10zLKniQs92YwAAAAI',
+    'REDIRECT_STATUS' => '200',
+    'HTTPS' => 'on',
+    'UNIQUE_ID' => 'ZA7MwMrYq10zLKniQs92YwAAAAI',
+    'HTTP_AUTHORIZATION' => '',
+    'HTTP_X_PORT' => '53824',
+    'HTTP_X_REAL_IP' => '157.55.39.239',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_HOST' => 'tokyoconsulting-group.com',
+    'HTTP_X_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_FROM' => 'bingbot(at)microsoft.com',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/103.0.5060.134 Safari/537.36',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'tokyoconsulting-group.com',
+    'SERVER_ADDR' => '35.213.180.74',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '157.55.39.239',
+    'DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/customer/www/tokyoconsulting-group.com/public_html/index.php',
+    'REMOTE_PORT' => '12136',
+    'REDIRECT_URL' => '/assets/494f878/css/font-awesome.min.css',
+    'REDIRECT_QUERY_STRING' => 'v=1678359262',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'v=1678359262',
+    'REQUEST_URI' => '/assets/494f878/css/font-awesome.min.css?v=1678359262',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1678691520.8559849262237548828125,
+    'REQUEST_TIME' => 1678691520,
+]
+[13-Mar-2023 07:12:06 UTC] An Error occurred while handling another error:
+yii\base\InvalidConfigException: The directory does not exist:  in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php:238
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(555): yii\web\AssetManager->checkBasePathPermission()
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(487): yii\web\AssetManager->publishDirectory('/home/customer/...', Array)
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(181): yii\web\AssetManager->publish('/home/customer/...', Array)
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(294): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#4 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(265): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#5 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(296): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#6 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(301): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#7 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#8 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#9 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(347): require('/home/customer/...')
+#10 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/customer/...', Array)
+#11 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/customer/...', Array, Object(frontend\controllers\SiteController))
+#12 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('<div class="sit...')
+#13 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#14 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#15 [internal function]: yii\web\ErrorAction->run()
+#16 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#17 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#18 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#19 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#20 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#21 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#22 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "assets/65bcc4e5/dist/js/bootstrap.bundle.js". in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('assets/65bcc4e5...', Array)
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#3 {main}
+$_SERVER = [
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_UNIQUE_ID' => 'ZA7MxkoIrhmP42wE1zSgmgAAAAA',
+    'REDIRECT_STATUS' => '200',
+    'HTTPS' => 'on',
+    'UNIQUE_ID' => 'ZA7MxkoIrhmP42wE1zSgmgAAAAA',
+    'HTTP_AUTHORIZATION' => '',
+    'HTTP_X_PORT' => '22976',
+    'HTTP_X_REAL_IP' => '207.46.13.223',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_HOST' => 'tokyoconsulting-group.com',
+    'HTTP_X_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_FROM' => 'bingbot(at)microsoft.com',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/103.0.5060.134 Safari/537.36',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'tokyoconsulting-group.com',
+    'SERVER_ADDR' => '35.213.180.74',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '207.46.13.223',
+    'DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/customer/www/tokyoconsulting-group.com/public_html/index.php',
+    'REMOTE_PORT' => '12136',
+    'REDIRECT_URL' => '/assets/65bcc4e5/dist/js/bootstrap.bundle.js',
+    'REDIRECT_QUERY_STRING' => 'v=1678359262',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'v=1678359262',
+    'REQUEST_URI' => '/assets/65bcc4e5/dist/js/bootstrap.bundle.js?v=1678359262',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1678691526.6243450641632080078125,
+    'REQUEST_TIME' => 1678691526,
+]
+[13-Mar-2023 07:12:06 UTC] An Error occurred while handling another error:
+yii\base\InvalidConfigException: The directory does not exist:  in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php:238
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(555): yii\web\AssetManager->checkBasePathPermission()
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(487): yii\web\AssetManager->publishDirectory('/home/customer/...', Array)
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(181): yii\web\AssetManager->publish('/home/customer/...', Array)
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(294): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#4 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(265): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#5 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(296): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#6 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(301): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#7 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#8 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#9 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(347): require('/home/customer/...')
+#10 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/customer/...', Array)
+#11 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/customer/...', Array, Object(frontend\controllers\SiteController))
+#12 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('<div class="sit...')
+#13 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#14 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#15 [internal function]: yii\web\ErrorAction->run()
+#16 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#17 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#18 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#19 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#20 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#21 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#22 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "assets/1ef58ead/yii.js". in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('assets/1ef58ead...', Array)
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#3 {main}
+$_SERVER = [
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_UNIQUE_ID' => 'ZA7MxkoIrhmP42wE1zSgmwAAAAI',
+    'REDIRECT_STATUS' => '200',
+    'HTTPS' => 'on',
+    'UNIQUE_ID' => 'ZA7MxkoIrhmP42wE1zSgmwAAAAI',
+    'HTTP_AUTHORIZATION' => '',
+    'HTTP_X_PORT' => '12992',
+    'HTTP_X_REAL_IP' => '52.167.144.41',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_HOST' => 'tokyoconsulting-group.com',
+    'HTTP_X_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_FROM' => 'bingbot(at)microsoft.com',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/103.0.5060.134 Safari/537.36',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'tokyoconsulting-group.com',
+    'SERVER_ADDR' => '35.213.180.74',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '52.167.144.41',
+    'DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/customer/www/tokyoconsulting-group.com/public_html/index.php',
+    'REMOTE_PORT' => '12136',
+    'REDIRECT_URL' => '/assets/1ef58ead/yii.js',
+    'REDIRECT_QUERY_STRING' => 'v=1678359261',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'v=1678359261',
+    'REQUEST_URI' => '/assets/1ef58ead/yii.js?v=1678359261',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1678691526.6700839996337890625,
+    'REQUEST_TIME' => 1678691526,
+]
+[13-Mar-2023 07:12:06 UTC] An Error occurred while handling another error:
+yii\base\InvalidConfigException: The directory does not exist:  in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php:238
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(555): yii\web\AssetManager->checkBasePathPermission()
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(487): yii\web\AssetManager->publishDirectory('/home/customer/...', Array)
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(181): yii\web\AssetManager->publish('/home/customer/...', Array)
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(294): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#4 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(265): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#5 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(296): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#6 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(301): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#7 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#8 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#9 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(347): require('/home/customer/...')
+#10 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/customer/...', Array)
+#11 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/customer/...', Array, Object(frontend\controllers\SiteController))
+#12 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('<div class="sit...')
+#13 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#14 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#15 [internal function]: yii\web\ErrorAction->run()
+#16 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#17 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#18 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#19 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#20 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#21 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#22 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "assets/65bcc4e5/dist/css/bootstrap.css". in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('assets/65bcc4e5...', Array)
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#3 {main}
+$_SERVER = [
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_UNIQUE_ID' => 'ZA7MxkoIrhmP42wE1zSgnAAAAAA',
+    'REDIRECT_STATUS' => '200',
+    'HTTPS' => 'on',
+    'UNIQUE_ID' => 'ZA7MxkoIrhmP42wE1zSgnAAAAAA',
+    'HTTP_AUTHORIZATION' => '',
+    'HTTP_X_PORT' => '12992',
+    'HTTP_X_REAL_IP' => '52.167.144.41',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_HOST' => 'tokyoconsulting-group.com',
+    'HTTP_X_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_FROM' => 'bingbot(at)microsoft.com',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/103.0.5060.134 Safari/537.36',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'tokyoconsulting-group.com',
+    'SERVER_ADDR' => '35.213.180.74',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '52.167.144.41',
+    'DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/customer/www/tokyoconsulting-group.com/public_html/index.php',
+    'REMOTE_PORT' => '12136',
+    'REDIRECT_URL' => '/assets/65bcc4e5/dist/css/bootstrap.css',
+    'REDIRECT_QUERY_STRING' => 'v=1678359262',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'v=1678359262',
+    'REQUEST_URI' => '/assets/65bcc4e5/dist/css/bootstrap.css?v=1678359262',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1678691526.92416095733642578125,
+    'REQUEST_TIME' => 1678691526,
+]
+[13-Mar-2023 07:14:15 UTC] An Error occurred while handling another error:
+yii\base\InvalidConfigException: The directory does not exist:  in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php:238
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(555): yii\web\AssetManager->checkBasePathPermission()
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(487): yii\web\AssetManager->publishDirectory('/home/customer/...', Array)
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(181): yii\web\AssetManager->publish('/home/customer/...', Array)
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(294): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#4 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(265): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#5 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(296): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#6 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(301): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#7 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#8 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#9 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(347): require('/home/customer/...')
+#10 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/customer/...', Array)
+#11 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/customer/...', Array, Object(frontend\controllers\SiteController))
+#12 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('<div class="sit...')
+#13 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#14 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#15 [internal function]: yii\web\ErrorAction->run()
+#16 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#17 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#18 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#19 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#20 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#21 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#22 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "robots.txt". in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('robots.txt', Array)
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#3 {main}
+$_SERVER = [
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_UNIQUE_ID' => 'ZA7NR2OAnukkPwAWUWZqtAAAAAA',
+    'REDIRECT_STATUS' => '200',
+    'HTTPS' => 'on',
+    'UNIQUE_ID' => 'ZA7NR2OAnukkPwAWUWZqtAAAAAA',
+    'HTTP_AUTHORIZATION' => '',
+    'HTTP_X_PORT' => '44992',
+    'HTTP_X_REAL_IP' => '40.77.167.181',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_HOST' => 'tokyoconsulting-group.com',
+    'HTTP_X_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_FROM' => 'bingbot(at)microsoft.com',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/103.0.5060.134 Safari/537.36',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'tokyoconsulting-group.com',
+    'SERVER_ADDR' => '35.213.180.74',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '40.77.167.181',
+    'DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/customer/www/tokyoconsulting-group.com/public_html/index.php',
+    'REMOTE_PORT' => '12136',
+    'REDIRECT_URL' => '/robots.txt',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/robots.txt',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1678691655.8997480869293212890625,
+    'REQUEST_TIME' => 1678691655,
+]
+[13-Mar-2023 07:28:07 UTC] An Error occurred while handling another error:
+yii\base\InvalidConfigException: The directory does not exist:  in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php:238
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(555): yii\web\AssetManager->checkBasePathPermission()
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(487): yii\web\AssetManager->publishDirectory('/home/customer/...', Array)
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(181): yii\web\AssetManager->publish('/home/customer/...', Array)
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(294): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#4 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(265): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#5 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(296): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#6 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(301): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#7 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#8 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#9 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(347): require('/home/customer/...')
+#10 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/customer/...', Array)
+#11 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/customer/...', Array, Object(frontend\controllers\SiteController))
+#12 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('<div class="sit...')
+#13 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#14 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#15 [internal function]: yii\web\ErrorAction->run()
+#16 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#17 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#18 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#19 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#20 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#21 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#22 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "robots.txt". in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('robots.txt', Array)
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#3 {main}
+$_SERVER = [
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_UNIQUE_ID' => 'ZA7Qh6HFLRFY4tsCYruJOAAAAAA',
+    'REDIRECT_STATUS' => '200',
+    'HTTPS' => 'on',
+    'UNIQUE_ID' => 'ZA7Qh6HFLRFY4tsCYruJOAAAAAA',
+    'HTTP_AUTHORIZATION' => '',
+    'HTTP_X_PORT' => '44992',
+    'HTTP_X_REAL_IP' => '40.77.167.181',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_HOST' => 'tokyoconsulting-group.com',
+    'HTTP_X_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_CACHE_CONTROL' => 'no-cache',
+    'HTTP_PRAGMA' => 'no-cache',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_FROM' => 'bingbot(at)microsoft.com',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/103.0.5060.134 Safari/537.36',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'tokyoconsulting-group.com',
+    'SERVER_ADDR' => '35.213.180.74',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '40.77.167.181',
+    'DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/customer/www/tokyoconsulting-group.com/public_html/index.php',
+    'REMOTE_PORT' => '12136',
+    'REDIRECT_URL' => '/robots.txt',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/robots.txt',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1678692487.8524711132049560546875,
+    'REQUEST_TIME' => 1678692487,
+]
+[13-Mar-2023 07:28:10 UTC] An Error occurred while handling another error:
+yii\base\InvalidConfigException: The directory does not exist:  in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php:238
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(555): yii\web\AssetManager->checkBasePathPermission()
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(487): yii\web\AssetManager->publishDirectory('/home/customer/...', Array)
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(181): yii\web\AssetManager->publish('/home/customer/...', Array)
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(294): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#4 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(265): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#5 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(296): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#6 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(301): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#7 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#8 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#9 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(347): require('/home/customer/...')
+#10 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/customer/...', Array)
+#11 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/customer/...', Array, Object(frontend\controllers\SiteController))
+#12 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('<div class="sit...')
+#13 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#14 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#15 [internal function]: yii\web\ErrorAction->run()
+#16 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#17 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#18 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#19 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#20 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#21 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#22 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "assets/b1460a55/jquery.js". in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('assets/b1460a55...', Array)
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#3 {main}
+$_SERVER = [
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_UNIQUE_ID' => 'ZA7QiqHFLRFY4tsCYruJOQAAAAI',
+    'REDIRECT_STATUS' => '200',
+    'HTTPS' => 'on',
+    'UNIQUE_ID' => 'ZA7QiqHFLRFY4tsCYruJOQAAAAI',
+    'HTTP_AUTHORIZATION' => '',
+    'HTTP_X_PORT' => '17920',
+    'HTTP_X_REAL_IP' => '40.77.202.64',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_HOST' => 'tokyoconsulting-group.com',
+    'HTTP_X_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) BingPreview/1.0b',
+    'HTTP_ACCEPT' => '*/*',
+    'HTTP_SEC_FETCH_SITE' => 'same-origin',
+    'HTTP_SEC_FETCH_MODE' => 'no-cors',
+    'HTTP_SEC_FETCH_DEST' => 'script',
+    'HTTP_REFERER' => 'https://tokyoconsulting-group.com/',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'tokyoconsulting-group.com',
+    'SERVER_ADDR' => '35.213.180.74',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '40.77.202.64',
+    'DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/customer/www/tokyoconsulting-group.com/public_html/index.php',
+    'REMOTE_PORT' => '12136',
+    'REDIRECT_URL' => '/assets/b1460a55/jquery.js',
+    'REDIRECT_QUERY_STRING' => 'v=1678359261',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => 'v=1678359261',
+    'REQUEST_URI' => '/assets/b1460a55/jquery.js?v=1678359261',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1678692490.56037998199462890625,
+    'REQUEST_TIME' => 1678692490,
+]
+[13-Mar-2023 08:39:47 UTC] An Error occurred while handling another error:
+yii\base\InvalidConfigException: The directory does not exist:  in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php:238
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(555): yii\web\AssetManager->checkBasePathPermission()
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(487): yii\web\AssetManager->publishDirectory('/home/customer/...', Array)
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(181): yii\web\AssetManager->publish('/home/customer/...', Array)
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(294): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#4 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(265): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#5 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(296): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#6 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(301): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#7 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#8 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#9 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(347): require('/home/customer/...')
+#10 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/customer/...', Array)
+#11 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/customer/...', Array, Object(frontend\controllers\SiteController))
+#12 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('<div class="sit...')
+#13 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#14 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#15 [internal function]: yii\web\ErrorAction->run()
+#16 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#17 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#18 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#19 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#20 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#21 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#22 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "Legal". in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('Legal', Array)
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#3 {main}
+$_SERVER = [
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_UNIQUE_ID' => 'ZA7hU7CD6zyPR8GHJl3dHQAAAAA',
+    'REDIRECT_STATUS' => '200',
+    'HTTPS' => 'on',
+    'UNIQUE_ID' => 'ZA7hU7CD6zyPR8GHJl3dHQAAAAA',
+    'HTTP_AUTHORIZATION' => '',
+    'HTTP_X_PORT' => '56452',
+    'HTTP_X_REAL_IP' => '54.157.43.98',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_HOST' => 'tokyoconsulting-group.com',
+    'HTTP_X_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_ACCEPT' => '*/*',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'tokyoconsulting-group.com',
+    'SERVER_ADDR' => '35.213.180.74',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '54.157.43.98',
+    'DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/customer/www/tokyoconsulting-group.com/public_html/index.php',
+    'REMOTE_PORT' => '12136',
+    'REDIRECT_URL' => '/Legal',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/Legal',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1678696787.314662933349609375,
+    'REQUEST_TIME' => 1678696787,
+]
+[13-Mar-2023 08:39:48 UTC] An Error occurred while handling another error:
+yii\base\InvalidConfigException: The directory does not exist:  in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php:238
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(555): yii\web\AssetManager->checkBasePathPermission()
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(487): yii\web\AssetManager->publishDirectory('/home/customer/...', Array)
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(181): yii\web\AssetManager->publish('/home/customer/...', Array)
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(294): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#4 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(265): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#5 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(296): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#6 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(301): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#7 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#8 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#9 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(347): require('/home/customer/...')
+#10 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/customer/...', Array)
+#11 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/customer/...', Array, Object(frontend\controllers\SiteController))
+#12 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('<div class="sit...')
+#13 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#14 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#15 [internal function]: yii\web\ErrorAction->run()
+#16 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#17 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#18 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#19 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#20 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#21 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#22 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "Terms of Service". in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('Terms of Servic...', Array)
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#3 {main}
+$_SERVER = [
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_UNIQUE_ID' => 'ZA7hVLCD6zyPR8GHJl3dHgAAAAI',
+    'REDIRECT_STATUS' => '200',
+    'HTTPS' => 'on',
+    'UNIQUE_ID' => 'ZA7hVLCD6zyPR8GHJl3dHgAAAAI',
+    'HTTP_AUTHORIZATION' => '',
+    'HTTP_X_PORT' => '56468',
+    'HTTP_X_REAL_IP' => '54.157.43.98',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_HOST' => 'tokyoconsulting-group.com',
+    'HTTP_X_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_ACCEPT' => '*/*',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'tokyoconsulting-group.com',
+    'SERVER_ADDR' => '35.213.180.74',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '54.157.43.98',
+    'DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/customer/www/tokyoconsulting-group.com/public_html/index.php',
+    'REMOTE_PORT' => '12136',
+    'REDIRECT_URL' => '/Terms of Service',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/Terms%20of%20Service',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1678696788.3403069972991943359375,
+    'REQUEST_TIME' => 1678696788,
+]
+[13-Mar-2023 08:39:49 UTC] An Error occurred while handling another error:
+yii\base\InvalidConfigException: The directory does not exist:  in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php:238
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(555): yii\web\AssetManager->checkBasePathPermission()
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(487): yii\web\AssetManager->publishDirectory('/home/customer/...', Array)
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(181): yii\web\AssetManager->publish('/home/customer/...', Array)
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(294): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#4 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(265): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#5 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(296): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#6 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(301): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#7 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#8 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#9 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(347): require('/home/customer/...')
+#10 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/customer/...', Array)
+#11 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/customer/...', Array, Object(frontend\controllers\SiteController))
+#12 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('<div class="sit...')
+#13 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#14 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#15 [internal function]: yii\web\ErrorAction->run()
+#16 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#17 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#18 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#19 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#20 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#21 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#22 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "Responsible Disclosure". in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('Responsible Dis...', Array)
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#3 {main}
+$_SERVER = [
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_UNIQUE_ID' => 'ZA7hVbCD6zyPR8GHJl3dHwAAAAA',
+    'REDIRECT_STATUS' => '200',
+    'HTTPS' => 'on',
+    'UNIQUE_ID' => 'ZA7hVbCD6zyPR8GHJl3dHwAAAAA',
+    'HTTP_AUTHORIZATION' => '',
+    'HTTP_X_PORT' => '56472',
+    'HTTP_X_REAL_IP' => '54.157.43.98',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_HOST' => 'tokyoconsulting-group.com',
+    'HTTP_X_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_ACCEPT' => '*/*',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'tokyoconsulting-group.com',
+    'SERVER_ADDR' => '35.213.180.74',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '54.157.43.98',
+    'DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/customer/www/tokyoconsulting-group.com/public_html/index.php',
+    'REMOTE_PORT' => '12136',
+    'REDIRECT_URL' => '/Responsible Disclosure',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/Responsible%20Disclosure',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1678696789.3577249050140380859375,
+    'REQUEST_TIME' => 1678696789,
+]
+[13-Mar-2023 08:39:50 UTC] An Error occurred while handling another error:
+yii\base\InvalidConfigException: The directory does not exist:  in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php:238
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(555): yii\web\AssetManager->checkBasePathPermission()
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(487): yii\web\AssetManager->publishDirectory('/home/customer/...', Array)
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(181): yii\web\AssetManager->publish('/home/customer/...', Array)
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(294): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#4 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(265): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#5 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(296): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#6 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(301): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#7 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#8 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#9 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(347): require('/home/customer/...')
+#10 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/customer/...', Array)
+#11 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/customer/...', Array, Object(frontend\controllers\SiteController))
+#12 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('<div class="sit...')
+#13 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#14 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#15 [internal function]: yii\web\ErrorAction->run()
+#16 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#17 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#18 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#19 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#20 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#21 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#22 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "Privacy Information". in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('Privacy Informa...', Array)
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#3 {main}
+$_SERVER = [
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_UNIQUE_ID' => 'ZA7hVrCD6zyPR8GHJl3dIAAAAAI',
+    'REDIRECT_STATUS' => '200',
+    'HTTPS' => 'on',
+    'UNIQUE_ID' => 'ZA7hVrCD6zyPR8GHJl3dIAAAAAI',
+    'HTTP_AUTHORIZATION' => '',
+    'HTTP_X_PORT' => '56480',
+    'HTTP_X_REAL_IP' => '54.157.43.98',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_HOST' => 'tokyoconsulting-group.com',
+    'HTTP_X_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_ACCEPT' => '*/*',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'tokyoconsulting-group.com',
+    'SERVER_ADDR' => '35.213.180.74',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '54.157.43.98',
+    'DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/customer/www/tokyoconsulting-group.com/public_html/index.php',
+    'REMOTE_PORT' => '12136',
+    'REDIRECT_URL' => '/Privacy Information',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/Privacy%20Information',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1678696790.3811581134796142578125,
+    'REQUEST_TIME' => 1678696790,
+]
+[13-Mar-2023 08:39:51 UTC] An Error occurred while handling another error:
+yii\base\InvalidConfigException: The directory does not exist:  in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php:238
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(555): yii\web\AssetManager->checkBasePathPermission()
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(487): yii\web\AssetManager->publishDirectory('/home/customer/...', Array)
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(181): yii\web\AssetManager->publish('/home/customer/...', Array)
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(294): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#4 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(265): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#5 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(296): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#6 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(301): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#7 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#8 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#9 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(347): require('/home/customer/...')
+#10 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/customer/...', Array)
+#11 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/customer/...', Array, Object(frontend\controllers\SiteController))
+#12 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('<div class="sit...')
+#13 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#14 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#15 [internal function]: yii\web\ErrorAction->run()
+#16 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#17 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#18 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#19 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#20 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#21 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#22 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "Cookie Preferences". in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('Cookie Preferen...', Array)
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#3 {main}
+$_SERVER = [
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_UNIQUE_ID' => 'ZA7hV7CD6zyPR8GHJl3dIQAAAAA',
+    'REDIRECT_STATUS' => '200',
+    'HTTPS' => 'on',
+    'UNIQUE_ID' => 'ZA7hV7CD6zyPR8GHJl3dIQAAAAA',
+    'HTTP_AUTHORIZATION' => '',
+    'HTTP_X_PORT' => '56490',
+    'HTTP_X_REAL_IP' => '54.157.43.98',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_HOST' => 'tokyoconsulting-group.com',
+    'HTTP_X_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_ACCEPT' => '*/*',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'tokyoconsulting-group.com',
+    'SERVER_ADDR' => '35.213.180.74',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '54.157.43.98',
+    'DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/customer/www/tokyoconsulting-group.com/public_html/index.php',
+    'REMOTE_PORT' => '12136',
+    'REDIRECT_URL' => '/Cookie Preferences',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/Cookie%20Preferences',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1678696791.4378669261932373046875,
+    'REQUEST_TIME' => 1678696791,
+]
+[13-Mar-2023 08:39:52 UTC] An Error occurred while handling another error:
+yii\base\InvalidConfigException: The directory does not exist:  in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php:238
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(555): yii\web\AssetManager->checkBasePathPermission()
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(487): yii\web\AssetManager->publishDirectory('/home/customer/...', Array)
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(181): yii\web\AssetManager->publish('/home/customer/...', Array)
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(294): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#4 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(265): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#5 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(296): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#6 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(301): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#7 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#8 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#9 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(347): require('/home/customer/...')
+#10 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/customer/...', Array)
+#11 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/customer/...', Array, Object(frontend\controllers\SiteController))
+#12 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('<div class="sit...')
+#13 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#14 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#15 [internal function]: yii\web\ErrorAction->run()
+#16 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#17 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#18 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#19 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#20 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#21 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#22 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "Contact". in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('Contact', Array)
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#3 {main}
+$_SERVER = [
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_UNIQUE_ID' => 'ZA7hWLCD6zyPR8GHJl3dIgAAAAI',
+    'REDIRECT_STATUS' => '200',
+    'HTTPS' => 'on',
+    'UNIQUE_ID' => 'ZA7hWLCD6zyPR8GHJl3dIgAAAAI',
+    'HTTP_AUTHORIZATION' => '',
+    'HTTP_X_PORT' => '56492',
+    'HTTP_X_REAL_IP' => '54.157.43.98',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_HOST' => 'tokyoconsulting-group.com',
+    'HTTP_X_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_ACCEPT' => '*/*',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'tokyoconsulting-group.com',
+    'SERVER_ADDR' => '35.213.180.74',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '54.157.43.98',
+    'DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/customer/www/tokyoconsulting-group.com/public_html/index.php',
+    'REMOTE_PORT' => '12136',
+    'REDIRECT_URL' => '/Contact',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/Contact',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1678696792.4575760364532470703125,
+    'REQUEST_TIME' => 1678696792,
+]
+[13-Mar-2023 08:39:53 UTC] An Error occurred while handling another error:
+yii\base\InvalidConfigException: The directory does not exist:  in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php:238
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(555): yii\web\AssetManager->checkBasePathPermission()
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(487): yii\web\AssetManager->publishDirectory('/home/customer/...', Array)
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(181): yii\web\AssetManager->publish('/home/customer/...', Array)
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(294): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#4 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetManager.php(265): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#5 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(296): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#6 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/View.php(301): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', NULL)
+#7 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/AssetBundle.php(125): yii\web\View->registerAssetBundle('frontend\\assets...')
+#8 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/views/layouts/main.php(13): yii\web\AssetBundle::register(Object(yii\web\View))
+#9 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(347): require('/home/customer/...')
+#10 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/home/customer/...', Array)
+#11 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(422): yii\base\View->renderFile('/home/customer/...', Array, Object(frontend\controllers\SiteController))
+#12 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(408): yii\base\Controller->renderContent('<div class="sit...')
+#13 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(139): yii\base\Controller->render('error', Array)
+#14 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorAction.php(118): yii\web\ErrorAction->renderHtmlResponse()
+#15 [internal function]: yii\web\ErrorAction->run()
+#16 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Action.php(93): call_user_func_array(Array, Array)
+#17 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\Action->runWithParams(Array)
+#18 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php(552): yii\base\Controller->runAction('error', Array)
+#19 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/ErrorHandler.php(109): yii\base\Module->runAction('site/error')
+#20 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/ErrorHandler.php(152): yii\web\ErrorHandler->renderException(Object(yii\web\NotFoundHttpException))
+#21 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\NotFoundHttpException))
+#22 {main}
+Previous exception:
+yii\base\InvalidRouteException: Unable to resolve the request "Sitemap". in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Module.php:561
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('Sitemap', Array)
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#3 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/vendor/yiisoft/yii2/base/Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/customer/www/tokyoconsulting-group.com/public_html/tcfgroup/frontend/web/index.php(18): yii\base\Application->run()
+#2 /home/customer/www/tokyoconsulting-group.com/public_html/index.php(17): require('/home/customer/...')
+#3 {main}
+$_SERVER = [
+    'REDIRECT_HTTPS' => 'on',
+    'REDIRECT_UNIQUE_ID' => 'ZA7hWbCD6zyPR8GHJl3dIwAAAAA',
+    'REDIRECT_STATUS' => '200',
+    'HTTPS' => 'on',
+    'UNIQUE_ID' => 'ZA7hWbCD6zyPR8GHJl3dIwAAAAA',
+    'HTTP_AUTHORIZATION' => '',
+    'HTTP_X_PORT' => '56508',
+    'HTTP_X_REAL_IP' => '54.157.43.98',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_HOST' => 'tokyoconsulting-group.com',
+    'HTTP_X_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
+    'HTTP_ACCEPT' => '*/*',
+    'PATH' => '/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'tokyoconsulting-group.com',
+    'SERVER_ADDR' => '35.213.180.74',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '54.157.43.98',
+    'DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/customer/www/tokyoconsulting-group.com/public_html',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/customer/www/tokyoconsulting-group.com/public_html/index.php',
+    'REMOTE_PORT' => '12136',
+    'REDIRECT_URL' => '/Sitemap',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.0',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/Sitemap',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1678696793.469089031219482421875,
+    'REQUEST_TIME' => 1678696793,
+]
+[13-Mar-2023 10:32:48 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/customer/www/tokyoconsulting-group.com/public_html/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/tokyoconsulting-group.com/public_html/index.php on line 7
+[13-Mar-2023 10:33:37 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/customer/www/tokyoconsulting-group.com/public_html/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/tokyoconsulting-group.com/public_html/index.php on line 7
+[13-Mar-2023 10:36:08 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/customer/www/tokyoconsulting-group.com/public_html/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/tokyoconsulting-group.com/public_html/index.php on line 7
+[13-Mar-2023 10:38:16 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/customer/www/tokyoconsulting-group.com/public_html/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/tokyoconsulting-group.com/public_html/index.php on line 7
+[13-Mar-2023 10:43:49 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/customer/www/tokyoconsulting-group.com/public_html/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/tokyoconsulting-group.com/public_html/index.php on line 7
+[13-Mar-2023 10:48:18 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/customer/www/tokyoconsulting-group.com/public_html/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/tokyoconsulting-group.com/public_html/index.php on line 7
+[13-Mar-2023 10:48:35 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/customer/www/tokyoconsulting-group.com/public_html/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/tokyoconsulting-group.com/public_html/index.php on line 7
+[22-Mar-2023 06:58:27 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/customer/www/tokyoconsulting-group.com/public_html/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/tokyoconsulting-group.com/public_html/index.php on line 7
+[22-Mar-2023 06:58:28 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/customer/www/tokyoconsulting-group.com/public_html/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/tokyoconsulting-group.com/public_html/index.php on line 7
+[22-Mar-2023 06:58:29 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home/customer/www/tokyoconsulting-group.com/public_html/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/customer/www/tokyoconsulting-group.com/public_html/index.php on line 7

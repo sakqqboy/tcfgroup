@@ -405,40 +405,41 @@ $this->title = 'webinar-video';
             <div class="alert alert-primary" role="alert">
                 <div class="row">
                     <div class="col-12">
-                        <div class="col-5 p-2 mb-2 bg-white text-white" style="border-radius: 8px;">
-                            <a href="#" class="google">
-                                <img src="<?= Yii::$app->homeUrl ?>img/google-plus.png" class="img-google"> Signup with google
-                            </a>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="col-5 p-2 mb-2 bg-white text-white" style="border-radius: 8px;">
-                                <a href="#" class="LinkeIn">
-                                    <img src="<?= Yii::$app->homeUrl ?>img/LinkedIn.png" class="img-google"> Signup with LinkedIn
+                        <div class="row">
+                            <div class="col-5 p-2 mb-2 form-bg-media">
+                                <a href="#" class="no-underline-form">
+                                    <i class="fa fa-google-plus-square form-gooogle" aria-hidden="true"> </i> Signup with google
+                                </a>
+                            </div>
+                            <div class="col-5 p-2 mb-2  form-bg-media">
+                                <a href="#" class="no-underline-form">
+                                    <i class="fa fa-linkedin-square form-linkedin" aria-hidden="true"></i> Signup with LinkedIn
                                 </a>
                             </div>
                         </div>
+
                         <div class="col-12 text-center mt-50 account-signin">
                             - Or signup with your email -
                         </div>
 
                         <div class="col-10 mb-4">
                             <label for="formGroupExampleInput" class="form-label form-contact-name">Full name</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Quazi Ehsan Hossain">
+                            <i class="fa fa-users" aria-hidden="true"></i> <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Quazi Ehsan Hossain">
                         </div>
                         <div class="col-10 mb-4">
                             <label for="formGroupExampleInput2" class="form-label form-contact-name">Email</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="ehsan@tokyoconsultingfirmlimited.com">
+                            <i class="fa fa-envelope" aria-hidden="true"></i> <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="ehsan@tokyoconsultingfirmlimited.com">
                         </div>
                         <div class="col-10 mb-4">
                             <label for="inputPassword" class="form-label form-contact-name">Password</label>
+                            <i class="fa fa-eye" aria-hidden="true"></i>
                             <input type="password" class="form-control" id="inputPassword">
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1"> I agreed to the Terms & Conditions</label>
                         </div>
-                        <div class="col-5 mt-10">
+                        <div class="col-7 mt-10">
                             <button type="submit" class="btn btn-primary"> Register for Webinar</button>
                             <p class="account-signin">Already have account? <span class="sign-in"> Sign in</span></p>
                         </div>

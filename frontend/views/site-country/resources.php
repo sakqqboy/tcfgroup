@@ -18,9 +18,11 @@ $this->title = 'contact';
     <div class="col-12 detail-resource">
         In our Resource Center, you will find a collection of significant notifications, SROs, orders, and circulars issued by Bangladeshi regulators
     </div>
-    <div class="col-12 title-resource">
-        <i class="fa fa-search button-forms-search" aria-hidden="true"> </i>
-        <input class="form-control form-control-lg Templates-Search" type="text" placeholder="Search forms & Templates" aria-label="Search forms & Templates">
+    <div class="col-12 form-search-template">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"> <i class="fa fa-search" aria-hidden="true"></i></span>
+            <input type="text" class="form-control table-search" placeholder="Search forms & Templates" aria-label="Search forms & Templates">
+        </div>
     </div>
     <div class="col-12 pr12 form-select-search">
         <div class="row">
@@ -112,183 +114,181 @@ $this->title = 'contact';
     </div>
 </div>
 
+<table class="table table-striped">
+    <thead class="table1">
+        <tr>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Document No.</th>
+            <th>Last Update</th>
+            <th>Authority</th>
+            <th>Download</th>
+        </tr>
+    </thead>
 
-<div class="col-12 pl-10 mt-50">
-    <table class="table table-striped">
-        <thead style="font-size: 18px; background: #032E61; border-radius: 5px; color:#ffff; font-family:'klavika';">
-            <tr>
-                <th scope="col"> Description</th>
-                <th scope="col">Category</th>
-                <th scope="col">Document No.</th>
-                <th scope="col">Last Update</th>
-                <th scope="col">Authority</th>
-                <th scope="col">Download</th>
-            </tr>
-        </thead>
-        <tbody style="font-size: 11px; ">
-            <tr>
-                <th scope="row" style="color:#0078C8;">SRO regarding non-deduction of VAT from the payment of supplier of goods.</th>
-                <td>Value Added Tax</td>
-                <td>SRO No. 325-Ain/2022/206-Mushak</td>
-                <td>22-10-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-            <tr>
-                <th scope="row" style="color:#0078C8;">Mandatory tax return filing relaxed for loans and credit cards</th>
-                <td>Other</td>
-                <td>Doc No- 08.01.0000.030.06.005(part-1).21/203</td>
-                <td>18-09-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-            <tr>
-                <th scope="row" style="color:#0078C8;">Agreement for the avoidance of double taxation and the prevention of fiscal evasion with respect to taxes on income between Bangladesh and Maldives</th>
-                <td>Double Taxation Avoidance Agreement</td>
-                <td>SRO No. 190-AIN/Income Tax/2022</td>
-                <td>18-07-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-            <tr>
-                <th scope="row" style="color:#0078C8;">VAT Audit Manual 2022</th>
-                <td>Other</td>
-                <td>VAT & SD Law 2012</td>
-                <td>01-07-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-            <tr>
-                <th scope="row" style="color:#0078C8;">Bangladesh Finance Act 2022</th>
-                <td>Income Tax</td>
-                <td>Finance Act, 2022</td>
-                <td>01-07-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-            <tr>
-                <th scope="row" style="color:#0078C8;">Amendment of General Order 03-VAT-2022 Regarding the Wholesale Businesses</th>
-                <td>GO</td>
-                <td>GO No -09/Mushak/2022</td>
-                <td>01-07-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-            <tr>
-                <th scope="row" style="color:#0078C8;">Amendment of Value Added Tax & Supplementary Duty Rules, 2016</th>
-                <td>Value Added Tax</td>
-                <td>SRO No. 223-Ain/2022/195-Mushak</td>
-                <td>28-06-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-            <tr>
-                <th scope="row" style="color:#0078C8;">Amendment of SRO Regarding Central Registration Rules, 2019</th>
-                <td>Value Added Tax</td>
-                <td>SRO No. 224-Ain/2022/196-Mushak</td>
-                <td>28-06-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-            <tr>
-                <th scope="row" style="color:#0078C8;">Amendment of SRO Regarding VAT Exemption</th>
-                <td>Value Added Tax</td>
-                <td>SRO No. 225-Ain/2022/197-Mushak</td>
-                <td>28-06-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm" style="color:#0078C8;"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-            <tr>
-                <th scope="row" style="color:#0078C8;">Amendment of SRO Regarding Definition of Services</th>
-                <td>Value Added Tax</td>
-                <td>SRO No. 226-Ain/2022/198-Mushak</td>
-                <td>28-06-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-            <tr>
-                <th scope="row" style="color:#0078C8;">Amendment of SRO Regarding VAT Deduction at Source</th>
-                <td>Value Added Tax</td>
-                <td>SRO No. 227-Ain/2022/199-Mushak</td>
-                <td>28-06-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-            <tr>
-                <th scope="row" style="color:#0078C8;">Amendment of SRO Regarding Exemption of Advance Tax (AT)</th>
-                <td>Value Added Tax</td>
-                <td>SRO No. 228-Ain/2022/200-Mushak</td>
-                <td>28-06-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-            <tr>
-                <th scope="row" style="color:#0078C8;">SRO regarding VAT exemption on Linear Alkyl Benzene Sulphonic Acid(LASSA) & Sodium Lauryl Ether Sulphate(SLES) in Manufacturing Stage</th>
-                <td>Value Added Tax</td>
-                <td>SRO No. 229-Ain/2022/201-Mushak</td>
-                <td>28-06-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-            <tr>
-                <th scope="row" style="color:#0078C8;">SRO regarding VAT exemption on Meditation Service</th>
-                <td>Value Added Tax</td>
-                <td>SRO No. 230-Ain/2022/202-Mushak</td>
-                <td>28-06-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-            <tr>
-                <th scope="row" style="color:#0078C8;">Bangladesh Finance Bill 2022/2023</th>
-                <td>Income Tax</td>
-                <td>Finance Bill 2022/2023</td>
-                <td>09-06-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-            <tr>
-                <th scope="row" style="color:#0078C8;">Amendment of The Stamp Act, 1899</th>
-                <td>Stamp</td>
-                <td>The Stamp Act, 1899 - Schedule 1</td>
-                <td>01-06-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-            <tr>
-                <th scope="row" style="color:#0078C8;">Amendment of Value Added Tax & Supplementary Duty Rules, 2016</th>
-                <td>Value Added Tax</td>
-                <td>SRO no. 161/AIN/2022/174-Mushak</td>
-                <td>28-06-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-            <tr>
-                <th scope="row" style="color:#0078C8;">SRO Regarding Changes of Excise Duty</th>
-                <td>Value Added Tax</td>
-                <td>SRO no. 162/AIN/2022/175-Mushak</td>
-                <td>01-06-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-            <tr>
-                <th scope="row" style="color:#0078C8;">General Order regarding collection VA T & SD from cigarette</th>
-                <td>GO</td>
-                <td>GO No. 02-Mushak/2022</td>
-                <td>01-06-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-            <tr>
-                <th scope="row" style="color:#0078C8;">SRO Regarding VAT Exemption</th>
-                <td>Value Added Tax</td>
-                <td>SRO no. 163/AIN/2022/176-Mushak</td>
-                <td>01-06-2022</td>
-                <td>NBR</td>
-                <td class="fot-sm"><button type="button" class="btn btn-primary"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+    <tbody class="table2">
+        <tr>
+            <th scope="row" style="color:#0078C8;">SRO regarding non-deduction of VAT from the payment of supplier of goods.</th>
+            <td>Value Added Tax</td>
+            <td>SRO No. 325-Ain/2022/206-Mushak</td>
+            <td>22-10-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+        <tr>
+            <th scope="row" style="color:#0078C8;">Mandatory tax return filing relaxed for loans and credit cards</th>
+            <td>Other</td>
+            <td>Doc No- 08.01.0000.030.06.005(part-1).21/203</td>
+            <td>18-09-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+        <tr>
+            <th scope="row" style="color:#0078C8;">Agreement for the avoidance of double taxation and the prevention of fiscal evasion with respect to taxes on income between Bangladesh and Maldives</th>
+            <td>Double Taxation Avoidance Agreement</td>
+            <td>SRO No. 190-AIN/Income Tax/2022</td>
+            <td>18-07-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+        <tr>
+            <th scope="row" style="color:#0078C8;">VAT Audit Manual 2022</th>
+            <td>Other</td>
+            <td>VAT & SD Law 2012</td>
+            <td>01-07-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+        <tr>
+            <th scope="row" style="color:#0078C8;">Bangladesh Finance Act 2022</th>
+            <td>Income Tax</td>
+            <td>Finance Act, 2022</td>
+            <td>01-07-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+        <tr>
+            <th scope="row" style="color:#0078C8;">Amendment of General Order 03-VAT-2022 Regarding the Wholesale Businesses</th>
+            <td>GO</td>
+            <td>GO No -09/Mushak/2022</td>
+            <td>01-07-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+        <tr>
+            <th scope="row" style="color:#0078C8;">Amendment of Value Added Tax & Supplementary Duty Rules, 2016</th>
+            <td>Value Added Tax</td>
+            <td>SRO No. 223-Ain/2022/195-Mushak</td>
+            <td>28-06-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+        <tr>
+            <th scope="row" style="color:#0078C8;">Amendment of SRO Regarding Central Registration Rules, 2019</th>
+            <td>Value Added Tax</td>
+            <td>SRO No. 224-Ain/2022/196-Mushak</td>
+            <td>28-06-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+        <tr>
+            <th scope="row" style="color:#0078C8;">Amendment of SRO Regarding VAT Exemption</th>
+            <td>Value Added Tax</td>
+            <td>SRO No. 225-Ain/2022/197-Mushak</td>
+            <td>28-06-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm" style="color:#0078C8;"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+        <tr>
+            <th scope="row" style="color:#0078C8;">Amendment of SRO Regarding Definition of Services</th>
+            <td>Value Added Tax</td>
+            <td>SRO No. 226-Ain/2022/198-Mushak</td>
+            <td>28-06-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+        <tr>
+            <th scope="row" style="color:#0078C8;">Amendment of SRO Regarding VAT Deduction at Source</th>
+            <td>Value Added Tax</td>
+            <td>SRO No. 227-Ain/2022/199-Mushak</td>
+            <td>28-06-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+        <tr>
+            <th scope="row" style="color:#0078C8;">Amendment of SRO Regarding Exemption of Advance Tax (AT)</th>
+            <td>Value Added Tax</td>
+            <td>SRO No. 228-Ain/2022/200-Mushak</td>
+            <td>28-06-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+        <tr>
+            <th scope="row" style="color:#0078C8;">SRO regarding VAT exemption on Linear Alkyl Benzene Sulphonic Acid(LASSA) & Sodium Lauryl Ether Sulphate(SLES) in Manufacturing Stage</th>
+            <td>Value Added Tax</td>
+            <td>SRO No. 229-Ain/2022/201-Mushak</td>
+            <td>28-06-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+        <tr>
+            <th scope="row" style="color:#0078C8;">SRO regarding VAT exemption on Meditation Service</th>
+            <td>Value Added Tax</td>
+            <td>SRO No. 230-Ain/2022/202-Mushak</td>
+            <td>28-06-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+        <tr>
+            <th scope="row" style="color:#0078C8;">Bangladesh Finance Bill 2022/2023</th>
+            <td>Income Tax</td>
+            <td>Finance Bill 2022/2023</td>
+            <td>09-06-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+        <tr>
+            <th scope="row" style="color:#0078C8;">Amendment of The Stamp Act, 1899</th>
+            <td>Stamp</td>
+            <td>The Stamp Act, 1899 - Schedule 1</td>
+            <td>01-06-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+        <tr>
+            <th scope="row" style="color:#0078C8;">Amendment of Value Added Tax & Supplementary Duty Rules, 2016</th>
+            <td>Value Added Tax</td>
+            <td>SRO no. 161/AIN/2022/174-Mushak</td>
+            <td>28-06-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+        <tr>
+            <th scope="row" style="color:#0078C8;">SRO Regarding Changes of Excise Duty</th>
+            <td>Value Added Tax</td>
+            <td>SRO no. 162/AIN/2022/175-Mushak</td>
+            <td>01-06-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+        <tr>
+            <th scope="row" style="color:#0078C8;">General Order regarding collection VA T & SD from cigarette</th>
+            <td>GO</td>
+            <td>GO No. 02-Mushak/2022</td>
+            <td>01-06-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+        <tr>
+            <th scope="row" style="color:#0078C8;">SRO Regarding VAT Exemption</th>
+            <td>Value Added Tax</td>
+            <td>SRO no. 163/AIN/2022/176-Mushak</td>
+            <td>01-06-2022</td>
+            <td>NBR</td>
+            <td class="fot-sm"><button type="button" class="btn btn-primary td-download"><i class="fa fa-cloud-download" aria-hidden="true"></i> Download</button></td>
+        </tr>
+    </tbody>
+</table>
 
 <div class="col-12 mt-50 text-center">
     <button type="button" class="btn btn-primary"><i class="fa fa-angle-left" aria-hidden="true"></i></button>

@@ -79,7 +79,7 @@
     line-height: 26px;
     letter-spacing: -0.48px;
     text-transform: uppercase;
-    margin-top: 400px;
+    margin-top: 250px;
     color: white;
 }
 
@@ -160,13 +160,47 @@
     }
 
     .item1 {
-        font-size: 14px;
-        margin-left: -250px;
+        margin-left: 40px;
+        font-size: 20px;
+        text-align: end;
+        width: 200px;
     }
 
 
     .picture-1 {
-        margin-left: 350px;
+        margin-left: 550px;
+        margin-top: -400px;
+        width: 150px;
+    }
+
+    .img22 {
+        width: 15px;
+        margin-left: 20px;
+    }
+
+    .item3 {
+
+        width: 150px;
+        font-size: 12px;
+
+    }
+
+    .item5 {
+        width: 150px;
+    }
+
+    .item7 {
+        margin-left: 220px;
+        margin-top: -330px;
+    }
+
+    .home-about {
+        padding-left: 40px;
+    }
+
+    .detail-about {
+        padding-left: 40px;
+        width: 450px;
     }
 }
 
@@ -177,33 +211,36 @@
     }
 
     .page-about2 {
-        margin-top: -90px;
-        font-size: 23px;
-        width: 220px;
+        margin-top: -70px;
+        font-size: 20px;
+        width: 200px;
     }
 
     .about-country1 {
         width: 380px;
     }
 
-    .img22 {
-        width: 15px;
-    }
-
     .item1 {
         font-size: 13px;
-        width: 90px;
+        width: 50px;
+        margin-left: 20px;
     }
 
     .picture-1 {
-        width: 130px;
-        margin-left: 30px;
+        width: 100px;
+        margin-left: 220px;
+        margin-top: -590px;
     }
 
     .item3 {
         font-size: 8px;
         width: 90px;
         line-height: 10px;
+        margin-left: 30px;
+    }
+
+    .img22 {
+        width: 18px;
     }
 
     .item4 {
@@ -215,13 +252,20 @@
         width: 90px;
     }
 
+    .number-year {
+        font-size: 18px;
+    }
+
     .item2 {
         font-size: 13px;
+        margin-left: 30px;
     }
 
     .item7 {
         font-size: 13px;
         width: 90px;
+        margin-left: 20px;
+        margin-top: 10px;
     }
 
     .img-bg-kuno {

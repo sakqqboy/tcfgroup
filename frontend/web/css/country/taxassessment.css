@@ -6,7 +6,8 @@
 .taxassessment-home {
     margin-top: 80px;
     padding-left: 40px;
-    font-size: 35px;
+    font-size: 30px;
+    color: gray;
 }
 
 .no-underline2 {
@@ -21,6 +22,7 @@
     padding-left: 40px;
     margin-top: 50px;
     line-height: 60px;
+
 
 }
 
@@ -290,7 +292,18 @@
     }
 
     .paragraph5 {
-        width: 400px;
+        width: 370px;
     }
 
+    .paragraph6 {
+        width: 350px;
+    }
+
+    .name-Round {
+        font-size: 15px;
+    }
+
+    .name-Round1 {
+        font-size: 10px;
+    }
 }

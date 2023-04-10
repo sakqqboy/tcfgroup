@@ -30,13 +30,16 @@
     color: #333333;
 }
 
-.title-resource {
+.form-search-template {
     position: absolute;
-    width: 532px;
-    height: 52px;
-    left: 130px;
+    width: 450px;
+    padding-left: 139px;
     margin-top: -250px;
+}
 
+.table-search {
+    font-family: 'klavika';
+    padding-left: 40px;
 }
 
 .button-forms-search {
@@ -86,37 +89,59 @@
     font-family: 'klavika';
 }
 
+.table1 {
+    font-size: 16px;
+    background: #032E61;
+    border-radius: 5px;
+    color: #ffff;
+    font-family: 'klavika';
+}
+
+.table2 {
+    font-size: 14px;
+    font-family: 'klavika';
+}
+
+@media(max-width: 992px) {
+    .page-resource {
+        margin-top: -370px;
+    }
+
+    .detail-resource {
+        margin-top: -250px;
+        font-size: 15px;
+        line-height: 20px;
+        width: 450px;
+    }
+
+    .form-search-template {
+        margin-top: -150px;
+    }
+
+    .txt-search {
+        margin-top: 120px;
+    }
+
+}
+
 @media(max-width: 768px) {
     .img-Resources {
         margin-top: 90px;
     }
 
     .page-resource {
-        margin-top: -200px;
+        margin-top: -180px;
         padding-left: 40px;
         font-size: 22px;
         width: 200px;
     }
 
     .detail-resource {
-        margin-top: -150px;
+        margin-top: -130px;
         padding-left: 40px;
         width: 220px;
         font-size: 7px;
         line-height: 10px;
-    }
-
-    .title-resource {
-        margin-top: -70px;
-        padding-left: 20px;
-    }
-
-
-    .Templates-Search {
-        width: 140px;
-        margin-left: -110px;
-        font-size: 10px;
-        margin-top: -70px;
     }
 
     .button-forms-search {
@@ -125,8 +150,9 @@
     }
 
     .form-select-search {
-        margin-top: -35px;
+        margin-top: -160px;
         padding-left: 40px;
+        font-size: 8px;
     }
 
     .txt-search {
@@ -138,6 +164,34 @@
     }
 
     .fot-sm {
-        font-size: 10px;
+        font-size: 8px;
     }
+
+    .td-download {
+        font-size: 8px;
+        width: 70px;
+    }
+
+    .form-search-template {
+        margin-top: -90px;
+        width: 310px;
+        margin-left: -100px;
+    }
+
+    .table-search {
+        font-size: 10px;
+        padding-left: 10px;
+    }
+
+    .table1 {
+        font-size: 9px;
+    }
+
+    .table2 {
+        font-size: 8px;
+    }
+
+
+
+
 }

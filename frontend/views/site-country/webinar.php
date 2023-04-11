@@ -26,18 +26,18 @@ $this->title = 'webinar';
             <div class="row mt-50">
                 <div class="col-4 detail-calendar">
                     <div class="col-12">
-                        <img src="<?= Yii::$app->homeUrl ?>img/calendar.png" class="img-calendar">
+                        <i class="fa fa-calendar form-calendar1" aria-hidden="true"></i>
                         <p class="text-1"> Every Week</p>
                         <p class="text-2"> We discuss new topic every week</p>
                     </div>
                 </div>
                 <div class="col-4">
-                    <img src="<?= Yii::$app->homeUrl ?>img/qa.png" class="img-QA">
+                    <i class="fa fa-comments-o form-comment" aria-hidden="true"></i>
                     <p class="text-1"> Live Q&A</p>
                     <p class="text-2"> Live Question and answer session</p>
                 </div>
                 <div class="col-4">
-                    <img src="<?= Yii::$app->homeUrl ?>img/time.png" class="img-time">
+                    <i class="fa fa-clock-o form-clock" aria-hidden="true"></i>
                     <p class="text-1"> 30 Mins</p>
                     <p class="text-2"> We keep it short for your
                         busy schedule </p>
@@ -171,8 +171,8 @@ $this->title = 'webinar';
 
 <div class="col-12 pr12 mt-50">
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-12">
-            <div class="row">
+        <div class="col-lg-6 col-md-6 col-12 all-player">
+            <div class="row pr12">
                 <div class="col-4">
                     <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
                 </div>
@@ -197,7 +197,7 @@ $this->title = 'webinar';
                     </a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row pr12">
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video2.png" class="img-video">
                 </div>
@@ -220,7 +220,7 @@ $this->title = 'webinar';
                     </a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row pr12">
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
                 </div>
@@ -245,7 +245,7 @@ $this->title = 'webinar';
                     </a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row pr12">
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video2.png" class="img-video">
                 </div>
@@ -267,7 +267,7 @@ $this->title = 'webinar';
                     </a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row pr12">
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
                 </div>
@@ -293,8 +293,8 @@ $this->title = 'webinar';
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-12">
-            <div class="row">
+        <div class="col-lg-6 col-md-6 col-12 all-play1">
+            <div class="row pr12">
                 <div class="col-4">
                     <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
                 </div>
@@ -319,7 +319,7 @@ $this->title = 'webinar';
                     </a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row pr12">
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video2.png" class="img-video">
                 </div>
@@ -344,7 +344,7 @@ $this->title = 'webinar';
                     </a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row pr12">
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
                 </div>
@@ -369,7 +369,7 @@ $this->title = 'webinar';
                     </a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row pr12">
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video2.png" class="img-video">
                 </div>
@@ -394,7 +394,7 @@ $this->title = 'webinar';
                     </a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row pr12">
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
                 </div>
@@ -686,27 +686,36 @@ $this->title = 'webinar';
                         <div class="col-12 text-center account-signin">
                             - Or signup with your email -
                         </div>
-                        <div class="col-10 mb-4">
-                            <label for="formGroupExampleInput" class="form-label form-contact-name">Full name</label>
-                            <i class="fa fa-users" aria-hidden="true"></i> <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Quazi Ehsan Hossain">
-                        </div>
-                        <div class="col-10 mb-4">
-                            <label for="formGroupExampleInput2" class="form-label form-contact-name">Email</label>
-                            <i class="fa fa-envelope" aria-hidden="true"></i> <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="ehsan@tokyoconsultingfirmlimited.com">
-                        </div>
-                        <div class="col-10 mb-4">
-                            <label for="inputPassword" class="form-label form-contact-name">Password</label>
-                            <i class=" fa fa-eye" aria-hidden="true"></i>
-                            <input type="password" class="form-control" id="inputPassword">
 
+                        <div class="col-10 mb-4">
+                            <label class="form-contact-name">Full name</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
                         </div>
-                        <div class="mb-3 form-check">
+
+                        <div class="col-10 mb-4">
+                            <label class="form-contact-name">Email</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope" aria-hidden="true"> </i></span>
+                                <input type="text" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="col-10 mb-4">
+                            <label class="form-contact-name">Password</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="password" aria-label="Password" aria-describedby="basic-addon2">
+                                <span class="input-group-text" id="basic-addon2"><a href="#"><i class="fa fa-eye-slash" aria-hidden="true"></i></span></a>
+                            </div>
+                        </div>
+                        <div class="mb-3 form-check mt-20">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1"> I agreed to the Terms & Conditions</label>
                         </div>
                         <div class="col-7 mt-10">
                             <button type="submit" class="btn btn-primary"> Register for Webinar</button>
-                            <p class="account-signin">Already have account? <span class="sign-in"> Sign in</span></p>
+                            <p class="account-signin">Already have account? <a href="" class="no-underline1"><span class="sign-in"> Sign in</span></p></a>
                         </div>
                     </div>
                 </div>

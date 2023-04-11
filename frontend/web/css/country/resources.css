@@ -102,6 +102,7 @@
     font-family: 'klavika';
 }
 
+
 @media(max-width: 992px) {
     .page-resource {
         margin-top: -370px;
@@ -191,6 +192,9 @@
         font-size: 8px;
     }
 
+    .search-resources {
+        font-size: 14px;
+    }
 
 
 

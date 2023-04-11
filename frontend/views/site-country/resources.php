@@ -20,7 +20,7 @@ $this->title = 'contact';
     </div>
     <div class="col-12 form-search-template">
         <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1"> <i class="fa fa-search" aria-hidden="true"></i></span>
+            <span class="input-group-text" id="basic-addon1"> <i class="fa fa-search search-resources" aria-hidden="true"></i></span>
             <input type="text" class="form-control table-search" placeholder="Search forms & Templates" aria-label="Search forms & Templates">
         </div>
     </div>
@@ -59,9 +59,9 @@ $this->title = 'contact';
 
 
 
-<div class="col-12 pr12 pl-40">
+<div class="col-12 pr12">
     <div class="row">
-        <div class="col-lg-3 col-md-6 col-12">
+        <div class="col-lg-3 col-md-6 col-12 pl-40 mt-10">
             <div class="btn-group">
                 <button class="btn btn-outline-gray dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="<?= Yii::$app->homeUrl ?>img/icon3.png" class="img-icon"> National Board of Revenue
@@ -73,7 +73,7 @@ $this->title = 'contact';
                 </ul>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-12">
+        <div class="col-lg-3 col-md-6 col-12 pl-40">
             <div class="btn-group">
                 <button class="btn btn-outline-gray dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="<?= Yii::$app->homeUrl ?>img/icon4.png" class="img-icon"> Bangladesh Investment
@@ -86,7 +86,7 @@ $this->title = 'contact';
                 </ul>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-12">
+        <div class="col-lg-3 col-md-6 col-12 pl-40">
             <div class="btn-group">
                 <button class="btn btn-outline-gray dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="<?= Yii::$app->homeUrl ?>img/RJSC.png" class="img-icon"> Registrar of Joint Stock
@@ -99,7 +99,7 @@ $this->title = 'contact';
                 </ul>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-12">
+        <div class="col-lg-3 col-md-6 col-12 pl-40 mt-10">
             <div class="btn-group">
                 <button class="btn btn-outline-gray dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="<?= Yii::$app->homeUrl ?>img/icon5.png" class="img-icon"> Bangladesh Bank
@@ -114,7 +114,7 @@ $this->title = 'contact';
     </div>
 </div>
 
-<table class="table table-striped">
+<table class="table table-striped mt-50">
     <thead class="table1">
         <tr>
             <th>Description</th>

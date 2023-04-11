@@ -38,8 +38,12 @@
 
 }
 
+.img-zgif {
+    width: 100%
+}
+
 .img-iconday {
-    margin-left: 60px;
+    margin-left: 0px;
 }
 
 .table-calendar {
@@ -173,6 +177,15 @@
     font-family: 'klavika';
 }
 
+.square-facebook,
+.square-twitter,
+.aquare-instagram,
+.square-linkedin,
+.square-youtube {
+    color: #265AA7;
+    font-size: 35px;
+}
+
 @media(max-width: 992px) {
 
     .table-card {
@@ -249,10 +262,6 @@
         margin-left: -70px;
     }
 
-    .img-button {
-        width: 30px;
-    }
-
     .title-bangladesh {
         font-size: 22px;
         width: 50px;
@@ -260,7 +269,7 @@
     }
 
     .alert-secondary {
-        width: 11rem;
+        width: 10rem;
         height: 6rem;
         margin-left: 155px;
         line-height: 5px;
@@ -313,5 +322,13 @@
 
     .title-contry-footer1 {
         margin-top: 80px;
+    }
+
+    .img-iconday {
+        margin-left: 60px;
+    }
+
+    .table-calendar {
+        font-size: 13px;
     }
 }

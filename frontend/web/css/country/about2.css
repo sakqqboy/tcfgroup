@@ -103,6 +103,7 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
+    margin-left: 10px;
 }
 
 .item3 {
@@ -254,6 +255,7 @@
 
     .number-year {
         font-size: 18px;
+        margin-left: 10px;
     }
 
     .item2 {

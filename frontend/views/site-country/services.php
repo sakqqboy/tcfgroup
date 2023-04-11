@@ -242,7 +242,9 @@ $this->title = 'services';
                     </div>
                     <div class="col-12">
                         <div class="card download-button">
-                            <p class="text-download1"> Download Company Profile <i class="fa fa-download name-download3" aria-hidden="true"></i> </p>
+                            <a href="" class="no-underline1">
+                                <p class="text-download1"> Download Company Profile <i class="fa fa-download name-download3" aria-hidden="true"></i></p>
+                            </a>
                         </div>
                     </div>
                 </div>

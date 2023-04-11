@@ -20,7 +20,7 @@ $this->title = 'newsletter';
             Conflicts
         </div>
         <div class="col-6 pl-40  sletter-text-corporate">
-            Corporate conflicts can arise in many different forms, including disagreements between business partners, disputes with customers, and conflicts with employees. In order to avoid prolonged legal battles that can damage a company's reputation and finances, it is important to develop effective methods for settling disputes. The article discusses various dispute resolution methods, such as negotiation, mediation, and arbitration, and provides practical tips for implementing... <span class="read-more"> read more</span>
+            Corporate conflicts can arise in many different forms, including disagreements between business partners, disputes with customers, and conflicts with employees. In order to avoid prolonged legal battles that can damage a company's reputation and finances, it is important to develop effective methods for settling disputes. The article discusses various dispute resolution methods, such as negotiation, mediation, and arbitration, and provides practical tips for implementing... <a href="" class="no-underline1"><span class="read-more1"> read more</span></a>
         </div>
         <div class="col-12 pr12 btn-newsletter-signup">
             <div class="row">
@@ -30,7 +30,7 @@ $this->title = 'newsletter';
                     <p class="title-our-newsletter"> <a href="#sing-up"><span class="sign-up"> Sign up</span></a> to our Newsletter for the latest updates & Insights</p>
                 </div>
                 <div class="col-10 sletter-icon">
-                    <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                    <a href="" class="no-underline"> <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> </a>
                 </div>
             </div>
         </div>
@@ -99,7 +99,7 @@ $this->title = 'newsletter';
         <div class="col-lg-6 col-md-6 col-12">
             <p class="title-import mt-10">Import Export Policy amendment 2023 - Bangladesh aspect</p> <br>
             <p class="title-zero">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building) are only a part of the story. It is increasingly evident that other elements of the building cycle, particularly embodied or construction carbon, are a significant component of a building’s whole life carbon profile. For new buildings seeking to be net zero, reducing embodied carbon is perhaps the biggest challenge.</p> <br>
-            <p class="circle-icon"><a href="#read more" class="no-underline"> READ MORE</a> <i class="fa fa-chevron-circle-right circle-icon" aria-hidden="true"></i></p>
+            <p class="circle-icon"><a href="#read more" class="no-underline"> READ MORE <i class="fa fa-chevron-circle-right circle-icon" aria-hidden="true"></i></p></a>
         </div>
     </div>
 </div>
@@ -114,7 +114,7 @@ $this->title = 'newsletter';
                 <img src="<?= Yii::$app->homeUrl ?>img/hunter.png" class="img-hunter">
                 <p class="title-Human">Human Resource Management</p>
                 <p class="title-Labor">Bangladesh Labor Rules 2015 Amendment (Vol. 3)</p>
-                <p class="title-import1">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building) are only a part of the story. It is increasingly evident that other elements of the building cycle, particularly embodied or construction carbon, are a significant component of a building’s whole life carbon profile. For new buildings seeking to be net zero, reducing embodied carbon is perhaps the biggest challenge. ... <span class="read-more"> read more</span></p>
+                <p class="title-import1">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building) are only a part of the story. It is increasingly evident that other elements of the building cycle, particularly embodied or construction carbon, are a significant component of a building’s whole life carbon profile. For new buildings seeking to be net zero, reducing embodied carbon is perhaps the biggest challenge. ... <a href="" class="no-underline"><span class="read-more"> read more</span></p></a>
             </div>
             <div class="col-lg-6 col-md-6 col-12">
                 <div class="row">

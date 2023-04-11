@@ -410,8 +410,14 @@
     font-family: 'klavika';
 }
 
-.image-bag {
-    margin-top: ddc;
+
+.square-facebook,
+.square-twitter,
+.aquare-instagram,
+.square-linkedin,
+.square-youtube {
+    color: #265AA7;
+    font-size: 35px;
 }
 
 

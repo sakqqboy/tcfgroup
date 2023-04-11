@@ -116,11 +116,10 @@ $this->title = 'webinar-video';
         </div>
     </form>
 </div>
-
 <div class="col-12 pr12 mt-50">
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-12">
-            <div class="row">
+        <div class="col-lg-6 col-md-6 col-12 all-player">
+            <div class="row pr12">
                 <div class="col-4">
                     <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
                 </div>
@@ -145,7 +144,7 @@ $this->title = 'webinar-video';
                     </a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row pr12">
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video2.png" class="img-video">
                 </div>
@@ -163,10 +162,12 @@ $this->title = 'webinar-video';
                     </div>
                 </div>
                 <div class="col-2 mt-50 text-end">
-                    <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
+                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    </a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row pr12">
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
                 </div>
@@ -186,10 +187,12 @@ $this->title = 'webinar-video';
                     </div>
                 </div>
                 <div class="col-2 mt-50 text-end">
-                    <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
+                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    </a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row pr12">
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video2.png" class="img-video">
                 </div>
@@ -206,10 +209,12 @@ $this->title = 'webinar-video';
                     </div>
                 </div>
                 <div class="col-2 mt-50 text-end">
-                    <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
+                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    </a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row pr12">
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
                 </div>
@@ -229,12 +234,14 @@ $this->title = 'webinar-video';
                     </div>
                 </div>
                 <div class="col-2 mt-50 text-end">
-                    <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
+                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-12">
-            <div class="row">
+        <div class="col-lg-6 col-md-6 col-12 all-play1">
+            <div class="row pr12">
                 <div class="col-4">
                     <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
                 </div>
@@ -254,10 +261,12 @@ $this->title = 'webinar-video';
                     </div>
                 </div>
                 <div class="col-2 mt-20 text-end">
-                    <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
+                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    </a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row pr12">
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video2.png" class="img-video">
                 </div>
@@ -277,10 +286,12 @@ $this->title = 'webinar-video';
                     </div>
                 </div>
                 <div class="col-2 mt-50 text-end">
-                    <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
+                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    </a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row pr12">
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
                 </div>
@@ -300,10 +311,12 @@ $this->title = 'webinar-video';
                     </div>
                 </div>
                 <div class="col-2 mt-50 text-end">
-                    <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
+                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    </a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row pr12">
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video2.png" class="img-video">
                 </div>
@@ -323,10 +336,12 @@ $this->title = 'webinar-video';
                     </div>
                 </div>
                 <div class="col-2 mt-50 text-end">
-                    <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
+                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    </a>
                 </div>
             </div>
-            <div class="row">
+            <div class="row pr12">
                 <div class="col-4 mt-50">
                     <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
                 </div>
@@ -346,7 +361,9 @@ $this->title = 'webinar-video';
                     </div>
                 </div>
                 <div class="col-2 mt-50 text-end">
-                    <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
+                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                    </a>
                 </div>
             </div>
         </div>
@@ -406,12 +423,13 @@ $this->title = 'webinar-video';
                 <div class="row">
                     <div class="col-12">
                         <div class="row">
-                            <div class="col-5 p-2 mb-2 form-bg-media">
+                            <div class="col-4 bg-white  form-bg-media">
                                 <a href="#" class="no-underline-form">
                                     <i class="fa fa-google-plus-square form-gooogle" aria-hidden="true"> </i> Signup with google
                                 </a>
                             </div>
-                            <div class="col-5 p-2 mb-2  form-bg-media">
+                            &nbsp;&nbsp;&nbsp;
+                            <div class="col-4 bg-white  form-bg-media">
                                 <a href="#" class="no-underline-form">
                                     <i class="fa fa-linkedin-square form-linkedin" aria-hidden="true"></i> Signup with LinkedIn
                                 </a>
@@ -423,25 +441,34 @@ $this->title = 'webinar-video';
                         </div>
 
                         <div class="col-10 mb-4">
-                            <label for="formGroupExampleInput" class="form-label form-contact-name">Full name</label>
-                            <i class="fa fa-users" aria-hidden="true"></i> <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Quazi Ehsan Hossain">
+                            <label class="form-contact-name">Full name</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+
+                        <div class="col-10 mb-4">
+                            <label class="form-contact-name">Email</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope" aria-hidden="true"> </i></span>
+                                <input type="text" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon1">
+                            </div>
                         </div>
                         <div class="col-10 mb-4">
-                            <label for="formGroupExampleInput2" class="form-label form-contact-name">Email</label>
-                            <i class="fa fa-envelope" aria-hidden="true"></i> <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="ehsan@tokyoconsultingfirmlimited.com">
+                            <label class="form-contact-name">Password</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="password" aria-label="Password" aria-describedby="basic-addon2">
+                                <span class="input-group-text" id="basic-addon2"><a href="#"><i class="fa fa-eye-slash" aria-hidden="true"></i></span></a>
+                            </div>
                         </div>
-                        <div class="col-10 mb-4">
-                            <label for="inputPassword" class="form-label form-contact-name">Password</label>
-                            <i class="fa fa-eye" aria-hidden="true"></i>
-                            <input type="password" class="form-control" id="inputPassword">
-                        </div>
-                        <div class="mb-3 form-check">
+                        <div class="mb-3 form-check mt-20">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1"> I agreed to the Terms & Conditions</label>
                         </div>
                         <div class="col-7 mt-10">
                             <button type="submit" class="btn btn-primary"> Register for Webinar</button>
-                            <p class="account-signin">Already have account? <span class="sign-in"> Sign in</span></p>
+                            <p class="account-signin">Already have account? <a href="#" class="no-underline1"><span class="sign-in"> Sign in</span></p></a>
                         </div>
                     </div>
                 </div>

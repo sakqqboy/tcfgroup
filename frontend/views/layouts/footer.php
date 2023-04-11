@@ -70,11 +70,11 @@
 			</div>
 		</div>
 		<div class="col-lg-3 col-md-6 col-6 footer-bottom">
-			<a href="#facebook"><img src="<?= Yii::$app->homeUrl ?>image/facebook.png"></a>
-			<a href="#twitter"><img src="<?= Yii::$app->homeUrl ?>image/twitter.png"></a>
-			<a href="#Instagram"><img src="<?= Yii::$app->homeUrl ?>image/Instagram.png"></a>
-			<a href="#LinkedIn"><img src="<?= Yii::$app->homeUrl ?>image/LinkedIn.png"></a>
-			<a href="#YouTube"><img src="<?= Yii::$app->homeUrl ?>image/YouTube.png"></a>
+			<a href="#"><i class="fa fa-facebook-square square-facebook" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-twitter-square square-twitter" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-instagram aquare-instagram" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-linkedin-square square-linkedin" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-youtube-play square-youtube" aria-hidden="true"></i></a>
 			<div class="txt-stay">
 				Stay tuned, get all the business updates, newsletters
 			</div>

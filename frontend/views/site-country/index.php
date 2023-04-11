@@ -4,7 +4,7 @@
 
 use Codeception\Lib\Connector\Yii2;
 
-$this->title = 'bangladesh';
+$this->title = 'Bangladesh';
 ?>
 
 <div class="">
@@ -73,8 +73,7 @@ $this->title = 'bangladesh';
 </div>
 
 
-
-<div class="col-12  pr12 mt-50">
+<div class="col-12 pr12 mt-50">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12">
             <img src="<?= Yii::$app->homeUrl ?>img/transportation.png" class="img-transportation">
@@ -91,95 +90,92 @@ $this->title = 'bangladesh';
     <div class="col-12 title-Trending">
         <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> join Free Live Webinar
     </div>
-    <div class="col-12">
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-12 mt-50">
-                <div class="row">
-                    <div class="col-4 title-bangladesh">
-                        <p>Bangladesh Business
-                            Environment </p>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-12 mt-50">
+            <div class="row pr12">
+                <div class="col-4 title-bangladesh">
+                    <p>Bangladesh Business
+                        Environment </p>
+                </div>
+                <div class="col-2">
+                    <img src="<?= Yii::$app->homeUrl ?>img/woman.png" class="img-woman">
+                    <div class="alert alert-secondary  text-center">
+                        <p class="table-calendar"> <i class="fa fa-calendar" aria-hidden="true"> June 2023</i></p>
+                        <p> S&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;&nbsp;S</p>
+                        <p> 3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;5 <button class="btn btn-primary calendar-button" type="button">6</button>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;9</p>
                     </div>
-                    <div class="col-2">
-                        <img src="<?= Yii::$app->homeUrl ?>img/woman.png" class="img-woman">
-                        <div class="alert alert-secondary  text-center">
-                            <p class="table-calendar"> <i class="fa fa-calendar" aria-hidden="true"> June 2023</i></p>
-                            <p> S&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;&nbsp;S</p>
-                            <p> 3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;5 <button class="btn btn-primary calendar-button" type="button">6</button>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;9</p>
-                        </div>
-                    </div>
-                    <div class="col-6 img-iconday">
-                        <img src="<?= Yii::$app->homeUrl ?>img/button-1.png" class="img-button">
-                        <img src="<?= Yii::$app->homeUrl ?>img/button-2.png" class="img-button">
-                        <img src="<?= Yii::$app->homeUrl ?>img/button-4.png" class="img-button">
-                        <img src="<?= Yii::$app->homeUrl ?>img/button-3.png" class="img-button">
-                    </div>
+                </div>
+                <div class="col-6 img-iconday">
+                    <img src="<?= Yii::$app->homeUrl ?>img/button-1.png" class="img-button">
+                    <img src="<?= Yii::$app->homeUrl ?>img/button-2.png" class="img-button">
+                    <img src="<?= Yii::$app->homeUrl ?>img/button-4.png" class="img-button">
+                    <img src="<?= Yii::$app->homeUrl ?>img/button-3.png" class="img-button">
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-12">
-                <div class="col-12 title-join">
-                    Join us on the next webinar
+        </div>
+        <div class="col-lg-6 col-md-6 col-12">
+            <div class="col-12 title-join">
+                Join us on the next webinar
+            </div>
+            <div class="col-12 title-topic mt-10">
+                <p> <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> ABOUT THE TOPIC</p>
+            </div>
+            <div class="accordion mt-20" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What are topic of webinar ?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>How can i join ?</strong>
+                            <p>It is as easy as to join through one single click by going to the following link -</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 title-topic mt-10">
-                    <p> <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> ABOUT THE TOPIC</p>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Is there any certification associated ?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the second item's accordion body.</strong>
+                        </div>
+                    </div>
                 </div>
-                <div class="accordion mt-20" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                What are topic of webinar ?
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>How can i join ?</strong>
-                                <p>It is as easy as to join through one single click by going to the following link -</p>
-                            </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Can i get recorded videos of the webinars or online seminars ?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the third item's accordion body.</strong>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Is there any certification associated ?
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the second item's accordion body.</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Can i get recorded videos of the webinars or online seminars ?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the third item's accordion body.</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                How to create a community Account ?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the third item's accordion body.</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-primary button-register mt-30"> Register for Webinar</button>
-                    <p class="title-sign-in">Already have account? <a href="#sign in" class="no-underline">Sign in</a></p>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How to create a community Account ?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the third item's accordion body.</strong>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary button-register mt-30"> Register for Webinar</button>
+                <p class="title-sign-in">Already have account? <a href="#sign in" class="no-underline">Sign in</a></p>
             </div>
         </div>
     </div>
 </div>
-
 
 <div class="col-12 pr12 mt-50 background-site">
     <div class="row">
@@ -212,7 +208,7 @@ $this->title = 'bangladesh';
             </div>
         </div>
         <div class="col-lg-4 col-12">
-            <img src="<?= Yii::$app->homeUrl ?>img/ezgif.png" class="" style="width: 100%">
+            <img src="<?= Yii::$app->homeUrl ?>img/ezgif.png" class="img-zgif">
         </div>
     </div>
 </div>

@@ -25,7 +25,7 @@
 .blackground-page-people {
     background: #F8F8F8;
     margin-top: 70px;
-    padding-left: 40px;
+    padding-left: 70px;
 
 }
 
@@ -45,8 +45,8 @@
     letter-spacing: -1.5px;
     color: #0F2137;
     margin-top: 30px;
-
 }
+
 
 .box-1 {
     padding-left: 0px;
@@ -57,22 +57,29 @@
     font-weight: 500;
     font-size: 32px;
     line-height: 55px;
-    padding-left: 40px;
+    padding-left: 70px;
     letter-spacing: -1.5px;
     color: #0F2137;
 }
 
-.image-BG {
+.image-BG1 {
     width: 230px;
     height: 60px;
     margin-top: -20px;
+}
+
+.image-BG2 {
+    width: 230px;
+    height: 60px;
+    margin-top: -20px;
+    margin-left: -140px;
 }
 
 
 .everyone {
     font-family: 'Klavika';
     font-weight: 300;
-    padding-left: 40px;
+    padding-left: 70px;
     font-size: 14px;
     line-height: 150%;
     color: #000000;
@@ -83,7 +90,7 @@
     font-family: 'Klavika';
     font-weight: 500;
     font-size: 11px;
-    padding-left: 40px;
+    padding-left: 70px;
     line-height: 26px;
     letter-spacing: 0.94992px;
     text-transform: uppercase;
@@ -113,9 +120,16 @@
     width: 550px;
 }
 
-.image-screenshot {
+.image-screenshot1 {
     width: 390px;
+
 }
+
+.image-screenshot2 {
+    width: 390px;
+    margin-left: -150px;
+}
+
 
 @media(max-width: 992px) {
     .text-philosophy {
@@ -180,10 +194,23 @@
 
     .picture-text {
         font-size: 21px;
+        padding-left: 0px;
     }
 
     .Why-We-Work {
         font-size: 26px;
+    }
+
+    .image-screenshot2 {
+        width: 390px;
+        margin-left: 0px;
+    }
+
+    .image-BG2 {
+        width: 230px;
+        height: 60px;
+        margin-top: -20px;
+        margin-left: 0px;
     }
 
 

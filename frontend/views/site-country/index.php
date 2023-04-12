@@ -19,54 +19,53 @@ $this->title = 'Bangladesh';
     </div>
 </div>
 
-<div class="col-12 pr12 mt-20">
+<div class="col-12 mt-20">
     <div class="col-12 title-Trending">
         <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> Trending Topics
     </div>
-    <div class="col-sm-12 mt-20 pl-40">
-        <div class="row">
-            <div class="card table-card mt-10">
-                <div class="card-body">
-                    <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
-                    <p class="card-home1">Compliance in TAX</p>
-                    <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
 
-                </div>
+    <div class="row">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 card table-card mt-10">
+            <div class="card-body">
+                <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
+                <p class="card-home1">Compliance in TAX</p>
+                <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
+
             </div>
-            <div class="card table-card mt-10">
-                <div class="card-body">
-                    <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
-                    <p class="card-home1">Finance Act 2023</p>
-                    <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
-                </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 card table-card mt-10">
+            <div class="card-body">
+                <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
+                <p class="card-home1">Finance Act 2023</p>
+                <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
             </div>
-            <div class="card table-card mt-10">
-                <div class="card-body">
-                    <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
-                    <p class="card-home1">Human Rights at workplace</p>
-                    <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
-                </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 card table-card mt-10">
+            <div class="card-body">
+                <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
+                <p class="card-home1">Human Rights at workplace</p>
+                <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
             </div>
-            <div class="card  table-card mt-10">
-                <div class="card-body">
-                    <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
-                    <p class="card-home1">Import Export Policy amendment 2023</p>
-                    <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
-                </div>
+        </div>
+        <div class=" col-lg-2 col-md-3 col-sm-4 col-6 card  table-card mt-10">
+            <div class="card-body">
+                <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
+                <p class="card-home1">Import Export Policy amendment 2023</p>
+                <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
             </div>
-            <div class="card  table-card mt-10">
-                <div class="card-body">
-                    <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
-                    <p class="card-home1">HS Code Updates</p>
-                    <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
-                </div>
+        </div>
+        <div class=" col-lg-2 col-md-3 col-sm-4 col-6 card  table-card mt-10">
+            <div class="card-body">
+                <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
+                <p class="card-home1">HS Code Updates</p>
+                <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
             </div>
-            <div class="card  table-card mt-10">
-                <div class="card-body">
-                    <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
-                    <p class="card-home1">Shipping Industry Growth Rate</p>
-                    <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
-                </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 card table-card mt-10">
+            <div class="card-body">
+                <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
+                <p class="card-home1">Shipping Industry Growth Rate</p>
+                <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
             </div>
         </div>
     </div>

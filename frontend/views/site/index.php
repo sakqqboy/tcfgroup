@@ -46,7 +46,7 @@ $this->title = 'TCFGROUP';
                         <p><img src="<?= Yii::$app->homeUrl ?>image/india.png" class="img-country"> India</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/indonesia.png" class="img-country"> Indonesia</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/kenya.png" class="img-country"> kenya</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/123.png" class="img-country"> Japan</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/japan.png" class="img-country"> Japan</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/laos.png" class="img-country"> Laos</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/malaysia.png" class="img-country"> Malaysia</p>
                     </div>
@@ -94,10 +94,10 @@ $this->title = 'TCFGROUP';
             </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6 col-12 show-text-home">
-            <div class="col-12 text-legal pl-20">
+            <div class="col-12 text-legal">
                 Legal & Secretarial
             </div>
-            <div class="col-12 Our pt-20 pl-20">
+            <div class="col-12 Our pt-20">
                 Our consulting firm specializes in providing legal and
                 secretarial support to multinational companies. Our
                 services include - Compliance Support, Corporate
@@ -118,10 +118,10 @@ $this->title = 'TCFGROUP';
 
 
 <div class="col-12">
-    <img src="<?= Yii::$app->homeUrl ?>image/Yokhohamaa.png" class="w-100">
+    <img src="<?= Yii::$app->homeUrl ?>image/Yokhohama.png" class="image-Yokhohamaa">
     <div class="row">
         <div class="col-12">
-            <div class="offset-1 col-lg-4 col-md-6 col-12 ">
+            <div class="col-lg-4 col-md-6 col-12 ">
                 <div class="text-japan">
                     <p> Establish</p>
                     <p> Business in Japan</p>
@@ -133,6 +133,7 @@ $this->title = 'TCFGROUP';
                         experts will guide you every step of the way to ensure a seamless entry and
                         successful establishment in the Japanese market.</p>
                     <button type="button" class="btn btn-primary button-contact">Contact Experts</button>
+                    <p><img src="<?= Yii::$app->homeUrl ?>image/image-icon.png" class="image-graph"></p>
                 </div>
             </div>
         </div>
@@ -144,13 +145,15 @@ $this->title = 'TCFGROUP';
 
 <div class="col-12">
     <img src="<?= Yii::$app->homeUrl ?>image/Boat1.png" style="width: 100%;">
-    <div class="offset-1 text2">
+    <div class="text2">
         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Our Philosophy: Contributing to Society, Driving Growth
     </div>
-    <div class="offset-1 text3">
-        <img src="<?= Yii::$app->homeUrl ?>image/what-we.png" class="image-what-we-give">
+    <div class="text3">
+        <!-- <img src="<?= Yii::$app->homeUrl ?>image/what-we.png" class="image-what-we-give"> -->
+        <p> ❝ What we <span class="font-color-blue"> GIVE</span> is </p>
+        <p> &nbsp;&nbsp;&nbsp;&nbsp;What we <span class="font-color-blue"> GET</span> ❞</p>
     </div>
-    <div class="offset-1 col-md-5 col-12 text-tokyo">
+    <div class="col-md-5 col-12 text-tokyo">
         At Tokyo Consulting Group, our philosophy is centered around making a positive impact on society.
         We believe that this is the ultimate goal of any company and we strive to develop human resources
         to fulfill this purpose. Our management principles and philosophies are dynamic, adapting to the
@@ -167,7 +170,7 @@ $this->title = 'TCFGROUP';
 
 <div class="col-12">
     <img src="<?= Yii::$app->homeUrl ?>image/Rectangle4239.png" style="width:100%">
-    <div class="offset-1 text4">
+    <div class="text4">
         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> About Yasunari Kuno
     </div>
     <div class="col-lg-8 col-md-6 col-12 text-Yasunari">
@@ -196,7 +199,7 @@ $this->title = 'TCFGROUP';
     </div>
     <div class="col-12 mt-30 pr12">
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-12 mt-50 pl-40 pr-40 form-input">
+            <div class="col-lg-6 col-md-6 col-12 mt-50 pr-40 form-input">
                 <div class="row">
                     <div class="col-7">
                         <p class="If-you2">Do you prefer to communicate as an entity or an individual?</p>
@@ -324,14 +327,14 @@ $this->title = 'TCFGROUP';
 
 <div class="col-12 pr12 blue pt-20 pb-10">
     <div class="row">
-        <div class="offset-lg-1 offset-md-1 col-1g-10 col-md-10 col-12 text-update">
+        <div class="col-1g-10 col-md-10 col-12 text-update">
             <p>GET UPDATE FROM</p>
             <p> All OVER THE WORLD</p>
         </div>
-        <div class="offset-lg-1 offset-md-1 col-1g-10 col-md-10 col-12 text-project">
+        <div class="col-1g-10 col-md-10 col-12 text-project">
             <p>Project starts fall but small spots of hope indicate green shoots of recovery are there.</p>
         </div>
-        <div class="offset-lg-1 offset-md-1 col-lg-5 col-md-6 col-12 mt-10 input-group-form">
+        <div class="col-lg-5 col-md-6 col-12 mt-10 input-group-form">
             <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
                 <input type="text" class="form-control input-your-email" placeholder="Your Email address" aria-label="Your Email address with two button addons">

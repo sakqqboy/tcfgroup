@@ -124,14 +124,13 @@ $this->title = 'taxassessment';
                     Overview of The Article
                 </div>
                 <div class="col-12 paragraph4">
-                    <p> Background</p>
-                    <p> Who will be the 'Assessee' instead
+                    <p> <i class="fa fa-square" aria-hidden="true"></i> Background</p>
+                    <p> <i class="fa fa-square" aria-hidden="true"></i> Who will be the 'Assessee' instead
                         of the deceased person?
-                    <p> Other Local Storage</p>
-                    <p> Do Not Track</p>
+                    <p> <i class="fa fa-square" aria-hidden="true"></i> Other Local Storage</p>
+                    <p> <i class="fa fa-square" aria-hidden="true"></i> Do Not Track</p>
                     <hr>
                 </div>
-
                 <div class="col-12 paragraph-img">
                     <img src="<?= Yii::$app->homeUrl ?>img/transportation1.png" class="img-transportation1">
                 </div>

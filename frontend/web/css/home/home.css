@@ -23,7 +23,7 @@
 .Global-Business {
     font-size: 28px;
     color: white;
-    padding-left: 50px;
+    padding-left: 70px;
     font-weight: 700;
     font-family: 'klavika';
     line-height: 55px;
@@ -52,7 +52,7 @@
 
 .Get-free {
     font-size: 30px;
-    padding-left: 40px;
+    padding-left: 70px;
     font-weight: 700;
     font-family: 'klavika';
     color: #313131;
@@ -60,7 +60,7 @@
 
 .If-you {
     font-size: 18px;
-    padding-left: 40px;
+    padding-left: 70px;
     font-weight: 300;
     line-height: 29px;
     font-family: 'klavika';
@@ -70,6 +70,7 @@
 .If-you2 {
     font-size: 18px;
     font-weight: 300;
+    padding-left: 40px;
     color: #5E5E5E;
 }
 
@@ -84,7 +85,7 @@
 }
 
 .connect-experts {
-    padding-left: 40px;
+    padding-left: 70px;
     font-weight: 700;
     font-size: 35px;
     line-height: 55px;
@@ -95,7 +96,7 @@
 .text-TCG {
     color: white;
     padding-top: 20px;
-    padding-left: 60px;
+    padding-left: 70px;
     font-family: 'klavika';
 }
 
@@ -111,6 +112,7 @@
 .left-box-select {
     font-weight: 700;
     font-size: 17px;
+    padding-left: 50px;
 }
 
 .text-japan {
@@ -119,15 +121,25 @@
     font-size: 60px;
     font-weight: 200px;
     line-height: 35px;
+    padding-left: 70px;
     font-family: 'Klavika';
     color: white;
 }
 
+.image-Yokhohamaa {
+    width: 100%;
+}
+
+.image-graph {
+    width: 80%;
+    padding-top: 240px;
+}
 
 
 .text-Unlock {
     position: absolute;
     width: 500px;
+    padding-left: 70px;
     margin-top: -40%;
     font-size: 14px;
     font-weight: 100px;
@@ -138,7 +150,7 @@
 
 
 .text-establish {
-    padding-left: 40px;
+    padding-left: 70px;
     font-size: 32px;
     font-weight: 700;
     font-family: 'klavika';
@@ -147,7 +159,7 @@
 
 .Company {
     margin-top: 10%;
-    padding-left: 40px;
+    padding-left: 70px;
     font-size: 18px;
     font-weight: 300;
     line-height: 30px;
@@ -193,12 +205,13 @@
     margin-top: -20%;
     color: white;
     font-size: 13px;
+    padding-left: 70px;
 }
 
 .text-Yasunari {
     position: absolute;
     margin-top: -30%;
-    left: 8%;
+    padding-left: 70px;
     width: 550px;
     font-size: 13px;
     color: white;
@@ -223,6 +236,7 @@
     font-size: 30px;
     font-family: 'Klavika';
     font-weight: 700;
+    padding-left: 70px;
 }
 
 .text3 {
@@ -230,6 +244,7 @@
     margin-top: -37%;
     font-size: 45px;
     color: white;
+    padding-left: 70px;
     font-family: 'Klavika';
 }
 
@@ -238,6 +253,7 @@
     margin-top: -35%;
     font-size: 30px;
     font-weight: 700;
+    padding-left: 70px;
     color: white;
     font-family: 'Klavika';
 }
@@ -261,6 +277,10 @@
     color: #A0A0A0;
 }
 
+.your-company {
+    padding-left: 40px;
+}
+
 .contact {
     position: absolute;
     margin-top: 1.1%;
@@ -275,11 +295,12 @@
 .img-country {
     width: 18px;
     height: 18px;
+    border-radius: 5px;
 }
 
 .country-index {
     margin-top: 30px;
-    padding-left: 60px;
+    padding-left: 80px;
     color: white;
     line-height: 15px;
     font-size: 14px;
@@ -289,7 +310,14 @@
 .label-thin {
     font-weight: 300;
     font-size: 18px;
+
 }
+
+.font-color-blue {
+    color: #06ACF6;
+    font-family: 'klavika';
+}
+
 
 .image-gol1 {
     margin-top: -10px;
@@ -306,13 +334,13 @@
     font-size: 34px;
     line-height: 25px;
     padding-top: 20px;
-    padding-left: 40px;
+    padding-left: 70px;
 }
 
 .text-project {
     font-family: 'klavika';
     font-size: 12px;
-    padding-left: 40px;
+    padding-left: 70px;
 }
 
 .logo-footer {
@@ -364,7 +392,7 @@
 }
 
 .input-group-form {
-    padding-left: 40px;
+    padding-left: 70px;
     font-size: 10px;
     font-family: 'klavika';
 }
@@ -408,6 +436,7 @@
 
 .form-input {
     font-family: 'klavika';
+    padding-left: 70px;
 }
 
 
@@ -451,6 +480,7 @@
     .text-tokyo {
         margin-top: -24%;
         line-height: 15px;
+        padding-left: 40px;
         font-size: 12px;
         width: 420px;
 
@@ -477,6 +507,10 @@
 
     }
 
+    .text-TCG {
+        padding-left: 40px;
+    }
+
     .button-start {
         margin-top: 4px;
         font-size: 10px;
@@ -484,6 +518,14 @@
 
     .Global-Business {
         font-size: 25px;
+        padding-left: 40px;
+    }
+
+    .Company {
+        padding-left: 40px;
+    }
+
+    .Our {
         padding-left: 40px;
     }
 
@@ -500,6 +542,7 @@
     .text-legal {
         margin-top: -48%;
         font-size: 8px;
+        padding-left: 40px;
         line-height: 10px;
         width: 400px;
     }
@@ -507,7 +550,7 @@
     .text-tokyo {
         margin-top: -100px;
         font-size: 5px;
-        line-height: 7px;
+        line-height: 6px;
         width: 200px;
 
     }
@@ -517,11 +560,11 @@
     }
 
     .text-Yasunari {
-        /* margin-top: -40%; */
         font-size: 5px;
-        line-height: 7px;
+        line-height: 6px;
         width: 200px;
         padding-top: 10px;
+        padding-left: 40px;
     }
 
     .button-contact {
@@ -543,21 +586,32 @@
     .text2 {
         margin-top: -45%;
         font-size: 12px;
+        padding-left: 40px;
     }
 
     .text3 {
-        font-size: 11px;
-        line-height: 10px;
-        left: 5%;
-        margin-top: -40%;
+        font-size: 14px;
+        line-height: 5px;
+        padding-left: 40px;
+        margin-top: -150px;
+        line-height: 7px;
     }
 
+    .image {
+        width: 8px;
+    }
 
     .text4 {
         font-size: 12px;
         font-weight: 500;
+        padding-left: 40px;
         color: white;
         font-family: 'Klavika';
+    }
+
+    .image-graph {
+        margin-top: -210px;
+        width: 100px;
     }
 
     .contact {
@@ -568,31 +622,32 @@
     }
 
     .text-japan {
-        margin-top: -45%;
-        font-size: 20px;
-        line-height: 10px;
+        margin-top: -200px;
+        padding-left: 40px;
+        font-size: 22px;
+        line-height: 5px;
     }
 
     .text-Unlock {
         width: 220px;
+        padding-left: 40px;
         margin-top: -33%;
         font-size: 6px;
         line-height: 6px;
     }
 
     .text-establish {
-        font-size: 25px;
+        font-size: 24px;
+        padding-left: 40px;
     }
 
     .button-get {
         font-size: 12px;
     }
 
-
-
     .country-index {
-        margin-top: 5%;
-
+        margin-top: 30px;
+        padding-left: 50px;
 
     }
 
@@ -639,17 +694,17 @@
 
     .Get-free {
         font-size: 15px;
-        padding-left: 30px;
+        padding-left: 40px;
     }
 
     .connect-experts {
         font-size: 20px;
-        padding-left: 30px;
+        padding-left: 40px;
     }
 
     .If-you {
         font-size: 14px;
-        padding-left: 30px;
+        padding-left: 40px;
     }
 
 
@@ -703,14 +758,16 @@
     .text-update {
         font-size: 23px;
         line-height: 10px;
+        padding-left: 60px;
     }
 
     .text-project {
         font-size: 10px;
+        padding-left: 60px;
     }
 
     .input-group-form {
-        padding-left: 40px;
+        padding-left: 60px;
     }
 
     .footer-bottom {
@@ -723,9 +780,19 @@
 
     .If-you2 {
         font-size: 14px;
+        padding-left: 15px;
     }
 
     .left-box-select {
         font-size: 13.5px;
+        padding-left: 30px;
+    }
+
+    .your-company {
+        padding-left: 20px;
+    }
+
+    .form-Questions {
+        padding-left: 60px;
     }
 }

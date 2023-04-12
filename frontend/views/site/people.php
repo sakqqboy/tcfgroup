@@ -10,7 +10,11 @@ $this->title = 'People';
 
 
 <div class="col-12">
-    <img src="<?= Yii::$app->homeUrl ?>image/working.png" class="image-working">
+    <img src="<?= Yii::$app->homeUrl ?>image/workingg.png" class="image-working">
+    <div class="col-12 title-At">
+        "At TCF, we pride ourselves on
+        our commitment to excellence,
+    </div>
 </div>
 
 <div class="col-10 text-center form-data-block">
@@ -19,9 +23,9 @@ $this->title = 'People';
     </div>
 </div>
 
-<div class="col-12 pr12 blackground-black mt-50">
+<div class="col-12 pr12 blackground-black mt-50 ">
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-12 mt-50">
+        <div class="col-lg-6 col-md-6 col-12 OUR-PEOPLE">
             <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> OUR PEOPLE
             <img src="<?= Yii::$app->homeUrl ?>image/no.png" class="image-no">
             <p class="text-name-kuno">YASUNARI KUNO, CEO, TOKYO CONSULTING GROUP</p>
@@ -42,7 +46,7 @@ $this->title = 'People';
 
 <div class="col-12 pr12 tcf-type">
     <div class="row">
-        <div class="col-md-3 col-5">
+        <div class="col-md-3 col-5 Global-TCF">
             TCF Global People
         </div>
         <div class="col-md-3 col-5">

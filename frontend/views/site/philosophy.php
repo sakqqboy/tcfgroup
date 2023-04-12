@@ -29,16 +29,16 @@ $this->title = 'Philosophy';
     <div class="col-12 picture-icon">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/icon1.png" style="width: 100px;"> Why We Work?
+                <img src="<?= Yii::$app->homeUrl ?>image/icon1.png" style="width: 90px;"> Why We Work?
             </div>
             <div class="col-lg-3 col-md-6 col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/icon2.png" style="width: 100px;"> What We Give is What We Get
+                <img src="<?= Yii::$app->homeUrl ?>image/icon2.png" style="width: 90px;"> What We Give is What We Get
             </div>
             <div class="col-lg-3 col-md-6 col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/icon3.png" style="width: 100px;"> What is Success?
+                <img src="<?= Yii::$app->homeUrl ?>image/icon3.png" style="width: 90px;"> What is Success?
             </div>
             <div class="col-lg-3 col-md-6 col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/icon4.png" style="width: 100px;"> Gratitude
+                <img src="<?= Yii::$app->homeUrl ?>image/icon4.png" style="width: 90px;"> Gratitude
             </div>
         </div>
     </div>
@@ -53,10 +53,10 @@ $this->title = 'Philosophy';
         </div>
         <div class="col-lg-6 col-md-6  col-12 mt-50 text-center">
             <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/Screenshot.png" class="image-screenshot">
+                <img src="<?= Yii::$app->homeUrl ?>image/Screenshot.png" class="image-screenshot1">
             </div>
             <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/BG.png" class="image-BG">
+                <img src="<?= Yii::$app->homeUrl ?>image/BG.png" class="image-BG1">
             </div>
         </div>
     </div>
@@ -67,10 +67,10 @@ $this->title = 'Philosophy';
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12 mt-50 text-center">
             <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/Screenshot.png" class="image-screenshot">
+                <img src="<?= Yii::$app->homeUrl ?>image/Screenshot.png" class="image-screenshot2">
             </div>
             <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/BG-1.png" class="image-BG">
+                <img src="<?= Yii::$app->homeUrl ?>image/BG-1.png" class="image-BG2">
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-12 mt-50">
@@ -96,10 +96,10 @@ $this->title = 'Philosophy';
         </div>
         <div class="col-lg-6 col-md-6  col-12 mt-50 text-center">
             <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/Screenshot.png" class="image-screenshot">
+                <img src="<?= Yii::$app->homeUrl ?>image/Screenshot.png" class="image-screenshot1">
             </div>
             <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/BG-2.png" class="image-BG">
+                <img src="<?= Yii::$app->homeUrl ?>image/BG-2.png" class="image-BG1">
             </div>
         </div>
     </div>
@@ -110,10 +110,10 @@ $this->title = 'Philosophy';
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12  mt-50 text-center">
             <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/Screenshot.png" class="image-screenshot">
+                <img src="<?= Yii::$app->homeUrl ?>image/Screenshot.png" class="image-screenshot2">
             </div>
             <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/BG-3.png" class="image-BG">
+                <img src="<?= Yii::$app->homeUrl ?>image/BG-3.png" class="image-BG2">
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-12 mt-50">

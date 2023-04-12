@@ -12,7 +12,7 @@
 
 .table-card {
     font-size: 12px;
-    width: 14rem;
+    /* width: 14rem; */
 
 }
 
@@ -188,10 +188,7 @@
 
 @media(max-width: 992px) {
 
-    .table-card {
-        width: 280px;
 
-    }
 
     .title-import {
         width: 390px;
@@ -233,10 +230,6 @@
 
 @media(max-width: 768px) {
 
-
-    .table-card {
-        width: 190px;
-    }
 
     .title-import {
         padding-left: 20px;

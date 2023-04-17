@@ -43,7 +43,7 @@ $this->title = 'newsletter';
     </div>
     <div class="col-12 mt-20 pl-40">
         <div class="row">
-            <div class="card table-card mt-10">
+            <!-- <div class="card table-card mt-10">
                 <div class="card-body">
                     <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                     <p class="card-home1">Compliance in TAX</p>
@@ -85,7 +85,7 @@ $this->title = 'newsletter';
                     <p class="card-home1">Shipping Industry Growth Rate</p>
                     <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
@@ -110,7 +110,7 @@ $this->title = 'newsletter';
     </div>
     <div class="col-12">
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-12 pl-40">
+            <div class="col-lg-6 col-md-6 col-12">
                 <img src="<?= Yii::$app->homeUrl ?>img/hunter.png" class="img-hunter">
                 <p class="title-Human">Human Resource Management</p>
                 <p class="title-Labor">Bangladesh Labor Rules 2015 Amendment (Vol. 3)</p>
@@ -154,7 +154,7 @@ $this->title = 'newsletter';
             <div class="col-12">
                 <a href="<?= Yii::$app->homeUrl ?>site-country/taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-2.png" class="img-2"></a>
             </div>
-            <p class="title-Human"> legal and secretarial</p>
+            <p class="title-Human4"> legal and secretarial</p>
             <p class="title-1"> Redetermination of Fees Payable Against Import-Export</p>
             <p class="title-2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building) are only a part of the story. It is increasingly evident that other elements of the building cycle, particularly embodied or construction carbon</p>
         </div>
@@ -162,7 +162,7 @@ $this->title = 'newsletter';
             <div class="col-12">
                 <a href="<?= Yii::$app->homeUrl ?>site-country/taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-3.png" class="img-2"></a>
             </div>
-            <p class="title-Human"> Human Resource</p>
+            <p class="title-Human5"> Human Resource</p>
             <p class="title-1"> Informing About Dangerous Building & Workers Obligation</p>
             <p class="title-2">It is important to prioritize safety in all building-related activities to prevent accidents and injuries. By taking a proactive approach to safety, we can ensure that all buildings are safe and secure for everyone who interacts with them.</p>
         </div>
@@ -170,7 +170,7 @@ $this->title = 'newsletter';
             <div class="col-12">
                 <a href="<?= Yii::$app->homeUrl ?>site-country/taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-4.png" class="img-2"></a>
             </div>
-            <p class="title-Human"> Accounts & Taxation</p>
+            <p class="title-Human6"> Accounts & Taxation</p>
             <p class="title-1"> Environment Clearance Certificate</p>
             <p class="title-2">Environmental clearance is compulsory
                 for each, and everyform of industry and project
@@ -184,7 +184,7 @@ $this->title = 'newsletter';
             <div class="col-12">
                 <a href="<?= Yii::$app->homeUrl ?>site-country/taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-5.png" class="img-2"></a>
             </div>
-            <p class="title-Human"> Industrial Relationship</p>
+            <p class="title-Human7"> Industrial Relationship</p>
             <p class="title-1"> First-Aid Appliances in Factories in Bangladesh</p>
             <p class="title-2">In the organizations establishments
                 particularly where there are a huge
@@ -204,7 +204,7 @@ $this->title = 'newsletter';
             <div class="col-12">
                 <a href="<?= Yii::$app->homeUrl ?>site-country/taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-6.png" class="img-2"></a>
             </div>
-            <p class="title-Human"> legal and secretarial</p>
+            <p class="title-Human4"> legal and secretarial</p>
             <p class="title-1"> RJSC Return Filing: Limited and Foreign Company</p>
             <p class="title-2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building) are only a part of the story. It is increasingly evident that other elements of the building cycle, particularly embodied or construction carbon</p>
         </div>
@@ -212,7 +212,7 @@ $this->title = 'newsletter';
             <div class="col-12">
                 <a href="<?= Yii::$app->homeUrl ?>site-country/taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-7.png" class="img-2"></a>
             </div>
-            <p class="title-Human"> Human Resource</p>
+            <p class="title-Human5"> Human Resource</p>
             <p class="title-1"> Precautions For Fire Incidents in The Workplace</p>
             <p class="title-2">It is important to prioritize safety in all building-related activities to prevent accidents and injuries. By taking a proactive approach to safety, we can ensure that all buildings are safe and secure for everyone who interacts with them.</p>
         </div>
@@ -220,7 +220,7 @@ $this->title = 'newsletter';
             <div class="col-12">
                 <a href="<?= Yii::$app->homeUrl ?>site-country/taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-8.png" class="img-2"></a>
             </div>
-            <p class="title-Human"> Accounts & Taxation</p>
+            <p class="title-Human6"> Accounts & Taxation</p>
             <p class="title-1"> Withholding Tax Return (WTR)</p>
             <p class="title-2">Environmental clearance is compulsory for each, and every
                 form of industry and project as provided in the Bangladesh
@@ -233,7 +233,7 @@ $this->title = 'newsletter';
             <div class="col-12">
                 <a href="<?= Yii::$app->homeUrl ?>site-country/taxassessment"> <img src="<?= Yii::$app->homeUrl ?>img/img-9.png" class="img-2"></a>
             </div>
-            <p class="title-Human"> Industrial Relationship</p>
+            <p class="title-Human7"> Industrial Relationship</p>
             <p class="title-1"> Health & Hygiene in the office space</p>
             <p class="title-2">In the organizations establishments particularly where there are a huge
                 number of workers work, the employer should have to ensure some safety
@@ -249,14 +249,14 @@ $this->title = 'newsletter';
 
 <div class="col-12 pr12 blue pt-20 pb-10 mt-50">
     <div class="row">
-        <div class="offset-lg-1 offset-md-1 col-1g-10 col-md-10 col-12 text-update">
+        <div class="col-1g-10 col-md-10 col-12 text-update">
             <p>GET UPDATE FROM</p>
             <p> All OVER THE WORLD</p>
         </div>
-        <div class="offset-lg-1 offset-md-1 col-1g-10 col-md-10 col-12 text-project">
+        <div class="col-1g-10 col-md-10 col-12 text-project">
             <p>Project starts fall but small spots of hope indicate green shoots of recovery are there.</p>
         </div>
-        <div class="offset-lg-1 offset-md-1 col-lg-5 col-md-6 col-12 mt-10 input-group-form">
+        <div class="col-lg-5 col-md-6 col-12 mt-10 input-group-form">
             <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
                 <input type="text" class="form-control input-your-email" placeholder="Your Email address" aria-label="Your Email address with two button addons">

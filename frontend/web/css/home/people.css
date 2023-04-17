@@ -10,7 +10,7 @@
     line-height: 40px;
     padding-left: 70px;
     width: 450px;
-    margin-top: -650px;
+    margin-top: -400px;
     color: #000000;
     position: absolute;
 }
@@ -42,7 +42,7 @@
     padding-left: 70px;
     font-family: 'klavika';
     font-weight: 100;
-    margin-top: -190px;
+    margin-top: -80px;
     font-size: 18px;
 }
 
@@ -139,7 +139,7 @@
     }
 
     .OUR-PEOPLE {
-        padding-left: 40px;
+        padding-left: 10px;
     }
 
     .image-icon-name {
@@ -161,6 +161,7 @@
     .title-culture,
     .title-employees {
         font-size: 22px;
+        padding-left: 40px;
     }
 
     .card-title1 {

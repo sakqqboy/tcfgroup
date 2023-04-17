@@ -81,19 +81,19 @@ $this->title = 'About Us';
     </div>
 </div>
 
-<div class="col-12 pr12 blue pt-20 pb-10 mt-50">
+<div class="col-12 pr12 blue pt-20 pb-10">
     <div class="row">
-        <div class="offset-lg-1 offset-md-1 col-1g-10 col-md-10 col-12 text-update">
+        <div class="col-1g-10 col-md-10 col-12 text-update">
             <p>GET UPDATE FROM</p>
             <p> All OVER THE WORLD</p>
         </div>
-        <div class="offset-lg-1 offset-md-1 col-1g-10 col-md-10 col-12 text-project">
+        <div class="col-1g-10 col-md-10 col-12 text-project">
             <p>Project starts fall but small spots of hope indicate green shoots of recovery are there.</p>
         </div>
-        <div class="offset-lg-1 offset-md-1 col-lg-5 col-md-6 col-12 mt-10 input-group-form">
+        <div class="col-lg-5 col-md-6 col-12 mt-10 input-group-form">
             <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
-                <input type="text" class="form-control" placeholder="Your Email address" aria-label="Your Email address with two button addons">
+                <input type="text" class="form-control input-your-email" placeholder="Your Email address" aria-label="Your Email address with two button addons">
                 <button class="btn btn-primary" type="button">Subscribe Now</button>
             </div>
             <br>
@@ -132,11 +132,11 @@ $this->title = 'About Us';
         <div class="col-lg-4 col-md-6 col-12">
             <div class="col-12 media-picture">
                 Follow Career in
-                <a href="#facebook"><img src="<?= Yii::$app->homeUrl ?>image/facebook.png"></a>
-                <a href="#twitter"><img src="<?= Yii::$app->homeUrl ?>image/twitter.png"></a>
-                <a href="#Instagram"><img src="<?= Yii::$app->homeUrl ?>image/Instagram.png"></a>
-                <a href="#LinkedIn"><img src="<?= Yii::$app->homeUrl ?>image/LinkedIn.png"></a>
-                <a href="#YouTube"><img src="<?= Yii::$app->homeUrl ?>image/YouTube.png"></a>
+                <a href="#"><i class="fa fa-facebook-square square-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter-square square-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram aquare-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-linkedin-square square-linkedin" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-youtube-play square-youtube" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>

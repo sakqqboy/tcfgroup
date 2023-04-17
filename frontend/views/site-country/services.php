@@ -36,7 +36,7 @@ $this->title = 'services';
             <div class="col-12 title-new1">
                 <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> Service at Every Stage of Business
             </div>
-            <div class="row mt-40 form-services-page pl-40">
+            <div class="row mt-40 form-services-page">
                 <div class="col-4">
                     Select Country
                 </div>
@@ -71,7 +71,7 @@ $this->title = 'services';
                     </select>
                 </div>
             </div>
-            <div class="col-12 mt-40 pl-40">
+            <div class="col-12 mt-40">
                 <img src="<?= Yii::$app->homeUrl ?>img/Asset-2.png" class="image-Asset-2">
             </div>
         </div>
@@ -174,14 +174,14 @@ $this->title = 'services';
             <div class="col-12 title-new1 mt-20">
                 <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> Business Continuation Method (Kuno Method)
             </div>
-            <div class="col-12 mt-50 pl-40">
+            <div class="col-12 mt-50 title-jinji">
                 <img src="<?= Yii::$app->homeUrl ?>img/image4.png">
                 <p>JINJI NO BUTAI cultivates Mind and Work Philosophy,
                     and grow employees as Real Leader.</p>
             </div>
-            <div class="col-12 mt-20 pl-40">
+            <div class="col-12 mt-20">
                 <div class="row">
-                    <div class="col-4 mt-30">
+                    <div class="col-4 mt-30 pade-jinji">
                         <p><img src="<?= Yii::$app->homeUrl ?>img/image1.png" style="width: 90px;"></p>
                         <p><img src="<?= Yii::$app->homeUrl ?>img/image2.png" style="width: 90px;"></p>
                         <p><img src="<?= Yii::$app->homeUrl ?>img/image3.png" style="width: 90px;"></p>
@@ -240,7 +240,7 @@ $this->title = 'services';
                     <div class="col-12 select-project">
                         a comprehensive consulting firm that offers a range of services related to human resources, accounting, tax, and VAT. This is a valuable asset for businesses that are looking for comprehensive support in these areas, as they can receive all of their consulting needs from one reliable source.
                     </div>
-                    <div class="col-12">
+                    <div class="col-6">
                         <div class="card download-button">
                             <a href="" class="no-underline1">
                                 <p class="text-download1"> Download Company Profile <i class="fa fa-download name-download3" aria-hidden="true"></i></p>

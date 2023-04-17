@@ -39,7 +39,7 @@
     color: #0F2137;
     line-height: 24px;
     padding-left: 10px;
-    padding-left: 40px
+    padding-left: 70px
 }
 
 .home-form-one {
@@ -80,19 +80,29 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 24px;
+    padding-left: 70px;
     font-family: 'klavika';
 
 }
 
-.page-two {
-    padding-left: 40px;
+.backgroup-submit {
+    background: #F0F3F8;
+    padding-left: 70px;
+}
+
+.form-select-business {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    font-family: 'klavika';
 }
 
 .form-select-two {
     font-size: 15px;
     font-family: 'klavika';
     font-weight: 300;
-    margin-top: 50px;
+    margin-top: 70px;
+    padding-left: 70px;
 }
 
 .form-select-tree {
@@ -101,8 +111,20 @@
     font-weight: 300;
 }
 
+.form-select-tree1 {
+    font-size: 15px;
+    font-family: 'klavika';
+    font-weight: 300;
+    margin-top: 50px;
+}
+
+.image-Asset {
+    width: 100%;
+    margin-top: 50px;
+}
+
 .page-tree {
-    padding-left: 40px;
+    padding-left: 70px;
 }
 
 .image-Group-2 {
@@ -115,13 +137,14 @@
 }
 
 .card-img-top {
-    width: 30%;
+    width: 90px;
 
 }
 
 
 .card {
     border: none;
+    margin-left: 70px;
     /* width: 18rem; */
 }
 
@@ -130,10 +153,6 @@
     width: 100%;
 }
 
-.backgroup-submit {
-    background: #F0F3F8;
-    padding-left: 40px;
-}
 
 .image-boat-2 {
     width: 100%;
@@ -144,7 +163,7 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 26px;
-    margin-top: 30px;
+    margin-top: 90px;
 }
 
 .form-services-page {
@@ -152,7 +171,6 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 26px;
-    /* color: #0F2137; */
 }
 
 .form-page-text {
@@ -182,6 +200,7 @@
     margin-top: 5px;
     line-height: 20px;
     font-weight: 100;
+    padding-left: 70px;
     font-family: 'klavika';
 }
 
@@ -199,6 +218,7 @@
     font-size: 24px;
     font-weight: 700;
     padding-top: 20px;
+    padding-left: 70px;
     font-family: 'klavika';
 
 }
@@ -206,7 +226,6 @@
 .title-all {
     margin-top: -850px;
     color: white;
-    padding-left: 40px;
 
 }
 
@@ -221,6 +240,7 @@
     font-size: 19px;
     font-family: 'klavika';
     font-weight: 700;
+    padding-left: 60px;
 
 }
 
@@ -234,10 +254,10 @@
 .form-card {
     background: #005BA0;
     border-radius: 5px;
-    width: 570px;
+    width: 520px;
     height: 50px;
     padding-top: 10px;
-    padding-left: 10px;
+    padding-left: 12px;
     font-weight: 100;
     font-size: 16px;
     margin-top: 40px;
@@ -246,7 +266,7 @@
 .download {
     margin-left: 380px;
     margin-top: -20px;
-    width: 120px;
+    width: 100px;
     height: 30px;
     color: #005BA0;
     font-weight: 500;
@@ -293,6 +313,7 @@
     .select-project {
         font-size: 9px;
         line-height: 11px;
+        padding-left: 40px;
     }
 
     .select-project-1 {
@@ -321,6 +342,7 @@
     .text-the-best {
         font-size: 15px;
         margin-top: -20px;
+        padding-left: 10px;
     }
 
     .image-account {
@@ -329,6 +351,7 @@
 
     .page-1 {
         font-size: 8px;
+        padding-left: 40px;
     }
 
     .select-project {
@@ -338,21 +361,31 @@
     }
 
     .form-card {
-        font-size: 8px;
+        font-size: 7px;
         padding-left: 5px;
-        width: 320px;
+        margin-left: 10px;
+        width: 290px;
         height: 0px;
         margin-top: 20px;
-        padding-bottom: 20px;
+        padding-bottom: 15px;
 
     }
 
 
+    .form-select-two {
+        padding-left: 40px;
+    }
+
+    .home-form {
+        padding-left: 40px;
+    }
+
+
     .download {
-        margin-top: -15px;
-        font-size: 12px;
-        width: 95px;
-        margin-left: 210px;
+        margin-top: -13px;
+        font-size: 10px;
+        width: 90px;
+        margin-left: 190px;
 
     }
 
@@ -371,11 +404,34 @@
         width: 200px;
         line-height: 7px;
         margin-top: 1px;
-        margin-left: -30px;
+        margin-left: -10px;
     }
 
     .form-page-text {
-        margin-left: 20px;
+        margin-left: 40px;
     }
 
+    .form-select-tree {
+        padding-left: 40px;
+    }
+
+    .page-tree {
+        padding-left: 40px;
+    }
+
+    .form-select-one {
+        padding-left: 40px;
+    }
+
+    .form-select-business {
+        padding-left: 0px;
+    }
+
+    .backgroup-submit {
+        margin-top: 50px;
+    }
+
+    .fa-download {
+        font-size: 12px;
+    }
 }

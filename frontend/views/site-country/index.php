@@ -19,13 +19,13 @@ $this->title = 'Bangladesh';
     </div>
 </div>
 
-<div class="col-12 mt-20">
+<div class="col-12 pr12 mt-50">
     <div class="col-12 title-Trending">
         <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> Trending Topics
     </div>
+    <div class="row mt-50">
 
-    <div class="row">
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 card table-card mt-10">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10">
             <div class="card-body">
                 <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                 <p class="card-home1">Compliance in TAX</p>
@@ -33,35 +33,35 @@ $this->title = 'Bangladesh';
 
             </div>
         </div>
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 card table-card mt-10">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10">
             <div class="card-body">
                 <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                 <p class="card-home1">Finance Act 2023</p>
                 <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
             </div>
         </div>
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 card table-card mt-10">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10">
             <div class="card-body">
                 <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                 <p class="card-home1">Human Rights at workplace</p>
                 <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
             </div>
         </div>
-        <div class=" col-lg-2 col-md-3 col-sm-4 col-6 card  table-card mt-10">
+        <div class=" col-lg-2 col-md-3 col-sm-4 col-6 card mt-10">
             <div class="card-body">
                 <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                 <p class="card-home1">Import Export Policy amendment 2023</p>
                 <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
             </div>
         </div>
-        <div class=" col-lg-2 col-md-3 col-sm-4 col-6 card  table-card mt-10">
+        <div class=" col-lg-2 col-md-3 col-sm-4 col-6 card  mt-10">
             <div class="card-body">
                 <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                 <p class="card-home1">HS Code Updates</p>
                 <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
             </div>
         </div>
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 card table-card mt-10">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 card  mt-10">
             <div class="card-body">
                 <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
                 <p class="card-home1">Shipping Industry Growth Rate</p>
@@ -329,20 +329,28 @@ $this->title = 'Bangladesh';
                     </div>
                     <div class="col-4 text-start mt-4">
                         <div class="contact-social mb-2">Whatsapp</div>
-                        <p class="info-tokyo"><i class="fa fa-whatsapp" aria-hidden="true"></i> inquarrytcf</p>
+                        <a href="" class="no-underline3">
+                            <p class="info-tokyo"><i class="fa fa-whatsapp" aria-hidden="true"></i> inquarrytcf</p>
+                        </a>
                     </div>
                     <div class="col-8 text-end mt-4">
                         <div class="contact-social mb-2">Email</div>
-                        <p class="info-tokyo">f-info@tokyoconsultinggroup.com <i class="fa fa-envelope" aria-hidden="true"></i></p>
+                        <a href="" class="no-underline3">
+                            <p class="info-tokyo">f-info@tokyoconsultinggroup.com <i class="fa fa-envelope" aria-hidden="true"></i></p>
+                        </a>
                     </div>
                     <div class="col-4 text-start mt-4">
                         <div class="contact-social mb-2">Skype</div>
-                        <p class="info-tokyo"><i class="fa fa-skype" aria-hidden="true"></i> inquarrytcf</p>
+                        <a href="" class="no-underline3">
+                            <p class="info-tokyo"><i class="fa fa-skype" aria-hidden="true"></i> inquarrytcf</p>
+                        </a>
 
                     </div>
                     <div class="col-8 text-end mt-4">
                         <div class="contact-social mb-2">Phone</div>
-                        <p class="info-tokyo">+090-111-222 <i class="fa fa-phone" aria-hidden="true"></i></p>
+                        <a href="" class="no-underline3">
+                            <p class="info-tokyo">+090-111-222 <i class="fa fa-phone" aria-hidden="true"></i></p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -352,14 +360,14 @@ $this->title = 'Bangladesh';
 
 <div class="col-12 pr12 blue pt-20 pb-10">
     <div class="row">
-        <div class="offset-lg-1 offset-md-1 col-1g-10 col-md-10 col-12 text-update">
-            <p>GET UPDATE FROM</p>
+        <div class="col-1g-10 col-md-10 col-12 text-update">
+            <p> GET UPDATE FROM</p>
             <p> All OVER THE WORLD</p>
         </div>
-        <div class="offset-lg-1 offset-md-1 col-1g-10 col-md-10 col-12 text-project">
+        <div class="col-1g-10 col-md-10 col-12 text-project">
             <p>Project starts fall but small spots of hope indicate green shoots of recovery are there.</p>
         </div>
-        <div class="offset-lg-1 offset-md-1 col-lg-5 col-md-6 col-12 mt-10 input-group-form">
+        <div class="col-lg-5 col-md-6 col-12 mt-10 input-group-form">
             <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
                 <input type="text" class="form-control input-your-email" placeholder="Your Email address" aria-label="Your Email address with two button addons">

@@ -77,7 +77,7 @@ $this->title = 'TCFGROUP';
 
 
 
-<div class="col-12 pr12">
+<div class=" col-12 pr12">
     <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
             <div class="col-lg-12 text-establish">
@@ -143,7 +143,7 @@ $this->title = 'TCFGROUP';
 
 
 
-<div class="col-12">
+<div class="col-12 ">
     <img src="<?= Yii::$app->homeUrl ?>image/Boat1.png" style="width: 100%;">
     <div class="text2">
         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Our Philosophy: Contributing to Society, Driving Growth
@@ -164,6 +164,7 @@ $this->title = 'TCFGROUP';
         we believe in findingthe appropriate size that balances our growth aspirations with our
         obligation to society.Join us in our journey to create a better future for all."
     </div>
+</div>
 </div>
 
 
@@ -234,6 +235,7 @@ $this->title = 'TCFGROUP';
                             <option value="24">Thailad</option>
                             <option value="25">Turkey</option>
                         </select>
+
                     </div>
                     <div class="col-12">
                         <div class="row mt-20">
@@ -297,27 +299,34 @@ $this->title = 'TCFGROUP';
                 </div>
                 <div class="row">
                     <div class="col-6 text-start label-thin mt-4">
-                        ATTACHMENT (IF ANY) <i class="fa fa-paperclip" aria-hidden="true"></i>
+                        ATTACHMENT (IF ANY) <a href="" class="no-underline"><i class="fa fa-paperclip" aria-hidden="true"></i></a>
+
                     </div>
                     <div class="col-6 mt-4 text-end">
                         <button type="button" class="btn btn-primary button-get">Get Free Appointment</button>
                     </div>
                     <div class="col-4 text-start mt-4">
                         <div class="contact-social mb-2">Whatsapp</div>
-                        <p class="info-tokyo"><i class="fa fa-whatsapp" aria-hidden="true"></i> inquarrytcf</p>
+                        <a href="" class="no-underline">
+                            <p class="info-tokyo"><i class="fa fa-whatsapp" aria-hidden="true"></i> inquarrytcf</p>
+                        </a>
                     </div>
                     <div class="col-8 text-end mt-4">
                         <div class="contact-social mb-2">Email</div>
-                        <p class="info-tokyo">f-info@tokyoconsultinggroup.com <i class="fa fa-envelope" aria-hidden="true"></i></p>
+                        <p class="info-tokyo"> <a href="" class="no-underline"> f-info@tokyoconsultinggroup.com <i class="fa fa-envelope" aria-hidden="true"></i></p></a>
                     </div>
                     <div class="col-4 text-start mt-4">
                         <div class="contact-social mb-2">Skype</div>
-                        <p class="info-tokyo"><i class="fa fa-skype" aria-hidden="true"></i> inquarrytcf</p>
+                        <a href="" class="no-underline">
+                            <p class="info-tokyo"><i class="fa fa-skype" aria-hidden="true"></i> inquarrytcf</p>
+                        </a>
 
                     </div>
                     <div class="col-8 text-end mt-4">
                         <div class="contact-social mb-2">Phone</div>
-                        <p class="info-tokyo">+090-111-222 <i class="fa fa-phone" aria-hidden="true"></i></p>
+                        <a href="" class="no-underline">
+                            <p class="info-tokyo">+090-111-222 <i class="fa fa-phone" aria-hidden="true"></i></p>
+                        </a>
                     </div>
                 </div>
             </div>

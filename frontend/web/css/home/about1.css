@@ -10,7 +10,7 @@
     color: #8795C9;
     font-weight: 100;
     font-family: 'klavika';
-    padding-left: 40px;
+    padding-left: 70px;
 }
 
 .text-vision {
@@ -18,7 +18,7 @@
     font-size: 95px;
     color: rgba(135, 149, 201, 0.5);
     font-family: 'klavika';
-    padding-left: 40px;
+    padding-left: 70px;
     margin-top: -570px;
 }
 
@@ -29,7 +29,7 @@
     font-weight: 100;
     margin-top: -440px;
     font-family: 'klavika';
-    padding-left: 40px;
+    padding-left: 70px;
     color: #8795C9;
 }
 
@@ -55,13 +55,13 @@
     font-weight: 500;
     font-family: 'klavika';
     margin-top: -350px;
-    padding-left: 40px;
+    padding-left: 70px;
 }
 
 .box-data-2 {
     position: absolute;
     font-family: 'klavika';
-    padding-left: 50px;
+    padding-left: 70px;
     font-weight: 100;
     margin-top: -310px;
 }
@@ -70,7 +70,7 @@
     position: absolute;
     width: 600px;
     font-family: 'klavika';
-    padding-left: 40px;
+    padding-left: 70px;
     font-weight: 100;
     margin-top: -250px;
 
@@ -83,7 +83,7 @@
 .Block-1 {
     position: absolute;
     font-size: 24px;
-    padding-left: 40px;
+    padding-left: 70px;
     font-weight: 500;
     margin-top: -350px;
     font-family: 'klavika';
@@ -93,7 +93,7 @@
 .Block-2 {
     position: absolute;
     font-family: 'klavika';
-    padding-left: 50px;
+    padding-left: 70px;
     font-weight: 100;
     margin-top: -310px;
 
@@ -103,7 +103,7 @@
     position: absolute;
     width: 600px;
     font-family: 'klavika';
-    padding-left: 40px;
+    padding-left: 70px;
     font-weight: 100;
     margin-top: -252px;
 }
@@ -120,7 +120,7 @@
     font-family: 'klavika';
     font-weight: 500;
     margin-top: -350px;
-    padding-left: 40px;
+    padding-left: 70px;
     color: white;
 }
 
@@ -130,14 +130,14 @@
     color: white;
     font-weight: 100;
     font-size: 13px;
-    padding-left: 40px;
+    padding-left: 70px;
     margin-top: -290px;
     font-family: 'klavika';
 }
 
 .padding-box {
     margin-top: 70px;
-    padding-left: 40px;
+    padding-left: 70px;
     font-size: 24px;
     font-family: 'klavika';
     font-weight: 500;
@@ -174,35 +174,43 @@
 
     .box-data-1 {
         margin-top: -280px;
+        padding-left: 40px;
     }
 
     .box-data-2 {
         margin-top: -250px;
+        padding-left: 50px;
     }
 
     .box-data-3 {
         margin-top: -210px;
+        padding-left: 40px;
     }
 
     .Block-1 {
         margin-top: -290px;
+        padding-left: 40px;
     }
 
     .Block-2 {
         margin-top: -260px;
+        padding-left: 50px;
     }
 
     .Block-3 {
         margin-top: -220px;
+        padding-left: 40px;
     }
 
     .Type-home-page-one {
         margin-top: -290px;
+        padding-left: 40px;
     }
 
     .Type-home-page-two {
         margin-top: -220px;
         line-height: 15px;
+        padding-left: 40px;
     }
 
     .padding-box {
@@ -294,11 +302,13 @@
 
         margin-top: -180px;
         font-size: 20px;
+        padding-left: 40px;
     }
 
     .text-vision {
         margin-top: -165px;
-        font-size: 30px
+        font-size: 30px;
+        padding-left: 40px;
     }
 
     .vlog-1 {
@@ -306,6 +316,7 @@
         font-size: 6px;
         width: 240px;
         line-height: 7px;
+        padding-left: 40px;
     }
 
     .title-color {

@@ -7,7 +7,7 @@
     position: absolute;
     width: 253px;
     margin-top: -450px;
-    padding-left: 141px;
+    padding-left: 70px;
     font-family: 'Klavika';
     font-weight: 700;
     font-size: 52px;
@@ -20,7 +20,7 @@
 .detail-resource {
     position: absolute;
     width: 650px;
-    padding-left: 141px;
+    padding-left: 70px;
     margin-top: -320px;
     font-family: 'Klavika';
     font-weight: 300;
@@ -30,10 +30,14 @@
     color: #333333;
 }
 
+.item-dropdown {
+    padding-left: 70px;
+}
+
 .form-search-template {
     position: absolute;
     width: 450px;
-    padding-left: 139px;
+    padding-left: 70px;
     margin-top: -250px;
 }
 
@@ -71,7 +75,7 @@
 .form-select-search {
     position: absolute;
     margin-top: -180px;
-    padding-left: 141px;
+    padding-left: 70px;
     font-family: 'klavika';
 }
 

@@ -60,12 +60,12 @@ $this->title = 'services';
             </div>
 
         </div>
-        <div class="col-lg-6 col-md-6 col-12 mt-40">
+        <div class="col-lg-6 col-md-6 col-12 mt-50">
             <div class="col-12 form-select-tree">
                 It is always the most vital time to provide the entire picture of company and remind the mission in society. We believe that the purpose of business is ultimately the same all over the world. Let’s grow together.
             </div>
             <div class="col-12 pt-20">
-                <img src="<?= Yii::$app->homeUrl ?>image/Asset@3sxs.png" style="width: 100%;">
+                <img src="<?= Yii::$app->homeUrl ?>image/Asset@3sxs.png" class="image-Asset">
             </div>
         </div>
     </div>
@@ -74,7 +74,7 @@ $this->title = 'services';
 <div class="col-12 pr12 page-tree">
     <div class="row mt-20">
         <div class="col-md-4 col-12">
-            <div class="col-12 form-services">
+            <div class="col-12 form-services mt-50">
                 <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Service at Every Stage
             </div>
             <div class="row mt-40 form-services-page">
@@ -112,71 +112,88 @@ $this->title = 'services';
                     </select>
                 </div>
             </div>
-            <div class="col-12 mt-20">
+            <div class="col-12 mt-50">
                 <img src="<?= Yii::$app->homeUrl ?>image/Group-2.png" class="image-Group-2">
             </div>
         </div>
         <div class="col-md-8 col-12">
-            <div class="col-12 form-select-tree">
+            <div class="col-12 form-select-tree1">
                 It is always the most vital time to provide the entire picture of company and remind the mission in society. We believe that the purpose of business is ultimately the same all over the world. Let’s grow together.
             </div>
-            <div class="col-12 mt-30 text-center form-services">
+            <div class="col-12 form-services">
                 Accounting & Taxation
             </div>
-            <div class="col-12">
+            <div class="col-12 mt-20">
                 <div class="row">
-                    <div class="card mt-20 form-page-text">
-                        <div class="text-center"><img src="<?= Yii::$app->homeUrl ?>image/accounting.png" class="card-img-top"></div>
-                        <div class="card-body text-center">
-                            <h5> Company
-                                Accounting & Taxation Compliance</h5>
-                            <p>Accounting & Taxation Compliance is a crucial service that helps companies meet their financial reporting obligations and maintain compliance with tax laws. This service ensures accurate record keeping, tax filing, and financial reporting to minimize the risk of audits and penalties.</p>
-                            <button type="button" class="btn btn-outline-primary">Explore Service</button>
+                    <div class="col-lg-4 col-md-6 col-sm-4 col-8">
+                        <div class="card mt-20 form-page-text">
+                            <div class="text-center"><img src="<?= Yii::$app->homeUrl ?>image/accounting.png" class="card-img-top"></div>
+                            <div class="card-body text-center">
+                                <h6> Company
+                                    Accounting & Taxation Compliance</h6>
+                                <p>Accounting & Taxation Compliance is a crucial service that helps companies meet their financial reporting obligations and maintain compliance with tax laws. This service ensures accurate record keeping, tax filing, and financial reporting to minimize the risk of audits and penalties.</p>
+
+                                <button type="button" class="btn btn-outline-primary">Explore Service</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="card mt-20 form-page-text">
-                        <div class="text-center"> <img src="<?= Yii::$app->homeUrl ?>image/accounting.png" class="card-img-top"></div>
-                        <div class="card-body text-center">
-                            <h5> Corporate Tax Assessment
-                                & Returns </h5>
-                            <p>Corporate Tax Assessment & Returns is a comprehensive service that helps companies accurately calculate their tax liability and file returns in compliance with relevant tax laws. This service helps businesses minimize their tax burden, maintain compliance, and avoid penalties and audits.</p>
-                            <button type="button" class="btn btn-outline-primary">Explore Service</button>
+                    <div class="col-lg-4 col-md-6 col-sm-4 col-8">
+                        <div class="card mt-20 form-page-text">
+                            <div class="text-center"> <img src="<?= Yii::$app->homeUrl ?>image/accounting.png" class="card-img-top"></div>
+                            <div class="card-body text-center">
+                                <h6> Corporate Tax Assessment
+                                    & Returns </h6>
+                                <p>Corporate Tax Assessment & Returns is a comprehensive service that helps companies accurately calculate their tax liability and file returns in compliance with relevant tax laws. This service helps businesses minimize their tax burden, maintain compliance, and avoid penalties and audits.</p>
+                                <button type="button" class="btn btn-outline-primary">Explore Service</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="card mt-20 form-page-text">
-                        <div class="text-center"><img src="<?= Yii::$app->homeUrl ?>image/accounting.png" class="card-img-top"></div>
-                        <div class="card-body text-center">
-                            <h5> Accounting & Audit
-                            </h5>
-                            <p>"Streamline financial management with our user-friendly accounting system and assure transparency through our comprehensive auditing process."</p>
-                            <button type="button" class="btn btn-outline-primary" style="margin-top: 80px;">Explore Service</button>
+                    <div class="col-lg-4 col-md-6 col-sm-4 col-8">
+                        <div class="card mt-20 form-page-text">
+                            <div class="text-center"><img src="<?= Yii::$app->homeUrl ?>image/accounting.png" class="card-img-top"></div>
+                            <div class="card-body text-center">
+                                <h6> Accounting & Audit
+                                </h6>
+                                <p>"Streamline financial management with our user-friendly accounting system and assure transparency through our comprehensive auditing process."</p>
+                                <div class="mt-30"></div>
+                                <button type="button" class="btn btn-outline-primary" style="margin-top: 80px;">Explore Service</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="card mt-20 form-page-text">
-                        <div class="text-center"><img src="<?= Yii::$app->homeUrl ?>image/accounting.png" class="card-img-top"></div>
-                        <div class="card-body text-center">
-                            <h5> Monthly, Quarterly,
-                                Yearly Accounts </h5>
-                            <p>"Stay on top of your finances with our flexible account management options - choose from monthly, quarterly, or yearly account reviews to ensure financial stability and peace of mind."</p>
-                            <button type="button" class="btn btn-outline-primary" style="margin-top: 60px;">Explore Service</button>
+                    <div class="col-lg-4 col-md-6 col-sm-4 col-8">
+                        <div class="card mt-20 form-page-text">
+                            <div class="text-center"><img src="<?= Yii::$app->homeUrl ?>image/accounting.png" class="card-img-top"></div>
+                            <div class="card-body text-center">
+                                <h6> Monthly, Quarterly,
+                                    Yearly Accounts </h6>
+                                <p>"Stay on top of your finances with our flexible account management options - choose from monthly, quarterly, or yearly account reviews to ensure financial stability and peace of mind."</p>
+                                <div class="mt-20"></div>
+                                <button type="button" class="btn btn-outline-primary" style="margin-top: 60px;">Explore Service</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="card  mt-20 form-page-text">
-                        <div class="text-center"><img src="<?= Yii::$app->homeUrl ?>image/accounting.png" class="card-img-top"></div>
-                        <div class="card-body text-center">
-                            <h5> Transfer Pricing
-                                & Outward Remittance </h5>
-                            <p>Accounting & Taxation Compliance is a crucial service that helps companies meet their financial reporting obligations and maintain compliance with </p>
-                            <button type="button" class="btn btn-outline-primary" style="margin-top: 60px;">Explore Service</button>
+                    <div class="col-lg-4 col-md-6 col-sm-4 col-8">
+                        <div class="card  mt-20 form-page-text">
+                            <div class="text-center"><img src="<?= Yii::$app->homeUrl ?>image/accounting.png" class="card-img-top"></div>
+                            <div class="card-body text-center">
+                                <h6> Transfer Pricing
+                                    & Outward Remittance </h6>
+                                <p>Accounting & Taxation Compliance is a crucial service that helps companies meet their financial reporting obligations and maintain compliance with </p>
+                                <div class="mt-40"></div>
+                                <button type="button" class="btn btn-outline-primary" style="margin-top: 60px;">Explore Service</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="card  mt-20 form-page-text">
-                        <div class="text-center"><img src="<?= Yii::$app->homeUrl ?>image/accounting.png" class="card-img-top"></div>
-                        <div class="card-body text-center">
-                            <h5> Accounting &
-                                TAX Advisory</h5>
-                            <p>Accounting & Taxation Compliance is a crucial service that helps companies meet their financial reporting obligations and maintain compliance with tax laws. This service ensures accura</p>
-                            <button type="button" class="btn btn-outline-primary" style="margin-top: 60px;">Explore Service</button>
+                    <div class="col-lg-4 col-md-6 col-sm-4 col-8">
+                        <div class="card  mt-20 form-page-text">
+                            <div class="text-center"><img src="<?= Yii::$app->homeUrl ?>image/accounting.png" class="card-img-top"></div>
+                            <div class="card-body text-center">
+                                <h6> Accounting &
+                                    TAX Advisory</h6>
+                                <p>Accounting & Taxation Compliance is a crucial service that helps companies meet their financial reporting obligations and maintain compliance with tax laws. This service ensures accura</p>
+                                <div class="mt-20"></div>
+                                <button type="button" class="btn btn-outline-primary" style="margin-top: 60px;">Explore Service</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -189,7 +206,7 @@ $this->title = 'services';
 <div class="col-12 pr12 backgroup-submit">
     <div class="row">
         <div class="col-lg-5 col-md-6 col-12 mt-20">
-            <div class="col-12 form-select-one mt-20">
+            <div class="col-12 form-select-business mt-20">
                 <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Business Continuation Method (Kuno Method)
             </div>
             <div class="col-12 mt-20">
@@ -239,7 +256,7 @@ $this->title = 'services';
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-6">
                     <div class="col-12 text-the-best">
-                        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle.png" class="image mr-1"> THE BEST OF TCF
+                        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> THE BEST OF TCF
                     </div>
                     <div class="col-12 mt-10 page-1">
                         <img src="<?= Yii::$app->homeUrl ?>image/account.png" class="image-account"> Speed & Quality
@@ -261,7 +278,7 @@ $this->title = 'services';
                     </div>
                     <div class="col-12">
                         <div class="card form-card">
-                            Download the TCG e-Book and learn more about us <p class="card download">Download <i class="fa fa-download" aria-hidden="true"></i></p>
+                            Download the TCG e-Book and learn more about us <p class="card download"> Download <i class="fa fa-download" aria-hidden="true"></i></p>
                         </div>
                     </div>
                 </div>
@@ -404,30 +421,38 @@ $this->title = 'services';
                 </div>
                 <div class="row">
                     <div class="col-6 text-start label-thin mt-4">
-                        ATTACHMENT (IF ANY) <i class="fa fa-paperclip" aria-hidden="true"></i>
+                        ATTACHMENT (IF ANY) <a href="" class="no-underline"><i class="fa fa-paperclip" aria-hidden="true"></i></a>
                     </div>
                     <div class="col-6 mt-4 text-end">
                         <button type="button" class="btn btn-primary button-get">Get Free Appointment</button>
                     </div>
                     <div class="col-6 text-start mt-4">
                         <div class="contact-social mb-2">Whatsapp</div>
-                        <p class="info-tokyo"><i class="fa fa-whatsapp" aria-hidden="true"></i> inquarrytcf</p>
+                        <a href="" class="no-underline">
+                            <p class="info-tokyo"><i class="fa fa-whatsapp" aria-hidden="true"></i> inquarrytcf</p>
+                        </a>
                     </div>
                     <div class="col-6 text-end mt-4">
                         <div class="contact-social mb-2">Email</div>
-                        <p class="info-tokyo">f-info@tokyoconsultinggroup.com<i class="fa fa-envelope" aria-hidden="true"></i></p>
+                        <a href="" class="no-underline">
+                            <p class="info-tokyo">f-info@tokyoconsultinggroup.com<i class="fa fa-envelope" aria-hidden="true"></i></p>
+                        </a>
                     </div>
                     <div class="col-6 text-start mt-4">
                         <div class="contact-social mb-2">Skype</div>
-                        <p class="info-tokyo"><i class="fa fa-skype" aria-hidden="true"></i> inquarrytcf</p>
-
+                        <a href="" class="no-underline">
+                            <p class="info-tokyo"><i class="fa fa-skype" aria-hidden="true"></i> inquarrytcf</p>
+                        </a>
                     </div>
                     <div class="col-6 text-end mt-4">
                         <div class="contact-social mb-2">Phone</div>
-                        <p class="info-tokyo">+090-111-222<i class="fa fa-phone" aria-hidden="true"></i></p>
+                        <a href="" class="no-underline">
+                            <p class="info-tokyo">+090-111-222<i class="fa fa-phone" aria-hidden="true"></i></p>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div class="col-12" style="margin-top:50px;"></div>

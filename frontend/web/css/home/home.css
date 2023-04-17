@@ -334,21 +334,21 @@
     font-size: 34px;
     line-height: 25px;
     padding-top: 20px;
-    padding-left: 70px;
+    padding-left: 80px;
 }
 
 .text-project {
     font-family: 'klavika';
     font-size: 12px;
-    padding-left: 70px;
+    padding-left: 80px;
 }
 
 .logo-footer {
-    width: 300px;
+    width: 200px;
 }
 
 .box-logo-footer {
-    padding-left: 40px;
+    padding-left: 80px;
     padding-top: 100px;
 }
 
@@ -388,11 +388,12 @@
     margin-top: 40px;
     min-height: 100px;
     padding-top: 20px;
+    padding-left: 20px;
     padding-bottom: 20px;
 }
 
 .input-group-form {
-    padding-left: 70px;
+    padding-left: 80px;
     font-size: 10px;
     font-family: 'klavika';
 }
@@ -422,6 +423,7 @@
 
 .footer-box {
     line-height: 20px;
+    padding-left: 40px;
 }
 
 .footer-bottom {
@@ -449,6 +451,20 @@
     font-size: 35px;
 }
 
+.text-update {
+    padding-left: 70px;
+}
+
+.text-project {
+    padding-left: 70px;
+}
+
+.input-group-form {
+    padding-left: 70px;
+}
+
+
+
 
 @media(max-width: 992px) {
     .text-star {
@@ -459,7 +475,7 @@
     }
 
     .text-Unlock {
-        margin-top: -250px;
+        margin-top: -260px;
         line-height: 15px;
         font-size: 13px;
         width: 450px;
@@ -468,6 +484,15 @@
     .text2 {
         font-size: 29px;
 
+    }
+
+    .text3 {
+        margin-top: -320px;
+        line-height: 25px;
+    }
+
+    .image-graph {
+        margin-top: -230px;
     }
 
     .image-what-we-give {
@@ -480,9 +505,9 @@
     .text-tokyo {
         margin-top: -24%;
         line-height: 15px;
-        padding-left: 40px;
+        padding-left: 70px;
         font-size: 12px;
-        width: 420px;
+        width: 450px;
 
     }
 
@@ -534,7 +559,7 @@
     }
 
     .footer-box {
-        padding-left: 40px;
+        padding-left: 30px;
         padding-top: 20px;
     }
 
@@ -551,6 +576,7 @@
         margin-top: -100px;
         font-size: 5px;
         line-height: 6px;
+        padding-left: 40px;
         width: 200px;
 
     }
@@ -732,7 +758,7 @@
     }
 
     .footer-custom {
-        padding-top: 20px;
+        padding-left: 10px;
     }
 
     .text-footer {

@@ -61,7 +61,7 @@ $this->title = 'contact';
 
 <div class="col-12 pr12">
     <div class="row">
-        <div class="col-lg-3 col-md-6 col-12 pl-40 mt-10">
+        <div class="col-lg-3 col-md-6 col-12 mt-10 item-dropdown">
             <div class="btn-group">
                 <button class="btn btn-outline-gray dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="<?= Yii::$app->homeUrl ?>img/icon3.png" class="img-icon"> National Board of Revenue
@@ -413,20 +413,28 @@ $this->title = 'contact';
                     </div>
                     <div class="col-4 text-start mt-4">
                         <div class="contact-social mb-2">Whatsapp</div>
-                        <p class="info-tokyo"><i class="fa fa-whatsapp" aria-hidden="true"></i> inquarrytcf</p>
+                        <a href="" class="no-underline3">
+                            <p class="info-tokyo"><i class="fa fa-whatsapp" aria-hidden="true"></i> inquarrytcf</p>
+                        </a>
                     </div>
                     <div class="col-8 text-end mt-4">
                         <div class="contact-social mb-2">Email</div>
-                        <p class="info-tokyo">f-info@tokyoconsultinggroup.com <i class="fa fa-envelope" aria-hidden="true"></i></p>
+                        <a href="" class="no-underline3">
+                            <p class="info-tokyo">f-info@tokyoconsultinggroup.com <i class="fa fa-envelope" aria-hidden="true"></i></p>
+                        </a>
                     </div>
                     <div class="col-4 text-start mt-4">
                         <div class="contact-social mb-2">Skype</div>
-                        <p class="info-tokyo"><i class="fa fa-skype" aria-hidden="true"></i> inquarrytcf</p>
+                        <a href="" class="no-underline3">
+                            <p class="info-tokyo"><i class="fa fa-skype" aria-hidden="true"></i> inquarrytcf</p>
+                        </a>
 
                     </div>
                     <div class="col-8 text-end mt-4">
                         <div class="contact-social mb-2">Phone</div>
-                        <p class="info-tokyo">+090-111-222 <i class="fa fa-phone" aria-hidden="true"></i></p>
+                        <a href="" class="no-underline3">
+                            <p class="info-tokyo">+090-111-222 <i class="fa fa-phone" aria-hidden="true"></i></p>
+                        </a>
                     </div>
                 </div>
             </div>

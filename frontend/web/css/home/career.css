@@ -6,7 +6,7 @@
     font-family: 'Klavika';
     font-weight: 700;
     margin-top: -510px;
-    padding-left: 40px;
+    padding-left: 70px;
     font-size: 50px;
     line-height: 60px;
     color: #0A3C83;
@@ -15,14 +15,14 @@
 
 
 .form-input {
-    padding-left: 40px;
+    padding-left: 70px;
     font-family: 'klavika';
     font-weight: 300;
 }
 
 
 .form-text-footer {
-    padding-left: 40px;
+    padding-left: 70px;
 }
 
 
@@ -37,7 +37,7 @@
 }
 
 .text-future {
-    padding-left: 40px;
+    padding-left: 70px;
     line-height: 25px;
     font-weight: 800;
     font-size: 24px;
@@ -132,7 +132,7 @@
 
 .title-explore {
     margin-top: 80px;
-    padding-left: 40px;
+    padding-left: 70px;
     font-family: 'Klavika';
     font-weight: 700;
     font-size: 23px;
@@ -147,7 +147,7 @@
     width: 590px;
     font-family: 'klavika';
     font-weight: 100;
-    padding-left: 60px;
+    padding-left: 80px;
 }
 
 .image-picture-1 {
@@ -158,6 +158,7 @@
 .image-picture-2 {
     margin-top: 100px;
     width: 450px;
+    padding-left: 70px;
 }
 
 .image-picture-3 {
@@ -175,13 +176,13 @@
 
 .name-explore {
     margin-top: 70px;
-    padding-left: 40px;
+    padding-left: 70px;
     font-size: 24px;
     font-weight: 700;
 }
 
 .alert-all {
-    padding-left: 40px;
+    padding-left: 70px;
     font-family: 'klavika';
 }
 
@@ -191,7 +192,7 @@
 
 .box-name {
     font-size: 14px;
-    padding-left: 40px;
+    padding-left: 70px;
 }
 
 .title-end {
@@ -224,7 +225,7 @@
 .title-open {
     font-family: 'Klavika';
     font-weight: 700;
-    padding-left: 40px;
+    padding-left: 70px;
     font-size: 24px;
     line-height: 26px;
     letter-spacing: -0.48px;
@@ -283,13 +284,13 @@
     font-size: 25px;
 }
 
-.image-Vector3,
-.image-Vector2 {
-    width: 20px;
+.form-dropdown {
+    padding-left: 70px;
 }
 
-.form-dropdown {
-    padding-left: 40px;
+.title-left,
+.title-right {
+    font-size: 25px;
 }
 
 
@@ -380,6 +381,7 @@
         margin-top: -160px;
         font-size: 22px;
         line-height: 28px;
+        padding-left: 40px;
     }
 
     .Explore-Job {
@@ -390,6 +392,15 @@
 
     .text-future {
         margin-top: 90px;
+        padding-left: 40px;
+    }
+
+    .title-explore {
+        padding-left: 40px;
+    }
+
+    .box-name {
+        padding-left: 40px;
     }
 
     .card-title1 {
@@ -424,6 +435,11 @@
     .name-explore {
         font-size: 14px;
         width: 25rem;
+        padding-left: 40px;
+    }
+
+    .title-open {
+        padding-left: 40px;
     }
 
     .image-TCF-GROUP {
@@ -435,6 +451,7 @@
     .from-input-search {
         width: 370px;
         font-size: 12px;
+        padding-right: 20px;
     }
 
     .form-text {
@@ -458,5 +475,19 @@
         margin-right: 40px;
     }
 
+    .form-input {
+        padding-left: 40px;
+    }
 
+    .form-dropdown {
+        padding-left: 40px;
+    }
+
+    .alert-all {
+        padding-left: 40px;
+    }
+
+    .form-text-footer {
+        padding-left: 40px;
+    }
 }

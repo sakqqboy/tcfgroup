@@ -31,7 +31,7 @@ $this->title = 'webinar';
                         <p class="text-2"> We discuss new topic every week</p>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-4 detail-liveqa">
                     <i class="fa fa-comments-o form-comment" aria-hidden="true"></i>
                     <p class="text-1"> Live Q&A</p>
                     <p class="text-2"> Live Question and answer session</p>
@@ -147,11 +147,11 @@ $this->title = 'webinar';
         <div class="col-lg-4 col-md-6 col-12 title-Trending">
             <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> Webinar Playlist
         </div>
-        <div class="col-lg-6 col-md-6 col-12 title-always pl-40">
+        <div class="col-lg-6 col-md-6 col-12 title-always">
             It is always the most vital time to provide the entire picture of company and remind the mission in society. We believe that the purpose of business is ultimately the same all over the world. Let’s grow together.
         </div>
     </div>
-    <form class="row g-3 pl-40 mt-50 form-search1">
+    <form class="row g-3 mt-50 form-search1">
         <div class="col-4">
             <input type="search" class="form-control" id="inputsearch" placeholder="Search, Business Videos">
         </div>
@@ -636,8 +636,8 @@ $this->title = 'webinar';
 
 <div class="col-12 pr12">
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-12">
-            <div class="accordion mt-20 pl-30" id="accordionExample">
+        <div class="col-lg-6 col-md-6 col-12 data-table-form">
+            <div class="accordion mt-20" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">

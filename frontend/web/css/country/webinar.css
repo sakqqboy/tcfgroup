@@ -8,10 +8,14 @@
     margin-top: 90px;
 }
 
+.title-bangladesh {
+    padding-left: 80px;
+}
+
 .img-webinar {
     width: 600px;
     margin-top: 90px;
-    padding-left: 80px;
+    padding-left: 70px;
 }
 
 .page-webinar {
@@ -64,6 +68,7 @@
 
 .form-search1 {
     font-family: 'klavika';
+    padding-left: 70px;
 }
 
 .img-video {
@@ -92,6 +97,7 @@
     font-family: 'klavika';
     font-size: 14px;
     font-weight: 100;
+    padding-left: 70px;
 }
 
 .img-minnie,
@@ -168,6 +174,22 @@
     padding-top: -10px;
 }
 
+.title-Trending {
+    padding-left: 80px;
+}
+
+.all-player {
+    padding-left: 70px;
+}
+
+.all-play1 {
+    padding-left: 70px;
+}
+
+.data-table-form {
+    padding-left: 70px;
+}
+
 @media(max-width: 992px) {
     .img-webinar {
         width: 100%;
@@ -222,7 +244,7 @@
 
 @media(max-width: 768px) {
     .img-webinar {
-        margin-left: -40px;
+        margin-left: -30px;
         width: 100%;
 
     }
@@ -230,7 +252,7 @@
     .image8 {
         margin-top: -40px;
         width: 170px;
-        margin-left: 110px;
+        margin-left: 120px;
     }
 
     .page-webinar {
@@ -243,11 +265,12 @@
     }
 
     .title-Trending {
-        padding-left: 40px;
+        padding-left: 50px;
     }
 
     .title-always {
         margin-top: 30px;
+        padding-left: 50px;
         width: 450px;
 
     }
@@ -267,6 +290,10 @@
     }
 
     .detail-calendar {
+        padding-left: 60px;
+    }
+
+    .detail-liveqa {
         padding-left: 40px;
     }
 
@@ -318,11 +345,27 @@
     }
 
     .all-player {
-        margin-left: -10px;
+        padding-left: 40px;
     }
 
     .all-play1 {
-        margin-left: -10px;
+        padding-left: 40px;
         margin-top: 50px
+    }
+
+    .title-bangladesh {
+        padding-left: 60px;
+    }
+
+    .form-search1 {
+        padding-left: 40px;
+    }
+
+    .form-sort {
+        padding-left: 20px;
+    }
+
+    .data-table-form {
+        padding-left: 5px;
     }
 }

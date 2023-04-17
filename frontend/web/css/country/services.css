@@ -10,6 +10,10 @@
 
 }
 
+.form-services-page {
+    padding-left: 70px;
+}
+
 .title-new1 {
     text-transform: uppercase;
     letter-spacing: -0.48px;
@@ -18,17 +22,27 @@
     font-weight: 700;
     font-size: 24px;
     margin-top: 50px;
-    padding-left: 40px;
+    padding-left: 70px;
 }
 
 .image-Asset {
     width: 100%;
-    padding-left: 40px;
+    padding-left: 70px;
 }
 
 .image-Asset-2 {
     width: 100%;
+    padding-left: 70px;
 }
+
+.title-jinji {
+    padding-left: 70px;
+}
+
+.pade-jinji {
+    padding-left: 70px;
+}
+
 
 .detail-asset {
     padding-top: 190px;
@@ -102,8 +116,13 @@
     letter-spacing: -0.48px;
     font-family: 'klavika';
     line-height: 26px;
+    padding-left: 70px;
     font-weight: 700;
     font-size: 24px;
+}
+
+.select-project {
+    width: 450px;
 }
 
 .download-button {
@@ -116,6 +135,9 @@
     font-family: 'klavika';
 }
 
+.name-download3 {
+    padding-left: 30px;
+}
 
 @media(max-width: 992px) {
     .image-together {
@@ -149,6 +171,7 @@
 @media(max-width: 768px) {
     .title-new1 {
         font-size: 20px;
+        padding-left: 40px;
     }
 
     .image-together {
@@ -159,6 +182,7 @@
 
     .detail-asset {
         padding-top: 40px;
+        padding-left: 50px;
     }
 
     .detail-text-sevices {
@@ -173,16 +197,26 @@
 
     .select-project {
         font-size: 5px;
-        line-height: 5px;
-        width: 140px;
+        line-height: 6px;
+        width: 190px;
     }
 
     .text-why {
         font-size: 15px;
+        padding-left: 10px;
+    }
+
+    .page-1 {
+        padding-left: 10px;
     }
 
     .image-account1 {
         width: 20px;
+    }
+
+    .select-project {
+        padding-left: 10px;
+        width: 190px;
     }
 
     .title-account1 {
@@ -200,6 +234,8 @@
         width: 150px;
         margin-top: 10px;
         padding-top: 14px;
+        margin-left: 10px;
+
     }
 
     .text-download1 {
@@ -209,6 +245,7 @@
 
     .name-download3 {
         padding-left: 20px;
+        font-size: 10px;
     }
 
     .image-account {
@@ -221,5 +258,15 @@
         width: 140px;
     }
 
+    .image-Asset {
+        padding-left: 40px;
+    }
 
+    .form-services-page {
+        padding-left: 40px;
+    }
+
+    .image-Asset-2 {
+        padding-left: 40px;
+    }
 }

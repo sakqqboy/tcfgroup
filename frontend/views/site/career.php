@@ -100,7 +100,7 @@ $this->title = 'Career';
 <div class="col-12 pr12">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12 title-txt1">
-            <p>EARLY CAREERS</p>
+            <h5>EARLY CAREERS</h5>
             <p>As an intern at Tokyo Consulting Firm Limited,
                 you will have the opportunity to work with a
                 team of experienced professionals and gain
@@ -131,7 +131,7 @@ $this->title = 'Career';
             <img src="<?= Yii::$app->homeUrl ?>image/picture-2.png" class="image-picture-2">
         </div>
         <div class="col-lg-6 col-md-6 col-12 title-txt2">
-            <p>The Mid-Journey</p>
+            <h5>The Mid-Journey</h5>
             <p>As an intern at Tokyo Consulting Firm Limited, you will have the opportunity to work with a team of experienced professionals and gain valuable hands-on experience in the consulting industry. You will be able to apply your skills and knowledge to real-world projects, and have the chance to make a meaningful impact on the success of the company. In addition to gaining practical experience, you will also have the opportunity to network with industry leaders and build your professional network. The internship program at Tokyo Consulting Firm Limited is an excellent opportunity for those looking to jumpstart their career in consulting and gain valuable experience in a dynamic and fast-paced environment.</p>
             <button type="button" class="btn btn-primary button-apply">Apply for Mid-Level Positions</button>
         </div>
@@ -141,13 +141,12 @@ $this->title = 'Career';
 <div class="col-12 pr12">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12 title-txt1">
-            <p>Experienced Professional </p>
+            <h5>Experienced Professional </h5>
             <p>As an intern at Tokyo Consulting Firm Limited, you will have the opportunity to work with a team of experienced professionals and gain valuable hands-on experience in the consulting industry. You will be able to apply your skills and knowledge to real-world projects, and have the chance to make a meaningful impact on the success of the company. In addition to gaining practical experience, you will also have the opportunity to network with industry leaders and build your professional network. The internship program at Tokyo Consulting Firm Limited is an excellent opportunity for those looking to jumpstart their career in consulting and gain valuable experience in a dynamic and fast-paced environment.</p>
             <button type="button" class="btn btn-primary button-apply">Apply Professional Stage</button>
         </div>
         <div class="col-lg-6 col-md-6 col-12 text-center">
             <img src="<?= Yii::$app->homeUrl ?>image/picture-3.png" class="image-picture-3">
-
         </div>
     </div>
 </div>
@@ -180,7 +179,7 @@ $this->title = 'Career';
     <div class="row">
         <div class="col-12">
             <div class="text-center">
-                <img src="<?= Yii::$app->homeUrl ?>image/Vector(3).png" class="image-Vector3"> <img src="<?= Yii::$app->homeUrl ?>image/TCF-Group.png" class="image-TCF-GROUP"> <img src="<?= Yii::$app->homeUrl ?>image/Vector(2).png" class="image-Vector2">
+                <a href="#" class="no-underline"><i class="fa fa-chevron-circle-left title-left" aria-hidden="true"></i></a> <img src="<?= Yii::$app->homeUrl ?>image/TCF-Group.png" class="image-TCF-GROUP"> <a href="#" class="no-underline"><i class="fa fa-chevron-circle-right title-right" aria-hidden="true"></i></a>
             </div>
         </div>
         <div class="col-12">
@@ -213,7 +212,7 @@ $this->title = 'Career';
                         <p><img src="<?= Yii::$app->homeUrl ?>image/india.png" class="img-country"> India</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/indonesia.png" class="img-country"> Indonesia</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/kenya.png" class="img-country"> kenya</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/123.png" class="img-country"> Japan</p>
+                        <p><img src="<?= Yii::$app->homeUrl ?>image/japan.png" class="img-country"> Japan</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/laos.png" class="img-country"> Laos</p>
                         <p><img src="<?= Yii::$app->homeUrl ?>image/malaysia.png" class="img-country"> Malaysia</p>
                     </div>
@@ -419,12 +418,13 @@ $this->title = 'Career';
         <div class="col-lg-4 col-md-6 col-12">
             <div class="col-12 media-picture">
                 Follow Career in
-                <a href="#facebook"><img src="<?= Yii::$app->homeUrl ?>image/facebook.png"></a>
-                <a href="#twitter"><img src="<?= Yii::$app->homeUrl ?>image/twitter.png"></a>
-                <a href="#Instagram"><img src="<?= Yii::$app->homeUrl ?>image/Instagram.png"></a>
-                <a href="#LinkedIn"><img src="<?= Yii::$app->homeUrl ?>image/LinkedIn.png"></a>
-                <a href="#YouTube"><img src="<?= Yii::$app->homeUrl ?>image/YouTube.png"></a>
+                <a href="#"><i class="fa fa-facebook-square square-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter-square square-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram aquare-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-linkedin-square square-linkedin" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-youtube-play square-youtube" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>
 </div>
+<div class="col-12" style="margin-top: 80px;"></div>

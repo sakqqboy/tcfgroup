@@ -1,16 +1,16 @@
 .img-20 {
     border-radius: 10px;
     margin-top: 150px;
-    width: 80%
+    width: 90%
 }
 
 .img-21 {
-    margin-top: -60px;
-    width: 80%
+    margin-top: -70px;
+    width: 90%
 }
 
 .page-video1 {
-    margin-top: -50px;
+    margin-top: -60px;
     padding-left: 180px;
     color: white;
 }
@@ -25,7 +25,7 @@
 
 .title-video1 {
     margin-top: 30px;
-    padding-left: 140px;
+    padding-left: 141px;
     font-family: 'Klavika';
     font-weight: 500;
     font-size: 28px;
@@ -35,7 +35,7 @@
 
 .title-video2 {
     margin-top: 30px;
-    padding-left: 140px;
+    padding-left: -50px;
     font-family: 'Klavika';
     color: #374550;
 }
@@ -45,14 +45,14 @@
     font-weight: 500;
     font-size: 24px;
     margin-top: 50px;
-    padding-left: 40px;
+    padding-left: 60px;
     line-height: 36px;
 }
 
 .title-summary1 {
     font-family: 'klavika';
     font-weight: 100;
-    padding-left: 40px;
+    padding-left: 60px;
     font-size: 14px;
     margin-top: 20px;
 }
@@ -84,10 +84,12 @@
 
     .img-21 {
         height: 20px;
+        margin-top: -50px;
     }
 
     .page-video1 {
         padding-left: 60px;
+        margin-top: -45px;
     }
 
     .icon-pause {
@@ -132,9 +134,12 @@
 
     .title-summary {
         font-size: 18px;
+        padding-left: 40px;
     }
 
     .title-summary1 {
         width: 400px;
+        padding-left: 40px;
     }
+
 }

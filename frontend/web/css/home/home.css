@@ -463,6 +463,12 @@
     padding-left: 70px;
 }
 
+.page-title {
+    line-height: 15px;
+    font-weight: 100;
+    color: white;
+    width: 450px;
+}
 
 
 
@@ -821,4 +827,5 @@
     .form-Questions {
         padding-left: 60px;
     }
+
 }

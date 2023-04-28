@@ -3,21 +3,52 @@
 /** @var yii\web\View $this */
 
 use Codeception\Lib\Connector\Yii2;
+use yii\bootstrap5\Carousel;
 
 $this->title = 'TCFGROUP';
 ?>
 
 
 <div class="">
-
     <div class="col-12">
-        <img src="<?= Yii::$app->homeUrl ?>image/TCG.png" class="image-TCG" style="width: 100%;">
-    </div>
-    <div class="offset-1 col-10 text-star">
-        LET'S ACCELERATE AND <br>
-        SHAPE THE FUTURE <br>
-        TOGETHER<br>
-        <button type="button" class="btn btn-primary button-start">Get Free Appointment</button>
+        <?php Carousel::widget([]); ?>
+
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <?php
+                if (isset($banners) && count($banners) > 0) {
+                    $i = 0;
+                    foreach ($banners as $banner) :
+                ?>
+                        <div class="carousel-item <?= $i == 0 ? 'active' : '' ?>" data-bs-interval="10000">
+                            <img src="<?= Yii::$app->homeUrl . $banner['image'] ?>" class="d-block" style="width:100%; margin-top:20px;">
+                            <div class="offset-1 col-11 text-star">
+                                <?= $banner['detail'] ?><br>
+                                <?= $banner['detail2'] ?> <br>
+                                <?= $banner['detail3'] ?><br>
+                                <button type="button" class="btn btn-primary button-start"> <?= $banner['title'] ?></button>
+                            </div>
+                        </div>
+                <?php
+                        $i++;
+                    endforeach;
+                }
+                ?>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
 </div>
 
@@ -28,7 +59,6 @@ $this->title = 'TCFGROUP';
         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Global Business Environment
     </div>
     <div class="col-12 text-TCG">
-
         Browse TCG Services by contry
     </div>
     <div class="col-12">
@@ -36,37 +66,40 @@ $this->title = 'TCFGROUP';
             <div class="col-lg-6 col-12">
                 <div class="row">
                     <div class="col-6 country-index">
-                        <p><a href="<? Yii::$app->homeUrl ?>site-country/index" class="no-underline1"><img src="<?= Yii::$app->homeUrl ?>image/Bangladesh.png" class="img-country"> Bangladesh</a></p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/brazil.png" class="img-country"> Brazil</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/combodia.png" class="img-country"> Combodia</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/china.png" class="img-country"> China</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/columbia.png" class="img-country"> Columbia</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/dubai.png" class="img-country"> Dubai(UAE)</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/hong kong.png" class="img-country"> Hong kong</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/india.png" class="img-country"> India</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/indonesia.png" class="img-country"> Indonesia</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/kenya.png" class="img-country"> kenya</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/japan.png" class="img-country"> Japan</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/laos.png" class="img-country"> Laos</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/malaysia.png" class="img-country"> Malaysia</p>
+                        <?php
+                        if (isset($braanchs) && count($branch) > 0) {
+                            $i = 0;
+                            foreach ($branchs as $branch) :
+                                if ($i < 13) {
+                        ?>
+                                    <p><a href="<? Yii::$app->homeUrl . $branch['url'] ?>" class="no-underline1">
+                                            <img src="<?= Yii::$app->homeUrl . $branch['image'] ?>" class="img-country"> .<?= $branch['title'] ?></a></p>
+                        <?php
+                                }
+                                $i++;
+                            endforeach;
+                        }
+                        ?>
                     </div>
                     <div class="col-6 country-index">
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/maxico.png" class="img-country"> Mexico</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/mongolia.png" class="img-country"> Mongolia</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/nigeria.png" class="img-country"> Nigeria</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/mayanmar.png" class="img-country"> Mayanmar</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/morocco.png" class="img-country"> Morocco</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/peru.png" class="img-country"> Peru</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/philippines.png" class="img-country"> Philippines</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/russia.png" class="img-country"> Russia</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/south africa.png" class="img-country"> South Afroca</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/singapore.png" class="img-country"> Singapore</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/sir lanka.png" class="img-country"> Sir Lanka</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/thailand.png" class="img-country"> Thailad</p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>image/turkey.png" class="img-country"> Turkey</p>
+                        <?php
+
+                        if (isset($branchs) && count($branch) > 0) {
+                            $i = 0;
+                            foreach ($branchs as $branch) :
+                                if ($i > 14) {
+                        ?>
+                                    <p><img src="<?= Yii::$app->homeUrl . $branch['image'] ?>" class="img-country"> .<?= $branch['title'] ?></p>
+                        <?php
+                                }
+                                $i++;
+                            endforeach;
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-6 col-12">
                 <img src="<?= Yii::$app->homeUrl ?>image/gol1.png" class="image-gol1">
             </div>
@@ -75,28 +108,55 @@ $this->title = 'TCFGROUP';
 </div>
 
 
-
-
 <div class=" col-12 pr12">
     <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
             <div class="col-lg-12 text-establish">
                 <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Our Professional Services
             </div>
-            <div class="col-lg-12 Company">
-                <li>Establish Company</li> <br>
-                <li>Cross Border M&A Services</li> <br>
-                <li>Legal & Secretarial</li> <br>
-                <li>Accounts & Taxation</li> <br>
-                <li>Human Resource</li> <br>
-                <li> Recruitment & Placement </li><br>
 
-            </div>
+            <?php
+            if (isset($subbranchs) && !empty($subbranch) > 0) {
+                $i = 0;
+                foreach ($subbranchs as $subbranch) :
+
+
+            ?>
+                    <div class="col-lg-12 Company <?= $i == 0 ? 'active' : '' ?>">
+                        <li> <?= $subbranch["title"] ?></li> <br>
+                        <li><?= $subbranch["title"] ?></li> <br>
+                        <li><?= $subbranch["title"] ?></li> <br>
+                        <li><?= $subbranch["title"] ?></li> <br>
+                        <li>Human Resource</li> <br>
+                        <li> Recruitment & Placement </li><br>
+                    </div>
+            <?php
+
+                    $i++;
+                endforeach;
+            }
+            ?>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6 col-12 show-text-home">
             <div class="col-12 text-legal">
+                <?php
+                if (isset($paddings) && !empty($padding) > 0) {
+                    $i = 0;
+                    foreach ($paddings as $padding) :
+                        $i++;
+                    endforeach;
+                }
+                ?>
                 Legal & Secretarial
             </div>
+            <?php
+            if (isset($section) && !empty($section) > 0) {
+                $i = 0;
+                foreach ($section as $section) :
+                    $i++;
+                endforeach;
+            }
+            ?>
             <div class="col-12 Our pt-20">
                 Our consulting firm specializes in providing legal and
                 secretarial support to multinational companies. Our
@@ -104,9 +164,10 @@ $this->title = 'TCFGROUP';
                 Governance, Document Preparation, Secretarial
                 Services, corporate laws, contract laws, labor laws,
                 intellectual property laws, and compliance with local
-                laws and regulations.<br>
-                <button type="button" class="btn btn-primary button-text5">Get Free Appointment</button>
+                laws and regulations. <br>
+                <button type="button" class="btn btn-primary button-text5"> Get Free Appointment</button>
             </div>
+
         </div>
         <div class="col-lg-4 col-12">
             <img src="<?= Yii::$app->homeUrl ?>image/background.png" class="img-background">
@@ -115,24 +176,26 @@ $this->title = 'TCFGROUP';
 </div>
 
 
-
-
 <div class="col-12">
     <img src="<?= Yii::$app->homeUrl ?>image/Yokhohama.png" class="image-Yokhohamaa">
     <div class="row">
         <div class="col-12">
-            <div class="col-lg-4 col-md-6 col-12 ">
+            <div class="col-lg-4 col-md-6 col-12">
+                <?php
+                if (isset($paddings) &&  !empty($padding) > 0) {
+                    $i = 0;
+                    foreach ($paddings as $padding) :
+                        $i++;
+                    endforeach;
+                }
+                ?>
                 <div class="text-japan">
                     <p> Establish</p>
                     <p> Business in Japan</p>
                 </div>
                 <div class="text-Unlock">
-                    <p> Unlock the full potential of your business in Japan with our comprehensive
-                        and customized support services. From market research and regulatory
-                        compliance to local representation and cultural integration, our team of
-                        experts will guide you every step of the way to ensure a seamless entry and
-                        successful establishment in the Japanese market.</p>
-                    <button type="button" class="btn btn-primary button-contact">Contact Experts</button>
+                    <p>Unlock the full potential of your business in Japan with our comprehensive and customized support services. From market research and regulatory compliance to local representation and cultural integration, our team of experts will guide you every step of the way to ensure a seamless entry and successful establishment in the Japanese market.</p>
+                    <button type="button" class="btn btn-primary button-contact"> Contact Experts</button>
                     <p><img src="<?= Yii::$app->homeUrl ?>image/image-icon.png" class="image-graph"></p>
                 </div>
             </div>
@@ -149,23 +212,14 @@ $this->title = 'TCFGROUP';
         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Our Philosophy: Contributing to Society, Driving Growth
     </div>
     <div class="text3">
-        <!-- <img src="<?= Yii::$app->homeUrl ?>image/what-we.png" class="image-what-we-give"> -->
         <p> ❝ What we <span class="font-color-blue"> GIVE</span> is </p>
         <p> &nbsp;&nbsp;&nbsp;&nbsp;What we <span class="font-color-blue"> GET</span> ❞</p>
     </div>
     <div class="col-md-5 col-12 text-tokyo">
-        At Tokyo Consulting Group, our philosophy is centered around making a positive impact on society.
-        We believe that this is the ultimate goal of any company and we strive to develop human resources
-        to fulfill this purpose. Our management principles and philosophies are dynamic, adapting to the
-        changing times, but our commitment to contributing to society remains steadfast.
-        Our vision,strategies and tactics are continuously evolving to stay ahead of the curve,
-        but never at thecost of our core values. Our company's growth is measured not just by profits,
-        but also by our ability to fulfill our social mission. As a responsible corporate citizen,
-        we believe in findingthe appropriate size that balances our growth aspirations with our
-        obligation to society.Join us in our journey to create a better future for all."
+        At Tokyo Consulting Group, our philosophy is centered around making a positive impact on society. We believe that this is the ultimate goal of any company and we strive to develop human resources to fulfill this purpose. Our management principles and philosophies are dynamic, adapting to the changing times, but our commitment to contributing to society remains steadfast. Our vision,strategies and tactics are continuously evolving to stay ahead of the curve, but never at thecost of our core values. Our company's growth is measured not just by profits, but also by our ability to fulfill our social mission. As a responsible corporate citizen, we believe in findingthe appropriate size that balances our growth aspirations with our obligation to society.Join us in our journey to create a better future for all."
     </div>
 </div>
-</div>
+
 
 
 
@@ -174,17 +228,10 @@ $this->title = 'TCFGROUP';
     <div class="text4">
         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> About Yasunari Kuno
     </div>
-    <div class="col-lg-8 col-md-6 col-12 text-Yasunari">
-        <p>Yasunari Kuno is a seasoned business professional with over two decades of experience in the industry.
-            He has a strong track record of success and is respected for his leadership skills, strategic vision, and
-            ability to drive growth and profitability. In addition to his work as the chairman and founder of TCF and
-            TCG, Yasunari Kuno is also an accomplished author, having published several books on business and
-            personal development.</p>
-        <p> As a thought leader in the business world, Yasunari Kuno is known for his innovative ideas and forward
-            thinking approach to solving complex business challenges. He is passionate about helping others achieve
-            their full potential and has dedicated his career to helping businesses succeed and thrive. </p>
+    <div class="col-lg-8 col-md-6 col-12  text-Yasunari">
+        <p>Yasunari Kuno is a seasoned business professional with over two decades of experience in the industry. He has a strong track record of success and is respected for his leadership skills, strategic vision, and ability to drive growth and profitability. In addition to his work as the chairman and founder of TCF and TCG, Yasunari Kuno is also an accomplished author, having published several books on business and personal development.</p>
+        <p>As a thought leader in the business world, Yasunari Kuno is known for his innovative ideas and forward thinking approach to solving complex business challenges. He is passionate about helping others achieve their full potential and has dedicated his career to helping businesses succeed and thrive.</p>
         <p class="text-end">YASUNARI KUNO, CEO, TOKYO CONSULTING GROUP</p>
-
     </div>
 </div>
 
@@ -235,7 +282,6 @@ $this->title = 'TCFGROUP';
                             <option value="24">Thailad</option>
                             <option value="25">Turkey</option>
                         </select>
-
                     </div>
                     <div class="col-12">
                         <div class="row mt-20">

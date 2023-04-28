@@ -11,10 +11,15 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use common\models\tokyoconsulting\Content;
+use Exception;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use frontend\models\tokyoconsulting\Content as TokyoconsultingContent;
+use frontend\models\tokyoconsulting\ContentDetail;
+use frontend\models\tokyoconsulting\master\ContentMaster;
 
 /**
  * Site controller
@@ -73,10 +78,106 @@ class SiteController extends Controller
      *
      * @return mixed
      */
+
     public function actionIndex()
     {
-        return $this->render('index');
+
+        $content = content::find()
+            ->where(["contentName" => "Banner"])
+            ->where(["contentName" => "Branch"])
+            ->where(["contentName" => "Padding"])
+            ->where(["contentName" => "Subbranch"])
+            ->where(["contentName" => "Section"])
+            ->where(["contentName" => "Pagemain"])
+            ->where(["contentName" => "Philosophy"])
+            ->where(["contentName" => "Paragraph"])
+            ->where(["contentName" => "Background"])
+            ->asArray()
+            ->one();
+
+
+        $banners = [];
+        $branchs = [];
+        $paddings = [];
+        $subbranchs = [];
+        $sections = [];
+        $pagemains = [];
+
+
+
+
+        if (isset($content) && !empty($content)) {
+            $banners = ContentDetail::find()
+                ->where(["contentId" => $content["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($content) && !empty($content)) {
+            $branchs = ContentDetail::find()
+                ->where(["contentId" => $content["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($content) && !empty($content)) {
+            $paddings = ContentDetail::find()
+                ->where(["contentId" => $content["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($content) && !empty($content)) {
+            $subbranchs = ContentDetail::find()
+                ->where(["contentId" => $content["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($content) && !empty($content)) {
+            $sections = ContentDetail::find()
+                ->where(["contentId" => $content["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($content) && !empty($content)) {
+            $pagemains = ContentDetail::find()
+                ->where(["contentId" => $content["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($content) && !empty($content)) {
+            $Philosophys = ContentDetail::find()
+                ->where(["contentId" => $content["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($content) && !empty($content)) {
+            $Paragraphs = ContentDetail::find()
+                ->where(["contentId" => $content["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($content) && !empty($content)) {
+            $backgrounds = ContentDetail::find()
+                ->where(["contentId" => $content["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+
+
+
+
+        // throw new Exception(count($banners));
+        return $this->render('index', [
+            "banners" => $banners,
+            "branchs" => $branchs,
+            "paddings" => $paddings,
+            "subbranchs" => $subbranchs,
+            "sections" => $sections,
+            "pagemains" => $pagemains,
+            "Philosophys" => $Philosophys,
+            "paragraphs" => $Paragraphs,
+
+        ]);
     }
+
     public function actionServices()
     {
         return $this->render('services');

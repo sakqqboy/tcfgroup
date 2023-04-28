@@ -9,24 +9,55 @@ $this->title = 'services';
 
 
 <div class="col-12">
-    <img src="<?= Yii::$app->homeUrl ?>image/Linkedin-Cover.png" class="image-Linkedin-Cover">
+    <?php
+    if (isset($backgrounds) && count($background) > 0) {
+
+        foreach ($backgrounds as $backgrounds) :
+    ?>
+            <img src="<?= Yii::$app->homeUrl . $background['image'] ?>" class="image-Linkedin-Cover">
+    <?php
+
+        endforeach;
+    }
+    ?>
 </div>
+
+
 
 <div class="col-12 pr12 background-home">
     <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
-            <div class="col-12 home-form mt-20">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> WHY DO WE WORK !
-            </div>
-            <div class="col-lg-12 home-form-one">
-                <p> Expanding Responsibilities</p>
-                <p>All Issues are Our Own Issues</p>
-                <p>We Get What We Give</p>
-                <button type="button" class="btn btn-outline-dark"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
-                <button type="button" class="btn btn-outline-dark"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
-            </div>
+            <?php
+            if (isset($backgrounds) && count($backgrounds) > 0) {
+                $i = 0;
+                foreach ($backgrounds as $background) :
+
+            ?>
+                    <div class="col-12 home-form mt-20">
+                        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> .<?= $background['title'] ?>
+                    </div>
+                    <div class="col-lg-12 home-form-one <?= $i == 0 ? 'contentId' : '' ?>">
+                        <p> <?= $background['detail'] ?></p>
+                        <p> <?= $background['detail2'] ?></p>
+                        <p> <?= $background['detail3'] ?></p>
+                        <button type="button" class="btn btn-outline-dark"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-outline-dark"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                    </div>
+            <?php
+                    $i++;
+                endforeach;
+            }
+            ?>
         </div>
+
         <div class="col-lg-4 col-md-6 col-sm-6 col-12 show-text-home">
+            <?php
+            if (isset($backgrounds) && count($backgrounds) > 0) {
+                foreach ($backgrounds as $backgrounds) :
+
+                endforeach;
+            }
+            ?>
             <div class="col-12 pl-20 home-two">
                 <p> As We Give,</p>
                 <p>So We Receive</p>

@@ -10,6 +10,14 @@ $this->title = 'Philosophy';
 
 
 <div class="col-12 text-philosophy">
+    <?php
+    if (isset($pagemains) && count($pagemains) > 0) {
+        $i = 0;
+        foreach ($pagemains as $pagemain) :
+            $i++;
+        endforeach;
+    }
+    ?>
     <div class="col-12">
         <img src="<?= Yii::$app->homeUrl ?>image/philosophy.png" class="image-philosophy">
     </div>
@@ -23,28 +31,51 @@ $this->title = 'Philosophy';
 
 
 <div class="col-12 pr12 blackground-page-people">
-    <div class="col-12 picture-text">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Management Philosophy (The Meaning of Our Work)
-    </div>
-    <div class="col-12 picture-icon">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/icon1.png" style="width: 90px;"> Why We Work?
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/icon2.png" style="width: 90px;"> What We Give is What We Get
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/icon3.png" style="width: 90px;"> What is Success?
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/icon4.png" style="width: 90px;"> Gratitude
-            </div>
-        </div>
-    </div>
+    <?php
+    if (isset($philosophys) && count($philosophys) > 0) {
+        $i = 0;
+        foreach ($philosophys as $philosophy) :
+            if ($i < 0) {
+    ?>
+                <div class="col-12 picture-text">
+                    <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> . <?= $philosophy['title'] ?>
+                </div>
+                <div class="col-12 picture-icon" <?= $i == 0 ? 'picturn-icon' : '' ?>>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <img src="<?= Yii::$app->homeUrl . $philosophy['image'] ?> ?>" style="width: 90px;"> . <?= $philosophy['title'] ?>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <img src="<?= Yii::$app->homeUrl . $philosophy['image'] ?>" style="width: 90px;"> . <?= $philosophy['title'] ?>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <img src="<?= Yii::$app->homeUrl . $philosophy['image'] ?>" style="width: 90px;"> .<?= $philosophy['title'] ?>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <img src="<?= Yii::$app->homeUrl . $philosophy['image'] ?>" style="width: 90px;"> .<?= $philosophy['title'] ?>
+                        </div>
+                    </div>
+                </div>
+    <?php
+
+            }
+
+            $i++;
+        endforeach;
+    }
+    ?>
 </div>
 
 <div class="col-12 pr12 mt-50">
+    <?php
+    if (isset($paragraphs) && count($paragraphs) > 0) {
+        $i = 0;
+        foreach ($paragraphs as $paragraph) :
+
+            $i++;
+        endforeach;
+    }
+    ?>
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12 mt-50">
             <p class="Why-We-Work"> Why We Work? <img src="<?= Yii::$app->homeUrl ?>image/icon1.png" style="width: 60px;"></p>
@@ -84,6 +115,8 @@ $this->title = 'Philosophy';
 
 
 <div class="col-12 pr12 mt-50">
+    <?php
+    ?>
     <div class="row">
         <div class="col-lg-6 col-md-6  col-12 mt-50">
             <p class="Why-We-Work"> What is Success? <img src="<?= Yii::$app->homeUrl ?>image/icon3.png" style="width: 60px;"></p>

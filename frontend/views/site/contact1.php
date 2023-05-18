@@ -7,16 +7,30 @@ use Codeception\Lib\Connector\Yii2;
 $this->title = 'contact';
 ?>
 
+
 <div class="col-12">
-    <img src="<?= Yii::$app->homeUrl ?>image/Google-Forms-Job.png" class="image-Google-Forms-Job">
-</div>
+    <?php
+    if (isset($contact) && count($contact) > 0) {
+        $i = 0;
+        foreach ($contact as $tact) :
+    ?>
+            <div class="col-12">
+                <img src="<?= Yii::$app->homeUrl . $tact['image'] ?>" class="image-Google-Forms-Job">
+            </div>
 
-<div class="col-12 line-back">
-    <a href="#" class="no-underline"><i class="fa fa-chevron-left" aria-hidden="true"> Back to Job Posting</i></a>
-</div>
+            <div class="col-12 line-back">
+                <a href="#" class="no-underline"><i class="fa fa-chevron-left" aria-hidden="true"> <?= $tact['title'] ?></i></a>
+            </div>
 
-<div class="col-12 name-text-applying">
-    Applying for the position of <span class="txt-cousultant">Consultant, Accounts & Taxation</span>
+            <div class="col-12 name-text-applying">
+                <?= $tact['detail'] ?><span class="txt-cousultant"><?= $tact['detail2'] ?></span>
+            </div>
+    <?php
+            $i++;
+        endforeach;
+    }
+    ?>
+
 </div>
 
 <div class="col-12 pr12 form-range2">
@@ -148,43 +162,62 @@ $this->title = 'contact';
 </div>
 
 <div class="col-12">
-    <div class="col-12 select-name-dis">
-        Disclaimer
-    </div>
-    <div class="col-8 mt-20 select-name-privacy">
-        <p>We understand that your privacy and personal information are important to you. We want to assure all potential job candidates that the information you provide through our job application portal will be used solely for the purpose of evaluating your qualifications and determining your suitability for employment with our company.</p>
-        <p> We will not misuse your personal information or share it with any third parties without your consent, except as required by law. We take great care in protecting the security of your information and have implemented appropriate measures to ensure its confidentiality.</p>
-        <p>By submitting your application through our portal, you acknowledge and agree to the terms of this disclaimer. If you have any questions or concerns about our use of your information, please do not hesitate to contact us.
-            Thank you for considering employment with our company. </p>
-        <p> Read Complete <span class="title-read">Tokyo Consulting Group Recruitment Policy</span></p>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">I agree to Terms and Condition</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Save & Continue <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-    </div>
+    <?php
+    if (isset($disclaimer) && count($disclaimer) > 0) {
+        $i = 0;
+        foreach ($disclaimer  as  $dis) :
+    ?>
+            <div class="col-12 select-name-dis">
+                <?= $dis['title'] ?>
+            </div>
+            <div class="col-8 mt-20 select-name-privacy">
+                <p><?= $dis['detail'] ?></p>
+                <p><?= $dis['detail2'] ?></p>
+                <p><?= $dis['detail3'] ?> </p>
+                <p> <?= $dis['detail4'] ?> <span class="title-read"><?= $dis['detail5'] ?></span></p>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1"><?= $dis['detail6'] ?></label>
+                </div>
+                <button type="submit" class="btn btn-primary"><?= $dis['detail7'] ?> <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+    <?php
+        endforeach;
+    }
+    ?>
 </div>
 
 
 <div class="col-12 pr12 mt-50 form-text-footer">
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-12">
-            <div class="col-12 title-more">
-                <p>More About us</p>
-            </div>
-            <div class="col-12 title-form-text">
-                <p><a href="#" class="no-underline">About us </a></p>
-                <p><a href="#" class="no-underline">Conotact us</a></p>
-                <p><a href="#" class="no-underline">Work life at TCF</a></p>
-                <p><a href="#" class="no-underline">Our Work Philosopy</a></p>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-12 form-tcf">
-            <div class="col-12">
-                <span class="title-tcf">“TCF Equal Opportunity Statement”</span>
-                <p class="title-tcf1">Google is proud to be an equal opportunity workplace and is an affirmative action employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status. We also consider qualified applicants regardless of criminal histories, consistent with legal requirements. See also Google's EEO Policy and EEO is the Law. If you have a need that requires accommodation, please let us know by completing our Accommodations for Applicants form.</p>
-            </div>
-        </div>
+        <?php
+        if (isset($footercontact) && count($footercontact) > 0) {
+            $i = 0;
+            foreach ($footercontact as $ft) :
+        ?>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="col-12 title-more">
+                        <p><?= $ft['title'] ?></p>
+                    </div>
+                    <div class="col-12 title-form-text">
+                        <p><a href="#" class="no-underline"><?= $ft['detail'] ?> </a></p>
+                        <p><a href="#" class="no-underline"><?= $ft['detail2'] ?></a></p>
+                        <p><a href="#" class="no-underline"><?= $ft['detail3'] ?></a></p>
+                        <p><a href="#" class="no-underline"><?= $ft['detail4'] ?></a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 form-tcf">
+                    <div class="col-12">
+                        <span class="title-tcf"><?= $ft['detail5'] ?></span>
+                        <p class="title-tcf1"><?= $ft['detail6'] ?></p>
+                    </div>
+                </div>
+
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
         <div class="col-lg-4 col-md-6 col-12">
             <div class="col-12 media-picture">
                 Follow Career in

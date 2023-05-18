@@ -11,148 +11,230 @@ $this->title = 'Philosophy';
 
 <div class="col-12 text-philosophy">
     <?php
-    if (isset($pagemains) && count($pagemains) > 0) {
+    if (isset($pagemain) && count($pagemain) > 0) {
         $i = 0;
-        foreach ($pagemains as $pagemain) :
+        foreach ($pagemain as $l) :
+
+    ?>
+            <div class="col-12">
+                <img src="<?= Yii::$app->homeUrl . $l['image'] ?>" class="image-philosophy">
+            </div>
+            <div class="offset-1 col-10 text-home">
+                <?= $l['title'] ?>
+            </div>
+            <div class="offset-1 col-10  text-box-one">
+                <?= $l['detail'] ?>
+            </div>
+    <?php
             $i++;
         endforeach;
     }
     ?>
-    <div class="col-12">
-        <img src="<?= Yii::$app->homeUrl ?>image/philosophy.png" class="image-philosophy">
-    </div>
-    <div class="offset-1 col-10 text-home">
-        Explore our
-    </div>
-    <div class="offset-1 col-10  text-box-one">
-        Philosophy
-    </div>
 </div>
 
 
 <div class="col-12 pr12 blackground-page-people">
-    <?php
-    if (isset($philosophys) && count($philosophys) > 0) {
-        $i = 0;
-        foreach ($philosophys as $philosophy) :
-            if ($i < 0) {
-    ?>
-                <div class="col-12 picture-text">
-                    <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> . <?= $philosophy['title'] ?>
-                </div>
-                <div class="col-12 picture-icon" <?= $i == 0 ? 'picturn-icon' : '' ?>>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <img src="<?= Yii::$app->homeUrl . $philosophy['image'] ?> ?>" style="width: 90px;"> . <?= $philosophy['title'] ?>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <img src="<?= Yii::$app->homeUrl . $philosophy['image'] ?>" style="width: 90px;"> . <?= $philosophy['title'] ?>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <img src="<?= Yii::$app->homeUrl . $philosophy['image'] ?>" style="width: 90px;"> .<?= $philosophy['title'] ?>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <img src="<?= Yii::$app->homeUrl . $philosophy['image'] ?>" style="width: 90px;"> .<?= $philosophy['title'] ?>
-                        </div>
-                    </div>
-                </div>
-    <?php
+    <div class="col-12 picture-text">
+        <?php
+        if (isset($pagemain) && count($pagemain) > 0) {
+            $i = 0;
+            foreach ($pagemain as $l) :
 
+        ?>
+                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $l['detail2'] ?>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
+    </div>
+    <div class="col-12 picture-icon">
+        <div class="row ">
+
+            <?php
+            if (isset($philosophy) && count($philosophy) > 0) {
+                $i = 0;
+                foreach ($philosophy as $m) :
+                    if ($i < 4) {
+
+            ?>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <img src="<?= Yii::$app->homeUrl . $m['image'] ?>" style="width: 90px;"> <?= $m['title'] ?>
+                        </div>
+            <?php
+                    }
+                    $i++;
+                endforeach;
             }
 
-            $i++;
-        endforeach;
-    }
-    ?>
+            ?>
+
+        </div>
+    </div>
 </div>
+
+<div class="col-12 pr12 mt-50">
+    <div class="row">
+        <?php
+        if (isset($work) && count($work) > 0) {
+            $i = 0;
+            foreach ($work as $we) :
+        ?>
+                <div class="col-lg-6 col-md-6 col-12 mt-50">
+                    <p class="Why-We-Work"> <?= $we['title'] ?> <img src="<?= Yii::$app->homeUrl . $we['image'] ?>" style="width: 60px;"></p>
+                    <p class="everyone"><?= $we['detail'] ?> </p>
+                    <p class="YASUNARI"><?= $we['detail2'] ?></p>
+                </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
+
+        <?php
+        if (isset($playshot1) && count($playshot1) > 0) {
+            $i = 0;
+            foreach ($playshot1 as $shot) :
+        ?>
+                <div class="col-lg-6 col-md-6  col-12 mt-50 text-center">
+                    <div class="col-12">
+                        <img src="<?= Yii::$app->homeUrl . $shot['image'] ?>" class="image-screenshot1">
+                    </div>
+                    <div class="col-12">
+                        <span class="badge bg-primary image-BG1"> <a href="#" class="no-underline4"> <i class="fa fa-play-circle link-list" aria-hidden="true"></i> <?= $shot['title'] ?></a></span>
+                    </div>
+                </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
+
+    </div>
+</div>
+
+
+<div class="col-12 pr12 mt-50">
+    <div class="row">
+        <?php
+        if (isset($playshot2) && count($playshot2) > 0) {
+            $i = 0;
+            foreach ($playshot2 as $hs) :
+        ?>
+                <div class="col-lg-6 col-md-6 col-12 mt-50 text-center">
+                    <div class="col-12">
+                        <img src="<?= Yii::$app->homeUrl . $hs['image'] ?>" class="image-screenshot2">
+                    </div>
+                    <div class="col-12">
+                        <span class="badge bg-primary image-BG2"> <a href="#" class="no-underline4"> <i class="fa fa-play-circle link-list" aria-hidden="true"></i> <?= $hs['title'] ?></a></span>
+                    </div>
+                </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
+
+        <?php
+        if (isset($give) && count($give) > 0) {
+            $i = 0;
+            foreach ($give as $gi) :
+        ?>
+                <div class="col-lg-6 col-md-6 col-12 mt-50">
+                    <p class="Why-We-Work"><img src="<?= Yii::$app->homeUrl ?>image/icon2.png" style="width: 60px;"> <?= $gi['title'] ?></p>
+                    <p class="People"><?= $gi['detail'] ?></p>
+                    <p class="TOKYO"><?= $gi['detail2'] ?></p>
+                </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
+    </div>
+</div>
+
+
 
 <div class="col-12 pr12 mt-50">
     <?php
-    if (isset($paragraphs) && count($paragraphs) > 0) {
-        $i = 0;
-        foreach ($paragraphs as $paragraph) :
-
-            $i++;
-        endforeach;
-    }
     ?>
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-12 mt-50">
-            <p class="Why-We-Work"> Why We Work? <img src="<?= Yii::$app->homeUrl ?>image/icon1.png" style="width: 60px;"></p>
-            <p class="everyone">I believe that everyone has their own reasons for working as a member of society. For many people, the reason they work is to make a living, to gain experience, to gain knowledge, to earn money, and so on. In other words, you decide to work to “get” something. But we do not work for the purpose of getting something for ourselves. We work to give something of value to society. Working for the purpose of "giving" instead of "getting" means working for others (customers and society) instead of working for yourself. This is because we believe that professionals are those who can give value to society through their customers. </p>
-            <p class="YASUNARI">YASUNARI KUNO, CEO, TOKYO CONSULTING GROUP</p>
-        </div>
-        <div class="col-lg-6 col-md-6  col-12 mt-50 text-center">
-            <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/Screenshot.png" class="image-screenshot1">
-            </div>
-            <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/BG.png" class="image-BG1">
-            </div>
-        </div>
+        <?php
+        if (isset($success) && count($success) > 0) {
+            $i = 0;
+            foreach ($success as $suc) :
+        ?>
+                <div class="col-lg-6 col-md-6  col-12 mt-50">
+                    <p class="Why-We-Work"> <?= $suc['title'] ?><img src="<?= Yii::$app->homeUrl . $suc['image'] ?>" style="width: 60px;"></p>
+                    <p class="everyone"><?= $suc['detail'] ?></p>
+                    <p class="everyone"><?= $suc['detail2'] ?></p>
+                    <p class="everyone"><?= $suc['detail3'] ?></p>
+                    <p class="everyone"> <?= $suc['detail4'] ?></p>
+                    <p class="YASUNARI"><?= $suc['detail5'] ?></p>
+                </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
+
+        <?php
+        if (isset($playshot3) && count($playshot3) > 0) {
+            $i = 0;
+            foreach ($playshot3 as $or) :
+        ?>
+                <div class="col-lg-6 col-md-6  col-12 mt-50 text-center">
+                    <div class="col-12">
+                        <img src="<?= Yii::$app->homeUrl . $or['image'] ?>" class="image-screenshot1">
+                    </div>
+                    <div class="col-12">
+                        <span class="badge bg-primary image-BG1"> <a href="#" class="no-underline4"> <i class="fa fa-play-circle link-list" aria-hidden="true"></i> <?= $or['title'] ?></a> </span>
+                    </div>
+                </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
     </div>
 </div>
 
 
 <div class="col-12 pr12 mt-50">
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-12 mt-50 text-center">
-            <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/Screenshot.png" class="image-screenshot2">
-            </div>
-            <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/BG-1.png" class="image-BG2">
-            </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-12 mt-50">
-            <p class="Why-We-Work"><img src="<?= Yii::$app->homeUrl ?>image/icon2.png" style="width: 60px;"> What We Give is What We Get</p>
-            <p class="People">People who work for the sake of getting often find themselves working hard but not getting it. However, the reason why I can't get anything is because I think I'm giving to my customers and society, and they don't think they're being given to me. So the real reason you don't get is because you haven't given. We instinctively fall into self-centered thinking. We tend to blame other people (e.g., boss's evaluation) for the reason why we can't get what we want. But you should realize quickly that you can't get more than you give. If you realize this, you will understand the importance of continuing to give to society. If you keep giving, money, knowledge, experience, etc. will follow more than enough later. Based on this philosophy, we will continue to contribute to society through our customers.</p>
-            <p class="TOKYO">YASUNARI KUNO, CEO, TOKYO CONSULTING GROUP</p>
-        </div>
-    </div>
-</div>
+        <?php
+        if (isset($playshot4) && count($playshot4) > 0) {
+            $i = 0;
+            foreach ($playshot4 as $ly) :
+        ?>
+                <div class="col-lg-6 col-md-6 col-12  mt-50 text-center">
+                    <div class="col-12">
+                        <img src="<?= Yii::$app->homeUrl . $ly['image'] ?>" class="image-screenshot2">
+                    </div>
+                    <div class="col-12">
+                        <span class="badge bg-primary image-BG2"> <a href="#" class="no-underline4"> <i class="fa fa-play-circle link-list" aria-hidden="true"></i> <?= $ly['title'] ?></a></span>
+                    </div>
+                </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
 
-
-
-<div class="col-12 pr12 mt-50">
-    <?php
-    ?>
-    <div class="row">
-        <div class="col-lg-6 col-md-6  col-12 mt-50">
-            <p class="Why-We-Work"> What is Success? <img src="<?= Yii::$app->homeUrl ?>image/icon3.png" style="width: 60px;"></p>
-            <p class="everyone">We usually think of successful people as having money, wealth, or social status. And I do not think it's necessary to work so hard to succeed. What we see is what successful people get. But we need to know the essence of why successful people get it. A successful person is someone who continues to add value to society.</p>
-            <p class="everyone"> ■Who should provide value? (Who is the customer?)</p>
-            <p class="everyone">■What value should be provided?</p>
-            <p class="everyone"> If you keep thinking about the above three things and continue to give to society through customers, from that point on, anyone can become a successful person.
-                However, if you have a strong desire to succeed, you will quickly fall into a self-centered way of thinking, thinking only about the products and services that you want to sell, and will not be able to grasp the true needs of your customers. As a result, you end up being just the loser you want to be. You will never become a person who can continue to succeed in society forever.</p>
-            <p class="YASUNARI">YASUNARI KUNO, CEO, TOKYO CONSULTING GROUP</p>
-        </div>
-        <div class="col-lg-6 col-md-6  col-12 mt-50 text-center">
-            <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/Screenshot.png" class="image-screenshot1">
-            </div>
-            <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/BG-2.png" class="image-BG1">
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="col-12 pr12 mt-50">
-    <div class="row">
-        <div class="col-lg-6 col-md-6 col-12  mt-50 text-center">
-            <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/Screenshot.png" class="image-screenshot2">
-            </div>
-            <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/BG-3.png" class="image-BG2">
-            </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-12 mt-50">
-            <p class="Why-We-Work"><img src="<?= Yii::$app->homeUrl ?>image/icon4.png" style="width: 60px;"> Gratitude</p>
-            <p class="People">Knowing that you are successful can give you a strong feeling of happiness. Happiness means "a state of equanimity of mind". No matter how much wealth one may have, one who is subject to selfish elfishness cannot maintain peace of mind and sustained happiness. If you can sustain your happiness, you will naturally feel grateful. You will naturally be able to appreciate that you are alive now and that you are being kept alive. I think it is natural to first feel gratitude toward the parents who gave birth to you. It makes me want to do filial piety from the bottom of my heart. Also, you will be able to appreciate the joy of living in this society. This kind of gratitude will make you aware of your own ′′ mission ′′ clearly. By being aware of what we live for, what we work for, and the mission given to us, we can continue to contribute to society.</p>
-            <p class="TOKYO">YASUNARI KUNO, CEO, TOKYO CONSULTING GROUP</p>
-        </div>
+        <?php
+        if (isset($gratitude) && count($gratitude) > 0) {
+            $i = 0;
+            foreach ($gratitude as $ti) :
+        ?>
+                <div class="col-lg-6 col-md-6 col-12 mt-50">
+                    <p class="Why-We-Work"><img src="<?= Yii::$app->homeUrl ?>image/icon4.png" style="width: 60px;"> <?= $ti['title'] ?></p>
+                    <p class="People"><?= $ti['detail'] ?></p>
+                    <p class="TOKYO"><?= $ti['detail2'] ?></p>
+                </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
     </div>
 </div>

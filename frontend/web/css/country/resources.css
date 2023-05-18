@@ -179,8 +179,8 @@
 
     .form-search-template {
         margin-top: -90px;
-        width: 310px;
-        margin-left: -100px;
+        width: 270px;
+        margin-left: -30px;
     }
 
     .table-search {
@@ -198,6 +198,10 @@
 
     .search-resources {
         font-size: 14px;
+    }
+
+    .item-dropdown {
+        padding-left: 40px;
     }
 
 

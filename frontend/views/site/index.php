@@ -23,15 +23,15 @@ $this->title = 'TCFGROUP';
                 <?php
                 if (isset($banners) && count($banners) > 0) {
                     $i = 0;
-                    foreach ($banners as $banner) :
+                    foreach ($banners as $index) :
                 ?>
                         <div class="carousel-item <?= $i == 0 ? 'active' : '' ?>" data-bs-interval="10000">
-                            <img src="<?= Yii::$app->homeUrl . $banner['image'] ?>" class="d-block" style="width:100%; margin-top:20px;">
+                            <img src="<?= Yii::$app->homeUrl . $index['image'] ?>" class="d-block" style="width:100%; margin-top:20px;">
                             <div class="offset-1 col-11 text-star">
-                                <?= $banner['detail'] ?><br>
-                                <?= $banner['detail2'] ?> <br>
-                                <?= $banner['detail3'] ?><br>
-                                <button type="button" class="btn btn-primary button-start"> <?= $banner['title'] ?></button>
+                                <?= $index['detail'] ?><br>
+                                <?= $index['detail2'] ?> <br>
+                                <?= $index['detail3'] ?><br>
+                                <button type="button" class="btn btn-primary button-start"> <?= $index['title'] ?></button>
                             </div>
                         </div>
                 <?php
@@ -55,25 +55,39 @@ $this->title = 'TCFGROUP';
 
 
 <div class="col-12 col-background">
-    <div class="col-12 pt-20 Global-Business">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Global Business Environment
-    </div>
-    <div class="col-12 text-TCG">
-        Browse TCG Services by contry
-    </div>
+    <?php
+    if (isset($country) && count($country) > 0) {
+        $i = 0;
+        foreach ($country as $n) :
+    ?>
+            <div class="col-12 pt-20 Global-Business">
+                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $n['title'] ?>
+            </div>
+            <div class="col-12 text-TCG">
+                <?= $n['detail'] ?>
+            </div>
+    <?php
+            $i++;
+        endforeach;
+    }
+    ?>
+
     <div class="col-12">
         <div class="row col-12">
             <div class="col-lg-6 col-12">
                 <div class="row">
                     <div class="col-6 country-index">
+
+
                         <?php
-                        if (isset($braanchs) && count($branch) > 0) {
+                        if (isset($branch) && count($branch) > 0) {
                             $i = 0;
-                            foreach ($branchs as $branch) :
+                            foreach ($branch as $b) :
                                 if ($i < 13) {
                         ?>
-                                    <p><a href="<? Yii::$app->homeUrl . $branch['url'] ?>" class="no-underline1">
-                                            <img src="<?= Yii::$app->homeUrl . $branch['image'] ?>" class="img-country"> .<?= $branch['title'] ?></a></p>
+                                    <p><a href="<?= Yii::$app->homeUrl . $b['url'] ?>" class="no-underline1">
+                                            <img src="<?= Yii::$app->homeUrl . $b['image'] ?>" class="img-country"> <?= $b['title'] ?></a>
+                                    </p>
                         <?php
                                 }
                                 $i++;
@@ -83,13 +97,13 @@ $this->title = 'TCFGROUP';
                     </div>
                     <div class="col-6 country-index">
                         <?php
-
-                        if (isset($branchs) && count($branch) > 0) {
+                        if (isset($countrypage) && count($countrypage) > 0) {
                             $i = 0;
-                            foreach ($branchs as $branch) :
-                                if ($i > 14) {
+                            foreach ($countrypage as $p) :
+                                if ($i < 13) {
                         ?>
-                                    <p><img src="<?= Yii::$app->homeUrl . $branch['image'] ?>" class="img-country"> .<?= $branch['title'] ?></p>
+                                    <p><a href="<?= Yii::$app->homeUrl . $p['url'] ?>" class="no-underline1">
+                                            <img src="<?= Yii::$app->homeUrl . $p['image'] ?>" class="img-country"> <?= $p['title'] ?></a></p>
                         <?php
                                 }
                                 $i++;
@@ -99,7 +113,6 @@ $this->title = 'TCFGROUP';
                     </div>
                 </div>
             </div>
-
             <div class="col-lg-6 col-12">
                 <img src="<?= Yii::$app->homeUrl ?>image/gol1.png" class="image-gol1">
             </div>
@@ -108,98 +121,87 @@ $this->title = 'TCFGROUP';
 </div>
 
 
-<div class=" col-12 pr12">
+<div class="col-12 pr12">
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
-            <div class="col-lg-12 text-establish">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Our Professional Services
-            </div>
+        <?php
+        if (isset($company) && count($company) > 0) {
+            $i = 0;
+            foreach ($company as $c) :
 
-            <?php
-            if (isset($subbranchs) && !empty($subbranch) > 0) {
-                $i = 0;
-                foreach ($subbranchs as $subbranch) :
-
-
-            ?>
-                    <div class="col-lg-12 Company <?= $i == 0 ? 'active' : '' ?>">
-                        <li> <?= $subbranch["title"] ?></li> <br>
-                        <li><?= $subbranch["title"] ?></li> <br>
-                        <li><?= $subbranch["title"] ?></li> <br>
-                        <li><?= $subbranch["title"] ?></li> <br>
-                        <li>Human Resource</li> <br>
-                        <li> Recruitment & Placement </li><br>
+        ?>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
+                    <div class="col-lg-12 text-establish">
+                        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $c['title'] ?>
                     </div>
-            <?php
+                    <div class="col-lg-12 Company">
+                        <li><?= $c['detail'] ?></li> <br>
+                        <li><?= $c['detail2'] ?></li> <br>
+                        <li><?= $c['detail3'] ?></li> <br>
+                        <li><?= $c['detail4'] ?></li> <br>
+                        <li><?= $c['detail5'] ?></li> <br>
+                        <li><?= $c['detail6'] ?></li><br>
+                    </div>
+                </div>
+        <?php
 
-                    $i++;
-                endforeach;
-            }
-            ?>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12 show-text-home">
-            <div class="col-12 text-legal">
-                <?php
-                if (isset($paddings) && !empty($padding) > 0) {
-                    $i = 0;
-                    foreach ($paddings as $padding) :
-                        $i++;
-                    endforeach;
-                }
-                ?>
-                Legal & Secretarial
-            </div>
-            <?php
-            if (isset($section) && !empty($section) > 0) {
-                $i = 0;
-                foreach ($section as $section) :
-                    $i++;
-                endforeach;
-            }
-            ?>
-            <div class="col-12 Our pt-20">
-                Our consulting firm specializes in providing legal and
-                secretarial support to multinational companies. Our
-                services include - Compliance Support, Corporate
-                Governance, Document Preparation, Secretarial
-                Services, corporate laws, contract laws, labor laws,
-                intellectual property laws, and compliance with local
-                laws and regulations. <br>
-                <button type="button" class="btn btn-primary button-text5"> Get Free Appointment</button>
-            </div>
-
-        </div>
-        <div class="col-lg-4 col-12">
-            <img src="<?= Yii::$app->homeUrl ?>image/background.png" class="img-background">
-        </div>
+                $i++;
+            endforeach;
+        }
+        ?>
+        <?php
+        if (isset($branchcountry) && count($branchcountry) > 0) {
+            $i = 0;
+            foreach ($branchcountry as $k) :
+        ?>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 show-text-home">
+                    <div class="col-12 text-legal">
+                        <?= $k['title'] ?>
+                    </div>
+                    <div class="col-12 Our pt-20">
+                        <?= $k['detail'] ?> <br>
+                        <button type="button" class="btn btn-primary button-text5"> <?= $k['detail2'] ?></button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <img src="<?= Yii::$app->homeUrl . $k['image'] ?>" class="img-background">
+                </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
     </div>
 </div>
+
 
 
 <div class="col-12">
     <img src="<?= Yii::$app->homeUrl ?>image/Yokhohama.png" class="image-Yokhohamaa">
     <div class="row">
-        <div class="col-12">
-            <div class="col-lg-4 col-md-6 col-12">
-                <?php
-                if (isset($paddings) &&  !empty($padding) > 0) {
-                    $i = 0;
-                    foreach ($paddings as $padding) :
-                        $i++;
-                    endforeach;
-                }
-                ?>
-                <div class="text-japan">
-                    <p> Establish</p>
-                    <p> Business in Japan</p>
+        <?php
+        if (isset($business) && count($business) > 0) {
+            $i = 0;
+            foreach ($business as $d) :
+        ?>
+                <div class="col-12">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="text-japan">
+                            <p> <?= $d['title'] ?></p>
+                            <p><?= $d['detail'] ?></p>
+                        </div>
+                        <div class="text-Unlock">
+                            <p><?= $d['detail2'] ?></p>
+                            <button type="button" class="btn btn-primary button-contact"> <?= $d['detail3'] ?></button>
+                            <p><img src="<?= Yii::$app->homeUrl . $d['image'] ?>" class="image-graph"></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-Unlock">
-                    <p>Unlock the full potential of your business in Japan with our comprehensive and customized support services. From market research and regulatory compliance to local representation and cultural integration, our team of experts will guide you every step of the way to ensure a seamless entry and successful establishment in the Japanese market.</p>
-                    <button type="button" class="btn btn-primary button-contact"> Contact Experts</button>
-                    <p><img src="<?= Yii::$app->homeUrl ?>image/image-icon.png" class="image-graph"></p>
-                </div>
-            </div>
-        </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
+
     </div>
 </div>
 
@@ -207,32 +209,56 @@ $this->title = 'TCFGROUP';
 
 
 <div class="col-12 ">
-    <img src="<?= Yii::$app->homeUrl ?>image/Boat1.png" style="width: 100%;">
-    <div class="text2">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Our Philosophy: Contributing to Society, Driving Growth
-    </div>
-    <div class="text3">
-        <p> ❝ What we <span class="font-color-blue"> GIVE</span> is </p>
-        <p> &nbsp;&nbsp;&nbsp;&nbsp;What we <span class="font-color-blue"> GET</span> ❞</p>
-    </div>
-    <div class="col-md-5 col-12 text-tokyo">
-        At Tokyo Consulting Group, our philosophy is centered around making a positive impact on society. We believe that this is the ultimate goal of any company and we strive to develop human resources to fulfill this purpose. Our management principles and philosophies are dynamic, adapting to the changing times, but our commitment to contributing to society remains steadfast. Our vision,strategies and tactics are continuously evolving to stay ahead of the curve, but never at thecost of our core values. Our company's growth is measured not just by profits, but also by our ability to fulfill our social mission. As a responsible corporate citizen, we believe in findingthe appropriate size that balances our growth aspirations with our obligation to society.Join us in our journey to create a better future for all."
-    </div>
+    <?php
+    if (isset($society) && count($society) > 0) {
+        $i = 0;
+        foreach ($society as $e) :
+    ?>
+            <img src="<?= Yii::$app->homeUrl . $e['image'] ?>" style="width: 100%;">
+            <div class="text2">
+                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $e['title'] ?>
+            </div>
+            <div class="text3">
+                <p> <span class="font-color-blue"><?= $e['detail'] ?> </span> </p>
+                <p> &nbsp;&nbsp;&nbsp;&nbsp; <span class="font-color-blue"> <?= $e['detail2'] ?></span> </p>
+            </div>
+            <div class="col-md-5 col-12 text-tokyo">
+                <?= $e['detail3'] ?>
+            </div>
+
+    <?php
+            $i++;
+        endforeach;
+    }
+    ?>
+
 </div>
 
 
 
 
 <div class="col-12">
-    <img src="<?= Yii::$app->homeUrl ?>image/Rectangle4239.png" style="width:100%">
-    <div class="text4">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> About Yasunari Kuno
-    </div>
-    <div class="col-lg-8 col-md-6 col-12  text-Yasunari">
-        <p>Yasunari Kuno is a seasoned business professional with over two decades of experience in the industry. He has a strong track record of success and is respected for his leadership skills, strategic vision, and ability to drive growth and profitability. In addition to his work as the chairman and founder of TCF and TCG, Yasunari Kuno is also an accomplished author, having published several books on business and personal development.</p>
-        <p>As a thought leader in the business world, Yasunari Kuno is known for his innovative ideas and forward thinking approach to solving complex business challenges. He is passionate about helping others achieve their full potential and has dedicated his career to helping businesses succeed and thrive.</p>
-        <p class="text-end">YASUNARI KUNO, CEO, TOKYO CONSULTING GROUP</p>
-    </div>
+    <?php
+    if (isset($about) && count($about) > 0) {
+        $i = 0;
+        foreach ($about as $f) :
+    ?>
+            <img src="<?= Yii::$app->homeUrl . $f['image'] ?>" style="width:100%">
+            <div class="text4">
+                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $f['title'] ?>
+            </div>
+            <div class="col-lg-8 col-md-6 col-12  text-Yasunari">
+                <p><?= $f['detail'] ?></p>
+                <p><?= $f['detail2'] ?></p>
+                <p class="text-end"><?= $f['detail3'] ?></p>
+            </div>
+
+    <?php
+            $i++;
+        endforeach;
+    }
+    ?>
+
 </div>
 
 <div class="col-12">
@@ -380,29 +406,41 @@ $this->title = 'TCFGROUP';
     </div>
 </div>
 
-<div class="col-12 pr12 blue pt-20 pb-10">
-    <div class="row">
-        <div class="col-1g-10 col-md-10 col-12 text-update">
-            <p>GET UPDATE FROM</p>
-            <p> All OVER THE WORLD</p>
-        </div>
-        <div class="col-1g-10 col-md-10 col-12 text-project">
-            <p>Project starts fall but small spots of hope indicate green shoots of recovery are there.</p>
-        </div>
-        <div class="col-lg-5 col-md-6 col-12 mt-10 input-group-form">
-            <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
-                <input type="text" class="form-control input-your-email" placeholder="Your Email address" aria-label="Your Email address with two button addons">
-                <button class="btn btn-primary" type="button">Subscribe Now</button>
+
+
+<?php
+if (isset($footer) && count($footer) > 0) {
+    $i = 0;
+    foreach ($footer as $h) :
+?>
+        <div class="col-12 pr12 blue pt-20 pb-10">
+            <div class="row">
+                <div class="col-1g-10 col-md-10 col-12 text-update">
+                    <p><?= $h['title'] ?></p>
+                    <p> <?= $h['detail'] ?></p>
+                </div>
+                <div class="col-1g-10 col-md-10 col-12 text-project">
+                    <p><?= $h['detail2'] ?></p>
+                </div>
+                <div class="col-lg-5 col-md-6 col-12 mt-10 input-group-form">
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
+                        <input type="text" class="form-control input-your-email" placeholder="Your Email address" aria-label="Your Email address with two button addons">
+                        <button class="btn btn-primary" type="button"><?= $h['detail3'] ?></button>
+                    </div>
+                    <br>
+                </div>
             </div>
-            <br>
         </div>
-    </div>
-</div>
-<div class="col-12 pr12"><!-- ตรงนี้หน้าจอเล็ก ไม่แสดง-->
-    <div class="row">
-        <div class="offset-lg-6 col-lg-6 col-12 text-center">
-            <img src="<?= Yii::$app->homeUrl ?>image/book.png" class="image-book">
+        <div class="col-12 pr12">
+            <div class="row">
+                <div class="offset-lg-6 col-lg-6 col-12 text-center">
+                    <img src="<?= Yii::$app->homeUrl . $h['image'] ?>" class="image-book">
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+<?php
+        $i++;
+    endforeach;
+}
+?>

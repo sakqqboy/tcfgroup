@@ -20,6 +20,8 @@ use frontend\models\ContactForm;
 use frontend\models\tokyoconsulting\Content as TokyoconsultingContent;
 use frontend\models\tokyoconsulting\ContentDetail;
 use frontend\models\tokyoconsulting\master\ContentMaster;
+use PHPUnit\TextUI\Command;
+use yii\widgets\ContentDecorator;
 
 /**
  * Site controller
@@ -82,125 +84,988 @@ class SiteController extends Controller
     public function actionIndex()
     {
 
-        $content = content::find()
+        $index = Content::find()
             ->where(["contentName" => "Banner"])
-            ->where(["contentName" => "Branch"])
-            ->where(["contentName" => "Padding"])
-            ->where(["contentName" => "Subbranch"])
-            ->where(["contentName" => "Section"])
-            ->where(["contentName" => "Pagemain"])
-            ->where(["contentName" => "Philosophy"])
-            ->where(["contentName" => "Paragraph"])
-            ->where(["contentName" => "Background"])
             ->asArray()
             ->one();
 
+        $b = Content::find()
+            ->where(["contentName" => "Branch"])
+            ->asArray()
+            ->one();
+
+        $c = Content::find()
+            ->where(["contentName" => "Company"])
+            ->asArray()
+            ->one();
+
+        $d = Content::find()
+            ->where(["contentName" => "Business "])
+            ->asArray()
+            ->one();
+        $e = Content::find()
+            ->where(["contentName" => "Society"])
+            ->asArray()
+            ->one();
+
+        $f = Content::find()
+            ->where(["contentName" => "About"])
+            ->asArray()
+            ->one();
+        $h = Content::find()
+            ->where(["contentName" => "Footer"])
+            ->asArray()
+            ->one();
+
+        $n = Content::find()
+            ->where(["contentName" => "Country"])
+            ->asArray()
+            ->one();
+
+        $k = Content::find()
+            ->where(["contentName" => "Branchcountry"])
+            ->asArray()
+            ->one();
+
+        $p = Content::find()
+            ->where(["contentName" => "Countrypage"])
+            ->asArray()
+            ->one();
 
         $banners = [];
-        $branchs = [];
-        $paddings = [];
-        $subbranchs = [];
-        $sections = [];
-        $pagemains = [];
+        $branch = [];
+        $company = [];
+        $business = [];
+        $society = [];
+        $about = [];
+        $footer = [];
+        $country = [];
+        $branchcountry = [];
+        $countrypage = [];
 
 
 
 
-        if (isset($content) && !empty($content)) {
+        if (isset($index) && !empty($index)) {
             $banners = ContentDetail::find()
-                ->where(["contentId" => $content["contentId"], "status" => 1])
+                ->where(["contentId" => $index["contentId"], "status" => 1])
                 ->asArray()
                 ->all();
         }
-        if (isset($content) && !empty($content)) {
-            $branchs = ContentDetail::find()
-                ->where(["contentId" => $content["contentId"], "status" => 1])
+
+        if (isset($b) && !empty($b)) {
+            $branch = ContentDetail::find()
+                ->where(["contentId" => $b["contentId"], "status" => 1])
                 ->asArray()
                 ->all();
         }
-        if (isset($content) && !empty($content)) {
-            $paddings = ContentDetail::find()
-                ->where(["contentId" => $content["contentId"], "status" => 1])
+        if (isset($c) && !empty($c)) {
+            $company = ContentDetail::find()
+                ->where(["contentId" => $c["contentId"], "status" => 1])
                 ->asArray()
                 ->all();
         }
-        if (isset($content) && !empty($content)) {
-            $subbranchs = ContentDetail::find()
-                ->where(["contentId" => $content["contentId"], "status" => 1])
+        if (isset($d) && !empty($d)) {
+            $business = ContentDetail::find()
+                ->where(["contentId" => $d["contentId"], "status" => 1])
                 ->asArray()
                 ->all();
         }
-        if (isset($content) && !empty($content)) {
-            $sections = ContentDetail::find()
-                ->where(["contentId" => $content["contentId"], "status" => 1])
+        if (isset($e) && !empty($e)) {
+            $society = ContentDetail::find()
+                ->where(["contentId" => $e["contentId"], "status" => 1])
                 ->asArray()
                 ->all();
         }
-        if (isset($content) && !empty($content)) {
-            $pagemains = ContentDetail::find()
-                ->where(["contentId" => $content["contentId"], "status" => 1])
+        if (isset($f) && !empty($f)) {
+            $about = ContentDetail::find()
+                ->where(["contentId" => $f["contentId"], "status" => 1])
                 ->asArray()
                 ->all();
         }
-        if (isset($content) && !empty($content)) {
-            $Philosophys = ContentDetail::find()
-                ->where(["contentId" => $content["contentId"], "status" => 1])
+        if (isset($h) && !empty($h)) {
+            $footer = ContentDetail::find()
+                ->where(["contentId" => $h["contentId"], "status" => 1])
                 ->asArray()
                 ->all();
         }
-        if (isset($content) && !empty($content)) {
-            $Paragraphs = ContentDetail::find()
-                ->where(["contentId" => $content["contentId"], "status" => 1])
+        if (isset($n) && !empty($n)) {
+            $country = ContentDetail::find()
+                ->where(["contentId" => $n["contentId"], "status" => 1])
                 ->asArray()
                 ->all();
         }
-        if (isset($content) && !empty($content)) {
-            $backgrounds = ContentDetail::find()
-                ->where(["contentId" => $content["contentId"], "status" => 1])
+        if (isset($k) && !empty($k)) {
+            $branchcountry = ContentDetail::find()
+                ->where(["contentId" => $k["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($p) && !empty($p)) {
+            $countrypage = ContentDetail::find()
+                ->where(["contentId" => $p["contentId"], "status" => 1])
                 ->asArray()
                 ->all();
         }
 
 
-
-
-        // throw new Exception(count($banners));
+        // throw new Exception(count($branch));
         return $this->render('index', [
             "banners" => $banners,
-            "branchs" => $branchs,
-            "paddings" => $paddings,
-            "subbranchs" => $subbranchs,
-            "sections" => $sections,
-            "pagemains" => $pagemains,
-            "Philosophys" => $Philosophys,
-            "paragraphs" => $Paragraphs,
+            "branch" => $branch,
+            "company" => $company,
+            "business" => $business,
+            "society" => $society,
+            "about" => $about,
+            "footer" => $footer,
+            "country" => $country,
+            "branchcountry" => $branchcountry,
+            "countrypage" => $countrypage
 
         ]);
     }
 
     public function actionServices()
     {
-        return $this->render('services');
+
+        $r = Content::find()
+            ->where(["contentName" => "Services"])
+            ->asArray()
+            ->one();
+
+        $s = Content::find()
+            ->where(["contentName" => "Bannerservices"])
+            ->asArray()
+            ->one();
+
+        $x = Content::find()
+            ->where(["contentName" => "Box"])
+            ->asArray()
+            ->one();
+
+        $t = Content::find()
+            ->where(["contentName" => "Item"])
+            ->asArray()
+            ->one();
+
+        $d = Content::find()
+            ->where(["contentName" => "Detail"])
+            ->asArray()
+            ->one();
+
+        $tokyo = Content::find()
+            ->where(["contentName" => "Picturegraphics"])
+            ->asArray()
+            ->one();
+
+        $o = Content::find()
+            ->where(["contentName" => "Founder"])
+            ->asArray()
+            ->one();
+
+        $u = Content::find()
+            ->where(["contentName" => "Star"])
+            ->asArray()
+            ->one();
+        $v = Content::find()
+            ->where(["contentName" => "Itemstar"])
+            ->asArray()
+            ->one();
+
+        $g = Content::find()
+            ->where(["contentName" => "Data"])
+            ->asArray()
+            ->one();
+
+        $w = Content::find()
+            ->where(["contentName" => "Data"])
+            ->asArray()
+            ->one();
+
+        $q = Content::find()
+            ->where(["contentName" => "Button"])
+            ->asArray()
+            ->one();
+
+        $tcf = Content::find()
+            ->where(["contentName" => "Best"])
+            ->asArray()
+            ->one();
+
+        $country = Content::find()
+            ->where(["contentName" => "Click"])
+            ->asArray()
+            ->one();
+
+        $pic = Content::find()
+            ->where(["contentName" => "Accounting"])
+            ->asArray()
+            ->one();
+
+        $table = Content::find()
+            ->where(["contentName" => "Taxation"])
+            ->asArray()
+            ->one();
+
+        $select = Content::find()
+            ->where(["contentName" => "Stage"])
+            ->asArray()
+            ->one();
+
+        $bk = Content::find()
+            ->where(["contentName" => "Background"])
+            ->asArray()
+            ->one();
+
+
+
+        $services = [];
+        $bannerservices = [];
+        $box = [];
+        $item = [];
+        $detail = [];
+        $picturegraphics = [];
+        $founder = [];
+        $star = [];
+        $itemstar = [];
+        $data = [];
+        $drive = [];
+        $button = [];
+        $best = [];
+        $click = [];
+        $accounting = [];
+        $taxation = [];
+        $stage = [];
+        $background = [];
+
+
+        if (isset($r) && !empty($r)) {
+            $services = ContentDetail::find()
+                ->where(["contentId" => $r["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($s) && !empty($s)) {
+            $bannerservices = ContentDetail::find()
+                ->where(["contentId" => $s["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($x) && !empty($x)) {
+            $box = ContentDetail::find()
+                ->where(["contentId" => $x["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($t) && !empty($t)) {
+            $item = ContentDetail::find()
+                ->where(["contentId" => $t["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($d) && !empty($d)) {
+            $detail = ContentDetail::find()
+                ->where(["contentId" => $d["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($tokyo) && !empty($tokyo)) {
+            $picturegraphics = ContentDetail::find()
+                ->where(["contentId" => $tokyo["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($o) && !empty($o)) {
+            $founder = ContentDetail::find()
+                ->where(["contentId" => $o["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($u) && !empty($u)) {
+            $star = ContentDetail::find()
+                ->where(["contentId" => $u["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($v) && !empty($v)) {
+            $itemstar = ContentDetail::find()
+                ->where(["contentId" => $v["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($g) && !empty($g)) {
+            $data = ContentDetail::find()
+                ->where(["contentId" => $g["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($w) && !empty($w)) {
+            $drive = ContentDetail::find()
+                ->where(["contentId" => $w["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($q) && !empty($q)) {
+            $button = ContentDetail::find()
+                ->where(["contentId" => $q["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($tcf) && !empty($tcf)) {
+            $best = ContentDetail::find()
+                ->where(["contentId" => $tcf["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($country) && !empty($country)) {
+            $click = ContentDetail::find()
+                ->where(["contentId" => $country["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($pic) && !empty($pic)) {
+            $accounting = ContentDetail::find()
+                ->where(["contentId" => $pic["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($table) && !empty($table)) {
+            $taxation = ContentDetail::find()
+                ->where(["contentId" => $table["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($select) && !empty($select)) {
+            $stage = ContentDetail::find()
+                ->where(["contentId" => $select["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($bk) && !empty($bk)) {
+            $background = ContentDetail::find()
+                ->where(["contentId" => $bk["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+
+
+        return $this->render('services', [
+            "services" => $services,
+            "bannerservices" => $bannerservices,
+            "box" => $box,
+            "item" => $item,
+            "detail" => $detail,
+            "picturegraphics" => $picturegraphics,
+            "founder" => $founder,
+            "star" => $star,
+            "itemstar" => $itemstar,
+            "data" => $data,
+            "drive" => $drive,
+            "button" => $button,
+            "best" => $best,
+            "click" => $click,
+            "accounting" => $accounting,
+            "taxation" => $taxation,
+            "stage" => $stage,
+            "background" => $background
+
+        ]);
     }
+
     public function actionPhilosophy()
     {
-        return $this->render('philosophy');
+
+        $l = Content::find()
+            ->where(["contentName" => "Pagemain"])
+            ->asArray()
+            ->one();
+
+        $m = Content::find()
+            ->where(["contentName" => "Philosophy"])
+            ->asArray()
+            ->one();
+
+        $we = Content::find()
+            ->where(["contentName" => "Work"])
+            ->asArray()
+            ->one();
+
+        $shot = Content::find()
+            ->where(["contentName" => "Playshot1"])
+            ->asArray()
+            ->one();
+
+        $hs = Content::find()
+            ->where(["contentName" => "Playshot2"])
+            ->asArray()
+            ->one();
+
+        $gi = Content::find()
+            ->where(["contentName" => "Give"])
+            ->asArray()
+            ->one();
+
+        $suc = Content::find()
+            ->where(["contentName" => "Success"])
+            ->asArray()
+            ->one();
+
+        $or = Content::find()
+            ->where(["contentName" => "Playshot3"])
+            ->asArray()
+            ->one();
+
+        $ly = Content::find()
+            ->where(["contentName" => "Playshot4"])
+            ->asArray()
+            ->one();
+
+        $ti = Content::find()
+            ->where(["contentName" => "Gratitude"])
+            ->asArray()
+            ->one();
+
+        $pagemain = [];
+        $philosophy = [];
+        $work = [];
+        $playshot1 = [];
+        $playshot2 = [];
+        $give = [];
+        $success = [];
+        $playshot3 = [];
+        $playshot4 = [];
+        $gratitude = [];
+
+        if (isset($l) && !empty($l)) {
+            $pagemain = ContentDetail::find()
+                ->where(["contentId" => $l["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($m) && !empty($m)) {
+            $philosophy = ContentDetail::find()
+                ->where(["contentId" => $m["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($we) && !empty($we)) {
+            $work = ContentDetail::find()
+                ->where(["contentId" => $we["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($shot) && !empty($shot)) {
+            $playshot1 = ContentDetail::find()
+                ->where(["contentId" => $shot["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($hs) && !empty($hs)) {
+            $playshot2 = ContentDetail::find()
+                ->where(["contentId" => $hs["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($gi) && !empty($gi)) {
+            $give = ContentDetail::find()
+                ->where(["contentId" => $gi["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($suc) && !empty($suc)) {
+            $success = ContentDetail::find()
+                ->where(["contentId" => $suc["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($or) && !empty($or)) {
+            $playshot3 = ContentDetail::find()
+                ->where(["contentId" => $or["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($ly) && !empty($ly)) {
+            $playshot4 = ContentDetail::find()
+                ->where(["contentId" => $ly["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($ti) && !empty($ti)) {
+            $gratitude = ContentDetail::find()
+                ->where(["contentId" => $ti["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+
+        // throw new Exception(count($pagemain));
+        return $this->render('philosophy', [
+            "pagemain" => $pagemain,
+            "philosophy" => $philosophy,
+            "work" => $work,
+            "playshot1" => $playshot1,
+            "playshot2" => $playshot2,
+            "give" => $give,
+            "success" => $success,
+            "playshot3" => $playshot3,
+            "playshot4" => $playshot4,
+            "gratitude" => $gratitude
+
+        ]);
     }
     public function actionAbout1()
     {
-        return $this->render('about1');
+
+        $ut = Content::find()
+            ->where(["contentName" => "Vision"])
+            ->asArray()
+            ->one();
+
+        $ce = Content::find()
+            ->where(["contentName" => "Existence"])
+            ->asArray()
+            ->one();
+
+        $tr = Content::find()
+            ->where(["contentName" => "Strategy"])
+            ->asArray()
+            ->one();
+
+        $ld = Content::find()
+            ->where(["contentName" => "Should"])
+            ->asArray()
+            ->one();
+
+        $group = Content::find()
+            ->where(["contentName" => "Consultinggroup"])
+            ->asArray()
+            ->one();
+
+        $h = Content::find()
+            ->where(["contentName" => "Footer"])
+            ->asArray()
+            ->one();
+
+        $ft = Content::find()
+            ->where(["contentName" => "Footercontact"])
+            ->asArray()
+            ->one();
+
+
+
+        $vision = [];
+        $existence = [];
+        $strategy = [];
+        $should = [];
+        $consultinggroup = [];
+        $footer = [];
+        $footercontact = [];
+
+        if (isset($ut) && !empty($ut)) {
+            $vision = ContentDetail::find()
+                ->where(["contentId" => $ut["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($ce) && !empty($ce)) {
+            $existence = ContentDetail::find()
+                ->where(["contentId" => $ce["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($tr) && !empty($tr)) {
+            $strategy = ContentDetail::find()
+                ->where(["contentId" => $tr["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($ld) && !empty($ld)) {
+            $should = ContentDetail::find()
+                ->where(["contentId" => $ld["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($group) && !empty($group)) {
+            $consultinggroup = ContentDetail::find()
+                ->where(["contentId" => $group["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($h) && !empty($h)) {
+            $footer = ContentDetail::find()
+                ->where(["contentId" => $h["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($ft) && !empty($ft)) {
+            $footercontact = ContentDetail::find()
+                ->where(["contentId" => $ft["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+
+
+        return $this->render('about1', [
+            "vision" => $vision,
+            "existence" => $existence,
+            "strategy" => $strategy,
+            "should" => $should,
+            "consultinggroup" => $consultinggroup,
+            "footer" => $footer,
+            "footercontact" => $footercontact,
+
+        ]);
     }
     public function actionCareer()
     {
-        return $this->render('career');
+
+        $jobtcf = Content::find()
+            ->where(["contentName" => "Career"])
+            ->asArray()
+            ->one();
+
+        $the = Content::find()
+            ->where(["contentName" => "Future"])
+            ->asArray()
+            ->one();
+
+        $more = Content::find()
+            ->where(["contentName" => "Learnmore"])
+            ->asArray()
+            ->one();
+
+        $ex = Content::find()
+            ->where(["contentName" => "Explore"])
+            ->asArray()
+            ->one();
+
+        $ap = Content::find()
+            ->where(["contentName" => "Apply"])
+            ->asArray()
+            ->one();
+
+        $pr = Content::find()
+            ->where(["contentName" => "Professional"])
+            ->asArray()
+            ->one();
+
+        $cu = Content::find()
+            ->where(["contentName" => "Culture"])
+            ->asArray()
+            ->one();
+
+        $vo = Content::find()
+            ->where(["contentName" => "Video"])
+            ->asArray()
+            ->one();
+
+        $di = Content::find()
+            ->where(["contentName" => "Discovercountry"])
+            ->asArray()
+            ->one();
+
+        $in = Content::find()
+            ->where(["contentName" => "Incountry"])
+            ->asArray()
+            ->one();
+
+        $sh = Content::find()
+            ->where(["contentName" => "Show"])
+            ->asArray()
+            ->one();
+
+        $btc = Content::find()
+            ->where(["contentName" => "Badge"])
+            ->asArray()
+            ->one();
+
+        $cd = Content::find()
+            ->where(["contentName" => "Card"])
+            ->asArray()
+            ->one();
+
+        $ft = Content::find()
+            ->where(["contentName" => "Footercontact"])
+            ->asArray()
+            ->one();
+
+
+
+
+
+
+        $career = [];
+        $future = [];
+        $learnmore = [];
+        $explore = [];
+        $apply = [];
+        $professional = [];
+        $culture = [];
+        $video = [];
+        $discovercountry = [];
+        $incountry = [];
+        $show = [];
+        $badge = [];
+        $card = [];
+        $footercontact = [];
+
+
+        if (isset($jobtcf) && !empty($jobtcf)) {
+            $career = ContentDetail::find()
+                ->where(["contentId" => $jobtcf["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($the) && !empty($the)) {
+            $future = ContentDetail::find()
+                ->where(["contentId" => $the["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($more) && !empty($more)) {
+            $learnmore = ContentDetail::find()
+                ->where(["contentId" => $more["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($ex) && !empty($ex)) {
+            $explore = ContentDetail::find()
+                ->where(["contentId" => $ex["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($ap) && !empty($ap)) {
+            $apply = ContentDetail::find()
+                ->where(["contentId" => $ap["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($pr) && !empty($pr)) {
+            $professional = ContentDetail::find()
+                ->where(["contentId" => $pr["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($cu) && !empty($cu)) {
+            $culture =  ContentDetail::find()
+                ->where(["contentId" => $cu["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($vo) && !empty($vo)) {
+            $video =  ContentDetail::find()
+                ->where(["contentId" => $vo["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($di) && !empty($di)) {
+            $discovercountry =  ContentDetail::find()
+                ->where(["contentId" => $di["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($in) && !empty($in)) {
+            $incountry =  ContentDetail::find()
+                ->where(["contentId" => $in["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($sh) && !empty($sh)) {
+            $show =  ContentDetail::find()
+                ->where(["contentId" => $sh["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($btc) && !empty($btc)) {
+            $badge =  ContentDetail::find()
+                ->where(["contentId" => $btc["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($cd) && !empty($cd)) {
+            $card =  ContentDetail::find()
+                ->where(["contentId" => $cd["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($ft) && !empty($ft)) {
+            $footercontact =  ContentDetail::find()
+                ->where(["contentId" => $ft["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+
+        return $this->render('career', [
+            "career" => $career,
+            "future" => $future,
+            "learnmore" => $learnmore,
+            "explore" => $explore,
+            "apply" => $apply,
+            "professional" => $professional,
+            "culture" => $culture,
+            "video" => $video,
+            "discovercountry" => $discovercountry,
+            "incountry" => $incountry,
+            "show" => $show,
+            "badge" => $badge,
+            "card" => $card,
+            "footercontact" => $footercontact
+        ]);
     }
     public function actionPeople()
     {
-        return $this->render('people');
+
+        $at = Content::find()
+            ->where(["contentName" => "People"])
+            ->asArray()
+            ->one();
+
+        $our = Content::find()
+            ->where(["contentName" => "Textmain"])
+            ->asArray()
+            ->one();
+
+        $person = Content::find()
+            ->where(["contentName" => "Personnel"])
+            ->asArray()
+            ->one();
+
+        $uno = Content::find()
+            ->where(["contentName" => "Kuno"])
+            ->asArray()
+            ->one();
+
+        $meetting = Content::find()
+            ->where(["contentName" => "Global"])
+            ->asArray()
+            ->one();
+
+        $incountry = Content::find()
+            ->where(["contentName" => "Insider"])
+            ->asArray()
+            ->one();
+
+        $work = Content::find()
+            ->where(["contentName" => "Doctrines"])
+            ->asArray()
+            ->one();
+
+
+
+        $people = [];
+        $textmain = [];
+        $personnel = [];
+        $kuno = [];
+        $global = [];
+        $insider = [];
+        $doctrines = [];
+
+        if (isset($at) && !empty($at)) {
+            $people = ContentDetail::find()
+                ->where(["contentId" => $at["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($our) && !empty($our)) {
+            $textmain = ContentDetail::find()
+                ->where(["contentId" => $our["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($person) && !empty($person)) {
+            $personnel = ContentDetail::find()
+                ->where(["contentId" => $person["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+
+        if (isset($uno) && !empty($uno)) {
+            $kuno = ContentDetail::find()
+                ->where(["contentId" => $uno["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+
+        if (isset($meetting) && !empty($meetting)) {
+            $global = ContentDetail::find()
+                ->where(["contentId" => $meetting["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($incountry) && !empty($incountry)) {
+            $insider = ContentDetail::find()
+                ->where(["contentId" => $incountry["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($work) && !empty($work)) {
+            $doctrines = ContentDetail::find()
+                ->where(["contentId" => $work["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+
+
+
+
+
+        return $this->render('people', [
+            "people" => $people,
+            "textmain" => $textmain,
+            "personnel" => $personnel,
+            "kuno" => $kuno,
+            "global" => $global,
+            "insider" => $insider,
+            "doctrines" => $doctrines,
+        ]);
     }
     public function actionContact1()
     {
-        return $this->render('contact1');
+
+        $tact = Content::find()
+            ->where(["contentName" => "Contact"])
+            ->asArray()
+            ->one();
+
+        $ft = Content::find()
+            ->where(["contentName" => "Footercontact"])
+            ->asArray()
+            ->one();
+
+        $dis = Content::find()
+            ->where(["contentName" => "Disclaimer"])
+            ->asArray()
+            ->one();
+
+
+        $contact = [];
+        $footercontact = [];
+        $disclaimer = [];
+
+        if (isset($tact) && !empty($tact)) {
+            $contact = ContentDetail::find()
+                ->where(["contentId" => $tact["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($ft) && !empty($ft)) {
+            $footercontact = ContentDetail::find()
+                ->where(["contentId" => $ft["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($dis) && !empty($dis)) {
+            $disclaimer = ContentDetail::find()
+                ->where(["contentId" => $dis["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+
+
+        return $this->render('contact1', [
+            "contact" => $contact,
+            "footercontact" => $footercontact,
+            "disclaimer" => $disclaimer
+        ]);
     }
 
     /**

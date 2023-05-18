@@ -186,14 +186,12 @@
 }
 
 .Our {
-    /* margin-top: 50px; */
     font-weight: 300;
     font-size: 18px;
     line-height: 30px;
 }
 
 .text-legal {
-    /* margin-top: 100px; */
     font-size: 28px;
     line-height: 40px;
     font-weight: 700;
@@ -388,7 +386,7 @@
     margin-top: 40px;
     min-height: 100px;
     padding-top: 20px;
-    padding-left: 20px;
+    padding-left: 70px;
     padding-bottom: 20px;
 }
 
@@ -423,7 +421,7 @@
 
 .footer-box {
     line-height: 20px;
-    padding-left: 40px;
+    padding-left: 70px;
 }
 
 .footer-bottom {
@@ -438,7 +436,7 @@
 
 .form-input {
     font-family: 'klavika';
-    padding-left: 70px;
+    /* padding-left: 40px; */
 }
 
 
@@ -566,7 +564,7 @@
 
     .footer-box {
         padding-left: 30px;
-        padding-top: 20px;
+        padding-top: 80px;
     }
 
 
@@ -790,16 +788,16 @@
     .text-update {
         font-size: 23px;
         line-height: 10px;
-        padding-left: 60px;
+        margin-left: -15px;
     }
 
     .text-project {
         font-size: 10px;
-        padding-left: 60px;
+        margin-left: -15px;
     }
 
     .input-group-form {
-        padding-left: 60px;
+        margin-left: -15px;
     }
 
     .footer-bottom {
@@ -826,6 +824,10 @@
 
     .form-Questions {
         padding-left: 60px;
+    }
+
+    .box-logo-footer {
+        padding-left: 40px;
     }
 
 }

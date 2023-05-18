@@ -1,28 +1,30 @@
-<div class="col-12 pr12 pl-40">
-    <div class="row">
-        <div class="col-lg-5 col-md-6 col-12 text-start">
-            <p class="title-contry-footer1">Stay tuned, get all the business updates, newsletters</p>
-            <div class="col-12 mt-30">
-                <a href="#"><i class="fa fa-facebook-square square-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-twitter-square square-twitter" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram aquare-instagram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-linkedin-square square-linkedin" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-youtube-play square-youtube" aria-hidden="true"></i></a>
+<div class="col-12 footer1-country">
+    <div class="col-12 pr12">
+        <div class="row">
+            <div class="col-lg-5 col-md-6 col-12 text-start">
+                <p class="title-contry-footer1">Stay tuned, get all the business updates, newsletters</p>
+                <div class="col-12 mt-30">
+                    <a href="#"><i class="fa fa-facebook-square square-facebook" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-twitter-square square-twitter" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram aquare-instagram" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-linkedin-square square-linkedin" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-youtube-play square-youtube" aria-hidden="true"></i></a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="col-lg-5 col-md-6 col-10 pl-40 mt-40">
-    <div class="input-group flex-nowrap">
-        <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
-        <input type="text" class="form-control input-your-email" placeholder="Your Email address" aria-label="Your Email address with two button addons">
-        <button class="btn btn-primary input-your-email" type="button">Notify Me</button>
+    <div class="col-lg-5 col-md-6 col-10  mt-40">
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
+            <input type="text" class="form-control input-your-email" placeholder="Your Email address" aria-label="Your Email address with two button addons">
+            <button class="btn btn-primary input-your-email" type="button">Notify Me</button>
+        </div>
     </div>
 </div>
 
 <div class="col-12 pr12 mt-50">
     <div class="row">
-        <div class="col-lg-2 col-md-6 col-6 footer-box pl-40">
+        <div class="col-lg-2 col-md-6 col-6 footer-box">
             <div class="row">
                 <div class="col-12 txt-internal mb-20">
                     More About us

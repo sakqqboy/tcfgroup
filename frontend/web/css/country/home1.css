@@ -76,20 +76,19 @@
     font-size: 12px;
 }
 
-.card-home1 {
+.home1 {
     font-size: 15px;
     font-weight: 700;
     padding-top: 20px;
     font-family: 'klavika';
 }
 
-.card-home2 {
+.home2 {
     font-size: 13px;
     line-height: 15px;
     font-weight: 100;
     font-family: 'klavika';
 }
-
 
 .title-bangladesh {
     font-family: 'klavika';
@@ -201,10 +200,16 @@
     padding-left: 70px;
 }
 
+.procress {
+    padding-left: 70px;
+}
+
+.footer1-country {
+    padding-left: 70px;
+}
+
+
 @media(max-width: 992px) {
-
-
-
     .title-import {
         width: 390px;
         font-size: 24px;
@@ -239,7 +244,6 @@
         height: 7rem;
         font-size: 10px;
     }
-
 
 }
 
@@ -341,6 +345,11 @@
     }
 
     .title-Trending {
-        padding-left: 20px;
+        margin-left: -20px;
+        font-size: 24px;
+    }
+
+    .footer1-country {
+        padding-left: 30px;
     }
 }

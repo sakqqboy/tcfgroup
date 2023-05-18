@@ -10,144 +10,223 @@ $this->title = 'People';
 
 
 <div class="col-12">
-    <img src="<?= Yii::$app->homeUrl ?>image/workingg.png" class="image-working">
-    <div class="col-12 title-At">
-        "At TCF, we pride ourselves on
-        our commitment to excellence,
-    </div>
+    <?php
+    if (isset($people) && count($people) > 0) {
+        foreach ($people as $at) :
+
+    ?>
+            <img src="<?= Yii::$app->homeUrl . $at['image'] ?>" class="image-working">
+            <div class="col-12 title-At">
+                <?= $at['title'] ?>
+                <?= $at['detail'] ?>
+            </div>
+            <div class="col-10 text-center form-data-block">
+                <div class="col-12">
+                    <?= $at['detail2'] ?>
+                </div>
+            </div>
+    <?php
+
+        endforeach;
+    }
+    ?>
 </div>
 
-<div class="col-10 text-center form-data-block">
-    <div class="col-12">
-        "For more than a decade, Tokyo Consulting Firm Limited has been partnering with businesses and organizations of all sizes to drive positive change, empower their teams, and build a better tomorrow. Our team of dedicated experts works tirelessly to turn vision into action, delivering tangible results and making a lasting impact on the communities we serve."
-    </div>
-</div>
+
 
 <div class="col-12 pr12 blackground-black mt-50 ">
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-12 OUR-PEOPLE">
-            <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> OUR PEOPLE
-            <img src="<?= Yii::$app->homeUrl ?>image/no.png" class="image-no">
-            <p class="text-name-kuno">YASUNARI KUNO, CEO, TOKYO CONSULTING GROUP</p>
-        </div>
-        <div class="col-lg-6 col-md-6 col-12">
-            <img src="<?= Yii::$app->homeUrl ?>image/icon-name.png" class="image-icon-name">
-            <div class="col-12 title-empowering">
-                <p> “ Empowering Impactful </p>
-                <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solutions Together</p>
-            </div>
-        </div>
+        <?php
+        if (isset($kuno) && count($kuno) > 0) {
+            $i = 0;
+            foreach ($kuno as $uno) :
+        ?>
+                <div class="col-lg-6 col-md-6 col-12 OUR-PEOPLE">
+                    <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> <?= $uno['title'] ?>
+                    <img src="<?= Yii::$app->homeUrl . $uno['image'] ?>" class="image-no">
+                    <p class="text-name-kuno"><?= $uno['detail'] ?></p>
+                </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
+
+        <?php
+        if (isset($textmain) && count($textmain) > 0) {
+            $i = 0;
+            foreach ($textmain as $our) :
+        ?>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <img src="<?= Yii::$app->homeUrl . $our['image'] ?>" class="image-icon-name">
+                    <div class="col-12 title-empowering">
+                        <p> <?= $our['title'] ?> </p>
+                        <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?= $our['detail'] ?></p>
+                    </div>
+                </div>
+
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
     </div>
 </div>
 
+
 <div class="col-12  title-employees mt-50">
-    <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> MEET GLOBAL EMPLOYEES
+    <?php
+    if (isset($global) && count($global) > 0) {
+        $i = 0;
+        foreach ($global as $meetting) :
+    ?>
+            <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> <?= $meetting['title'] ?>
+    <?php
+            $i++;
+        endforeach;
+    }
+    ?>
 </div>
 
 <div class="col-12 pr12 tcf-type">
     <div class="row">
-        <div class="col-md-3 col-5 Global-TCF">
-            TCF Global People
-        </div>
+        <?php
+        if (isset($global) && count($global) > 0) {
+            $i = 0;
+            foreach ($global as $meetting) :
+        ?>
+                <div class="col-md-3 col-5 Global-TCF">
+                    <?= $meetting['detail'] ?>
+                </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
         <div class="col-md-3 col-5">
             <select class="form-select" aria-label="Default select example">
-                <option selected>Bangladesh</option>
-                <option value="1">Brazil</option>
-                <option value="2">Combodia</option>
-                <option value="3">China</option>
-                <option value="4">Columbia</option>
-                <option value="5">Dubai(UAE)</option>
-                <option value="6">Hong kong</option>
-                <option value="7">India</option>
-                <option value="8">Indonesia</option>
-                <option value="9">kenya</option>
-                <option value="10">Japan</option>
-                <option value="11">Laos</option>
-                <option value="12">Malaysia</option>
-                <option value="13">Mexico</option>
-                <option value="14">Mongolia</option>
-                <option value="15">Nigeria</option>
-                <option value="16">Mayanmar</option>
-                <option value="17">Morocco</option>
-                <option value="18">Peru</option>
-                <option value="19">Philippines</option>
-                <option value="20">Russia</option>
-                <option value="21">South Afroca</option>
-                <option value="22">Singapore</option>
-                <option value="23">Sir Lanka</option>
-                <option value="24">Thailad</option>
-                <option value="25">Turkey</option>
+                <?php
+                if (isset($insider) && count($insider) > 0) {
+                    $i = 0;
+                    foreach ($insider as $incountry) :
+                        if ($i < 26) {
+                ?>
+                            <option selected><?= $incountry['title'] ?></option>
+                <?php
+                        }
+                        $i++;
+                    endforeach;
+                }
+                ?>
             </select>
         </div>
     </div>
 </div>
 
 <div class="col-12">
-    <img src="<?= Yii::$app->homeUrl ?>image/CEO.png" class="image-ceo">
+    <?php
+    if (isset($global) && count($global) > 0) {
+        $i = 0;
+        foreach ($global as $meetting) :
+    ?>
+            <img src="<?= Yii::$app->homeUrl . $meetting['image'] ?>" class="image-ceo">
+    <?php
+            $i++;
+        endforeach;
+    }
+    ?>
 </div>
 
 
 <div class="col-12 title-culture">
-    <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> OUR WORK CULTURE
+    <?php
+    if (isset($global) && count($global) > 0) {
+        $i = 0;
+        foreach ($global as $meetting) :
+    ?>
+            <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> <?= $meetting['detail2'] ?>
+    <?php
+            $i++;
+        endforeach;
+    }
+    ?>
 </div>
 
 
 <div class="col-12 pr12">
     <div class="row">
-        <div class="col-7">
-            <img src="<?= Yii::$app->homeUrl ?>image/Code.png" class="image-code">
-        </div>
-        <div class="col-5">
-            <div class="card card-title1">
-                <div class="col-12">
-                    <div class="card-body">
+        <?php
+        if (isset($personnel) && count($personnel) > 0) {
+            $i = 0;
+            foreach ($personnel as $person) :
+        ?>
+                <div class="col-7">
+                    <img src="<?= Yii::$app->homeUrl . $person['image'] ?>" class="image-code">
+                </div>
+                <div class="col-5">
+                    <div class="card card-title1">
                         <div class="col-12">
-                            <h5 class="card-title-home">Code of Capable Person</h5>
-                        </div>
-                        <div class="col-12">
-                            <p class="title1">Integrity. Quality. Professionalism.</p>
-                        </div>
-                        <div class="col-12">
-                            <p class="title2"> Our Shared Values, Global Principles of Business Conduct,
-                                and Responsible Business Principles are the foundation
-                                of our culture, shaping who we are, what we believe and how we behave. </p>
-                        </div>
-                        <div class="col-12 title3">
-                            <a href="#">Learn More</a>
+                            <div class="card-body">
+                                <div class="col-12">
+                                    <h5 class="card-title-home"><?= $person['title'] ?></h5>
+                                </div>
+                                <div class="col-12">
+                                    <p class="title1"><?= $person['detail'] ?></p>
+                                </div>
+                                <div class="col-12">
+                                    <p class="title2"> <?= $person['detail2'] ?> </p>
+                                </div>
+                                <div class="col-12 title3">
+                                    <a href="#"> <?= $person['detail3'] ?></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
     </div>
 </div>
 
 
 <div class="col-12 pr12">
     <div class="row">
-        <div class="col-5">
-            <div class="card card-title2">
-                <div class="card-body">
-                    <div class="col-12">
-                        <h5 class="card-title-page">27 Doctrines of Work</h5>
-                    </div>
-                    <div class="col-12">
-                        <p class="title4">Integrity. Quality. Professionalism.</p>
-                    </div>
-                    <div class="col-12">
-                        <p class="title5"> Our Shared Values, Global Principles of Business Conduct,
-                            and Responsible Business Principles are the foundation
-                            of our culture, shaping who we are, what we believe and how we behave. </p>
-                    </div>
-                    <div class="col-12 title6">
-                        <a href="#">Learn More</a>
+        <?php
+        if (isset($doctrines) && count($doctrines) > 0) {
+            $i = 0;
+            foreach ($doctrines as $work) :
+
+        ?>
+                <div class="col-5">
+                    <div class="card card-title2">
+                        <div class="card-body">
+                            <div class="col-12">
+                                <h5 class="card-title-page"><?= $work['title'] ?></h5>
+                            </div>
+                            <div class="col-12">
+                                <p class="title4"><?= $work['detail'] ?></p>
+                            </div>
+                            <div class="col-12">
+                                <p class="title5"> <?= $work['detail2'] ?> </p>
+                            </div>
+                            <div class="col-12 title6">
+                                <a href="#"><?= $work['detail3'] ?></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-7">
-            <img src="<?= Yii::$app->homeUrl ?>image/philosophy.png" class="image-philosophy">
-        </div>
+                <div class="col-7">
+                    <img src="<?= Yii::$app->homeUrl . $work['image'] ?>" class="image-philosophy">
+                </div>
+        <?php
+
+                $i++;
+            endforeach;
+        }
+        ?>
     </div>
 </div>
 <div class="col-12 stye-people"></div>

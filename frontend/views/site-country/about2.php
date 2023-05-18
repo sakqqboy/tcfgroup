@@ -8,37 +8,69 @@ $this->title = 'about';
 ?>
 
 <div class="col-12">
-    <img src="<?= Yii::$app->homeUrl ?>img/Grow-torgther.png" class="img-Grow-torgther">
-    <div class="col-12 page-about2">
-        Accelerating
-        Growth Together
-    </div>
+    <?php
+    if (isset($bannerabout) && count($bannerabout) > 0) {
+        $i = 0;
+        foreach ($bannerabout as $abo) :
+    ?>
+            <img src="<?= Yii::$app->homeUrl . $abo['image'] ?>" class="img-Grow-torgther">
+            <div class="col-12 page-about2">
+                <?= $abo['title'] ?>
+            </div>
+    <?php
+            $i++;
+        endforeach;
+    }
+    ?>
+
 </div>
 
 <div class="col-12 pr12 about-country">
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-12">
-            <div class="col-12 mt-50 title-Trending">
-                <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> About Tokyo Consulting Group
-            </div>
-            <div class="col-12">
-                <div class="col-5 about-country1">
-                    <p> Tokyo Consulting Group has a long-standing experience in offering exceptional customer service by providing the most up-to-date information and prompt and accurate service to its customers worldwide. Tokyo Consulting Group provides a wide range of services, enabling us to offer our customers a “One-Stop Service” through which we can cover every financial duty of a company.</p>
-                    <p> Tokyo Consulting Firm is an association of independent accounting firms of TCG located around the world that provide clients with a range of accounting, consulting, and taxation services. TCF has members throughout the world to deal with your international business requirements. Our member firms offer a personal service that focuses on having a thorough understanding of your particular global needs. Each member firm is an independent legal entity in its own right, the operation of which is controlled in that country. This ensures that each firm has complete knowledge and understanding of the local culture, which is vital when setting up a new business</p>
+        <?php
+        if (isset($historytokyo) && count($historytokyo) > 0) {
+            $i = 0;
+            foreach ($historytokyo as $has) :
+        ?>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="col-12 mt-50 title-Trending">
+                        <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $has['title'] ?>
+                    </div>
+                    <div class="col-12">
+                        <div class="col-5 about-country1">
+                            <p> <?= $has['detail'] ?></p>
+                            <p> <?= $has['detail2'] ?></p>
+                        </div>
+                        <div class="col-5 title-business">
+                            <p><?= $has['detail3'] ?> </p>
+                            <img src="<?= Yii::$app->homeUrl . $has['image'] ?>" class="img-11">
+                        </div>
+                    </div>
                 </div>
-                <div class="col-5 title-business">
-                    <p>Business Standing</p>
-                    <img src="<?= Yii::$app->homeUrl ?>img/img-11.png" class="img-11">
-                </div>
-            </div>
-        </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
+
         <div class="col-lg-6 col-md-6 col-12">
-            <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>img/img-13.png" class="img-13">
-            </div>
-            <div class="col-12 text-center">
-                <p> International Branches </p>
-            </div>
+            <?php
+            if (isset($branches) && count($branches) > 0) {
+                $i = 0;
+                foreach ($branches as $ches) :
+            ?>
+                    <div class="col-12">
+                        <img src="<?= Yii::$app->homeUrl . $ches['image'] ?>" class="img-13">
+                    </div>
+                    <div class="col-12 text-center">
+                        <p> <?= $ches['title'] ?> </p>
+                    </div>
+            <?php
+                    $i++;
+                endforeach;
+            }
+            ?>
+
             <div id="carouselExampleControls" class="carousel slide mt-40" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active text-center">
@@ -101,181 +133,234 @@ $this->title = 'about';
     </div>
 </div>
 
-<div class="col-12 pr12 mt-50">
-    <div class="col-12 title-Trending">
-        <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> The Journey of Success
-    </div>
-    <div class="col-lg-12 col-md-6 col-12 mt-50">
-        <div class="row">
-            <div class="col-4 item1">
-                THE
-                Establishment
-            </div>
-            <div class="col-1 item2">
-                <p class="number-year"> 1998</p>
-                <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
-            </div>
-            <div class="col-2 item3">
-                ESTABLISHMENT of Kuno Yasunari
-                CPA Firm which was the name
-                organization on that time.
-            </div>
-            <div class="col-5 item4">
-                <img src="<?= Yii::$app->homeUrl ?>img/img-14.png" class="picture-1">
-            </div>
-            <hr>
-        </div>
-    </div>
-</div>
 
 
-<div class="col-12 pr12 mt-50">
+<div class="col-12 pr12">
     <div class="row">
-        <div class="col-lg-12 col-md-6 col-12">
-            <div class="row mt-50 pl-40">
-                <div class="col-4 item5">
-                    Establishment of
-                    J.nzai Kaihatsu Ltd Expended
-                    branch at Yokohama capital
-                    increased 20M
+        <?php
+        if (isset($establishment) && count($establishment) > 0) {
+            $i = 0;
+
+            foreach ($establishment as $lishment) :
+        ?>
+                <div class="col-lg-12 col-md-6 col-12">
+                    <div class="row mt-50 pl-40">
+                        <div class="col-4 item1">
+                            <?= $lishment['title'] ?>
+                        </div>
+                        <div class="col-1 item2">
+                            <p class="number-year"> <?= $lishment['detail'] ?></p>
+                            <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
+                        </div>
+                        <div class="col-2 item3">
+                            <?= $lishment['detail2'] ?>
+                        </div>
+                        <div class="col-5 item4">
+                            <img src="<?= Yii::$app->homeUrl . $lishment['image'] ?>" class="picture-1">
+                        </div>
+                        <hr>
+                    </div>
                 </div>
-                <div class="col-1 item2">
-                    <p class="number-year"> 1998</p>
-                    <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
-                </div>
-                <div class="col-2 item7">
-                    THE
-                    Growth
-                </div>
-                <div class="col-5 item4">
-                    <img src="<?= Yii::$app->homeUrl ?>img/img-15.png" class="picture-1">
-                </div>
-                <hr>
-            </div>
-        </div>
+
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
     </div>
 </div>
 
 <div class="col-12 pr12">
     <div class="row">
-        <div class="col-lg-12 col-md-6 col-12">
-            <div class="row mt-50 pl-40">
-                <div class="col-4 item1">
-                    Global
-                    Expansion
+        <?php
+        if (isset($extendinglocation) && count($extendinglocation) > 0) {
+            $i = 0;
+            foreach ($extendinglocation as $exten) :
+        ?>
+                <div class="col-lg-12 col-md-6 col-12">
+                    <div class="row mt-50 pl-40">
+                        <div class="col-4 item5">
+                            <?= $exten['title'] ?>
+                        </div>
+                        <div class="col-1 item2">
+                            <p class="number-year"> <?= $exten['detail'] ?></p>
+                            <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
+                        </div>
+                        <div class="col-2 item7">
+                            <?= $exten['detail2'] ?>
+                        </div>
+                        <div class="col-5 item4">
+                            <img src="<?= Yii::$app->homeUrl . $exten['image'] ?>" class="picture-1">
+                        </div>
+                        <hr>
+                    </div>
                 </div>
-                <div class="col-1 item2">
-                    <p class="number-year"> 1998</p>
-                    <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
-                </div>
-                <div class="col-2 item3">
-                    Establishment of Tokyo Tax
-                    Accountant Corporation Tokyo
-                    Consulting Firm Limited Japan,
-                    India Branch Entity Convers on
-                    from SSGCO Ltd to Tokyo Venture
-                    Capital Co Ltd Throughout 2007 to
-                    2011 we established branches
-                    across the world namely,
-                    Establishment of Tokyo Consulting
-                    firm limited In India, Thailand,
-                    Mongolia. Vietnam, Singapore, Indonesia, Cambodia. Sri Lanka, Philippines, China, Laos
-
-                </div>
-                <div class="col-5 item4">
-                    <img src="<?= Yii::$app->homeUrl ?>img/img-16.png" class="picture-1">
-                </div>
-                <hr>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="col-12 pr12">
-    <div class="row">
-        <div class="col-lg-12 col-md-6 col-12">
-            <div class="row mt-50 pl-40">
-                <div class="col-4 item5">
-                    Establishment of Tokyo Consulting Firm Private Limited (India) Bangalore Office. Establishment of Tokyo Consulting Firm Human Recourses Private Limited (India).
-                </div>
-                <div class="col-1 item2">
-                    <p class="number-year"> 1998</p>
-                    <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
-                </div>
-                <div class="col-2 item7">
-                    Extending
-                    Locations
-                </div>
-                <div class="col-5 item4">
-                    <img src="<?= Yii::$app->homeUrl ?>img/img-17.png" class="picture-1">
-                </div>
-                <hr>
-            </div>
-        </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
     </div>
 </div>
 
 
 <div class="col-12 pr12">
     <div class="row">
-        <div class="col-lg-12 col-md-6 col-12">
-            <div class="row mt-50 pl-40">
-                <div class="col-4 item1">
-                    Tokyo Consulting
-                    Firm Limited
+        <?php
+        if (isset($tokyoconsulting) && count($tokyoconsulting) > 0) {
+            $i = 0;
+            foreach ($tokyoconsulting  as  $tokyosul) :
+        ?>
+                <div class="col-lg-12 col-md-6 col-12">
+                    <div class="row mt-50 pl-40">
+                        <div class="col-4 item1">
+                            <?= $tokyosul['title'] ?>
+                        </div>
+                        <div class="col-1 item2">
+                            <p class="number-year"> <?= $tokyosul['detail'] ?></p>
+                            <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
+                        </div>
+                        <div class="col-2 item3">
+                            <?= $tokyosul['detail2'] ?> </div>
+                        <div class="col-5 item4">
+                            <img src="<?= Yii::$app->homeUrl . $tokyosul['image'] ?>" class="picture-1">
+                        </div>
+                        <hr>
+                    </div>
                 </div>
-                <div class="col-1 item2">
-                    <p class="number-year"> 1998</p>
-                    <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
-                </div>
-                <div class="col-2 item3">
-                    Establishment of Tokyo Consulting firm limited in India, Thailand, Mongolia, Vietnam, Singapore, Indonesia, Cambodia, Sri Lanka, Philippines, China, Laos.
-                </div>
-                <div class="col-5 item4">
-                    <img src="<?= Yii::$app->homeUrl ?>img/img-19.png" class="picture-1">
-                </div>
-                <hr>
-            </div>
-        </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
     </div>
 </div>
 
 
 <div class="col-12 pr12">
     <div class="row">
-        <div class="col-lg-12 col-md-6 col-12">
-            <div class="row mt-50 pl-40">
-                <div class="col-4 item5">
-                    Establishment of Tokyo Consulting Firm Private Limited (India) Bangalore Office. Establishment of Tokyo Consulting Firm Human Resourses Private Limited (India).
+        <?php
+        if (isset($brand) && count($brand) > 0) {
+            $i = 0;
+            foreach ($brand  as  $expansion) :
+        ?>
+                <div class="col-lg-12 col-md-6 col-12">
+                    <div class="row mt-50 pl-40">
+                        <div class="col-4 item5">
+                            <?= $expansion['title'] ?>
+                        </div>
+                        <div class="col-1 item2">
+                            <p class="number-year"> <?= $expansion['detail'] ?></p>
+                            <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
+                        </div>
+                        <div class="col-2 item7">
+                            <?= $expansion['detail2'] ?>
+                        </div>
+                        <div class="col-5 item4">
+                            <img src="<?= Yii::$app->homeUrl . $expansion['image'] ?>" class="picture-1">
+                        </div>
+                        <hr>
+                    </div>
                 </div>
-                <div class="col-1 item2">
-                    <p class="number-year"> 1998</p>
-                    <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
-                </div>
-                <div class="col-2 item7">
-                    BRAND EXPANSION
-                </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
 
-                <hr>
-            </div>
-        </div>
+    </div>
+</div>
+
+
+<div class="col-12 pr12">
+    <div class="row">
+        <?php
+        if (isset($thegrowth) && count($thegrowth) > 0) {
+            $i = 0;
+            foreach ($thegrowth  as  $the) :
+        ?>
+                <div class="col-lg-12 col-md-6 col-12">
+                    <div class="row mt-50 pl-40">
+                        <div class="col-4 item1">
+                            <?= $the['title'] ?>
+                        </div>
+                        <div class="col-1 item2">
+                            <p class="number-year"> <?= $the['detail'] ?></p>
+                            <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
+                        </div>
+                        <div class="col-2 item3">
+                            <?= $the['detail2'] ?>
+                        </div>
+                        <div class="col-5 item4">
+                            <img src="<?= Yii::$app->homeUrl . $the['image'] ?>" class="picture-1">
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
+    </div>
+</div>
+
+
+<div class="col-12 pr12">
+    <div class="row">
+        <?php
+        if (isset($globalexpansion) && count($globalexpansion) > 0) {
+            $i = 0;
+            foreach ($globalexpansion  as  $ball) :
+        ?>
+                <div class="col-lg-12 col-md-6 col-12">
+                    <div class="row mt-50 pl-40">
+                        <div class="col-4 item5">
+                            <?= $ball['title'] ?>
+                        </div>
+                        <div class="col-1 item2">
+                            <p class="number-year"> <?= $ball['detail'] ?></p>
+                            <img src="<?= Yii::$app->homeUrl ?>img/img22.png" class="img22">
+                        </div>
+                        <div class="col-2 item7">
+                            <?= $ball['detail2'] ?>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
+
     </div>
 </div>
 
 <div class="col-12 pr12 Kaicho-color">
     <div class="row">
-        <div class="col-lg-6 col-md- col-12">
-            <img src="<?= Yii::$app->homeUrl ?>img/Kaicho-color.png" class="img-Kaicho-color">
-        </div>
-        <div class="col-lg-6 col-md-6 col-12">
-            <div class="col-12 home-about">
-                <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> About THe Founder
-            </div>
-            <div class="col-10 detail-about">
-                <p>Yasunari Kuno is a seasoned business professional with an impressive track record of success in the industry. With over two decades of experience, he has demonstrated his leadership skills, strategic vision, and ability to drive growth and profitability. He is widely respected in the business community for his innovative ideas and forward-thinking approach to solving complex business challenges.</p>
+        <?php
+        if (isset($aboutfounder) && count($aboutfounder) > 0) {
+            $i = 0;
+            foreach ($aboutfounder  as  $foun) :
+        ?>
+                <div class="col-lg-6 col-md- col-12">
+                    <img src="<?= Yii::$app->homeUrl . $foun['image'] ?>" class="img-Kaicho-color">
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="col-12 home-about">
+                        <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $foun['title'] ?>
+                    </div>
+                    <div class="col-10 detail-about">
+                        <p><?= $foun['detail'] ?></p>
 
-                <p> As a thought leader in the business world, Yasunari Kuno is passionate about helping others achieve their full potential. He has dedicated his career to helping businesses succeed and thrive, and he continues to inspire and motivate others to do the same. With his extensive experience and proven track record of success, Kuno is an invaluable resource for anyone looking to take their business to the next level.</p>
-            </div>
-        </div>
+                        <p> <?= $foun['detail2'] ?></p>
+                    </div>
+                </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
     </div>
 </div>

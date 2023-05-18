@@ -3,122 +3,149 @@
 /** @var yii\web\View $this */
 
 use Codeception\Lib\Connector\Yii2;
+use yii\bootstrap5\Offcanvas;
 
 $this->title = 'Bangladesh';
 ?>
 
 <div class="">
-    <div class="col-12">
-        <img src="<?= Yii::$app->homeUrl ?>img/TCG.png" class="image-TCG">
-    </div>
-    <div class="offset-1 col-10 text-star">
-        LET'S ACCELERATE AND <br>
-        SHAPE THE FUTURE <br>
-        TOGETHER<br>
-        <button type="button" class="btn btn-primary button-start">Get Free Appointment</button>
-    </div>
+    <?php
+    if (isset($shape) && count($shape) > 0) {
+        $i = 0;
+        foreach ($shape as $pe) :
+    ?>
+            <div class="col-12">
+                <img src="<?= Yii::$app->homeUrl . $pe['image'] ?>" class="image-TCG">
+            </div>
+            <div class="offset-1 col-10 text-star">
+                <?= $pe['title'] ?> <br>
+                <?= $pe['detail'] ?> <br>
+                <?= $pe['detail2'] ?><br>
+                <button type="button" class="btn btn-primary button-start"><?= $pe['detail3'] ?></button>
+            </div>
+    <?php
+            $i++;
+        endforeach;
+    }
+    ?>
+
 </div>
+
 
 <div class="col-12 pr12 mt-50">
     <div class="col-12 title-Trending">
         <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> Trending Topics
     </div>
-    <div class="row mt-50">
+    <div class="row mt-50 procress">
+        <?php
+        if (isset($topic) && count($topic) > 0) {
+            $i = 0;
+            foreach ($topic  as  $tp) :
+                if ($i < 6) {
 
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10">
-            <div class="card-body">
-                <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
-                <p class="card-home1">Compliance in TAX</p>
-                <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
-
-            </div>
-        </div>
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10">
-            <div class="card-body">
-                <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
-                <p class="card-home1">Finance Act 2023</p>
-                <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
-            </div>
-        </div>
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10">
-            <div class="card-body">
-                <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
-                <p class="card-home1">Human Rights at workplace</p>
-                <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
-            </div>
-        </div>
-        <div class=" col-lg-2 col-md-3 col-sm-4 col-6 card mt-10">
-            <div class="card-body">
-                <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
-                <p class="card-home1">Import Export Policy amendment 2023</p>
-                <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
-            </div>
-        </div>
-        <div class=" col-lg-2 col-md-3 col-sm-4 col-6 card  mt-10">
-            <div class="card-body">
-                <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
-                <p class="card-home1">HS Code Updates</p>
-                <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
-            </div>
-        </div>
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 card  mt-10">
-            <div class="card-body">
-                <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
-                <p class="card-home1">Shipping Industry Growth Rate</p>
-                <p class="card-home2">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building)</p>
-            </div>
-        </div>
+        ?>
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10">
+                        <div class="card-body">
+                            <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
+                            <p class="home1"><?= $tp['title'] ?></p>
+                            <p class="home2"><?= $tp['detail'] ?></p>
+                        </div>
+                    </div>
+        <?php
+                }
+            endforeach;
+        }
+        ?>
     </div>
 </div>
 
 
 <div class="col-12 pr12 mt-50">
-    <div class="row">
-        <div class="col-lg-6 col-md-6 col-12">
-            <img src="<?= Yii::$app->homeUrl ?>img/transportation.png" class="img-transportation">
-        </div>
-        <div class="col-lg-6 col-md-6 col-12">
-            <p class="title-import mt-10">Import Export Policy amendment 2023 - Bangladesh aspect</p> <br>
-            <p class="title-zero">With net zero carbon, it is critical to remember that operational carbon emissions (those that come from running the building) are only a part of the story. It is increasingly evident that other elements of the building cycle, particularly embodied or construction carbon, are a significant component of a building’s whole life carbon profile. For new buildings seeking to be net zero, reducing embodied carbon is perhaps the biggest challenge.</p> <br>
-            <p class="circle-icon"><a href="#read more" class="no-underline"> READ MORE</a> <i class="fa fa-chevron-circle-right circle-icon" aria-hidden="true"></i></p>
-        </div>
-    </div>
+    <?php
+    if (isset($import) && count($import) > 0) {
+        $i = 0;
+        foreach ($import as $port) :
+    ?>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                    <img src="<?= Yii::$app->homeUrl . $port['image'] ?>" class="img-transportation">
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <p class="title-import mt-10"><?= $port['title'] ?></p> <br>
+                    <p class="title-zero"><?= $port['detail'] ?></p> <br>
+                    <p class="circle-icon"><a href="#read more" class="no-underline"> <?= $port['detail2'] ?></a> <i class="fa fa-chevron-circle-right circle-icon" aria-hidden="true"></i></p>
+                </div>
+            </div>
+    <?php
+            $i++;
+        endforeach;
+    }
+    ?>
 </div>
 
 <div class="col-12 pr12" style="margin-top: 80px;">
     <div class="col-12 title-Trending">
-        <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> join Free Live Webinar
+        <?php
+        if (isset($bangladresh) && count($bangladresh) > 0) {
+            $i = 0;
+            foreach ($bangladresh as $la) :
+        ?>
+                <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $la['title'] ?>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
     </div>
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12 mt-50">
-            <div class="row pr12">
-                <div class="col-4 title-bangladesh">
-                    <p>Bangladesh Business
-                        Environment </p>
-                </div>
-                <div class="col-2">
-                    <img src="<?= Yii::$app->homeUrl ?>img/woman.png" class="img-woman">
-                    <div class="alert alert-secondary  text-center">
-                        <p class="table-calendar"> <i class="fa fa-calendar" aria-hidden="true"> June 2023</i></p>
-                        <p> S&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;&nbsp;S</p>
-                        <p> 3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;5 <button class="btn btn-primary calendar-button" type="button">6</button>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;9</p>
+            <?php
+            if (isset($bangladresh) && count($bangladresh) > 0) {
+                $i = 0;
+                foreach ($bangladresh as $la) :
+            ?>
+                    <div class="row pr12">
+                        <div class="col-4 title-bangladesh">
+                            <p><?= $la['detail'] ?></p>
+                        </div>
+                        <div class="col-2">
+                            <img src="<?= Yii::$app->homeUrl . $la['image'] ?>" class="img-woman">
+                            <div class="alert alert-secondary  text-center">
+                                <p class="table-calendar"> <i class="fa fa-calendar" aria-hidden="true"> June 2023</i></p>
+                                <p> S&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;&nbsp;S</p>
+                                <p> 3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;5 <button class="btn btn-primary calendar-button" type="button">6</button>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;9</p>
+                            </div>
+                        </div>
+                        <div class="col-6 img-iconday">
+                            <img src="<?= Yii::$app->homeUrl ?>img/button-1.png" class="img-button">
+                            <img src="<?= Yii::$app->homeUrl ?>img/button-2.png" class="img-button">
+                            <img src="<?= Yii::$app->homeUrl ?>img/button-4.png" class="img-button">
+                            <img src="<?= Yii::$app->homeUrl ?>img/button-3.png" class="img-button">
+                        </div>
                     </div>
-                </div>
-                <div class="col-6 img-iconday">
-                    <img src="<?= Yii::$app->homeUrl ?>img/button-1.png" class="img-button">
-                    <img src="<?= Yii::$app->homeUrl ?>img/button-2.png" class="img-button">
-                    <img src="<?= Yii::$app->homeUrl ?>img/button-4.png" class="img-button">
-                    <img src="<?= Yii::$app->homeUrl ?>img/button-3.png" class="img-button">
-                </div>
-            </div>
+            <?php
+                    $i++;
+                endforeach;
+            }
+            ?>
         </div>
         <div class="col-lg-6 col-md-6 col-12">
-            <div class="col-12 title-join">
-                Join us on the next webinar
-            </div>
-            <div class="col-12 title-topic mt-10">
-                <p> <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> ABOUT THE TOPIC</p>
-            </div>
+            <?php
+            if (isset($webinar) && count($webinar) > 0) {
+                $i = 0;
+                foreach ($webinar  as  $nar) :
+            ?>
+                    <div class="col-12 title-join">
+                        <?= $nar['title'] ?>
+                    </div>
+                    <div class="col-12 title-topic mt-10">
+                        <p> <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $nar['detail'] ?></p>
+                    </div>
+            <?php
+                    $i++;
+                endforeach;
+            }
+            ?>
             <div class="accordion mt-20" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
@@ -169,45 +196,77 @@ $this->title = 'Bangladesh';
                         </div>
                     </div>
                 </div>
-                <button type="button" class="btn btn-primary button-register mt-30"> Register for Webinar</button>
-                <p class="title-sign-in">Already have account? <a href="#sign in" class="no-underline">Sign in</a></p>
             </div>
+            <button type="button" class="btn btn-primary button-register mt-30"> Register for Webinar</button>
+            <p class="title-sign-in">Already have account? <a href="#sign in" class="no-underline">Sign in</a></p>
         </div>
     </div>
 </div>
 
+
+
 <div class="col-12 pr12 mt-50 background-site">
     <div class="row">
+
         <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
-            <div class="col-lg-12 title-Trending">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> OUR PROFESSIONAL SERVICES
-            </div>
-            <div class="col-lg-12 mt-20 Company">
-                <li>Establish Company in Bangladesh</li> <br>
-                <li>Cross Border M&A Services</li> <br>
-                <li>Legal & Secretarial</li> <br>
-                <li>Accounts & Taxation</li> <br>
-                <li>Human Resource</li> <br>
-                <li> Recruitment & Placement </li><br>
-            </div>
+            <?php
+            if (isset($professiona) && count($professiona) > 0) {
+                $i = 0;
+                foreach ($professiona  as $pro) :
+
+
+            ?>
+                    <div class="col-lg-12 title-Trending">
+                        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $pro['title'] ?>
+                    </div>
+                    <div class="col-lg-12 mt-20 Company">
+                        <li><?= $pro['detail'] ?></li> <br>
+                        <li><?= $pro['detail2'] ?></li> <br>
+                        <li><?= $pro['detail3'] ?></li> <br>
+                        <li><?= $pro['detail4'] ?></li> <br>
+                        <li><?= $pro['detail5'] ?></li> <br>
+                        <li> <?= $pro['detail6'] ?> </li><br>
+                    </div>
+
+            <?php
+
+                endforeach;
+            }
+            ?>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6 col-12 show-text-home">
-            <div class="col-12 text-legal pl-20">
-                Legal & Secretarial
-            </div>
-            <div class="col-12 Our pt-20 pl-20">
-                Our consulting firm specializes in providing legal and
-                secretarial support to multinational companies. Our
-                services include - Compliance Support, Corporate
-                Governance, Document Preparation, Secretarial
-                Services, corporate laws, contract laws, labor laws,
-                intellectual property laws, and compliance with local
-                laws and regulations. <br>
-                <button type="button" class="btn btn-primary button-text5">Get Free Appointment</button>
-            </div>
+            <?php
+            if (isset($legal) && count($legal) > 0) {
+                $i = 0;
+                foreach ($legal  as $gal) :
+
+            ?>
+                    <div class="col-12 text-legal pl-20">
+                        <?= $gal['title'] ?>
+                    </div>
+                    <div class="col-12 Our pt-20 pl-20">
+                        <?= $gal['detail'] ?> <br>
+                        <button type="button" class="btn btn-primary button-text5"><?= $gal['detail2'] ?></button>
+                    </div>
+            <?php
+
+                endforeach;
+            }
+            ?>
         </div>
         <div class="col-lg-4 col-12">
-            <img src="<?= Yii::$app->homeUrl ?>img/ezgif.png" class="img-zgif">
+            <?php
+            if (isset($legal) && count($legal) > 0) {
+                $i = 0;
+                foreach ($legal  as $gal) :
+
+            ?>
+                    <img src="<?= Yii::$app->homeUrl . $gal['image'] ?>" class="img-zgif">
+            <?php
+
+                endforeach;
+            }
+            ?>
         </div>
     </div>
 </div>
@@ -358,29 +417,42 @@ $this->title = 'Bangladesh';
     </div>
 </div>
 
-<div class="col-12 pr12 blue pt-20 pb-10">
-    <div class="row">
-        <div class="col-1g-10 col-md-10 col-12 text-update">
-            <p> GET UPDATE FROM</p>
-            <p> All OVER THE WORLD</p>
-        </div>
-        <div class="col-1g-10 col-md-10 col-12 text-project">
-            <p>Project starts fall but small spots of hope indicate green shoots of recovery are there.</p>
-        </div>
-        <div class="col-lg-5 col-md-6 col-12 mt-10 input-group-form">
-            <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
-                <input type="text" class="form-control input-your-email" placeholder="Your Email address" aria-label="Your Email address with two button addons">
-                <button class="btn btn-primary" type="button">Subscribe Now</button>
+
+
+<?php
+if (isset($footer) && count($footer) > 0) {
+    $i = 0;
+    foreach ($footer as $h) :
+?>
+
+        <div class="col-12 pr12 blue pt-20 pb-10">
+            <div class="row">
+                <div class="col-1g-10 col-md-10 col-12 text-update">
+                    <p><?= $h['title'] ?></p>
+                    <p> <?= $h['detail'] ?></p>
+                </div>
+                <div class="col-1g-10 col-md-10 col-12 text-project">
+                    <p><?= $h['detail2'] ?></p>
+                </div>
+                <div class="col-lg-5 col-md-6 col-12 mt-10 input-group-form">
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
+                        <input type="text" class="form-control input-your-email" placeholder="Your Email address" aria-label="Your Email address with two button addons">
+                        <button class="btn btn-primary" type="button"><?= $h['detail3'] ?></button>
+                    </div>
+                    <br>
+                </div>
             </div>
-            <br>
         </div>
-    </div>
-</div>
-<div class="col-12 pr12">
-    <div class="row">
-        <div class="offset-lg-6 col-lg-6 col-12 text-center">
-            <img src="<?= Yii::$app->homeUrl ?>image/book.png" class="image-book">
+        <div class="col-12 pr12">
+            <div class="row">
+                <div class="offset-lg-6 col-lg-6 col-12 text-center">
+                    <img src="<?= Yii::$app->homeUrl . $h['image'] ?>" class="image-book">
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+<?php
+        $i++;
+    endforeach;
+}
+?>

@@ -7,27 +7,64 @@ use Codeception\Lib\Connector\Yii2;
 $this->title = 'services';
 ?>
 
+
+
 <div class="col-12">
-    <img src="<?= Yii::$app->homeUrl ?>img/asdsadasdasd1.png" class="image-asdsadasdasd1">
-    <div class="col-12">
-        <img src="<?= Yii::$app->homeUrl ?>img/together.png" class="image-together">
-    </div>
+    <?php
+    if (isset($together) && count($together) > 0) {
+        $i = 0;
+        foreach ($together as $ther) :
+    ?>
+            <div class="col-12">
+                <img src="<?= Yii::$app->homeUrl . $ther['image'] ?>" class="image-asdsadasdasd1">
+            </div>
+    <?php
+            $i++;
+        endforeach;
+    }
+    ?>
+
+    <?php
+    if (isset($contribute) && count($contribute) > 0) {
+        $i = 0;
+        foreach ($contribute as $tri) :
+    ?>
+            <div class="col-12">
+                <img src="<?= Yii::$app->homeUrl . $tri['image'] ?>" class="image-together">
+            </div>
+    <?php
+            $i++;
+        endforeach;
+    }
+    ?>
 </div>
 
-<div class="col-12 title-new1">
-    <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> Understanding Business & Our Service
-</div>
-<div class="col-12 pr12">
-    <div class="row">
-        <div class="col-lg-6 col-md-6 col-12 mt-50">
-            <img src="<?= Yii::$app->homeUrl ?>img/Asset.png" class="image-Asset">
+
+
+<?php
+if (isset($understanding) && count($understanding) > 0) {
+    $i = 0;
+    foreach ($understanding as $standing) :
+?>
+        <div class="col-12 title-new1">
+            <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $standing['title'] ?>
         </div>
-        <div class="col-lg-6 col-md-6 col-12 detail-asset">
-            An inevitable fact of this world is that today or tomorrow, every person has to die at some point of time. But unlike the sudden ending of human life, tax compliance does not end all of a sudden.
-            So, after a person passes away, his legal representative shall be liable to pay the final tax on behalf of that deceased person. The Income-tax Ordinance, under Section 92, the representative of that departed person shall pay the tax which the deceased would have been liable to pay if he had not died, in the like manner and to the same extent as the deceased; and the legal representative of the deceased shall, for this Ordinance, be an assessee.
+        <div class="col-12 pr12">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12 mt-50">
+                    <img src="<?= Yii::$app->homeUrl . $standing['image'] ?>" class="image-Asset">
+                </div>
+                <div class="col-lg-6 col-md-6 col-12 detail-asset">
+                    <?= $standing['detail'] ?>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+<?php
+        $i++;
+    endforeach;
+}
+?>
+
 
 
 <div class="col-12 pr12">
@@ -42,43 +79,54 @@ $this->title = 'services';
                 </div>
                 <div class="col-5">
                     <select class="form-select" aria-label="Default select example">
-                        <option selected>Bangladesh</option>
-                        <option value="1">Brazil</option>
-                        <option value="2">Combodia</option>
-                        <option value="3">China</option>
-                        <option value="4">Columbia</option>
-                        <option value="5">Dubai(UAE)</option>
-                        <option value="6">Hong kong</option>
-                        <option value="7">India</option>
-                        <option value="8">Indonesia</option>
-                        <option value="9">kenya</option>
-                        <option value="10">Japan</option>
-                        <option value="11">Laos</option>
-                        <option value="12">Malaysia</option>
-                        <option value="13">Mexico</option>
-                        <option value="14">Mongolia</option>
-                        <option value="15">Nigeria</option>
-                        <option value="16">Mayanmar</option>
-                        <option value="17">Morocco</option>
-                        <option value="18">Peru</option>
-                        <option value="19">Philippines</option>
-                        <option value="20">Russia</option>
-                        <option value="21">South Afroca</option>
-                        <option value="22">Singapore</option>
-                        <option value="23">Sir Lanka</option>
-                        <option value="24">Thailad</option>
-                        <option value="25">Turkey</option>
+                        <?php
+                        if (isset($click) && count($click) > 0) {
+                            $i = 0;
+                            foreach ($click as $country) :
+                                if ($i < 26) {
+
+
+                        ?>
+                                    <option selected><?= $country['title'] ?></option>
+                        <?php
+                                }
+                                $i++;
+                            endforeach;
+                        }
+                        ?>
                     </select>
                 </div>
             </div>
-            <div class="col-12 mt-40">
-                <img src="<?= Yii::$app->homeUrl ?>img/Asset-2.png" class="image-Asset-2">
+            <div class="col-12 mt-50">
+                <?php
+                if (isset($companymarket) && count($companymarket) > 0) {
+                    $i = 0;
+                    foreach ($companymarket as $marketing) :
+                ?>
+                        <img src="<?= Yii::$app->homeUrl . $marketing['image'] ?>" class="image-Asset-2">
+                <?php
+
+                        $i++;
+                    endforeach;
+                }
+                ?>
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-12">
-            <div class="col-12 detail-text-sevices">
-                Services of Accounts & Taxatation
-            </div>
+            <?php
+            if (isset($companymarket) && count($companymarket) > 0) {
+                $i = 0;
+                foreach ($companymarket as $marketing) :
+            ?>
+                    <div class="col-12 detail-text-sevices">
+                        <?= $marketing['title'] ?>
+                    </div>
+            <?php
+
+                    $i++;
+                endforeach;
+            }
+            ?>
             <div class="accordion mt-20" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
@@ -134,81 +182,150 @@ $this->title = 'services';
     </div>
 </div>
 
+
 <div class="col-12 pr12 mt-50 background-home">
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
-            <div class="col-12 title-new1 mt-20">
-                <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> WHY DO WE WORK !
-            </div>
-            <div class="col-lg-12 home-form-one">
-                <p> Expanding Responsibilities</p>
-                <p>All Issues are Our Own Issues</p>
-                <p>We Get What We Give</p>
-                <button type="button" class="btn btn-outline-dark"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
-                <button type="button" class="btn btn-outline-dark"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12 show-text-home">
-            <div class="col-12 pl-20 home-two">
-                <p> As We Give,</p>
-                <p>So We Receive</p>
-            </div>
-            <div class="col-12 pt-20 pl-20 form-two">
-                <img src="<?= Yii::$app->homeUrl ?>image/expand.png" style="width: 30px;"> Expanding Responsibilities
-            </div>
-            <div class="col-12 pt-20 pl-20 form-tree">
-                <p> It's not just about our expertise,</p>
-                <p>but about conquering the next height</p>
+        <?php
+        if (isset($banneservices) && count($banneservices) > 0) {
+            $i = 0;
+            foreach ($banneservices as $s) :
+        ?>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
+                    <div class="col-12 title-new1 mt-20">
+                        <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $s['title'] ?>
+                    </div>
+                    <div class="col-lg-12 home-form-one">
+                        <p> <?= $s['detail'] ?></p>
+                        <p><?= $s['detail2'] ?></p>
+                        <p><?= $s['detail3'] ?></p>
+                        <button type="button" class="btn btn-outline-dark"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-outline-dark"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+        <?php
 
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-            <img src="<?= Yii::$app->homeUrl ?>img/image7.png" class="image-image7">
-        </div>
+                $i++;
+            endforeach;
+        }
+        ?>
+
+        <?php
+        if (isset($background) && count($background) > 0) {
+            $i = 0;
+            foreach ($background as $bk) :
+        ?>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 show-text-home">
+                    <div class="col-12 pl-20 home-two">
+                        <p> <?= $bk['title'] ?></p>
+                        <p><?= $bk['detail'] ?></p>
+                    </div>
+                    <div class="col-12 pt-20 pl-20 form-two">
+                        <img src="<?= Yii::$app->homeUrl ?>image/expand.png" style="width: 30px;"> <?= $bk['detail2'] ?>
+                    </div>
+                    <div class="col-12 pt-20 pl-20 form-tree">
+                        <p> <?= $bk['detail3'] ?></p>
+                        <p><?= $bk['detail4'] ?></p>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <img src="<?= Yii::$app->homeUrl ?>img/image7.png" class="image-image7">
+                </div>
+        <?php
+
+                $i++;
+            endforeach;
+        }
+        ?>
     </div>
 </div>
 
 <div class="col-12 pr12">
     <div class="row">
         <div class="col-lg-5 col-md-6 col-12 mt-20">
-            <div class="col-12 title-new1 mt-20">
-                <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> Business Continuation Method (Kuno Method)
-            </div>
-            <div class="col-12 mt-50 title-jinji">
-                <img src="<?= Yii::$app->homeUrl ?>img/image4.png">
-                <p>JINJI NO BUTAI cultivates Mind and Work Philosophy,
-                    and grow employees as Real Leader.</p>
-            </div>
+            <?php
+            if (isset($founder) && count($founder) > 0) {
+                $i = 0;
+                foreach ($founder as $o) :
+            ?>
+                    <div class="col-12 title-new1 mt-20">
+                        <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $o['title'] ?>
+                    </div>
+
+                    <div class="col-12 mt-50 title-jinji">
+                        <img src="<?= Yii::$app->homeUrl . $o['image'] ?>">
+                        <p><?= $o['detail'] ?></p>
+                    </div>
+            <?php
+                    $i++;
+                endforeach;
+            }
+            ?>
             <div class="col-12 mt-20">
                 <div class="row">
+
                     <div class="col-4 mt-30 pade-jinji">
-                        <p><img src="<?= Yii::$app->homeUrl ?>img/image1.png" style="width: 90px;"></p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>img/image2.png" style="width: 90px;"></p>
-                        <p><img src="<?= Yii::$app->homeUrl ?>img/image3.png" style="width: 90px;"></p>
+                        <?php
+                        if (isset($shapestar) && count($shapestar) > 0) {
+                            $i = 0;
+                            foreach ($shapestar as $shape) :
+                                if ($i < 3) {
+                        ?>
+                                    <p><img src="<?= Yii::$app->homeUrl . $shape['image'] ?>" style="width: 90px;"></p>
+                        <?php
+                                }
+                                $i++;
+                            endforeach;
+                        }
+                        ?>
                     </div>
+
                     <div class="col-6 mt-30">
-                        <div class="col-12 ">
-                            <p class="text-Goal">Self Goal Setting Support</p>
-                            <p class="text-one">JINJI NO BUTAI cultivates Mind and Work Philosophy,and grow employees as Real Leader.</p>
-                            <p class="text-Goal">Evaluation Without Individual Bias</p>
-                            <p class="text-one">With Jinji no Butai, you can evaluate employees without
-                                having any individual bias and it implements greater
-                                transparency in an organization.</p>
-                            <p class="text-Goal">Self Goal Setting Support</p>
-                            <p class="text-one">With greater control of employee management, now it is
-                                possible to reduce costs related to employees and laborers
-                                in any organization with Jinji no Butai.</p>
-                        </div>
-                        <button type="button" class="btn btn-primary button-name-Schedule"> Schedule a Demo</button>
+                        <?php
+                        if (isset($support) && count($support) > 0) {
+                            $i = 0;
+                            foreach ($support as $sup) :
+                        ?>
+                                <div class="col-12 ">
+                                    <p class="text-Goal"><?= $sup['title'] ?></p>
+                                    <p class="text-one"><?= $sup['detail'] ?></p>
+                                    <p class="text-Goal"><?= $sup['detail2'] ?></p>
+                                    <p class="text-one"><?= $sup['detail3'] ?></p>
+                                    <p class="text-Goal"><?= $sup['detail4'] ?></p>
+                                    <p class="text-one"><?= $sup['detail5'] ?></p>
+                                </div>
+                                <button type="button" class="btn btn-primary button-name-Schedule"> <?= $sup['detail6'] ?></button>
+                        <?php
+                                $i++;
+                            endforeach;
+                        }
+                        ?>
+
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="col-lg-7 col-md-6  col-12 pr-0">
-            <img src="<?= Yii::$app->homeUrl ?>image/Group-6.png" class="image-Group-6">
+            <?php
+            if (isset($support) && count($support) > 0) {
+                $i = 0;
+                foreach ($support as $sup) :
+            ?>
+                    <img src="<?= Yii::$app->homeUrl . $sup['image'] ?>" class="image-Group-6">
+            <?php
+                    $i++;
+                endforeach;
+            }
+            ?>
         </div>
+
     </div>
 </div>
+
+
+
+
 
 <div class="col-12">
     <img src="<?= Yii::$app->homeUrl ?>img/image6.png" class="image-image6">
@@ -219,54 +336,80 @@ $this->title = 'services';
         <div class="col-12 all-picture-account">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-6">
-                    <div class="col-12 text-why">
-                        <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> WHY TO CHOOSE US
-                    </div>
-                    <div class="col-12 page-1">
-                        <img src="<?= Yii::$app->homeUrl ?>image/account.png" class="image-account"> Speed & Quality
-                    </div>
-                    <div class="col-12 select-project">
-                        Accuracy in work is of the utmost importance in any profession. Whether it is a simple task or a complex project, making sure that everything is done correctly is essential for success. This means paying attention to detail.
-                    </div>
-                    <div class="col-12  page-1">
-                        <img src="<?= Yii::$app->homeUrl ?>image/account-1.png" class="image-account">Composite Consulting Services
-                    </div>
-                    <div class="col-12  select-project">
-                        a comprehensive consulting firm that offers a range of services related to human resources, accounting, tax, and VAT. This is a valuable asset for businesses that are looking for comprehensive support in these areas, as they can receive all of their consulting needs from one reliable source.
-                    </div>
-                    <div class="col-12  page-1">
-                        <img src="<?= Yii::$app->homeUrl ?>image/account-2.png" class="image-account">Independent Business Consultant
-                    </div>
-                    <div class="col-12 select-project">
-                        a comprehensive consulting firm that offers a range of services related to human resources, accounting, tax, and VAT. This is a valuable asset for businesses that are looking for comprehensive support in these areas, as they can receive all of their consulting needs from one reliable source.
-                    </div>
-                    <div class="col-6">
+                    <?php
+                    if (isset($companymarket) && count($companymarket) > 0) {
+                        $i = 0;
+                        foreach ($companymarket as $marketing) :
+                    ?>
+                            <div class="col-12 text-why">
+                                <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $marketing['detail'] ?>
+                            </div>
+                    <?php
+                            $i++;
+                        endforeach;
+                    }
+                    ?>
+
+                    <?php
+                    if (isset($chooseservices) && count($chooseservices) > 0) {
+                        $i = 0;
+                        foreach ($chooseservices as $choose) :
+
+                            if ($i < 3) {
+                    ?>
+                                <div class="col-12 page-1">
+                                    <img src="<?= Yii::$app->homeUrl . $choose['image'] ?>" class="image-account"> <?= $choose['title'] ?>
+                                </div>
+                                <div class="col-12 select-project">
+                                    <?= $choose['detail'] ?>
+                                </div>
+                    <?php
+                            }
+                            $i++;
+                        endforeach;
+                    }
+                    ?>
+
+
+                    <div class="col-6 cal-download">
                         <div class="card download-button">
                             <a href="" class="no-underline1">
-                                <p class="text-download1"> Download Company Profile <i class="fa fa-download name-download3" aria-hidden="true"></i></p>
+                                <?php
+                                if (isset($companymarket) && count($companymarket) > 0) {
+                                    $i = 0;
+                                    foreach ($companymarket as $marketing) :
+                                ?>
+                                        <p class="text-download1"> <?= $marketing['detail2'] ?> <i class="fa fa-download name-download3" aria-hidden="true"></i></p>
+                                <?php
+
+                                        $i++;
+                                    endforeach;
+                                }
+                                ?>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-6">
-                    <div class="col-12 mt-20 page-2">
-                        <img src="<?= Yii::$app->homeUrl ?>image/account-3.png" class="image-account">Development Partner
-                    </div>
-                    <div class="col-12 select-project-1">
-                        to being a development partner for its clients, rather than just a service provider. This means that we take a long-term, holistic approach to consulting and work closely with our clients to support their growth and development
-                    </div>
-                    <div class="col-12 page-2">
-                        <img src="<?= Yii::$app->homeUrl ?>image/account-4.png" class="image-account">Secured & Trusted
-                    </div>
-                    <div class="col-12 select-project-1">
-                        our clients can feel confident that their data and projects are being handled with the utmost care and confidentiality. We have implemented strict security protocols and safeguards to protect our clients' data, and we are committed to maintaining the highest standards of professionalism.
-                    </div>
-                    <div class="col-12 page-2">
-                        <img src="<?= Yii::$app->homeUrl ?>image/account-5.png" class="image-account">Commitment of Deadline
-                    </div>
-                    <div class="col-12 select-project-1">
-                        our clients can feel confident that their data and projects are being handled with the utmost care and confidentiality. We have implemented strict security protocols and safeguards to protect our clients' data, and we are committed to maintaining the highest standards of professionalism.
-                    </div>
+                    <?php
+                    if (isset($development) && count($development) > 0) {
+                        $i = 0;
+                        foreach ($development as $dave) :
+
+                            if ($i < 3) {
+                    ?>
+                                <div class="col-12 mt-20 page-2">
+                                    <img src="<?= Yii::$app->homeUrl . $dave['image'] ?>" class="image-account"><?= $dave['title'] ?>
+                                </div>
+                                <div class="col-12 select-project-1">
+                                    <?= $dave['detail'] ?>
+                                </div>
+                    <?php
+                            }
+                            $i++;
+                        endforeach;
+                    }
+                    ?>
                 </div>
             </div>
         </div>

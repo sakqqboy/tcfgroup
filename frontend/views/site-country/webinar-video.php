@@ -9,84 +9,115 @@ $this->title = 'webinar-video';
 
 <div class="col-12 background-1">
     <div class="col-12 text-center">
-        <img src="<?= Yii::$app->homeUrl ?>img/img20.png" class="img-20">
-        <img src="<?= Yii::$app->homeUrl ?>img/img21.png" class="img-21">
+        <?php
+        if (isset($pagewebinarvideo) && count($pagewebinarvideo) > 0) {
+            $i = 0;
+            foreach ($pagewebinarvideo as $pagevideo) :
+        ?>
+                <img src="<?= Yii::$app->homeUrl . $pagevideo['image'] ?>" class="img-20">
+                <img src="<?= Yii::$app->homeUrl ?>img/img21.png" class="img-21">
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
+
     </div>
     <div class="col-12 pr12 page-video1">
         <div class="row">
             <div class="col-1 icon-pause">
-                <a href="" class="no-underline1"><i class="fa fa-pause" aria-hidden="true"></i></a>
+                <a href="#" class="no-underline1"><i class="fa fa-pause" aria-hidden="true"></i></a>
             </div>
             <div class="col-8 icon-volume-down">
-                <a href="" class="no-underline1"><i class="fa fa-volume-down" aria-hidden="true"></i></a>
-
+                <a href="#" class="no-underline1"><i class="fa fa-volume-down" aria-hidden="true"></i></a>
             </div>
             <div class="col-1 icon-cloud-download">
-                <a href="" class="no-underline1"><i class="fa fa-cloud-download" aria-hidden="true"></i></a>
+                <a href="#" class="no-underline1"><i class="fa fa-cloud-download" aria-hidden="true"></i></a>
             </div>
             <div class="col-2 icon-share-alt">
-                <a href="" class="no-underline1"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                <a href="#" class="no-underline1"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>
     <div class="col-12 pr12">
         <div class="row">
-            <div class="col-6 title-video1 text-start">
-                The Path of a Good Leader
-            </div>
-            <div class="col-6 title-video2 text-end">
-                <div class="row">
-                    <div class="col-7">
-                        <h4 class="font-video1"> Kaori Saito</h4>
-                        <h6 class="font-video2"> International Affairs, Bangladesh Branch</h6>
+            <?php
+            if (isset($namevideo) && count($namevideo) > 0) {
+                $i = 0;
+                foreach ($namevideo as $name1) :
+            ?>
+                    <div class="col-6 title-video1 text-start">
+                        <?= $name1['title'] ?>
                     </div>
-                    <div class="col-2">
-                        <img src="<?= Yii::$app->homeUrl ?>img/Saito.png" class="img-veona">
+                    <div class="col-6 title-video2 text-end">
+                        <div class="row">
+                            <div class="col-7">
+                                <h4 class="font-video1"> <?= $name1['detail'] ?></h4>
+                                <h6 class="font-video2"> <?= $name1['detail2'] ?></h6>
+                            </div>
+                            <div class="col-2">
+                                <img src="<?= Yii::$app->homeUrl . $name1['image'] ?>" class="img-veona">
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+            <?php
+                    $i++;
+                endforeach;
+            }
+            ?>
+
         </div>
     </div>
 </div>
 
 <div class="col-12 pr12">
     <div class="row">
-        <div class="col-lg-6 col-md-6 col-12">
-            <div class="col-12 title-summary">
-                Summary
-            </div>
-            <div class="col-12 title-summary1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis consectetur adipiscing elit.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis consectetur adipiscing elit.
-            </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-12">
-            <div class="col-12 title-related1">
-                Related Videos
-            </div>
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-4">
-                        <img src="<?= Yii::$app->homeUrl ?>img/video2.png" class="img-video">
+        <?php
+        if (isset($summary) && count($summary) > 0) {
+            $i = 0;
+            foreach ($summary  as  $mary) :
+        ?>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="col-12 title-summary">
+                        <?= $mary['title'] ?>
                     </div>
-                    <div class="col-6 mt-10">
-                        <div class="col-12 text-art">
-                            Self-Development
-                        </div>
-                        <div class="col-12 mt-10 picture-star">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-12 mt-10 font-mins">
-                            7:36 mins
+                    <div class="col-12 title-summary1">
+                        <?= $mary['detail'] ?>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="col-12 title-related1">
+                        <?= $mary['detail2'] ?>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="<?= Yii::$app->homeUrl ?>img/video2.png" class="img-video">
+                            </div>
+                            <div class="col-6 mt-10">
+                                <div class="col-12 text-art">
+                                    <?= $mary['detail3'] ?>
+                                </div>
+                                <div class="col-12 mt-10 picture-star">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-12 mt-10 font-mins">
+                                    <?= $mary['detail4'] ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
+
     </div>
 </div>
 
@@ -378,19 +409,30 @@ $this->title = 'webinar-video';
 
 <div class="col-12 pr12">
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-12 title-Trending mt-50">
-            <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> Free Registration
-        </div>
-        <div class="col-lg-6 col-md-6 col-12 title-always mt-50 pl-40">
-            It is always the most vital time to provide the entire picture of company and remind the mission in society. We believe that the purpose of business is ultimately the same all over the world. Let’s grow together.
-        </div>
+        <?php
+        if (isset($subwebinar) && count($subwebinar) > 0) {
+            $i = 0;
+            foreach ($subwebinar as $subfree) :
+        ?>
+                <div class="col-lg-4 col-md-6 col-12 title-Trending mt-50">
+                    <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $subfree['title'] ?>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12 title-always mt-50 pl-40">
+                    <?= $subfree['detail'] ?>
+                </div>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
+
     </div>
 </div>
 
 <div class="col-12 pr12">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12">
-            <div class="accordion mt-20 pl-30" id="accordionExample">
+            <div class="accordion mt-20 pl-50" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">

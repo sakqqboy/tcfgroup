@@ -293,6 +293,25 @@
     font-size: 25px;
 }
 
+.life-play {
+    font-size: 20px;
+    width: 280px;
+    height: 80px;
+    font-family: 'klavika';
+
+}
+
+.play-auto {
+    font-size: 60px;
+    padding-right: 10px;
+
+
+}
+
+.no-underline4 {
+    color: white;
+
+}
 
 @media(max-width: 992px) {
     .text-shape {
@@ -489,5 +508,17 @@
 
     .form-text-footer {
         padding-left: 40px;
+    }
+
+    .life-play {
+        font-size: 15px;
+        width: 200px;
+        height: 50px;
+        padding-top: 10px;
+    }
+
+    .play-auto {
+        font-size: 20px;
+        padding-right: 10px;
     }
 }

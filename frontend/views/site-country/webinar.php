@@ -12,36 +12,94 @@ $this->title = 'webinar';
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12">
             <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>img/webinar.png" class="img-webinar">
-                <img src="<?= Yii::$app->homeUrl ?>img/image8.png" class="image8">
+                <?php
+                if (isset($webinarvideo) && count($webinarvideo) > 0) {
+                    $i = 0;
+                    foreach ($webinarvideo as $binar) :
+                ?>
+                        <img src="<?= Yii::$app->homeUrl . $binar['image'] ?>" class="img-webinar">
+                        <span class="badge bg-primary image8"> <a href="#" class="no-underline1"><i class="fa fa-play-circle-o play-y" aria-hidden="true"></i> </a> When People changes Their Perspective</span>
+                <?php
+                        $i++;
+                    endforeach;
+                }
+                ?>
+
             </div>
         </div>
+
         <div class="col-lg-6 col-md-6 col-12">
-            <div class="col-10 page-webinar">
-                Discover the practical knowledge of experienced consultants in business
-            </div>
-            <div class="col-10 page-webinar-home1">
-                Coworking offers beautifully crafted workspaces where people can create, connect, and grow their businesses at prime locations in multiple cities.
-            </div>
-            <div class="row mt-50">
-                <div class="col-4 detail-calendar">
-                    <div class="col-12">
-                        <i class="fa fa-calendar form-calendar1" aria-hidden="true"></i>
-                        <p class="text-1"> Every Week</p>
-                        <p class="text-2"> We discuss new topic every week</p>
+            <?php
+            if (isset($webinarvideo) && count($webinarvideo) > 0) {
+                $i = 0;
+                foreach ($webinarvideo   as   $binar) :
+            ?>
+                    <div class="col-10 page-webinar">
+                        <?= $binar['detail'] ?>
                     </div>
-                </div>
-                <div class="col-4 detail-liveqa">
-                    <i class="fa fa-comments-o form-comment" aria-hidden="true"></i>
-                    <p class="text-1"> Live Q&A</p>
-                    <p class="text-2"> Live Question and answer session</p>
-                </div>
-                <div class="col-4">
-                    <i class="fa fa-clock-o form-clock" aria-hidden="true"></i>
-                    <p class="text-1"> 30 Mins</p>
-                    <p class="text-2"> We keep it short for your
-                        busy schedule </p>
-                </div>
+                    <div class="col-10 page-webinar-home1">
+                        <?= $binar['detail2'] ?>
+                    </div>
+            <?php
+                endforeach;
+            }
+            ?>
+
+            <div class="row mt-50">
+                <?php
+                if (isset($everyweek) & count($everyweek) > 0) {
+                    $i = 0;
+                    foreach ($everyweek as $icon) :
+
+
+                ?>
+                        <div class="col-4 detail-calendar">
+                            <div class="col-12">
+                                <i class="fa fa-calendar form-calendar1" aria-hidden="true"></i>
+                                <p class="text-1"> <?= $icon['title'] ?></p>
+                                <p class="text-2"><?= $icon['detail'] ?></p>
+                            </div>
+                        </div>
+                <?php
+
+                        $i++;
+                    endforeach;
+                }
+                ?>
+
+                <?php
+                if (isset($question) & count($question) > 0) {
+                    $i = 0;
+                    foreach ($question as $icon2) :
+                ?>
+                        <div class="col-4 detail-liveqa">
+                            <i class="fa fa-comments-o form-comment" aria-hidden="true"></i>
+                            <p class="text-1"> <?= $icon2['title'] ?></p>
+                            <p class="text-2"> <?= $icon2['detail'] ?></p>
+                        </div>
+                <?php
+
+                        $i++;
+                    endforeach;
+                }
+                ?>
+
+
+                <?php
+                if (isset($mins) & count($mins) > 0) {
+                    $i = 0;
+                    foreach ($mins as $icon3) :
+                ?>
+                        <div class="col-4">
+                            <i class="fa fa-clock-o form-clock" aria-hidden="true"></i>
+                            <p class="text-1"> <?= $icon3['title'] ?></p>
+                            <p class="text-2"> <?= $icon3['detail'] ?></p>
+                        </div>
+                <?php
+                        $i++;
+                    endforeach;
+                }
+                ?>
             </div>
         </div>
     </div>
@@ -50,40 +108,69 @@ $this->title = 'webinar';
 
 <div class="col-12 pr12" style="margin-top: 80px;">
     <div class="col-12 title-Trending">
-        <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> join Free Live Webinar
+        <?php
+        if (isset($bangladresh) && count($bangladresh) > 0) {
+            $i = 0;
+            foreach ($bangladresh as $la) :
+        ?>
+                <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $la['title'] ?>
+        <?php
+                $i++;
+            endforeach;
+        }
+        ?>
     </div>
     <div class="col-12">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-12 mt-50">
-                <div class="row">
-                    <div class="col-4 title-bangladesh">
-                        <p>Bangladesh Business
-                            Environment </p>
-                    </div>
-                    <div class="col-2">
-                        <img src="<?= Yii::$app->homeUrl ?>img/woman.png" class="img-woman">
-                        <div class="alert alert-secondary  text-center">
-                            <p class="table-calendar"> <i class="fa fa-calendar" aria-hidden="true"> June 2023</i></p>
-                            <p> S&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;&nbsp;S</p>
-                            <p> 3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;5 <button class="btn btn-primary calendar-button" type="button">6</button>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;9</p>
-                        </div>
-                    </div>
+                <?php
+                if (isset($bangladresh) && count($bangladresh) > 0) {
+                    $i = 0;
+                    foreach ($bangladresh as $la) :
+                ?>
+                        <div class="row">
+                            <div class="col-4 title-bangladesh">
+                                <p><?= $la['detail'] ?> </p>
+                            </div>
+                            <div class="col-2">
+                                <img src="<?= Yii::$app->homeUrl . $la['image'] ?>" class="img-woman">
+                                <div class="alert alert-secondary  text-center">
+                                    <p class="table-calendar"> <i class="fa fa-calendar" aria-hidden="true"> June 2023</i></p>
+                                    <p> S&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;&nbsp;S</p>
+                                    <p> 3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;5 <button class="btn btn-primary calendar-button" type="button">6</button>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;9</p>
+                                </div>
+                            </div>
 
-                    <div class="col-6 img-iconday">
-                        <img src="<?= Yii::$app->homeUrl ?>img/button-1.png" class="img-button">
-                        <img src="<?= Yii::$app->homeUrl ?>img/button-2.png" class="img-button">
-                        <img src="<?= Yii::$app->homeUrl ?>img/button-4.png" class="img-button">
-                        <img src="<?= Yii::$app->homeUrl ?>img/button-3.png" class="img-button">
-                    </div>
-                </div>
+                            <div class="col-6 img-iconday">
+                                <img src="<?= Yii::$app->homeUrl ?>img/button-1.png" class="img-button">
+                                <img src="<?= Yii::$app->homeUrl ?>img/button-2.png" class="img-button">
+                                <img src="<?= Yii::$app->homeUrl ?>img/button-4.png" class="img-button">
+                                <img src="<?= Yii::$app->homeUrl ?>img/button-3.png" class="img-button">
+                            </div>
+                        </div>
+                <?php
+                        $i++;
+                    endforeach;
+                }
+                ?>
             </div>
             <div class="col-lg-6 col-md-6 col-12">
-                <div class="col-12 title-join">
-                    Join us on the next webinar
-                </div>
-                <div class="col-12 title-topic mt-10">
-                    <p> <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> ABOUT THE TOPIC</p>
-                </div>
+                <?php
+                if (isset($webinar) && count($webinar) > 0) {
+                    $i = 0;
+                    foreach ($webinar  as  $nar) :
+                ?>
+                        <div class="col-12 title-join">
+                            <?= $nar['title'] ?>
+                        </div>
+                        <div class="col-12 title-topic mt-10">
+                            <p> <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $nar['detail'] ?></p>
+                        </div>
+                <?php
+                        $i++;
+                    endforeach;
+                }
+                ?>
                 <div class="accordion mt-20" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
@@ -134,8 +221,18 @@ $this->title = 'webinar';
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary button-register mt-30"> Register for Webinar</button>
-                    <p class="title-sign-in">Already have account? <a href="#sign in" class="no-underline">Sign in</a></p>
+                    <?php
+                    if (isset($register) && count($register) > 0) {
+                        $i = 0;
+                        foreach ($register as $regis) :
+                    ?>
+                            <button type="button" class="btn btn-primary button-register mt-30"> <?= $regis['title'] ?></button>
+                            <p class="title-sign-in"> <?= $regis['detail'] ?><a href="#sign in" class="no-underline"> <?= $regis['detail2'] ?></a></p>
+
+                    <?php
+                        endforeach;
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -144,12 +241,22 @@ $this->title = 'webinar';
 
 <div class="col-12 pr12 mt-50">
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-12 title-Trending">
-            <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> Webinar Playlist
-        </div>
-        <div class="col-lg-6 col-md-6 col-12 title-always">
-            It is always the most vital time to provide the entire picture of company and remind the mission in society. We believe that the purpose of business is ultimately the same all over the world. Let’s grow together.
-        </div>
+        <?php
+        if (isset($webinarplaylist) && count($webinarplaylist) > 0) {
+            $i = 0;
+            foreach ($webinarplaylist  as $playlist) :
+        ?>
+                <div class="col-lg-4 col-md-6 col-12 title-Trending">
+                    <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $playlist['title'] ?>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12 title-always">
+                    <?= $playlist['detail'] ?>
+                </div>
+        <?php
+            endforeach;
+        }
+        ?>
+
     </div>
     <form class="row g-3 mt-50 form-search1">
         <div class="col-4">
@@ -172,253 +279,94 @@ $this->title = 'webinar';
 <div class="col-12 pr12 mt-50">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12 all-player">
-            <div class="row pr12">
-                <div class="col-4">
-                    <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
-                </div>
-                <div class="col-6 mt-10">
-                    <div class="col-12 text-art">
-                        Self-Development
-                    </div>
-                    <div class="col-12 mt-10 picture-star">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-12 mt-10 font-mins">
-                        7:36 mins
-                    </div>
-                </div>
-                <div class="col-2 mt-20 text-end">
-                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
-                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
-                    </a>
-                </div>
-            </div>
-            <div class="row pr12">
-                <div class="col-4 mt-50">
-                    <img src="<?= Yii::$app->homeUrl ?>img/video2.png" class="img-video">
-                </div>
-                <div class="col-6 mt-50">
-                    <div class="col-12 text-art">
-                        Service Operations Management
-                    </div>
-                    <div class="col-12 mt-10 picture-star">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-12 mt-10 font-mins">
-                        20:54 mins
-                    </div>
-                </div>
-                <div class="col-2 mt-50 text-end">
-                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
-                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
-                    </a>
-                </div>
-            </div>
-            <div class="row pr12">
-                <div class="col-4 mt-50">
-                    <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
-                </div>
-                <div class="col-6 mt-50">
-                    <div class="col-12 text-art">
-                        Grow your Company
-                    </div>
-                    <div class="col-12 mt-10 picture-star">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-12 mt-10 font-mins">
-                        40:12 mins
-                    </div>
-                </div>
-                <div class="col-2 mt-50 text-end">
-                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
-                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
-                    </a>
-                </div>
-            </div>
-            <div class="row pr12">
-                <div class="col-4 mt-50">
-                    <img src="<?= Yii::$app->homeUrl ?>img/video2.png" class="img-video">
-                </div>
-                <div class="col-6 mt-50">
-                    <div class="col-12 text-art">
-                        Culture and you!
-                    </div>
-                    <div class="col-12 mt-10 picture-star">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-12 mt-10 font-mins">
-                        20:45 mins
-                    </div>
-                </div>
-                <div class="col-2 mt-50 text-end">
-                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
-                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
-                    </a>
-                </div>
-            </div>
-            <div class="row pr12">
-                <div class="col-4 mt-50">
-                    <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
-                </div>
-                <div class="col-6 mt-50">
-                    <div class="col-12 text-art">
-                        You can make the change
-                    </div>
-                    <div class="col-12 mt-10 picture-star">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-12 mt-10 font-mins">
-                        6:12 mins
-                    </div>
-                </div>
-                <div class="col-2 mt-50 text-end">
-                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
-                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
-                    </a>
-                </div>
-            </div>
+            <?php
+            if (isset($player1) && count($player1) > 0) {
+                $i = 0;
+                foreach ($player1 as $py) :
+                    if ($i < 5) {
+
+            ?>
+                        <div class="row pr12">
+                            <div class="col-4">
+                                <img src="<?= Yii::$app->homeUrl . $py['image'] ?>" class="img-video">
+                            </div>
+                            <div class="col-6 mt-10">
+                                <div class="col-12 text-art">
+                                    <?= $py['title'] ?>
+                                </div>
+                                <div class="col-12 mt-10 picture-star">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-12 mt-10 font-mins">
+                                    <?= $py['detail'] ?>
+                                </div>
+                            </div>
+                            <div class="col-2 mt-20 text-end">
+                                <a href="<?= Yii::$app->homeUrl . $py['url'] ?>">
+                                    <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row pr12 mt-10"></div>
+                        <div class="row pr12 mt-10"></div>
+                        <div class="row pr12 mt-10"></div>
+                        <div class="row pr12 mt-10"></div>
+            <?php
+                    }
+                    $i++;
+                endforeach;
+            }
+            ?>
+
         </div>
         <div class="col-lg-6 col-md-6 col-12 all-play1">
-            <div class="row pr12">
-                <div class="col-4">
-                    <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
-                </div>
-                <div class="col-6 mt-10">
-                    <div class="col-12 text-art">
-                        The Art of Innovation
-                    </div>
-                    <div class="col-12 mt-10 picture-star">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-12 mt-10 font-mins">
-                        10:45 mins
-                    </div>
-                </div>
-                <div class="col-2 mt-20 text-end">
-                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
-                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
-                    </a>
-                </div>
-            </div>
-            <div class="row pr12">
-                <div class="col-4 mt-50">
-                    <img src="<?= Yii::$app->homeUrl ?>img/video2.png" class="img-video">
-                </div>
-                <div class="col-6 mt-50">
-                    <div class="col-12 text-art">
-                        Hiden Success
-                    </div>
-                    <div class="col-12 mt-10 picture-star">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-12 mt-10 font-mins">
-                        17:12 mins
-                    </div>
-                </div>
-                <div class="col-2 mt-50 text-end">
-                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
-                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
-                    </a>
-                </div>
-            </div>
-            <div class="row pr12">
-                <div class="col-4 mt-50">
-                    <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
-                </div>
-                <div class="col-6 mt-50">
-                    <div class="col-12 text-art">
-                        Take Better Decission
-                    </div>
-                    <div class="col-12 mt-10 picture-star">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-12 mt-10 font-mins">
-                        25:45 mins
-                    </div>
-                </div>
-                <div class="col-2 mt-50 text-end">
-                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
-                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
-                    </a>
-                </div>
-            </div>
-            <div class="row pr12">
-                <div class="col-4 mt-50">
-                    <img src="<?= Yii::$app->homeUrl ?>img/video2.png" class="img-video">
-                </div>
-                <div class="col-6 mt-50">
-                    <div class="col-12 text-art">
-                        A corporate Story of success
-                    </div>
-                    <div class="col-12 mt-10 picture-star">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-12 mt-10 font-mins">
-                        3:45 mins
-                    </div>
-                </div>
-                <div class="col-2 mt-50 text-end">
-                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
-                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
-                    </a>
-                </div>
-            </div>
-            <div class="row pr12">
-                <div class="col-4 mt-50">
-                    <img src="<?= Yii::$app->homeUrl ?>img/video1.png" class="img-video">
-                </div>
-                <div class="col-6 mt-50">
-                    <div class="col-12 text-art">
-                        Three Golden Rules
-                    </div>
-                    <div class="col-12 mt-10 picture-star">
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                        <i class="fa fa-star" aria-hidden="true"></i>
-                    </div>
-                    <div class="col-12 mt-10 font-mins">
-                        33:12 mins
-                    </div>
-                </div>
-                <div class="col-2 mt-50 text-end">
-                    <a href="<?= Yii::$app->homeUrl ?>site-country/webinar-video">
-                        <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
-                    </a>
-                </div>
-            </div>
+            <?php
+            if (isset($player2) && count($player2) > 0) {
+                $i = 0;
+                foreach ($player2  as  $pla) :
+                    if ($i < 5) {
+
+            ?>
+                        <div class="row pr12">
+                            <div class="col-4">
+                                <img src="<?= Yii::$app->homeUrl . $pla['image'] ?>" class="img-video">
+                            </div>
+                            <div class="col-6 mt-10">
+                                <div class="col-12 text-art">
+                                    <?= $pla['title'] ?>
+                                </div>
+                                <div class="col-12 mt-10 picture-star">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-12 mt-10 font-mins">
+                                    <?= $pla['detail'] ?>
+                                </div>
+                            </div>
+                            <div class="col-2 mt-20 text-end">
+                                <a href="<?= Yii::$app->homeUrl . $pla['url'] ?>">
+                                    <h1><i class="fa fa-caret-square-o-right" aria-hidden="true"></i></h1>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row pr12 mt-10"></div>
+                        <div class="row pr12 mt-10"></div>
+                        <div class="row pr12 mt-10"></div>
+                        <div class="row pr12 mt-10"> </div>
+
+            <?php
+                    }
+                    $i++;
+                endforeach;
+            }
+            ?>
         </div>
     </div>
 </div>
@@ -434,55 +382,59 @@ $this->title = 'webinar';
 <div class="col-12 pr12" style="background-color: #F4F4F6;">
     <div class="col-12 pr12 mt-50">
         <div class="row">
-            <div class="col-lg-4 col-md-6 col-12 title-Trending mt-50">
-                <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> What Participants Says
-            </div>
-            <div class="col-lg-6 col-md-6 col-12 title-always mt-50 pl-40">
-                It is always the most vital time to provide the entire picture of company and remind the mission in society. We believe that the purpose of business is ultimately the same all over the world. Let’s grow together.
-            </div>
+            <?php
+            if (isset($participants) && count($participants) > 0) {
+                $i = 0;
+                foreach ($participants  as $pants) :
+            ?>
+                    <div class="col-lg-4 col-md-6 col-12 title-Trending mt-50">
+                        <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $pants['title'] ?>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-12 title-always mt-50 pl-40">
+                        <?= $pants['detail'] ?>
+                    </div>
+            <?php
+                    $i++;
+                endforeach;
+            }
+            ?>
         </div>
     </div>
     <div class="row">
         <div class="col-lg-3 col-md-6 col-12 mt-50 pl-40">
-            <div class="col-12 mt-20">
-                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left:20px;">
-                    <div class="card-body p-4" style="background-color: #FFFFFF;">
-                        <div class="col-12">
-                            I would like to take this oppertunity to thank SA Places for the great service rendered to us and in particular Estelle. You got me the best place ever in just a few moments after I spoke to you.
-                        </div>
-                        <div class="d-flex text-black mt-20">
-                            <div class="flex-shrink-0">
-                                <img src="<?= Yii::$app->homeUrl ?>img/minnie-horn.png" class="img-minnie">
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                                <h5 class="mb-1">Minnie Horn</h5>
-                                <p class="mb-2 pb-1" style="color: #4F96FF;">
-                                    @hello.mimmie
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 mt-20">
-                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left:20px;">
-                    <div class="card-body p-4" style="background-color: #FFFFFF;">
-                        <div class="col-12">
-                            Many thanks for you kind and efficient service. I have already and will definitely continue to recommend your services to others in the future. </div>
-                        <div class="d-flex text-black mt-20">
-                            <div class="flex-shrink-0">
-                                <img src="<?= Yii::$app->homeUrl ?>img/Merryn-Manley.png" class="img-Merryny">
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                                <h5 class="mb-1">Merryn Manley</h5>
-                                <p class="mb-2 pb-1" style="color: #4F96FF;">
-                                    @merryn.manley
-                                </p>
+            <?php
+            if (isset($comment) && count($comment) > 0) {
+                $i = 0;
+                foreach ($comment as $com) :
+                    if ($i < 2) {
+
+            ?>
+                        <div class="col-12 mt-20">
+                            <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left:20px;">
+                                <div class="card-body p-4" style="background-color: #FFFFFF;">
+                                    <div class="col-12">
+                                        <?= $com['title'] ?>
+                                    </div>
+                                    <div class="d-flex text-black mt-20">
+                                        <div class="flex-shrink-0">
+                                            <img src="<?= Yii::$app->homeUrl . $com['image'] ?>" class="img-minnie">
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h5 class="mb-1"><?= $com['detail'] ?></h5>
+                                            <p class="mb-2 pb-1" style="color: #4F96FF;">
+                                                <?= $com['detail2'] ?>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+            <?php
+                    }
+                    $i++;
+                endforeach;
+            }
+            ?>
         </div>
         <div class="col-lg-3 col-md-6 col-12 mt-50 pl-30">
             <div class="col-12 mt-20">
@@ -610,28 +562,60 @@ $this->title = 'webinar';
 </div>
 
 <div class="col-12 pr12">
-    <div class="row">
-        <div class="col-lg-4 col-md-6 col-12 title-Trending mt-50">
-            <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> Meet Presenters
-        </div>
-        <div class="col-lg-6 col-md-6 col-12 title-always mt-50 pl-40">
-            It is always the most vital time to provide the entire picture of company and remind the mission in society. We believe that the purpose of business is ultimately the same all over the world. Let’s grow together. </div>
-    </div>
+    <?php
+    if (isset($meet) && count($meet) > 0) {
+        $i = 0;
+        foreach ($meet as $mee) :
+    ?>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 title-Trending mt-50">
+                    <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $mee['title'] ?>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12 title-always mt-50 pl-40">
+                    <?= $mee['detail'] ?>
+                </div>
+            </div>
+    <?php
+            $i++;
+        endforeach;
+    }
+    ?>
 </div>
 
+
 <div class="col-12">
-    <img src="<?= Yii::$app->homeUrl ?>img/ceo.png" class="img-ceo">
+    <?php
+    if (isset($meet) && count($meet) > 0) {
+        $i = 0;
+        foreach ($meet as $mee) :
+    ?>
+            <img src="<?= Yii::$app->homeUrl ?>img/ceo.png" class="img-ceo">
+    <?php
+            $i++;
+        endforeach;
+    }
+    ?>
 </div>
 
 <div class="col-12 pr12">
-    <div class="row">
-        <div class="col-lg-4 col-md-6 col-12 title-Trending mt-50">
-            <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> Free Registration
-        </div>
-        <div class="col-lg-6 col-md-6 col-12 title-always mt-50 pl-40">
-            It is always the most vital time to provide the entire picture of company and remind the mission in society. We believe that the purpose of business is ultimately the same all over the world. Let’s grow together.
-        </div>
-    </div>
+    <?php
+    if (isset($meet) && count($meet) > 0) {
+        $i = 0;
+        foreach ($meet as $mee) :
+    ?>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 title-Trending mt-50">
+                    <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $mee['detail2'] ?>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12 title-always mt-50 pl-40">
+                    <?= $mee['detail3'] ?>
+                </div>
+            </div>
+    <?php
+            $i++;
+        endforeach;
+    }
+    ?>
 </div>
 
 <div class="col-12 pr12">

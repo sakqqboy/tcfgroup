@@ -91,7 +91,10 @@ class SiteCountryController extends Controller
             ->asArray()
             ->one();
 
-
+        $r = Content::find()
+            ->where(['contentName' => "Services"])
+            ->asArray()
+            ->one();
 
 
         $shape = [];
@@ -102,6 +105,7 @@ class SiteCountryController extends Controller
         $legal = [];
         $footer = [];
         $topic = [];
+        $services = [];
 
         if (isset($pe) && !empty($pe)) {
             $shape = ContentDetail::find()
@@ -151,7 +155,12 @@ class SiteCountryController extends Controller
                 ->asArray()
                 ->all();
         }
-
+        if (isset($r) && !empty($r)) {
+            $services = ContentDetail::find()
+                ->where(["contentId" => $r["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
 
 
         // throw new Exception(count($topic));
@@ -165,7 +174,8 @@ class SiteCountryController extends Controller
             "professiona" => $professiona,
             "legal" => $legal,
             "footer" => $footer,
-            "topic" => $topic
+            "topic" => $topic,
+            "services" => $services
         ]);
     }
     public function actionNewsletter()
@@ -212,6 +222,10 @@ class SiteCountryController extends Controller
             ->asArray()
             ->one();
 
+        $r = Content::find()
+            ->where(["contentName" => "Services"])
+            ->asArray()
+            ->one();
 
         $newsletter = [];
         $import = [];
@@ -221,6 +235,7 @@ class SiteCountryController extends Controller
         $taxassessment2 = [];
         $footerbangladresh = [];
         $topic = [];
+        $services = [];
 
 
         if (isset($new) && !empty($new)) {
@@ -271,6 +286,12 @@ class SiteCountryController extends Controller
                 ->asArray()
                 ->all();
         }
+        if (isset($r) && !empty($r)) {
+            $services = ContentDetail::find()
+                ->where(["contentId" => $r["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
 
         // throw new Exception(count($topic));
         // throw new Exception(count($taxassessment1));
@@ -284,7 +305,8 @@ class SiteCountryController extends Controller
             "taxassessment1" => $taxassessment1,
             "taxassessment2" => $taxassessment2,
             "footerbangladresh" => $footerbangladresh,
-            "topic" => $topic
+            "topic" => $topic,
+            "services" => $services
         ]);
     }
     public function actionServices()

@@ -322,6 +322,10 @@
     padding-left: 70px;
 }
 
+.links-taxas {
+    padding-left: 40px;
+}
+
 
 
 @media(max-width: 992px) {
@@ -531,8 +535,8 @@
     }
 
     .img-hunter {
-        padding-left: -10px;
-        padding-right: 20px;
+        margin-left: -30px;
+
     }
 
     .img-daoudi {
@@ -634,6 +638,7 @@
 
     .title-import1 {
         width: 350px;
+        padding-left: 40px;
     }
 
     .img-height {
@@ -653,13 +658,28 @@
     }
 
     .title-older {
-        padding-left: 30px;
+        padding-left: 40px;
     }
 
     .title-Labor {
         font-size: 25px;
         width: 370px;
+        padding-left: 40px;
     }
 
+    .links-taxas {
+        padding-left: 10px;
+    }
 
+    .text-update {
+        padding-left: 50px;
+    }
+
+    .text-project {
+        padding-left: 50px;
+    }
+
+    .input-group-form {
+        padding-left: 50px;
+    }
 }

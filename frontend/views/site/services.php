@@ -122,9 +122,20 @@ $this->title = 'services';
 <div class="col-12 pr12 page-tree">
     <div class="row mt-20">
         <div class="col-md-4 col-12">
-            <div class="col-12 form-services mt-50">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Service at Every Stage
-            </div>
+            <?php
+            if (isset($services) && count($services) > 0) {
+                $i = 0;
+                foreach ($services as $r) :
+            ?>
+                    <div class="col-12 form-services mt-50">
+                        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $r['title'] ?>
+                    </div>
+            <?php
+
+                    $i++;
+                endforeach;
+            }
+            ?>
             <div class="row mt-40 form-services-page">
                 <div class="col-4">
                     Select Country
@@ -191,8 +202,7 @@ $this->title = 'services';
 
                     ?>
                                 <div class="col-lg-4 col-md-6 col-sm-4 col-8">
-                                    <div class="card mt-20 form-page-text">
-
+                                    <div class="card col-10 mt-20 form-page-text">
                                         <div class="text-center">
                                             <img src="<?= Yii::$app->homeUrl . $table['image'] ?>" class="card-img-top">
                                             <div class="card-body text-center">
@@ -248,31 +258,27 @@ $this->title = 'services';
                         ?>
                                 <p><img src="<?= Yii::$app->homeUrl . $t['image'] ?>" style="width: 90px;"></p>
 
-                        <?php
+                            <?php
 
                                 $i++;
                             endforeach;
                         }
-                        ?>
 
-                        <?php
                         if (isset($star) && count($star) > 0) {
                             $i = 0;
                             foreach ($star as $u) :
-                        ?>
+                            ?>
                                 <p><img src="<?= Yii::$app->homeUrl . $u['image'] ?>" style="width: 90px;"></p>
 
-                        <?php
+                            <?php
                                 $i++;
                             endforeach;
                         }
-                        ?>
 
-                        <?php
                         if (isset($itemstar) && count($itemstar) > 0) {
                             $i = 0;
                             foreach ($itemstar as $v) :
-                        ?>
+                            ?>
                                 <p><img src="<?= Yii::$app->homeUrl . $v['image'] ?>" style="width: 90px;"></p>
 
                         <?php
@@ -372,11 +378,21 @@ $this->title = 'services';
     <div class="row">
         <div class="col-12 title-all">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-6">
-                    <div class="col-12 text-the-best">
-                        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> THE BEST OF TCF
-                    </div>
+                <div class="col-lg-6 col-md-6 col-6 form-oftcf">
+                    <?php
+                    if (isset($services) && count($services) > 0) {
+                        $i = 0;
+                        foreach ($services as $r) :
+                    ?>
+                            <div class="col-12 text-the-best">
+                                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $r['detail'] ?>
+                            </div>
+                    <?php
 
+                            $i++;
+                        endforeach;
+                    }
+                    ?>
                     <?php
                     if (isset($picturegraphics) && count($picturegraphics) > 0) {
                         $i = 0;
@@ -384,7 +400,6 @@ $this->title = 'services';
                             if ($i < 3) {
 
                     ?>
-
                                 <div class="col-12 mt-10 page-1">
                                     <img src="<?= Yii::$app->homeUrl . $tokyo['image'] ?>" class="image-account"> <?= $tokyo['title'] ?>
                                 </div>
@@ -397,16 +412,41 @@ $this->title = 'services';
                         endforeach;
                     }
                     ?>
+
+
+
                     <div class="col-12 cal-form">
-                        <div class="card form-card">
-                            <a href="#" class="no-underline1"> Download the TCG e-Book and learn more about us <p class="card download"> Download <i class="fa fa-download" aria-hidden="true"></i></p></a>
-                        </div>
+                        <?php
+                        if (isset($most) && count($most) > 0) {
+                            $i = 0;
+                            foreach ($most as $mos) :
+                        ?>
+                                <div class="card form-card">
+                                    <?= $mos['detail'] ?> <a href="#" class="no-underline"><span class="card download"> <?= $mos['detail2'] ?> <i class="fa fa-download" aria-hidden="true"></i> </a></span>
+                                </div>
+                        <?php
+                                $i++;
+                            endforeach;
+                        }
+                        ?>
+
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-6">
-                    <div class="col-12 text-form-most">
-                        It is always the most vital time to provide the entire picture of company and remind the mission in society. We believe that the purpose of business is ultimately the same all over the world. Let’s grow together.
-                    </div>
+                    <?php
+                    if (isset($most) && count($most) > 0) {
+                        $i = 0;
+                        foreach ($most as $mos) :
+                    ?>
+                            <div class="col-12 text-form-most">
+                                <?= $mos['title'] ?>
+                            </div>
+                    <?php
+                            $i++;
+                        endforeach;
+                    }
+                    ?>
+
                     <?php
                     if (isset($best) && count($best) > 0) {
                         $i = 0;
@@ -579,4 +619,3 @@ $this->title = 'services';
         </div>
     </div>
 </div>
-<div class="col-12" style="margin-top:50px;"></div>

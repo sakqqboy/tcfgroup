@@ -208,6 +208,10 @@
     padding-left: 70px;
 }
 
+.footer-BD {
+    padding-left: 35px;
+}
+
 
 @media(max-width: 992px) {
     .title-import {
@@ -352,4 +356,19 @@
     .footer1-country {
         padding-left: 30px;
     }
+
+    .procress {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .button-register {
+        margin-left: 40px;
+    }
+
+    .title-sign-in {
+        margin-left: 40px;
+    }
+
+
 }

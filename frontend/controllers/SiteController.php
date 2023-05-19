@@ -99,8 +99,13 @@ class SiteController extends Controller
             ->asArray()
             ->one();
 
+        $sertitle = Content::find()
+            ->where(["contentName" => "Titleservice"])
+            ->asArray()
+            ->one();
+
         $d = Content::find()
-            ->where(["contentName" => "Business "])
+            ->where(["contentName" => "Business"])
             ->asArray()
             ->one();
         $e = Content::find()
@@ -142,6 +147,7 @@ class SiteController extends Controller
         $country = [];
         $branchcountry = [];
         $countrypage = [];
+        $titleservice = [];
 
 
 
@@ -207,9 +213,18 @@ class SiteController extends Controller
                 ->asArray()
                 ->all();
         }
+        if (isset($sertitle) && !empty($sertitle)) {
+            $titleservice = ContentDetail::find()
+                ->where(["contentId" => $sertitle["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
 
 
-        // throw new Exception(count($branch));
+        // throw new Exception(count($banners));
+        // throw new Exception(count($branchcountry));
+        // throw new Exception(count($company));
+
         return $this->render('index', [
             "banners" => $banners,
             "branch" => $branch,
@@ -220,7 +235,8 @@ class SiteController extends Controller
             "footer" => $footer,
             "country" => $country,
             "branchcountry" => $branchcountry,
-            "countrypage" => $countrypage
+            "countrypage" => $countrypage,
+            "titleservice" => $titleservice
 
         ]);
     }
@@ -317,6 +333,10 @@ class SiteController extends Controller
             ->asArray()
             ->one();
 
+        $mos = Content::find()
+            ->where(["contentName" => "Most"])
+            ->asArray()
+            ->one();
 
 
         $services = [];
@@ -337,6 +357,7 @@ class SiteController extends Controller
         $taxation = [];
         $stage = [];
         $background = [];
+        $most = [];
 
 
         if (isset($r) && !empty($r)) {
@@ -447,7 +468,12 @@ class SiteController extends Controller
                 ->asArray()
                 ->all();
         }
-
+        if (isset($mos) && !empty($mos)) {
+            $most = ContentDetail::find()
+                ->where(["contentId" => $mos["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
 
         return $this->render('services', [
             "services" => $services,
@@ -467,7 +493,8 @@ class SiteController extends Controller
             "accounting" => $accounting,
             "taxation" => $taxation,
             "stage" => $stage,
-            "background" => $background
+            "background" => $background,
+            "most" => $most
 
         ]);
     }

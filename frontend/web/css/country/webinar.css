@@ -5,7 +5,6 @@
 
 .img-background {
     width: 100%;
-    margin-top: 90px;
 }
 
 .title-bangladesh {
@@ -63,7 +62,7 @@
 .image8 {
     margin-top: -50px;
     margin-left: 180px;
-    font-size: 10px;
+    font-size: 13px;
 
 }
 
@@ -74,7 +73,7 @@
 
 .form-search1 {
     font-family: 'klavika';
-    padding-left: 70px;
+    padding-left: 60px;
 }
 
 .img-video {
@@ -185,7 +184,7 @@
 }
 
 .all-player {
-    padding-left: 70px;
+    padding-left: 30px;
 }
 
 .all-play1 {
@@ -257,7 +256,7 @@
 
     .image8 {
         margin-top: -40px;
-        width: 170px;
+        width: 240px;
         margin-left: 120px;
     }
 
@@ -351,11 +350,11 @@
     }
 
     .all-player {
-        padding-left: 40px;
+        padding-left: 10px;
     }
 
     .all-play1 {
-        padding-left: 40px;
+        padding-left: 10px;
         margin-top: 50px
     }
 
@@ -364,7 +363,7 @@
     }
 
     .form-search1 {
-        padding-left: 40px;
+        padding-left: 35px;
     }
 
     .form-sort {

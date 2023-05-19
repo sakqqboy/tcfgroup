@@ -120,58 +120,67 @@ $this->title = 'TCFGROUP';
     </div>
 </div>
 
-
 <div class="col-12 pr12">
     <div class="row">
-        <?php
-        if (isset($company) && count($company) > 0) {
-            $i = 0;
-            foreach ($company as $c) :
-
-        ?>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
+        <input type="hidden" id="total-company" value="<?= count($company) ?>">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+            <?php
+            if (isset($titleservice) && count($titleservice) > 0) {
+                $i = 0;
+                foreach ($titleservice  as  $sertitle) :
+            ?>
                     <div class="col-lg-12 text-establish">
-                        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $c['title'] ?>
+                        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $sertitle['title'] ?>
                     </div>
-                    <div class="col-lg-12 Company">
-                        <li><?= $c['detail'] ?></li> <br>
-                        <li><?= $c['detail2'] ?></li> <br>
-                        <li><?= $c['detail3'] ?></li> <br>
-                        <li><?= $c['detail4'] ?></li> <br>
-                        <li><?= $c['detail5'] ?></li> <br>
-                        <li><?= $c['detail6'] ?></li><br>
-                    </div>
-                </div>
-        <?php
+                    <?php
+                    $i++;
+                endforeach;
+            }
+            if (isset($company) && count($company) > 0) {
+                $i = 0;
+                foreach ($company as $c) :
+                    if ($i < 6) {
 
-                $i++;
-            endforeach;
-        }
-        ?>
-        <?php
-        if (isset($branchcountry) && count($branchcountry) > 0) {
-            $i = 0;
-            foreach ($branchcountry as $k) :
-        ?>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12 show-text-home">
-                    <div class="col-12 text-legal">
-                        <?= $k['title'] ?>
+                    ?>
+                        <div class="col-lg-12 Company">
+                            <li onclick="javascript:showContent(<?= $i ?>)"> <?= $c['title'] ?> </li>
+                        </div>
+            <?php
+                    }
+                    $i++;
+                endforeach;
+            }
+            ?>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 show-text-home">
+            <?php
+            if (isset($company) && count($company) > 0) {
+                $i = 0;
+                foreach ($company as $c) :
+
+            ?>
+                    <div class="col-12 text-legal" style="display:<?= $i == 0 ? '' : 'none' ?>" id="content-title-<?= $i ?>">
+                        <?= $c['detail'] ?>
                     </div>
-                    <div class="col-12 Our pt-20">
-                        <?= $k['detail'] ?> <br>
-                        <button type="button" class="btn btn-primary button-text5"> <?= $k['detail2'] ?></button>
+                    <div class="col-12 Our pt-20" style="display:<?= $i == 0 ? '' : 'none' ?>" id="content-title2-<?= $i ?>">
+                        <?= $c['detail2'] ?> <br>
+                        <button type="button" class="btn btn-primary button-text5"> <?= $c['detail3'] ?></button>
                     </div>
-                </div>
-                <div class="col-lg-4 col-12">
-                    <img src="<?= Yii::$app->homeUrl . $k['image'] ?>" class="img-background">
-                </div>
-        <?php
-                $i++;
-            endforeach;
-        }
-        ?>
+            <?php
+
+
+                    $i++;
+                endforeach;
+            }
+            ?>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12" style="padding-right:0px;">
+            <img src="<?= Yii::$app->homeUrl ?>image/background.png" class="img-background">
+        </div>
     </div>
 </div>
+
+
 
 
 
@@ -219,11 +228,11 @@ $this->title = 'TCFGROUP';
                 <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $e['title'] ?>
             </div>
             <div class="text3">
-                <p> <span class="font-color-blue"><?= $e['detail'] ?> </span> </p>
-                <p> &nbsp;&nbsp;&nbsp;&nbsp; <span class="font-color-blue"> <?= $e['detail2'] ?></span> </p>
+                <p> <?= $e['detail'] ?> <span class="font-color-blue"><?= $e['detail3'] ?> </span> is</p>
+                <p>&nbsp;&nbsp;&nbsp; <?= $e['detail2'] ?><span class="font-color-blue"> <?= $e['detail4'] ?></span> ❞ </p>
             </div>
             <div class="col-md-5 col-12 text-tokyo">
-                <?= $e['detail3'] ?>
+                <?= $e['detail5'] ?>
             </div>
 
     <?php

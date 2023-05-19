@@ -47,9 +47,18 @@ $this->title = 'newsletter';
 </div>
 
 <div class="col-12 pr12 mt-20">
-    <div class="col-12 title-Trending">
-        <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> Trending Topics
-    </div>
+    <?php
+    if (isset($services) && count($services) > 0) {
+        $i = 0;
+        foreach ($services as $r) :
+    ?>
+            <div class="col-12 title-Trending">
+                <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $r['detail2'] ?>
+            </div>
+    <?php
+        endforeach;
+    }
+    ?>
     <div class="row mt-50 procress">
         <?php
         if (isset($topic) && count($topic) > 0) {
@@ -90,7 +99,7 @@ $this->title = 'newsletter';
                 <div class="col-lg-6 col-md-6 col-12">
                     <p class="title-import mt-10"><?= $port['title'] ?></p> <br>
                     <p class="title-zero"><?= $port['detail'] ?></p> <br>
-                    <p class="circle-icon"><a href="#read more" class="no-underline"> <?= $port['detail2'] ?> <i class="fa fa-chevron-circle-right circle-icon" aria-hidden="true"></i></p></a>
+                    <p class="circle-icon"><a href="#read more" class="no-underline"> <?= $port['detail2'] ?> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></p></a>
                 </div>
             </div>
     <?php
@@ -178,8 +187,8 @@ $this->title = 'newsletter';
     </div>
 </div>
 
-<div class="col-12 pr12 mt-50">
-    <div class="row pl-40 pr-20">
+<div class="col-12 pr12 mt-50 links-taxas">
+    <div class="row pr-20">
         <?php
         if (isset($taxassessment1) && count($taxassessment1) > 0) {
             $i = 0;
@@ -205,8 +214,8 @@ $this->title = 'newsletter';
     </div>
 </div>
 
-<div class="col-12 pr12 mt-50">
-    <div class="row pl-40 pr-20">
+<div class="col-12 pr12 mt-50 links-taxas">
+    <div class="row pr-20">
         <?php
         if (isset($taxassessment2) && count($taxassessment2) > 0) {
             $i = 0;
@@ -252,7 +261,7 @@ if (isset($footerbangladresh) && count($footerbangladresh) > 0) {
     $i = 0;
     foreach ($footerbangladresh as $footerbangla) :
 ?>
-        <div class="col-12 pr12 blue pt-20 pb-10 mt-50 pl-10">
+        <div class="col-12 pr12 blue pt-20 pb-10 mt-50">
             <div class="row">
                 <div class="col-1g-10 col-md-10 col-12 text-update">
                     <p><?= $footerbangla['title'] ?></p>

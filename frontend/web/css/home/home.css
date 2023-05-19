@@ -158,18 +158,19 @@
 }
 
 .Company {
-    margin-top: 10%;
+    margin-top: 40px;
     padding-left: 70px;
     font-size: 18px;
     font-weight: 300;
     line-height: 30px;
     font-family: 'Klavika';
     font-style: normal;
+    cursor: pointer;
 }
 
 .img-background {
-    width: 102.5%;
-    height: 500px;
+    width: 100px;
+
 }
 
 .button-get {
@@ -325,6 +326,7 @@
 .blue {
     background-color: #0B4A8E;
     color: white;
+    padding-left: 10px;
 }
 
 .text-update {
@@ -386,8 +388,7 @@
     margin-top: 40px;
     min-height: 100px;
     padding-top: 20px;
-    padding-left: 70px;
-    padding-bottom: 20px;
+    padding-left: 30px;
 }
 
 .input-group-form {
@@ -421,7 +422,7 @@
 
 .footer-box {
     line-height: 20px;
-    padding-left: 70px;
+    padding-left: 80px;
 }
 
 .footer-bottom {
@@ -830,4 +831,7 @@
         padding-left: 40px;
     }
 
+    .logo-footer {
+        margin-left: 50px;
+    }
 }

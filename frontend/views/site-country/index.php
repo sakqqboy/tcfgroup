@@ -33,9 +33,19 @@ $this->title = 'Bangladesh';
 
 
 <div class="col-12 pr12 mt-50">
-    <div class="col-12 title-Trending">
-        <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> Trending Topics
-    </div>
+    <?php
+    if (isset($services) && count($services) > 0) {
+        $i = 0;
+        foreach ($services as $r) :
+    ?>
+            <div class="col-12 title-Trending">
+                <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $r['detail2'] ?>
+            </div>
+    <?php
+            $i++;
+        endforeach;
+    }
+    ?>
     <div class="row mt-50 procress">
         <?php
         if (isset($topic) && count($topic) > 0) {
@@ -73,7 +83,7 @@ $this->title = 'Bangladesh';
                 <div class="col-lg-6 col-md-6 col-12">
                     <p class="title-import mt-10"><?= $port['title'] ?></p> <br>
                     <p class="title-zero"><?= $port['detail'] ?></p> <br>
-                    <p class="circle-icon"><a href="#read more" class="no-underline"> <?= $port['detail2'] ?></a> <i class="fa fa-chevron-circle-right circle-icon" aria-hidden="true"></i></p>
+                    <p class="circle-icon"><a href="#read more" class="no-underline"> <?= $port['detail2'] ?> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a></p>
                 </div>
             </div>
     <?php
@@ -197,8 +207,10 @@ $this->title = 'Bangladesh';
                     </div>
                 </div>
             </div>
-            <button type="button" class="btn btn-primary button-register mt-30"> Register for Webinar</button>
-            <p class="title-sign-in">Already have account? <a href="#sign in" class="no-underline">Sign in</a></p>
+            <div class="col-12">
+                <button type="button" class="btn btn-primary button-register mt-30"> Register for Webinar</button>
+                <p class="title-sign-in">Already have account? <a href="#sign in" class="no-underline">Sign in</a></p>
+            </div>
         </div>
     </div>
 </div>

@@ -324,9 +324,6 @@ if (isset($understanding) && count($understanding) > 0) {
 </div>
 
 
-
-
-
 <div class="col-12">
     <img src="<?= Yii::$app->homeUrl ?>img/image6.png" class="image-image6">
 </div>

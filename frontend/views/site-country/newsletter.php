@@ -70,7 +70,7 @@ $this->title = 'newsletter';
         ?>
                     <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10">
                         <div class="card-body">
-                            <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
+                            <!-- <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height"> -->
                             <p class="home1"><?= $tp['title'] ?> </p>
                             <p class="home2"><?= $tp['detail'] ?></p>
 

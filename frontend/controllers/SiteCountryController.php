@@ -96,6 +96,10 @@ class SiteCountryController extends Controller
             ->asArray()
             ->one();
 
+        $profes = Content::find()
+            ->where(['contentName' => "Servicesbangladesh"])
+            ->asArray()
+            ->one();
 
         $shape = [];
         $import = [];
@@ -106,6 +110,7 @@ class SiteCountryController extends Controller
         $footer = [];
         $topic = [];
         $services = [];
+        $servicesbangladesh = [];
 
         if (isset($pe) && !empty($pe)) {
             $shape = ContentDetail::find()
@@ -161,11 +166,16 @@ class SiteCountryController extends Controller
                 ->asArray()
                 ->all();
         }
+        if (isset($profes) && !empty($profes)) {
+            $servicesbangladesh = ContentDetail::find()
+                ->where(["contentId" => $profes["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+
 
 
         // throw new Exception(count($topic));
-
-
         return $this->render('index', [
             "shape" => $shape,
             "import" => $import,
@@ -175,7 +185,8 @@ class SiteCountryController extends Controller
             "legal" => $legal,
             "footer" => $footer,
             "topic" => $topic,
-            "services" => $services
+            "services" => $services,
+            "servicesbangladesh" => $servicesbangladesh
         ]);
     }
     public function actionNewsletter()

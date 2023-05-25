@@ -31,11 +31,10 @@ class AppAsset extends AssetBundle
         'css/country/about2.css',
         'css/country/contact2.css',
         'css/country/resources.css',
-
-
     ];
     public $js = [
         'js/content.js',
+        'js/content2.js',
 
     ];
     public $depends = [

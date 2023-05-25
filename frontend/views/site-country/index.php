@@ -56,7 +56,7 @@ $this->title = 'Bangladesh';
         ?>
                     <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10">
                         <div class="card-body">
-                            <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height">
+                            <!-- <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height"> -->
                             <p class="home1"><?= $tp['title'] ?></p>
                             <p class="home2"><?= $tp['detail'] ?></p>
                         </div>
@@ -217,65 +217,71 @@ $this->title = 'Bangladesh';
 
 
 
-<div class="col-12 pr12 mt-50 background-site">
+<div class="col-12 pr12 background-site">
     <div class="row">
-
+        <input type="hidden" id="total-servicesbangladesh" value="<?= count($servicesbangladesh) ?>">
         <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
             <?php
             if (isset($professiona) && count($professiona) > 0) {
                 $i = 0;
                 foreach ($professiona  as $pro) :
-
-
             ?>
                     <div class="col-lg-12 title-Trending">
                         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $pro['title'] ?>
                     </div>
-                    <div class="col-lg-12 mt-20 Company">
-                        <li><?= $pro['detail'] ?></li> <br>
-                        <li><?= $pro['detail2'] ?></li> <br>
-                        <li><?= $pro['detail3'] ?></li> <br>
-                        <li><?= $pro['detail4'] ?></li> <br>
-                        <li><?= $pro['detail5'] ?></li> <br>
-                        <li> <?= $pro['detail6'] ?> </li><br>
-                    </div>
+                    <?php
+                    $i++;
+                endforeach;
+            }
+            if (isset($servicesbangladesh) && count($servicesbangladesh) > 0) {
+                $i = 0;
+                foreach ($servicesbangladesh as $profes) :
+                    if ($i < 6) {
 
+                    ?>
+                        <div class="col-lg-12 Company">
+                            <li onclick="javascript:showBangladresh(<?= $i ?>)"> <?= $profes['title'] ?></li>
+                        </div>
             <?php
 
+                    }
+                    $i++;
                 endforeach;
             }
             ?>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6 col-12 show-text-home">
             <?php
-            if (isset($legal) && count($legal) > 0) {
+            if (isset($servicesbangladesh) && count($servicesbangladesh) > 0) {
                 $i = 0;
-                foreach ($legal  as $gal) :
+                foreach ($servicesbangladesh  as $profes) :
 
             ?>
-                    <div class="col-12 text-legal pl-20">
-                        <?= $gal['title'] ?>
+                    <div class="col-12 text-legal pl-20" style="display: <?= $i == 0 ? '' : 'none' ?>" id="bangladresh-detail-<?= $i ?>">
+                        <?= $profes['detail'] ?>
                     </div>
-                    <div class="col-12 Our pt-20 pl-20">
-                        <?= $gal['detail'] ?> <br>
-                        <button type="button" class="btn btn-primary button-text5"><?= $gal['detail2'] ?></button>
+                    <div class="col-12 Our pt-20 pl-20" style="display: <?= $i == 0 ? '' : 'none' ?>" id="bangladresh-detail2-<?= $i ?>">
+                        <?= $profes['detail2'] ?> <br>
+                        <button type="button" class="btn btn-primary button-text5"><?= $profes['detail3'] ?></button>
                     </div>
             <?php
 
+                    $i++;
                 endforeach;
             }
             ?>
         </div>
         <div class="col-lg-4 col-12">
             <?php
-            if (isset($legal) && count($legal) > 0) {
+            if (isset($professiona) && count($professiona) > 0) {
                 $i = 0;
-                foreach ($legal  as $gal) :
+                foreach ($professiona  as $pro) :
 
             ?>
-                    <img src="<?= Yii::$app->homeUrl . $gal['image'] ?>" class="img-zgif">
+                    <img src="<?= Yii::$app->homeUrl . $pro['image'] ?>" class="img-zgif">
             <?php
 
+                    $i++;
                 endforeach;
             }
             ?>

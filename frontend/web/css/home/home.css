@@ -164,8 +164,8 @@
     font-weight: 300;
     line-height: 30px;
     font-family: 'Klavika';
-    font-style: normal;
     cursor: pointer;
+    color: rgb(37, 140, 180);
 }
 
 .img-background {

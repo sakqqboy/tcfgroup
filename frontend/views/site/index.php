@@ -123,7 +123,7 @@ $this->title = 'TCFGROUP';
 <div class="col-12 pr12">
     <div class="row">
         <input type="hidden" id="total-company" value="<?= count($company) ?>">
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
             <?php
             if (isset($titleservice) && count($titleservice) > 0) {
                 $i = 0;
@@ -145,6 +145,7 @@ $this->title = 'TCFGROUP';
                         <div class="col-lg-12 Company">
                             <li onclick="javascript:showContent(<?= $i ?>)"> <?= $c['title'] ?> </li>
                         </div>
+
             <?php
                     }
                     $i++;
@@ -179,8 +180,6 @@ $this->title = 'TCFGROUP';
         </div>
     </div>
 </div>
-
-
 
 
 

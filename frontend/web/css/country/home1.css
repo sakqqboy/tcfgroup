@@ -16,14 +16,10 @@
 }
 
 .card-body {
-    background: #EFF8FF;
+    background: #F8FDFF;
     border-radius: 8px;
 }
 
-.img-height {
-    width: 140px;
-    margin-left: -12px;
-}
 
 .main-page-form {
     width: 12rem;
@@ -82,6 +78,34 @@
     padding-top: 20px;
     font-family: 'klavika';
 }
+
+.home1-copy {
+    font-size: 15px;
+    font-weight: bolder;
+    padding-top: 20px;
+    font-family: 'klavika';
+    color: #0B4A8E;
+
+}
+
+.home2-copy {
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 700;
+    font-family: 'klavika';
+    color: #0B4A8E;
+}
+
+.body-copy1 {
+    height: 5px;
+    background-color: #CAECFF;
+}
+
+.body-copy {
+    height: 5px;
+    background-color: #0B4A8E;
+}
+
 
 .home2 {
     font-size: 13px;
@@ -202,6 +226,7 @@
 
 .procress {
     padding-left: 70px;
+    cursor: default;
 }
 
 .footer1-country {

@@ -165,7 +165,8 @@
     line-height: 30px;
     font-family: 'Klavika';
     cursor: pointer;
-    color: rgb(37, 140, 180);
+    color: hwb(196 12% 54%);
+
 }
 
 .img-background {
@@ -190,6 +191,8 @@
     font-weight: 300;
     font-size: 18px;
     line-height: 30px;
+    color: hwb(196 12% 54%);
+
 }
 
 .text-legal {
@@ -197,6 +200,7 @@
     line-height: 40px;
     font-weight: 700;
     font-family: 'klavika';
+    color: hwb(196 12% 54%);
 }
 
 .text-tokyo {

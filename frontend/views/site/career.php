@@ -270,6 +270,7 @@ $this->title = 'Career';
                 <?= $sh['detail'] ?>
             </div>
     <?php
+            $i++;
         endforeach;
     }
     ?>
@@ -286,7 +287,11 @@ $this->title = 'Career';
                                 if ($i < 13) {
 
                         ?>
-                                    <p><img src="<?= Yii::$app->homeUrl . $di['image'] ?>" class="img-country"> <?= $di['title'] ?></p>
+                                    <p> <a href="<?= Yii::$app->homeUrl . $di['url'] ?>" class="no-underline1">
+                                            <img src="<?= Yii::$app->homeUrl . $di['image'] ?>" class="img-country"> <?= $di['title'] ?></a>
+                                    </p>
+
+
 
                         <?php
                                 }
@@ -305,7 +310,9 @@ $this->title = 'Career';
 
                         ?>
 
-                                    <p><img src="<?= Yii::$app->homeUrl . $in['image'] ?>" class="img-country"><?= $in['title'] ?></p>
+                                    <p><a href="<?= Yii::$app->homeUrl . $in['url'] ?>" class="no-underline1">
+                                            <img src="<?= Yii::$app->homeUrl . $in['image'] ?>" class="img-country"><?= $in['title'] ?></a>
+                                    </p>
 
                         <?php
                                 }
@@ -324,6 +331,7 @@ $this->title = 'Career';
                 ?>
                         <img src="<?= Yii::$app->homeUrl . $sh['image'] ?>" class="image-gol1">
                 <?php
+                        $i++;
                     endforeach;
                 }
                 ?>
@@ -362,6 +370,7 @@ $this->title = 'Career';
                 </div>
             </div>
     <?php
+            $i++;
         endforeach;
     }
     ?>
@@ -483,4 +492,3 @@ $this->title = 'Career';
         </div>
     </div>
 </div>
-<div class="col-12" style="margin-top: 80px;"></div>

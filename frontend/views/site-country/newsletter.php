@@ -68,12 +68,19 @@ $this->title = 'newsletter';
 
 
         ?>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10">
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10" id="cotent2-siteindex-<?= $i ?>" onmouseover="javascript:showSiteindex2(<?= $i ?>)">
                         <div class="card-body">
-                            <!-- <img src="<?= Yii::$app->homeUrl ?>img/height.png" class="img-height"> -->
-                            <p class="home1"><?= $tp['title'] ?> </p>
+                            <div class="col-12 body-copy1"></div>
+                            <p class="home1"><?= $tp['title'] ?></p>
                             <p class="home2"><?= $tp['detail'] ?></p>
+                        </div>
+                    </div>
 
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10" style="display:none;" id="content2-siteindex2-<?= $i ?>" onmouseleave="javascript:showSiteindex1(<?= $i ?>)">
+                        <div class="card-body">
+                            <div class="col-12 body-copy"></div>
+                            <p class="home1-copy"><?= $tp['title'] ?></p>
+                            <p class="home2-copy"><?= $tp['detail'] ?></p>
                         </div>
                     </div>
         <?php

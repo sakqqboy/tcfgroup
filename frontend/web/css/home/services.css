@@ -126,10 +126,6 @@
     padding-left: 70px;
 }
 
-.image-Group-2 {
-    width: 100%;
-}
-
 .card-body {
     background-color: #FAFAFA;
 
@@ -249,6 +245,7 @@
     font-size: 19px;
     font-family: 'klavika';
     font-weight: 700;
+    margin-left: -10px;
 
 }
 
@@ -288,7 +285,60 @@
     margin-top: -20px;
 }
 
+.pic-asset {
+    margin-top: 200px;
+    cursor: pointer;
+}
 
+
+.asset-4 {
+    margin-top: -200px;
+    margin-left: -130px;
+    width: 40%;
+}
+
+.asset-5 {
+    margin-top: -295px;
+    margin-left: -100px;
+    width: 40%;
+}
+
+.asset-6 {
+    margin-top: -299px;
+    margin-left: -52px;
+    width: 31%;
+
+}
+
+.asset-7 {
+    margin-top: -350px;
+    margin-left: 276px;
+    width: 30%;
+
+}
+
+.asset-8 {
+    margin-top: -220px;
+    margin-left: 300px;
+    width: 30%;
+
+}
+
+.asset-9 {
+    margin-top: -88px;
+    margin-left: 265px;
+    width: 33%;
+}
+
+.asset-10 {
+    margin-top: -345px;
+    margin-left: 125px;
+    width: 45%;
+}
+
+.asset-11 {
+    width: 30%;
+}
 
 
 
@@ -325,11 +375,6 @@
         padding-left: 40px;
     }
 
-    .select-project-1 {
-        font-size: 9px;
-        line-height: 11px;
-    }
-
     .image-account {
         width: 30px;
     }
@@ -360,13 +405,15 @@
 
     .page-1 {
         font-size: 8px;
-        padding-left: 40px;
+        padding-left: 10px;
     }
 
     .select-project {
         font-size: 5px;
         line-height: 6px;
-        width: 150px;
+        width: 190px;
+        margin-left: -30px;
+
     }
 
     .form-card {
@@ -375,7 +422,7 @@
         margin-left: 10px;
         width: 290px;
         height: 0px;
-        margin-top: 20px;
+        margin-top: 30px;
         padding-bottom: 15px;
 
     }
@@ -407,6 +454,7 @@
         font-size: 5px;
         line-height: 6px;
         width: 150px;
+        margin-left: -10px;
     }
 
     .text-form-most {

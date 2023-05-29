@@ -28,10 +28,10 @@ $this->title = 'TCFGROUP';
                         <div class="carousel-item <?= $i == 0 ? 'active' : '' ?>" data-bs-interval="10000">
                             <img src="<?= Yii::$app->homeUrl . $index['image'] ?>" class="d-block" style="width:100%; margin-top:20px;">
                             <div class="offset-1 col-11 text-star">
-                                <?= $index['detail'] ?><br>
-                                <?= $index['detail2'] ?> <br>
-                                <?= $index['detail3'] ?><br>
-                                <button type="button" class="btn btn-primary button-start"> <?= $index['title'] ?></button>
+                                <?= $index['title'] ?><br>
+                                <?= $index['detail'] ?> <br>
+                                <?= $index['detail2'] ?><br>
+                                <button type="button" class="btn btn-primary button-start"> <?= $index['detail3'] ?></button>
                             </div>
                         </div>
                 <?php
@@ -77,7 +77,6 @@ $this->title = 'TCFGROUP';
             <div class="col-lg-6 col-12">
                 <div class="row">
                     <div class="col-6 country-index">
-
 
                         <?php
                         if (isset($branch) && count($branch) > 0) {

@@ -103,7 +103,11 @@ if (isset($understanding) && count($understanding) > 0) {
                     $i = 0;
                     foreach ($companymarket as $marketing) :
                 ?>
-                        <img src="<?= Yii::$app->homeUrl . $marketing['image'] ?>" class="image-Asset-2">
+                        <!-- <img src="<?= Yii::$app->homeUrl . $marketing['image'] ?>" class="image-Asset-2"> -->
+                        <img src="<?= Yii::$app->homeUrl ?>img/Group-1.png" style="width:22%" class="group1">
+                        <img src="<?= Yii::$app->homeUrl ?>img/Group-2.png" style="width:26%" class="group2">
+                        <img src="<?= Yii::$app->homeUrl ?>img/Group-3.png" style="width:22%" class="group3">
+
                 <?php
 
                         $i++;
@@ -313,6 +317,7 @@ if (isset($understanding) && count($understanding) > 0) {
                 foreach ($support as $sup) :
             ?>
                     <img src="<?= Yii::$app->homeUrl . $sup['image'] ?>" class="image-Group-6">
+
             <?php
                     $i++;
                 endforeach;
@@ -324,7 +329,7 @@ if (isset($understanding) && count($understanding) > 0) {
 </div>
 
 
-<div class="col-12">
+<div class=" col-12">
     <img src="<?= Yii::$app->homeUrl ?>img/image6.png" class="image-image6">
 </div>
 
@@ -354,10 +359,10 @@ if (isset($understanding) && count($understanding) > 0) {
 
                             if ($i < 3) {
                     ?>
-                                <div class="col-12 page-1">
+                                <div class="col-12 page-3">
                                     <img src="<?= Yii::$app->homeUrl . $choose['image'] ?>" class="image-account"> <?= $choose['title'] ?>
                                 </div>
-                                <div class="col-12 select-project">
+                                <div class="col-12 select-project-3">
                                     <?= $choose['detail'] ?>
                                 </div>
                     <?php

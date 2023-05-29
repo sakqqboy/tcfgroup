@@ -101,6 +101,8 @@ class SiteCountryController extends Controller
             ->asArray()
             ->one();
 
+
+
         $shape = [];
         $import = [];
         $bangladresh = [];
@@ -111,6 +113,7 @@ class SiteCountryController extends Controller
         $topic = [];
         $services = [];
         $servicesbangladesh = [];
+
 
         if (isset($pe) && !empty($pe)) {
             $shape = ContentDetail::find()
@@ -174,7 +177,6 @@ class SiteCountryController extends Controller
         }
 
 
-
         // throw new Exception(count($topic));
         return $this->render('index', [
             "shape" => $shape,
@@ -186,12 +188,12 @@ class SiteCountryController extends Controller
             "footer" => $footer,
             "topic" => $topic,
             "services" => $services,
-            "servicesbangladesh" => $servicesbangladesh
+            "servicesbangladesh" => $servicesbangladesh,
+
         ]);
     }
     public function actionNewsletter()
     {
-
 
         $new = Content::find()
             ->where(["contentName" => "Newsletter"])

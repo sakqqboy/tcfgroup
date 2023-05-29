@@ -32,21 +32,21 @@ $this->title = 'services';
         if (isset($bannerservices) && count($bannerservices) > 0) {
             $i = 0;
             foreach ($bannerservices as $s) :
+
         ?>
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
-                    <div class="col-12 home-form mt-20">
+                    <div class=" col-12 home-form mt-20">
                         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $s['title'] ?>
                     </div>
                     <div class="col-lg-12 home-form-one">
                         <p> <?= $s['detail'] ?></p>
                         <p> <?= $s['detail2'] ?></p>
                         <p> <?= $s['detail3'] ?></p>
-                        <button type="button" class="btn btn-outline-dark"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
-                        <button type="button" class="btn btn-outline-dark"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                        <button onclick="javascript:showButtonservices1(<?= $i ?>)" id="content2-services-<? $i == 0 ? '' : 'none' ?>" style="show" type="button" class="btn btn-outline-dark"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                        <button onclick="javascript:showButtonservices2(<?= $i ?>)" id="content2-services2-<? $i == 0 ? '' : 'none' ?>" style="show" type=" button" class="btn btn-outline-dark"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
                     </div>
                 </div>
         <?php
-
                 $i++;
             endforeach;
         }
@@ -110,7 +110,6 @@ $this->title = 'services';
                     </div>
                 </div>
             </div>
-
     <?php
 
             $i++;
@@ -131,7 +130,6 @@ $this->title = 'services';
                         <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $r['title'] ?>
                     </div>
             <?php
-
                     $i++;
                 endforeach;
             }
@@ -158,14 +156,20 @@ $this->title = 'services';
                     </select>
                 </div>
             </div>
-            <div class="col-12 mt-50">
+            <div class="col-12 pic-asset">
                 <?php
                 if (isset($accounting) && count($accounting) > 0) {
                     $i = 0;
                     foreach ($accounting as $pic) :
                 ?>
-
-                        <img src="<?= Yii::$app->homeUrl . $pic['image'] ?>" class="image-Group-2">
+                        <img src="<?= Yii::$app->homeUrl ?>img/Asset-3.png" class="asset-11">
+                        <img src="<?= Yii::$app->homeUrl ?>img/Asset-4.png" class="asset-4">
+                        <img src="<?= Yii::$app->homeUrl ?>img/Asset-5.png" class="asset-5">
+                        <img src="<?= Yii::$app->homeUrl ?>img/Asset-6.png" class="asset-6">
+                        <img src="<?= Yii::$app->homeUrl ?>img/Asset-7.png" class="asset-7">
+                        <img src="<?= Yii::$app->homeUrl ?>img/Asset-8.png" class="asset-8">
+                        <img src="<?= Yii::$app->homeUrl ?>img/Asset-9.png" class="asset-9">
+                        <img src="<?= Yii::$app->homeUrl ?>img/Asset-10.png" class="asset-10">
                 <?php
                         $i++;
                     endforeach;
@@ -400,7 +404,7 @@ $this->title = 'services';
                             if ($i < 3) {
 
                     ?>
-                                <div class="col-12 mt-10 page-1">
+                                <div class="col-12 mt-10  page-1">
                                     <img src="<?= Yii::$app->homeUrl . $tokyo['image'] ?>" class="image-account"> <?= $tokyo['title'] ?>
                                 </div>
                                 <div class="col-12 select-project">
@@ -618,4 +622,5 @@ $this->title = 'services';
             </div>
         </div>
     </div>
+    s
 </div>

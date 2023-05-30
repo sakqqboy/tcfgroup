@@ -42,8 +42,10 @@ $this->title = 'services';
                         <p> <?= $s['detail'] ?></p>
                         <p> <?= $s['detail2'] ?></p>
                         <p> <?= $s['detail3'] ?></p>
-                        <button onclick="javascript:showButtonservices1(<?= $i ?>)" id="content2-services-<? $i == 0 ? '' : 'none' ?>" style="show" type="button" class="btn btn-outline-dark"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
-                        <button onclick="javascript:showButtonservices2(<?= $i ?>)" id="content2-services2-<? $i == 0 ? '' : 'none' ?>" style="show" type=" button" class="btn btn-outline-dark"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="col-12 text-end mt-30">
+                        <button type="button" class="btn btn-outline-dark"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                        <button type="button" class="btn btn-outline-dark"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
                     </div>
                 </div>
         <?php
@@ -86,7 +88,7 @@ $this->title = 'services';
 
 <div class="col-12 pr12 page-two">
     <?php
-    if (isset($box) && !empty($box) > 0) {
+    if (isset($box) && count($box) > 0) {
         $i = 0;
         foreach ($box as $x) :
 
@@ -119,6 +121,7 @@ $this->title = 'services';
 </div>
 
 <div class="col-12 pr12 page-tree">
+    <input type="hidden" id="total-countryindex2" value="<?= count($countryindex2) ?>">
     <div class="row mt-20">
         <div class="col-md-4 col-12">
             <?php
@@ -141,12 +144,15 @@ $this->title = 'services';
                 <div class="col-5">
                     <select class="form-select" aria-label="Default select example">
                         <?php
-                        if (isset($click) && count($click) > 0) {
+                        if (isset($countryindex2) && count($countryindex2)) {
                             $i = 0;
-                            foreach ($click as $country) :
+                            foreach ($countryindex2 as $tryin) :
                                 if ($i < 26) {
+
+
                         ?>
-                                    <option selected><?= $country['title'] ?></option>
+                                    <option selected onclick="javasript:showCountry(<?= $i ?>)"> <?= $tryin['title'] ?> </option>
+
                         <?php
                                 }
                                 $i++;
@@ -157,26 +163,28 @@ $this->title = 'services';
                 </div>
             </div>
             <div class="col-12 pic-asset">
-                <?php
-                if (isset($accounting) && count($accounting) > 0) {
-                    $i = 0;
-                    foreach ($accounting as $pic) :
-                ?>
-                        <img src="<?= Yii::$app->homeUrl ?>img/Asset-3.png" class="asset-11">
-                        <img src="<?= Yii::$app->homeUrl ?>img/Asset-4.png" class="asset-4">
-                        <img src="<?= Yii::$app->homeUrl ?>img/Asset-5.png" class="asset-5">
-                        <img src="<?= Yii::$app->homeUrl ?>img/Asset-6.png" class="asset-6">
-                        <img src="<?= Yii::$app->homeUrl ?>img/Asset-7.png" class="asset-7">
-                        <img src="<?= Yii::$app->homeUrl ?>img/Asset-8.png" class="asset-8">
-                        <img src="<?= Yii::$app->homeUrl ?>img/Asset-9.png" class="asset-9">
-                        <img src="<?= Yii::$app->homeUrl ?>img/Asset-10.png" class="asset-10">
-                <?php
-                        $i++;
-                    endforeach;
-                }
-                ?>
-
+                <img src="<?= Yii::$app->homeUrl ?>img/Asset-3.png" class="asset-11" id="content2-asset-<?= $i ?>" onmousemove="javascript:showAsset2(<?= $i ?>)">
+                <img src="<?= Yii::$app->homeUrl ?>img/Asset-4.png" class="asset-4">
+                <img src="<?= Yii::$app->homeUrl ?>img/Asset-5.png" class="asset-5">
+                <img src="<?= Yii::$app->homeUrl ?>img/Asset-6.png" class="asset-6">
+                <img src="<?= Yii::$app->homeUrl ?>img/Asset-7.png" class="asset-7">
+                <img src="<?= Yii::$app->homeUrl ?>img/Asset-8.png" class="asset-8">
+                <img src="<?= Yii::$app->homeUrl ?>img/Asset-9.png" class="asset-9">
+                <img src="<?= Yii::$app->homeUrl ?>img/Asset-10.png" class="asset-10">
             </div>
+
+            <div class="col-12 copy-pic-asset">
+                <img src="<?= Yii::$app->homeUrl ?>img/Asset-3.png" class="copy-asset-11" style="display: none;" id="content2-asset2-<?= $i ?>" onmouseleave="javascript:showAsset1(<?= $i ?>)">
+                <img src="<?= Yii::$app->homeUrl ?>img/Asset-4.png" class="copy-asset-4">
+                <img src="<?= Yii::$app->homeUrl ?>img/Asset-5.png" class="copy-asset-5">
+                <img src="<?= Yii::$app->homeUrl ?>img/Asset-6.png" class="copy-asset-6">
+                <img src="<?= Yii::$app->homeUrl ?>img/Asset-7.png" class="copy-asset-7">
+                <img src="<?= Yii::$app->homeUrl ?>img/Asset-8.png" class="copy-asset-8">
+                <img src="<?= Yii::$app->homeUrl ?>img/Asset-9.png" class="copy-asset-9">
+                <img src="<?= Yii::$app->homeUrl ?>img/Asset-10.png" class="copy-asset-10">
+            </div>
+
+
         </div>
         <div class="col-md-8 col-12">
             <?php
@@ -206,10 +214,10 @@ $this->title = 'services';
 
                     ?>
                                 <div class="col-lg-4 col-md-6 col-sm-4 col-8">
-                                    <div class="card col-10 mt-20 form-page-text">
+                                    <div class="card col-10 mt-20 form-page-text" style="display:<?= $i == 0 ? '' : 'none' ?>" id="content2-button-<?= $i ?>">
                                         <div class="text-center">
                                             <img src="<?= Yii::$app->homeUrl . $table['image'] ?>" class="card-img-top">
-                                            <div class="card-body text-center">
+                                            <div class="card-body text-center" style="display:<?= $i == 0 ? '' : 'none' ?>" id="content2-button2-<?= $i ?>">
                                                 <h6> <?= $table['title'] ?></h6>
                                                 <p><?= $table['detail'] ?></p>
                                                 <button type="button" class="btn btn-outline-primary"><?= $table['detail2'] ?></button>

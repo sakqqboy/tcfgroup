@@ -79,41 +79,43 @@ if (isset($understanding) && count($understanding) > 0) {
                 </div>
                 <div class="col-5">
                     <select class="form-select" aria-label="Default select example">
-                        <?php
-                        if (isset($click) && count($click) > 0) {
-                            $i = 0;
-                            foreach ($click as $country) :
-                                if ($i < 26) {
-
-
-                        ?>
-                                    <option selected><?= $country['title'] ?></option>
-                        <?php
-                                }
-                                $i++;
-                            endforeach;
-                        }
-                        ?>
+                        <option selected onclick="javascript:showBangladresh(<? $i ?>)">bangladresh</option>
+                        <option selected>Brazil</option>
+                        <option selected>Combodia</option>
+                        <option selected>China</option>
+                        <option selected>Columbia</option>
+                        <option selected>Dubai(UAE)</option>
+                        <option selected>Hong kong</option>
+                        <option selected>India</option>
+                        <option selected>Indonesia</option>
+                        <option selected>kenya</option>
+                        <option selected>Japan</option>
+                        <option selected>Laos</option>
+                        <option selected>Malaysia</option>
+                        <option selected>Mexico</option>
+                        <option selected>Mongolia</option>
+                        <option selected>Nigeria</option>
+                        <option selected>Mayanmar</option>
+                        <option selected>Morocco</option>
+                        <option selected>Peru</option>
+                        <option selected>Philippines</option>
+                        <option selected>Russia</option>
+                        <option selected>South Afroca</option>
+                        <option selected>Singapore</option>
+                        <option selected>Thailad</option>
+                        <option selected>Turkey</option>
                     </select>
                 </div>
             </div>
-            <div class="col-12 mt-50">
-                <?php
-                if (isset($companymarket) && count($companymarket) > 0) {
-                    $i = 0;
-                    foreach ($companymarket as $marketing) :
-                ?>
-                        <!-- <img src="<?= Yii::$app->homeUrl . $marketing['image'] ?>" class="image-Asset-2"> -->
-                        <img src="<?= Yii::$app->homeUrl ?>img/Group-1.png" style="width:22%" class="group1">
-                        <img src="<?= Yii::$app->homeUrl ?>img/Group-2.png" style="width:26%" class="group2">
-                        <img src="<?= Yii::$app->homeUrl ?>img/Group-3.png" style="width:22%" class="group3">
-
-                <?php
-
-                        $i++;
-                    endforeach;
-                }
-                ?>
+            <div class="col-12 pic-group">
+                <img src="<?= Yii::$app->homeUrl ?>img/Group-1.png" style="width:23%" class="group1">
+                <img src="<?= Yii::$app->homeUrl ?>img/Group-2.png" style="width:26%" class="group2">
+                <img src="<?= Yii::$app->homeUrl ?>img/Group-3.png" style="width:22%" class="group3">
+                <img src="<?= Yii::$app->homeUrl ?>img/Group-4.png" style="width:19%" class="group4">
+                <img src="<?= Yii::$app->homeUrl ?>img/Group-5.png" style="width:25%" class="group5">
+                <img src="<?= Yii::$app->homeUrl ?>img/Group-6.png" style="width:23%" class="group6">
+                <img src="<?= Yii::$app->homeUrl ?>img/Group-7.png" style="width:26%" class="group7">
+                <img src="<?= Yii::$app->homeUrl ?>img/Group-8.png" style="width:32%" class="group8">
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-12">

@@ -308,11 +308,6 @@ class SiteController extends Controller
             ->asArray()
             ->one();
 
-        $country = Content::find()
-            ->where(["contentName" => "Click"])
-            ->asArray()
-            ->one();
-
         $pic = Content::find()
             ->where(["contentName" => "Accounting"])
             ->asArray()
@@ -338,6 +333,11 @@ class SiteController extends Controller
             ->asArray()
             ->one();
 
+        $tryin = Content::find()
+            ->where(["contentName" => "Countryindex2"])
+            ->asArray()
+            ->one();
+
 
         $services = [];
         $bannerservices = [];
@@ -352,12 +352,12 @@ class SiteController extends Controller
         $drive = [];
         $button = [];
         $best = [];
-        $click = [];
         $accounting = [];
         $taxation = [];
         $stage = [];
         $background = [];
         $most = [];
+        $countryindex2 = [];
 
 
         if (isset($r) && !empty($r)) {
@@ -438,12 +438,7 @@ class SiteController extends Controller
                 ->asArray()
                 ->all();
         }
-        if (isset($country) && !empty($country)) {
-            $click = ContentDetail::find()
-                ->where(["contentId" => $country["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
+
         if (isset($pic) && !empty($pic)) {
             $accounting = ContentDetail::find()
                 ->where(["contentId" => $pic["contentId"], "status" => 1])
@@ -474,7 +469,12 @@ class SiteController extends Controller
                 ->asArray()
                 ->all();
         }
-
+        if (isset($tryin) && !empty($tryin)) {
+            $countryindex2 = ContentDetail::find()
+                ->where(["contentId" => $tryin["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
         return $this->render('services', [
             "services" => $services,
             "bannerservices" => $bannerservices,
@@ -489,12 +489,12 @@ class SiteController extends Controller
             "drive" => $drive,
             "button" => $button,
             "best" => $best,
-            "click" => $click,
             "accounting" => $accounting,
             "taxation" => $taxation,
             "stage" => $stage,
             "background" => $background,
-            "most" => $most
+            "most" => $most,
+            "countryindex2" => $countryindex2
 
         ]);
     }

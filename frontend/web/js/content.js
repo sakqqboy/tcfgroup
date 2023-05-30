@@ -14,14 +14,30 @@ function showSiteindex2(i) {
     $("#content2-siteindex2-" + i).show();
 }
 function showSiteindex1(i) {
-    $("#content2-siteindex2-" + i).css("display", "none");
-    $("#cotent2-siteindex-" + i).show();
+    $("#cotent2-siteindex2-" + i).css("display", "none");
+    $("#content2-siteindex-" + i).show();
 }
 
-
-function showButtonservices(i) {
-    $("#content2-services-" + i).css("display", "none");
-    $("#content2-services2-" + i).show();
+function showCountry(i) {
+    var total = $("#total-countryindex2").val();
+    var b = 0;
+    while (b < total) {
+        $("#content2-button-" + b).css("display", "none");
+        $("#content2-button2-" + b).css("display", "none");
+        $b++;
+    }
+    $("#content2-button-" + i).fadeIn("slow");
+    $("#content2-button2-" + i).fadeIn("slow");
 }
-
-
+function showCountry1(i) {
+    $("#content2-button2-" + i).css("display", "none");
+    $("#content2-button-" + i).fadeIn("slow");
+}
+function showAsset2(i) {
+    $("#content2-asset-" + i).css("display", "none");
+    $("#content2-asset2-" + i).show();
+}
+function showAsset1(i) {
+    $("#content2-asset2-" + i).css("display", "none");
+    $("#content2-asset-" + i).show();
+}

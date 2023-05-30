@@ -340,11 +340,6 @@ class SiteCountryController extends Controller
             ->asArray()
             ->one();
 
-        $country = Content::find()
-            ->where(["contentName" => "Click"])
-            ->asArray()
-            ->one();
-
         $marketing = Content::find()
             ->where(["contentName" => "Companymarket"])
             ->asArray()
@@ -392,7 +387,6 @@ class SiteCountryController extends Controller
         $together = [];
         $contribute = [];
         $understanding = [];
-        $click = [];
         $companymarket  = [];
         $bannerservices = [];
         $background = [];
@@ -422,12 +416,7 @@ class SiteCountryController extends Controller
                 ->asArray()
                 ->all();
         }
-        if (isset($country) && !empty($country)) {
-            $click = ContentDetail::find()
-                ->where(["contentId" => $country["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
+
         if (isset($marketing) && !empty($marketing)) {
             $companymarket = ContentDetail::find()
                 ->where(["contentId" => $marketing["contentId"], "status" => 1])
@@ -490,7 +479,6 @@ class SiteCountryController extends Controller
             "together" => $together,
             "contribute" => $contribute,
             "understanding" => $understanding,
-            "click" => $click,
             "companymarket" => $companymarket,
             "background" => $background,
             "banneservices" => $bannerservices,

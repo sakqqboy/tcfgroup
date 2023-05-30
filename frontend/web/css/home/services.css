@@ -287,7 +287,7 @@
 
 .pic-asset {
     margin-top: 200px;
-    cursor: pointer;
+
 }
 
 
@@ -295,18 +295,21 @@
     margin-top: -200px;
     margin-left: -130px;
     width: 40%;
+    cursor: pointer;
 }
 
 .asset-5 {
     margin-top: -295px;
     margin-left: -100px;
     width: 40%;
+    cursor: pointer;
 }
 
 .asset-6 {
     margin-top: -299px;
     margin-left: -52px;
     width: 31%;
+    cursor: pointer;
 
 }
 
@@ -314,6 +317,7 @@
     margin-top: -350px;
     margin-left: 276px;
     width: 30%;
+    cursor: pointer;
 
 }
 
@@ -321,6 +325,7 @@
     margin-top: -220px;
     margin-left: 300px;
     width: 30%;
+    cursor: pointer;
 
 }
 
@@ -328,6 +333,7 @@
     margin-top: -88px;
     margin-left: 265px;
     width: 33%;
+    cursor: pointer;
 }
 
 .asset-10 {
@@ -338,7 +344,59 @@
 
 .asset-11 {
     width: 30%;
+    cursor: pointer;
 }
+
+.copy-asset-4 {
+    margin-top: -200px;
+    margin-left: -130px;
+    width: 40%;
+    color: darkgreen;
+}
+
+.copy-asset-5 {
+    margin-top: -295px;
+    margin-left: -100px;
+    width: 40%;
+}
+
+.copy-asset-6 {
+    margin-top: -299px;
+    margin-left: -52px;
+    width: 31%;
+
+}
+
+.copy-asset-7 {
+    margin-top: -350px;
+    margin-left: 276px;
+    width: 30%;
+
+}
+
+.copy-asset-8 {
+    margin-top: -220px;
+    margin-left: 300px;
+    width: 30%;
+
+}
+
+.copy-asset-9 {
+    margin-top: -88px;
+    margin-left: 265px;
+    width: 33%;
+}
+
+.copy-asset-10 {
+    margin-top: -345px;
+    margin-left: 125px;
+    width: 45%;
+}
+
+.copy-asset-11 {
+    width: 30%;
+}
+
 
 
 

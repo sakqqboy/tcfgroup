@@ -165,6 +165,12 @@
     color: white;
 }
 
+.link-privacy {
+    font-size: 18px;
+    margin-top: 40px;
+    font-family: 'klavika';
+}
+
 .title-contact-footer1 {
     font-family: 'Klavika';
     font-weight: 300;

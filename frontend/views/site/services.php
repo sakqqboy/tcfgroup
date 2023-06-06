@@ -44,8 +44,8 @@ $this->title = 'services';
                         <p> <?= $s['detail3'] ?></p>
                     </div>
                     <div class="col-12 text-end mt-30">
-                        <button type="button" class="btn btn-outline-dark"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
-                        <button type="button" class="btn btn-outline-dark"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                        <button type="button" id="prev" class="btn btn-outline-dark"><i class="fa fa-angle-left" aria-hidden="true"></i> </button>
+                        <button type="button" id="next" class="btn btn-outline-dark"><i class="fa fa-angle-right" aria-hidden="true"></i> </button>
                     </div>
                 </div>
         <?php
@@ -163,7 +163,7 @@ $this->title = 'services';
                 </div>
             </div>
             <div class="col-12 pic-asset">
-                <img src="<?= Yii::$app->homeUrl ?>img/Asset-3.png" class="asset-11" id="content2-asset-<?= $i ?>" onmousemove="javascript:showAsset2(<?= $i ?>)">
+                <img src="<?= Yii::$app->homeUrl ?>img/Asset-3.png" class="asset-11" id="content2-asset-<?= $i ?>" onclick="javascript:showAsset2(<?= $i ?>)">
                 <img src="<?= Yii::$app->homeUrl ?>img/Asset-4.png" class="asset-4">
                 <img src="<?= Yii::$app->homeUrl ?>img/Asset-5.png" class="asset-5">
                 <img src="<?= Yii::$app->homeUrl ?>img/Asset-6.png" class="asset-6">
@@ -173,16 +173,7 @@ $this->title = 'services';
                 <img src="<?= Yii::$app->homeUrl ?>img/Asset-10.png" class="asset-10">
             </div>
 
-            <div class="col-12 copy-pic-asset">
-                <img src="<?= Yii::$app->homeUrl ?>img/Asset-3.png" class="copy-asset-11" style="display: none;" id="content2-asset2-<?= $i ?>" onmouseleave="javascript:showAsset1(<?= $i ?>)">
-                <img src="<?= Yii::$app->homeUrl ?>img/Asset-4.png" class="copy-asset-4">
-                <img src="<?= Yii::$app->homeUrl ?>img/Asset-5.png" class="copy-asset-5">
-                <img src="<?= Yii::$app->homeUrl ?>img/Asset-6.png" class="copy-asset-6">
-                <img src="<?= Yii::$app->homeUrl ?>img/Asset-7.png" class="copy-asset-7">
-                <img src="<?= Yii::$app->homeUrl ?>img/Asset-8.png" class="copy-asset-8">
-                <img src="<?= Yii::$app->homeUrl ?>img/Asset-9.png" class="copy-asset-9">
-                <img src="<?= Yii::$app->homeUrl ?>img/Asset-10.png" class="copy-asset-10">
-            </div>
+
 
 
         </div>
@@ -214,10 +205,10 @@ $this->title = 'services';
 
                     ?>
                                 <div class="col-lg-4 col-md-6 col-sm-4 col-8">
-                                    <div class="card col-10 mt-20 form-page-text" style="display:<?= $i == 0 ? '' : 'none' ?>" id="content2-button-<?= $i ?>">
+                                    <div class="card col-10 mt-20 form-page-text">
                                         <div class="text-center">
                                             <img src="<?= Yii::$app->homeUrl . $table['image'] ?>" class="card-img-top">
-                                            <div class="card-body text-center" style="display:<?= $i == 0 ? '' : 'none' ?>" id="content2-button2-<?= $i ?>">
+                                            <div class="card-body text-center">
                                                 <h6> <?= $table['title'] ?></h6>
                                                 <p><?= $table['detail'] ?></p>
                                                 <button type="button" class="btn btn-outline-primary"><?= $table['detail2'] ?></button>

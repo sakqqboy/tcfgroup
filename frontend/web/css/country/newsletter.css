@@ -322,6 +322,26 @@
     padding-left: 40px;
 }
 
+.moretext {
+    display: none;
+}
+
+.no-underline-new {
+    color: #0B58A4;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+.no-underline-new1 {
+    color: #0B58A4;
+    text-decoration: none;
+    /* font-size: 16px;
+    font-weight: 700; */
+
+}
+
 
 
 @media(max-width: 992px) {

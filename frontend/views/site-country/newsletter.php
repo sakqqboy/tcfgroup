@@ -24,7 +24,8 @@ $this->title = 'newsletter';
                     <?= $new['detail'] ?>
                 </div>
                 <div class="col-6 pl-40  sletter-text-corporate">
-                    <?= $new['detail2'] ?><a href="" class="no-underline1"><span class="read-more1"> <?= $new['detail7'] ?></span></a>
+                    <?= $new['detail2'] ?><a href="#read more" class="no-underline-new"><span class="read-more1"> <?= $new['detail7'] ?> </span></a>
+                    <p class="moretext"> With net zero carbon, </p>
                 </div>
                 <div class="col-12 pr12 btn-newsletter-signup">
                     <div class="row">
@@ -68,7 +69,7 @@ $this->title = 'newsletter';
 
 
         ?>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10" id="cotent2-siteindex-<?= $i ?>" onmouseover="javascript:showSiteindex2(<?= $i ?>)">
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10" id="content2-siteindex-<?= $i ?>" onmouseover="javascript:showSiteindex2(<?= $i ?>)">
                         <div class="card-body">
                             <div class="col-12 body-copy1"></div>
                             <p class="home1"><?= $tp['title'] ?></p>
@@ -106,7 +107,10 @@ $this->title = 'newsletter';
                 <div class="col-lg-6 col-md-6 col-12">
                     <p class="title-import mt-10"><?= $port['title'] ?></p> <br>
                     <p class="title-zero"><?= $port['detail'] ?></p> <br>
-                    <p class="circle-icon"><a href="#read more" class="no-underline"> <?= $port['detail2'] ?> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></p></a>
+                    <p class="circle-icon"><a href="#read more" class="no-underline-new1"> <?= $port['detail2'] ?> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+
+                        </a>
+
                 </div>
             </div>
     <?php
@@ -143,6 +147,7 @@ $this->title = 'newsletter';
                         <p class="title-Human"><?= $ol['detail'] ?></p>
                         <p class="title-Labor"><?= $ol['detail2'] ?></p>
                         <p class="title-import1"><?= $ol['detail3'] ?><a href="" class="no-underline"><span class="read-more"> <?= $ol['detail4'] ?></span></p></a>
+
                     </div>
             <?php
                     $i++;

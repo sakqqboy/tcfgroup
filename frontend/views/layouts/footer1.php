@@ -114,6 +114,12 @@
             <h4>
                 <p class="mt-50 badge-table"><span class="badge bg-secondary">8:30 AM</span> <i class="fa fa-arrows-h" aria-hidden="true"></i> <span class="badge bg-secondary"> 5:30 PM</span></p>
             </h4>
+            <div class="col-12 link-privacy">
+                <a href="<?= Yii::$app->homeUrl ?>site-country/privacy" class="none-line">
+                    Privacy & Cookies
+                </a>
+            </div>
+
         </div>
     </div>
 </div>

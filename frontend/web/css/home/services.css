@@ -290,11 +290,15 @@
 
 }
 
+.copy-pic-asset {
+    margin-top: 200px;
+}
+
 
 .asset-4 {
     margin-top: -200px;
-    margin-left: -130px;
-    width: 40%;
+    margin-left: -120px;
+    width: 38%;
     cursor: pointer;
 }
 
@@ -307,8 +311,8 @@
 
 .asset-6 {
     margin-top: -299px;
-    margin-left: -52px;
-    width: 31%;
+    margin-left: -56px;
+    width: 33%;
     cursor: pointer;
 
 }
@@ -316,28 +320,28 @@
 .asset-7 {
     margin-top: -350px;
     margin-left: 276px;
-    width: 30%;
+    width: 32%;
     cursor: pointer;
 
 }
 
 .asset-8 {
-    margin-top: -220px;
+    margin-top: -210px;
     margin-left: 300px;
-    width: 30%;
+    width: 31%;
     cursor: pointer;
 
 }
 
 .asset-9 {
-    margin-top: -88px;
+    margin-top: -84px;
     margin-left: 265px;
-    width: 33%;
+    width: 34%;
     cursor: pointer;
 }
 
 .asset-10 {
-    margin-top: -345px;
+    margin-top: -350px;
     margin-left: 125px;
     width: 45%;
 }
@@ -347,55 +351,10 @@
     cursor: pointer;
 }
 
-.copy-asset-4 {
-    margin-top: -200px;
-    margin-left: -130px;
-    width: 40%;
-    color: darkgreen;
-}
 
-.copy-asset-5 {
-    margin-top: -295px;
-    margin-left: -100px;
-    width: 40%;
-}
 
-.copy-asset-6 {
-    margin-top: -299px;
-    margin-left: -52px;
-    width: 31%;
 
-}
 
-.copy-asset-7 {
-    margin-top: -350px;
-    margin-left: 276px;
-    width: 30%;
-
-}
-
-.copy-asset-8 {
-    margin-top: -220px;
-    margin-left: 300px;
-    width: 30%;
-
-}
-
-.copy-asset-9 {
-    margin-top: -88px;
-    margin-left: 265px;
-    width: 33%;
-}
-
-.copy-asset-10 {
-    margin-top: -345px;
-    margin-left: 125px;
-    width: 45%;
-}
-
-.copy-asset-11 {
-    width: 30%;
-}
 
 
 

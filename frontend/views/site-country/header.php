@@ -26,9 +26,9 @@
                 <li class="nav-item">
                     <a href="<?= Yii::$app->homeUrl ?>site-country/about2" class="nav-link">About us</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a href="<?= Yii::$app->homeUrl ?>site-country/contact2" class="nav-link">Contact Us</a>
-                </li> -->
+                <li class="nav-item">
+                    <a href="<?= Yii::$app->homeUrl ?>site-country/signup" class="nav-link">Sign up</a>
+                </li>
                 <!-- <li class="nav-item">
                     <a href="<?= Yii::$app->homeUrl ?>site-country/store" class="nav-link">Store</a>
                 </li> -->

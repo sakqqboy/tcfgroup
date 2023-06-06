@@ -9,30 +9,26 @@ function showContent(i) {
     $("#content-title-" + i).slideDown('slow');
     $("#content-title2-" + i).slideDown('slow');
 }
+function showBangladresh(i) {
+    var total = $("#total-servicesbangladesh").val();
+    var b = 0;
+    while (b < total) {
+        $("#bangladresh-detail-" + b).css("display", "none");
+        $("#bangladresh-detail2-" + b).css("display", "none");
+        b++;
+    }
+    $("#bangladresh-detail-" + i).slideDown('slow');
+    $("#bangladresh-detail2-" + i).slideDown('slow');
+}
 function showSiteindex2(i) {
-    $("#cotent2-siteindex-" + i).css("display", "none");
+    $("#content2-siteindex-" + i).css("display", "none");
     $("#content2-siteindex2-" + i).show();
 }
 function showSiteindex1(i) {
-    $("#cotent2-siteindex2-" + i).css("display", "none");
+    $("#content2-siteindex2-" + i).css("display", "none");
     $("#content2-siteindex-" + i).show();
 }
 
-function showCountry(i) {
-    var total = $("#total-countryindex2").val();
-    var b = 0;
-    while (b < total) {
-        $("#content2-button-" + b).css("display", "none");
-        $("#content2-button2-" + b).css("display", "none");
-        $b++;
-    }
-    $("#content2-button-" + i).fadeIn("slow");
-    $("#content2-button2-" + i).fadeIn("slow");
-}
-function showCountry1(i) {
-    $("#content2-button2-" + i).css("display", "none");
-    $("#content2-button-" + i).fadeIn("slow");
-}
 function showAsset2(i) {
     $("#content2-asset-" + i).css("display", "none");
     $("#content2-asset2-" + i).show();
@@ -41,3 +37,23 @@ function showAsset1(i) {
     $("#content2-asset2-" + i).css("display", "none");
     $("#content2-asset-" + i).show();
 }
+function showAsset1(i) {
+    $("#content2-asset2-" + i).css("display", "none");
+    $("#content2-asset-" + i).show();
+}
+$('.no-underline-new').click(function () {
+    $('.moretext').slideToggle();
+    if ($('.no-underline-new').text() == "READ MORE") {
+        $(this).text("READ MORE").style(color = "bule");
+    } else {
+        $(this).text("read more")
+    }
+});
+$('.no-underline-new1').click(function () {
+    $('.moretext').slideToggle();
+    if ($('.no-underline-new1').text() == "READ MORE") {
+        $(this).text("READ MORE")
+    } else {
+        $(this).text("READ MORE")
+    }
+});

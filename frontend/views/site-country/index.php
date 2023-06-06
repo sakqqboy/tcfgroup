@@ -55,7 +55,7 @@ $this->title = 'Bangladesh';
                 if ($i < 6) {
 
         ?>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10" id="cotent2-siteindex-<?= $i ?>" onmouseover="javascript:showSiteindex2(<?= $i ?>)">
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10" id="content2-siteindex-<?= $i ?>" onmouseover="javascript:showSiteindex2(<?= $i ?>)">
                         <div class="card-body">
                             <div class="col-12 body-copy1"></div>
                             <p class="home1"><?= $tp['title'] ?></p>

@@ -1,0 +1,126 @@
+.title-welcome {
+    font-family: 'klavika';
+    font-weight: 500;
+    font-size: 47px;
+    line-height: 56px;
+    color: #4A4543;
+    text-align: center;
+}
+
+.title-enter {
+    font-family: 'klavika';
+    font-weight: 100;
+    font-size: 17px;
+    margin-top: -20px;
+    line-height: 56px;
+    text-align: center;
+    color: #808080;
+
+}
+
+.form-sign-in-email {
+    margin-left: 130px;
+}
+
+.form-remember {
+    font-family: 'klavika';
+    font-weight: 100;
+    padding-left: 160px;
+    margin-top: 10px;
+
+}
+
+.form-remember2 {
+    font-family: 'klavika';
+    font-weight: 700;
+    cursor: pointer;
+    padding-left: 150px;
+    margin-top: 10px;
+    color: #265AA7;
+}
+
+.bt-sign-in {
+    font-family: 'klavika';
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.img-signgoogle {
+    width: 30px;
+}
+
+.ground-color {
+    background-color: #addffa;
+    text-align: center;
+
+}
+
+.ima-roof {
+    width: 300px;
+}
+
+.fr-ldin {
+    font-size: 30px;
+}
+
+.sig1 {
+    color: #265AA7;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.dont-sign {
+    color: #808080;
+    font-weight: 100;
+}
+
+.form-nm-email1 {
+    font-weight: 600;
+    padding-left: 130px;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #4A4543;
+    font-family: 'klavika';
+}
+
+.fr-common {
+    padding-left: 70px;
+    margin-top: 50px;
+    color: #808080;
+    font-family: 'klavika';
+    font-weight: 100;
+}
+
+.bt-fr-up {
+    width: 550px;
+    text-align: center;
+}
+
+.from-password-eye {
+    cursor: pointer;
+}
+
+@media(max-width: 768px) {
+    .form-sign-in-email {
+        margin-left: 70px;
+    }
+
+    .form-nm-email1 {
+        padding-left: 70px;
+    }
+
+    .form-remember {
+        padding-left: 100px;
+
+    }
+
+    .form-remember2 {
+        padding-left: 30px;
+
+    }
+
+    .bt-fr-up {
+        width: 340px;
+    }
+}

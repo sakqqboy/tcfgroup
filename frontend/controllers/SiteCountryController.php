@@ -1092,6 +1092,14 @@ class SiteCountryController extends Controller
     {
         return $this->render('contact2');
     }
+    public function actionSignup()
+    {
+        return $this->render('signup');
+    }
+    public function actionPrivacy()
+    {
+        return $this->render('privacy');
+    }
     public function actionResources()
     {
 

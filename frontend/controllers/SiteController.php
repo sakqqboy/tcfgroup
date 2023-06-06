@@ -499,6 +499,7 @@ class SiteController extends Controller
         ]);
     }
 
+
     public function actionPhilosophy()
     {
 
@@ -639,6 +640,14 @@ class SiteController extends Controller
 
         ]);
     }
+    public function actionTest()
+    {
+
+
+        return $this->render('in');
+    }
+
+
     public function actionAbout1()
     {
 

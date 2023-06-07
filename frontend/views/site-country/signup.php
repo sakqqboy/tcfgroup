@@ -27,8 +27,8 @@ $this->title = 'Sign up';
                 <label class="form-nm-email1">Password</label>
                 <div class="input-group mb-3 form-sign-in-email">
                     <span class="input-group-text"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
-                    <input type="password" class="form-control" placeholder="password" aria-label="password">
-                    <span class="input-group-text"><i class="fa fa-eye from-password-eye" aria-hidden="true"></i></span>
+                    <input id="password" type="password" class="form-control" placeholder="password" aria-label="password">
+                    <span class="input-group-text" onmousedown="javascript:showPassword()" onmouseup="javascript:setPassword()"> <i class=" fa fa-eye from-password-eye" aria-hidden="true"></i></span>
                 </div>
             </div>
             <div class="col-12">

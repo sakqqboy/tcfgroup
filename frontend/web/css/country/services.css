@@ -23,3 +23,255 @@
     margin-top: -10px;
     color: #FFFFFF;
 }
+
+.p-services {
+    font-family: 'klavika';
+    text-transform: uppercase;
+    padding-left: 85px;
+    margin-top: 190px;
+    font-size: 24px;
+}
+
+.textservices {
+    font-family: 'klavika';
+    font-weight: 100;
+    width: 580px;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+.c-body {
+    font-family: 'klavika';
+    margin-top: 20px;
+}
+
+.title-garment {
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.brunch-garment {
+    margin-top: 20px;
+    font-weight: 100;
+    line-height: 18px;
+    font-size: 12px;
+}
+
+.width2 {
+    width: 30px;
+}
+
+.page-ser1 {
+    padding-left: 70px;
+    margin-top: 30px;
+}
+
+.img-width-services {
+    width: 100%;
+    height: 100%;
+    margin-top: -83px;
+}
+
+.title-Es {
+    text-transform: uppercase;
+    padding-left: 70px;
+    margin-top: 50px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.bk-ser {
+    background: #031022;
+}
+
+.Es1 {
+    color: #FFFFFF;
+    padding-left: 80px;
+    font-size: 14px;
+    font-family: 'klavika';
+    font-weight: 100;
+}
+
+.services1 {
+    margin-top: -10px;
+    padding-left: 70px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-family: 'klavika';
+}
+
+.services2 {
+    font-weight: 100;
+    padding-left: 70px;
+    color: #FFFFFF;
+    font-family: 'klavika';
+    width: 580px;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+.title-frequently {
+    padding-left: 80px;
+    padding-top: 50px;
+    font-weight: 700;
+    font-family: 'klavika';
+    font-size: 24px;
+}
+
+.form-legal {
+    color: #265AA7;
+    cursor: pointer;
+    font-family: 'klavika';
+    font-size: 22px;
+    padding-left: 80px;
+    padding-top: 20px;
+    text-transform: uppercase;
+    width: 250px;
+}
+
+.services-name {
+    font-size: 12px;
+    font-weight: 100;
+    font-family: 'klavika';
+    color: #333333;
+}
+
+.font-text {
+    font-size: 15px;
+    font-family: 'klavika';
+    font-weight: 700;
+}
+
+.name-ask {
+    font-family: 'klavika';
+    font-weight: 700;
+
+}
+
+.related {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.none-underline {
+    text-decoration: none;
+}
+
+.ser-company {
+    font-family: 'Klavika';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 115.5%;
+    letter-spacing: -1.5px;
+    margin-left: 70px;
+    color: #fff;
+    margin-top: -650px;
+
+
+}
+
+.title-unlock {
+    padding-left: 70px;
+    line-height: 18px;
+    font-size: 13px;
+    padding-top: 30px;
+    color: #FFFFFF;
+}
+
+.title-establish {
+    padding-top: 350px;
+    padding-left: 70px;
+}
+
+.background-establish {
+    background-color: #031022;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.title-select {
+    font-size: 14px;
+    font-weight: 100;
+    padding-left: 70px;
+    padding-top: 30px;
+}
+
+.select-country1 {
+    padding-left: 70px;
+    font-size: 14px;
+    font-family: 'klavika';
+    font-weight: 300;
+}
+
+.select-country2 {
+    font-size: 14px;
+    font-family: 'klavika';
+    font-weight: 300;
+    padding-left: 70px;
+}
+
+.select-country3 {
+    font-size: 14px;
+    padding-left: 70px;
+    font-family: 'klavika';
+    font-weight: 300;
+}
+
+.select-country4 {
+    font-size: 14px;
+    font-family: 'klavika';
+    font-weight: 300;
+    padding-left: 70px;
+}
+
+.width-japan {
+    width: 25px;
+}
+
+.width-group {
+    width: 100%;
+    padding-top: 400px;
+}
+
+.service-stage {
+    padding-left: 70px;
+    text-transform: uppercase;
+    letter-spacing: -0.48px;
+    font-weight: 700;
+    padding-top: 50px;
+    font-size: 24px;
+}
+
+.form-selectcountry {
+    padding-left: 80px;
+    padding-top: 50px;
+}
+
+.country {
+    font-family: 'klavika';
+    padding-top: 50px;
+}
+
+.width-asset {
+    width: 60%;
+    margin-left: 90px;
+    margin-top: 50px;
+}
+
+.none-underline1 {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.bang {
+    font-size: 13.9px;
+}
+
+.services-account {
+    padding-top: 150px;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'klavika';
+}

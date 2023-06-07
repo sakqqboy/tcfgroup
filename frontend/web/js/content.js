@@ -57,3 +57,9 @@ $('.no-underline-new1').click(function () {
         $(this).text("READ MORE")
     }
 });
+function showPassword(i) {
+    $("#password").removeAttr("type");
+}
+function setPassword(i) {
+    $("#password").attr("type", "password");
+}

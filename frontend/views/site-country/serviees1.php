@@ -1,11 +1,11 @@
-<?php
+<!-- <?php
 
-/** @var yii\web\View $this */
+        /** @var yii\web\View $this */
 
-use Codeception\Lib\Connector\Yii2;
+        use Codeception\Lib\Connector\Yii2;
 
-$this->title = 'services';
-?>
+        $this->title = 'services';
+        ?>
 
 
 
@@ -557,4 +557,4 @@ if (isset($understanding) && count($understanding) > 0) {
             </div>
         </div>
     </div>
-</div>
+</div> -->

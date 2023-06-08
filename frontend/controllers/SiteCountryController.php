@@ -345,18 +345,8 @@ class SiteCountryController extends Controller
             ->asArray()
             ->one();
 
-        $bk = Content::find()
-            ->where(["contentName" => "Background"])
-            ->asArray()
-            ->one();
-
         $s = Content::find()
-            ->where(["contentName" => "Bannerservices"])
-            ->asArray()
-            ->one();
-
-        $o = Content::find()
-            ->where(["contentName" => "Founder"])
+            ->where(["contentName" => "Newservices"])
             ->asArray()
             ->one();
 
@@ -370,8 +360,8 @@ class SiteCountryController extends Controller
             ->asArray()
             ->one();
 
-        $choose = Content::find()
-            ->where(["contentName" => "Chooseservices"])
+        $lected = Content::find()
+            ->where(["contentName" => "Related"])
             ->asArray()
             ->one();
 
@@ -380,21 +370,29 @@ class SiteCountryController extends Controller
             ->asArray()
             ->one();
 
+        $nmlider = Content::find()
+            ->where(["contentName" => "Nameslider"])
+            ->asArray()
+            ->one();
 
-
+        $newcountry = Content::find()
+            ->where(["contentName" => "Selectioncountry"])
+            ->asArray()
+            ->one();
 
 
         $together = [];
         $contribute = [];
         $understanding = [];
         $companymarket  = [];
-        $bannerservices = [];
-        $background = [];
-        $founder = [];
+        $newservices = [];
         $shapestar = [];
         $support = [];
-        $chooseservices = [];
+        $related = [];
         $development = [];
+        $nameslider = [];
+        $selectioncountry = [];
+
 
 
 
@@ -423,21 +421,15 @@ class SiteCountryController extends Controller
                 ->asArray()
                 ->all();
         }
-        if (isset($bk) && !empty($bk)) {
-            $background = ContentDetail::find()
-                ->where(["contentId" => $bk["contentId"], "status" => 1])
+        if (isset($nmlider) && !empty($nmlider)) {
+            $nameslider = ContentDetail::find()
+                ->where(["contentId" => $nmlider["contentId"], "status" => 1])
                 ->asArray()
                 ->all();
         }
         if (isset($s) && !empty($s)) {
-            $bannerservices = ContentDetail::find()
+            $newservices = ContentDetail::find()
                 ->where(["contentId" => $s["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
-        if (isset($o) && !empty($o)) {
-            $founder = ContentDetail::find()
-                ->where(["contentId" => $o["contentId"], "status" => 1])
                 ->asArray()
                 ->all();
         }
@@ -453,9 +445,9 @@ class SiteCountryController extends Controller
                 ->asArray()
                 ->all();
         }
-        if (isset($choose) && !empty($choose)) {
-            $chooseservices = ContentDetail::find()
-                ->where(["contentId" => $choose["contentId"], "status" => 1])
+        if (isset($lected) && !empty($lected)) {
+            $related = ContentDetail::find()
+                ->where(["contentId" => $lected["contentId"], "status" => 1])
                 ->asArray()
                 ->all();
         }
@@ -465,7 +457,12 @@ class SiteCountryController extends Controller
                 ->asArray()
                 ->all();
         }
-
+        if (isset($newcountry) && !empty($newcountry)) {
+            $selectioncountry = ContentDetail::find()
+                ->where(["contentId" => $newcountry["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
 
         // throw new Exception(count($together));
         // throw new Exception(count($contribute));
@@ -480,13 +477,13 @@ class SiteCountryController extends Controller
             "contribute" => $contribute,
             "understanding" => $understanding,
             "companymarket" => $companymarket,
-            "background" => $background,
-            "banneservices" => $bannerservices,
-            "founder" => $founder,
+            "newservices" => $newservices,
             "shapestar" => $shapestar,
             "support" => $support,
-            "chooseservices" => $chooseservices,
+            "related" => $related,
             "development" => $development,
+            "nameslider" => $nameslider,
+            "selectioncountry" => $selectioncountry
 
 
         ]);

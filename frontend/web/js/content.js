@@ -63,3 +63,19 @@ function showPassword(i) {
 function setPassword(i) {
     $("#password").attr("type", "password");
 }
+function showLimited2(i) {
+    $("#limited-" + i).css("display", "none");
+    $("#limited2-" + i).show();
+}
+function showLimited1(i) {
+    $("#limited2-" + i).css("display", "none");
+    $("#limited-" + i).show();
+}
+function showLegal2(i) {
+    $("#content2-legal-" + i).css("display", "none");
+    $("#content2-legal2-" + i).show();
+}
+function showLegal1(i) {
+    $("#content2-legal2-" + i).css("display", "none");
+    $("#content2-legal-" + i).show();
+}

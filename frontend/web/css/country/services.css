@@ -30,6 +30,7 @@
     padding-left: 85px;
     margin-top: 190px;
     font-size: 24px;
+    font-weight: 700;
 }
 
 .textservices {
@@ -38,16 +39,18 @@
     width: 580px;
     padding-left: 10px;
     margin-top: 20px;
+    font-size: 14px;
 }
 
 .c-body {
     font-family: 'klavika';
     margin-top: 20px;
+
 }
 
 .title-garment {
     font-weight: 700;
-    font-size: 19px;
+    font-size: 16px;
 }
 
 .brunch-garment {
@@ -55,6 +58,7 @@
     font-weight: 100;
     line-height: 18px;
     font-size: 12px;
+    line-height: 15px;
 }
 
 .width2 {
@@ -68,8 +72,8 @@
 
 .img-width-services {
     width: 100%;
-    height: 100%;
-    margin-top: -83px;
+    height: 111.4%;
+    margin-top: -85px;
 }
 
 .title-Es {
@@ -120,13 +124,25 @@
 }
 
 .form-legal {
-    color: #265AA7;
+    color: #6d7177;
     cursor: pointer;
     font-family: 'klavika';
-    font-size: 22px;
+    font-size: 20px;
     padding-left: 80px;
-    padding-top: 20px;
+    padding-top: 30px;
     text-transform: uppercase;
+    width: 250px;
+}
+
+.form-legal-copy {
+    color: #1c67d9;
+    cursor: pointer;
+    font-family: 'klavika';
+    font-size: 25px;
+    padding-left: 80px;
+    padding-top: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
     width: 250px;
 }
 
@@ -180,7 +196,7 @@
 }
 
 .title-establish {
-    padding-top: 350px;
+    padding-top: 390px;
     padding-left: 70px;
 }
 
@@ -223,7 +239,7 @@
     font-size: 14px;
     font-family: 'klavika';
     font-weight: 300;
-    padding-left: 70px;
+    padding-left: 20px;
 }
 
 .width-japan {
@@ -274,4 +290,224 @@
     font-size: 24px;
     font-weight: 700;
     font-family: 'klavika';
+}
+
+.button-namecontact {
+    padding-top: -20px;
+    padding-left: 40px;
+}
+
+.button-namecontact {
+    padding-left: 70px;
+    padding-top: 20px;
+}
+
+.txt-es {
+    height: 5px;
+    background-color: #367de6;
+}
+
+.copy-Es1 {
+    color: #FFFFFF;
+    padding-left: 80px;
+    font-size: 16px;
+    font-family: 'klavika';
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.show-ser {
+    margin-top: 70px;
+}
+
+
+@media(max-width: 992px) {
+    .serviecs-h1 {
+        padding-top: 120px;
+    }
+
+    .serviecs-h2 {
+        margin-top: -40px;
+        font-size: 50px;
+    }
+
+    .p-services {
+        margin-top: 100px;
+    }
+
+    .img-width-services {
+        margin-top: -70px;
+
+    }
+
+    .form-legal {
+        padding-top: 70px;
+    }
+
+    .show-ser {
+        margin-top: 80px;
+    }
+
+    .name-show-text-home {
+        margin-left: 5px;
+    }
+
+    .ser-company {
+        margin-top: -390px;
+        font-size: 27px;
+    }
+
+    .title-unlock {
+        width: 450px;
+    }
+
+    .title-establish {
+        padding-top: 130px;
+        font-size: 21px;
+        width: 600px;
+    }
+
+    .service-stage {
+        font-size: 21px;
+        width: 480px;
+    }
+}
+
+@media(max-width: 768px) {
+    .serviecs-h1 {
+        padding-top: 220px;
+        font-size: 20px;
+        padding-left: 20px;
+    }
+
+    .serviecs-h2 {
+        margin-top: -60px;
+        font-size: 20px;
+        padding-left: 20px;
+    }
+
+    .p-services {
+        margin-top: 20px;
+        padding-left: 40px;
+        font-size: 19px;
+    }
+
+    .page-ser1 {
+        padding-left: 30px;
+    }
+
+    .textservices {
+        width: 440px;
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 10px;
+    }
+
+    .links-wiki {
+        padding-top: 30px;
+    }
+
+    .img-width-services {
+        padding-top: 100px;
+        height: 110.99%;
+    }
+
+    .title-Es {
+        padding-left: 30px;
+        font-size: 19px;
+    }
+
+    .Es1 {
+        padding-left: 30px;
+    }
+
+    .services1 {
+        font-size: 15px;
+        margin-left: 60px;
+    }
+
+    .services2 {
+        font-size: 12px;
+        width: 350px;
+        margin-left: 60px;
+    }
+
+    .title-frequently {
+        padding-left: 40px;
+        font-size: 19px;
+    }
+
+    .show-text-home {
+        padding-left: 40px;
+    }
+
+    .show-ser {
+        padding-left: 40px;
+    }
+
+    .ser-company {
+        margin-left: 25px;
+        padding-top: 410px;
+        font-size: 20px;
+        width: 250px;
+
+    }
+
+    .title-unlock {
+        width: 280px;
+        font-size: 8px;
+        line-height: 10px;
+        margin-top: -30px;
+        padding-left: 25px;
+    }
+
+    .button-namecontact {
+        padding-top: 20px;
+        padding-left: 25px;
+    }
+
+    .title-establish {
+        padding-left: 35px;
+        font-size: 19px;
+        margin-top: -280px;
+    }
+
+    .title-select {
+        padding-left: 35px;
+    }
+
+    .select-country1 {
+        padding-left: 40px;
+    }
+
+    .select-country2 {
+        padding-left: 40px;
+    }
+
+    .select-country3 {
+        padding-left: 20px;
+    }
+
+    .select-country4 {
+        padding-left: 40px;
+    }
+
+    .width-group {
+        margin-top: -390px;
+    }
+
+    .service-stage {
+        padding-left: 30px;
+        font-size: 19px;
+    }
+
+    .services-account {
+        margin-top: -50px;
+        padding-left: 30px;
+        font-size: 19px;
+    }
+
+    .accordion-flush {
+        padding-left: 20px;
+    }
 }

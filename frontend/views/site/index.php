@@ -232,13 +232,11 @@ $this->title = 'TCFGROUP';
             <div class="col-md-5 col-12 text-tokyo">
                 <?= $e['detail5'] ?>
             </div>
-
     <?php
             $i++;
         endforeach;
     }
     ?>
-
 </div>
 
 

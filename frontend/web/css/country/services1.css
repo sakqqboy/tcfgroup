@@ -1,4 +1,4 @@
-.image-asdsadasdasd1 {
+/* .image-asdsadasdasd1 {
     width: 100%;
     margin-top: 90px;
 }
@@ -195,10 +195,10 @@
 .pic-group {
     margin-top: 150px;
     margin-left: 70px;
-}
+} */
 
 @media(max-width: 992px) {
-    .image-together {
+    /* .image-together {
         margin-top: -380px;
         width: 420px;
         margin-left: -20px;
@@ -223,22 +223,22 @@
         width: 290px;
         margin-top: 10px;
         height: 40px;
-    }
+    } */
 }
 
 @media(max-width: 768px) {
-    .title-new1 {
+    /* .title-new1 {
         font-size: 20px;
         padding-left: 40px;
-    }
+    } */
 
-    .image-together {
+    /* .image-together {
         margin-top: -250px;
         width: 250px;
         margin-left: -20px;
-    }
+    } */
 
-    .detail-asset {
+    /* .detail-asset {
         padding-top: 40px;
         padding-left: 50px;
     }
@@ -250,7 +250,7 @@
 
     .all-picture-account {
         margin-top: -200px;
-    }
+    } */
 
     /* .select-project {
         font-size: 5px;
@@ -259,7 +259,7 @@
         padding-left: 10px;
     } */
 
-    .select-project-3 {
+    /* .select-project-3 {
         font-size: 5px;
         line-height: 6px;
         width: 190px;
@@ -288,9 +288,9 @@
 
     .image-account1 {
         width: 20px;
-    }
+    } */
 
-    .title-account1 {
+    /* .title-account1 {
         width: 190px;
         font-size: 7px;
         line-height: 8px;
@@ -315,9 +315,9 @@
         width: 150px;
         margin-left: -40px;
 
-    }
+    } */
 
-    .name-download3 {
+    /* .name-download3 {
         padding-left: 20px;
         font-size: 10px;
     }
@@ -387,5 +387,6 @@
     .pic-group {
         margin-left: 20px;
         margin-top: 80px;
-    }
+    } */
+
 }

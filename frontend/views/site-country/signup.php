@@ -17,7 +17,7 @@ $form = ActiveForm::begin([
 
 ]); ?>
 
-?>
+
 
 <div class="col-12 pr12" style="margin-top: 150px;">
     <div class="row">
@@ -66,7 +66,7 @@ $form = ActiveForm::begin([
                 <div class="col-12">
                     <p> <button type="button" class="btn btn-outline-primary bt-fr-up"> <i class="fa fa-linkedin fr-ldin" aria-hidden="true"></i> Sign in with Google</button></p>
                 </div>
-                <p> <span class="dont-sign"> Don't have an account? </span> <a href="#" class="sig1"> <span> Sign up</span></p></a>
+                <p> <span class="dont-sign"> Don't have an account? </span> <a href="<?= Yii::$app->homeUrl ?>site-country/formsignup" class="sig1"> <span> Sign up</span></p></a>
             </div>
             <div class="col-12 fr-common">
                 <i class="fa fa-copyright" aria-hidden="true"></i> Tokyo Consulting Group 2023

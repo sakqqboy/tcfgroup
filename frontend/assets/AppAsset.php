@@ -33,6 +33,8 @@ class AppAsset extends AssetBundle
         'css/country/resources.css',
         'css/country/signup.css',
         'css/country/privacy.css',
+        'css/country/formsignup.css',
+
     ];
     public $js = [
         'js/content.js',

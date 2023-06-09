@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use backend\models\tokyoconsulting\Member;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -21,6 +22,7 @@ use frontend\models\tokyoconsulting\Content as TokyoconsultingContent;
 use frontend\models\tokyoconsulting\ContentDetail;
 use frontend\models\tokyoconsulting\master\ContentMaster;
 use PHPUnit\TextUI\Command;
+use yii\db\Expression;
 use yii\widgets\ContentDecorator;
 
 /**
@@ -83,6 +85,8 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+
+        // throw new Exception(Yii::$app->user->id);
 
         $index = Content::find()
             ->where(["contentName" => "Banner"])
@@ -1054,6 +1058,8 @@ class SiteController extends Controller
             "doctrines" => $doctrines,
         ]);
     }
+
+
     public function actionContact1()
     {
 
@@ -1182,8 +1188,12 @@ class SiteController extends Controller
     public function actionSignup()
     {
         $model = new SignupForm();
-        if ($model->load(Yii::$app->request->post()) && $model->signup()) {
+        if ($model->load(Yii::$app->request->post())) {
+
+
             Yii::$app->session->setFlash('success', 'Thank you for registration. Please check your inbox for verification email.');
+
+            // return $this->redirect(Yii::$app->homeUrl . "site/index");
             return $this->goHome();
         }
 
@@ -1191,6 +1201,7 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
+
 
     /**
      * Requests password reset.

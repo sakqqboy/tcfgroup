@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use backend\models\tokyoconsulting\Member;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -19,6 +20,7 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use PHPUnit\Framework\Constraint\Count;
+use yii\db\Expression;
 use yii\widgets\ContentDecorator;
 
 /**
@@ -488,6 +490,55 @@ class SiteCountryController extends Controller
 
         ]);
     }
+    public function actionSave()
+    {
+        $member = Member::find()
+            ->where(["memberId" => $_POST['memberId']])
+            ->asArray()
+            ->one();
+
+        if (isset($_POST['firstName'])) {
+            $member = new Member();
+            $member->memberFirstName = $_POST["firstname"];
+            $member->memberNickName = $_POST["nickname"];
+            $member->birthDate = $_POST["birthdate"];
+            $member->username = $_POST["username"];
+            $member->email = $_POST["email"];
+            $member->password_hash = md5($_POST["password"]);
+            $member->status = 1;
+            $member->createDateTime = new Expression('NOW()');
+            $member->updateDateTime = new Expression('NOW()');
+            $member->status = 1;
+            $member->updateDateTime = new Expression('NOW()');
+            if ($member->save(false)) {
+                return $this->redirect('formsignup');
+            }
+        }
+
+        return $this->render('signup');
+    }
+    public function actionFormsignup()
+    {
+
+        if (isset($_POST["FirstName"])) {
+            $member = new Member();
+            $member->memberFirstName = $_POST["firstName"];
+            $member->memberNickName = $_POST["nickName"];
+            $member->birthDate = $_POST["birthDate"];
+            $member->username = $_POST["username"];
+            $member->email = $_POST["email"];
+            $member->password = md5($_POST["password"]);
+            $member->status = 1;
+            $member->createDateTime = new Expression('NOW()');
+            $member->updateDateTime = new Expression('NOW()');
+            if ($member->save(false)) {
+                return $this->redirect('formsignup');
+            }
+
+            return $this->render('signup');
+        }
+    }
+
     public function actionWebinar()
     {
 
@@ -1091,8 +1142,11 @@ class SiteCountryController extends Controller
     }
     public function actionSignup()
     {
+
+
         return $this->render('signup');
     }
+
     public function actionPrivacy()
     {
         return $this->render('privacy');

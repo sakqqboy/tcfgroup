@@ -3,6 +3,8 @@
 namespace backend\controllers;
 
 use common\models\LoginForm;
+use common\models\tokyoconsulting\Content;
+use Exception;
 use Yii;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
@@ -61,10 +63,7 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex()
-    {
-        return $this->render('index');
-    }
+
 
     /**
      * Login action.
@@ -84,7 +83,7 @@ class SiteController extends Controller
             return $this->goBack();
         }
 
-        $model->password = '';
+        // $model->password = '';
 
         return $this->render('login', [
             'model' => $model,

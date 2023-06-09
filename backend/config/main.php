@@ -15,6 +15,9 @@ return [
         'kt-generator' => [
             'class' => 'backend\modules\KTGenerator\KTGenerator',
         ],
+        'content' => [
+            'class' => 'backend\modules\content\content',
+        ],
     ],
     'components' => [
         'request' => [
@@ -45,7 +48,11 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [],
+            'rules' => [
+                'content/default/view-content/<hash>' => 'content/default/view-content',
+                'content/default/update-content/<hash>' => 'content/default/update-content',
+                'content/default/update-content/<hash>' => 'content/default/save-update',
+            ],
         ],
 
     ],

@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\models\tokyoconsulting\master;
+namespace backend\models\tokyoconsulting\master;
 
 use Yii;
 

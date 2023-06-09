@@ -3,12 +3,22 @@
 /** @var yii\web\View $this */
 
 use Codeception\Lib\Connector\Yii2;
+use yii\bootstrap5\ActiveForm;
 
 $this->title = 'Sign up';
 
+$form = ActiveForm::begin([
 
+    'id' => 'login-form',
+
+    'action' => Yii::$app->homeUrl . 'site/login',
+
+    'method' => 'post'
+
+]); ?>
 
 ?>
+
 <div class="col-12 pr12" style="margin-top: 150px;">
     <div class="row">
         <div class="col-lg-7 col-md-6 col-12">
@@ -17,17 +27,18 @@ $this->title = 'Sign up';
                 <p class="title-enter"> Welcome back! Please enter your details.</p>
             </div>
             <div class="col-8">
-                <label class="form-nm-email1">Email</label>
-                <div class="input-group mb-3 form-sign-in-email">
-                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
-                    <input type="email" class="form-control" placeholder="ehsan@tokyoconsultingfirmlimited.com" aria-label="Username" aria-describedby="basic-addon1">
-                </div>
+                <form action="">
+                    <label class="form-nm-email1">Email</label>
+                    <div class="input-group mb-3 form-sign-in-email">
+                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                        <input type="email" class="form-control" placeholder="email" aria-label="Username" name="LoginForm[username]" aria-describedby="basic-addon1">
+                    </div>
             </div>
             <div class="col-8">
                 <label class="form-nm-email1">Password</label>
                 <div class="input-group mb-3 form-sign-in-email">
                     <span class="input-group-text"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
-                    <input id="password" type="password" class="form-control" placeholder="password" aria-label="password">
+                    <input id="password" type="password" class="form-control" placeholder="password" name="LoginForm[password]" aria-label="password">
                     <span class="input-group-text" onmousedown="javascript:showPassword()" onmouseup="javascript:setPassword()"> <i class=" fa fa-eye from-password-eye" aria-hidden="true"></i></span>
                 </div>
             </div>
@@ -44,9 +55,10 @@ $this->title = 'Sign up';
                     </div>
                 </div>
             </div>
+
             <div class="col-12 bt-sign-in">
                 <div class="col-12">
-                    <p> <button type="button" class="btn btn-primary bt-fr-up"> Sign in</button> </p>
+                    <p> <button type="submit" class="btn btn-primary bt-fr-up"> Sign in</button> </p>
                 </div>
                 <div class="col-12">
                     <p> <button type="button" class="btn btn-outline-primary bt-fr-up"> <img src="<?= Yii::$app->homeUrl ?>img/google.png" class="img-signgoogle"> Sign in with Google</button> </p>
@@ -67,6 +79,8 @@ $this->title = 'Sign up';
         </div>
     </div>
 </div>
+
+<?php ActiveForm::end(); ?>
 
 <div class="col-12">
 

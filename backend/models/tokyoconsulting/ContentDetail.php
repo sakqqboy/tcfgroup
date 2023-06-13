@@ -41,4 +41,8 @@ class ContentDetail extends \backend\models\tokyoconsulting\master\ContentDetail
     {
         return array_merge(parent::attributeLabels(), []);
     }
+    public static function countContentDetail($contentId){
+        $contentDetail=ContentDetail::find()->where(["contentId"=>$contentId])->all();
+        return count($contentDetail);
+    }
 }

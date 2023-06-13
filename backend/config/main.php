@@ -51,10 +51,17 @@ return [
             'rules' => [
                 'content/default/view-content/<hash>' => 'content/default/view-content',
                 'content/default/update-content/<hash>' => 'content/default/update-content',
-                'content/default/update-content/<hash>' => 'content/default/save-update',
+                'content/default/content-detail/<hash>' => 'content/default/content-detail',
+                'content/default/view-content-detail/<hash>' => 'content/default/view-content-detail',
+                'content/default/create-content-detail/<hash>' => 'content/default/create-content-detail',
+                'content/default/update-content-detail/<hash>' => 'content/default/update-content-detail'
             ],
         ],
-
+        'assetManager' => [
+            'appendTimestamp' => true,
+            'bundles' => [],
+            //            'forceCopy' => TRUE
+        ],
     ],
     'params' => $params,
 ];

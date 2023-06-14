@@ -16,7 +16,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="<?=Yii::$app->homeUrl.'/member/default/index'?>">
                 <i class="fa fa-table fas" aria-hidden="true"></i>
                     <span class="nav-items">
                         Member

@@ -33,7 +33,7 @@ class MemberMaster extends \common\models\ModelMaster
 */
 public static function tableName()
 {
-    return 'member';
+return 'member';
 }
 
 /**

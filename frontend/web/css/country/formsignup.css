@@ -1,13 +1,114 @@
-.name1-sign {
-    font-size: 50px;
-    font-family: 'klavika';
-    font-weight: 700;
-    color: #FFFFFF;
-    padding-top: 30px;
-}
-
 .icon-formeye {
     font-size: 18px;
     padding-top: 20px;
     cursor: pointer;
+}
+
+.width-woman {
+    width: 250px;
+    margin-top: 150px;
+    margin-left: -120px;
+}
+
+.width-12 {
+    width: 100%;
+    margin-top: 150px;
+    margin-left: 10px;
+}
+
+.shadowformsign {
+    margin-top: 10px;
+    background: rgb(238, 189, 174);
+    background: linear-gradient(90deg, rgba(238, 189, 174, 1) 0%, rgba(148, 230, 233, 1) 100%);
+
+}
+
+.width-flower {
+    width: 60px;
+    margin-left: 50px;
+    margin-top: -160px;
+}
+
+.signup {
+    background: -webkit-linear-gradient(#65e1e7, #64cce4);
+    font-family: 'klavika';
+    font-size: 20px;
+    width: 150px;
+}
+
+.con-color {
+    color: #2282b3;
+
+}
+
+.con-color1 {
+    font-weight: 700;
+    color: #0099cc;
+}
+
+.curser-eye {
+    cursor: pointer;
+}
+
+.pg-s {
+    font-size: 40px;
+    font-size: 72px;
+    text-align: center;
+    font-weight: 700;
+    color: #f9a07a;
+
+}
+
+.pg-i {
+    font-size: 40px;
+    font-size: 72px;
+    text-align: center;
+    font-weight: 700;
+    color: #f1a590;
+}
+
+.pg-g {
+    font-size: 40px;
+    font-size: 72px;
+    text-align: center;
+    font-weight: 700;
+    color: #bd5783;
+}
+
+.pg-n {
+    font-size: 40px;
+    font-size: 72px;
+    text-align: center;
+    font-weight: 700;
+    color: #eb9fc0;
+}
+
+.pg-u {
+    font-size: 40px;
+    font-size: 72px;
+    text-align: center;
+    font-weight: 700;
+    color: #72c9c6;
+}
+
+.pg-p {
+    font-size: 40px;
+    font-size: 72px;
+    text-align: center;
+    font-weight: 700;
+    color: #41bac9;
+}
+
+/* .show-text-home1 {
+    padding-top: 50px;
+    border-left: lightgrey solid thin;
+    margin-top: 20px;
+} */
+
+.width-sign-up2 {
+    width: 90px;
+}
+
+.lastname-cs {
+    padding-right: 52px;
 }

@@ -43,3 +43,6 @@ phpunit.phar
 /backend/web/index-test.php
 /backend/web/robots.txt
 /backend/web/assets
+/backend/web/image
+/frontend/web/image
+

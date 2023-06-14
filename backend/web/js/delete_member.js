@@ -16,7 +16,7 @@ function deleteMember(memberId) {
             data: { memberId: memberId },
             success: function (data) {
                 if (data.status) {
-                    $("memberId" + memberId).hide();
+                    $("#memberId-" + memberId).hide();
                 }
             }
         });

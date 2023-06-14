@@ -11,7 +11,7 @@
     'action' => Yii::$app -> homeUrl . 'content/default/save-update-detail'
 
     ]); ?>
-    <div class="row mt-3">
+    <div class="row mt-5">
         <div class="col-lg-12 border border-dark bd-position">
             <div class="col-lg-12 text-center font-title">
                 UPDATE CONTENT<br>

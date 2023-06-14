@@ -16,11 +16,11 @@
             </a>
         </li>
         <li>
-            <a href="<?=Yii::$app->homeUrl.'/member/default/index'?>">
+            <a href="<?=Yii::$app->homeUrl.'/member/default/member'?>">
                 <i class="fa fa-table fas" aria-hidden="true"></i>
-                    <span class="nav-items">
-                        Member
-                    </span>
+                <span class="nav-items">
+                    Member
+                </span>
             </a>
         </li>
     </ul>

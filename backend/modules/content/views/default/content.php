@@ -24,8 +24,8 @@
         <tbody>
             <?php
 
-                                                            use backend\models\tokyoconsulting\ContentDetail;
-                                                            use common\models\ModelMaster;
+                use backend\models\tokyoconsulting\ContentDetail;
+                use common\models\ModelMaster;
 
                 if(isset($content)){
                     $i=1;

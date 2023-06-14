@@ -11,24 +11,3 @@
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 700;
 }
-
-.btn-success {
-    position: relative;
-    display: inline-block;
-    letter-spacing: .1em;
-    text-decoration: none;
-    padding: 7px 15px;
-}
-
-.btn-secondary {
-    position: relative;
-    display: inline-block;
-    letter-spacing: .1em;
-    text-decoration: none;
-    padding: 7px 15px;
-}
-
-.back-next {
-    display: flex;
-    justify-content: space-between;
-}

@@ -28,7 +28,6 @@ class User extends ActiveRecord implements IdentityInterface
     const STATUS_DELETED = 0;
     const STATUS_INACTIVE = 9;
     const STATUS_ACTIVE = 1;
-
     public $auth_key;
     /**
      * {@inheritdoc}
@@ -168,7 +167,7 @@ class User extends ActiveRecord implements IdentityInterface
     public function validatePassword($password)
     {
         // return Yii::$app->security->validatePassword($password, $this->password_hash);
-        if (md5($password) == $this->password_hash) {
+        if(md5($password) == $this -> password_hash) {
             return true;
         }
     }

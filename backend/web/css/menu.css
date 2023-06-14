@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.nav-menu {
+    position: fixed;
+    list-style-type: none;
+    top: 9.5%;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background-color: #fff;
+    width: 16%;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+li {
+    margin-left: 5px;
+}
+
+.icon-menu {
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+}
+
+.icon-menu span {
+    font-weight: bold;
+    padding: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+a {
+    position: relative;
+    color: rgb(85, 83, 83);
+    font-size: 14px;
+    display: table;
+    padding: 10px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.fas {
+    position: relative;
+    height: 40px;
+    top: 14px;
+    font-size: 25px;
+    text-align: center;
+    color: #eee;
+}
+
+.nav-items {
+    font-size: 18px;
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+    color: #eee;
+}
+
+.font-menu {
+    font-family: "Audiowide", sans-serif;
+    font-size: 30px;
+    margin-top: 15px;
+    margin-right: 50px;
+    color: #eee;
+}
+
+.font-emo {
+    font-size: 30px;
+    margin-top: 0;
+    margin-right: 50px;
+    color: #eee;
+}
+
+.scrollbar {
+    overflow: hidden;
+}

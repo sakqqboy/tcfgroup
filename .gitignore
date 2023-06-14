@@ -39,7 +39,14 @@ phpunit.phar
 /frontend/web/assets
 /frontend/web/index-test.php
 /frontend/web/robots.txt
+/frontend/web/image
 /backend/web/index.php
 /backend/web/index-test.php
 /backend/web/robots.txt
 /backend/web/assets
+/backend/web/image
+<<<<<<< HEAD
+=======
+/frontend/web/image
+
+>>>>>>> 3f4c1d0d1f9405477aa361e7a0e36c1b345931a4

@@ -20,6 +20,7 @@ class AppAsset extends AssetBundle
         'css/creatememp2.css',
         'css/updatemember.css',
         'css/viewmember.css',
+        'css/login.css',
 
 
     ];
@@ -32,5 +33,6 @@ class AppAsset extends AssetBundle
         'yii\web\YiiAsset',
         'yii\bootstrap5\BootstrapAsset',
         '\rmrevin\yii\fontawesome\AssetBundle'
+
     ];
 }

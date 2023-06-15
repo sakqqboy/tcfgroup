@@ -1,3 +1,75 @@
 .site-login {
-    background-color: aqua;
+    margin-top: 70px;
+    margin-left: 40px;
+
+}
+
+.black-sitelogin {
+    background: #a0e5f3;
+    margin-left: 40px;
+    background: -webkit-linear-gradient(to right, #eba7aa, #e6d0a0);
+    background: linear-gradient(to right, #c8edea, #c7aff5);
+    color: #5a64be;
+    border-color: rgb(188, 138, 237);
+}
+
+.background-login {
+    width: 100%;
+    border-radius: 50px;
+
+}
+
+.name-login {
+    font-weight: 700;
+    text-align: center;
+    font-size: 70px;
+    color: black;
+    margin-top: -60px;
+
+}
+
+.login {
+    width: 20px;
+
+}
+
+.width-com {
+    width: 100%;
+    background-size: cover;
+}
+
+.login-mail {
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    padding-left: 40px;
+}
+
+.log-assome {
+    color: black;
+    line-height: 15px;
+}
+
+.submit-login {
+    background: #a0e5f3;
+    background: -webkit-linear-gradient(to right, #eba7aa, #e6d0a0);
+    background: linear-gradient(to right, #c8edea, #c7aff5);
+    color: #5a64be;
+    border-color: rgb(188, 138, 237);
+    font-size: 20px;
+    font-family: 'klavika';
+    width: 150px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.login-moon {
+    color: #ec1616;
+    font-size: 25px;
+}
+
+.ic-username {
+    width: 60px;
+    margin-left: 250px;
+
 }

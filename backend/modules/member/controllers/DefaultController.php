@@ -2,7 +2,12 @@
 
 namespace backend\modules\member\controllers;
 
+use backend\models\tokyoconsulting\Branch;
 use backend\models\tokyoconsulting\Member;
+use backend\models\tokyoconsulting\Position;
+use backend\models\tokyoconsulting\Section;
+use backend\models\tokyoconsulting\Team;
+use backend\models\tokyoconsulting\TeamPosition;
 use common\helpers\Path;
 use common\models\ModelMaster;
 use Exception;
@@ -22,25 +27,30 @@ class DefaultController extends Controller
      */
     public function actionMember()
     {
-        $member = Member::find() -> asArray() -> all();
+        $member = Member::find()->asArray()->all();
         return $this->render('member', ["member" => $member]);
     }
 
-    public function actionCreateMember() {
-        if (isset($_POST["prefix"])) {
+    public function actionCreateMember()
+    {
+        if (isset($_POST["username"])) {
             $member = new Member();
-            $member -> prefix = $_POST["prefix"];
-            $member -> username = $_POST["username"];
-            $member -> password_hash = $_POST["password"];
-            $member -> memberFirstName = $_POST["firstname"];
-            $member -> memberLastName = $_POST["lastname"];
-            $member -> memberNickName = $_POST["nickname"];
-            $member -> birthDate = $_POST["birthdate"];
-            $member -> gender = $_POST["gender"];
-            $member -> email = $_POST["email"];
-            $member -> telephoneNumber = $_POST["phonenumber"];
-            $member -> branchId = $_POST["branchid"];
-            $member -> address = $_POST["address"];
+            $member->prefix = $_POST["prefix"];
+            $member->username = $_POST["username"];
+            $member->password_hash = $_POST["password"];
+            $member->memberFirstName = $_POST["firstname"];
+            $member->memberLastName = $_POST["lastname"];
+            $member->memberNickName = $_POST["nickname"];
+            $member->birthDate = $_POST["birthdate"];
+            $member->gender = $_POST["gender"];
+            $member->email = $_POST["email"];
+            $member->telephoneNumber = $_POST["phonenumber"];
+            $member->branchId = $_POST["branchId"];
+            $member->sectionId = $_POST["sectionid"];
+            $member->positionId = $_POST["positionid"];
+            $member->teamId = $_POST["teamid"];
+            $member->teamPositionId = $_POST["teampositionid"];
+
 
             $imageObj = UploadedFile::getInstanceByName("picture");
             if (isset($imageObj) && !empty($imageObj)) {
@@ -54,18 +64,23 @@ class DefaultController extends Controller
                 $fileName = Yii::$app->security->generateRandomString(10) . '.' . $filenameArray[$countArrayFile - 1];
                 $pathSave = $urlFolder . $fileName;
                 if ($imageObj->saveAs($pathSave)) {
-                    $member -> picture = 'image/member/' . $fileName;
+                    $member->picture = 'image/member/' . $fileName;
                 }
             }
 
-            $member -> createDateTime = new Expression('NOW()');
-            $member -> updateDateTime = new Expression('NOW()');
+            $member->createDateTime = new Expression('NOW()');
+            $member->updateDateTime = new Expression('NOW()');
 
             if ($member->save(false)) {
                 return $this->redirect(Yii::$app->homeUrl . 'member/default/member');
             }
         }
-        return $this->render('create_member');
+        $branchs = Branch::find()->where("status=1")->orderBy('branchName')->asArray()->all();
+        $teampositions = TeamPosition::find()->where("status=1")->asArray()->all();
+
+
+
+        return $this->render('create_member', ["branchs" => $branchs, "teampositions" => $teampositions]);
     }
 
     public function actionViewMember($hash)
@@ -89,18 +104,22 @@ class DefaultController extends Controller
             $memberId = Yii::$app->request->post("memberId");
             $member = Member::find()->where(["memberId" => $memberId])->one();
             if (isset($member) && !empty($member)) {
-                $member -> prefix = $_POST["prefix"];
-                $member -> username = $_POST["username"];
-                $member -> password_hash = $_POST["password"];
-                $member -> memberFirstName = $_POST["firstname"];
-                $member -> memberLastName = $_POST["lastname"];
-                $member -> memberNickName = $_POST["nickname"];
-                $member -> birthDate = $_POST["birthdate"];
-                $member -> gender = $_POST["gender"];
-                $member -> email = $_POST["email"];
-                $member -> telephoneNumber = $_POST["phonenumber"];
-                $member -> branchId = $_POST["branchid"];
-                $member -> address = $_POST["address"];
+
+                $member->prefix = $_POST["prefix"];
+                $member->username = $_POST["username"];
+                $member->password_hash = $_POST["password"];
+                $member->memberFirstName = $_POST["firstname"];
+                $member->memberLastName = $_POST["lastname"];
+                $member->memberNickName = $_POST["nickname"];
+                $member->birthDate = $_POST["birthdate"];
+                $member->gender = $_POST["gender"];
+                $member->email = $_POST["email"];
+                $member->telephoneNumber = $_POST["phonenumber"];
+                $member->branchId = $_POST["branchId"];
+                $member->sectionId = $_POST["sectionid"];
+                $member->positionId = $_POST["positionid"];
+                $member->teamId = $_POST["teamid"];
+                $member->teamPositionId = $_POST["teampositionid"];
 
                 $imageObj = UploadedFile::getInstanceByName("picture");
                 if ($imageObj !== null) {
@@ -132,6 +151,46 @@ class DefaultController extends Controller
         // return $this->redirect(Yii::$app->homeUrl . 'site/member');
         // $res["name"] = $member->userName;
         // $res["status"] = true;
+        return json_encode($res);
+    }
+
+
+    public function actionFindBranchInfo()
+    {
+        $branchId = $_POST["branchId"];
+
+
+        $textSection = '<option value="">select section</option>';
+        $textPosition = '<option value="">select Position</option>';
+        $textTeam = '<option value="">select team</option>';
+        $res = [];
+        $res["status"] = true;
+
+
+        $sections = Section::find()->where(["branchId" => $branchId, "status" => 1])->orderBy('sectionName')->asArray()->all();
+        if (isset($sections) && count($sections) > 0) {
+            foreach ($sections as $section) :
+                $textSection .= '<option value=' . $section["sectionId"] . '>' . $section["sectionName"] . '</option>';
+            endforeach;
+        }
+
+        $positions = Position::find()->where(["branchId" => $branchId, "status" => 1])->orderBy('positionName')->asArray()->all();
+        if (isset($positions) && count($positions) > 0) {
+            foreach ($positions as $position) :
+                $textPosition .= '<option value=' . $position["positionId"] . '>' . $position["positionName"] . '</option>';
+            endforeach;
+        }
+
+        $teams = Team::find()->where(["branchId" => $branchId, "status" => 1])->orderBy('teamName')->asArray()->all();
+        if (isset($teams) && count($teams) > 0) {
+            foreach ($teams as $team) :
+                $textTeam .= '<option value=' . $team["teamId"] . '>' . $team["teamName"] . '</option>';
+            endforeach;
+        }
+
+        $res["textSection"] = $textSection;
+        $res["textPosition"] = $textPosition;
+        $res["textTeam"] = $textTeam;
         return json_encode($res);
     }
 }

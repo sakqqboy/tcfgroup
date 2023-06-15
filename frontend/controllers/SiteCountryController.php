@@ -382,6 +382,10 @@ class SiteCountryController extends Controller
             ->asArray()
             ->one();
 
+        $icon5 = Content::find()
+            ->where(["contentName" => "Garmenticon"])
+            ->asArray()
+            ->one();
 
         $together = [];
         $contribute = [];
@@ -394,6 +398,7 @@ class SiteCountryController extends Controller
         $development = [];
         $nameslider = [];
         $selectioncountry = [];
+        $garmenticon = [];
 
 
 
@@ -465,14 +470,12 @@ class SiteCountryController extends Controller
                 ->asArray()
                 ->all();
         }
-
-        // throw new Exception(count($together));
-        // throw new Exception(count($contribute));
-        // throw new Exception(count($understanding));
-        // throw new Exception(count($click));
-        // throw new  Exception(count($companymarket));
-        // throw new Exception(count($chooseservices));
-        // throw new Exception(count($development));
+        if (isset($icon5) && !empty($icon5)) {
+            $garmenticon = ContentDetail::find()
+                ->where(["contentId" => $icon5["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
 
         return $this->render('services', [
             "together" => $together,
@@ -485,8 +488,8 @@ class SiteCountryController extends Controller
             "related" => $related,
             "development" => $development,
             "nameslider" => $nameslider,
-            "selectioncountry" => $selectioncountry
-
+            "selectioncountry" => $selectioncountry,
+            "garmenticon" => $garmenticon
 
         ]);
     }
@@ -494,50 +497,49 @@ class SiteCountryController extends Controller
     {
         $member = Member::find()
             ->where(["memberId" => $_POST['memberId']])
-            ->asArray()
             ->one();
 
+        // throw new Exception(print_r(Yii::$app->request->post(), true));
+        // throw new Exception(print_r($member, true));
+
         if (isset($_POST['firstName'])) {
-            $member = new Member();
-            $member->memberFirstName = $_POST["firstname"];
-            $member->memberNickName = $_POST["nickname"];
-            $member->birthDate = $_POST["birthdate"];
+            $member->memberFirstName = $_POST["firstName"];
+            $member->memberLastName = $_POST["lastName"];
+            $member->memberNickName = $_POST["nickName"];
             $member->username = $_POST["username"];
+            $member->birthDate = $_POST["birthDate"];
             $member->email = $_POST["email"];
-            $member->password_hash = md5($_POST["password"]);
-            $member->status = 1;
-            $member->createDateTime = new Expression('NOW()');
-            $member->updateDateTime = new Expression('NOW()');
+            $member->password_hash = md5($_POST["password_hash"]);
             $member->status = 1;
             $member->updateDateTime = new Expression('NOW()');
             if ($member->save(false)) {
-                return $this->redirect('formsignup');
+                return $this->redirect('signup');
             }
         }
-
-        return $this->render('signup');
     }
+
+
     public function actionFormsignup()
     {
-
-        if (isset($_POST["FirstName"])) {
+        if (isset($_POST["firstName"])) {
             $member = new Member();
             $member->memberFirstName = $_POST["firstName"];
+            $member->memberLastName = $_POST["lastName"];
             $member->memberNickName = $_POST["nickName"];
-            $member->birthDate = $_POST["birthDate"];
             $member->username = $_POST["username"];
+            $member->birthDate = $_POST["birthDate"];
             $member->email = $_POST["email"];
-            $member->password = md5($_POST["password"]);
+            $member->password_hash = md5($_POST["password_hash"]);
             $member->status = 1;
             $member->createDateTime = new Expression('NOW()');
             $member->updateDateTime = new Expression('NOW()');
             if ($member->save(false)) {
-                return $this->redirect('formsignup');
+                return $this->redirect('signup');
             }
-
-            return $this->render('signup');
         }
+        return $this->render('formsignup');
     }
+
 
     public function actionWebinar()
     {
@@ -606,9 +608,6 @@ class SiteCountryController extends Controller
             ->where(["contentName" => "Meet"])
             ->asArray()
             ->one();
-
-
-
 
 
 
@@ -726,6 +725,9 @@ class SiteCountryController extends Controller
             "meet" => $meet,
         ]);
     }
+
+
+
     public function actionWebinarVideo()
     {
 
@@ -749,7 +751,6 @@ class SiteCountryController extends Controller
             ->asArray()
             ->one();
 
-
         $pagewebinarvideo = [];
         $namevideo = [];
         $summary = [];
@@ -757,28 +758,24 @@ class SiteCountryController extends Controller
 
         if (isset($pagevideo) && !empty($pagevideo)) {
             $pagewebinarvideo = ContentDetail::find()
-
                 ->where(["contentId" => $pagevideo["contentId"], "status" => 1])
                 ->asArray()
                 ->all();
         }
         if (isset($name1) && !empty($name1)) {
             $namevideo = ContentDetail::find()
-
                 ->where(["contentId" => $name1["contentId"], "status" => 1])
                 ->asArray()
                 ->all();
         }
         if (isset($mary) && !empty($mary)) {
             $summary = ContentDetail::find()
-
                 ->where(["contentId" => $mary["contentId"], "status" => 1])
                 ->asArray()
                 ->all();
         }
         if (isset($subfree) && !empty($subfree)) {
             $subwebinar = ContentDetail::find()
-
                 ->where(["contentId" => $subfree["contentId"], "status" => 1])
                 ->asArray()
                 ->all();
@@ -997,6 +994,7 @@ class SiteCountryController extends Controller
             "namequaziehsan" => $namequaziehsan
         ]);
     }
+
     public function actionAbout2()
     {
 

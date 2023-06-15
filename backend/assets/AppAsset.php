@@ -27,7 +27,8 @@ class AppAsset extends AssetBundle
     public $js = [
         'js/delete_content.js',
         'js/delete_content_detail.js',
-        'js/delete_member.js'
+        'js/delete_member.js',
+        'js/member.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

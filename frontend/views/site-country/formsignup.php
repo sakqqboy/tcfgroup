@@ -42,13 +42,13 @@ $form = ActiveForm::begin([
                     <div class="col-6 mt-20 pl-50">
                         <div class="input-group flex-nowrap">
                             <span class="input-group-text" id="addon-wrapping"><i class="fa fa-user con-color" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control con-color1" placeholder="Firstname" name="firstname" aria-label="Firstname" aria-describedby="addon-wrapping" required>
+                            <input type="text" class="form-control con-color1" placeholder="Firstname" name="firstName" aria-label="Firstname" aria-describedby="addon-wrapping" required>
                         </div>
                     </div>
                     <div class="col-6 mt-20 lastname-cs">
                         <div class="input-group flex-nowrap">
                             <span class="input-group-text" id="addon-wrapping"><i class="fa fa-user con-color" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control con-color1" placeholder="Lastname" name="lasttname" aria-label="lastname" aria-describedby="addon-wrapping" required>
+                            <input type="text" class="form-control con-color1" placeholder="Lastname" name="lastName" aria-label="lastname" aria-describedby="addon-wrapping" required>
                         </div>
                     </div>
                 </div>
@@ -61,13 +61,13 @@ $form = ActiveForm::begin([
                 <div class="col-11 mt-20 pl-40">
                     <div class="input-group flex-nowrap">
                         <span class="input-group-text" id="addon-wrapping"><i class="fa fa-user con-color" aria-hidden="true"></i></span>
-                        <input type="text" class="form-control con-color1" placeholder="Nickname" name="nickname" aria-label="Nickname" aria-describedby="addon-wrapping" required>
+                        <input type="text" class="form-control con-color1" placeholder="Nickname" name="nickName" aria-label="Nickname" aria-describedby="addon-wrapping" required>
                     </div>
                 </div>
                 <div class="col-11 mt-20 pl-40">
                     <div class="input-group flex-nowrap">
                         <span class="input-group-text" id="birthday"><i class="fa fa-birthday-cake con-color" aria-hidden="true"></i></span>
-                        <input type="date" class="form-control con-color1" placeholder="Birthday" name="birthday" required>
+                        <input type="date" class="form-control con-color1" placeholder="Birthday" name="birthDate" required>
                     </div>
                 </div>
                 <div class="col-11 mt-20 pl-40">
@@ -79,7 +79,7 @@ $form = ActiveForm::begin([
                 <div class="col-11 mt-20 pl-40">
                     <div class="input-group flex-nowrap">
                         <span class="input-group-text"><i class="fa fa-unlock-alt con-color" aria-hidden="true"></i></span>
-                        <input id="password2" type="password" class="form-control con-color1" placeholder="password" name="password2">
+                        <input id="password_hash" type="password" class="form-control con-color1" placeholder="password" name="password_hash">
                         <span class="input-group-text" onmousedown="javascript:showPassword2()" onmouseup="javascript:setPassword2()"><i class="fa fa-eye curser-eye" aria-hidden="true"></i></span>
                     </div>
                 </div>

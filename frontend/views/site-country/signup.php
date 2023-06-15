@@ -51,7 +51,9 @@ $form = ActiveForm::begin([
                         </div>
                     </div>
                     <div class="col-6 form-remember2">
-                        <p> Forget password? </a>
+                        <a href="<?= Yii::$app->homeUrl ?>site-country/setpassword" class="forget-password">
+                            <p> Forget password? </p>
+                        </a>
                     </div>
                 </div>
             </div>

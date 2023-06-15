@@ -71,11 +71,11 @@ function setPassword(i) {
 }
 
 function showPassword2(i) {
-    $("#password2").removeAttr("type");
+    $("#password_hash").removeAttr("type");
 }
 
 function setPassword2(i) {
-    $("#password2").attr("type", "password");
+    $("#password_hash").attr("type", "password");
 }
 
 function showPassword3(i) {

@@ -493,22 +493,23 @@ class SiteCountryController extends Controller
 
         ]);
     }
-    public function actionSave($member)
+    public function actionSave()
     {
         $member = Member::find()
             ->where(["memberId" => $_POST['memberId']])
             ->one();
 
-        //throw new Exception(print_r(Yii::$app->request->post(), true));
-        //  throw new Exception(print_r($member, true));
+        // throw new Exception(print_r(Yii::$app->request->post(), true));
+        // throw new Exception(print_r($member, true));
 
-        if (isset($_POST['memberId'])) {
+        if (isset($_POST['firstName'])) {
             $member->memberFirstName = $_POST["firstName"];
+            $member->memberLastName = $_POST["lastName"];
             $member->memberNickName = $_POST["nickName"];
             $member->username = $_POST["username"];
             $member->birthDate = $_POST["birthDate"];
             $member->email = $_POST["email"];
-            $member->password = md5($_POST["password"]);
+            $member->password_hash = md5($_POST["password_hash"]);
             $member->status = 1;
             $member->updateDateTime = new Expression('NOW()');
             if ($member->save(false)) {
@@ -520,9 +521,10 @@ class SiteCountryController extends Controller
 
     public function actionFormsignup()
     {
-        if (isset($_POST["memberId"])) {
+        if (isset($_POST["firstName"])) {
             $member = new Member();
             $member->memberFirstName = $_POST["firstName"];
+            $member->memberLastName = $_POST["lastName"];
             $member->memberNickName = $_POST["nickName"];
             $member->username = $_POST["username"];
             $member->birthDate = $_POST["birthDate"];
@@ -532,7 +534,7 @@ class SiteCountryController extends Controller
             $member->createDateTime = new Expression('NOW()');
             $member->updateDateTime = new Expression('NOW()');
             if ($member->save(false)) {
-                return $this->redirect('formsignup');
+                return $this->redirect('signup');
             }
         }
         return $this->render('formsignup');

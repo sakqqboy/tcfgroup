@@ -31,15 +31,18 @@ $form = ActiveForm::begin([
         <div class="padding">
             <div class="col-lg-12 font-body h4">
                 USERNAME<br>
-                <input type="text" name="username" class="font-input form-control col-lg-6" value="<?= $member->username ?>" required>
+                <input type="text" name="username" class="font-input form-control col-lg-6"
+                    value="<?= $member->username ?>" required>
             </div>
             <div class="col-lg-12 font-body h4">
                 PASSWORD<br>
-                <input type="password" name="password" class="font-input form-control col-lg-6" value="<?= $member->password_hash ?>" required>
+                <input type="password" name="password" class="font-input form-control col-lg-6"
+                    value="<?= $member->password_hash ?>" required>
             </div>
             <div class="col-lg-4 font-body h4">
                 PREFIX<br>
-                <select class="form-select" aria-label="Default select example" name="prefix" value="<?= $member->prefix ?>" required>
+                <select class="form-select" aria-label="Default select example" name="prefix"
+                    value="<?= $member->prefix ?>" required>
                     <option selected>Please select your prefix</option>
                     <option value="1">Mr</option>
                     <option value="2">Mrs</option>
@@ -47,23 +50,28 @@ $form = ActiveForm::begin([
             </div>
             <div class="col-lg-12 font-body h4">
                 FIRSTNAME<br>
-                <input type="text" name="firstname" class="font-input form-control col-lg-6" value="<?= $member->memberFirstName ?>" required>
+                <input type="text" name="firstname" class="font-input form-control col-lg-6"
+                    value="<?= $member->memberFirstName ?>" required>
             </div>
             <div class="col-lg-12 font-body h4">
                 LASTNAME<br>
-                <input type="text" name="lastname" class="font-input form-control col-lg-6" value="<?= $member->memberLastName ?>" required>
+                <input type="text" name="lastname" class="font-input form-control col-lg-6"
+                    value="<?= $member->memberLastName ?>" required>
             </div>
             <div class="col-lg-12 font-body h4">
                 NICKNAME<br>
-                <input type="text" name="nickname" class="font-input form-control col-lg-6" value="<?= $member->memberNickName ?>" required>
+                <input type="text" name="nickname" class="font-input form-control col-lg-6"
+                    value="<?= $member->memberNickName ?>" required>
             </div>
             <div class="col-lg-12 font-body h4">
                 BIRTHDATE<br>
-                <input type="date" name="birthdate" class="font-input form-control col-lg-6" value="<?= $member->birthDate ?>" required>
+                <input type="date" name="birthdate" class="font-input form-control col-lg-6"
+                    value="<?= $member->birthDate ?>" required>
             </div>
             <div class="col-lg-4 font-body h4">
                 GENDER<br>
-                <select class="form-select" aria-label="Default select example" name="gender" value="<?= $member->gender ?>" required>
+                <select class="form-select" aria-label="Default select example" name="gender"
+                    value="<?= $member->gender ?>" required>
                     <option selected>Please select your gender</option>
                     <option value="1">Male</option>
                     <option value="2">Female</option>
@@ -71,19 +79,23 @@ $form = ActiveForm::begin([
             </div>
             <div class="col-lg-12 font-body h4">
                 EMAIL<br>
-                <input type="email" name="email" class="font-input form-control col-lg-6" value="<?= $member->email ?>" required>
+                <input type="email" name="email" class="font-input form-control col-lg-6" value="<?= $member->email ?>"
+                    required>
             </div>
             <div class="col-lg-12 font-body h4">
                 PHONE<br>
-                <input type="text" name="phonenumber" class="font-input form-control col-lg-6" value="<?= $member->telephoneNumber ?>" required>
+                <input type="text" name="phonenumber" class="font-input form-control col-lg-6"
+                    value="<?= $member->telephoneNumber ?>" required>
             </div>
             <div class="col-lg-12 font-body h4">
                 ADDRESS<br>
-                <textarea class="font-input form-control" name="address" id="exampleFormControlTextarea1" rows="3" required><?= $member->address ?></textarea>
+                <textarea class="font-input form-control" name="address" id="exampleFormControlTextarea1" rows="3"
+                    required><?= $member->address ?></textarea>
             </div>
             <div class="col-lg-12 font-body h4">
                 PICTURE<br>
-                <input type="file" name="picture" class="font-input form-control col-lg-6" value="<?= $member->picture ?>" required>
+                <input type="file" name="picture" class="font-input form-control col-lg-6"
+                    value="<?= $member->picture ?>" required>
             </div>
 
 
@@ -95,7 +107,8 @@ $form = ActiveForm::begin([
                     <div class="row">
                         <div class="col-lg-4 font-body h4">
                             <label class="label-input">BRANCH</label>
-                            <select class="form-select font-input col-lg-12" name="branchId" id="branchId" onchange="javascript:findInfo()" required>
+                            <select class="form-select font-input col-lg-12" name="branchId" id="branchId"
+                                onchange="javascript:findInfo()" required>
                                 <option value="<?= $member->branchId ?>">
                                     <?= Branch::branchName($member->branchId) ?>
                                 </option>
@@ -103,7 +116,7 @@ $form = ActiveForm::begin([
                                 if (isset($branch) && count($branch) > 0) {
                                     foreach ($branch as $b) :
                                 ?>
-                                        <option value="<?= $b['branchId'] ?>"><?= $b['branchName'] ?></option>
+                                <option value="<?= $b['branchId'] ?>"><?= $b['branchName'] ?></option>
                                 <?php
                                     endforeach;
                                 }
@@ -115,13 +128,13 @@ $form = ActiveForm::begin([
                             <label class="label-input">SECTION</label>
                             <select class="form-select font-input col-lg-12" id="sectionId" name="sectionid" required>
                                 <option value="<?= $member->sectionId ?>">
-                                    <?= Section::sectionName($member->sectionId) == null ? 'Please select section' : Branch::branchName($member->sectionId) ?>
+                                    <?= Section::sectionName($member->sectionId) == null ? 'Please select section' : Section::sectionName($member->sectionId) ?>
                                 </option>
                                 <?php
                                 if (isset($section) && count($section) > 0) {
                                     foreach ($section as $s) :
                                 ?>
-                                        <option value="<?= $s['sectionId'] ?>"><?= $s['sectionName'] ?></option>
+                                <option value="<?= $s['sectionId'] ?>"><?= $s['sectionName'] ?></option>
                                 <?php
                                     endforeach;
                                 }
@@ -140,7 +153,7 @@ $form = ActiveForm::begin([
                                 if (isset($position) && count($position) > 0) {
                                     foreach ($position as $p) :
                                 ?>
-                                        <option value="<?= $p['positionId'] ?>"><?= $p['positionName'] ?></option>
+                                <option value="<?= $p['positionId'] ?>"><?= $p['positionName'] ?></option>
                                 <?php
                                     endforeach;
                                 }
@@ -158,7 +171,7 @@ $form = ActiveForm::begin([
                                 if (isset($team) && count($team) > 0) {
                                     foreach ($team as $t) :
                                 ?>
-                                        <option value="<?= $t['teamId'] ?>"><?= $t['teamName'] ?></option>
+                                <option value="<?= $t['teamId'] ?>"><?= $t['teamName'] ?></option>
                                 <?php
                                     endforeach;
                                 }
@@ -168,7 +181,8 @@ $form = ActiveForm::begin([
 
                         <div class="col-lg-4 font-body h4">
                             <label class="label-input">TEAM POSITION</label>
-                            <select class="form-select font-input col-lg-12" id="teampositionId" name="teampositionid" required>
+                            <select class="form-select font-input col-lg-12" id="teampositionId" name="teampositionid"
+                                required>
                                 <option value="<?= $member->teamId ?>">
                                     <?= TeamPosition::name($member->teamPositionId) == null ? 'Please select team' : TeamPosition::name($member->teamPositionId) ?>
                                 </option>
@@ -176,7 +190,7 @@ $form = ActiveForm::begin([
                                 if (isset($teampositions) && count($teampositions) > 0) {
                                     foreach ($teampositions as $tp) :
                                 ?>
-                                        <option value="<?= $tp['id'] ?>"><?= $tp['name'] ?></option>
+                                <option value="<?= $tp['id'] ?>"><?= $tp['name'] ?></option>
                                 <?php
                                     endforeach;
                                 }
@@ -187,7 +201,8 @@ $form = ActiveForm::begin([
 
                         <input type="hidden" name="memberId" value="<?= $member->memberId ?>">
                         <div class="col-lg-12 text-end pb-4">
-                            <button type="submit" class="btn btn-success font-button" href="<?= Yii::$app->homeUrl . 'member/default/update-member' ?>">Submit</button>
+                            <button type="submit" class="btn btn-success font-button"
+                                href="<?= Yii::$app->homeUrl . 'member/default/update-member' ?>">Submit</button>
                         </div>
                     </div>
                 </div>

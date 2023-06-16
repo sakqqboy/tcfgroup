@@ -2,6 +2,7 @@
 
 use backend\models\tokyoconsulting\Branch;
 use backend\models\tokyoconsulting\Country;
+use common\models\ModelMaster;
 
     $this -> title = 'View Position';
 ?>
@@ -25,6 +26,18 @@ use backend\models\tokyoconsulting\Country;
         <div>
            <span class="font-sub"> Level : </span>
            <span class="font-body"><?= isset($position -> level) ? $position -> level : '' ?></span>
+        </div>
+        <div class="mt-2">
+           <span class="font-sub"> Status : </span>
+           <span class="font-body"><?= isset($position -> status) ? $position -> status : '' ?></span>
+        </div>
+        <div class="mt-2">
+           <span class="font-sub"> Create date : </span>
+           <span class="font-body"><?= isset($position -> createDateTime) ? ModelMaster::engDate($position -> createDateTime, 2) : '' ?></span>
+        </div>
+        <div class="mt-2">
+           <span class="font-sub"> Update date : </span>
+           <span class="font-body"><?= isset($position -> updateDateTime) ? ModelMaster::engDate($position -> updateDateTime, 2) : '' ?></span>
         </div>
         <div class="mt-2"></div>
     </div>

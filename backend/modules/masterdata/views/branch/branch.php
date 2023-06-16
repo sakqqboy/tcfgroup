@@ -2,8 +2,13 @@
     $this -> title = 'Branch';
 ?>
 <div class="col-lg-12">
-    <div class="col-lg-12">
-        <div class="col-lg-12 mt-4 text-end">
+    <div class="row">
+        <div class="col-lg-12 mt-4 text-center font-title">
+            Branch
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 text-end">
             <a class="btn btn-success buttons-size" href="<?=Yii::$app->homeUrl.'/masterdata/branch/create-branch'?>">
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
                 Create branch

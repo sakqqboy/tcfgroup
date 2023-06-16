@@ -6,17 +6,17 @@ if (window.location.host == 'localhost') {
 }
 $url = $baseUrl;
 
-function deleteSection(sectionId) {
-    if (confirm('Are you sure to delete this section ?')) {
-        url = $url + 'masterdata/section/delete-section'
+function deleteTeamPosition(id) {
+    if (confirm('Are you sure to delete this team position ?')) {
+        url = $url + 'masterdata/team-position/delete-team-position'
         $.ajax({
             type: "POST",
             dataType: 'json',
             url: url,
-            data: { sectionId: sectionId },
+            data: { id: id },
             success: function (data) {
                 if (data.status) {
-                    $("#section-" + sectionId).hide();
+                    $("#id-" + id).hide();
                 }
             }
         });

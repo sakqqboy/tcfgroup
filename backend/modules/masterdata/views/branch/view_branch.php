@@ -1,6 +1,7 @@
 <?php
 
 use backend\models\tokyoconsulting\Country;
+use common\models\ModelMaster;
 
     $this -> title = 'View Branch';
 ?>
@@ -17,6 +18,18 @@ use backend\models\tokyoconsulting\Country;
         <div>
             <span class="font-sub"> Country : </span>
             <span class="font-body"><?= Country::countryName($branch -> countryId) ?></span>
+        </div>
+        <div class="mt-2">
+           <span class="font-sub"> Status : </span>
+           <span class="font-body"><?= isset($branch -> status) ? $branch -> status : '' ?></span>
+        </div>
+        <div class="mt-2">
+           <span class="font-sub"> Create date : </span>
+           <span class="font-body"><?= isset($branch -> createDateTime) ? ModelMaster::engDate($branch -> createDateTime, 2) : '' ?></span>
+        </div>
+        <div class="mt-2">
+           <span class="font-sub"> Update date : </span>
+           <span class="font-body"><?= isset($branch -> updateDateTime) ? ModelMaster::engDate($branch -> updateDateTime, 2) : '' ?></span>
         </div>
         <div class="mt-2"></div>
     </div>

@@ -72,6 +72,13 @@ return [
                 //position
                 'masterdata/position/view-position/<hash>' => 'masterdata/position/view-position',
                 'masterdata/position/update-position/<hash>' => 'masterdata/position/update-position',
+                //team
+                'masterdata/team/view-team/<hash>' => 'masterdata/team/view-team',
+                'masterdata/team/update-team/<hash>' => 'masterdata/team/update-team',
+                //teamposition
+                'masterdata/team-position/team-position/<hash>' => 'masterdata/team-position/team-position',
+                'masterdata/team-position/view-team-position/<hash>' => 'masterdata/team-position/view-team-position',
+                'masterdata/team-position/update-team-position/<hash>' => 'masterdata/team-position/update-team-position'
             ],
         ],
         'assetManager' => [

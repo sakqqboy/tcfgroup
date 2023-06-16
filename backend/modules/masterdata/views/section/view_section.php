@@ -2,6 +2,7 @@
 
 use backend\models\tokyoconsulting\Branch;
 use backend\models\tokyoconsulting\Country;
+use common\models\ModelMaster;
 
     $this -> title = 'View Section';
 ?>
@@ -21,6 +22,18 @@ use backend\models\tokyoconsulting\Country;
         <div>
            <span class="font-sub"> Detail : </span>
            <span class="font-body"><?= isset($section -> sectionDetail) ? $section -> sectionDetail : '' ?></span>
+        </div>
+        <div class="mt-2">
+           <span class="font-sub"> Status : </span>
+           <span class="font-body"><?= isset($section -> status) ? $section -> status : '' ?></span>
+        </div>
+        <div class="mt-2">
+           <span class="font-sub"> Create date : </span>
+           <span class="font-body"><?= isset($section -> createDateTime) ? ModelMaster::engDate($section -> createDateTime, 2) : '' ?></span>
+        </div>
+        <div class="mt-2">
+           <span class="font-sub"> Update date : </span>
+           <span class="font-body"><?= isset($section -> updateDateTime) ? ModelMaster::engDate($section -> updateDateTime, 2) : '' ?></span>
         </div>
         <div class="mt-2"></div>
     </div>

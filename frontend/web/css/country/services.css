@@ -45,10 +45,25 @@
 .c-body {
     font-family: 'klavika';
     margin-top: 20px;
+    cursor: default;
+
+}
+
+.c-body-copy {
+    font-family: 'klavika';
+    margin-top: 20px;
+    color: #1c67d9;
+    font-size: 20px;
+    cursor: default;
 
 }
 
 .title-garment {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.title-garment-copy {
     font-weight: 700;
     font-size: 16px;
 }
@@ -56,9 +71,17 @@
 .brunch-garment {
     margin-top: 20px;
     font-weight: 100;
-    line-height: 18px;
-    font-size: 12px;
     line-height: 15px;
+    font-size: 12px;
+
+}
+
+.brunch-garment-copy {
+    margin-top: 20px;
+    font-weight: 700;
+    line-height: 15px;
+    font-size: 12px;
+
 }
 
 .width2 {
@@ -72,8 +95,9 @@
 
 .img-width-services {
     width: 100%;
-    height: 111.4%;
+    height: 113.2%;
     margin-top: -85px;
+
 }
 
 .title-Es {
@@ -316,10 +340,52 @@
     cursor: pointer;
 }
 
+.Name-Clearance {
+    padding-top: 20px;
+}
+
 .show-ser {
     margin-top: 70px;
 }
 
+.width-long {
+    width: 100%;
+}
+
+.rounded1 {
+    font-size: 18px;
+    font-family: 'klavika';
+}
+
+.rounded2 {
+    margin-top: 30px;
+    font-size: 18px;
+    font-family: 'klavika';
+}
+
+.rounded3 {
+    margin-top: 40px;
+    font-size: 18px;
+    font-family: 'klavika';
+}
+
+.rounded4 {
+    margin-top: 40px;
+    font-size: 18px;
+    font-family: 'klavika';
+}
+
+.rounded5 {
+    margin-top: 50px;
+    font-size: 18px;
+    font-family: 'klavika';
+}
+
+.rounded6 {
+    margin-top: 50px;
+    font-size: 18px;
+    font-family: 'klavika';
+}
 
 @media(max-width: 992px) {
     .serviecs-h1 {
@@ -409,7 +475,16 @@
 
     .img-width-services {
         padding-top: 100px;
-        height: 110.99%;
+        height: 108.8%;
+    }
+
+    .Name-Clearance {
+        margin-top: -560px;
+    }
+
+    .width-long {
+        width: 39px;
+        margin-left: 30px;
     }
 
     .title-Es {
@@ -418,7 +493,7 @@
     }
 
     .Es1 {
-        padding-left: 30px;
+        padding-left: 40px;
     }
 
     .services1 {
@@ -443,6 +518,7 @@
 
     .show-ser {
         padding-left: 40px;
+        margin-top: 10px;
     }
 
     .ser-company {

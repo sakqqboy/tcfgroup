@@ -51,7 +51,9 @@ $form = ActiveForm::begin([
                         </div>
                     </div>
                     <div class="col-6 form-remember2">
-                        Forget password?
+                        <a href="<?= Yii::$app->homeUrl ?>site-country/setpassword" class="forget-password">
+                            <p> Forget password? </p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -83,7 +85,6 @@ $form = ActiveForm::begin([
 <?php ActiveForm::end(); ?>
 
 <div class="col-12">
-
     <div class="col-12 connect-experts mt-40">
         <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png" class="image mr-1"> Connect Experts
     </div>

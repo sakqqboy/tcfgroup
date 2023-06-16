@@ -6,6 +6,12 @@
 }
 
 .memberinfor {
-    font-family: 'Oswald', sans-serif;
     font-size: larger;
+}
+
+.cardview {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    background-color: #F2F2F2;
+    border: 1px solid #432f2f;
+    border-radius: 40px;
 }

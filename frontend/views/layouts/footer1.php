@@ -29,7 +29,7 @@
                 <div class="col-12 txt-internal mb-20">
                     More About us
                 </div>
-                <div class="country-footer">
+                <div class="country-footer1">
                     <p><a href="#About us" class="no-underline">About us</a></p>
                     <p><a href="#Contact us" class="no-underline">Contact us</a></p>
                     <p><a href="#Work life at TCF" class="no-underline">Work life at TCF</a></p>
@@ -41,7 +41,7 @@
             <div class="txt-internal mb-20">
                 Explore TCF
             </div>
-            <div class="country-footer">
+            <div class="country-footer1">
                 <p><a href="#Home" class="no-underline"> Home</a></p>
                 <p><a href="#Webinar" class="no-underline">Webinar</a></p>
                 <p><a href="#Monthly Newsletter" class="no-underline">Monthly Newsletter</a></p>
@@ -55,7 +55,7 @@
             <div class="txt-internal mb-20">
                 Popalar links
             </div>
-            <div class="country-footer">
+            <div class="country-footer1">
                 <p><a href="#for Webinar" class="no-underline">Register for Webinar</a></p>
                 <p><a href="#Accounts & Taxatation" class="no-underline">Accounts & Taxatation</a></p>
                 <p><a href="#Jinji-no-Butai" class="no-underline">Jinji-no-Butai</a></p>
@@ -103,10 +103,11 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-12 text-start box-logo-footer" style="margin-top: -120px;">
+        <div class="col-lg-4 col-md-6 col-12 text-start box-logo-footer" style="margin-top: -120px;" id="button-update">
             <img src="<?= Yii::$app->homeUrl ?>img/tcf-bangladesh.png" class="logo-footer">
             <p class="mt-50 title-contact-footer1">10th Floor Safura Tower 20, Kemal Ataturk Avenue Banani Dhaka, Dhaka, Bangladesh</p>
             <p class="title-business-footer1">Business Hours</p>
+
             <button class="btn btn-primary calendar-button1" type="button">SUN</button> <button class="btn btn-primary calendar-button1" type="button">MON</button>
             <button class="btn btn-primary calendar-button1" type="button">TUE</button> <button class="btn btn-primary calendar-button1" type="button">WED</button>
             <button class="btn btn-primary calendar-button1" type="button">THU</button> <button class="btn btn-outline-primary calendar-button1" type="button">FRI</button>
@@ -119,13 +120,12 @@
                     Privacy & Cookies
                 </a>
             </div>
-
         </div>
     </div>
 </div>
 
 
-<div class="footer-custom col-12 pr12">
+<div class="footer-custom1 col-12 pr12">
     <div class="row">
         <div class="col-lg-2 col-2 footer-BD">
             <div class="btn btn-group" role="group">

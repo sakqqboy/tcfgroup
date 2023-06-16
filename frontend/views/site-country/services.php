@@ -50,59 +50,33 @@ $this->title = 'services';
         }
             ?>
             <div class="row">
-                <div class="col-lg-3 col-md-5 col-sm-5 col-6 card c-body">
-                    <div class="card-body">
-                        <span class="title-garment"> <img src="<?= Yii::$app->homeUrl ?>img/set.png" class="width2"> &nbsp;&nbsp;Garment & Textiles </span>
-                        <p class="brunch-garment">The garment and textiles industry in Bangladesh offers a highly attractive investment prospect for foreign companies. With its robust manufacturing capabilities, competitive labor costs.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-5 col-sm-5 col-6 card c-body">
-                    <div class="card-body">
-                        <span class="title-garment"> <img src="<?= Yii::$app->homeUrl ?>img/microchip.png" class="width2">&nbsp;&nbsp; ICT & Electronics </span>
-                        <p class="brunch-garment">The electronics industry in Bangladesh presents a compelling opportunity for foreign companies due to its rapid growth, large consumer market, and favorable investment policies. With a rising middle class and increasing demand.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-5 col-sm-5 col-6 card c-body">
-                    <div class="card-body">
-                        <span class="title-garment"> <img src="<?= Yii::$app->homeUrl ?>img/leather.png" class="width2">&nbsp;&nbsp; Leather goods </span>
-                        <p class="brunch-garment">The leather goods industry in Bangladesh presents an appealing investment opportunity for foreign companies. With its abundant availability of raw materials and skilled craftsmanship.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-5 col-sm-5 col-6 card  c-body">
-                    <div class="card-body">
-                        <span class="title-garment"> <img src="<?= Yii::$app->homeUrl ?>img/sewing-machine.png" class="width2">&nbsp;&nbsp; Light Engineering </span>
-                        <p class="brunch-garment">The light engineering industry in Bangladesh presents a compelling investment opportunity for foreign companies. With a skilled workforce, competitive production costs, and a growing market demand.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-5 col-sm-5 col-6 card mt-30 c-body">
-                    <div class="card-body">
-                        <span class="title-garment"> <img src="<?= Yii::$app->homeUrl ?>img/power.png" class="width2">&nbsp;&nbsp; Power Industry </span>
-                        <p class="brunch-garment">The power industry in Bangladesh offers a highly attractive investment opportunity for foreign companies. With a growing demand for electricity.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-5 col-sm-5 col-6 card mt-30 c-body">
-                    <div class="card-body">
-                        <span class="title-garment"> <img src="<?= Yii::$app->homeUrl ?>img/vase.png" class="width2">&nbsp;&nbsp; Ceramics </span>
-                        <p class="brunch-garment">The ceramics industry in Bangladesh presents an enticing investment opportunity for foreign companies. With its abundant natural resources, skilled workforce.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-5 col-sm-5 col-6 card mt-30 c-body">
-                    <div class="card-body">
-                        <span class="title-garment"> <img src="<?= Yii::$app->homeUrl ?>img/dna.png" class="width2">&nbsp;&nbsp; Life Science</span>
-                        <p class="brunch-garment">The life science industry in Bangladesh provides a promising investment opportunity for foreign companies. With a growing healthcare sector, increasing demand for pharmaceuticals, and a supportive regulatory environment.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-5 col-sm-5 col-6 card mt-30 c-body">
-                    <div class="card-body">
-                        <span class="title-garment"> <img src="<?= Yii::$app->homeUrl ?>img/fork.png" class="width2">&nbsp;&nbsp; Foreign Foods </span>
-                        <p class="brunch-garment">Foreign foods have gained considerable popularity in Bangladesh, creating a lucrative investment opportunity for foreign companies. With a growing consumer base and a taste for international cuisines.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-8 mt-20 links-wiki">
-                    <div class="alert alert-primary" role="alert">
-                        <a href="#wiki.com"><img src="<?= Yii::$app->homeUrl ?>img/wiki.com.png"></a>
-                    </div>
-                </div>
+                <?php
+                if (isset($garmenticon) && count($garmenticon) > 0) {
+                    $i = 0;
+                    foreach ($garmenticon as $icon5) :
+                        if ($i < 8) {
+
+                ?>
+                            <div class="col-lg-3 col-md-5 col-sm-5 col-6 card c-body" onmouseover="javascript:showServicescard2(<?= $i ?>)" id="iconcard-<?= $i ?>">
+                                <div class="card-body">
+                                    <span class="title-garment"> <img src="<?= Yii::$app->homeUrl . $icon5['image'] ?>" class="width2"> &nbsp;&nbsp;<?= $icon5['title'] ?></span>
+                                    <p class="brunch-garment"><?= $icon5['detail'] ?></p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-5 col-sm-5 col-6 card c-body-copy" style="display:none;" id="iconcard2-<?= $i ?>" onmouseleave="javascript:showServicescard1(<?= $i ?>)">
+                                <div class="card-body">
+                                    <span class="title-garment-copy"> <img src="<?= Yii::$app->homeUrl . $icon5['image'] ?>" class="width2"> &nbsp;&nbsp;<?= $icon5['title'] ?></span>
+                                    <p class="brunch-garment-copy"><?= $icon5['detail'] ?></p>
+                                </div>
+                            </div>
+                <?php
+                        }
+                        $i++;
+                    endforeach;
+                }
+                ?>
+
             </div>
                 </div>
                 <?php
@@ -127,7 +101,6 @@ $this->title = 'services';
             <div class="col-12 title-Es">
                 <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> ESTABLISHING COMPANY IN BANGLADESH
             </div>
-
             <div class="col-12  mt-50">
                 <div class="row">
                     <?php
@@ -178,10 +151,17 @@ $this->title = 'services';
         </div>
         <div class="col-lg-6 col-md-12 col-12 mt-50">
             <div class="row">
-                <div class="col-12">
-
+                <div class="col-lg-1 col-md-12 col-12">
+                    <!-- <p><span class="badge rounded-pill bg-primary rounded1">1</span></p>
+                    <p> <span class="badge rounded-pill bg-primary rounded2">2</span> </p>
+                    <p> <span class="badge rounded-pill bg-primary rounded3">3</span> </p>
+                    <p> <span class="badge rounded-pill bg-primary rounded4">4</span> </p>
+                    <p> <span class="badge rounded-pill bg-primary rounded5">5</span> </p>
+                    <p> <span class="badge rounded-pill bg-primary rounded6">✓</span> </p> -->
+                    <img src="<?= Yii::$app->homeUrl ?>img/long.png" class="width-long">
                 </div>
-                <div class="col-12">
+
+                <div class="col-lg-11 col-md-12 col-12 Name-Clearance">
                     <?php
                     if (isset($nameslider) && count($nameslider) > 0) {
                         $i = 0;
@@ -189,7 +169,6 @@ $this->title = 'services';
                     ?>
                             <p class="services1"> <?= $nmlider['title'] ?></p>
                             <p class="services2"> <?= $nmlider['detail'] ?></p>
-
                     <?php
                             $i++;
                         endforeach;

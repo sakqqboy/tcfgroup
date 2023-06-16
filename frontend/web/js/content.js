@@ -9,6 +9,7 @@ function showContent(i) {
     $("#content-title-" + i).slideDown('slow');
     $("#content-title2-" + i).slideDown('slow');
 }
+
 function showBangladresh(i) {
     var total = $("#total-servicesbangladesh").val();
     var b = 0;
@@ -20,6 +21,7 @@ function showBangladresh(i) {
     $("#bangladresh-detail-" + i).slideDown('slow');
     $("#bangladresh-detail2-" + i).slideDown('slow');
 }
+
 function showSiteindex2(i) {
     $("#content2-siteindex-" + i).css("display", "none");
     $("#content2-siteindex2-" + i).show();
@@ -33,10 +35,12 @@ function showAsset2(i) {
     $("#content2-asset-" + i).css("display", "none");
     $("#content2-asset2-" + i).show();
 }
+
 function showAsset1(i) {
     $("#content2-asset2-" + i).css("display", "none");
     $("#content2-asset-" + i).show();
 }
+
 function showAsset1(i) {
     $("#content2-asset2-" + i).css("display", "none");
     $("#content2-asset-" + i).show();
@@ -56,26 +60,58 @@ $('.no-underline-new1').click(function () {
     } else {
         $(this).text("READ MORE")
     }
-});
+})
+
 function showPassword(i) {
     $("#password").removeAttr("type");
 }
+
 function setPassword(i) {
     $("#password").attr("type", "password");
 }
+
+function showPassword2(i) {
+    $("#password_hash").removeAttr("type");
+}
+
+function setPassword2(i) {
+    $("#password_hash").attr("type", "password");
+}
+
+function showPassword3(i) {
+    $("#password3").removeAttr("type");
+}
+
+function setPassword3(i) {
+    $("#password3").attr("type", "password");
+}
+
 function showLimited2(i) {
     $("#limited-" + i).css("display", "none");
     $("#limited2-" + i).show();
 }
+
 function showLimited1(i) {
     $("#limited2-" + i).css("display", "none");
     $("#limited-" + i).show();
 }
+
 function showLegal2(i) {
     $("#content2-legal-" + i).css("display", "none");
     $("#content2-legal2-" + i).show();
 }
+
 function showLegal1(i) {
     $("#content2-legal2-" + i).css("display", "none");
     $("#content2-legal-" + i).show();
+}
+
+function showServicescard2(i) {
+    $("#iconcard-" + i).css("display", "none");
+    $("#iconcard2-" + i).show();
+}
+
+function showServicescard1(i) {
+    $("#iconcard2-" + i).css("display", "none");
+    $("#iconcard-" + i).show();
 }

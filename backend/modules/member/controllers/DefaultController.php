@@ -121,7 +121,7 @@ class DefaultController extends Controller
             }
         }
     }
-    public function actionDelete()
+    public function actionDeleteMember()
     {
         $res["status"] = false;
         $memberId = $_POST["memberId"];

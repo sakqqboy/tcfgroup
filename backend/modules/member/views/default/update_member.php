@@ -77,7 +77,6 @@
                     PICTURE<br>
                     <input type="file" name="picture" class="font-input form-control col-lg-6" value="<?= $member -> picture ?>" required>
                 </div>
-                <input type="hidden" name="memberId">
                 <input type="hidden" name="memberId" value="<?= $member -> memberId ?>">
                 <button type="submit" class="btn btn-success font-button" href="<?=Yii::$app->homeUrl.'member/default/update-member'?>">Submit</button>
                 <div class="col-lg-12">

@@ -42,6 +42,7 @@
       <div>
          <span class="font-sub"> URL : </span>
          <span class="font-body"> <?= isset($contentDetail->url) ? $contentDetail->url : '' ?></span>
-      </div><br>
+      </div>
+      <div class="mt-2"></div>
    </div>
 </div>

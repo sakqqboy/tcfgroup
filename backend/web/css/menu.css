@@ -79,3 +79,13 @@ a:link {
 .scrollbar {
     overflow: hidden;
 }
+
+.pd-menu {
+    padding-right: 50px;
+}
+
+.bg-list {
+    padding-bottom: 7px;
+    background-color: grey;
+    border-radius: 20px;
+}

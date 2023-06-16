@@ -14,7 +14,7 @@
         <thead class="table-secondary">
             <tr>
                 <th>No</th>
-                <th>Content Name</th>
+                <th>Content</th>
                 <th>Title</th>
                 <th>Detail</th>
                 <th>Subcontents</th>

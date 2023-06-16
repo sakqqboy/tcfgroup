@@ -33,4 +33,15 @@ class Section extends \backend\models\tokyoconsulting\master\SectionMaster{
     {
         return array_merge(parent::attributeLabels(), []);
     }
+
+    public static function sectionName($sectionId){
+        $section = Section::find() -> where(["sectionId" => $sectionId]) -> asArray() -> one();
+        if(isset($section) && !empty($section)){
+        //    throw new Exception(print_r($branch,true));
+        return $section["sectionName"];
+        }else{
+           // $branch = Branch::find() -> where(["branchI" => $branchId]) -> asArray() -> one();
+            return null;
+      }
+    }
 }

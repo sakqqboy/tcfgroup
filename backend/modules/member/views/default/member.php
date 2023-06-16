@@ -13,7 +13,7 @@
         <div class="col-6 text-end mt-4">
             <a class="btn btn-success buttons-size" href="<?=Yii::$app->homeUrl.'member/default/create-member/'?>">
                 <i class="fa fa-user-plus                               " aria-hidden="true"></i>
-                Create Member
+                Create member
             </a>
         </div>
         <div class="col-6 text-end">

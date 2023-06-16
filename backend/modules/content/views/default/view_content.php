@@ -19,8 +19,9 @@
             <span class="font-body"><?= isset($content -> title) ? $content -> title : '' ?></span>
         </div>
         <div>
-            <span class="font-sub"> Details : </span>
+            <span class="font-sub"> Detail : </span>
             <span class="font-body"><?= isset($content -> detail) ? $content -> detail : '' ?></span>
-        </div><br>
+        </div>
+        <div class="mt-2"></div>
     </div>
 </div>

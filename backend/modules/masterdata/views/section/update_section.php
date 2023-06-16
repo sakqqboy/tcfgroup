@@ -1,5 +1,5 @@
 <?php
-    $this -> title = 'Create Section';
+    $this -> title = 'Update Section';
 
 use backend\models\tokyoconsulting\Branch;
 use backend\models\tokyoconsulting\Country;

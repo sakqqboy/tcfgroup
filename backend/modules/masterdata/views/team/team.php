@@ -2,8 +2,13 @@
     $this -> title = 'Team';
 ?>
 <div class="col-lg-12">
-    <div class="col-lg-12">
-        <div class="col-lg-12 mt-4 text-end">
+    <div class="row">
+        <div class="col-lg-12 mt-4 text-center font-title">
+            Team
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 text-end">
             <a class="btn btn-success buttons-size" href="<?=Yii::$app->homeUrl.'/masterdata/team/create-team'?>">
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
                 Create team

@@ -31,6 +31,7 @@
 
 .font-button {
     margin-top: 30px;
+    margin-left: 90%;
 }
 
 .bt-positon {
@@ -46,6 +47,11 @@
 }
 
 .padding {
+    margin-left: 125px;
+    width: 75%;
+}
+
+.pd-member {
     margin-left: 15px;
     width: 75%;
 }

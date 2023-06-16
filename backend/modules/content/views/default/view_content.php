@@ -1,4 +1,7 @@
 <?php
+
+use common\models\ModelMaster;
+
     $this -> title = 'View Content';
 ?>
 <div class="row">
@@ -21,6 +24,18 @@
         <div>
             <span class="font-sub"> Detail : </span>
             <span class="font-body"><?= isset($content -> detail) ? $content -> detail : '' ?></span>
+        </div>
+        <div class="mt-2">
+           <span class="font-sub"> Status : </span>
+           <span class="font-body"><?= isset($content -> status) ? $content -> status : '' ?></span>
+        </div>
+        <div class="mt-2">
+           <span class="font-sub"> Create date : </span>
+           <span class="font-body"><?= isset($content -> createDateTime) ? ModelMaster::engDate($content -> createDateTime, 2) : '' ?></span>
+        </div>
+        <div class="mt-2">
+           <span class="font-sub"> Update date : </span>
+           <span class="font-body"><?= isset($content -> updateDateTime) ?  ModelMaster::engDate($content -> updateDateTime, 2) : '' ?></span>
         </div>
         <div class="mt-2"></div>
     </div>

@@ -4,15 +4,14 @@
 ?>
 <div class="col-lg-12">
     <div class="row">
-        <div class="col-6 text-begin mt-4">
-            <a class="btn btn-secondary buttons-size" href="<?=Yii::$app->homeUrl.'member/default/member'?>">
-                <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
-                Back
-            </a>
+        <div class="col-lg-12 mt-4 text-center font-title">
+            Member
         </div>
-        <div class="col-6 text-end mt-4">
+    </div>
+    <div class="row">
+        <div class="col-12 text-end">
             <a class="btn btn-success buttons-size" href="<?=Yii::$app->homeUrl.'member/default/create-member/'?>">
-                <i class="fa fa-user-plus                               " aria-hidden="true"></i>
+                <i class="fa fa-user-plus" aria-hidden="true"></i>
                 Create member
             </a>
         </div>

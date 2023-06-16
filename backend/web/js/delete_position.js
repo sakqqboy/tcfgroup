@@ -7,7 +7,7 @@ if (window.location.host == 'localhost') {
 $url = $baseUrl;
 
 function deletePosition(positionId) {
-    if (confirm('Are you sure to delete this branch ?')) {
+    if (confirm('Are you sure to delete this position ?')) {
         url = $url + 'masterdata/position/delete-position'
         $.ajax({
             type: "POST",

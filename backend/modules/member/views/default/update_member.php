@@ -1,5 +1,5 @@
 <?php
-    $this -> title = 'Create Content';
+    $this -> title = 'Update Member';
     use yii\bootstrap5\ActiveForm;
 
     $form = ActiveForm::begin([

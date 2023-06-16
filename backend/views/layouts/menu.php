@@ -43,6 +43,22 @@
                     </span>
                 </a>
             </li>
+            <li class="mt-2 <?= $action == 'team'?'bg-list':''?>">
+                <a href="<?=Yii::$app->homeUrl.'/masterdata/team/team'?>">
+                    <i class="fa fa-users fas" aria-hidden="true"></i>
+                    <span class="nav-items">
+                        Team
+                    </span>
+                </a>
+            </li>
+            <li class="mt-2 <?= $action == 'team-position'?'bg-list':''?>">
+                <a href="<?=Yii::$app->homeUrl.'/masterdata/team-position/team-position'?>">
+                    <i class="fa fa-archive fas" aria-hidden="true"></i>
+                    <span class="nav-items">
+                        TeamP
+                    </span>
+                </a>
+            </li>
             <li class="mt-2 <?= $action == 'position'?'bg-list':''?>">
                 <a href="<?=Yii::$app->homeUrl.'/masterdata/position/position'?>">
                     <i class="fa fa-thumb-tack fas" aria-hidden="true"></i>

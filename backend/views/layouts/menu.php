@@ -11,7 +11,7 @@
             ____________
         </div>
         <div class="col-lg-12 pd-menu">
-            <li class="mt-2 <?= $action == 'content'?'bg-list':''?>">
+            <li class="mt-2 li-menu <?= $action == 'content'?'bg-list':''?>">
                 <a href="<?=Yii::$app->homeUrl.'content/default/content'?>" class="lcon-menu">
                     <i class="fa fa-home fas" aria-hidden="true"></i>
                     <span class="nav-items">
@@ -19,7 +19,7 @@
                     </span>
                 </a>
             </li>
-            <li class="mt-2 <?= $action == 'member'?'bg-list':''?>">
+            <li class="mt-2 li-menu <?= $action == 'member'?'bg-list':''?>">
                 <a href="<?=Yii::$app->homeUrl.'member/default/member'?>">
                     <i class="fa fa-user fas" aria-hidden="true"></i>
                     <span class="nav-items">
@@ -27,7 +27,7 @@
                     </span>
                 </a>
             </li>
-            <li class="mt-2 <?= $action == 'branch'?'bg-list':''?>">
+            <li class="mt-2 li-menu <?= $action == 'branch'?'bg-list':''?>">
                 <a href="<?=Yii::$app->homeUrl.'masterdata/branch/branch'?>">
                     <i class="fa fa-server fas" aria-hidden="true"></i>
                     <span class="nav-items">
@@ -35,7 +35,7 @@
                     </span>
                 </a>
             </li>
-            <li class="mt-2 <?= $action == 'section'?'bg-list':''?>">
+            <li class="mt-2 li-menu <?= $action == 'section'?'bg-list':''?>">
                 <a href="<?=Yii::$app->homeUrl.'/masterdata/section/section'?>">
                     <i class="fa fa-filter fas" aria-hidden="true"></i>
                     <span class="nav-items">
@@ -43,7 +43,7 @@
                     </span>
                 </a>
             </li>
-            <li class="mt-2 <?= $action == 'team'?'bg-list':''?>">
+            <li class="mt-2 li-menu <?= $action == 'team'?'bg-list':''?>">
                 <a href="<?=Yii::$app->homeUrl.'/masterdata/team/team'?>">
                     <i class="fa fa-users fas" aria-hidden="true"></i>
                     <span class="nav-items">
@@ -51,7 +51,7 @@
                     </span>
                 </a>
             </li>
-            <li class="mt-2 <?= $action == 'team-position'?'bg-list':''?>">
+            <li class="mt-2 li-menu <?= $action == 'team-position'?'bg-list':''?>">
                 <a href="<?=Yii::$app->homeUrl.'/masterdata/team-position/team-position'?>">
                     <i class="fa fa-archive fas" aria-hidden="true"></i>
                     <span class="nav-items">
@@ -59,7 +59,7 @@
                     </span>
                 </a>
             </li>
-            <li class="mt-2 <?= $action == 'position'?'bg-list':''?>">
+            <li class="mt-2 li-menu <?= $action == 'position'?'bg-list':''?>">
                 <a href="<?=Yii::$app->homeUrl.'/masterdata/position/position'?>">
                     <i class="fa fa-thumb-tack fas" aria-hidden="true"></i>
                     <span class="nav-items">

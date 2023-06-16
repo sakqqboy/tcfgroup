@@ -25,10 +25,10 @@ $form = ActiveForm::begin([
         <div class="col-lg-12 text-center font-title">
             UPDATE MEMBER<br>
         </div>
-        <div class="workinfor col-lg-12 mt-3 ml-4">
-            PERSONAL INFORMATION<br>
-        </div>
         <div class="padding">
+            <div class="workinfor col-lg-12 mt-3 ml-4">
+                PERSONAL INFORMATION<br>
+            </div>
             <div class="col-lg-12 font-body h4">
                 USERNAME<br>
                 <input type="text" name="username" class="font-input form-control col-lg-6"
@@ -98,9 +98,8 @@ $form = ActiveForm::begin([
                     value="<?= $member->picture ?>" required>
             </div>
 
-
             <div class="row mt-2" id="workInfo">
-                <div class="col-lg-12 mt-4" id="workinfor">
+                <div class="col-lg-12 mt-4" id="workinfor"> 
                     <div class="workinfor col-lg-12 mt-3 ml-4">
                         WORK INFORMATION<br>
                     </div>

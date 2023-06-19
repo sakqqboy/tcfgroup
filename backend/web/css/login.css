@@ -1,30 +1,17 @@
 .site-login {
-    margin-top: 70px;
-    margin-left: 40px;
-
+    margin-top: 0px;
 }
 
-.black-sitelogin {
-    background: #a0e5f3;
-    margin-left: 40px;
-    background: -webkit-linear-gradient(to right, #eba7aa, #e6d0a0);
-    background: linear-gradient(to right, #c8edea, #c7aff5);
-    color: #5a64be;
-    border-color: rgb(188, 138, 237);
-}
-
-.background-login {
-    width: 100%;
-    border-radius: 50px;
-
+.login-backgroungd {
+    background: -webkit-linear-gradient(to right, #f8c1c3, #e6d0a0);
+    background: linear-gradient(to right, #a9e4e6, #ece0c1);
+    border-radius: 25px;
 }
 
 .name-login {
     font-weight: 700;
-    text-align: center;
     font-size: 70px;
-    color: black;
-    margin-top: -60px;
+    color: rgb(0, 96, 123);
 
 }
 
@@ -39,28 +26,23 @@
 }
 
 .login-mail {
-    color: black;
-    font-weight: 700;
-    font-size: 20px;
+    color: rgb(174, 234, 242);
+    font-weight: 500;
+    font-size: 14px;
     padding-left: 40px;
 }
 
 .log-assome {
-    color: black;
-    line-height: 15px;
+    color: rgb(0, 96, 123);
+
 }
 
 .submit-login {
-    background: #a0e5f3;
-    background: -webkit-linear-gradient(to right, #eba7aa, #e6d0a0);
-    background: linear-gradient(to right, #c8edea, #c7aff5);
-    color: #5a64be;
-    border-color: rgb(188, 138, 237);
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'klavika';
-    width: 150px;
+    width: 100px;
     margin-top: 30px;
-    text-align: center;
+
 }
 
 .login-moon {
@@ -69,7 +51,52 @@
 }
 
 .ic-username {
-    width: 60px;
-    margin-left: 250px;
+    width: 150px;
+}
 
+.form-outline1 {
+    margin-left: 20px;
+
+}
+
+.cascading-right {
+    margin-right: -50px;
+    margin-top: -10px;
+
+}
+
+
+.width-col {
+    width: 100%;
+    height: 690px;
+}
+
+.form-control {
+    border-radius: 25px;
+
+}
+
+.btn-color {
+    border-radius: 50px;
+    color: #fff;
+    background-image: linear-gradient(to right, #FFD54F, #D500F9);
+    padding: 12px;
+    margin-left: 20px;
+    width: 550px;
+    cursor: pointer;
+    border: none !important;
+    margin-top: 40px;
+}
+
+.btn-color:hover {
+    color: #fff;
+    background-image: linear-gradient(to right, #D500F9, #FFD54F);
+}
+
+
+
+@media(max-width: 768px) {
+    .cascading-right {
+        margin-right: 10px;
+    }
 }

@@ -19,8 +19,8 @@
         <thead class="table-secondary">
             <tr>
                 <th>No</th>
-                <th>Branch</th>
                 <th>Position</th>
+                <th>Branch</th>
                 <th>Detail</th>
                 <th>Level</th>
                 <th>Action</th>
@@ -37,8 +37,8 @@
             ?>
             <tr id="position-<?= $x['positionId']?>">
                 <td><?= $i ?></td>
-                <td><?= Branch::branchName($x['branchId']) ?></td>
                 <td><?= $x["positionName"] ?></td>
+                <td><?= Branch::branchName($x['branchId']) ?></td>
                 <td><?= $x["positionDetail"] ?></td>
                 <td><?= $x["level"] ?></td>
                 <td width="20%" >

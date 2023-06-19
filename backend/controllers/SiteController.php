@@ -79,6 +79,7 @@ class SiteController extends Controller
         $this->layout = 'blank';
 
         $model = new LoginForm();
+        // throw new Exception(print_r(Yii::$app->request->post(), true));
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->redirect(Yii::$app->homeUrl . 'content/default/content');
         }

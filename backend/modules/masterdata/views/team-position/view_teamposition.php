@@ -30,7 +30,7 @@ use common\models\ModelMaster;
         </div>
         <div class="mt-2">
            <span class="font-sub"> Update date : </span>
-           <span class="font-body"><?= isset($teamposition -> updateDateTime) ? $teamposition -> updateDateTime : '' ?></span>
+           <span class="font-body"><?= isset($teamposition -> updateDateTime) ? ModelMaster::engDate($teamposition -> UpdateDateTime, 2) : '' ?></span>
         </div>
         <div class="mt-2"></div>
     </div>

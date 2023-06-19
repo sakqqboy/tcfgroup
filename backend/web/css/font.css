@@ -46,6 +46,11 @@
     margin-left: 20px;
 }
 
+.font-search {
+    font-family: 'Kanit', sans-serif;
+    font-size: 18px;
+}
+
 .padding {
     margin-left: 125px;
     width: 75%;
@@ -54,6 +59,10 @@
 .pd-member {
     margin-left: 15px;
     width: 75%;
+}
+
+.pd-search {
+    margin-left: 5px;
 }
 
 .border {
@@ -79,6 +88,11 @@
 
 .bt-size {
     font-size: 10px;
+}
+
+.bt-search {
+    font-size: 10px;
+    margin-top: 32px;
 }
 
 .workinfor {

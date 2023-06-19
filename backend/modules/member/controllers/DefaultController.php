@@ -27,8 +27,12 @@ class DefaultController extends Controller
      */
     public function actionMember()
     {
+        // if (Yii::$app->user->id) {
         $member = Member::find()->asArray()->all();
         return $this->render('member', ["member" => $member]);
+        // } else {
+        //    return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        // }
     }
 
     public function actionCreateMember()

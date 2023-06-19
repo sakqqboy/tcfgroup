@@ -94,7 +94,7 @@ $form = ActiveForm::begin([
                     <div class="input-group flex-nowrap">
                         <span class="input-group-text"><i class="fa fa-globe con-color" aria-hidden="true"></i></span>
                         <select class="form-select con-color1" id="country" require>
-                            <option selected>Country</option>
+                            <option selected>Choose country</option>
                             <option value="1">English</option>
                             <option value="2">Thailand</option>
                             <option value="3">Europe</option>
@@ -108,7 +108,6 @@ $form = ActiveForm::begin([
         </div>
     </div>
 </div>
-
 
 
 

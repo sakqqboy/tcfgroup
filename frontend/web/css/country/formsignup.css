@@ -19,7 +19,7 @@
 .shadowformsign {
     margin-top: 10px;
     background: rgb(238, 189, 174);
-    background: linear-gradient(90deg, rgba(238, 189, 174, 1) 0%, rgba(148, 230, 233, 1) 100%);
+    background: linear-gradient(90deg, rgba(238, 189, 174, 1) 0%, rgb(239, 241, 179) 100%);
 
 }
 
@@ -30,7 +30,7 @@
 }
 
 .signup {
-    background: -webkit-linear-gradient(#65e1e7, #64cce4);
+    background: -webkit-linear-gradient(#c0f7ef, #c9d1f5);
     font-family: 'klavika';
     font-size: 20px;
     width: 150px;

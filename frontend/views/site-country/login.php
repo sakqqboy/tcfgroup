@@ -5,7 +5,7 @@
 use Codeception\Lib\Connector\Yii2;
 use yii\bootstrap5\ActiveForm;
 
-$this->title = 'Sign up';
+$this->title = 'Log in';
 
 $form = ActiveForm::begin([
 

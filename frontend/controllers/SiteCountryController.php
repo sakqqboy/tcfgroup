@@ -1138,11 +1138,9 @@ class SiteCountryController extends Controller
     {
         return $this->render('contact2');
     }
-    public function actionSignup()
+    public function actionLogin()
     {
-
-
-        return $this->render('signup');
+        return $this->render('login');
     }
 
     public function actionPrivacy()

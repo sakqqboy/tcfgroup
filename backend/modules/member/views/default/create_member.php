@@ -1,5 +1,5 @@
 <?php
-$this->title = 'Create Content';
+$this->title = 'Create Member';
 
 use yii\bootstrap5\ActiveForm;
 
@@ -19,7 +19,7 @@ $form = ActiveForm::begin([
         <div class="workinfor col-lg-12 mt-3 ml-4">
             PERSONAL INFORMATION<br>
         </div>
-        <div class="padding">
+        <div class="pd-member">
             <div class="col-lg-12 font-body h4">
                 USERNAME<br>
                 <input type="text" name="username" class="font-input form-control col-lg-6" required>

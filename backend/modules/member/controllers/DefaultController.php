@@ -90,12 +90,18 @@ class DefaultController extends Controller
         $member = Member::findOne(["memberId" => $memberId]);
         return $this->render('view_member', ["member" => $member]);
     }
+
     public function actionUpdateMember($hash)
     {
         $param = ModelMaster::decodeParams($hash);
         $memberId = $param["memberId"];
         $member = Member::find()->where(["memberId" => $memberId])->one();
-        return $this->render('update_member', ["member" => $member]);
+        $branch = Branch::find()->where("status = 1")->orderBy('branchName')->asArray()->all();
+        $teampositions = TeamPosition::find()->where("status = 1")->orderBy('name')->asArray()->all();
+        $section = Section::find()->where("status = 1 and branchId = $member->branchId")->orderBy('sectionName')->asArray()->all();
+        $position = Position::find()->where("status = 1 and branchId = $member->branchId")->orderBy('positionName')->asArray()->all();
+        $team = Team::find()->where("status = 1 and branchId = $member->branchId")->orderBy('teamName')->asArray()->all();
+        return $this->render('update_member', ["member" => $member, "branch" => $branch, "section" => $section, "position" => $position, "teampositions" => $teampositions, "team" => $team]);
     }
 
     public function actionSaveMember()
@@ -140,7 +146,7 @@ class DefaultController extends Controller
             }
         }
     }
-    public function actionDelete()
+    public function actionDeleteMember()
     {
         $res["status"] = false;
         $memberId = $_POST["memberId"];

@@ -6,7 +6,8 @@
         <div class="text-center h2 font-title mt-3">
             MY Profile
         </div>
-        <div>
+        <img class="img-size mt-3" src="<?= Yii::$app->homeUrl . $member['picture'] ?>">
+        <div class="mt-4">
            <span class="font-sub"> ID : </span>
            <span class="font-body"><?= isset($member -> memberId) ? $member -> memberId : '' ?></span>
         </div>
@@ -53,6 +54,7 @@
         <div>
             <span class="font-sub"> Branchid : </span>
             <span class="font-body"><?= isset($member -> branchId) ? $member -> branchId : '' ?></span>
-        </div><br>
+        </div>
+        <div class="mt-2"></div>
     </div>
 </div>

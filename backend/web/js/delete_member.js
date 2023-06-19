@@ -8,7 +8,7 @@ $url = $baseUrl;
 
 function deleteMember(memberId) {
     if (confirm('Are you sure to delete this member ?')) {
-        url = $url + 'member/default/delete'
+        url = $url + 'member/default/delete-member'
         $.ajax({
             type: "POST",
             dataType: 'json',

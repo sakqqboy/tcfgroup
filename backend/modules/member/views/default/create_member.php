@@ -22,7 +22,7 @@ $form = ActiveForm::begin([
         <div class="pd-member">
             <div class="col-lg-12 font-body h4">
                 USERNAME<br>
-                <input type="text" name="username" class="font-input form-control col-lg-6" required>
+                <input type="email" name="username" class="font-input form-control col-lg-6" required>
             </div>
             <div class="col-lg-12 font-body h4">
                 PASSWORD<br>

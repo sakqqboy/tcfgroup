@@ -29,8 +29,8 @@
         <tbody>
             <?php
                 use backend\models\tokyoconsulting\Branch;
-                                                            use backend\models\tokyoconsulting\Section;
-                                                            use common\models\ModelMaster;
+                use backend\models\tokyoconsulting\Section;
+                use common\models\ModelMaster;
 
                 if(isset($team) && count($team)){
                     $i=1;

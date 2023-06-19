@@ -9,7 +9,7 @@
     left: 0;
     height: 100%;
     background-color: #fff;
-    width: 16%;
+    width: 220px;
     overflow: hidden;
     transition: width 0.2s linear;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);

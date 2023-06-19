@@ -31,18 +31,18 @@ $form = ActiveForm::begin([
             </div>
             <div class="col-lg-12 font-body h4">
                 USERNAME<br>
-                <input type="text" name="username" class="font-input form-control col-lg-6"
-                    value="<?= $member->username ?>" required>
+                <input type="email" name="username" class="font-input form-control col-lg-6"
+                    value="<?= $member->username ?>">
             </div>
             <div class="col-lg-12 font-body h4">
                 PASSWORD<br>
                 <input type="password" name="password" class="font-input form-control col-lg-6"
-                    value="<?= $member->password_hash ?>" required>
+                    value="<?= $member->password_hash ?>">
             </div>
             <div class="col-lg-4 font-body h4">
                 PREFIX<br>
                 <select class="form-select" aria-label="Default select example" name="prefix"
-                    value="<?= $member->prefix ?>" required>
+                    value="<?= $member->prefix ?>">
                     <option selected>Please select your prefix</option>
                     <option value="1">Mr</option>
                     <option value="2">Mrs</option>
@@ -51,27 +51,27 @@ $form = ActiveForm::begin([
             <div class="col-lg-12 font-body h4">
                 FIRSTNAME<br>
                 <input type="text" name="firstname" class="font-input form-control col-lg-6"
-                    value="<?= $member->memberFirstName ?>" required>
+                    value="<?= $member->memberFirstName ?>">
             </div>
             <div class="col-lg-12 font-body h4">
                 LASTNAME<br>
                 <input type="text" name="lastname" class="font-input form-control col-lg-6"
-                    value="<?= $member->memberLastName ?>" required>
+                    value="<?= $member->memberLastName ?>">
             </div>
             <div class="col-lg-12 font-body h4">
                 NICKNAME<br>
                 <input type="text" name="nickname" class="font-input form-control col-lg-6"
-                    value="<?= $member->memberNickName ?>" required>
+                    value="<?= $member->memberNickName ?>">
             </div>
             <div class="col-lg-12 font-body h4">
                 BIRTHDATE<br>
                 <input type="date" name="birthdate" class="font-input form-control col-lg-6"
-                    value="<?= $member->birthDate ?>" required>
+                    value="<?= $member->birthDate ?>">
             </div>
             <div class="col-lg-4 font-body h4">
                 GENDER<br>
                 <select class="form-select" aria-label="Default select example" name="gender"
-                    value="<?= $member->gender ?>" required>
+                    value="<?= $member->gender ?>">
                     <option selected>Please select your gender</option>
                     <option value="1">Male</option>
                     <option value="2">Female</option>
@@ -79,23 +79,21 @@ $form = ActiveForm::begin([
             </div>
             <div class="col-lg-12 font-body h4">
                 EMAIL<br>
-                <input type="email" name="email" class="font-input form-control col-lg-6" value="<?= $member->email ?>"
-                    required>
+                <input type="email" name="email" class="font-input form-control col-lg-6" value="<?= $member->email ?>">
             </div>
             <div class="col-lg-12 font-body h4">
                 PHONE<br>
                 <input type="text" name="phonenumber" class="font-input form-control col-lg-6"
-                    value="<?= $member->telephoneNumber ?>" required>
+                    value="<?= $member->telephoneNumber ?>">
             </div>
             <div class="col-lg-12 font-body h4">
                 ADDRESS<br>
-                <textarea class="font-input form-control" name="address" id="exampleFormControlTextarea1" rows="3"
-                    required><?= $member->address ?></textarea>
+                <textarea class="font-input form-control" name="address" id="exampleFormControlTextarea1" rows="3"><?= $member->address ?></textarea>
             </div>
             <div class="col-lg-12 font-body h4">
                 PICTURE<br>
                 <input type="file" name="picture" class="font-input form-control col-lg-6"
-                    value="<?= $member->picture ?>" required>
+                    value="<?= $member->picture ?>">
             </div>
 
             <div class="row mt-2" id="workInfo">
@@ -107,7 +105,7 @@ $form = ActiveForm::begin([
                         <div class="col-lg-4 font-body h4">
                             <label class="label-input">BRANCH</label>
                             <select class="form-select font-input col-lg-12" name="branchId" id="branchId"
-                                onchange="javascript:findInfo()" required>
+                                onchange="javascript:findInfo()">
                                 <option value="<?= $member->branchId ?>">
                                     <?= Branch::branchName($member->branchId) ?>
                                 </option>
@@ -125,7 +123,7 @@ $form = ActiveForm::begin([
                         </div>
                         <div class="col-lg-4 font-body h4">
                             <label class="label-input">SECTION</label>
-                            <select class="form-select font-input col-lg-12" id="sectionId" name="sectionid" required>
+                            <select class="form-select font-input col-lg-12" id="sectionId" name="sectionid">
                                 <option value="<?= $member->sectionId ?>">
                                     <?= Section::sectionName($member->sectionId) == null ? 'Please select section' : Section::sectionName($member->sectionId) ?>
                                 </option>
@@ -144,7 +142,7 @@ $form = ActiveForm::begin([
 
                         <div class="col-lg-4 font-body h4">
                             <label class="label-input">POSITION</label>
-                            <select class="form-select font-input col-lg-12" id="positionId" name="positionid" required>
+                            <select class="form-select font-input col-lg-12" id="positionId" name="positionid">
                                 <option value="<?= $member->positionId ?>">
                                     <?= Position::positionName($member->positionId) == null ? 'Please select positions' : Position::positionName($member->positionId) ?>
                                 </option>
@@ -162,7 +160,7 @@ $form = ActiveForm::begin([
 
                         <div class="col-lg-4 font-body h4">
                             <label class="label-input">TEAM</label>
-                            <select class="form-select font-input col-lg-12" id="teamId" name="teamid" required>
+                            <select class="form-select font-input col-lg-12" id="teamId" name="teamid">
                                 <option value="<?= $member->teamId ?>">
                                     <?= Team::teamName($member->teamId) == null ? 'Please select team' : Team::teamName($member->teamId) ?>
                                 </option>
@@ -180,8 +178,7 @@ $form = ActiveForm::begin([
 
                         <div class="col-lg-4 font-body h4">
                             <label class="label-input">TEAM POSITION</label>
-                            <select class="form-select font-input col-lg-12" id="teampositionId" name="teampositionid"
-                                required>
+                            <select class="form-select font-input col-lg-12" id="teampositionId" name="teampositionid">
                                 <option value="<?= $member->teamId ?>">
                                     <?= TeamPosition::name($member->teamPositionId) == null ? 'Please select team' : TeamPosition::name($member->teamPositionId) ?>
                                 </option>
@@ -196,8 +193,6 @@ $form = ActiveForm::begin([
                                 ?>
                             </select>
                         </div>
-
-
                         <input type="hidden" name="memberId" value="<?= $member->memberId ?>">
                         <div class="col-lg-12 text-end pb-4">
                             <button type="submit" class="btn btn-success font-button"

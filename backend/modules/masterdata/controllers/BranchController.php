@@ -4,6 +4,7 @@ namespace backend\modules\masterdata\controllers;
 
 use backend\models\tokyoconsulting\Branch;
 use backend\models\tokyoconsulting\Country;
+use backend\models\tokyoconsulting\Member;
 use common\helpers\Path;
 use common\models\ModelMaster;
 use Yii;
@@ -28,7 +29,11 @@ class BranchController extends Controller
     public function actionBranch()
     {
         $branch = Branch::find() -> asArray() -> orderBy('branchName') -> all();
-        return $this->render('branch', ["branch" => $branch]);
+        $dropdown = Branch::find() -> where("status=1") 
+        -> orderBy('branchName') 
+        -> asArray() 
+        -> all();
+        return $this->render('branch', ["branch" => $branch, "dropdown" => $dropdown]);
     }
 
     public function actionCreateBranch()
@@ -125,5 +130,29 @@ class BranchController extends Controller
         // $res["status"] = true;
         return json_encode($res);
     }
+    public function actionSearchBranch()
+    {  
+        return $this->redirect('branch-result/'.ModelMaster::encodeParams([
+        "branchId" => $_POST["branchId"],
+        ]));
+    }
 
+    public function actionBranchResult($hash){
+
+        $param = ModelMaster::decodeParams($hash);
+        $branch = Branch::find()
+        -> where(['branchId' => $param["branchId"]])
+        -> all();
+
+        $dropdown = Branch::find() -> where("status=1") 
+        -> orderBy('branchName') 
+        -> asArray() 
+        -> all();
+
+        return $this -> render('branch',[
+        "branch" => $branch,
+        "dropdown" => $dropdown,
+        "branchId" => $param["branchId"]
+        ]);
+    }
 }

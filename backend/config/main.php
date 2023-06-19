@@ -63,12 +63,15 @@ return [
                 //member
                 'member/default/view-member/<hash>' => 'member/default/view-member',
                 'member/default/update-member/<hash>' => 'member/default/update-member',
+                'member/default/search-result/<hash>' => 'member/default/search-result',
                 //branch
                 'masterdata/branch/view-branch/<hash>' => 'masterdata/branch/view-branch',
                 'masterdata/branch/update-branch/<hash>' => 'masterdata/branch/update-branch',
+                'masterdata/branch/branch-result/<hash>' => 'masterdata/branch/branch-result',
                 //section
                 'masterdata/section/view-section/<hash>' => 'masterdata/section/view-section',
                 'masterdata/section/update-section/<hash>' => 'masterdata/section/update-section',
+                'masterdata/section/section-result/<hash>' => 'masterdata/section/section-result',
                 //position
                 'masterdata/position/view-position/<hash>' => 'masterdata/position/view-position',
                 'masterdata/position/update-position/<hash>' => 'masterdata/position/update-position',

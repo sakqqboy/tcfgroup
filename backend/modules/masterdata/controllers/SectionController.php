@@ -29,8 +29,17 @@ class SectionController extends Controller
 
     public function actionSection()
     {
-        $section = Section::find() ->where(["status"=>1])-> asArray() -> orderBy('branchId, sectionName') -> all();
-        return $this->render('section', ["section" => $section]);
+        $section = Section::find() ->where(["status"=>1])
+        -> asArray() 
+        -> orderBy('branchId, sectionName') 
+        -> all();
+
+        $branchs = Branch::find()->where("status=1")
+        -> orderBy('branchName')
+        -> asArray()
+        -> all();
+        
+        return $this->render('section', ["section" => $section, "branchs" => $branchs]);
     }
 
     public function actionCreateSection()
@@ -96,5 +105,34 @@ class SectionController extends Controller
         // $res["name"] = $member->userName;
         // $res["status"] = true;
         return json_encode($res);
+    }
+
+    public function actionSearchSection()
+    {  
+        return $this->redirect('section-result/'.ModelMaster::encodeParams([
+        "sectionId" => $_POST["sectionId"],
+        "branchId" => $_POST["branchId"]
+        ]));
+    }
+
+    public function actionSectionResult($hash){
+
+        $param = ModelMaster::decodeParams($hash);
+        $section = Section::find()
+        -> where(['branchId' => $param["branchId"]])
+        -> andFilterWhere(["sectionId" => $param["sectionId"]])
+        -> all();
+
+        $branchs = Branch::find() -> where("status=1") 
+        -> orderBy('branchName') 
+        -> asArray() 
+        -> all();
+
+        return $this -> render('section',[
+        "section" => $section,
+        "branchs" => $branchs,
+        "sectionId" => $param["sectionId"],
+        "branchId" => $param["branchId"]
+        ]);
     }
 }

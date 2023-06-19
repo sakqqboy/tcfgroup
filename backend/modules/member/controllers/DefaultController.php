@@ -28,7 +28,14 @@ class DefaultController extends Controller
     public function actionMember()
     {
         $member = Member::find()->asArray()->all();
-        return $this->render('member', ["member" => $member]);
+        $branchs = Branch::find()->where("status=1")
+        -> orderBy('branchName')
+        -> asArray()
+        -> all();
+
+        return $this->render('member', ["member" => $member, 
+        "branchs" => $branchs
+        ]);
     }
 
     public function actionCreateMember()
@@ -75,12 +82,18 @@ class DefaultController extends Controller
                 return $this->redirect(Yii::$app->homeUrl . 'member/default/member');
             }
         }
-        $branchs = Branch::find()->where("status=1")->orderBy('branchName')->asArray()->all();
-        $teampositions = TeamPosition::find()->where("status=1")->asArray()->all();
+        $branchs = Branch::find()->where("status=1")
+        -> orderBy('branchName')
+        -> asArray()
+        -> all();
 
+        $teampositions = TeamPosition::find()->where("status=1")
+        -> asArray()
+        -> all();
 
-
-        return $this->render('create_member', ["branchs" => $branchs, "teampositions" => $teampositions]);
+        return $this->render('create_member', ["branchs" => $branchs, 
+        "teampositions" => $teampositions
+        ]);
     }
 
     public function actionViewMember($hash)
@@ -95,12 +108,35 @@ class DefaultController extends Controller
     {
         $param = ModelMaster::decodeParams($hash);
         $memberId = $param["memberId"];
-        $member = Member::find()->where(["memberId" => $memberId])->one();
-        $branch = Branch::find()->where("status = 1")->orderBy('branchName')->asArray()->all();
-        $teampositions = TeamPosition::find()->where("status = 1")->orderBy('name')->asArray()->all();
-        $section = Section::find()->where("status = 1 and branchId = $member->branchId")->orderBy('sectionName')->asArray()->all();
-        $position = Position::find()->where("status = 1 and branchId = $member->branchId")->orderBy('positionName')->asArray()->all();
-        $team = Team::find()->where("status = 1 and branchId = $member->branchId")->orderBy('teamName')->asArray()->all();
+
+        $member = Member::find()->where(["memberId" => $memberId])
+        -> one();
+
+        $branch = Branch::find()->where("status = 1")
+        -> orderBy('branchName')
+        -> asArray()
+        -> all();
+
+        $teampositions = TeamPosition::find()->where("status = 1")
+        -> orderBy('name')
+        -> asArray()
+        -> all();
+
+        $section = Section::find()->where("status = 1 and branchId = $member->branchId")
+        -> orderBy('sectionName')
+        -> asArray()
+        -> all();
+
+        $position = Position::find()->where("status = 1 and branchId = $member->branchId")
+        -> orderBy('positionName')
+        -> asArray()
+        -> all();
+
+        $team = Team::find()->where("status = 1 and branchId = $member->branchId")
+        -> orderBy('teamName')
+        -> asArray()
+        -> all();
+
         return $this->render('update_member', ["member" => $member, "branch" => $branch, "section" => $section, "position" => $position, "teampositions" => $teampositions, "team" => $team]);
     }
 
@@ -108,9 +144,8 @@ class DefaultController extends Controller
     {
         if (Yii::$app->request->isPost) {
             $memberId = Yii::$app->request->post("memberId");
-            $member = Member::find()->where(["memberId" => $memberId])->one();
+            $member = Member::find()->where(["memberId" => $memberId]) -> one();
             if (isset($member) && !empty($member)) {
-
                 $member->prefix = $_POST["prefix"];
                 $member->username = $_POST["username"];
                 $member->password_hash = $_POST["password"];
@@ -150,7 +185,9 @@ class DefaultController extends Controller
     {
         $res["status"] = false;
         $memberId = $_POST["memberId"];
-        $member = Member::find()->where(["memberId" => $memberId])->one();
+        $member = Member::find()->where(["memberId" => $memberId])
+        -> one();
+
         if ($member->delete()) {
             $res["status"] = true;
         }
@@ -164,30 +201,39 @@ class DefaultController extends Controller
     public function actionFindBranchInfo()
     {
         $branchId = $_POST["branchId"];
-
-
-        $textSection = '<option value="">select section</option>';
-        $textPosition = '<option value="">select Position</option>';
-        $textTeam = '<option value="">select team</option>';
+        $textSection = '<option value="">Please select your section</option>';
+        $textPosition = '<option value="">Please select your position</option>';
+        $textTeam = '<option value="">Please select your team</option>';
         $res = [];
         $res["status"] = true;
 
+        $sections = Section::find()->where(["branchId" => $branchId, "status" => 1])
+        -> orderBy('sectionName')
+        -> asArray()
+        -> all();
 
-        $sections = Section::find()->where(["branchId" => $branchId, "status" => 1])->orderBy('sectionName')->asArray()->all();
         if (isset($sections) && count($sections) > 0) {
             foreach ($sections as $section) :
                 $textSection .= '<option value=' . $section["sectionId"] . '>' . $section["sectionName"] . '</option>';
             endforeach;
         }
 
-        $positions = Position::find()->where(["branchId" => $branchId, "status" => 1])->orderBy('positionName')->asArray()->all();
+        $positions = Position::find()->where(["branchId" => $branchId, "status" => 1])
+        -> orderBy('positionName')
+        -> asArray()
+        -> all();
+
         if (isset($positions) && count($positions) > 0) {
             foreach ($positions as $position) :
                 $textPosition .= '<option value=' . $position["positionId"] . '>' . $position["positionName"] . '</option>';
             endforeach;
         }
 
-        $teams = Team::find()->where(["branchId" => $branchId, "status" => 1])->orderBy('teamName')->asArray()->all();
+        $teams = Team::find()->where(["branchId" => $branchId, "status" => 1])
+        -> orderBy('teamName')
+        -> asArray()
+        -> all();
+
         if (isset($teams) && count($teams) > 0) {
             foreach ($teams as $team) :
                 $textTeam .= '<option value=' . $team["teamId"] . '>' . $team["teamName"] . '</option>';
@@ -198,5 +244,59 @@ class DefaultController extends Controller
         $res["textPosition"] = $textPosition;
         $res["textTeam"] = $textTeam;
         return json_encode($res);
+    }
+
+    public function actionSearchMember()
+    {  
+        return $this->redirect('search-result/'.ModelMaster::encodeParams([
+        "branchId" => $_POST["branchId"],
+        "fullname" => $_POST['fullname'],
+        "sectionId"=>$_POST["sectionId"],
+        "teamId"=>$_POST["teamId"],
+        "positionId"=>$_POST["positionId"]
+        ]));
+    }
+    public function actionSearchResult($hash){
+
+        $param = ModelMaster::decodeParams($hash);
+        $member = Member::find()
+        -> where(['branchId' => $param["branchId"]])
+        -> andWhere('memberFirstName LIKE :fullname OR memberLastName LIKE :fullname', [':fullname' => '%'.$param["fullname"].'%'])
+        -> andFilterWhere(["sectionId" => $param["sectionId"]])
+        -> andFilterWhere(["positionId" => $param["positionId"]])
+        -> andFilterWhere(["teamId" => $param["teamId"]])
+        -> all();
+
+        $branchs = Branch::find() -> where("status=1") 
+        -> orderBy('branchName') 
+        -> asArray() 
+        -> all();
+
+        $section = Section::find()->where(["status" => 1,"branchId" => $param['branchId']])
+        -> orderBy('sectionName')
+        -> asArray()
+        -> all();
+
+        $position = Position::find()->where(["status" => 1,"branchId" => $param['branchId']])
+        -> orderBy('positionName')
+        -> asArray()
+        -> all();
+
+        $team = Team::find()->where(["status" => 1,"branchId" => $param['branchId']])
+        -> orderBy('teamName')
+        -> asArray()
+        -> all();   
+
+        return $this -> render('member',[
+        "member" => $member,
+        "branchId" => $param["branchId"],
+        "sectionId" => $param["sectionId"],
+        "positionId" => $param["positionId"],
+        "teamId" => $param["teamId"],
+        "branchs" => $branchs,
+        "section" => $section, 
+        "position" => $position,
+        "team" => $team
+        ]);
     }
 }

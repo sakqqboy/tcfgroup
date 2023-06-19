@@ -1,4 +1,10 @@
 <?php
+
+use backend\models\tokyoconsulting\Branch;
+use backend\models\tokyoconsulting\Position;
+use backend\models\tokyoconsulting\Section;
+use backend\models\tokyoconsulting\Team;
+
     $this -> title = 'View Member';
 ?>
 <div class="row">
@@ -52,8 +58,20 @@
             <span class="font-body"><?= isset($member -> telephoneNumber) ? $member -> telephoneNumber : '' ?></span>
         </div>
         <div>
-            <span class="font-sub"> Branchid : </span>
-            <span class="font-body"><?= isset($member -> branchId) ? $member -> branchId : '' ?></span>
+            <span class="font-sub"> Branch : </span>
+            <span class="font-body"><?= Branch::branchName($member -> branchId) ?></span>
+        </div>
+        <div>
+            <span class="font-sub"> Section : </span>
+            <span class="font-body"><?= Section::sectionName($member -> sectionId) ?></span>
+        </div>
+        <div>
+            <span class="font-sub"> Position : </span>
+            <span class="font-body"><?= Position::positionName($member -> positionId) ?></span>
+        </div>
+        <div>
+            <span class="font-sub"> Team : </span>
+            <span class="font-body"><?= Team::teamName($member -> teamId) ?></span>
         </div>
         <div class="mt-2"></div>
     </div>

@@ -78,6 +78,7 @@ return [
                 //team
                 'masterdata/team/view-team/<hash>' => 'masterdata/team/view-team',
                 'masterdata/team/update-team/<hash>' => 'masterdata/team/update-team',
+                'masterdata/team/team-result/<hash>' => 'masterdata/team/team-result',
                 //teamposition
                 'masterdata/team-position/team-position/<hash>' => 'masterdata/team-position/team-position',
                 'masterdata/team-position/view-team-position/<hash>' => 'masterdata/team-position/view-team-position',

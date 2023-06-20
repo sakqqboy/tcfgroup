@@ -1,4 +1,10 @@
 <?php
+
+use yii\bootstrap5\ActiveForm;
+use backend\models\tokyoconsulting\Branch;
+use backend\models\tokyoconsulting\Position;
+use common\models\ModelMaster;
+
     $this -> title = 'Position';
 ?>
 <div class="col-lg-12">
@@ -14,8 +20,75 @@
                 Create position
             </a>
         </div>
-    </div><br>
-    <table class="table table-bordered table-hover text-center">
+        <?php
+            $form = ActiveForm::begin([
+                'id' => 'create-job-form',
+                'method' => 'post',
+                'options' => [
+                    'enctype' => 'multipart/form-data',
+                ],
+                'action' => Yii::$app->homeUrl . 'masterdata/position/search-position'
+            ]); 
+        ?>
+        <div class="row mt-3 pd-search">
+            <div class="col-lg-4">
+                <div class="font-search">
+                    Branch
+                </div>
+                <select class="form-select" name="branchId" id="branchId" onchange="javascript:findInfo()" required>
+                <?php 
+                    if(isset($positionId) && $branchId!='') { 
+                ?>
+                <option value="<?=$branchId?>"><?=Branch::branchName($branchId)?></option>
+                <?php
+                    }
+                ?>   
+                <option value="">Please select your branch</option>
+                <?php
+                    if (isset($branchs) && count($branchs) > 0) {
+                        foreach ($branchs as $a) :
+                ?>
+                <option value="<?= $a["branchId"] ?>"><?= $a["branchName"] ?></option>
+                <?php
+                    endforeach;
+                    }
+                ?>
+                </select>
+            </div>
+            <div class="col-lg-4">
+                <div class="font-search">
+                    Position
+                </div>
+                <select class="form-select" id="positionId" name="positionId">
+                <?php if(isset($positionId) && $positionId!='') 
+                    {
+                    
+                ?>
+                <option value="<?=$positionId?>"><?=Position::positionName($positionId)?></option>
+                <?php
+                    }
+                ?>   
+                <option value="">Please select your position</option>
+                <?php
+                    if (isset($position) && count($position) > 0) {
+                    foreach ($position as $a) :
+                ?>
+                <option value="<?= $a["positionId"] ?>"><?= $a["positionName"] ?></option>
+                <?php
+                    endforeach;
+                    }
+                ?>
+                </select>
+            </div>
+            <div class="col-lg-2">
+                <button type="submit" class="btn btn-secondary bt-search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <?php ActiveForm::end(); ?>
+    </div>
+    <table class="table table-bordered table-hover text-center mt-3">
         <thead class="table-secondary">
             <tr>
                 <th>No</th>
@@ -28,9 +101,6 @@
         </thead>
         <tbody>
             <?php
-                use backend\models\tokyoconsulting\Branch;
-                use common\models\ModelMaster;
-
                 if(isset($position) && count($position)){
                     $i=1;
                     foreach ($position as $x) :

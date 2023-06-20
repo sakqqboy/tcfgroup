@@ -44,7 +44,7 @@ use common\models\ModelMaster;
                 <?php
                     }
                 ?>   
-                <option value="">Select branch</option>
+                <option value="">Please select your branch</option>
                 <?php
                     if (isset($branchs) && count($branchs) > 0) {
                         foreach ($branchs as $a) :
@@ -69,7 +69,7 @@ use common\models\ModelMaster;
                 <?php
                     }
                 ?>   
-                <option value="">Select section</option>
+                <option value="">Please select your section</option>
                 <?php
                     if (isset($section) && count($section) > 0) {
                     foreach ($section as $a) :
@@ -94,7 +94,7 @@ use common\models\ModelMaster;
                 <?php
                     }
                 ?>   
-                <option value="">Select team</option>
+                <option value="">Please select your team</option>
                 <?php
                     if (isset($team) && count($team) > 0) {
                     foreach ($team as $a) :
@@ -113,8 +113,8 @@ use common\models\ModelMaster;
             </div>
         </div>
         <?php ActiveForm::end(); ?>
-    </div><br>
-    <table class="table table-bordered table-hover text-center">
+    </div>
+    <table class="table table-bordered table-hover text-center mt-3">
         <thead class="table-secondary">
             <tr>
                 <th>No</th>

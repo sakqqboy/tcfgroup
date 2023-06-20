@@ -35,7 +35,7 @@ use yii\bootstrap5\ActiveForm;
         <div class="row pd-search">
             <div class="col-lg-3 font-search">
                 Name<br>
-                <input type="text" name="fullname" class="font-input form-control">
+                <input type="text" name="fullname" class="font-input form-control" value="<?= isset($fullname) ? $fullname : '' ?>">
             </div>
         </div>
         <div class="row mt-3 pd-search">

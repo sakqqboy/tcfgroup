@@ -26,7 +26,13 @@ class PositionController extends Controller
     public function actionPosition()
     {
         $position = Position::find() -> where(["status" => 1]) -> asArray() -> orderBy('branchId, positionName') -> all();
-        return $this->render('position', ["position" => $position]);
+
+        $branchs = Branch::find()->where("status=1")
+        -> orderBy('branchName')
+        -> asArray()
+        -> all();
+        return $this->render('position', ["position" => $position, "branchs" => $branchs]);
+
     }
 
     public function actionCreatePosition()
@@ -95,5 +101,34 @@ class PositionController extends Controller
         // $res["name"] = $member->userName;
         // $res["status"] = true;
         return json_encode($res);
+    }
+
+    public function actionSearchPosition()
+    {  
+        return $this->redirect('position-result/'.ModelMaster::encodeParams([
+        "branchId" => $_POST["branchId"],
+        "positionId"=>$_POST["positionId"],
+        ]));
+    }
+    public function actionPositionResult($hash)
+    {
+        $param = ModelMaster::decodeParams($hash);
+        $position = Position::find()
+        -> where(['branchId' => $param["branchId"]])
+        -> andFilterWhere(["positionId" => $param["positionId"]])
+        -> all();
+
+        $branchs = Branch::find() -> where("status=1") 
+        -> orderBy('branchName') 
+        -> asArray() 
+        -> all();
+
+
+        return $this -> render('position',[
+        "branchs" => $branchs,
+        "position" => $position,
+        "branchId" => $param["branchId"],
+        "positionId" => $param["positionId"],
+        ]);
     }
 }

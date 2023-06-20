@@ -75,6 +75,7 @@ return [
                 //position
                 'masterdata/position/view-position/<hash>' => 'masterdata/position/view-position',
                 'masterdata/position/update-position/<hash>' => 'masterdata/position/update-position',
+                'masterdata/position/position-result/<hash>' => 'masterdata/position/position-result',
                 //team
                 'masterdata/team/view-team/<hash>' => 'masterdata/team/view-team',
                 'masterdata/team/update-team/<hash>' => 'masterdata/team/update-team',

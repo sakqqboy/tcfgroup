@@ -289,6 +289,7 @@ class DefaultController extends Controller
 
         return $this -> render('member',[
         "member" => $member,
+        "fullname" => $param["fullname"],
         "branchId" => $param["branchId"],
         "sectionId" => $param["sectionId"],
         "positionId" => $param["positionId"],

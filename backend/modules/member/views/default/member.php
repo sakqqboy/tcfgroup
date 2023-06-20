@@ -44,20 +44,20 @@ use yii\bootstrap5\ActiveForm;
                     Branch
                 </div>
                 <select class="form-select" name="branchId" id="branchId" onchange="javascript:findInfo()" required>
-                <?php 
+                    <?php 
                     if(isset($branchId) && $branchId!='') { 
                 ?>
-                <option value="<?=$branchId?>"><?=Branch::branchName($branchId)?></option>
-                <?php
+                    <option value="<?=$branchId?>"><?=Branch::branchName($branchId)?></option>
+                    <?php
                     }
-                ?>   
-                <option value="">Select branch</option>
-                <?php
+                ?>
+                    <option value="">Select branch</option>
+                    <?php
                     if (isset($branchs) && count($branchs) > 0) {
                         foreach ($branchs as $a) :
                 ?>
-                <option value="<?= $a["branchId"] ?>"><?= $a["branchName"] ?></option>
-                <?php
+                    <option value="<?= $a["branchId"] ?>"><?= $a["branchName"] ?></option>
+                    <?php
                     endforeach;
                     }
                 ?>
@@ -68,21 +68,21 @@ use yii\bootstrap5\ActiveForm;
                     Section
                 </div>
                 <select class="form-select" id="sectionId" name="sectionId">
-                <?php if(isset($sectionId) && $sectionId!='') 
+                    <?php if(isset($sectionId) && $sectionId!='') 
                     {
                     
                 ?>
-                <option value="<?=$sectionId?>"><?=Section::sectionName($sectionId)?></option>
-                <?php
+                    <option value="<?=$sectionId?>"><?=Section::sectionName($sectionId)?></option>
+                    <?php
                     }
-                ?>   
-                <option value="">Select section</option>
-                <?php
+                ?>
+                    <option value="">Select section</option>
+                    <?php
                     if (isset($section) && count($section) > 0) {
                     foreach ($section as $a) :
                 ?>
-                <option value="<?= $a["sectionId"] ?>"><?= $a["sectionName"] ?></option>
-                <?php
+                    <option value="<?= $a["sectionId"] ?>"><?= $a["sectionName"] ?></option>
+                    <?php
                     endforeach;
                     }
                 ?>
@@ -93,21 +93,21 @@ use yii\bootstrap5\ActiveForm;
                     Position
                 </div>
                 <select class="form-select" id="positionId" name="positionId">
-                <?php if(isset($positionId) && $positionId!='') 
+                    <?php if(isset($positionId) && $positionId!='') 
                     {
                     
                 ?>
-                <option value="<?=$positionId?>"><?=Position::positionName($positionId)?></option>
-                <?php
+                    <option value="<?=$positionId?>"><?=Position::positionName($positionId)?></option>
+                    <?php
                     }
-                ?>   
-                <option value="">Select position</option>
-                <?php
+                ?>
+                    <option value="">Select position</option>
+                    <?php
                     if (isset($position) && count($position) > 0) {
                     foreach ($position as $a) :
                 ?>
-                <option value="<?= $a["positionId"] ?>"><?= $a["positionName"] ?></option>
-                <?php
+                    <option value="<?= $a["positionId"] ?>"><?= $a["positionName"] ?></option>
+                    <?php
                     endforeach;
                     }
                 ?>
@@ -118,21 +118,21 @@ use yii\bootstrap5\ActiveForm;
                     Team
                 </div>
                 <select class="form-select" id="teamId" name="teamId">
-                <?php if(isset($teamId) && $teamId!='') 
+                    <?php if(isset($teamId) && $teamId!='') 
                     {
                     
                 ?>
-                <option value="<?=$teamId?>"><?=Team::teamName($teamId)?></option>
-                <?php
+                    <option value="<?=$teamId?>"><?=Team::teamName($teamId)?></option>
+                    <?php
                     }
-                ?>   
-                <option value="">Select position</option>
-                <?php
+                ?>
+                    <option value="">Select position</option>
+                    <?php
                     if (isset($team) && count($team) > 0) {
                     foreach ($team as $a) :
                 ?>
-                <option value="<?= $a["teamId"] ?>"><?= $a["teamName"] ?></option>
-                <?php
+                    <option value="<?= $a["teamId"] ?>"><?= $a["teamName"] ?></option>
+                    <?php
                     endforeach;
                     }
                 ?>
@@ -174,14 +174,16 @@ use yii\bootstrap5\ActiveForm;
                 <td><?= Position::positionName($x['positionId']) ?></td>
                 <td><?= Team::teamName($x['teamId']) ?></td>
                 <td width="15%">
-                    <a class="btn btn-primary bt-size" href="<?=Yii::$app->homeUrl.'member/default/view-member/' . ModelMaster::encodeParams(["memberId" => $x['memberId']])?>">
+                    <a class="btn btn-primary bt-size"
+                        href="<?=Yii::$app->homeUrl.'member/default/view-member/' . ModelMaster::encodeParams(["memberId" => $x['memberId']])?>">
                         <i class="fa fa-eye" aria-hidden="true"></i>
                     </a>
-                    <a class="btn btn-warning bt-size" href="<?=Yii::$app->homeUrl.'member/default/update-member/' . ModelMaster::encodeParams(["memberId" => $x['memberId']])?>">
+                    <a class="btn btn-warning bt-size"
+                        href="<?=Yii::$app->homeUrl.'member/default/update-member/' . ModelMaster::encodeParams(["memberId" => $x['memberId']])?>">
                         <i class="fa fa-pencil" aria-hidden="true"></i>
                     </a>
                     <a class="btn btn-danger bt-size" href="javascript:deleteMember(<?= $x['memberId'] ?>)">
-                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        <i class="fa fa-trash" aria-hidden="true"></i>
                     </a>
                 </td>
             </tr>
@@ -190,10 +192,10 @@ use yii\bootstrap5\ActiveForm;
                     endforeach;
                 }else { 
             ?>
-                <tr>
-                    <td colspan="12"> No data</td>
-                </tr>
-                <?php
+            <tr>
+                <td colspan="12"> No data</td>
+            </tr>
+            <?php
                 }
                 ?>
         </tbody>

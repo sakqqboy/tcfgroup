@@ -29,12 +29,13 @@ class DefaultController extends Controller
     {
         $member = Member::find()->asArray()->all();
         $branchs = Branch::find()->where("status=1")
-        -> orderBy('branchName')
-        -> asArray()
-        -> all();
+            ->orderBy('branchName')
+            ->asArray()
+            ->all();
 
-        return $this->render('member', ["member" => $member, 
-        "branchs" => $branchs
+        return $this->render('member', [
+            "member" => $member,
+            "branchs" => $branchs
         ]);
     }
 
@@ -83,16 +84,17 @@ class DefaultController extends Controller
             }
         }
         $branchs = Branch::find()->where("status=1")
-        -> orderBy('branchName')
-        -> asArray()
-        -> all();
+            ->orderBy('branchName')
+            ->asArray()
+            ->all();
 
         $teampositions = TeamPosition::find()->where("status=1")
-        -> asArray()
-        -> all();
+            ->asArray()
+            ->all();
 
-        return $this->render('create_member', ["branchs" => $branchs, 
-        "teampositions" => $teampositions
+        return $this->render('create_member', [
+            "branchs" => $branchs,
+            "teampositions" => $teampositions
         ]);
     }
 
@@ -110,32 +112,32 @@ class DefaultController extends Controller
         $memberId = $param["memberId"];
 
         $member = Member::find()->where(["memberId" => $memberId])
-        -> one();
+            ->one();
 
         $branch = Branch::find()->where("status = 1")
-        -> orderBy('branchName')
-        -> asArray()
-        -> all();
+            ->orderBy('branchName')
+            ->asArray()
+            ->all();
 
         $teampositions = TeamPosition::find()->where("status = 1")
-        -> orderBy('name')
-        -> asArray()
-        -> all();
+            ->orderBy('name')
+            ->asArray()
+            ->all();
 
         $section = Section::find()->where("status = 1 and branchId = $member->branchId")
-        -> orderBy('sectionName')
-        -> asArray()
-        -> all();
+            ->orderBy('sectionName')
+            ->asArray()
+            ->all();
 
         $position = Position::find()->where("status = 1 and branchId = $member->branchId")
-        -> orderBy('positionName')
-        -> asArray()
-        -> all();
+            ->orderBy('positionName')
+            ->asArray()
+            ->all();
 
         $team = Team::find()->where("status = 1 and branchId = $member->branchId")
-        -> orderBy('teamName')
-        -> asArray()
-        -> all();
+            ->orderBy('teamName')
+            ->asArray()
+            ->all();
 
         return $this->render('update_member', ["member" => $member, "branch" => $branch, "section" => $section, "position" => $position, "teampositions" => $teampositions, "team" => $team]);
     }
@@ -144,7 +146,7 @@ class DefaultController extends Controller
     {
         if (Yii::$app->request->isPost) {
             $memberId = Yii::$app->request->post("memberId");
-            $member = Member::find()->where(["memberId" => $memberId]) -> one();
+            $member = Member::find()->where(["memberId" => $memberId])->one();
             if (isset($member) && !empty($member)) {
                 $member->prefix = $_POST["prefix"];
                 $member->username = $_POST["username"];
@@ -186,7 +188,7 @@ class DefaultController extends Controller
         $res["status"] = false;
         $memberId = $_POST["memberId"];
         $member = Member::find()->where(["memberId" => $memberId])
-        -> one();
+            ->one();
 
         if ($member->delete()) {
             $res["status"] = true;
@@ -208,9 +210,9 @@ class DefaultController extends Controller
         $res["status"] = true;
 
         $sections = Section::find()->where(["branchId" => $branchId, "status" => 1])
-        -> orderBy('sectionName')
-        -> asArray()
-        -> all();
+            ->orderBy('sectionName')
+            ->asArray()
+            ->all();
 
         if (isset($sections) && count($sections) > 0) {
             foreach ($sections as $section) :
@@ -219,9 +221,9 @@ class DefaultController extends Controller
         }
 
         $positions = Position::find()->where(["branchId" => $branchId, "status" => 1])
-        -> orderBy('positionName')
-        -> asArray()
-        -> all();
+            ->orderBy('positionName')
+            ->asArray()
+            ->all();
 
         if (isset($positions) && count($positions) > 0) {
             foreach ($positions as $position) :
@@ -230,9 +232,9 @@ class DefaultController extends Controller
         }
 
         $teams = Team::find()->where(["branchId" => $branchId, "status" => 1])
-        -> orderBy('teamName')
-        -> asArray()
-        -> all();
+            ->orderBy('teamName')
+            ->asArray()
+            ->all();
 
         if (isset($teams) && count($teams) > 0) {
             foreach ($teams as $team) :
@@ -247,46 +249,46 @@ class DefaultController extends Controller
     }
 
     public function actionSearchMember()
-    {  
-        return $this->redirect('search-result/'.ModelMaster::encodeParams([
-        "branchId" => $_POST["branchId"],
-        "fullname" => $_POST['fullname'],
-        "sectionId"=>$_POST["sectionId"],
-        "teamId"=>$_POST["teamId"],
-        "positionId"=>$_POST["positionId"]
+    {
+        return $this->redirect('search-result/' . ModelMaster::encodeParams([
+            "branchId" => $_POST["branchId"],
+            "fullname" => $_POST['fullname'],
+            "sectionId" => $_POST["sectionId"],
+            "teamId" => $_POST["teamId"],
+            "positionId" => $_POST["positionId"]
         ]));
     }
-    public function actionSearchResult($hash){
+    public function actionSearchResult($hash)
+    {
 
         $param = ModelMaster::decodeParams($hash);
         $member = Member::find()
-        -> where(['branchId' => $param["branchId"]])
-        -> andWhere('memberFirstName LIKE :fullname OR memberLastName LIKE :fullname', [':fullname' => '%'.$param["fullname"].'%'])
-        -> andFilterWhere(["sectionId" => $param["sectionId"]])
-        -> andFilterWhere(["positionId" => $param["positionId"]])
-        -> andFilterWhere(["teamId" => $param["teamId"]])
-        -> all();
+            ->where(['branchId' => $param["branchId"]])
+            ->andWhere('memberFirstName LIKE :fullname OR memberLastName LIKE :fullname', [':fullname' => '%' . $param["fullname"] . '%'])
+            ->andFilterWhere(["sectionId" => $param["sectionId"]])
+            ->andFilterWhere(["positionId" => $param["positionId"]])
+            ->andFilterWhere(["teamId" => $param["teamId"]])
+            ->all();
 
-        $branchs = Branch::find() -> where("status=1") 
-        -> orderBy('branchName') 
-        -> asArray() 
-        -> all();
+        $branchs = Branch::find()->where("status=1")
+            ->orderBy('branchName')
+            ->asArray()
+            ->all();
 
-        $section = Section::find()->where(["status" => 1,"branchId" => $param['branchId']])
-        -> orderBy('sectionName')
-        -> asArray()
-        -> all();
+        $section = Section::find()->where(["status" => 1, "branchId" => $param['branchId']])
+            ->orderBy('sectionName')
+            ->asArray()
+            ->all();
 
-        $position = Position::find()->where(["status" => 1,"branchId" => $param['branchId']])
-        -> orderBy('positionName')
-        -> asArray()
-        -> all();
+        $position = Position::find()->where(["status" => 1, "branchId" => $param['branchId']])
+            ->orderBy('positionName')
+            ->asArray()
+            ->all();
 
-        $team = Team::find()->where(["status" => 1,"branchId" => $param['branchId']])
-        -> orderBy('teamName')
-        -> asArray()
-        -> all();   
-
+        $team = Team::find()->where(["status" => 1, "branchId" => $param['branchId']])
+            ->orderBy('teamName')
+            ->asArray()
+            ->all();
         return $this -> render('member',[
         "member" => $member,
         "fullname" => $param["fullname"],

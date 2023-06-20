@@ -37,7 +37,7 @@ use common\models\ModelMaster;
                 </div>
                 <select class="form-select" name="branchId" id="branchId" onchange="javascript:findInfo()" required>
                 <?php 
-                    if(isset($positionId) && $branchId!='') { 
+                    if(isset($branchId) && $branchId!='') { 
                 ?>
                 <option value="<?=$branchId?>"><?=Branch::branchName($branchId)?></option>
                 <?php
@@ -129,7 +129,7 @@ use common\models\ModelMaster;
                 }else { 
             ?>
                 <tr>
-                    <td colspan="5"> No data</td>
+                    <td colspan="12"> No data</td>
                 </tr>
                 <?php
                 }

@@ -26,8 +26,18 @@ class TeamController extends Controller
 
     public function actionTeam()
     {
-        $team = Team::find() -> where(["status" => 1]) -> asArray() -> orderBy('branchId, sectionId') -> all();
-        return $this->render('team', ["team" => $team]);
+        $team = Team::find() 
+        -> where(["status" => 1]) 
+        -> asArray() 
+        -> orderBy('branchId, sectionId')
+        -> all();
+
+        $branchs = Branch::find()->where("status=1")
+        -> orderBy('branchName')
+        -> asArray()
+        -> all();
+
+        return $this->render('team', ["team" => $team, "branchs" => $branchs]);
     }
 
     public function actionCreateTeam()
@@ -118,5 +128,41 @@ class TeamController extends Controller
         // $res["name"] = $member->userName;
         // $res["status"] = true;
         return json_encode($res);
+    }
+
+    public function actionSearchTeam()
+    {  
+        return $this->redirect('team-result/'.ModelMaster::encodeParams([
+        "branchId" => $_POST["branchId"],
+        "sectionId"=>$_POST["sectionId"],
+        "teamId"=>$_POST["teamId"],
+        ]));
+    }
+    public function actionTeamResult($hash){
+
+        $param = ModelMaster::decodeParams($hash);
+        $team = Team::find()
+        -> where(['branchId' => $param["branchId"]])
+        -> andFilterWhere(["sectionId" => $param["sectionId"]])
+        -> all();
+
+        $branchs = Branch::find() -> where("status=1") 
+        -> orderBy('branchName') 
+        -> asArray() 
+        -> all();
+
+        $section = Section::find()->where(["status" => 1,"branchId" => $param['branchId']])
+        -> orderBy('sectionName')
+        -> asArray()
+        -> all();
+
+        return $this -> render('team',[
+        "team" => $team,
+        "branchId" => $param["branchId"],
+        "sectionId" => $param["sectionId"],
+        "teamId" => $param["teamId"],
+        "branchs" => $branchs,
+        "section" => $section,
+        ]);
     }
 }

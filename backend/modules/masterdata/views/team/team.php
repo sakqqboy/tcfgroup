@@ -1,4 +1,11 @@
 <?php
+
+    use yii\bootstrap5\ActiveForm;
+    use backend\models\tokyoconsulting\Branch;
+    use backend\models\tokyoconsulting\Section;
+use backend\models\tokyoconsulting\Team;
+use common\models\ModelMaster;
+
     $this -> title = 'Team';
 ?>
 <div class="col-lg-12">
@@ -9,11 +16,103 @@
     </div>
     <div class="row">
         <div class="col-lg-12 text-end">
-            <a class="btn btn-success buttons-size" href="<?=Yii::$app->homeUrl.'/masterdata/team/create-team'?>">
+            <a class="btn btn-success buttons-size" href="<?=Yii::$app->homeUrl.'masterdata/team/create-team'?>">
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
                 Create team
             </a>
         </div>
+        <?php
+            $form = ActiveForm::begin([
+                'id' => 'create-job-form',
+                'method' => 'post',
+                'options' => [
+                    'enctype' => 'multipart/form-data',
+                ],
+                'action' => Yii::$app->homeUrl . 'masterdata/team/search-team'
+            ]); 
+        ?>
+        <div class="row mt-3 pd-search">
+            <div class="col-lg-3">
+                <div class="font-search">
+                    Branch
+                </div>
+                <select class="form-select" name="branchId" id="branchId" onchange="javascript:findInfo()" required>
+                <?php 
+                    if(isset($branchId) && $branchId!='') { 
+                ?>
+                <option value="<?=$branchId?>"><?=Branch::branchName($branchId)?></option>
+                <?php
+                    }
+                ?>   
+                <option value="">Select branch</option>
+                <?php
+                    if (isset($branchs) && count($branchs) > 0) {
+                        foreach ($branchs as $a) :
+                ?>
+                <option value="<?= $a["branchId"] ?>"><?= $a["branchName"] ?></option>
+                <?php
+                    endforeach;
+                    }
+                ?>
+                </select>
+            </div>
+            <div class="col-lg-3">
+                <div class="font-search">
+                    Section
+                </div>
+                <select class="form-select" id="sectionId" name="sectionId">
+                <?php if(isset($sectionId) && $sectionId!='') 
+                    {
+                    
+                ?>
+                <option value="<?=$sectionId?>"><?=Section::sectionName($sectionId)?></option>
+                <?php
+                    }
+                ?>   
+                <option value="">Select section</option>
+                <?php
+                    if (isset($section) && count($section) > 0) {
+                    foreach ($section as $a) :
+                ?>
+                <option value="<?= $a["sectionId"] ?>"><?= $a["sectionName"] ?></option>
+                <?php
+                    endforeach;
+                    }
+                ?>
+                </select>
+            </div>
+            <div class="col-lg-3">
+                <div class="font-search">
+                    Team
+                </div>
+                <select class="form-select" id="teamId" name="teamId">
+                <?php if(isset($teamId) && $teamId!='') 
+                    {
+                    
+                ?>
+                <option value="<?=$teamId?>"><?=Team::teamName($teamId)?></option>
+                <?php
+                    }
+                ?>   
+                <option value="">Select team</option>
+                <?php
+                    if (isset($team) && count($team) > 0) {
+                    foreach ($team as $a) :
+                ?>
+                <option value="<?= $a["teamId"] ?>"><?= $a["teamName"] ?></option>
+                <?php
+                    endforeach;
+                    }
+                ?>
+                </select>
+            </div>
+            <div class="col-lg-2">
+                <button type="submit" class="btn btn-secondary bt-search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <?php ActiveForm::end(); ?>
     </div><br>
     <table class="table table-bordered table-hover text-center">
         <thead class="table-secondary">
@@ -28,10 +127,6 @@
         </thead>
         <tbody>
             <?php
-                use backend\models\tokyoconsulting\Branch;
-                use backend\models\tokyoconsulting\Section;
-                use common\models\ModelMaster;
-
                 if(isset($team) && count($team)){
                     $i=1;
                     foreach ($team as $x) :

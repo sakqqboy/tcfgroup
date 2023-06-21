@@ -4,6 +4,8 @@ namespace backend\modules\member\controllers;
 
 use backend\models\tokyoconsulting\Branch;
 use backend\models\tokyoconsulting\Member;
+use backend\models\tokyoconsulting\MemberHasType;
+use backend\models\tokyoconsulting\MemberType;
 use backend\models\tokyoconsulting\Position;
 use backend\models\tokyoconsulting\Section;
 use backend\models\tokyoconsulting\Team;
@@ -33,15 +35,22 @@ class DefaultController extends Controller
             ->asArray()
             ->all();
 
+        $membertype = MemberType::find()->where("status=1")
+            ->orderBy('memberTypeName')
+            ->asArray()
+            ->all();
+
         return $this->render('member', [
             "member" => $member,
-            "branchs" => $branchs
+            "branchs" => $branchs,
+            "membertype" => $membertype
         ]);
     }
 
     public function actionCreateMember()
     {
         if (isset($_POST["username"])) {
+            //throw new Exception(print_r(Yii::$app->request->post(),true));
             $member = new Member();
             $member->prefix = $_POST["prefix"];
             $member->username = $_POST["username"];
@@ -80,24 +89,47 @@ class DefaultController extends Controller
             $member->updateDateTime = new Expression('NOW()');
 
             if ($member->save(false)) {
-                return $this->redirect(Yii::$app->homeUrl . 'member/default/member');
+                $memberId=Yii::$app->db->lastInsertID;    
+                if(isset($_POST["memberType"]) && count($_POST["memberType"])>0){
+                    foreach($_POST["memberType"] as $memberTypeId):
+                        $memberHasType=new MemberHasType();
+                        $memberHasType->memberId= $memberId;
+                        $memberHasType->memberTypeId= $memberTypeId;
+                        $memberHasType->status=1;
+                        $memberHasType->createDatetime=new Expression('NOW()');
+                        $memberHasType->updateDatetime=new Expression('NOW()');
+                        $memberHasType->save(false);
+                    endforeach;
+                }
+                return $this->redirect(Yii::$app->homeUrl . 'member/default/member');  
             }
         }
-        $branchs = Branch::find()->where("status=1")
-            ->orderBy('branchName')
-            ->asArray()
-            ->all();
+        $branchs = Branch::find()
+            -> where("status=1")
+            -> orderBy('branchName')
+            -> asArray()
+            -> all();
 
-        $teampositions = TeamPosition::find()->where("status=1")
-            ->asArray()
-            ->all();
+        $teampositions = TeamPosition::find()
+            -> where("status=1")
+            -> asArray()
+            -> all();
+
+        $memberType = MemberType::find() 
+            ->select('memberTypeId,memberTypeName')
+            -> where("status=1")
+            -> asArray()
+            -> all();
 
         return $this->render('create_member', [
             "branchs" => $branchs,
-            "teampositions" => $teampositions
+            "teampositions" => $teampositions,
+            "memberType" => $memberType
         ]);
     }
-
+public function actionDeleteMemberHasType(){
+MemberHasType::deleteAll(["memberId"=>9]);
+}
     public function actionViewMember($hash)
     {
         $param = ModelMaster::decodeParams($hash);
@@ -302,4 +334,68 @@ class DefaultController extends Controller
         "team" => $team
         ]);
     }
+    public function actionMemberType()
+    {
+        $membertype = MemberType::find()->asArray()->all();
+        return $this->render('member_type', ["membertype" => $membertype]);
+    }
+    public function actionCreateMemberType()
+    {
+        if(isset($_POST["membertypename"])) {
+            $membertype = new MemberType();
+            $membertype -> status = 1;
+            $membertype -> memberTypeName = $_POST["membertypename"];
+            $membertype -> createDatetime = new Expression('NOW()');
+
+            if($membertype -> save(false)) {
+                return $this->redirect(Yii::$app->homeUrl.'member/default/member-type');
+            }
+        }
+        return $this->render('create_member_type');
+    }
+    public function actionViewMemberType($hash)
+    {
+        $param = ModelMaster::decodeParams($hash);
+        $memberTypeId = $param["memberTypeId"];
+        $membertype = MemberType::findOne(["memberTypeId" => $memberTypeId]);
+        return $this->render('view_member_type', ["membertype" => $membertype]);
+    }
+
+    public function actionUpdateMemberType($hash)
+    {
+        $param = ModelMaster::decodeParams($hash);
+        $memberTypeId = $param["memberTypeId"];
+        $membertype = MemberType::findOne(["memberTypeId" => $memberTypeId]);
+        return $this->render('update_member_type', ["membertype" => $membertype]);
+    }
+
+    public function actionSaveMemberType()
+    {
+        if (Yii::$app->request->isPost) {
+            $memberTypeId = Yii::$app->request->post("memberTypeId");
+            $membertype = MemberType::find()->where(["memberTypeId" => $memberTypeId])->one();
+            if (isset($membertype) && !empty($membertype)) {
+                $membertype -> memberTypeName = $_POST["membertypename"];
+                $membertype -> createDatetime = new Expression('NOW()');
+
+                if ($membertype->save(false)) {
+                    return $this->redirect(Yii::$app->homeUrl . 'member/default/member-type');
+                }
+            }
+        }
+    }
+    public function actionDeleteMemberType()
+    {
+        $res["status"] = false;
+        $memberTypeId = $_POST["memberTypeId"];
+        $membertype = MemberType::find()->where(["memberTypeId" => $memberTypeId])
+            ->one();
+        if ($membertype->delete()) {
+            $res["status"] = true;
+        }
+
+        return json_encode($res);
+    }
+
+
 }

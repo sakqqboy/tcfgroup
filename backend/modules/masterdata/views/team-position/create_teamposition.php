@@ -13,11 +13,11 @@
     <div class="row mt-3">
         <div class="col-lg-12 mt-4 border border-dark bd-position">
             <div class="col-lg-12 text-center font-title">
-                CREATE TEAMPOSITION<br>
+                CREATE TEAM POSITION<br>
             </div>
             <div class="padding">
                 <div class="col-lg-12 font-body h4">
-                    TEAMPOSITION<br>
+                    TEAM POSITION<br>
                     <input type="text" name="teampositionname" class="font-input form-control col-lg-6" required>
                 </div>
                 <button type="submit" class="btn btn-success font-button" href="<?=Yii::$app->homeUrl.'masterdata/team-position/create-team-position'?>">Submit</button>

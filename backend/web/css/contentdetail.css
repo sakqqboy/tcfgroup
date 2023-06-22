@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.textar {
+    margin-top: 5px;
+    border: 1px solid black;
+}
+
+.topicbor {
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+input::file-selector-button {
+    font-weight: bold;
+    padding: 0.5em;
+    border: thin solid grey;
+    border-radius: 3px;
+    font-family: 'Geologica', sans-serif;
+}
+
+.title {
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: 0px -3px 10px 1px rgba(0, 0, 0, 0.24);
+}
+
+.font-topic-de {
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+}
+
+.bigtopic {
+    font-family: "Audiowide", sans-serif;
+    font-size: 30px;
+}

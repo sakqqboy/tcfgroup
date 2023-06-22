@@ -21,6 +21,8 @@ class AppAsset extends AssetBundle
         'css/updatemember.css',
         'css/viewmember.css',
         'css/login.css',
+        'css/contentdetail.css',
+        'css/createcontent.css',
 
 
     ];

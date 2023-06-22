@@ -28,18 +28,18 @@ class Path
 	public static function frontendUrl()
 	{
 		if ($_SERVER['HTTP_HOST'] == "localhost") {
-			$url = 'http://localhost/lower-management/frontend/web/';
+			$url = 'http://localhost/tcfgroup/frontend/web/';
 		} else {
 			$url = 'https://tcg-management-system.com/';
 		}
 		return $url;
 	}
-	public static function frontendUrlVideo()
+	public static function backendUrl()
 	{
 		if ($_SERVER['HTTP_HOST'] == "localhost") {
-			$url = 'http://localhost/lower-management/frontend/web/';
+			$url = 'http://localhost/tcfgroup/backend/web/';
 		} else {
-			$url = 'http://tcg-wiki-investment.com/';
+			$url = 'https://tcg-management-system.com/';
 		}
 		return $url;
 	}

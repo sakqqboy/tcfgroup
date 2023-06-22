@@ -29,24 +29,23 @@ class DefaultController extends Controller
             ->asArray()
             ->all();
         return $this->render('index', ["content" => $content]);
-
     }
     public function actionContent()
     {
-        $content = Content::find() -> asArray() -> all();
+        $content = Content::find()->asArray()->all();
         return $this->render('content', ["content" => $content]);
     }
 
     public function actionCreateContent()
     {
-        if(isset($_POST["contentname"])) {
+        if (isset($_POST["contentname"])) {
             $content = new Content();
-            $content -> contentName = $_POST["contentname"];
-            $content -> title = $_POST["title"];
-            $content -> detail = $_POST["detail"];
+            $content->contentName = $_POST["contentname"];
+            $content->title = $_POST["title"];
+            $content->detail = $_POST["detail"];
 
-            if($content -> save(false)) {
-                return $this->redirect(Yii::$app->homeUrl.'content/default/content');
+            if ($content->save(false)) {
+                return $this->redirect(Yii::$app->homeUrl . 'content/default/content');
             }
         }
         return $this->render('create_content');
@@ -56,7 +55,7 @@ class DefaultController extends Controller
     {
         $param = ModelMaster::decodeParams($hash);
         $contentId = $param["contentId"];
-        $content = Content::find() -> where(["contentId" => $contentId]) -> one();
+        $content = Content::find()->where(["contentId" => $contentId])->one();
         return $this->render('view_content', ["content" => $content]);
     }
 
@@ -64,20 +63,20 @@ class DefaultController extends Controller
     {
         $param = ModelMaster::decodeParams($hash);
         $contentId = $param["contentId"];
-        $content = Content::find() -> where(["contentId" => $contentId]) -> one();
+        $content = Content::find()->where(["contentId" => $contentId])->one();
         return $this->render('update_content', ["content" => $content]);
     }
 
     public function actionSaveUpdate()
     {
-        if(isset($_POST["contentId"])) {
-            $content = Content::find() -> where(["contentId" => $_POST["contentId"]]) -> one();
-            $content -> contentName = $_POST["contentname"];
-            $content -> title = $_POST["title"];
-            $content -> detail = $_POST["detail"];
+        if (isset($_POST["contentId"])) {
+            $content = Content::find()->where(["contentId" => $_POST["contentId"]])->one();
+            $content->contentName = $_POST["contentname"];
+            $content->title = $_POST["title"];
+            $content->detail = $_POST["detail"];
 
-            if($content -> save(false)) {
-                return $this -> redirect(Yii::$app->homeUrl . 'content/default/content');
+            if ($content->save(false)) {
+                return $this->redirect(Yii::$app->homeUrl . 'content/default/content');
             }
         }
     }
@@ -85,9 +84,9 @@ class DefaultController extends Controller
     {
         $res["status"] = false;
         $contentId = $_POST["contentId"];
-        if($contentId) {
-            $content = Content::find() -> where(["contentId" => $contentId]) -> one();
-            if($content -> delete()) {
+        if ($contentId) {
+            $content = Content::find()->where(["contentId" => $contentId])->one();
+            if ($content->delete()) {
                 $res["status"] = true;
             }
             // return $this->render('update', ["members" => $members]);
@@ -100,10 +99,10 @@ class DefaultController extends Controller
         $param = ModelMaster::decodeParams($hash);
         $contentId = $param["contentId"];
 
-        $contentDetail = ContentDetail::find() 
-        -> where(["contentId" => $contentId])
-        -> asArray() 
-        -> all();
+        $contentDetail = ContentDetail::find()
+            ->where(["contentId" => $contentId])
+            ->asArray()
+            ->all();
 
         return $this->render('content_detail', ["contentDetail" => $contentDetail, "contentId" => $contentId]);
     }
@@ -112,24 +111,24 @@ class DefaultController extends Controller
     {
         $param = ModelMaster::decodeParams($hash);
         $contentId = $param["contentId"];
-        return $this->render('create_content_detail',[
-            "contentId"=> $contentId
+        return $this->render('create_content_detail', [
+            "contentId" => $contentId
         ]);
     }
-    public function actionSaveCreateContentDetail() 
+    public function actionSaveCreateContentDetail()
     {
-        if(isset($_POST["contentId"])) {
+        if (isset($_POST["contentId"])) {
             $contentDetail = new ContentDetail();
-            $contentDetail -> contentId = $_POST["contentId"];
-            $contentDetail -> title = $_POST["title"];
-            $contentDetail -> detail = $_POST["detail"];
-            $contentDetail -> detail2 = $_POST["detail2"];
-            $contentDetail -> detail3 = $_POST["detail3"];
-            $contentDetail -> detail4 = $_POST["detail4"];
-            $contentDetail -> detail5 = $_POST["detail5"];
-            $contentDetail -> detail6 = $_POST["detail6"];
-            $contentDetail -> detail7 = $_POST["detail7"];
-            $contentDetail -> url = $_POST["url"];
+            $contentDetail->contentId = $_POST["contentId"];
+            $contentDetail->title = $_POST["title"];
+            $contentDetail->detail = $_POST["detail"];
+            $contentDetail->detail2 = $_POST["detail2"];
+            $contentDetail->detail3 = $_POST["detail3"];
+            $contentDetail->detail4 = $_POST["detail4"];
+            $contentDetail->detail5 = $_POST["detail5"];
+            $contentDetail->detail6 = $_POST["detail6"];
+            $contentDetail->detail7 = $_POST["detail7"];
+            $contentDetail->url = $_POST["url"];
 
             $imageObj = UploadedFile::getInstanceByName("image");
             if (isset($imageObj) && !empty($imageObj)) {
@@ -146,8 +145,8 @@ class DefaultController extends Controller
                     $contentDetail->image = 'image/contentdetail/' . $fileName;
                 }
             }
-            if($contentDetail -> save(false)) {
-                return $this -> redirect(Yii::$app->homeUrl . 'content/default/content-detail/'. ModelMaster::encodeParams(["contentId" => $_POST["contentId"]]));
+            if ($contentDetail->save(false)) {
+                return $this->redirect(Yii::$app->homeUrl . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $_POST["contentId"]]));
             }
         }
     }
@@ -156,7 +155,7 @@ class DefaultController extends Controller
     {
         $param = ModelMaster::decodeParams($hash);
         $contentDetailId = $param["contentDetailId"];
-        $contentDetail = ContentDetail::find() -> where(["contentDetailId" => $contentDetailId]) -> one();
+        $contentDetail = ContentDetail::find()->where(["contentDetailId" => $contentDetailId])->one();
         return $this->render('view_content_detail', ["contentDetail" => $contentDetail]);
     }
 
@@ -164,26 +163,27 @@ class DefaultController extends Controller
     {
         $param = ModelMaster::decodeParams($hash);
         $contentDetailId = $param["contentDetailId"];
-        $contentDetail  = ContentDetail::find() -> where(["contentDetailId" => $contentDetailId]) -> one();
+        $contentDetail  = ContentDetail::find()->where(["contentDetailId" => $contentDetailId])->one();
         return $this->render('update_content_detail', ["contentDetail" => $contentDetail]);
     }
 
     public function actionSaveUpdateDetail()
     {
-        if(isset($_POST["contentDetailId"])) {
-            $contentDetail = ContentDetail::find() -> where(["contentDetailId" => $_POST["contentDetailId"]]) -> one();
-            $contentDetail -> title = $_POST["title"];
-            $contentDetail -> detail = $_POST["detail1"];
-            $contentDetail -> detail2 = $_POST["detail2"];
-            $contentDetail -> detail3 = $_POST["detail3"];
-            $contentDetail -> detail4 = $_POST["detail4"];
-            $contentDetail -> detail5 = $_POST["detail5"];
-            $contentDetail -> detail6 = $_POST["detail6"];
-            $contentDetail -> detail7 = $_POST["detail7"];
-            $contentDetail -> url = $_POST["url"];
+        if (isset($_POST["contentDetailId"])) {
+            $contentDetail = ContentDetail::find()->where(["contentDetailId" => $_POST["contentDetailId"]])->one();
+            $contentDetail->title = $_POST["title"];
+            $contentDetail->detail = $_POST["detail1"];
+            $contentDetail->detail2 = $_POST["detail2"];
+            $contentDetail->detail3 = $_POST["detail3"];
+            $contentDetail->detail4 = $_POST["detail4"];
+            $contentDetail->detail5 = $_POST["detail5"];
+            $contentDetail->detail6 = $_POST["detail6"];
+            $contentDetail->detail7 = $_POST["detail7"];
+            $contentDetail->url = $_POST["url"];
 
             $imageObj = UploadedFile::getInstanceByName("image");
             if (isset($imageObj) && !empty($imageObj)) {
+                unlink(Path::getHost() . $contentDetail["image"]);
                 $urlFolder = Path::getHost() . 'image/contentdetail/';
                 if (!file_exists($urlFolder)) {
                     mkdir($urlFolder, 0777, true);
@@ -197,8 +197,8 @@ class DefaultController extends Controller
                     $contentDetail->image = 'image/contentdetail/' . $fileName;
                 }
             }
-            if($contentDetail -> save(false)) {
-                return $this -> redirect(Yii::$app->homeUrl . 'content/default/content-detail/'. ModelMaster::encodeParams(["contentId" => $contentDetail -> contentId]));
+            if ($contentDetail->save(false)) {
+                return $this->redirect(Yii::$app->homeUrl . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $contentDetail->contentId]));
             }
         }
     }
@@ -207,9 +207,9 @@ class DefaultController extends Controller
     {
         $res["status"] = false;
         $contentDetailId = $_POST["contentDetailId"];
-        if($contentDetailId) {
-            $contentDetailId = ContentDetail::find() -> where(["contentDetailId" => $contentDetailId]) -> one();
-            if($contentDetailId -> delete()) {
+        if ($contentDetailId) {
+            $contentDetailId = ContentDetail::find()->where(["contentDetailId" => $contentDetailId])->one();
+            if ($contentDetailId->delete()) {
                 $res["status"] = true;
             }
             // return $this->render('update', ["members" => $members]);
@@ -219,38 +219,38 @@ class DefaultController extends Controller
 
     public function actionContentBranch()
     {
-        $contentbranch = ContentBranch::find() 
-        -> asArray() 
-        -> all();
+        $contentbranch = ContentBranch::find()
+            ->asArray()
+            ->all();
 
         $branchs = Branch::find()->where("status=1")
-        -> orderBy('branchName')
-        -> asArray()
-        -> all();
+            ->orderBy('branchName')
+            ->asArray()
+            ->all();
 
         return $this->render('content_branch', ["contentbranch" => $contentbranch, "branchs" => $branchs]);
     }
 
     public function actionCreateContentBranch()
     {
-        if(isset($_POST["contentname"])) {
+        if (isset($_POST["contentname"])) {
             $contentbranch = new ContentBranch();
-            $contentbranch -> branchId = $_POST["branchid"];
-            $contentbranch -> contentName = $_POST["contentname"];
-            $contentbranch -> title = $_POST["title"];
-            $contentbranch -> detail = $_POST["detail"];
-            $contentbranch -> createDateTime = new Expression('NOW()');
+            $contentbranch->branchId = $_POST["branchid"];
+            $contentbranch->contentName = $_POST["contentname"];
+            $contentbranch->title = $_POST["title"];
+            $contentbranch->detail = $_POST["detail"];
+            $contentbranch->createDateTime = new Expression('NOW()');
 
-            if($contentbranch -> save(false)) {
-                return $this->redirect(Yii::$app->homeUrl.'content/default/content-branch');
+            if ($contentbranch->save(false)) {
+                return $this->redirect(Yii::$app->homeUrl . 'content/default/content-branch');
             }
         }
 
-        $branchs = Branch::find() 
-        -> where("status=1") 
-        -> orderBy('branchName') 
-        -> asArray() 
-        -> all();
+        $branchs = Branch::find()
+            ->where("status=1")
+            ->orderBy('branchName')
+            ->asArray()
+            ->all();
 
         return $this->render('create_content_branch', ["branchs" => $branchs]);
     }
@@ -259,9 +259,9 @@ class DefaultController extends Controller
         $param = ModelMaster::decodeParams($hash);
         $contentBranchId = $param["contentBranchId"];
 
-        $contentbranch = ContentBranch::find() 
-        -> where(["contentBranchId" => $contentBranchId]) 
-        -> one();
+        $contentbranch = ContentBranch::find()
+            ->where(["contentBranchId" => $contentBranchId])
+            ->one();
 
         return $this->render('view_content_branch', ["contentbranch" => $contentbranch]);
     }
@@ -271,14 +271,14 @@ class DefaultController extends Controller
         $param = ModelMaster::decodeParams($hash);
         $contentBranchId = $param["contentBranchId"];
         $contentbranch = ContentBranch::find()
-        -> where(["contentBranchId" => $contentBranchId])
-        -> one();
+            ->where(["contentBranchId" => $contentBranchId])
+            ->one();
 
-        $branchs = Branch::find() 
-        -> where("status=1") 
-        -> orderBy('branchName') 
-        -> asArray() 
-        -> all();
+        $branchs = Branch::find()
+            ->where("status=1")
+            ->orderBy('branchName')
+            ->asArray()
+            ->all();
 
         return $this->render('update_content_branch', ["contentbranch" => $contentbranch, "branchs" => $branchs]);
     }
@@ -289,11 +289,11 @@ class DefaultController extends Controller
             $contentBranchId = Yii::$app->request->post("contentBranchId");
             $contentbranch = ContentBranch::find()->where(["contentBranchId" => $contentBranchId])->one();
             if (isset($contentbranch) && !empty($contentbranch)) {
-                $contentbranch -> branchId = $_POST["branchid"];
-                $contentbranch -> contentName = $_POST["contentname"];
-                $contentbranch -> title = $_POST["title"];
-                $contentbranch -> detail = $_POST["detail"];
-                $contentbranch -> updateDateTime = new Expression('NOW()');
+                $contentbranch->branchId = $_POST["branchid"];
+                $contentbranch->contentName = $_POST["contentname"];
+                $contentbranch->title = $_POST["title"];
+                $contentbranch->detail = $_POST["detail"];
+                $contentbranch->updateDateTime = new Expression('NOW()');
 
                 if ($contentbranch->save(false)) {
                     return $this->redirect(Yii::$app->homeUrl . 'content/default/content-branch');
@@ -305,9 +305,9 @@ class DefaultController extends Controller
     {
         $res["status"] = false;
         $contentBranchId = $_POST["contentBranchId"];
-        if($contentBranchId) {
-            $contentBranchId = ContentBranch::find() -> where(["contentBranchId" => $contentBranchId]) -> one();
-            if($contentBranchId -> delete()) {
+        if ($contentBranchId) {
+            $contentBranchId = ContentBranch::find()->where(["contentBranchId" => $contentBranchId])->one();
+            if ($contentBranchId->delete()) {
                 $res["status"] = true;
             }
             // return $this->render('update', ["members" => $members]);
@@ -318,11 +318,11 @@ class DefaultController extends Controller
     {
         $param = ModelMaster::decodeParams($hash);
         $contentBranchId = $param["contentBranchId"];
-        
-        $contentBranchDetail = ContentBranchDetail::find() 
-        -> where(["contentBranchId" => $contentBranchId])
-        -> asArray() 
-        -> all();
+
+        $contentBranchDetail = ContentBranchDetail::find()
+            ->where(["contentBranchId" => $contentBranchId])
+            ->asArray()
+            ->all();
 
         return $this->render('content_branch_detail', ["contentBranchDetail" => $contentBranchDetail, "contentBranchId" => $contentBranchId]);
     }
@@ -332,23 +332,23 @@ class DefaultController extends Controller
         $param = ModelMaster::decodeParams($hash);
         $contentBranchId = $param["contentBranchId"];
 
-        return $this->render('create_content_branch_detail',["contentBranchId"=> $contentBranchId]);
+        return $this->render('create_content_branch_detail', ["contentBranchId" => $contentBranchId]);
     }
-    public function actionSaveCreateContentBranchDetail() 
+    public function actionSaveCreateContentBranchDetail()
     {
-        if(isset($_POST["contentBranchId"])) {
+        if (isset($_POST["contentBranchId"])) {
             $contentBranchDetail = new ContentBranchDetail();
-            $contentBranchDetail -> contentBranchId = $_POST["contentBranchId"];
-            $contentBranchDetail -> title = $_POST["title"];
-            $contentBranchDetail -> detail = $_POST["detail"];
-            $contentBranchDetail -> detail2 = $_POST["detail2"];
-            $contentBranchDetail -> detail3 = $_POST["detail3"];
-            $contentBranchDetail -> detail4 = $_POST["detail4"];
-            $contentBranchDetail -> detail5 = $_POST["detail5"];
-            $contentBranchDetail -> detail6 = $_POST["detail6"];
-            $contentBranchDetail -> detail7 = $_POST["detail7"];
-            $contentBranchDetail -> url = $_POST["url"];
-            $contentBranchDetail -> createDatetime = new Expression('NOW()');
+            $contentBranchDetail->contentBranchId = $_POST["contentBranchId"];
+            $contentBranchDetail->title = $_POST["title"];
+            $contentBranchDetail->detail = $_POST["detail"];
+            $contentBranchDetail->detail2 = $_POST["detail2"];
+            $contentBranchDetail->detail3 = $_POST["detail3"];
+            $contentBranchDetail->detail4 = $_POST["detail4"];
+            $contentBranchDetail->detail5 = $_POST["detail5"];
+            $contentBranchDetail->detail6 = $_POST["detail6"];
+            $contentBranchDetail->detail7 = $_POST["detail7"];
+            $contentBranchDetail->url = $_POST["url"];
+            $contentBranchDetail->createDatetime = new Expression('NOW()');
 
 
             $imageObj = UploadedFile::getInstanceByName("image");
@@ -366,8 +366,8 @@ class DefaultController extends Controller
                     $contentBranchDetail->image = 'image/contentbranchdetail/' . $fileName;
                 }
             }
-            if($contentBranchDetail -> save(false)) {
-                return $this -> redirect(Yii::$app->homeUrl . 'content/default/content-branch-detail/'. ModelMaster::encodeParams(["contentBranchId" => $_POST["contentBranchId"]]));
+            if ($contentBranchDetail->save(false)) {
+                return $this->redirect(Yii::$app->homeUrl . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $_POST["contentBranchId"]]));
             }
         }
     }
@@ -375,10 +375,10 @@ class DefaultController extends Controller
     {
         $param = ModelMaster::decodeParams($hash);
         $contentBranchDetailId = $param["contentBranchDetailId"];
-        
-        $contentBranchDetail = ContentBranchDetail::find() 
-        -> where(["contentBranchDetailId" => $contentBranchDetailId]) 
-        -> one();
+
+        $contentBranchDetail = ContentBranchDetail::find()
+            ->where(["contentBranchDetailId" => $contentBranchDetailId])
+            ->one();
 
         return $this->render('view_content_branch_detail', ["contentBranchDetail" => $contentBranchDetail]);
     }
@@ -386,30 +386,30 @@ class DefaultController extends Controller
     {
         $param = ModelMaster::decodeParams($hash);
         $contentBranchDetailId = $param["contentBranchDetailId"];
-        
-        $contentBranchDetail  = ContentBranchDetail::find() 
-        -> where(["contentBranchDetailId" => $contentBranchDetailId]) 
-        -> one();
-        
+
+        $contentBranchDetail  = ContentBranchDetail::find()
+            ->where(["contentBranchDetailId" => $contentBranchDetailId])
+            ->one();
+
         return $this->render('update_content_branch_detail', ["contentBranchDetail" => $contentBranchDetail]);
     }
     public function actionSaveUpdateBranchDetail()
     {
-        if(isset($_POST["contentBranchDetailId"])) {
-            $contentBranchDetail = ContentBranchDetail::find() 
-            -> where(["contentBranchDetailId" => $_POST["contentBranchDetailId"]]) 
-            -> one();
+        if (isset($_POST["contentBranchDetailId"])) {
+            $contentBranchDetail = ContentBranchDetail::find()
+                ->where(["contentBranchDetailId" => $_POST["contentBranchDetailId"]])
+                ->one();
 
-            $contentBranchDetail -> title = $_POST["title"];
-            $contentBranchDetail -> detail = $_POST["detail1"];
-            $contentBranchDetail -> detail2 = $_POST["detail2"];
-            $contentBranchDetail -> detail3 = $_POST["detail3"];
-            $contentBranchDetail -> detail4 = $_POST["detail4"];
-            $contentBranchDetail -> detail5 = $_POST["detail5"];
-            $contentBranchDetail -> detail6 = $_POST["detail6"];
-            $contentBranchDetail -> detail7 = $_POST["detail7"];
-            $contentBranchDetail -> url = $_POST["url"];
-            $contentBranchDetail -> createDatetime = new Expression('NOW()');
+            $contentBranchDetail->title = $_POST["title"];
+            $contentBranchDetail->detail = $_POST["detail1"];
+            $contentBranchDetail->detail2 = $_POST["detail2"];
+            $contentBranchDetail->detail3 = $_POST["detail3"];
+            $contentBranchDetail->detail4 = $_POST["detail4"];
+            $contentBranchDetail->detail5 = $_POST["detail5"];
+            $contentBranchDetail->detail6 = $_POST["detail6"];
+            $contentBranchDetail->detail7 = $_POST["detail7"];
+            $contentBranchDetail->url = $_POST["url"];
+            $contentBranchDetail->createDatetime = new Expression('NOW()');
 
             $imageObj = UploadedFile::getInstanceByName("image");
             if (isset($imageObj) && !empty($imageObj)) {
@@ -426,8 +426,8 @@ class DefaultController extends Controller
                     $contentBranchDetail->image = 'image/contentdetail/' . $fileName;
                 }
             }
-            if($contentBranchDetail -> save(false)) {
-                return $this -> redirect(Yii::$app->homeUrl . 'content/default/content-branch-detail/'. ModelMaster::encodeParams(["contentBranchId" => $contentBranchDetail -> contentBranchId]));
+            if ($contentBranchDetail->save(false)) {
+                return $this->redirect(Yii::$app->homeUrl . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $contentBranchDetail->contentBranchId]));
             }
         }
     }
@@ -435,9 +435,9 @@ class DefaultController extends Controller
     {
         $res["status"] = false;
         $contentBranchDetailId = $_POST["contentBranchDetailId"];
-        if($contentBranchDetailId) {
-            $contentBranchDetailId = ContentBranchDetail::find() -> where(["contentBranchDetailId" => $contentBranchDetailId]) -> one();
-            if($contentBranchDetailId -> delete()) {
+        if ($contentBranchDetailId) {
+            $contentBranchDetailId = ContentBranchDetail::find()->where(["contentBranchDetailId" => $contentBranchDetailId])->one();
+            if ($contentBranchDetailId->delete()) {
                 $res["status"] = true;
             }
             // return $this->render('update', ["members" => $members]);
@@ -445,28 +445,29 @@ class DefaultController extends Controller
         return json_encode($res);
     }
     public function actionSearchContentBranch()
-    {  
-        return $this->redirect('content-branch-result/'.ModelMaster::encodeParams([
-        "branchId" => $_POST["branchId"],
+    {
+        return $this->redirect('content-branch-result/' . ModelMaster::encodeParams([
+            "branchId" => $_POST["branchId"],
         ]));
     }
 
-    public function actionContentBranchResult($hash){
+    public function actionContentBranchResult($hash)
+    {
 
         $param = ModelMaster::decodeParams($hash);
         $contentbranch = ContentBranch::find()
-        -> where(['branchId' => $param["branchId"]])
-        -> all();
+            ->where(['branchId' => $param["branchId"]])
+            ->all();
 
-        $branchs = Branch::find() -> where("status=1") 
-        -> orderBy('branchName') 
-        -> asArray() 
-        -> all();
+        $branchs = Branch::find()->where("status=1")
+            ->orderBy('branchName')
+            ->asArray()
+            ->all();
 
-        return $this -> render('content_branch',[
-        "contentbranch" => $contentbranch,
-        "branchs" => $branchs,
-        "branchId" => $param["branchId"],
+        return $this->render('content_branch', [
+            "contentbranch" => $contentbranch,
+            "branchs" => $branchs,
+            "branchId" => $param["branchId"],
         ]);
     }
 }

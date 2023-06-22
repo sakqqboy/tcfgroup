@@ -5,6 +5,7 @@ $this->title = 'Update Member';
 
 
 use backend\models\tokyoconsulting\Branch;
+use backend\models\tokyoconsulting\MemberHasType;
 use backend\models\tokyoconsulting\Position;
 use backend\models\tokyoconsulting\Section;
 use backend\models\tokyoconsulting\Team;
@@ -192,6 +193,26 @@ $form = ActiveForm::begin([
                                 }
                                 ?>
                             </select>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="font-body label-input h4">
+                                    TYPE
+                                </div>
+                                <?php
+                                if(isset($memberType) && count($memberType)>0){
+                                    foreach($memberType as $type):?>
+                                <div class="col-lg-4">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="memberType[]" value="<?=$type['memberTypeId']?>" <?=MemberHasType::IsHasType($type['memberTypeId'],$member->memberId)==1?"checked":''?>>
+                                    <label class="form-check-label" for="inlineCheckbox1"><?=$type['memberTypeName']?></label>
+                                </div>
+                                <?php
+                                    endforeach;
+                                ?>
+                            <?php
+                                }
+                            ?>
+                            </div>
                         </div>
                         <input type="hidden" name="memberId" value="<?= $member->memberId ?>">
                         <div class="col-lg-12 text-end pb-4">

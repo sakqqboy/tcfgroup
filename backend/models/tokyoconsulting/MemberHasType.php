@@ -33,16 +33,16 @@ class MemberHasType extends \backend\models\tokyoconsulting\master\MemberHasType
         return array_merge(parent::attributeLabels(), []);
     }
     public static function typeName($memberId){
-        $typeName='';
+        $typeName = '';
 
         $memberType=MemberHasType::find()
         -> select('mt.memberTypeName')
-        -> JOIN("LEFT JOIN","member_type mt","member_has_type.memberTypeId=mt.memberTypeId")
+        -> JOIN("LEFT JOIN", "member_type mt", "member_has_type.memberTypeId = mt.memberTypeId")
         -> where(["member_has_type.memberId"=>$memberId])
         -> asArray()
         -> all();
 
-        if(isset($memberType) && count($memberType)>0){
+        if(isset($memberType) && count($memberType) > 0){
             foreach($memberType as $mt):
                 $typeName.=$mt["memberTypeName"].'<br>';
             endforeach;
@@ -69,4 +69,17 @@ class MemberHasType extends \backend\models\tokyoconsulting\master\MemberHasType
         // $memberType=exec($sql);
        // throw new exc(print_r($memberType,true));
     }
+    public static function IsHasType($memberTypeId,$memberId){
+        $checked = 0;
+
+        $memberType = MemberHasType::find()
+        -> where(["memberTypeId" => $memberTypeId, "memberId" => $memberId])
+        -> asArray()
+        -> all();
+
+        if(isset($memberType) && count($memberType) > 0) {
+            $checked = 1;
+        }
+        return $checked;
+    } 
 }

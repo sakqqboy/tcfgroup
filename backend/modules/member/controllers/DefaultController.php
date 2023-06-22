@@ -170,8 +170,14 @@ MemberHasType::deleteAll(["memberId"=>9]);
             ->orderBy('teamName')
             ->asArray()
             ->all();
+        
+        $memberType = MemberType::find() 
+            ->select('memberTypeId,memberTypeName')
+            -> where("status=1")
+            -> asArray()
+            -> all();
 
-        return $this->render('update_member', ["member" => $member, "branch" => $branch, "section" => $section, "position" => $position, "teampositions" => $teampositions, "team" => $team]);
+        return $this->render('update_member', ["member" => $member, "branch" => $branch, "section" => $section, "position" => $position, "teampositions" => $teampositions, "team" => $team, "memberType" => $memberType]);
     }
 
     public function actionSaveMember()
@@ -210,6 +216,18 @@ MemberHasType::deleteAll(["memberId"=>9]);
                 }
 
                 if ($member->save(false)) {
+                    MemberHasType::deleteAll(["memberId"=>$memberId]);
+                    if(isset($_POST["memberType"]) && count($_POST["memberType"])>0){
+                        foreach($_POST["memberType"] as $memberTypeId):
+                            $memberHasType=new MemberHasType();
+                            $memberHasType->memberId= $memberId;
+                            $memberHasType->memberTypeId= $memberTypeId;
+                            $memberHasType->status=1;
+                            $memberHasType->createDatetime=new Expression('NOW()');
+                            $memberHasType->updateDatetime=new Expression('NOW()');
+                            $memberHasType->save(false);
+                        endforeach;
+                    }
                     return $this->redirect(Yii::$app->homeUrl . 'member/default/member');
                 }
             }

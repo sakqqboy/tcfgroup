@@ -146,7 +146,7 @@ $form = ActiveForm::begin([
                     ?>
                 </select>
             </div>
-            <div class="col-lg-12 border">
+            <div class="col-lg-12">
                 <div class="row">
                     <div class="font-body label-input h4">
                         TYPE

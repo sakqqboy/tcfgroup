@@ -3,6 +3,7 @@
 /** @var yii\web\View $this */
 
 use Codeception\Lib\Connector\Yii2;
+use common\helpers\Path;
 
 $this->title = 'newsletter';
 ?>
@@ -14,7 +15,7 @@ $this->title = 'newsletter';
         foreach ($newsletter as $new) :
     ?>
             <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl . $new['image']  ?>" class="img-1">
+                <img src="<?= Path::backendUrl() . $new['image']  ?>" class="img-1">
             </div>
             <div class="col-12 sletter-home">
                 <div class="col-12 pl-40 sletter-text-Effective">
@@ -24,7 +25,8 @@ $this->title = 'newsletter';
                     <?= $new['detail'] ?>
                 </div>
                 <div class="col-6 pl-40  sletter-text-corporate">
-                    <?= $new['detail2'] ?><a href="#read more" class="no-underline-new"><span class="read-more1"> <?= $new['detail7'] ?> </span></a>
+                    <?= $new['detail2'] ?><a href="#read more" class="no-underline-new"><span class="read-more1">
+                            <?= $new['detail7'] ?> </span></a>
                     <p class="moretext"> With net zero carbon, </p>
                 </div>
                 <div class="col-12 pr12 btn-newsletter-signup">
@@ -32,7 +34,8 @@ $this->title = 'newsletter';
                         <div class="col-5 mt-30">
                             <button type="button" class="btn btn-primary button-newsletter-explore"><i class="fa fa-cloud-download" aria-hidden="true"></i> <?= $new['detail3'] ?></button>
                             <button type="button" class="btn btn-primary button-newsletter-right"> <?= $new['detail4'] ?> <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-                            <p class="title-our-newsletter"> <a href="#sing-up"><span class="sign-up"> <?= $new['detail5'] ?></span></a> <?= $new['detail6'] ?></p>
+                            <p class="title-our-newsletter"> <a href="#sing-up"><span class="sign-up">
+                                        <?= $new['detail5'] ?></span></a> <?= $new['detail6'] ?></p>
                         </div>
                         <div class="col-10 sletter-icon">
                             <a href="" class="no-underline"> <i class="fa fa-chevron-circle-left" aria-hidden="true"></i> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> </a>
@@ -54,7 +57,7 @@ $this->title = 'newsletter';
         foreach ($services as $r) :
     ?>
             <div class="col-12 title-Trending">
-                <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $r['detail2'] ?>
+                <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $r['detail2'] ?>
             </div>
     <?php
         endforeach;
@@ -102,7 +105,7 @@ $this->title = 'newsletter';
     ?>
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-12">
-                    <img src="<?= Yii::$app->homeUrl . $port['image'] ?>" style="width: 100%;">
+                    <img src="<?= Path::backendUrl() . $port['image'] ?>" style="width: 100%;">
                 </div>
                 <div class="col-lg-6 col-md-6 col-12">
                     <p class="title-import mt-10"><?= $port['title'] ?></p> <br>
@@ -143,10 +146,11 @@ $this->title = 'newsletter';
                 foreach ($olderposts as $ol) :
             ?>
                     <div class="col-lg-6 col-md-6 col-12">
-                        <img src="<?= Yii::$app->homeUrl . $ol['image'] ?>" class="img-hunter">
+                        <img src="<?= Path::backendUrl() . $ol['image'] ?>" class="img-hunter">
                         <p class="title-Human"><?= $ol['detail'] ?></p>
                         <p class="title-Labor"><?= $ol['detail2'] ?></p>
-                        <p class="title-import1"><?= $ol['detail3'] ?><a href="" class="no-underline"><span class="read-more"> <?= $ol['detail4'] ?></span></p></a>
+                        <p class="title-import1"><?= $ol['detail3'] ?><a href="" class="no-underline"><span class="read-more">
+                                    <?= $ol['detail4'] ?></span></p></a>
 
                     </div>
             <?php
@@ -185,7 +189,7 @@ $this->title = 'newsletter';
                                 if ($i < 3) {
 
                         ?>
-                                    <p><img src="<?= Yii::$app->homeUrl . $set['image'] ?>" class="img-daoudi"></p> <br>
+                                    <p><img src="<?= Path::backendUrl() . $set['image'] ?>" class="img-daoudi"></p> <br>
                         <?php
                                 }
                                 $i++;
@@ -210,7 +214,7 @@ $this->title = 'newsletter';
         ?>
                     <div class="col-3">
                         <div class="col-12">
-                            <a href="<?= Yii::$app->homeUrl . $tax['url'] ?>"> <img src="<?= Yii::$app->homeUrl . $tax['image'] ?>" class="img-2"></a>
+                            <a href="<?= Yii::$app->homeUrl . $tax['url'] ?>"> <img src="<?= Path::backendUrl() . $tax['image'] ?>" class="img-2"></a>
                         </div>
                         <p class="title-Human4"> <?= $tax['title'] ?></p>
                         <p class="title-1"> <?= $tax['detail'] ?></p>
@@ -237,7 +241,7 @@ $this->title = 'newsletter';
         ?>
                     <div class="col-3">
                         <div class="col-12">
-                            <a href="<?= Yii::$app->homeUrl . $ment['url'] ?>"> <img src="<?= Yii::$app->homeUrl . $ment['image'] ?>" class="img-2"></a>
+                            <a href="<?= Yii::$app->homeUrl . $ment['url'] ?>"> <img src="<?= Path::backendUrl() . $ment['image'] ?>" class="img-2"></a>
                         </div>
                         <p class="title-Human4"> <?= $ment['title'] ?></p>
                         <p class="title-1"> <?= $ment['detail'] ?></p>
@@ -295,7 +299,7 @@ if (isset($footerbangladresh) && count($footerbangladresh) > 0) {
         <div class="col-12 pr12">
             <div class="row">
                 <div class="offset-lg-6 col-lg-6 col-12 text-center">
-                    <img src="<?= Yii::$app->homeUrl . $footerbangla['image'] ?>" class="img-book">
+                    <img src="<?= Path::backendUrl() . $footerbangla['image'] ?>" class="img-book">
                 </div>
             </div>
         </div>

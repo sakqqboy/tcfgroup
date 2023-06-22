@@ -3,6 +3,7 @@
 /** @var yii\web\View $this */
 
 use Codeception\Lib\Connector\Yii2;
+use common\helpers\Path;
 
 $this->title = 'Career';
 ?>
@@ -17,7 +18,7 @@ $this->title = 'Career';
         foreach ($career as $jobtcf) :
     ?>
             <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl . $jobtcf['image'] ?>" class="image-job-postd">
+                <img src="<?= Path::backendUrl() . $jobtcf['image'] ?>" class="image-job-postd">
             </div>
             <div class="col-10 text-shape">
                 <?= $jobtcf['title'] ?> <br>
@@ -41,11 +42,11 @@ $this->title = 'Career';
         foreach ($future as $the) :
     ?>
             <div class="col-12  text-future">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $the['title'] ?>
+                <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $the['title'] ?>
             </div>
             <div class="row">
                 <div class="col-7">
-                    <img src="<?= Yii::$app->homeUrl . $the['image'] ?>" class="image-code">
+                    <img src="<?= Path::backendUrl() . $the['image'] ?>" class="image-code">
                 </div>
                 <div class="col-5">
                     <div class="card card-title1">
@@ -110,7 +111,7 @@ $this->title = 'Career';
                     </div>
                 </div>
                 <div class="col-7">
-                    <img src="<?= Yii::$app->homeUrl . $more['image'] ?>" class="image-philosophy">
+                    <img src="<?= Path::backendUrl() . $more['image'] ?>" class="image-philosophy">
                 </div>
             </div>
     <?php
@@ -129,7 +130,7 @@ $this->title = 'Career';
 
     ?>
             <div class="col-12 title-explore">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $ex['title'] ?>
+                <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $ex['title'] ?>
             </div>
 
             <div class="col-12 pr12">
@@ -140,7 +141,7 @@ $this->title = 'Career';
                         <button type="button" class="btn btn-primary button-apply"><?= $ex['detail3'] ?></button>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 text-center">
-                        <img src="<?= Yii::$app->homeUrl . $ex['image'] ?>" class="image-picture-1">
+                        <img src="<?= Path::backendUrl() . $ex['image'] ?>" class="image-picture-1">
                     </div>
                 </div>
             </div>
@@ -159,7 +160,7 @@ $this->title = 'Career';
             <div class="col-12 pr12">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-12">
-                        <img src="<?= Yii::$app->homeUrl . $ap['image'] ?>" class="image-picture-2">
+                        <img src="<?= Path::backendUrl() . $ap['image'] ?>" class="image-picture-2">
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 title-txt2">
                         <h5><?= $ap['title'] ?></h5>
@@ -188,7 +189,7 @@ $this->title = 'Career';
                         <button type="button" class="btn btn-primary button-apply"><?= $pr['detail2'] ?></button>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 text-center">
-                        <img src="<?= Yii::$app->homeUrl . $pr['image'] ?>" class="image-picture-3">
+                        <img src="<?= Path::backendUrl() . $pr['image'] ?>" class="image-picture-3">
                     </div>
                 </div>
             </div>
@@ -211,7 +212,7 @@ $this->title = 'Career';
         ?>
                     <div class="col-lg-6 col-md-6 col-12">
                         <div class="col-12 name-explore">
-                            <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="img2 mr-1"> <?= $cu['title'] ?>
+                            <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="img2 mr-1"> <?= $cu['title'] ?>
                         </div>
                         <div class="col-12  mt-10 box-name">
                             <p><?= $cu['detail'] ?></p>
@@ -264,7 +265,7 @@ $this->title = 'Career';
         foreach ($show as $sh) :
     ?>
             <div class="col-12 Global-Business">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $sh['title'] ?>
+                <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $sh['title'] ?>
             </div>
             <div class="col-12 text-TCG">
                 <?= $sh['detail'] ?>
@@ -288,7 +289,8 @@ $this->title = 'Career';
 
                         ?>
                                     <p> <a href="<?= Yii::$app->homeUrl . $di['url'] ?>" class="no-underline1">
-                                            <img src="<?= Yii::$app->homeUrl . $di['image'] ?>" class="img-country"> <?= $di['title'] ?></a>
+                                            <img src="<?= Path::backendUrl() . $di['image'] ?>" class="img-country">
+                                            <?= $di['title'] ?></a>
                                     </p>
 
 
@@ -311,7 +313,7 @@ $this->title = 'Career';
                         ?>
 
                                     <p><a href="<?= Yii::$app->homeUrl . $in['url'] ?>" class="no-underline1">
-                                            <img src="<?= Yii::$app->homeUrl . $in['image'] ?>" class="img-country"><?= $in['title'] ?></a>
+                                            <img src="<?= Path::backendUrl() . $in['image'] ?>" class="img-country"><?= $in['title'] ?></a>
                                     </p>
 
                         <?php
@@ -329,7 +331,7 @@ $this->title = 'Career';
                     $i = 0;
                     foreach ($show as $sh) :
                 ?>
-                        <img src="<?= Yii::$app->homeUrl . $sh['image'] ?>" class="image-gol1">
+                        <img src="<?= Path::backendUrl() . $sh['image'] ?>" class="image-gol1">
                 <?php
                         $i++;
                     endforeach;
@@ -349,7 +351,7 @@ $this->title = 'Career';
         foreach ($show as $sh) :
     ?>
             <div class="col-12 mt-50 title-open">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $sh['detail2'] ?>
+                <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $sh['detail2'] ?>
             </div>
 
             <div class="col-12 pr12 mt-50 form-input">
@@ -425,7 +427,8 @@ $this->title = 'Career';
                                     <span class="badge bg-info"> <?= $cd['title'] ?></span> <span class="black"><?= $cd['detail'] ?></span>
                                     <p class="black-1 mt-4"><?= $cd['detail2'] ?></p>
                                     <p><?= $cd['detail3'] ?></p>
-                                    <p><img src="<?= Yii::$app->homeUrl ?>image/check-in.png" class="image-check-in"> <?= $cd['detail4'] ?></p>
+                                    <p><img src="<?= Path::backendUrl() ?>image/check-in.png" class="image-check-in">
+                                        <?= $cd['detail4'] ?></p>
                                     <p class=""><?= $cd['detail5'] ?></p>
                                     <div class="row">
                                         <div class="col-6 button-title-see">

@@ -1,3 +1,7 @@
+<?php
+
+use common\helpers\Path;
+?>
 <div class="col-12 footer1-country">
     <div class="col-12 pr12">
         <div class="row">
@@ -104,8 +108,9 @@
             </div>
         </div>
         <div class="col-lg-4 col-md-6 col-12 text-start box-logo-footer" style="margin-top: -120px;" id="button-update">
-            <img src="<?= Yii::$app->homeUrl ?>img/tcf-bangladesh.png" class="logo-footer">
-            <p class="mt-50 title-contact-footer1">10th Floor Safura Tower 20, Kemal Ataturk Avenue Banani Dhaka, Dhaka, Bangladesh</p>
+            <img src="<?= Path::backendUrl() ?>image/img/tcf-bangladesh.png" class="logo-footer">
+            <p class="mt-50 title-contact-footer1">10th Floor Safura Tower 20, Kemal Ataturk Avenue Banani Dhaka, Dhaka,
+                Bangladesh</p>
             <p class="title-business-footer1">Business Hours</p>
 
             <button class="btn btn-primary calendar-button1" type="button">SUN</button> <button class="btn btn-primary calendar-button1" type="button">MON</button>
@@ -151,7 +156,8 @@
         </div>
         <div class="col-lg-8 col-10">
             <div class="text-footer">
-                @ Copyright 2023 Tokyo Consulting Firm Limited,<a href="#All Rights Reserved" class="links">All Rights Reserved</a> ,10th Floor Safura Tower 20, Kemal Ataturk Avenue Banani Dhaka
+                @ Copyright 2023 Tokyo Consulting Firm Limited,<a href="#All Rights Reserved" class="links">All Rights
+                    Reserved</a> ,10th Floor Safura Tower 20, Kemal Ataturk Avenue Banani Dhaka
             </div>
             <div class="footer-links mt-10">
                 <a href="Legal" target="_blank">Legal</a> &nbsp;

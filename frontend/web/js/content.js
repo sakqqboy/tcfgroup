@@ -31,20 +31,6 @@ function showSiteindex1(i) {
     $("#content2-siteindex-" + i).show();
 }
 
-function showAsset2(i) {
-    $("#content2-asset-" + i).css("display", "none");
-    $("#content2-asset2-" + i).show();
-}
-
-function showAsset1(i) {
-    $("#content2-asset2-" + i).css("display", "none");
-    $("#content2-asset-" + i).show();
-}
-
-function showAsset1(i) {
-    $("#content2-asset2-" + i).css("display", "none");
-    $("#content2-asset-" + i).show();
-}
 $('.no-underline-new').click(function () {
     $('.moretext').slideToggle();
     if ($('.no-underline-new').text() == "READ MORE") {

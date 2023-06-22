@@ -3,6 +3,7 @@
 /** @var yii\web\View $this */
 
 use Codeception\Lib\Connector\Yii2;
+use common\helpers\Path;
 
 $this->title = 'People';
 ?>
@@ -15,7 +16,7 @@ $this->title = 'People';
         foreach ($people as $at) :
 
     ?>
-            <img src="<?= Yii::$app->homeUrl . $at['image'] ?>" class="image-working">
+            <img src="<?= Path::backendUrl() . $at['image'] ?>" class="image-working">
             <div class="col-12 title-At">
                 <?= $at['title'] ?>
                 <?= $at['detail'] ?>
@@ -42,8 +43,8 @@ $this->title = 'People';
             foreach ($kuno as $uno) :
         ?>
                 <div class="col-lg-6 col-md-6 col-12 OUR-PEOPLE">
-                    <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> <?= $uno['title'] ?>
-                    <img src="<?= Yii::$app->homeUrl . $uno['image'] ?>" class="image-no">
+                    <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image-Rectangle1"> <?= $uno['title'] ?>
+                    <img src="<?= Path::backendUrl() . $uno['image'] ?>" class="image-no">
                     <p class="text-name-kuno"><?= $uno['detail'] ?></p>
                 </div>
         <?php
@@ -58,7 +59,7 @@ $this->title = 'People';
             foreach ($textmain as $our) :
         ?>
                 <div class="col-lg-6 col-md-6 col-12">
-                    <img src="<?= Yii::$app->homeUrl . $our['image'] ?>" class="image-icon-name">
+                    <img src="<?= Path::backendUrl() . $our['image'] ?>" class="image-icon-name">
                     <div class="col-12 title-empowering">
                         <p> <?= $our['title'] ?> </p>
                         <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?= $our['detail'] ?></p>
@@ -80,7 +81,7 @@ $this->title = 'People';
         $i = 0;
         foreach ($global as $meetting) :
     ?>
-            <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> <?= $meetting['title'] ?>
+            <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image-Rectangle1"> <?= $meetting['title'] ?>
     <?php
             $i++;
         endforeach;
@@ -129,7 +130,7 @@ $this->title = 'People';
         $i = 0;
         foreach ($global as $meetting) :
     ?>
-            <img src="<?= Yii::$app->homeUrl . $meetting['image'] ?>" class="image-ceo">
+            <img src="<?= Path::backendUrl() . $meetting['image'] ?>" class="image-ceo">
     <?php
             $i++;
         endforeach;
@@ -144,7 +145,7 @@ $this->title = 'People';
         $i = 0;
         foreach ($global as $meetting) :
     ?>
-            <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> <?= $meetting['detail2'] ?>
+            <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image-Rectangle1"> <?= $meetting['detail2'] ?>
     <?php
             $i++;
         endforeach;
@@ -161,7 +162,7 @@ $this->title = 'People';
             foreach ($personnel as $person) :
         ?>
                 <div class="col-7">
-                    <img src="<?= Yii::$app->homeUrl . $person['image'] ?>" class="image-code">
+                    <img src="<?= Path::backendUrl() . $person['image'] ?>" class="image-code">
                 </div>
                 <div class="col-5">
                     <div class="card card-title1">
@@ -219,7 +220,7 @@ $this->title = 'People';
                     </div>
                 </div>
                 <div class="col-7">
-                    <img src="<?= Yii::$app->homeUrl . $work['image'] ?>" class="image-philosophy">
+                    <img src="<?= Path::backendUrl() . $work['image'] ?>" class="image-philosophy">
                 </div>
         <?php
 

@@ -1,7 +1,11 @@
+<?php
+
+use common\helpers\Path;
+?>
 <div class="col-12 pr12 mt-50">
 	<div class="row">
 		<div class="col-lg-3 col-md-6 col-12 text-start box-logo-footer">
-			<img src="<?= Yii::$app->homeUrl ?>image/tcg-group.png" class="logo-footer">
+			<img src="<?= Path::backendUrl() ?>image/tcg-group.png" class="logo-footer">
 		</div>
 		<div class="col-lg-2 col-md-6 col-6 footer-box">
 			<div class="row">
@@ -104,7 +108,8 @@
 		</div>
 		<div class="col-lg-10 col-10">
 			<div class="text-footer">
-				@ Copyright 2022 Tokyo Consulting Group, <a href="#All Rights Reserved" class="links">All Rights Reserved</a> , 10, Ataturk Tower, Flat #11/A (Lift, 22 Kemal Ataturk Ave, Dhaka 1213
+				@ Copyright 2022 Tokyo Consulting Group, <a href="#All Rights Reserved" class="links">All Rights
+					Reserved</a> , 10, Ataturk Tower, Flat #11/A (Lift, 22 Kemal Ataturk Ave, Dhaka 1213
 			</div>
 			<div class="footer-links mt-10">
 				<a href="Legal" target="_blank">Legal</a> &nbsp;

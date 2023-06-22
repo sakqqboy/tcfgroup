@@ -3,6 +3,7 @@
 /** @var yii\web\View $this */
 
 use Codeception\Lib\Connector\Yii2;
+use common\helpers\Path;
 use yii\bootstrap5\ActiveForm;
 
 $this->title = 'Log in';
@@ -63,12 +64,14 @@ $form = ActiveForm::begin([
                     <p> <button type="submit" class="btn btn-primary bt-fr-up"> Sign in</button> </p>
                 </div>
                 <div class="col-12">
-                    <p> <button type="button" class="btn btn-outline-primary bt-fr-up"> <img src="<?= Yii::$app->homeUrl ?>img/google.png" class="img-signgoogle"> Sign in with Google</button> </p>
+                    <p> <button type="button" class="btn btn-outline-primary bt-fr-up"> <img src="<?= Path::backendUrl() ?>image/img/google.png" class="img-signgoogle"> Sign in with
+                            Google</button> </p>
                 </div>
                 <div class="col-12">
                     <p> <button type="button" class="btn btn-outline-primary bt-fr-up"> <i class="fa fa-linkedin fr-ldin" aria-hidden="true"></i> Sign in with Google</button></p>
                 </div>
-                <p> <span class="dont-sign"> Don't have an account? </span> <a href="<?= Yii::$app->homeUrl ?>site-country/formsignup" class="sig1"> <span> Sign up</span></p></a>
+                <p> <span class="dont-sign"> Don't have an account? </span> <a href="<?= Yii::$app->homeUrl ?>site-country/formsignup" class="sig1"> <span> Sign up</span></p>
+                </a>
             </div>
             <div class="col-12 fr-common">
                 <i class="fa fa-copyright" aria-hidden="true"></i> Tokyo Consulting Group 2023
@@ -76,7 +79,7 @@ $form = ActiveForm::begin([
         </div>
         <div class="col-lg-5 col-md-6 col-12">
             <div class="col-12 ground-color">
-                <img src="<?= Yii::$app->homeUrl ?>img/Roof.png" class="ima-roof" style="margin-top: 420px;">
+                <img src="<?= Path::backendUrl() ?>image/img/Roof.png" class="ima-roof" style="margin-top: 420px;">
             </div>
         </div>
     </div>
@@ -86,13 +89,14 @@ $form = ActiveForm::begin([
 
 <div class="col-12">
     <div class="col-12 connect-experts mt-40">
-        <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png" class="image mr-1"> Connect Experts
+        <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png" class="image mr-1"> Connect Experts
     </div>
     <div class="col-12 Get-free mt-30">
         Get Free Appointment on your Business Issuefa-spin
     </div>
     <div class="col-12 If-you mt-10">
-        If you would like to discuss a project or have a question, please fill in the form and we ll get right back to you.
+        If you would like to discuss a project or have a question, please fill in the form and we ll get right back to
+        you.
     </div>
     <div class="col-12 mt-30 pr12">
         <div class="row">
@@ -102,7 +106,8 @@ $form = ActiveForm::begin([
                         <p class="If-you2">Do you prefer to communicate as an entity or an individual?</p>
                     </div>
                     <div class="col-5">
-                        <label for="formGroupExampleInput" class="form-label label-thin"> &nbsp;&nbsp;&nbsp;Select Country</label>
+                        <label for="formGroupExampleInput" class="form-label label-thin"> &nbsp;&nbsp;&nbsp;Select
+                            Country</label>
                         <select class="form-select mt-10" aria-label="Default select example">
                             <option selected>Bangladesh</option>
                             <option value="1">Brazil</option>

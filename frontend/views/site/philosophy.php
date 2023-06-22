@@ -3,6 +3,7 @@
 /** @var yii\web\View $this */
 
 use Codeception\Lib\Connector\Yii2;
+use common\helpers\Path;
 
 $this->title = 'Philosophy';
 ?>
@@ -16,15 +17,15 @@ $this->title = 'Philosophy';
         foreach ($pagemain as $l) :
 
     ?>
-            <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl . $l['image'] ?>" class="image-philosophy">
-            </div>
-            <div class="offset-1 col-10 text-home">
-                <?= $l['title'] ?>
-            </div>
-            <div class="offset-1 col-10  text-box-one">
-                <?= $l['detail'] ?>
-            </div>
+    <div class="col-12">
+        <img src="<?= Path::backendUrl() . $l['image'] ?>" class="image-philosophy">
+    </div>
+    <div class="offset-1 col-10 text-home">
+        <?= $l['title'] ?>
+    </div>
+    <div class="offset-1 col-10  text-box-one">
+        <?= $l['detail'] ?>
+    </div>
     <?php
             $i++;
         endforeach;
@@ -41,7 +42,7 @@ $this->title = 'Philosophy';
             foreach ($pagemain as $l) :
 
         ?>
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $l['detail2'] ?>
+        <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $l['detail2'] ?>
         <?php
                 $i++;
             endforeach;
@@ -58,9 +59,9 @@ $this->title = 'Philosophy';
                     if ($i < 4) {
 
             ?>
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <img src="<?= Yii::$app->homeUrl . $m['image'] ?>" style="width: 90px;"> <?= $m['title'] ?>
-                        </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <img src="<?= Path::backendUrl() . $m['image'] ?>" style="width: 90px;"> <?= $m['title'] ?>
+            </div>
             <?php
                     }
                     $i++;
@@ -80,11 +81,12 @@ $this->title = 'Philosophy';
             $i = 0;
             foreach ($work as $we) :
         ?>
-                <div class="col-lg-6 col-md-6 col-12 mt-50">
-                    <p class="Why-We-Work"> <?= $we['title'] ?> <img src="<?= Yii::$app->homeUrl . $we['image'] ?>" style="width: 60px;"></p>
-                    <p class="everyone"><?= $we['detail'] ?> </p>
-                    <p class="YASUNARI"><?= $we['detail2'] ?></p>
-                </div>
+        <div class="col-lg-6 col-md-6 col-12 mt-50">
+            <p class="Why-We-Work"> <?= $we['title'] ?> <img src="<?= Path::backendUrl() . $we['image'] ?>"
+                    style="width: 60px;"></p>
+            <p class="everyone"><?= $we['detail'] ?> </p>
+            <p class="YASUNARI"><?= $we['detail2'] ?></p>
+        </div>
         <?php
                 $i++;
             endforeach;
@@ -96,14 +98,15 @@ $this->title = 'Philosophy';
             $i = 0;
             foreach ($playshot1 as $shot) :
         ?>
-                <div class="col-lg-6 col-md-6  col-12 mt-50 text-center">
-                    <div class="col-12">
-                        <img src="<?= Yii::$app->homeUrl . $shot['image'] ?>" class="image-screenshot1">
-                    </div>
-                    <div class="col-12">
-                        <span class="badge bg-primary image-BG1"> <a href="#" class="no-underline4"> <i class="fa fa-play-circle link-list" aria-hidden="true"></i> <?= $shot['title'] ?></a></span>
-                    </div>
-                </div>
+        <div class="col-lg-6 col-md-6  col-12 mt-50 text-center">
+            <div class="col-12">
+                <img src="<?= Path::backendUrl() . $shot['image'] ?>" class="image-screenshot1">
+            </div>
+            <div class="col-12">
+                <span class="badge bg-primary image-BG1"> <a href="#" class="no-underline4"> <i
+                            class="fa fa-play-circle link-list" aria-hidden="true"></i> <?= $shot['title'] ?></a></span>
+            </div>
+        </div>
         <?php
                 $i++;
             endforeach;
@@ -121,14 +124,15 @@ $this->title = 'Philosophy';
             $i = 0;
             foreach ($playshot2 as $hs) :
         ?>
-                <div class="col-lg-6 col-md-6 col-12 mt-50 text-center">
-                    <div class="col-12">
-                        <img src="<?= Yii::$app->homeUrl . $hs['image'] ?>" class="image-screenshot2">
-                    </div>
-                    <div class="col-12">
-                        <span class="badge bg-primary image-BG2"> <a href="#" class="no-underline4"> <i class="fa fa-play-circle link-list" aria-hidden="true"></i> <?= $hs['title'] ?></a></span>
-                    </div>
-                </div>
+        <div class="col-lg-6 col-md-6 col-12 mt-50 text-center">
+            <div class="col-12">
+                <img src="<?= Path::backendUrl() . $hs['image'] ?>" class="image-screenshot2">
+            </div>
+            <div class="col-12">
+                <span class="badge bg-primary image-BG2"> <a href="#" class="no-underline4"> <i
+                            class="fa fa-play-circle link-list" aria-hidden="true"></i> <?= $hs['title'] ?></a></span>
+            </div>
+        </div>
         <?php
                 $i++;
             endforeach;
@@ -140,11 +144,12 @@ $this->title = 'Philosophy';
             $i = 0;
             foreach ($give as $gi) :
         ?>
-                <div class="col-lg-6 col-md-6 col-12 mt-50">
-                    <p class="Why-We-Work"><img src="<?= Yii::$app->homeUrl ?>image/icon2.png" style="width: 60px;"> <?= $gi['title'] ?></p>
-                    <p class="People"><?= $gi['detail'] ?></p>
-                    <p class="TOKYO"><?= $gi['detail2'] ?></p>
-                </div>
+        <div class="col-lg-6 col-md-6 col-12 mt-50">
+            <p class="Why-We-Work"><img src="<?= Path::backendUrl() ?>image/icon2.png" style="width: 60px;">
+                <?= $gi['title'] ?></p>
+            <p class="People"><?= $gi['detail'] ?></p>
+            <p class="TOKYO"><?= $gi['detail2'] ?></p>
+        </div>
         <?php
                 $i++;
             endforeach;
@@ -164,14 +169,15 @@ $this->title = 'Philosophy';
             $i = 0;
             foreach ($success as $suc) :
         ?>
-                <div class="col-lg-6 col-md-6  col-12 mt-50">
-                    <p class="Why-We-Work"> <?= $suc['title'] ?><img src="<?= Yii::$app->homeUrl . $suc['image'] ?>" style="width: 60px;"></p>
-                    <p class="everyone"><?= $suc['detail'] ?></p>
-                    <p class="everyone"><?= $suc['detail2'] ?></p>
-                    <p class="everyone"><?= $suc['detail3'] ?></p>
-                    <p class="everyone"> <?= $suc['detail4'] ?></p>
-                    <p class="YASUNARI"><?= $suc['detail5'] ?></p>
-                </div>
+        <div class="col-lg-6 col-md-6  col-12 mt-50">
+            <p class="Why-We-Work"> <?= $suc['title'] ?><img src="<?= Path::backendUrl() . $suc['image'] ?>"
+                    style="width: 60px;"></p>
+            <p class="everyone"><?= $suc['detail'] ?></p>
+            <p class="everyone"><?= $suc['detail2'] ?></p>
+            <p class="everyone"><?= $suc['detail3'] ?></p>
+            <p class="everyone"> <?= $suc['detail4'] ?></p>
+            <p class="YASUNARI"><?= $suc['detail5'] ?></p>
+        </div>
         <?php
                 $i++;
             endforeach;
@@ -183,14 +189,15 @@ $this->title = 'Philosophy';
             $i = 0;
             foreach ($playshot3 as $or) :
         ?>
-                <div class="col-lg-6 col-md-6  col-12 mt-50 text-center">
-                    <div class="col-12">
-                        <img src="<?= Yii::$app->homeUrl . $or['image'] ?>" class="image-screenshot1">
-                    </div>
-                    <div class="col-12">
-                        <span class="badge bg-primary image-BG1"> <a href="#" class="no-underline4"> <i class="fa fa-play-circle link-list" aria-hidden="true"></i> <?= $or['title'] ?></a> </span>
-                    </div>
-                </div>
+        <div class="col-lg-6 col-md-6  col-12 mt-50 text-center">
+            <div class="col-12">
+                <img src="<?= Path::backendUrl() . $or['image'] ?>" class="image-screenshot1">
+            </div>
+            <div class="col-12">
+                <span class="badge bg-primary image-BG1"> <a href="#" class="no-underline4"> <i
+                            class="fa fa-play-circle link-list" aria-hidden="true"></i> <?= $or['title'] ?></a> </span>
+            </div>
+        </div>
         <?php
                 $i++;
             endforeach;
@@ -207,14 +214,15 @@ $this->title = 'Philosophy';
             $i = 0;
             foreach ($playshot4 as $ly) :
         ?>
-                <div class="col-lg-6 col-md-6 col-12  mt-50 text-center">
-                    <div class="col-12">
-                        <img src="<?= Yii::$app->homeUrl . $ly['image'] ?>" class="image-screenshot2">
-                    </div>
-                    <div class="col-12">
-                        <span class="badge bg-primary image-BG2"> <a href="#" class="no-underline4"> <i class="fa fa-play-circle link-list" aria-hidden="true"></i> <?= $ly['title'] ?></a></span>
-                    </div>
-                </div>
+        <div class="col-lg-6 col-md-6 col-12  mt-50 text-center">
+            <div class="col-12">
+                <img src="<?= Path::backendUrl() . $ly['image'] ?>" class="image-screenshot2">
+            </div>
+            <div class="col-12">
+                <span class="badge bg-primary image-BG2"> <a href="#" class="no-underline4"> <i
+                            class="fa fa-play-circle link-list" aria-hidden="true"></i> <?= $ly['title'] ?></a></span>
+            </div>
+        </div>
         <?php
                 $i++;
             endforeach;
@@ -226,11 +234,12 @@ $this->title = 'Philosophy';
             $i = 0;
             foreach ($gratitude as $ti) :
         ?>
-                <div class="col-lg-6 col-md-6 col-12 mt-50">
-                    <p class="Why-We-Work"><img src="<?= Yii::$app->homeUrl ?>image/icon4.png" style="width: 60px;"> <?= $ti['title'] ?></p>
-                    <p class="People"><?= $ti['detail'] ?></p>
-                    <p class="TOKYO"><?= $ti['detail2'] ?></p>
-                </div>
+        <div class="col-lg-6 col-md-6 col-12 mt-50">
+            <p class="Why-We-Work"><img src="<?= Path::backendUrl() ?>image/icon4.png" style="width: 60px;">
+                <?= $ti['title'] ?></p>
+            <p class="People"><?= $ti['detail'] ?></p>
+            <p class="TOKYO"><?= $ti['detail2'] ?></p>
+        </div>
         <?php
                 $i++;
             endforeach;

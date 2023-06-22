@@ -3,6 +3,7 @@
 /** @var yii\web\View $this */
 
 use Codeception\Lib\Connector\Yii2;
+use common\helpers\Path;
 use yii\bootstrap5\Carousel;
 
 $this->title = 'TCFGROUP';
@@ -26,7 +27,7 @@ $this->title = 'TCFGROUP';
                     foreach ($banners as $index) :
                 ?>
                         <div class="carousel-item <?= $i == 0 ? 'active' : '' ?>" data-bs-interval="10000">
-                            <img src="<?= Yii::$app->homeUrl . $index['image'] ?>" class="d-block" style="width:100%; margin-top:20px;">
+                            <img src="<?= Path::backendUrl() . $index['image'] ?>" class="d-block" style="width:100%; margin-top:20px;">
                             <div class="offset-1 col-11 text-star">
                                 <?= $index['title'] ?><br>
                                 <?= $index['detail'] ?> <br>
@@ -61,7 +62,7 @@ $this->title = 'TCFGROUP';
         foreach ($country as $n) :
     ?>
             <div class="col-12 pt-20 Global-Business">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $n['title'] ?>
+                <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $n['title'] ?>
             </div>
             <div class="col-12 text-TCG">
                 <?= $n['detail'] ?>
@@ -85,7 +86,8 @@ $this->title = 'TCFGROUP';
                                 if ($i < 13) {
                         ?>
                                     <p><a href="<?= Yii::$app->homeUrl . $b['url'] ?>" class="no-underline1">
-                                            <img src="<?= Yii::$app->homeUrl . $b['image'] ?>" class="img-country"> <?= $b['title'] ?></a>
+                                            <img src="<?= Path::backendUrl() . $b['image'] ?>" class="img-country">
+                                            <?= $b['title'] ?></a>
                                     </p>
                         <?php
                                 }
@@ -102,7 +104,8 @@ $this->title = 'TCFGROUP';
                                 if ($i < 13) {
                         ?>
                                     <p><a href="<?= Yii::$app->homeUrl . $p['url'] ?>" class="no-underline1">
-                                            <img src="<?= Yii::$app->homeUrl . $p['image'] ?>" class="img-country"> <?= $p['title'] ?></a></p>
+                                            <img src="<?= Path::backendUrl() . $p['image'] ?>" class="img-country">
+                                            <?= $p['title'] ?></a></p>
                         <?php
                                 }
                                 $i++;
@@ -113,7 +116,7 @@ $this->title = 'TCFGROUP';
                 </div>
             </div>
             <div class="col-lg-6 col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/gol1.png" class="image-gol1">
+                <img src="<?= Path::backendUrl() ?>image/gol1.png" class="image-gol1">
             </div>
         </div>
     </div>
@@ -129,7 +132,7 @@ $this->title = 'TCFGROUP';
                 foreach ($titleservice  as  $sertitle) :
             ?>
                     <div class="col-lg-12 text-establish">
-                        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $sertitle['title'] ?>
+                        <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $sertitle['title'] ?>
                     </div>
                     <?php
                     $i++;
@@ -175,7 +178,7 @@ $this->title = 'TCFGROUP';
             ?>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-6 col-12" style="padding-right:0px;">
-            <img src="<?= Yii::$app->homeUrl ?>image/background.png" class="img-background">
+            <img src="<?= Path::backendUrl() ?>image/background.png" class="img-background">
         </div>
     </div>
 </div>
@@ -183,7 +186,7 @@ $this->title = 'TCFGROUP';
 
 
 <div class="col-12">
-    <img src="<?= Yii::$app->homeUrl ?>image/Yokhohama.png" class="image-Yokhohamaa">
+    <img src="<?= Path::backendUrl() ?>image/Yokhohama.png" class="image-Yokhohamaa">
     <div class="row">
         <?php
         if (isset($business) && count($business) > 0) {
@@ -199,7 +202,7 @@ $this->title = 'TCFGROUP';
                         <div class="text-Unlock">
                             <p><?= $d['detail2'] ?></p>
                             <button type="button" class="btn btn-primary button-contact"> <?= $d['detail3'] ?></button>
-                            <p><img src="<?= Yii::$app->homeUrl . $d['image'] ?>" class="image-graph"></p>
+                            <p><img src="<?= Path::backendUrl() . $d['image'] ?>" class="image-graph"></p>
                         </div>
                     </div>
                 </div>
@@ -221,9 +224,9 @@ $this->title = 'TCFGROUP';
         $i = 0;
         foreach ($society as $e) :
     ?>
-            <img src="<?= Yii::$app->homeUrl . $e['image'] ?>" style="width: 100%;">
+            <img src="<?= Path::backendUrl() . $e['image'] ?>" style="width: 100%;">
             <div class="text2">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $e['title'] ?>
+                <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $e['title'] ?>
             </div>
             <div class="text3">
                 <p> <?= $e['detail'] ?> <span class="font-color-blue"><?= $e['detail3'] ?> </span> is</p>
@@ -248,9 +251,9 @@ $this->title = 'TCFGROUP';
         $i = 0;
         foreach ($about as $f) :
     ?>
-            <img src="<?= Yii::$app->homeUrl . $f['image'] ?>" style="width:100%">
+            <img src="<?= Path::backendUrl() . $f['image'] ?>" style="width:100%">
             <div class="text4">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $f['title'] ?>
+                <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $f['title'] ?>
             </div>
             <div class="col-lg-8 col-md-6 col-12  text-Yasunari">
                 <p><?= $f['detail'] ?></p>
@@ -268,13 +271,14 @@ $this->title = 'TCFGROUP';
 
 <div class="col-12">
     <div class="col-12 connect-experts mt-40">
-        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> Connect Experts
+        <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> Connect Experts
     </div>
     <div class="col-12 Get-free mt-30">
         Get Free Appointment on your Business Issuefa-spin
     </div>
     <div class="col-12 If-you mt-10">
-        If you would like to discuss a project or have a question, please fill in the form and we ll get right back to you.
+        If you would like to discuss a project or have a question, please fill in the form and we ll get right back to
+        you.
     </div>
     <div class="col-12 mt-30 pr12">
         <div class="row">
@@ -284,7 +288,8 @@ $this->title = 'TCFGROUP';
                         <p class="If-you2">Do you prefer to communicate as an entity or an individual?</p>
                     </div>
                     <div class="col-5">
-                        <label for="formGroupExampleInput" class="form-label label-thin"> &nbsp;&nbsp;&nbsp;Select Country</label>
+                        <label for="formGroupExampleInput" class="form-label label-thin"> &nbsp;&nbsp;&nbsp;Select
+                            Country</label>
                         <select class="form-select mt-10" aria-label="Default select example">
                             <option selected>Bangladesh</option>
                             <option value="1">Brazil</option>

@@ -3,6 +3,7 @@
 /** @var yii\web\View $this */
 
 use Codeception\Lib\Connector\Yii2;
+use common\helpers\Path;
 
 $this->title = 'contact';
 ?>
@@ -14,7 +15,7 @@ $this->title = 'contact';
         foreach ($bannerresource  as $resource) :
     ?>
             <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>img/Resources.png" class="img-Resources">
+                <img src="<?= Path::backendUrl() ?>image/img/Resources.png" class="img-Resources">
             </div>
             <div class="col-12 page-resource">
                 <?= $resource['title'] ?>
@@ -80,7 +81,7 @@ $this->title = 'contact';
                     <div class="col-lg-3 col-md-6 col-12 mt-10 item-dropdown">
                         <div class="btn-group">
                             <button class="btn btn-outline-gray dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="<?= Yii::$app->homeUrl . $tio['image'] ?>" class="img-icon"> <?= $tio['title'] ?>
+                                <img src="<?= Path::backendUrl() . $tio['image'] ?>" class="img-icon"> <?= $tio['title'] ?>
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <li><a class="dropdown-item" href="#"><?= $tio['detail'] ?></a></li>
@@ -158,13 +159,14 @@ $this->title = 'contact';
     <div class="container">
         <div class="alert alert-primary" role="alert">
             <div class="col-12 connect-experts mt-40">
-                <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png" class="image mr-1"> Connect Experts
+                <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png" class="image mr-1"> Connect Experts
             </div>
             <div class="col-12 Get-free mt-30">
                 Get Free Appointment on your Business Issuefa-spin
             </div>
             <div class="col-12 If-you mt-10">
-                If you would like to discuss a project or have a question, please fill in the form and we ll get right back to you.
+                If you would like to discuss a project or have a question, please fill in the form and we ll get right
+                back to you.
             </div>
             <div class="col-12 mt-30 pr12">
                 <div class="row">
@@ -174,7 +176,8 @@ $this->title = 'contact';
                                 <p class="If-you2">Do you prefer to communicate as an entity or an individual?</p>
                             </div>
                             <div class="col-5">
-                                <label for="formGroupExampleInput" class="form-label label-thin"> &nbsp;&nbsp;&nbsp;Select Country</label>
+                                <label for="formGroupExampleInput" class="form-label label-thin">
+                                    &nbsp;&nbsp;&nbsp;Select Country</label>
                                 <select class="form-select mt-10" aria-label="Default select example">
                                     <option selected>Bangladesh</option>
                                     <option value="1">Brazil</option>
@@ -209,13 +212,15 @@ $this->title = 'contact';
                                     <div class="col-5 left-box-select">
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                            <label class="form-check-label ml-10" for="flexRadioDefault1"> Legal Entity</label>
+                                            <label class="form-check-label ml-10" for="flexRadioDefault1"> Legal
+                                                Entity</label>
                                         </div>
                                     </div>
                                     <div class="col-5 left-box-select">
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                            <label class="form-check-label ml-10" for="flexRadioDefault2"> Individual</label>
+                                            <label class="form-check-label ml-10" for="flexRadioDefault2">
+                                                Individual</label>
                                         </div>
                                     </div>
                                 </div>
@@ -261,7 +266,8 @@ $this->title = 'contact';
                             <input type="Questions" class="form-control" id="exampleInputQuestions" aria-describedby="Questions">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label label-thin">Details of Inquiry</label>
+                            <label for="exampleFormControlTextarea1" class="form-label label-thin">Details of
+                                Inquiry</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                         <div class="row">
@@ -274,7 +280,8 @@ $this->title = 'contact';
                             <div class="col-4 text-start mt-4">
                                 <div class="contact-social mb-2">Whatsapp</div>
                                 <a href="" class="no-underline3">
-                                    <p class="info-tokyo"><i class="fa fa-whatsapp" aria-hidden="true"></i> inquarrytcf</p>
+                                    <p class="info-tokyo"><i class="fa fa-whatsapp" aria-hidden="true"></i> inquarrytcf
+                                    </p>
                                 </a>
                             </div>
                             <div class="col-8 text-end mt-4">
@@ -293,7 +300,8 @@ $this->title = 'contact';
                             <div class="col-8 text-end mt-4">
                                 <div class="contact-social mb-2">Phone</div>
                                 <a href="" class="no-underline3">
-                                    <p class="info-tokyo">+090-111-222 <i class="fa fa-phone" aria-hidden="true"></i></p>
+                                    <p class="info-tokyo">+090-111-222 <i class="fa fa-phone" aria-hidden="true"></i>
+                                    </p>
                                 </a>
                             </div>
                         </div>

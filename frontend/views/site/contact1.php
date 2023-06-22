@@ -3,6 +3,7 @@
 /** @var yii\web\View $this */
 
 use Codeception\Lib\Connector\Yii2;
+use common\helpers\Path;
 
 $this->title = 'contact';
 ?>
@@ -15,7 +16,7 @@ $this->title = 'contact';
         foreach ($contact as $tact) :
     ?>
             <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl . $tact['image'] ?>" class="image-Google-Forms-Job">
+                <img src="<?= Path::backendUrl() . $tact['image'] ?>" class="image-Google-Forms-Job">
             </div>
 
             <div class="col-12 line-back">
@@ -105,7 +106,7 @@ $this->title = 'contact';
         </div>
         <div class="offset-1 col-lg-5 col-md-6 col-12 form-image-upload">
             <p> <span class="text-upload">Upload Your Image</span></p>
-            <img src="<?= Yii::$app->homeUrl ?>image/upload.png" class="image-upload">
+            <img src="<?= Path::backendUrl() ?>image/upload.png" class="image-upload">
             <span class="text-drop">Drag or Drop Your Image</span>
             <p class="tex-Or">Or</p>
             <div class="upload-btn-wrapper">

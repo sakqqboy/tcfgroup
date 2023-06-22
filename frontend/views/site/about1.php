@@ -3,6 +3,7 @@
 /** @var yii\web\View $this */
 
 use Codeception\Lib\Connector\Yii2;
+use common\helpers\Path;
 
 $this->title = 'About Us';
 ?>
@@ -16,7 +17,7 @@ $this->title = 'About Us';
         foreach ($vision as $ut) :
     ?>
             <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl . $ut['image'] ?>" class="image-Vision-page">
+                <img src="<?= Path::backendUrl() . $ut['image'] ?>" class="image-Vision-page">
             </div>
             <div class="col-12">
                 <div class="col-12 text-Our">
@@ -48,12 +49,12 @@ $this->title = 'About Us';
         foreach ($existence  as  $ce) :
     ?>
             <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl . $ce['image'] ?>" class="image-bali">
+                <img src="<?= Path::backendUrl() . $ce['image'] ?>" class="image-bali">
             </div>
 
             <div class="col-12">
                 <div class="col-12 box-data-1">
-                    <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> <?= $ce['title'] ?>
+                    <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image-Rectangle1"> <?= $ce['title'] ?>
                 </div>
                 <div class="col-12 box-data-2">
                     <?= $ce['detail'] ?>
@@ -76,10 +77,10 @@ $this->title = 'About Us';
         foreach ($strategy  as  $tr) :
     ?>
             <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl . $tr['image'] ?>" class="image-yogendra-singh">
+                <img src="<?= Path::backendUrl() . $tr['image'] ?>" class="image-yogendra-singh">
             </div>
             <div class="col-12  Block-1">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> <?= $tr['title'] ?>
+                <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image-Rectangle1"> <?= $tr['title'] ?>
             </div>
             <div class="col-12 Block-2">
                 <?= $tr['detail'] ?>
@@ -105,10 +106,10 @@ $this->title = 'About Us';
 
     ?>
             <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl ?>image/whale2.png" class="image-whale">
+                <img src="<?= Path::backendUrl() ?>image/whale2.png" class="image-whale">
             </div>
             <div class="col-12 Type-home-page-one">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> <?= $ld['title'] ?>
+                <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image-Rectangle1"> <?= $ld['title'] ?>
             </div>
             <div class="col-12 Type-home-page-two">
                 <?= $ld['detail'] ?>
@@ -129,7 +130,7 @@ $this->title = 'About Us';
         foreach ($consultinggroup  as  $group) :
     ?>
             <div class="col-12 padding-box">
-                <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image-Rectangle1"> <?= $group['title'] ?>
+                <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image-Rectangle1"> <?= $group['title'] ?>
             </div>
             <div class="col-12">
                 <div class="col-8 padding-text">
@@ -171,7 +172,7 @@ if (isset($footer) && count($footer) > 0) {
         <div class="col-12 pr12">
             <div class="row">
                 <div class="offset-lg-6 col-lg-6 col-12 text-center">
-                    <img src="<?= Yii::$app->homeUrl . $h['image'] ?>" class="image-book">
+                    <img src="<?= Path::backendUrl() . $h['image'] ?>" class="image-book">
                 </div>
             </div>
         </div>

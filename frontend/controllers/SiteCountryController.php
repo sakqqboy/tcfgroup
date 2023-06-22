@@ -1209,4 +1209,19 @@ class SiteCountryController extends Controller
             "tabledetail" => $tabledetail
         ]);
     }
+    public function actionUpdateImage()
+    {
+        $contentDetail = ContentDetail::find()->where("image is not null")->all();
+        if (isset($contentDetail) && count($contentDetail) > 0) {
+            foreach ($contentDetail as $content) :
+                $img = explode('/', $content->image);
+                $defaultImage = $content->image;
+                if ($img[0] == 'img') {
+                    $newName = 'image/' . $defaultImage;
+                    $content->image = $newName;
+                    $content->save(false);
+                }
+            endforeach;
+        }
+    }
 }

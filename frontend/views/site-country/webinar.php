@@ -3,6 +3,7 @@
 /** @var yii\web\View $this */
 
 use Codeception\Lib\Connector\Yii2;
+use common\helpers\Path;
 
 $this->title = 'webinar';
 ?>
@@ -17,8 +18,9 @@ $this->title = 'webinar';
                     $i = 0;
                     foreach ($webinarvideo as $binar) :
                 ?>
-                        <img src="<?= Yii::$app->homeUrl . $binar['image'] ?>" class="img-webinar">
-                        <span class="badge bg-primary image8"> <a href="#" class="no-underline1"><i class="fa fa-play-circle-o play-y" aria-hidden="true"></i> </a> When People changes Their Perspective</span>
+                        <img src="<?= Path::backendUrl() . $binar['image'] ?>" class="img-webinar">
+                        <span class="badge bg-primary image8"> <a href="#" class="no-underline1"><i class="fa fa-play-circle-o play-y" aria-hidden="true"></i> </a> When People changes Their
+                            Perspective</span>
                 <?php
                         $i++;
                     endforeach;
@@ -113,7 +115,7 @@ $this->title = 'webinar';
             $i = 0;
             foreach ($bangladresh as $la) :
         ?>
-                <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $la['title'] ?>
+                <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $la['title'] ?>
         <?php
                 $i++;
             endforeach;
@@ -133,19 +135,21 @@ $this->title = 'webinar';
                                 <p><?= $la['detail'] ?> </p>
                             </div>
                             <div class="col-2">
-                                <img src="<?= Yii::$app->homeUrl . $la['image'] ?>" class="img-woman">
+                                <img src="<?= Path::backendUrl() . $la['image'] ?>" class="img-woman">
                                 <div class="alert alert-secondary  text-center">
                                     <p class="table-calendar"> <i class="fa fa-calendar" aria-hidden="true"> June 2023</i></p>
-                                    <p> S&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;&nbsp;S</p>
-                                    <p> 3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;5 <button class="btn btn-primary calendar-button" type="button">6</button>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;9</p>
+                                    <p> S&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;&nbsp;S
+                                    </p>
+                                    <p> 3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;5 <button class="btn btn-primary calendar-button" type="button">6</button>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;9
+                                    </p>
                                 </div>
                             </div>
 
                             <div class="col-6 img-iconday">
-                                <img src="<?= Yii::$app->homeUrl ?>img/button-1.png" class="img-button">
-                                <img src="<?= Yii::$app->homeUrl ?>img/button-2.png" class="img-button">
-                                <img src="<?= Yii::$app->homeUrl ?>img/button-4.png" class="img-button">
-                                <img src="<?= Yii::$app->homeUrl ?>img/button-3.png" class="img-button">
+                                <img src="<?= Path::backendUrl() ?>image/img/button-1.png" class="img-button">
+                                <img src="<?= Path::backendUrl() ?>image/img/button-2.png" class="img-button">
+                                <img src="<?= Path::backendUrl() ?>image/img/button-4.png" class="img-button">
+                                <img src="<?= Path::backendUrl() ?>image/img/button-3.png" class="img-button">
                             </div>
                         </div>
                 <?php
@@ -164,7 +168,7 @@ $this->title = 'webinar';
                             <?= $nar['title'] ?>
                         </div>
                         <div class="col-12 title-topic mt-10">
-                            <p> <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $nar['detail'] ?></p>
+                            <p> <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $nar['detail'] ?></p>
                         </div>
                 <?php
                         $i++;
@@ -181,7 +185,8 @@ $this->title = 'webinar';
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <strong>How can i join ?</strong>
-                                <p>It is as easy as to join through one single click by going to the following link -</p>
+                                <p>It is as easy as to join through one single click by going to the following link -
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -227,7 +232,8 @@ $this->title = 'webinar';
                         foreach ($register as $regis) :
                     ?>
                             <button type="button" class="btn btn-primary button-register mt-30"> <?= $regis['title'] ?></button>
-                            <p class="title-sign-in"> <?= $regis['detail'] ?><a href="#sign in" class="no-underline"> <?= $regis['detail2'] ?></a></p>
+                            <p class="title-sign-in"> <?= $regis['detail'] ?><a href="#sign in" class="no-underline">
+                                    <?= $regis['detail2'] ?></a></p>
 
                     <?php
                         endforeach;
@@ -247,7 +253,7 @@ $this->title = 'webinar';
             foreach ($webinarplaylist  as $playlist) :
         ?>
                 <div class="col-lg-4 col-md-6 col-12 title-Trending">
-                    <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $playlist['title'] ?>
+                    <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $playlist['title'] ?>
                 </div>
                 <div class="col-lg-6 col-md-6 col-12 title-always">
                     <?= $playlist['detail'] ?>
@@ -263,7 +269,8 @@ $this->title = 'webinar';
             <input type="search" class="form-control" id="inputsearch" placeholder="Search, Business Videos">
         </div>
         <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3"><i class="fa fa-search" aria-hidden="true"> Search</i></button>
+            <button type="submit" class="btn btn-primary mb-3"><i class="fa fa-search" aria-hidden="true">
+                    Search</i></button>
         </div>
         <div class="col-lg-4 col-md-6 col-12 form-sort">
             <select class="form-select" aria-label="Default select example">
@@ -288,7 +295,7 @@ $this->title = 'webinar';
             ?>
                         <div class="row pr12">
                             <div class="col-4">
-                                <img src="<?= Yii::$app->homeUrl . $py['image'] ?>" class="img-video">
+                                <img src="<?= Path::backendUrl() . $py['image'] ?>" class="img-video">
                             </div>
                             <div class="col-6 mt-10">
                                 <div class="col-12 text-art">
@@ -333,7 +340,7 @@ $this->title = 'webinar';
             ?>
                         <div class="row pr12">
                             <div class="col-4">
-                                <img src="<?= Yii::$app->homeUrl . $pla['image'] ?>" class="img-video">
+                                <img src="<?= Path::backendUrl() . $pla['image'] ?>" class="img-video">
                             </div>
                             <div class="col-6 mt-10">
                                 <div class="col-12 text-art">
@@ -388,7 +395,7 @@ $this->title = 'webinar';
                 foreach ($participants  as $pants) :
             ?>
                     <div class="col-lg-4 col-md-6 col-12 title-Trending mt-50">
-                        <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $pants['title'] ?>
+                        <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $pants['title'] ?>
                     </div>
                     <div class="col-lg-6 col-md-6 col-12 title-always mt-50 pl-40">
                         <?= $pants['detail'] ?>
@@ -417,7 +424,7 @@ $this->title = 'webinar';
                                     </div>
                                     <div class="d-flex text-black mt-20">
                                         <div class="flex-shrink-0">
-                                            <img src="<?= Yii::$app->homeUrl . $com['image'] ?>" class="img-minnie">
+                                            <img src="<?= Path::backendUrl() . $com['image'] ?>" class="img-minnie">
                                         </div>
                                         <div class="flex-grow-1 ms-3">
                                             <h5 class="mb-1"><?= $com['detail'] ?></h5>
@@ -441,9 +448,12 @@ $this->title = 'webinar';
                 <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left:20px;">
                     <div class="card-body p-4" style="background-color: #FFFFFF;">
                         <div class="col-12">
-                            I would just like to compliment Estelle Pestana. She has been most professional and gone to great lengths to assist me. Her patience with me as I continuously changed my plans is to be commended. Her service re-affirms why I always choose to book through an agency instead of directly. Thank you <div class="d-flex text-black mt-20">
+                            I would just like to compliment Estelle Pestana. She has been most professional and gone to
+                            great lengths to assist me. Her patience with me as I continuously changed my plans is to be
+                            commended. Her service re-affirms why I always choose to book through an agency instead of
+                            directly. Thank you <div class="d-flex text-black mt-20">
                                 <div class="flex-shrink-0">
-                                    <img src="<?= Yii::$app->homeUrl ?>img/veona.png" class="img-veona">
+                                    <img src="<?= Path::backendUrl() ?>image/img/veona.png" class="img-veona">
                                 </div>
                                 <div class="flex-grow-1 ms-3">
                                     <h5 class="mb-1">Veona Watson</h5>
@@ -460,9 +470,12 @@ $this->title = 'webinar';
                 <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left:20px;">
                     <div class="card-body p-4" style="background-color: #FFFFFF;">
                         <div class="col-12">
-                            I would just like to compliment Estelle Pestana. She has been most professional and gone to great lengths to assist me. Her patience with me as I continuously changed my plans is to be commended. Her service re-affirms why I always choose to book through an agency instead of directly. Thank you <div class="d-flex text-black mt-20">
+                            I would just like to compliment Estelle Pestana. She has been most professional and gone to
+                            great lengths to assist me. Her patience with me as I continuously changed my plans is to be
+                            commended. Her service re-affirms why I always choose to book through an agency instead of
+                            directly. Thank you <div class="d-flex text-black mt-20">
                                 <div class="flex-shrink-0">
-                                    <img src="<?= Yii::$app->homeUrl ?>img/paseka.png" class="img-veona">
+                                    <img src="<?= Path::backendUrl() ?>image/img/paseka.png" class="img-veona">
                                 </div>
                                 <div class="flex-grow-1 ms-3">
                                     <h5 class="mb-1">Paseka Nku</h5>
@@ -481,9 +494,12 @@ $this->title = 'webinar';
                 <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; width: 21rem;margin-left: 10px;">
                     <div class="card-body p-4" style="background-color: #FFFFFF;">
                         <div class="col-12">
-                            I would just like to compliment Estelle Pestana. She has been most professional and gone to great lengths to assist me. Her patience with me as I continuously changed my plans is to be commended. Her service re-affirms why I always choose to book through an agency instead of directly. Thank you <div class="d-flex text-black mt-20">
+                            I would just like to compliment Estelle Pestana. She has been most professional and gone to
+                            great lengths to assist me. Her patience with me as I continuously changed my plans is to be
+                            commended. Her service re-affirms why I always choose to book through an agency instead of
+                            directly. Thank you <div class="d-flex text-black mt-20">
                                 <div class="flex-shrink-0">
-                                    <img src="<?= Yii::$app->homeUrl ?>img/cherice.png" class="img-veona">
+                                    <img src="<?= Path::backendUrl() ?>image/img/cherice.png" class="img-veona">
                                 </div>
                                 <div class="flex-grow-1 ms-3">
                                     <h5 class="mb-1">Cherice</h5>
@@ -500,9 +516,12 @@ $this->title = 'webinar';
                 <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; width: 21rem;margin-left: 10px;">
                     <div class="card-body p-4" style="background-color: #FFFFFF;">
                         <div class="col-12">
-                            I would just like to compliment Estelle Pestana. She has been most professional and gone to great lengths to assist me. Her patience with me as I continuously changed my plans is to be commended. Her service re-affirms why I always choose to book through an agency instead of directly. Thank you <div class="d-flex text-black mt-20">
+                            I would just like to compliment Estelle Pestana. She has been most professional and gone to
+                            great lengths to assist me. Her patience with me as I continuously changed my plans is to be
+                            commended. Her service re-affirms why I always choose to book through an agency instead of
+                            directly. Thank you <div class="d-flex text-black mt-20">
                                 <div class="flex-shrink-0">
-                                    <img src="<?= Yii::$app->homeUrl ?>img/thais.png" class="img-veona">
+                                    <img src="<?= Path::backendUrl() ?>image/img/thais.png" class="img-veona">
                                 </div>
                                 <div class="flex-grow-1 ms-3">
                                     <h5 class="mb-1">Thais Carballal</h5>
@@ -521,10 +540,11 @@ $this->title = 'webinar';
                 <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left: 30px;">
                     <div class="card-body p-4" style="background-color: #FFFFFF;">
                         <div class="col-12">
-                            Many thanks for you kind and efficient service. I have already and will definitely continue to recommend your services to others in the future. Wishing you all a </div>
+                            Many thanks for you kind and efficient service. I have already and will definitely continue
+                            to recommend your services to others in the future. Wishing you all a </div>
                         <div class="d-flex text-black mt-20">
                             <div class="flex-shrink-0">
-                                <img src="<?= Yii::$app->homeUrl ?>img/minnie.png" class="img-minnie">
+                                <img src="<?= Path::backendUrl() ?>image/img/minnie.png" class="img-minnie">
                             </div>
                             <div class="flex-grow-1 ms-3">
                                 <h5 class="mb-1">Minnie Horn</h5>
@@ -540,10 +560,11 @@ $this->title = 'webinar';
                 <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left: 30px;">
                     <div class="card-body p-4" style="background-color: #FFFFFF;">
                         <div class="col-12">
-                            Baie dankie en weereens dankie vir jou moeite. Ek moet net se - as ons iewers moet slaap en ek kan nie deur SA Places boek nie - dan los ek dit liewer! </div>
+                            Baie dankie en weereens dankie vir jou moeite. Ek moet net se - as ons iewers moet slaap en
+                            ek kan nie deur SA Places boek nie - dan los ek dit liewer! </div>
                         <div class="d-flex text-black mt-20">
                             <div class="flex-shrink-0">
-                                <img src="<?= Yii::$app->homeUrl ?>img/vieona.png" class="img-minnie">
+                                <img src="<?= Path::backendUrl() ?>image/img/vieona.png" class="img-minnie">
                             </div>
                             <div class="flex-grow-1 ms-3">
                                 <h5 class="mb-1">Veona Watson</h5>
@@ -569,7 +590,7 @@ $this->title = 'webinar';
     ?>
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-12 title-Trending mt-50">
-                    <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $mee['title'] ?>
+                    <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $mee['title'] ?>
                 </div>
                 <div class="col-lg-6 col-md-6 col-12 title-always mt-50 pl-40">
                     <?= $mee['detail'] ?>
@@ -589,7 +610,7 @@ $this->title = 'webinar';
         $i = 0;
         foreach ($meet as $mee) :
     ?>
-            <img src="<?= Yii::$app->homeUrl ?>img/ceo.png" class="img-ceo">
+            <img src="<?= Path::backendUrl() ?>image/img/ceo.png" class="img-ceo">
     <?php
             $i++;
         endforeach;
@@ -605,7 +626,7 @@ $this->title = 'webinar';
     ?>
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-12 title-Trending mt-50">
-                    <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $mee['detail2'] ?>
+                    <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $mee['detail2'] ?>
                 </div>
                 <div class="col-lg-6 col-md-6 col-12 title-always mt-50 pl-40">
                     <?= $mee['detail3'] ?>
@@ -656,13 +677,15 @@ $this->title = 'webinar';
                         <div class="row">
                             <div class="col-4 bg-white  form-bg-media">
                                 <a href="#" class="no-underline-form">
-                                    <i class="fa fa-google-plus-square form-gooogle" aria-hidden="true"> </i> Signup with google
+                                    <i class="fa fa-google-plus-square form-gooogle" aria-hidden="true"> </i> Signup
+                                    with google
                                 </a>
                             </div>
                             &nbsp;&nbsp;&nbsp;
                             <div class="col-4 bg-white  form-bg-media">
                                 <a href="#" class="no-underline-form">
-                                    <i class="fa fa-linkedin-square form-linkedin" aria-hidden="true"></i> Signup with LinkedIn
+                                    <i class="fa fa-linkedin-square form-linkedin" aria-hidden="true"></i> Signup with
+                                    LinkedIn
                                 </a>
                             </div>
                         </div>
@@ -695,7 +718,8 @@ $this->title = 'webinar';
                         </div>
                         <div class="mb-3 form-check mt-20">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1"> I agreed to the Terms & Conditions</label>
+                            <label class="form-check-label" for="exampleCheck1"> I agreed to the Terms &
+                                Conditions</label>
                         </div>
                         <div class="col-7 mt-10">
                             <button type="submit" class="btn btn-primary"> Register for Webinar</button>

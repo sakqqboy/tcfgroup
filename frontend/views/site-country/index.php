@@ -3,6 +3,7 @@
 /** @var yii\web\View $this */
 
 use Codeception\Lib\Connector\Yii2;
+use common\helpers\Path;
 use yii\bootstrap5\Offcanvas;
 
 $this->title = 'Bangladesh';
@@ -15,7 +16,7 @@ $this->title = 'Bangladesh';
         foreach ($shape as $pe) :
     ?>
             <div class="col-12">
-                <img src="<?= Yii::$app->homeUrl . $pe['image'] ?>" class="image-TCG">
+                <img src="<?= Path::backendUrl() . $pe['image'] ?>" class="image-TCG">
             </div>
             <div class="offset-1 col-10 text-star">
                 <?= $pe['title'] ?> <br>
@@ -40,7 +41,7 @@ $this->title = 'Bangladesh';
         foreach ($services as $r) :
     ?>
             <div class="col-12 title-Trending">
-                <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $r['detail2'] ?>
+                <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $r['detail2'] ?>
             </div>
     <?php
             $i++;
@@ -88,7 +89,7 @@ $this->title = 'Bangladesh';
     ?>
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-12">
-                    <img src="<?= Yii::$app->homeUrl . $port['image'] ?>" class="img-transportation">
+                    <img src="<?= Path::backendUrl() . $port['image'] ?>" class="img-transportation">
                 </div>
                 <div class="col-lg-6 col-md-6 col-12">
                     <p class="title-import mt-10"><?= $port['title'] ?></p> <br>
@@ -110,7 +111,7 @@ $this->title = 'Bangladesh';
             $i = 0;
             foreach ($bangladresh as $la) :
         ?>
-                <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $la['title'] ?>
+                <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $la['title'] ?>
         <?php
                 $i++;
             endforeach;
@@ -129,18 +130,20 @@ $this->title = 'Bangladesh';
                             <p><?= $la['detail'] ?></p>
                         </div>
                         <div class="col-2">
-                            <img src="<?= Yii::$app->homeUrl . $la['image'] ?>" class="img-woman">
+                            <img src="<?= Path::backendUrl() . $la['image'] ?>" class="img-woman">
                             <div class="alert alert-secondary  text-center">
                                 <p class="table-calendar"> <i class="fa fa-calendar" aria-hidden="true"> June 2023</i></p>
-                                <p> S&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;&nbsp;S</p>
-                                <p> 3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;5 <button class="btn btn-primary calendar-button" type="button">6</button>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;9</p>
+                                <p> S&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;&nbsp;S
+                                </p>
+                                <p> 3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;5 <button class="btn btn-primary calendar-button" type="button">6</button>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;9
+                                </p>
                             </div>
                         </div>
                         <div class="col-6 img-iconday">
-                            <img src="<?= Yii::$app->homeUrl ?>img/button-1.png" class="img-button">
-                            <img src="<?= Yii::$app->homeUrl ?>img/button-2.png" class="img-button">
-                            <img src="<?= Yii::$app->homeUrl ?>img/button-4.png" class="img-button">
-                            <img src="<?= Yii::$app->homeUrl ?>img/button-3.png" class="img-button">
+                            <img src="<?= Path::backendUrl() ?>image/img/button-1.png" class="img-button">
+                            <img src="<?= Path::backendUrl() ?>image/img/button-2.png" class="img-button">
+                            <img src="<?= Path::backendUrl() ?>image/img/button-4.png" class="img-button">
+                            <img src="<?= Path::backendUrl() ?>image/img/button-3.png" class="img-button">
                         </div>
                     </div>
             <?php
@@ -159,7 +162,7 @@ $this->title = 'Bangladesh';
                         <?= $nar['title'] ?>
                     </div>
                     <div class="col-12 title-topic mt-10">
-                        <p> <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png"> <?= $nar['detail'] ?></p>
+                        <p> <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $nar['detail'] ?></p>
                     </div>
             <?php
                     $i++;
@@ -237,7 +240,7 @@ $this->title = 'Bangladesh';
                 foreach ($professiona  as $pro) :
             ?>
                     <div class="col-lg-12 title-Trending">
-                        <img src="<?= Yii::$app->homeUrl ?>image/Rectangle1.png" class="image mr-1"> <?= $pro['title'] ?>
+                        <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $pro['title'] ?>
                     </div>
                     <?php
                     $i++;
@@ -288,7 +291,7 @@ $this->title = 'Bangladesh';
                 foreach ($professiona  as $pro) :
 
             ?>
-                    <img src="<?= Yii::$app->homeUrl . $pro['image'] ?>" class="img-zgif">
+                    <img src="<?= Path::backendUrl() . $pro['image'] ?>" class="img-zgif">
             <?php
 
                     $i++;
@@ -302,13 +305,14 @@ $this->title = 'Bangladesh';
 <div class="col-12">
 
     <div class="col-12 connect-experts mt-40">
-        <img src="<?= Yii::$app->homeUrl ?>img/Rectangle.png" class="image mr-1"> Connect Experts
+        <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png" class="image mr-1"> Connect Experts
     </div>
     <div class="col-12 Get-free mt-30">
         Get Free Appointment on your Business Issuefa-spin
     </div>
     <div class="col-12 If-you mt-10">
-        If you would like to discuss a project or have a question, please fill in the form and we ll get right back to you.
+        If you would like to discuss a project or have a question, please fill in the form and we ll get right back to
+        you.
     </div>
     <div class="col-12 mt-30 pr12">
         <div class="row">
@@ -318,7 +322,8 @@ $this->title = 'Bangladesh';
                         <p class="If-you2">Do you prefer to communicate as an entity or an individual?</p>
                     </div>
                     <div class="col-5">
-                        <label for="formGroupExampleInput" class="form-label label-thin"> &nbsp;&nbsp;&nbsp;Select Country</label>
+                        <label for="formGroupExampleInput" class="form-label label-thin"> &nbsp;&nbsp;&nbsp;Select
+                            Country</label>
                         <select class="form-select mt-10" aria-label="Default select example">
                             <option selected>Bangladesh</option>
                             <option value="1">Brazil</option>
@@ -476,7 +481,7 @@ if (isset($footer) && count($footer) > 0) {
         <div class="col-12 pr12">
             <div class="row">
                 <div class="offset-lg-6 col-lg-6 col-12 text-center">
-                    <img src="<?= Yii::$app->homeUrl . $h['image'] ?>" class="image-book">
+                    <img src="<?= Path::backendUrl() . $h['image'] ?>" class="image-book">
                 </div>
             </div>
         </div>

@@ -10,43 +10,44 @@
     ],
 
     ]); ?>
-    <div class="row mt-3">
-        <div class="col-lg-12 mt-4 border border-dark bd-position">
-            <div class="col-lg-12 text-center font-title">
-                CREATE CONTENT<br>
+    <div class="row bg-create">
+        <div class="col-lg-12 box-create">
+            <div class="col-lg-12 title-create">
+                CREATE CONTENT BRANCH<br>
             </div>
-            <div class="padding">
-                <div class="col-lg-12 font-body h4">
-                    CONTENT NAME<br>
-                    <input type="text" name="contentname" id="member-address" class="font-input form-control col-lg-6">
+            <div class="field-create mt-3">
+                <div class="row mt-3">
+                    <div class="col-lg-6 input-fields">
+                        Content name<br>
+                        <input type="text" name="contentname" id="member-address" class="input-data form-control col-lg-6" placeholder="Enter your content name" required>
+                    </div>
+                    <div class="col-lg-6 input-fields">
+                        Title<br>
+                        <input type="text" name="title" id="member-address" class="input-data form-control col-lg-6" placeholder="Enter your title">
+                    </div>
+                    <div class="col-lg-12 input-fields">
+                        Branch<br>
+                        <select class="input-data form-control col-lg-6" name="branchid" required>
+                            <option value="">Please select your branch</option>
+                            <?php 
+                                if(isset($branchs) && count($branchs) > 0) {
+                                    foreach ($branchs as $x) :
+                            ?>
+                            <option value="<?= $x['branchId'] ?>"><?= $x['branchName'] ?></option>
+                            <?php 
+                                    endforeach;
+                                }
+                            ?>
+                        </select>
+                    </div>
+                    <div>
+                        <div class="col-lg-12 input-field">
+                            Detail<br>
+                            <textarea class="input-detail form-control" name="detail" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your detail"></textarea>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-12 font-body h4">
-                    TITLE<br>
-                    <input type="text" name="title" id="member-address" class="font-input form-control col-lg-6">
-                </div>
-                <div class="col-lg-12 font-body h4">
-                    DETAIL<br>
-                    <textarea class="font-input form-control" name="detail" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <div class="col-lg-12 font-body h4">
-                    BRANCH<br>
-                    <select class="font-input form-control col-lg-6" name="branchid" required>
-                        <option value="">Please select your branch</option>
-                        <?php 
-                            if(isset($branchs) && count($branchs) > 0) {
-                                foreach ($branchs as $x) :
-                        ?>
-                        <option value="<?= $x['branchId'] ?>"><?= $x['branchName'] ?></option>
-                        <?php 
-                                endforeach;
-                            }
-                        ?>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-success font-button" href="<?=Yii::$app->homeUrl.'content/default/create-content-branch'?>">Submit</button>
-                <div class="col-lg-12">
-                    <br>
-                </div>
+                <button type="submit" class="btn btn-success font-button mt-3" href="<?=Yii::$app->homeUrl.'content/default/create-content-branch'?>">Submit</button>
             </div>
         </div>
     </div>

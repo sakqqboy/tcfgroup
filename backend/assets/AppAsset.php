@@ -21,8 +21,7 @@ class AppAsset extends AssetBundle
         'css/updatemember.css',
         'css/viewmember.css',
         'css/login.css',
-
-
+        'css/content_branch.css'
     ];
     public $js = [
         'js/delete_content.js',

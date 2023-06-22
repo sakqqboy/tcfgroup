@@ -4,19 +4,15 @@
 .nav-menu {
     position: fixed;
     list-style-type: none;
+    padding-bottom: 50px;
     top: 0;
     bottom: 0;
     left: 0;
     height: 100%;
     background-color: #fff;
     width: 220px;
-    overflow: hidden;
-    transition: width 0.2s linear;
+    overflow: auto;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-}
-
-.li-menu {
-    margin-left: 5px;
 }
 
 .icon-menu {
@@ -44,17 +40,21 @@ a:link {
     text-decoration: none;
 }
 
+.menu-title {
+    font-size: 25px;
+}
+
 .fas {
     position: relative;
     height: 40px;
     top: 14px;
-    font-size: 25px;
+    font-size: 15px;
     text-align: center;
     color: #eee;
 }
 
 .nav-items {
-    font-size: 18px;
+    font-size: 12px;
     position: relative;
     top: 12px;
     margin-left: 10px;
@@ -64,14 +64,12 @@ a:link {
 .font-menu {
     font-family: "Audiowide", sans-serif;
     font-size: 30px;
-    margin-top: 45%;
-    margin-right: 50px;
+    margin-top: 50%;
+    margin-left: 13px;
     color: #eee;
 }
 
 .font-emo {
-    font-size: 30px;
-    margin-top: 0;
     margin-right: 50px;
     color: #eee;
 }
@@ -81,11 +79,30 @@ a:link {
 }
 
 .pd-menu {
-    padding-right: 50px;
+    padding-top: 10px;
+    padding-right: 35px;
 }
 
 .bg-list {
     padding-bottom: 7px;
     background-color: grey;
     border-radius: 20px;
+}
+
+/* ปรับลักษณะของ scrollbar */
+::-webkit-scrollbar {
+    width: 8px; /* กำหนดความกว้างของ scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* กำหนดสีของส่วนตัวของ scrollbar */
+    border-radius: 4px; /* กำหนดรูปร่างของส่วนตัวของ scrollbar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* กำหนดสีของส่วนตัวของ scrollbar เมื่อเมาส์ชี้ไป */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* กำหนดสีของส่วนที่หมุนทวน */
 }

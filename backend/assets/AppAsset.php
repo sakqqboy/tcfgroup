@@ -33,8 +33,11 @@ class AppAsset extends AssetBundle
         'js/delete_position.js',
         'js/delete_team.js',
         'js/delete_teamposition.js',
+        'js/delete_content_branch.js',
+        'js/delete_content_branch_detail.js',
         'js/member.js',
         'js/team_select.js',
+        'js/delete_member_type.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

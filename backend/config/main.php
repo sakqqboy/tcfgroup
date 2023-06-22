@@ -60,10 +60,22 @@ return [
                 'content/default/view-content-detail/<hash>' => 'content/default/view-content-detail',
                 'content/default/create-content-detail/<hash>' => 'content/default/create-content-detail',
                 'content/default/update-content-detail/<hash>' => 'content/default/update-content-detail',
+                //contentbranch
+                'content/default/view-content-branch/<hash>' => 'content/default/view-content-branch',
+                'content/default/update-content-branch/<hash>' => 'content/default/update-content-branch',
+                'content/default/content-branch-result/<hash>' => 'content/default/content-branch-result',
+                //contentbranchdetail
+                'content/default/content-branch-detail/<hash>' => 'content/default/content-branch-detail',
+                'content/default/create-content-branch-detail/<hash>' => 'content/default/create-content-branch-detail',
+                'content/default/view-content-branch-detail/<hash>' => 'content/default/view-content-branch-detail',
+                'content/default/update-content-branch-detail/<hash>' => 'content/default/update-content-branch-detail',
                 //member
                 'member/default/view-member/<hash>' => 'member/default/view-member',
                 'member/default/update-member/<hash>' => 'member/default/update-member',
                 'member/default/search-result/<hash>' => 'member/default/search-result',
+                //membertype
+                'member/default/view-member-type/<hash>' => 'member/default/view-member-type',
+                'member/default/update-member-type/<hash>' => 'member/default/update-member-type',
                 //branch
                 'masterdata/branch/view-branch/<hash>' => 'masterdata/branch/view-branch',
                 'masterdata/branch/update-branch/<hash>' => 'masterdata/branch/update-branch',

@@ -146,8 +146,27 @@ $form = ActiveForm::begin([
                     ?>
                 </select>
             </div>
-
-
+            <div class="col-lg-12 border">
+                <div class="row">
+                    <div class="font-body label-input h4">
+                        TYPE
+                    </div>
+                    <?php
+                    if(isset($memberType) && count($memberType)>0){
+                        foreach($memberType as $type):?>
+                    <div class="col-lg-2">
+                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="memberType[]" value="<?=$type['memberTypeId']?>">
+                        <label class="form-check-label" for="inlineCheckbox1"><?=$type['memberTypeName']?></label>
+                    </div>
+                        <?php
+                        endforeach;
+                    ?>
+                  
+                <?php
+                    }
+                ?>
+                </div>
+            </div>
             <div class="col-lg-12 text-end">
                 <button type="submit" class="btn btn-success font-button mb-3">Submit</button>
             </div>

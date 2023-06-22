@@ -25,12 +25,17 @@ class PositionController extends Controller
 
     public function actionPosition()
     {
-        $position = Position::find() -> where(["status" => 1]) -> asArray() -> orderBy('branchId, positionName') -> all();
+        $position = Position::find() 
+        -> where(["status" => 1]) 
+        -> asArray() 
+        -> orderBy('branchId, positionName') 
+        -> all();
 
         $branchs = Branch::find()->where("status=1")
         -> orderBy('branchName')
         -> asArray()
         -> all();
+        
         return $this->render('position', ["position" => $position, "branchs" => $branchs]);
 
     }

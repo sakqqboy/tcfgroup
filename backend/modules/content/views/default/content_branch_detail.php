@@ -5,20 +5,20 @@
 <div class="col-lg-12">
 <div class="row">
         <div class="col-lg-12 mt-4 text-center font-title">
-            Content Detail
+            Content Branch Detail
         </div>
     </div>
     <div class="row">
         <div class="col-6 text-begin mt-4">
-            <a class="btn btn-secondary buttons-size" href="<?=Yii::$app->homeUrl.'content/default/content'?>">
+            <a class="btn btn-secondary buttons-size" href="<?=Yii::$app->homeUrl.'content/default/content-branch'?>">
                 <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
                 Back
             </a>
         </div>
         <div class="col-6 text-end mt-4">
-            <a class="btn btn-success buttons-size" href="<?=Yii::$app->homeUrl.'content/default/create-content-detail/'. ModelMaster::encodeParams(['contentId' => $contentId])?>">
+            <a class="btn btn-success buttons-size" href="<?=Yii::$app->homeUrl.'content/default/create-content-branch-detail/'. ModelMaster::encodeParams(['contentBranchId' => $contentBranchId])?>">
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                Create content
+                Create contentdetail
             </a>
         </div>
     </div><br>
@@ -37,11 +37,11 @@
 
                                               
 
-                if(isset($contentDetail)){
+                if(isset($contentBranchDetail)){
                     $i=1;
-                    foreach ($contentDetail as $x) :
+                    foreach ($contentBranchDetail as $x) :
             ?>
-            <tr id="content-detail-<?= $x['contentDetailId']?>">
+            <tr id="contentbranchdetail-<?= $x['contentBranchDetailId']?>">
                 <td><?= $i ?></td>
                 <td><?= $x["title"] ?></td>
                 <td>
@@ -55,13 +55,13 @@
                 </td>
                 <td><?= $x["url"] ?></td>
                 <td width="15%">
-                    <a class="btn btn-primary bt-size" href="<?=Yii::$app->homeUrl.'content/default/view-content-detail/' . ModelMaster::encodeParams(["contentDetailId" => $x['contentDetailId']])?>">
+                    <a class="btn btn-primary bt-size" href="<?=Yii::$app->homeUrl.'content/default/view-content-branch-detail/' . ModelMaster::encodeParams(["contentBranchDetailId" => $x['contentBranchDetailId']])?>">
                         <i class="fa fa-eye" aria-hidden="true"></i>
                     </a>
-                    <a class="btn btn-warning bt-size" href="<?=Yii::$app->homeUrl.'content/default/update-content-detail/' . ModelMaster::encodeParams(["contentDetailId" => $x['contentDetailId']])?>">
+                    <a class="btn btn-warning bt-size" href="<?=Yii::$app->homeUrl.'content/default/update-content-branch-detail/' . ModelMaster::encodeParams(["contentBranchDetailId" => $x['contentBranchDetailId']])?>">
                         <i class="fa fa-pencil" aria-hidden="true"></i>
                     </a>
-                    <a class="btn btn-danger bt-size" href="javascript:deleteContentDetail(<?= $x['contentDetailId'] ?>)">
+                    <a class="btn btn-danger bt-size" href="javascript:deleteContentBranchDetail(<?= $x['contentBranchDetailId'] ?>)">
                             <i class="fa fa-trash" aria-hidden="true"></i>
                     </a>
                 </td>

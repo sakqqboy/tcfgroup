@@ -2,11 +2,15 @@
 
 namespace backend\modules\content\controllers;
 
+use backend\models\tokyoconsulting\Branch;
 use backend\models\tokyoconsulting\Content;
+use backend\models\tokyoconsulting\ContentBranch;
+use backend\models\tokyoconsulting\ContentBranchDetail;
 use backend\models\tokyoconsulting\ContentDetail;
 use common\helpers\Path;
 use common\models\ModelMaster;
 use Yii;
+use yii\db\Expression;
 use yii\web\Controller;
 use yii\web\UploadedFile;
 
@@ -95,7 +99,12 @@ class DefaultController extends Controller
     {
         $param = ModelMaster::decodeParams($hash);
         $contentId = $param["contentId"];
-        $contentDetail = ContentDetail::find() -> where(["contentId" => $contentId])-> asArray() -> all();
+
+        $contentDetail = ContentDetail::find() 
+        -> where(["contentId" => $contentId])
+        -> asArray() 
+        -> all();
+
         return $this->render('content_detail', ["contentDetail" => $contentDetail, "contentId" => $contentId]);
     }
 
@@ -107,7 +116,8 @@ class DefaultController extends Controller
             "contentId"=> $contentId
         ]);
     }
-    public function actionSaveCreateContentDetail() {
+    public function actionSaveCreateContentDetail() 
+    {
         if(isset($_POST["contentId"])) {
             $contentDetail = new ContentDetail();
             $contentDetail -> contentId = $_POST["contentId"];
@@ -205,5 +215,258 @@ class DefaultController extends Controller
             // return $this->render('update', ["members" => $members]);
         }
         return json_encode($res);
+    }
+
+    public function actionContentBranch()
+    {
+        $contentbranch = ContentBranch::find() 
+        -> asArray() 
+        -> all();
+
+        $branchs = Branch::find()->where("status=1")
+        -> orderBy('branchName')
+        -> asArray()
+        -> all();
+
+        return $this->render('content_branch', ["contentbranch" => $contentbranch, "branchs" => $branchs]);
+    }
+
+    public function actionCreateContentBranch()
+    {
+        if(isset($_POST["contentname"])) {
+            $contentbranch = new ContentBranch();
+            $contentbranch -> branchId = $_POST["branchid"];
+            $contentbranch -> contentName = $_POST["contentname"];
+            $contentbranch -> title = $_POST["title"];
+            $contentbranch -> detail = $_POST["detail"];
+            $contentbranch -> createDateTime = new Expression('NOW()');
+
+            if($contentbranch -> save(false)) {
+                return $this->redirect(Yii::$app->homeUrl.'content/default/content-branch');
+            }
+        }
+
+        $branchs = Branch::find() 
+        -> where("status=1") 
+        -> orderBy('branchName') 
+        -> asArray() 
+        -> all();
+
+        return $this->render('create_content_branch', ["branchs" => $branchs]);
+    }
+    public function actionViewContentBranch($hash)
+    {
+        $param = ModelMaster::decodeParams($hash);
+        $contentBranchId = $param["contentBranchId"];
+
+        $contentbranch = ContentBranch::find() 
+        -> where(["contentBranchId" => $contentBranchId]) 
+        -> one();
+
+        return $this->render('view_content_branch', ["contentbranch" => $contentbranch]);
+    }
+
+    public function actionUpdateContentBranch($hash)
+    {
+        $param = ModelMaster::decodeParams($hash);
+        $contentBranchId = $param["contentBranchId"];
+        $contentbranch = ContentBranch::find()
+        -> where(["contentBranchId" => $contentBranchId])
+        -> one();
+
+        $branchs = Branch::find() 
+        -> where("status=1") 
+        -> orderBy('branchName') 
+        -> asArray() 
+        -> all();
+
+        return $this->render('update_content_branch', ["contentbranch" => $contentbranch, "branchs" => $branchs]);
+    }
+
+    public function actionSaveContentBranch()
+    {
+        if (Yii::$app->request->isPost) {
+            $contentBranchId = Yii::$app->request->post("contentBranchId");
+            $contentbranch = ContentBranch::find()->where(["contentBranchId" => $contentBranchId])->one();
+            if (isset($contentbranch) && !empty($contentbranch)) {
+                $contentbranch -> branchId = $_POST["branchid"];
+                $contentbranch -> contentName = $_POST["contentname"];
+                $contentbranch -> title = $_POST["title"];
+                $contentbranch -> detail = $_POST["detail"];
+                $contentbranch -> updateDateTime = new Expression('NOW()');
+
+                if ($contentbranch->save(false)) {
+                    return $this->redirect(Yii::$app->homeUrl . 'content/default/content-branch');
+                }
+            }
+        }
+    }
+    public function actionDeleteContentBranch()
+    {
+        $res["status"] = false;
+        $contentBranchId = $_POST["contentBranchId"];
+        if($contentBranchId) {
+            $contentBranchId = ContentBranch::find() -> where(["contentBranchId" => $contentBranchId]) -> one();
+            if($contentBranchId -> delete()) {
+                $res["status"] = true;
+            }
+            // return $this->render('update', ["members" => $members]);
+        }
+        return json_encode($res);
+    }
+    public function actionContentBranchDetail($hash)
+    {
+        $param = ModelMaster::decodeParams($hash);
+        $contentBranchId = $param["contentBranchId"];
+        
+        $contentBranchDetail = ContentBranchDetail::find() 
+        -> where(["contentBranchId" => $contentBranchId])
+        -> asArray() 
+        -> all();
+
+        return $this->render('content_branch_detail', ["contentBranchDetail" => $contentBranchDetail, "contentBranchId" => $contentBranchId]);
+    }
+
+    public function actionCreateContentBranchDetail($hash)
+    {
+        $param = ModelMaster::decodeParams($hash);
+        $contentBranchId = $param["contentBranchId"];
+
+        return $this->render('create_content_branch_detail',["contentBranchId"=> $contentBranchId]);
+    }
+    public function actionSaveCreateContentBranchDetail() 
+    {
+        if(isset($_POST["contentBranchId"])) {
+            $contentBranchDetail = new ContentBranchDetail();
+            $contentBranchDetail -> contentBranchId = $_POST["contentBranchId"];
+            $contentBranchDetail -> title = $_POST["title"];
+            $contentBranchDetail -> detail = $_POST["detail"];
+            $contentBranchDetail -> detail2 = $_POST["detail2"];
+            $contentBranchDetail -> detail3 = $_POST["detail3"];
+            $contentBranchDetail -> detail4 = $_POST["detail4"];
+            $contentBranchDetail -> detail5 = $_POST["detail5"];
+            $contentBranchDetail -> detail6 = $_POST["detail6"];
+            $contentBranchDetail -> detail7 = $_POST["detail7"];
+            $contentBranchDetail -> url = $_POST["url"];
+            $contentBranchDetail -> createDatetime = new Expression('NOW()');
+
+
+            $imageObj = UploadedFile::getInstanceByName("image");
+            if (isset($imageObj) && !empty($imageObj)) {
+                $urlFolder = Path::getHost() . 'image/contentbranchdetail/';
+                if (!file_exists($urlFolder)) {
+                    mkdir($urlFolder, 0777, true);
+                }
+                $file = $imageObj->name;
+                $filenameArray = explode('.', $file);
+                $countArrayFile = count($filenameArray);
+                $fileName = Yii::$app->security->generateRandomString(10) . '.' . $filenameArray[$countArrayFile - 1];
+                $pathSave = $urlFolder . $fileName;
+                if ($imageObj->saveAs($pathSave)) {
+                    $contentBranchDetail->image = 'image/contentbranchdetail/' . $fileName;
+                }
+            }
+            if($contentBranchDetail -> save(false)) {
+                return $this -> redirect(Yii::$app->homeUrl . 'content/default/content-branch-detail/'. ModelMaster::encodeParams(["contentBranchId" => $_POST["contentBranchId"]]));
+            }
+        }
+    }
+    public function actionViewContentBranchDetail($hash)
+    {
+        $param = ModelMaster::decodeParams($hash);
+        $contentBranchDetailId = $param["contentBranchDetailId"];
+        
+        $contentBranchDetail = ContentBranchDetail::find() 
+        -> where(["contentBranchDetailId" => $contentBranchDetailId]) 
+        -> one();
+
+        return $this->render('view_content_branch_detail', ["contentBranchDetail" => $contentBranchDetail]);
+    }
+    public function actionUpdateContentBranchDetail($hash)
+    {
+        $param = ModelMaster::decodeParams($hash);
+        $contentBranchDetailId = $param["contentBranchDetailId"];
+        
+        $contentBranchDetail  = ContentBranchDetail::find() 
+        -> where(["contentBranchDetailId" => $contentBranchDetailId]) 
+        -> one();
+        
+        return $this->render('update_content_branch_detail', ["contentBranchDetail" => $contentBranchDetail]);
+    }
+    public function actionSaveUpdateBranchDetail()
+    {
+        if(isset($_POST["contentBranchDetailId"])) {
+            $contentBranchDetail = ContentBranchDetail::find() 
+            -> where(["contentBranchDetailId" => $_POST["contentBranchDetailId"]]) 
+            -> one();
+
+            $contentBranchDetail -> title = $_POST["title"];
+            $contentBranchDetail -> detail = $_POST["detail1"];
+            $contentBranchDetail -> detail2 = $_POST["detail2"];
+            $contentBranchDetail -> detail3 = $_POST["detail3"];
+            $contentBranchDetail -> detail4 = $_POST["detail4"];
+            $contentBranchDetail -> detail5 = $_POST["detail5"];
+            $contentBranchDetail -> detail6 = $_POST["detail6"];
+            $contentBranchDetail -> detail7 = $_POST["detail7"];
+            $contentBranchDetail -> url = $_POST["url"];
+            $contentBranchDetail -> createDatetime = new Expression('NOW()');
+
+            $imageObj = UploadedFile::getInstanceByName("image");
+            if (isset($imageObj) && !empty($imageObj)) {
+                $urlFolder = Path::getHost() . 'image/contentdetail/';
+                if (!file_exists($urlFolder)) {
+                    mkdir($urlFolder, 0777, true);
+                }
+                $file = $imageObj->name;
+                $filenameArray = explode('.', $file);
+                $countArrayFile = count($filenameArray);
+                $fileName = Yii::$app->security->generateRandomString(10) . '.' . $filenameArray[$countArrayFile - 1];
+                $pathSave = $urlFolder . $fileName;
+                if ($imageObj->saveAs($pathSave)) {
+                    $contentBranchDetail->image = 'image/contentdetail/' . $fileName;
+                }
+            }
+            if($contentBranchDetail -> save(false)) {
+                return $this -> redirect(Yii::$app->homeUrl . 'content/default/content-branch-detail/'. ModelMaster::encodeParams(["contentBranchId" => $contentBranchDetail -> contentBranchId]));
+            }
+        }
+    }
+    public function actionDeleteContentBranchDetail()
+    {
+        $res["status"] = false;
+        $contentBranchDetailId = $_POST["contentBranchDetailId"];
+        if($contentBranchDetailId) {
+            $contentBranchDetailId = ContentBranchDetail::find() -> where(["contentBranchDetailId" => $contentBranchDetailId]) -> one();
+            if($contentBranchDetailId -> delete()) {
+                $res["status"] = true;
+            }
+            // return $this->render('update', ["members" => $members]);
+        }
+        return json_encode($res);
+    }
+    public function actionSearchContentBranch()
+    {  
+        return $this->redirect('content-branch-result/'.ModelMaster::encodeParams([
+        "branchId" => $_POST["branchId"],
+        ]));
+    }
+
+    public function actionContentBranchResult($hash){
+
+        $param = ModelMaster::decodeParams($hash);
+        $contentbranch = ContentBranch::find()
+        -> where(['branchId' => $param["branchId"]])
+        -> all();
+
+        $branchs = Branch::find() -> where("status=1") 
+        -> orderBy('branchName') 
+        -> asArray() 
+        -> all();
+
+        return $this -> render('content_branch',[
+        "contentbranch" => $contentbranch,
+        "branchs" => $branchs,
+        "branchId" => $param["branchId"],
+        ]);
     }
 }

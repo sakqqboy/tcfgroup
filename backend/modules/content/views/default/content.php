@@ -63,7 +63,7 @@
                 }else { 
             ?>
                 <tr>
-                    <td colspan="5"> No data</td>
+                    <td colspan="12"> No data</td>
                 </tr>
                 <?php
                 }

@@ -2,6 +2,8 @@
     $this -> title = 'Member';
 
 use backend\models\tokyoconsulting\Branch;
+use backend\models\tokyoconsulting\MemberHasType;
+use backend\models\tokyoconsulting\MemberType;
 use backend\models\tokyoconsulting\Position;
 use backend\models\tokyoconsulting\Section;
 use backend\models\tokyoconsulting\Team;
@@ -156,6 +158,7 @@ use yii\bootstrap5\ActiveForm;
                 <th>Section</th>
                 <th>Position</th>
                 <th>Team</th>
+                <th>Type</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -173,6 +176,7 @@ use yii\bootstrap5\ActiveForm;
                 <td><?= Section::sectionName($x['sectionId']) ?></td>
                 <td><?= Position::positionName($x['positionId']) ?></td>
                 <td><?= Team::teamName($x['teamId']) ?></td>
+                <td><?= MemberHasType::typeName($x['memberId']) ?></td>
                 <td width="15%">
                     <a class="btn btn-primary bt-size"
                         href="<?=Yii::$app->homeUrl.'member/default/view-member/' . ModelMaster::encodeParams(["memberId" => $x['memberId']])?>">

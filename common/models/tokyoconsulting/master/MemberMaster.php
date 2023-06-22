@@ -22,6 +22,10 @@ use Yii;
     * @property string $email
     * @property string $address
     * @property integer $branchId
+    * @property integer $sectionId
+    * @property integer $positionId
+    * @property integer $teamId
+    * @property integer $teamPositionId
     * @property integer $status
     * @property string $createDateTime
     * @property string $updateDateTime
@@ -42,10 +46,10 @@ return 'member';
 public function rules()
 {
 return [
-            [['memberFirstName', 'memberLastName', 'username', 'email', 'branchId'], 'required'],
+            [['memberFirstName', 'memberLastName', 'username', 'email', 'branchId', 'sectionId', 'positionId', 'teamId'], 'required'],
             [['birthDate', 'createDateTime', 'updateDateTime'], 'safe'],
             [['address'], 'string'],
-            [['branchId'], 'integer'],
+            [['branchId', 'sectionId', 'positionId', 'teamId', 'teamPositionId'], 'integer'],
             [['memberNo', 'memberFirstName', 'memberLastName', 'email'], 'string', 'max' => 200],
             [['prefix'], 'string', 'max' => 45],
             [['memberNickName', 'telephoneNumber'], 'string', 'max' => 100],
@@ -77,6 +81,10 @@ return [
     'email' => 'Email',
     'address' => 'Address',
     'branchId' => 'Branch ID',
+    'sectionId' => 'Section ID',
+    'positionId' => 'Position ID',
+    'teamId' => 'Team ID',
+    'teamPositionId' => 'Team Position ID',
     'status' => 'Status',
     'createDateTime' => 'Create Date Time',
     'updateDateTime' => 'Update Date Time',

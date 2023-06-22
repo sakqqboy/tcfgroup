@@ -1,5 +1,5 @@
 <?php
-    $this -> title = 'Create Position';
+    $this -> title = 'Create Content';
     use yii\bootstrap5\ActiveForm;
 
     $form = ActiveForm::begin([
@@ -13,20 +13,28 @@
     <div class="row mt-3">
         <div class="col-lg-12 mt-4 border border-dark bd-position">
             <div class="col-lg-12 text-center font-title">
-                CREATE POSITION<br>
+                CREATE CONTENT<br>
             </div>
             <div class="padding">
                 <div class="col-lg-12 font-body h4">
-                    POSITION<br>
-                    <input type="text" name="positionname" class="font-input form-control col-lg-6" required>
+                    CONTENT NAME<br>
+                    <input type="text" name="contentname" id="member-address" class="font-input form-control col-lg-6">
+                </div>
+                <div class="col-lg-12 font-body h4">
+                    TITLE<br>
+                    <input type="text" name="title" id="member-address" class="font-input form-control col-lg-6">
+                </div>
+                <div class="col-lg-12 font-body h4">
+                    DETAIL<br>
+                    <textarea class="font-input form-control" name="detail" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
                 <div class="col-lg-12 font-body h4">
                     BRANCH<br>
                     <select class="font-input form-control col-lg-6" name="branchid" required>
                         <option value="">Please select your branch</option>
                         <?php 
-                            if(isset($branch) && count($branch) > 0) {
-                                foreach ($branch as $x) :
+                            if(isset($branchs) && count($branchs) > 0) {
+                                foreach ($branchs as $x) :
                         ?>
                         <option value="<?= $x['branchId'] ?>"><?= $x['branchName'] ?></option>
                         <?php 
@@ -35,15 +43,7 @@
                         ?>
                     </select>
                 </div>
-                <div class="col-lg-12 font-body h4">
-                    DETAIL<br>
-                    <textarea class="font-input form-control" name="positiondetail" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <div class="col-lg-12 font-body h4">
-                    LEVEL<br>
-                    <input type="text" name="level" class="font-input form-control col-lg-6" required>
-                </div>
-                <button type="submit" class="btn btn-success font-button" href="<?=Yii::$app->homeUrl.'masterdata/position/create-position'?>">Submit</button>
+                <button type="submit" class="btn btn-success font-button" href="<?=Yii::$app->homeUrl.'content/default/create-content-branch'?>">Submit</button>
                 <div class="col-lg-12">
                     <br>
                 </div>

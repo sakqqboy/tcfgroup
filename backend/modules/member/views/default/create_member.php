@@ -154,7 +154,7 @@ $form = ActiveForm::begin([
                     <?php
                     if(isset($memberType) && count($memberType)>0){
                         foreach($memberType as $type):?>
-                    <div class="col-lg-2">
+                    <div class="col-lg-4">
                         <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="memberType[]" value="<?=$type['memberTypeId']?>">
                         <label class="form-check-label" for="inlineCheckbox1"><?=$type['memberTypeName']?></label>
                     </div>

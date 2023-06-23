@@ -12,23 +12,23 @@ $form = ActiveForm::begin([
     'action' => Yii::$app->homeUrl . 'content/default/save-update'
 
 ]); ?>
-<div class="row mt-5">
-    <div class="col-lg-12 border border-dark bd-position">
+<div class="row col-lg-10 offset-1 pb-4">
+    <div class="ssa col-lg-12 mt-5 bd-position">
         <div class="col-lg-12 text-center font-title">
             UPDATE CONTENT<br>
         </div>
-        <div class="padding">
-            <div class="col-lg-12 font-body h4">
+        <div class="row col-lg-10 offset-1 mt-3">
+            <div class="font-topic col-lg-6 font-body h4">
                 CONTENT NAME<br>
                 <input type="text" name="contentname" id="member-address" class="font-input form-control col-lg-6"
                     value="<?= $content->contentName ?>">
             </div>
-            <div class="col-lg-12 font-body h4">
+            <div class="font-topic col-lg-6 font-body h4">
                 TITLE<br>
                 <input type="text" name="title" id="member-address" class="font-input form-control col-lg-6"
                     value="<?= $content->title ?>">
             </div>
-            <div class="col-lg-12 font-body h4">
+            <div class="font-topic col-lg-12 font-body h4">
                 DETAIL<br>
                 <textarea class="font-input form-control" name="detail" id="exampleFormControlTextarea1"
                     rows="3"><?= $content->detail ?></textarea>

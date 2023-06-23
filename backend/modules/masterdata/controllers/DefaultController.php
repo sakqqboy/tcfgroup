@@ -2,6 +2,7 @@
 
 namespace backend\modules\masterdata\controllers;
 
+use Yii;
 use yii\web\Controller;
 
 /**
@@ -15,6 +16,9 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         return $this->render('index');
     }
 }

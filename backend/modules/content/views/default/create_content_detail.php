@@ -11,6 +11,7 @@ $form = ActiveForm::begin([
     ],
     'action' => Yii::$app->homeUrl . 'content/default/save-create-content-detail'
 
+
 ]); ?>
 <div class="row mt-2 pb-5">
     <div class="topicbor col-lg-12 mt-4 bd-position">
@@ -54,6 +55,7 @@ $form = ActiveForm::begin([
                 <div class="font-topic-de col-lg-6">
                     URL
                     <textarea class="textar form-control" name="url" id="url" rows="2"></textarea>
+
                 </div>
             </div>
         </div>
@@ -69,5 +71,6 @@ $form = ActiveForm::begin([
     </div>
     <input type="hidden" name="contentId" value="<?= $contentId ?>">
 </div>
+
 
 <?php ActiveForm::end(); ?>

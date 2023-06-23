@@ -25,6 +25,10 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
+
         $content = Content::find()
             ->asArray()
             ->all();
@@ -32,12 +36,18 @@ class DefaultController extends Controller
     }
     public function actionContent()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $content = Content::find()->asArray()->all();
         return $this->render('content', ["content" => $content]);
     }
 
     public function actionCreateContent()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         if (isset($_POST["contentname"])) {
             $content = new Content();
             $content->contentName = $_POST["contentname"];
@@ -53,6 +63,9 @@ class DefaultController extends Controller
 
     public function actionViewContent($hash)
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $param = ModelMaster::decodeParams($hash);
         $contentId = $param["contentId"];
         $content = Content::find()->where(["contentId" => $contentId])->one();
@@ -61,6 +74,9 @@ class DefaultController extends Controller
 
     public function actionUpdateContent($hash)
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $param = ModelMaster::decodeParams($hash);
         $contentId = $param["contentId"];
         $content = Content::find()->where(["contentId" => $contentId])->one();
@@ -69,6 +85,9 @@ class DefaultController extends Controller
 
     public function actionSaveUpdate()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         if (isset($_POST["contentId"])) {
             $content = Content::find()->where(["contentId" => $_POST["contentId"]])->one();
             $content->contentName = $_POST["contentname"];
@@ -82,6 +101,9 @@ class DefaultController extends Controller
     }
     public function actionDeleteContent()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $res["status"] = false;
         $contentId = $_POST["contentId"];
         if ($contentId) {
@@ -96,6 +118,9 @@ class DefaultController extends Controller
 
     public function actionContentDetail($hash)
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $param = ModelMaster::decodeParams($hash);
         $contentId = $param["contentId"];
 
@@ -109,6 +134,9 @@ class DefaultController extends Controller
 
     public function actionCreateContentDetail($hash)
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $param = ModelMaster::decodeParams($hash);
         $contentId = $param["contentId"];
         return $this->render('create_content_detail', [
@@ -117,11 +145,14 @@ class DefaultController extends Controller
     }
     public function actionSaveCreateContentDetail()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         if (isset($_POST["contentId"])) {
             $contentDetail = new ContentDetail();
             $contentDetail->contentId = $_POST["contentId"];
             $contentDetail->title = $_POST["title"];
-            $contentDetail->detail = $_POST["detail"];
+            $contentDetail->detail = $_POST["detail1"];
             $contentDetail->detail2 = $_POST["detail2"];
             $contentDetail->detail3 = $_POST["detail3"];
             $contentDetail->detail4 = $_POST["detail4"];
@@ -153,6 +184,9 @@ class DefaultController extends Controller
 
     public function actionViewContentDetail($hash)
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $param = ModelMaster::decodeParams($hash);
         $contentDetailId = $param["contentDetailId"];
         $contentDetail = ContentDetail::find()->where(["contentDetailId" => $contentDetailId])->one();
@@ -161,6 +195,9 @@ class DefaultController extends Controller
 
     public function actionUpdateContentDetail($hash)
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $param = ModelMaster::decodeParams($hash);
         $contentDetailId = $param["contentDetailId"];
         $contentDetail  = ContentDetail::find()->where(["contentDetailId" => $contentDetailId])->one();
@@ -169,6 +206,9 @@ class DefaultController extends Controller
 
     public function actionSaveUpdateDetail()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         if (isset($_POST["contentDetailId"])) {
             $contentDetail = ContentDetail::find()->where(["contentDetailId" => $_POST["contentDetailId"]])->one();
             $contentDetail->title = $_POST["title"];
@@ -205,6 +245,9 @@ class DefaultController extends Controller
 
     public function actionDeleteContentDetail()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $res["status"] = false;
         $contentDetailId = $_POST["contentDetailId"];
         if ($contentDetailId) {
@@ -219,6 +262,9 @@ class DefaultController extends Controller
 
     public function actionContentBranch()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $contentbranch = ContentBranch::find()
             ->asArray()
             ->all();
@@ -233,6 +279,9 @@ class DefaultController extends Controller
 
     public function actionCreateContentBranch()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         if (isset($_POST["contentname"])) {
             $contentbranch = new ContentBranch();
             $contentbranch->branchId = $_POST["branchid"];
@@ -256,6 +305,9 @@ class DefaultController extends Controller
     }
     public function actionViewContentBranch($hash)
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $param = ModelMaster::decodeParams($hash);
         $contentBranchId = $param["contentBranchId"];
 
@@ -268,6 +320,9 @@ class DefaultController extends Controller
 
     public function actionUpdateContentBranch($hash)
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $param = ModelMaster::decodeParams($hash);
         $contentBranchId = $param["contentBranchId"];
         $contentbranch = ContentBranch::find()
@@ -285,6 +340,9 @@ class DefaultController extends Controller
 
     public function actionSaveContentBranch()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         if (Yii::$app->request->isPost) {
             $contentBranchId = Yii::$app->request->post("contentBranchId");
             $contentbranch = ContentBranch::find()->where(["contentBranchId" => $contentBranchId])->one();
@@ -303,6 +361,9 @@ class DefaultController extends Controller
     }
     public function actionDeleteContentBranch()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $res["status"] = false;
         $contentBranchId = $_POST["contentBranchId"];
         if ($contentBranchId) {
@@ -316,6 +377,9 @@ class DefaultController extends Controller
     }
     public function actionContentBranchDetail($hash)
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $param = ModelMaster::decodeParams($hash);
         $contentBranchId = $param["contentBranchId"];
 
@@ -329,6 +393,9 @@ class DefaultController extends Controller
 
     public function actionCreateContentBranchDetail($hash)
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $param = ModelMaster::decodeParams($hash);
         $contentBranchId = $param["contentBranchId"];
 
@@ -336,6 +403,9 @@ class DefaultController extends Controller
     }
     public function actionSaveCreateContentBranchDetail()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         if (isset($_POST["contentBranchId"])) {
             $contentBranchDetail = new ContentBranchDetail();
             $contentBranchDetail->contentBranchId = $_POST["contentBranchId"];
@@ -373,6 +443,9 @@ class DefaultController extends Controller
     }
     public function actionViewContentBranchDetail($hash)
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $param = ModelMaster::decodeParams($hash);
         $contentBranchDetailId = $param["contentBranchDetailId"];
 
@@ -384,6 +457,9 @@ class DefaultController extends Controller
     }
     public function actionUpdateContentBranchDetail($hash)
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $param = ModelMaster::decodeParams($hash);
         $contentBranchDetailId = $param["contentBranchDetailId"];
 
@@ -395,6 +471,9 @@ class DefaultController extends Controller
     }
     public function actionSaveUpdateBranchDetail()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         if (isset($_POST["contentBranchDetailId"])) {
             $contentBranchDetail = ContentBranchDetail::find()
                 ->where(["contentBranchDetailId" => $_POST["contentBranchDetailId"]])
@@ -433,6 +512,9 @@ class DefaultController extends Controller
     }
     public function actionDeleteContentBranchDetail()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $res["status"] = false;
         $contentBranchDetailId = $_POST["contentBranchDetailId"];
         if ($contentBranchDetailId) {
@@ -446,6 +528,9 @@ class DefaultController extends Controller
     }
     public function actionSearchContentBranch()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         return $this->redirect('content-branch-result/' . ModelMaster::encodeParams([
             "branchId" => $_POST["branchId"],
         ]));
@@ -453,6 +538,9 @@ class DefaultController extends Controller
 
     public function actionContentBranchResult($hash)
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
 
         $param = ModelMaster::decodeParams($hash);
         $contentbranch = ContentBranch::find()

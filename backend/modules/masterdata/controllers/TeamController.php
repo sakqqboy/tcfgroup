@@ -21,46 +21,58 @@ class TeamController extends Controller
      */
     public function actionIndex()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         return $this->render('index');
     }
 
     public function actionTeam()
     {
-        $team = Team::find() 
-        -> where(["status" => 1]) 
-        -> asArray() 
-        -> orderBy('branchId, sectionId')
-        -> all();
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
+        $team = Team::find()
+            ->where(["status" => 1])
+            ->asArray()
+            ->orderBy('branchId, sectionId')
+            ->all();
 
         $branchs = Branch::find()->where("status=1")
-        -> orderBy('branchName')
-        -> asArray()
-        -> all();
+            ->orderBy('branchName')
+            ->asArray()
+            ->all();
 
         return $this->render('team', ["team" => $team, "branchs" => $branchs]);
     }
 
     public function actionCreateTeam()
     {
-        if(isset($_POST["teamname"])) {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
+        if (isset($_POST["teamname"])) {
             $team = new Team();
-            $team -> teamName = $_POST["teamname"];
-            $team -> branchId = $_POST["branchid"];
-            $team -> sectionId = $_POST["sectionid"];
-            $team -> teamDetail = $_POST["teamdetail"];
-            $team -> createDateTime = new Expression('NOW()');
+            $team->teamName = $_POST["teamname"];
+            $team->branchId = $_POST["branchid"];
+            $team->sectionId = $_POST["sectionid"];
+            $team->teamDetail = $_POST["teamdetail"];
+            $team->createDateTime = new Expression('NOW()');
 
-            if($team -> save(false)) {
-                return $this->redirect(Yii::$app->homeUrl.'masterdata/team/team');
+            if ($team->save(false)) {
+                return $this->redirect(Yii::$app->homeUrl . 'masterdata/team/team');
             }
         }
-        $branch = Branch::find() -> where("status=1") -> orderBy('branchName') -> asArray() -> all();
-        $section = Section::find() -> where("status=1") -> orderBy('sectionName') -> asArray() -> all();
+        $branch = Branch::find()->where("status=1")->orderBy('branchName')->asArray()->all();
+        $section = Section::find()->where("status=1")->orderBy('sectionName')->asArray()->all();
         return $this->render('create_team', ["branch" => $branch, "section" => $section]);
     }
 
     public function actionFindBranchInfo()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $branchId = $_POST["branchId"];
 
 
@@ -82,6 +94,9 @@ class TeamController extends Controller
 
     public function actionViewTeam($hash)
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $param = ModelMaster::decodeParams($hash);
         $teamId = $param["teamId"];
         $team = Team::findOne(["teamId" => $teamId]);
@@ -90,25 +105,31 @@ class TeamController extends Controller
 
     public function actionUpdateTeam($hash)
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $param = ModelMaster::decodeParams($hash);
         $teamId = $param["teamId"];
         $team = Team::find()->where(["teamId" => $teamId])->one();
-        $branch = Branch::find() -> where("status = 1") -> orderBy('branchName') -> asArray() -> all();
-        $section = Section::find() -> where("status = 1 and branchId = $team->branchId") -> orderBy('sectionName') -> asArray() -> all();
+        $branch = Branch::find()->where("status = 1")->orderBy('branchName')->asArray()->all();
+        $section = Section::find()->where("status = 1 and branchId = $team->branchId")->orderBy('sectionName')->asArray()->all();
         return $this->render('update_team', ["team" => $team, "branch" => $branch, "section" => $section]);
     }
 
     public function actionSaveTeam()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         if (Yii::$app->request->isPost) {
             $teamId = Yii::$app->request->post("teamId");
             $team = Team::find()->where(["teamId" => $teamId])->one();
             if (isset($team) && !empty($team)) {
-                $team -> teamName = $_POST["teamname"];
-                $team -> branchId = $_POST["branchid"];
-                $team -> sectionId = $_POST["sectionid"];
-                $team -> teamDetail = $_POST["teamdetail"];
-                $team -> updateDateTime = new Expression('NOW()');
+                $team->teamName = $_POST["teamname"];
+                $team->branchId = $_POST["branchid"];
+                $team->sectionId = $_POST["sectionid"];
+                $team->teamDetail = $_POST["teamdetail"];
+                $team->updateDateTime = new Expression('NOW()');
 
                 if ($team->save(false)) {
                     return $this->redirect(Yii::$app->homeUrl . 'masterdata/team/team');
@@ -118,6 +139,9 @@ class TeamController extends Controller
     }
     public function actionDeleteTeam()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $res["status"] = false;
         $teamId = $_POST["teamId"];
         $team = Team::find()->where(["teamId" => $teamId])->one();
@@ -131,38 +155,44 @@ class TeamController extends Controller
     }
 
     public function actionSearchTeam()
-    {  
-        return $this->redirect('team-result/'.ModelMaster::encodeParams([
-        "branchId" => $_POST["branchId"],
-        "sectionId"=>$_POST["sectionId"],
-        "teamId"=>$_POST["teamId"],
+    {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
+        return $this->redirect('team-result/' . ModelMaster::encodeParams([
+            "branchId" => $_POST["branchId"],
+            "sectionId" => $_POST["sectionId"],
+            "teamId" => $_POST["teamId"],
         ]));
     }
-    public function actionTeamResult($hash){
-
+    public function actionTeamResult($hash)
+    {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $param = ModelMaster::decodeParams($hash);
         $team = Team::find()
-        -> where(['branchId' => $param["branchId"]])
-        -> andFilterWhere(["sectionId" => $param["sectionId"]])
-        -> all();
+            ->where(['branchId' => $param["branchId"]])
+            ->andFilterWhere(["sectionId" => $param["sectionId"]])
+            ->all();
 
-        $branchs = Branch::find() -> where("status=1") 
-        -> orderBy('branchName') 
-        -> asArray() 
-        -> all();
+        $branchs = Branch::find()->where("status=1")
+            ->orderBy('branchName')
+            ->asArray()
+            ->all();
 
-        $section = Section::find()->where(["status" => 1,"branchId" => $param['branchId']])
-        -> orderBy('sectionName')
-        -> asArray()
-        -> all();
+        $section = Section::find()->where(["status" => 1, "branchId" => $param['branchId']])
+            ->orderBy('sectionName')
+            ->asArray()
+            ->all();
 
-        return $this -> render('team',[
-        "team" => $team,
-        "branchId" => $param["branchId"],
-        "sectionId" => $param["sectionId"],
-        "teamId" => $param["teamId"],
-        "branchs" => $branchs,
-        "section" => $section,
+        return $this->render('team', [
+            "team" => $team,
+            "branchId" => $param["branchId"],
+            "sectionId" => $param["sectionId"],
+            "teamId" => $param["teamId"],
+            "branchs" => $branchs,
+            "section" => $section,
         ]);
     }
 }

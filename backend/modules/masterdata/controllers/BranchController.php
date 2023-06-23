@@ -28,21 +28,27 @@ class BranchController extends Controller
 
     public function actionBranch()
     {
-        $branch = Branch::find() -> asArray() -> orderBy('branchName') -> all();
-        $dropdown = Branch::find() -> where("status=1") 
-        -> orderBy('branchName') 
-        -> asArray() 
-        -> all();
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
+        $branch = Branch::find()->asArray()->orderBy('branchName')->all();
+        $dropdown = Branch::find()->where("status=1")
+            ->orderBy('branchName')
+            ->asArray()
+            ->all();
         return $this->render('branch', ["branch" => $branch, "dropdown" => $dropdown]);
     }
 
     public function actionCreateBranch()
     {
-        if(isset($_POST["branchname"])) {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
+        if (isset($_POST["branchname"])) {
             $branch = new Branch();
-            $branch -> branchName = $_POST["branchname"];
-            $branch -> countryId = $_POST["countryid"];
-            
+            $branch->branchName = $_POST["branchname"];
+            $branch->countryId = $_POST["countryid"];
+
             $imageObj = UploadedFile::getInstanceByName("flag");
             if (isset($imageObj) && !empty($imageObj)) {
                 $urlFolder = Path::getHost() . 'image/branch/';
@@ -59,18 +65,21 @@ class BranchController extends Controller
                 }
             }
 
-            $branch -> createDateTime = new Expression('NOW()');
+            $branch->createDateTime = new Expression('NOW()');
 
-            if($branch -> save(false)) {
-                return $this->redirect(Yii::$app->homeUrl.'masterdata/branch/branch');
+            if ($branch->save(false)) {
+                return $this->redirect(Yii::$app->homeUrl . 'masterdata/branch/branch');
             }
         }
-        $country = Country::find() -> where("status=1") -> orderBy('countryName') -> asArray() -> all();
+        $country = Country::find()->where("status=1")->orderBy('countryName')->asArray()->all();
         return $this->render('create_branch', ["country" => $country]);
     }
 
     public function actionViewBranch($hash)
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $param = ModelMaster::decodeParams($hash);
         $branchId = $param["branchId"];
         $branch = Branch::findOne(["branchId" => $branchId]);
@@ -79,23 +88,29 @@ class BranchController extends Controller
 
     public function actionUpdateBranch($hash)
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $param = ModelMaster::decodeParams($hash);
         $branchId = $param["branchId"];
         $branch = Branch::find()->where(["branchId" => $branchId])->one();
-        $country = Country::find() -> where("status=1") -> orderBy('countryName') -> asArray() -> all();
+        $country = Country::find()->where("status=1")->orderBy('countryName')->asArray()->all();
         return $this->render('update_branch', ["branch" => $branch, "country" => $country]);
     }
 
     public function actionSaveBranch()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         if (Yii::$app->request->isPost) {
             $branchId = Yii::$app->request->post("branchId");
             $branch = Branch::find()->where(["branchId" => $branchId])->one();
             if (isset($branch) && !empty($branch)) {
-                $branch -> branchName = $_POST["branchname"];
-                $branch -> countryId = $_POST["countryid"];
-                $branch -> updateDateTime = new Expression('NOW()');
-            
+                $branch->branchName = $_POST["branchname"];
+                $branch->countryId = $_POST["countryid"];
+                $branch->updateDateTime = new Expression('NOW()');
+
                 $imageObj = UploadedFile::getInstanceByName("flag");
                 if (isset($imageObj) && !empty($imageObj)) {
                     $urlFolder = Path::getHost() . 'image/branch/';
@@ -119,6 +134,9 @@ class BranchController extends Controller
     }
     public function actionDeleteBranch()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $res["status"] = false;
         $branchId = $_POST["branchId"];
         $branch = Branch::find()->where(["branchId" => $branchId])->one();
@@ -131,28 +149,35 @@ class BranchController extends Controller
         return json_encode($res);
     }
     public function actionSearchBranch()
-    {  
-        return $this->redirect('branch-result/'.ModelMaster::encodeParams([
-        "branchId" => $_POST["branchId"],
+    {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
+        return $this->redirect('branch-result/' . ModelMaster::encodeParams([
+            "branchId" => $_POST["branchId"],
         ]));
     }
 
-    public function actionBranchResult($hash){
+    public function actionBranchResult($hash)
+    {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
 
         $param = ModelMaster::decodeParams($hash);
         $branch = Branch::find()
-        -> where(['branchId' => $param["branchId"]])
-        -> all();
+            ->where(['branchId' => $param["branchId"]])
+            ->all();
 
-        $dropdown = Branch::find() -> where("status=1") 
-        -> orderBy('branchName') 
-        -> asArray() 
-        -> all();
+        $dropdown = Branch::find()->where("status=1")
+            ->orderBy('branchName')
+            ->asArray()
+            ->all();
 
-        return $this -> render('branch',[
-        "branch" => $branch,
-        "dropdown" => $dropdown,
-        "branchId" => $param["branchId"]
+        return $this->render('branch', [
+            "branch" => $branch,
+            "dropdown" => $dropdown,
+            "branchId" => $param["branchId"]
         ]);
     }
 }

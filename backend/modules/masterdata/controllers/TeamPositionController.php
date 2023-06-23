@@ -19,24 +19,33 @@ class TeamPositionController extends Controller
      */
     public function actionIndex()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         return $this->render('index');
     }
 
     public function actionTeamPosition()
     {
-        $teamposition = TeamPosition::find() -> where(["status" => 1]) -> asArray() -> all();
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
+        $teamposition = TeamPosition::find()->where(["status" => 1])->asArray()->all();
         return $this->render('teamposition', ["teamposition" => $teamposition]);
     }
 
     public function actionCreateTeamPosition()
     {
-        if(isset($_POST["teampositionname"])) {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
+        if (isset($_POST["teampositionname"])) {
             $teamposition = new TeamPosition();
-            $teamposition -> status = 1;
-            $teamposition -> name = $_POST["teampositionname"];
-            $teamposition -> createDateTime = new Expression('NOW()');
-            if($teamposition -> save(false)) {
-                return $this->redirect(Yii::$app->homeUrl.'masterdata/team-position/team-position');
+            $teamposition->status = 1;
+            $teamposition->name = $_POST["teampositionname"];
+            $teamposition->createDateTime = new Expression('NOW()');
+            if ($teamposition->save(false)) {
+                return $this->redirect(Yii::$app->homeUrl . 'masterdata/team-position/team-position');
             }
         }
         return $this->render('create_teamposition');
@@ -44,6 +53,9 @@ class TeamPositionController extends Controller
 
     public function actionViewTeamPosition($hash)
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $param = ModelMaster::decodeParams($hash);
         $id = $param["id"];
         $teamposition = TeamPosition::findOne(["id" => $id]);
@@ -51,20 +63,26 @@ class TeamPositionController extends Controller
     }
     public function actionUpdateTeamPosition($hash)
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $param = ModelMaster::decodeParams($hash);
         $id = $param["id"];
-        $teamposition = TeamPosition::find() -> where(["id" => $id]) -> one();
+        $teamposition = TeamPosition::find()->where(["id" => $id])->one();
         return $this->render('update_teamposition', ["teamposition" => $teamposition]);
     }
 
     public function actionSaveTeamPosition()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         if (Yii::$app->request->isPost) {
             $id = Yii::$app->request->post("id");
             $teamposition = TeamPosition::find()->where(["id" => $id])->one();
             if (isset($teamposition) && !empty($teamposition)) {
-                $teamposition -> name = $_POST["teampositionname"];
-                $teamposition -> updateDateTime = new Expression('NOW()');
+                $teamposition->name = $_POST["teampositionname"];
+                $teamposition->updateDateTime = new Expression('NOW()');
 
                 if ($teamposition->save(false)) {
                     return $this->redirect(Yii::$app->homeUrl . 'masterdata/team-position/team-position');
@@ -74,6 +92,9 @@ class TeamPositionController extends Controller
     }
     public function actionDeleteTeamPosition()
     {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
         $res["status"] = false;
         $id = $_POST["id"];
         $teamposition = TeamPosition::find()->where(["id" => $id])->one();

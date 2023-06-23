@@ -27,74 +27,65 @@ $form = ActiveForm::begin([
             UPDATE MEMBER<br>
         </div>
         <div class="type-info mt-3">
-            PERSONAL INFORMATION<br>
+            Personal Information<br>
         </div>
         <div class="field-create">
             <div class="row mt-3">
                 <div class="col-lg-4 input-fields">
-                    PREFIX<br>
-                    <select class="input-data form-select" aria-label="Default select example" name="prefix"
-                        value="<?= $member->prefix ?>">
+                    Prefix<br>
+                    <select class="input-data form-select" aria-label="Default select example" name="prefix" value="<?= $member->prefix ?>" required>
                         <option selected>Please select your prefix</option>
                         <option value="1">Mr</option>
                         <option value="2">Mrs</option>
                     </select>
                 </div>
                 <div class="col-lg-4 input-fields">
-                    FIRSTNAME<br>
-                    <input type="text" name="firstname" class="input-data form-control"
-                        value="<?= $member->memberFirstName ?>">
+                    Firstname<br>
+                    <input type="text" name="firstname" class="input-data form-control" value="<?= $member->memberFirstName ?>" placeholder="Enter your firstname" required>
                 </div>
                 <div class="col-lg-4 input-fields">
-                    LASTNAME<br>
-                    <input type="text" name="lastname" class="input-data form-control"
-                        value="<?= $member->memberLastName ?>">
+                    Lastname<br>
+                    <input type="text" name="lastname" class="input-data form-control" value="<?= $member->memberLastName ?>" placeholder="Enter your lastname" required>
                 </div>
                 <div class="col-lg-4 input-fields mt-2">
-                    NICKNAME<br>
-                    <input type="text" name="nickname" class="input-data form-control"
-                        value="<?= $member->memberNickName ?>">
+                    Nickname<br>
+                    <input type="text" name="nickname" class="input-data form-control" value="<?= $member->memberNickName ?>" placeholder="Enter your nickname" required>
                 </div>
                 <div class="col-lg-4 input-fields mt-2">
-                    BIRTHDATE<br>
-                    <input type="date" name="birthdate" class="input-data form-control"
-                        value="<?= $member->birthDate ?>">
+                    Date of Birth<br>
+                    <input type="date" name="birthdate" class="input-data form-control" value="<?= $member->birthDate ?>" placeholder="Enter your birthdate" required>
                 </div>
                 <div class="col-lg-4 input-fields mt-2">
-                    GENDER<br>
-                    <select class="input-data form-select" aria-label="Default select example" name="gender"
-                        value="<?= $member->gender ?>">
+                    Gender<br>
+                    <select class="input-data form-select" aria-label="Default select example" name="gender" value="<?= $member->gender ?>" required>
                         <option selected>Please select your gender</option>
                         <option value="1">Male</option>
                         <option value="2">Female</option>
                     </select>
                 </div>
                 <div class="col-lg-4 input-fields mt-2">
-                    USERNAME<br>
-                    <input type="email" name="username" class="input-data form-control"
-                        value="<?= $member->username ?>">
+                    Username<br>
+                    <input type="email" name="username" class="input-data form-control" value="<?= $member->username ?>" placeholder="Enter your username" required>
                 </div>
                 <div class="col-lg-4 input-fields mt-2">
-                    PASSWORD<br>
-                    <input type="password" name="password" class="input-data form-control"
-                        value="<?= $member->password_hash ?>">
+                    Password<br>
+                    <input type="password" name="password" class="input-data form-control" value="<?= $member->password_hash ?>" placeholder="Enter your password" required>
                 </div>
                 <div class="col-lg-4 input-fields mt-2">
-                    EMAIL<br>
-                    <input type="email" name="email" class="input-data form-control" value="<?= $member->email ?>">
+                    Email<br>
+                    <input type="email" name="email" class="input-data form-control" value="<?= $member->email ?>" placeholder="Enter your email" required>
                 </div>
                 <div class="col-lg-4 input-fields mt-2">
-                    PHONE<br>
-                    <input type="text" name="phonenumber" class="input-data form-control"
-                        value="<?= $member->telephoneNumber ?>">
+                    Phone<br>
+                    <input type="text" name="phonenumber" class="input-data form-control" value="<?= $member->telephoneNumber ?>" placeholder="Enter your phonenumber" required>
                 </div>
                 <div class="col-lg-4 input-fields mt-2">
-                    ADDRESS<br>
-                    <textarea class="input-address form-control" name="address" id="exampleFormControlTextarea1" rows="3"><?= $member->address ?></textarea>
+                    Address<br>
+                    <textarea class="input-address form-control" name="address" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your address" required><?= $member->address ?></textarea>
                 </div>
                 <div class="row">
                     <div class="col-lg-12 input-fields mt-2">
-                        PICTURE<br>
+                        Picture<br>
                         <input type="file" name="picture" class="form-control col-lg-6" required>
                     </div>
                 </div>
@@ -232,7 +223,7 @@ $form = ActiveForm::begin([
                 </div>
                 <input type="hidden" name="memberId" value="<?= $member->memberId ?>">
                 <div class="col-lg-12 text-end">
-                    <button type="submit" class="btn btn-success font-button" href="<?= Yii::$app->homeUrl . 'member/default/update-member' ?>">Submit</button>
+                    <button type="submit" class="btn btn-warning font-button" href="<?= Yii::$app->homeUrl . 'member/default/update-member' ?>">Update</button>
                 </div>
             </div>
         </div>

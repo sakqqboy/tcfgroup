@@ -8,7 +8,6 @@
     'options' => [
         'enctype' => 'multipart/form-data',
     ],
-
     ]); ?>
     <div class="row mt-3">
         <div class="col-lg-12 mt-4 border border-dark bd-position">

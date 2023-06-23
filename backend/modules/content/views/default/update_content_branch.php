@@ -18,10 +18,10 @@ use yii\bootstrap5\ActiveForm;
             <div class="col-lg-12 title-create">
                 UPDATE CONTENT BRANCH<br>
             </div>
-            <div class="field-create mt-3">
+            <div class="field-create">
                 <div class="row mt-3">
                     <div class="col-lg-6 input-fields">
-                        Content nameE<br>
+                        Content name<br>
                         <input type="text" name="contentname" class="input-data form-control col-lg-6" value="<?= $contentbranch -> contentName ?>" placeholder="Enter your content name" required>
                     </div>
                     <div class="col-lg-6 input-fields">

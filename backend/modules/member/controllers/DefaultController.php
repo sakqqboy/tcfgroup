@@ -209,6 +209,7 @@ class DefaultController extends Controller
                 $member->gender = $_POST["gender"];
                 $member->email = $_POST["email"];
                 $member->telephoneNumber = $_POST["phonenumber"];
+                $member->address = $_POST["address"];
                 $member->branchId = $_POST["branchId"];
                 $member->sectionId = $_POST["sectionid"];
                 $member->positionId = $_POST["positionid"];

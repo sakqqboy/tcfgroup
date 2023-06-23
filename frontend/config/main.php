@@ -47,7 +47,9 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
-            'rules' => [],
+            'rules' => [
+                'site-country/index/<hash>' => 'site-country/index',
+            ]
         ],
         'assetManager' => [
             'appendTimestamp' => true,

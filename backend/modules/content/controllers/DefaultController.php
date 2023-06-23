@@ -558,4 +558,47 @@ class DefaultController extends Controller
             "branchId" => $param["branchId"],
         ]);
     }
+
+    public function actionInsertContentBranch()
+    {
+        $branches = Branch::find()->select('branchId')->where(["status" => 1])->all();
+
+        $master = ContentBranch::find()->where(["contentBranchId" => 3])->one();
+        $masterDetail = ContentBranchDetail::find()->where(["contentBranchId" => 3])->all();
+
+        if (isset($branches) && count($branches) > 0) {
+            foreach ($branches as $branch) :
+                $contentBranch = new ContentBranch();
+                $contentBranch->branchId = $branch->branchId;
+                $contentBranch->title = $master["title"];
+                $contentBranch->detail = $master["detail"];
+                $contentBranch->status = $master["status"];
+                $contentBranch->createDateTime = $master["createDateTime"];
+                $contentBranch->updateDateTime = $master["updateDateTime"];
+                if ($contentBranch->save(false)) {
+                    $contentBranchId = Yii::$app->db->lastInsertID;
+
+                    foreach ($masterDetail as $x) :
+                        $contentBranchDetail = new ContentBranchDetail();
+                        $contentBranchDetail->contentBranchId = $contentBranchId;
+                        $contentBranchDetail->title = $x["title"];
+                        $contentBranchDetail->detail = $x["detail"];
+                        $contentBranchDetail->detail2 = $x["detail2"];
+                        $contentBranchDetail->detail3 = $x["detail3"];
+                        $contentBranchDetail->detail4 = $x["detail4"];
+                        $contentBranchDetail->detail5 = $x["detail5"];
+                        $contentBranchDetail->detail6 = $x["detail6"];
+                        $contentBranchDetail->detail7 = $x["detail7"];
+                        $contentBranchDetail->image = $x["image"];
+                        $contentBranchDetail->url = $x["url"];
+                        $contentBranchDetail->status = $x["status"];
+                        $contentBranchDetail->createDatetime = $x["createDatetime"];
+                        $contentBranchDetail->updateDatetime = $x["updateDatetime"];
+
+                        $contentBranchDetail->save(false);
+                    endforeach;
+                }
+            endforeach;
+        }
+    }
 }

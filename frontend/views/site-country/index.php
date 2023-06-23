@@ -2,8 +2,10 @@
 
 /** @var yii\web\View $this */
 
+use backend\models\tokyoconsulting\MemberHasType;
 use Codeception\Lib\Connector\Yii2;
 use common\helpers\Path;
+use common\models\ModelMaster;
 use yii\bootstrap5\Offcanvas;
 
 $this->title = 'Bangladesh';
@@ -11,25 +13,30 @@ $this->title = 'Bangladesh';
 
 <div class="">
     <?php
-    if (isset($shape) && count($shape) > 0) {
+    if (isset($bannerDetail) && !empty($bannerDetail) > 0) {
         $i = 0;
-        foreach ($shape as $pe) :
-    ?>
-            <div class="col-12">
-                <img src="<?= Path::backendUrl() . $pe['image'] ?>" class="image-TCG">
-            </div>
-            <div class="offset-1 col-10 text-star">
-                <?= $pe['title'] ?> <br>
-                <?= $pe['detail'] ?> <br>
-                <?= $pe['detail2'] ?><br>
-                <button type="button" class="btn btn-primary button-start"><?= $pe['detail3'] ?></button>
-            </div>
-    <?php
-            $i++;
-        endforeach;
-    }
-    ?>
 
+    ?>
+        <div class="col-12">
+            <img src="<?= Path::backendUrl() . $bannerDetail['image'] ?>" class="image-TCG">
+        </div>
+        <div class="offset-1 col-10 text-star">
+            <?= $bannerDetail['detail'] ?> <br>
+            <?= $bannerDetail['detail2'] ?> <br>
+            <?= $bannerDetail['detail3'] ?><br>
+            <button type="button" class="btn btn-primary button-start"><?= $bannerDetail['detail4'] ?></button>
+        </div>
+    <?php
+
+    }
+    if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+        <div class="col-12 text-end pr-2">
+            <a href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $bannerDetail['contentBranchId']]) ?>" target="_blank">Edit</a>
+        <?php
+
+    }
+        ?>
+        </div>
 </div>
 
 

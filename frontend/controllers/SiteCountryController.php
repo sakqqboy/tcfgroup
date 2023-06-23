@@ -3,6 +3,7 @@
 namespace frontend\controllers;
 
 use backend\models\tokyoconsulting\Member;
+use backend\models\tokyoconsulting\MemberHasType;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -19,6 +20,9 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use frontend\models\tokyoconsulting\Branch;
+use frontend\models\tokyoconsulting\ContentBranch;
+use frontend\models\tokyoconsulting\ContentBranchDetail;
 use PHPUnit\Framework\Constraint\Count;
 use yii\db\Expression;
 use yii\widgets\ContentDecorator;
@@ -50,14 +54,26 @@ class SiteCountryController extends Controller
      *
      * @return mixed
      */
-    public function actionIndex()
+    public function actionIndex($hash)
     {
 
-        $pe = Content::find()
-            ->where(['contentName' => "Shape"])
-            ->asArray()
-            ->one();
-
+        //throw new exception($hash);
+        $branchName = $hash;
+        $bannerDetail = [];
+        $branch = Branch::find()->where(["branchName" => $branchName, "status" => 1])->asArray()->one();
+        $userInThisBranch = 0;
+        if (isset($branch) && !empty($branch)) {
+            $banner = ContentBranch::find()
+                ->where(['title' => "banner", "branchId" => $branch["branchId"]])
+                ->asArray()
+                ->one();
+            if (isset($banner) && !empty($banner)) {
+                $bannerDetail = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $banner["contentBranchId"], "status" => 1])
+                    ->asArray()
+                    ->one();
+            }
+        }
         $port = Content::find()
             ->where(['contentName' => "Import"])
             ->asArray()
@@ -102,10 +118,6 @@ class SiteCountryController extends Controller
             ->where(['contentName' => "Servicesbangladesh"])
             ->asArray()
             ->one();
-
-
-
-        $shape = [];
         $import = [];
         $bangladresh = [];
         $webinar = [];
@@ -117,12 +129,7 @@ class SiteCountryController extends Controller
         $servicesbangladesh = [];
 
 
-        if (isset($pe) && !empty($pe)) {
-            $shape = ContentDetail::find()
-                ->where(["contentId" => $pe["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
+
         if (isset($port) && !empty($port)) {
             $import = ContentDetail::find()
                 ->where(["contentId" => $port["contentId"], "status" => 1])
@@ -178,10 +185,38 @@ class SiteCountryController extends Controller
                 ->all();
         }
 
+        $canEdit = 0;
+        if (Yii::$app->user->id) {
+            $memberId = Yii::$app->user->id;
+            $membertype = MemberHasType::find()
+                ->select("mt.memberTypeName")
+                ->JOIN("LEFT JOIN", "member_type mt", "member_has_type.memberTypeId = mt.memberTypeId")
+                //->leftJoin('member_type', 'member_type.memberTypeId = member_has_type.memberTypeId')
+                ->where([
+                    "member_has_type.memberId" => $memberId,
+                    "memberTypeName" => ["Administrator", "Creater", "Approver", "Frontend", "Backend"]
+                ])
+                ->asArray()
+                ->all();
+
+            if (isset($membertype) && count($membertype) > 0) {
+                $canEdit = 1;
+            }
+            $member = Member::find()
+                ->select('b.branchId')
+                ->JOIN("LEFT JOIN", "branch b", "b.branchId=member.branchId")
+                ->where(["member.memberId" => $memberId, "b.branchName" => $hash])
+                ->one();
+            if (isset($member) && !empty($member)) {
+                $userInThisBranch = 1;
+            }
+        }
+
+
+
 
         // throw new Exception(count($topic));
         return $this->render('index', [
-            "shape" => $shape,
             "import" => $import,
             "bangladresh" => $bangladresh,
             "webinar" => $webinar,
@@ -191,6 +226,9 @@ class SiteCountryController extends Controller
             "topic" => $topic,
             "services" => $services,
             "servicesbangladesh" => $servicesbangladesh,
+            "bannerDetail" => $bannerDetail,
+            "canEdit" => $canEdit,
+            "userInThisBranch" => $userInThisBranch
 
         ]);
     }
@@ -1201,12 +1239,11 @@ class SiteCountryController extends Controller
         }
 
 
-
         return $this->render('resources', [
             "bannerresource" => $bannerresource,
             "national" => $national,
             "description" => $description,
-            "tabledetail" => $tabledetail
+            "tabledetail" => $tabledetail,
         ]);
     }
     public function actionUpdateImage()

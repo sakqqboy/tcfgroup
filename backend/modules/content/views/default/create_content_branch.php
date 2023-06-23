@@ -15,6 +15,7 @@
             <div class="col-lg-12 title-create">
                 CREATE CONTENT BRANCH<br>
             </div>
+            <div class="field-create">
                 <div class="row mt-3">
                     <div class="col-lg-6 input-fields">
                         Content name<br>

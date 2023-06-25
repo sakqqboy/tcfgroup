@@ -18,7 +18,9 @@ return [
         'content' => [
             'class' => 'backend\modules\content\content',
         ],
-        'member' => ['class' => 'backend\modules\member\member'],
+        'member' => [
+            'class' => 'backend\modules\member\member'
+        ],
         'masterdata' => [
             'class' => 'backend\modules\masterdata\masterdata',
         ],

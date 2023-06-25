@@ -70,11 +70,15 @@ class SiteController extends Controller
      *
      * @return string|Response
      */
+    public function actionIndex()
+    {
+        return $this->redirect(Yii::$app->homeUrl . 'site/login');
+    }
     public function actionLogin()
     {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
+        // if (!Yii::$app->user->isGuest) {
+        //     return $this->goHome();
+        // }
 
         $this->layout = 'blank';
 
@@ -100,6 +104,6 @@ class SiteController extends Controller
     {
         Yii::$app->user->logout();
 
-        return $this->goHome();
+        return $this->redirect(Yii::$app->homeUrl . 'site/login');
     }
 }

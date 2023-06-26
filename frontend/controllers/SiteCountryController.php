@@ -210,11 +210,20 @@ class SiteCountryController extends Controller
             if (isset($member) && !empty($member)) {
                 $userInThisBranch = 1;
             }
+            $membertypeAdmin = MemberHasType::find()
+                ->select("mt.memberTypeName")
+                ->JOIN("LEFT JOIN", "member_type mt", "member_has_type.memberTypeId = mt.memberTypeId")
+                //->leftJoin('member_type', 'member_type.memberTypeId = member_has_type.memberTypeId')
+                ->where([
+                    "member_has_type.memberId" => $memberId,
+                    "memberTypeName" => "Administrator"
+                ])
+                ->asArray()
+                ->all();
+            if (isset($membertypeAdmin) && !empty($memberTypeAdmin)) {
+                $userInThisBranch = 1;
+            }
         }
-
-
-
-
         // throw new Exception(count($topic));
         return $this->render('index', [
             "import" => $import,

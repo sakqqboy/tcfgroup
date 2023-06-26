@@ -41,121 +41,116 @@ $this->title = 'Bangladesh';
 
 
 <div class="col-12 pr12 mt-50">
-
     <?php
-    if (isset($services) && count($services) > 0) {
+    if (isset($topic) && !empty($topic) > 0) {
         $i = 0;
-        foreach ($services as $r) :
     ?>
-            <div class="col-12 title-Trending">
-                <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $r['detail2'] ?>
-            </div>
+        <div class="col-12 title-Trending">
+            <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $topic['title'] ?>
+        </div>
     <?php
-            $i++;
-        endforeach;
     }
     ?>
     <div class="row mt-50 procress">
         <?php
-        if (isset($topic) && count($topic) > 0) {
+        if (isset($topicDetail) && count($topicDetail) > 0) {
             $i = 0;
-            foreach ($topic  as  $tp) :
-                if ($i < 6) {
-
+            foreach ($topicDetail as $td) :
         ?>
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10" id="content2-siteindex-<?= $i ?>" onmouseover="javascript:showSiteindex2(<?= $i ?>)">
-                        <div class="card-body">
-                            <div class="col-12 body-copy1"></div>
-                            <p class="home1"><?= $tp['title'] ?></p>
-                            <p class="home2"><?= $tp['detail'] ?></p>
-                        </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10" id="content2-siteindex-<?= $i ?>" onmouseover="javascript:showSiteindex2(<?= $i ?>)">
+                    <div class="card-body">
+                        <div class="col-12 body-copy1"></div>
+                        <p class="home1"><?= $td['title'] ?></p>
+                        <p class="home2"><?= $td['detail'] ?></p>
                     </div>
+                </div>
 
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10" style="display:none;" id="content2-siteindex2-<?= $i ?>" onmouseleave="javascript:showSiteindex1(<?= $i ?>)">
-                        <div class="card-body">
-                            <div class="col-12 body-copy"></div>
-                            <p class="home1-copy"><?= $tp['title'] ?></p>
-                            <p class="home2-copy"><?= $tp['detail'] ?></p>
-                        </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10" style="display:none;" id="content2-siteindex2-<?= $i ?>" onmouseleave="javascript:showSiteindex1(<?= $i ?>)">
+                    <div class="card-body">
+                        <div class="col-12 body-copy"></div>
+                        <p class="home1-copy"><?= $td['title'] ?></p>
+                        <p class="home2-copy"><?= $td['detail'] ?></p>
                     </div>
+                </div>
         <?php
-                }
                 $i++;
             endforeach;
         }
         ?>
     </div>
+
 </div>
 
 
 <div class="col-12 pr12 mt-50">
     <?php
-    if (isset($import) && count($import) > 0) {
+    if (isset($import) && !empty($import) > 0) {
         $i = 0;
-        foreach ($import as $port) :
     ?>
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-12">
-                    <img src="<?= Path::backendUrl() . $port['image'] ?>" class="img-transportation">
-                </div>
-                <div class="col-lg-6 col-md-6 col-12">
-                    <p class="title-import mt-10"><?= $port['title'] ?></p> <br>
-                    <p class="title-zero"><?= $port['detail'] ?></p> <br>
-                    <p class="circle-icon"><a href="#read more" class="no-underline"> <?= $port['detail2'] ?> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a></p>
-                </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+                <img src="<?= Path::backendUrl() . $importDetail['image'] ?>" class="img-transportation">
             </div>
+            <div class="col-lg-6 col-md-6 col-12">
+                <p class="title-import mt-10"><?= $importDetail['title'] ?></p> <br>
+                <p class="title-zero"><?= $importDetail['detail'] ?></p> <br>
+                <p class="circle-icon"><a href="#read more" class="no-underline"> <?= $importDetail['detail2'] ?> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a></p>
+            </div>
+        </div>
     <?php
-            $i++;
-        endforeach;
     }
     ?>
+    <?php
+    if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+        <div class="col-12 text-end pr-2">
+            <a href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $importDetail['contentBranchId']]) ?>" target="_blank">Edit</a>
+        <?php
+    }
+        ?>
+        </div>
 </div>
+
+
 
 <div class="col-12 pr12" style="margin-top: 80px;">
     <div class="col-12 title-Trending">
         <?php
         if (isset($bangladresh) && count($bangladresh) > 0) {
             $i = 0;
-            foreach ($bangladresh as $la) :
         ?>
-                <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $la['title'] ?>
+            <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $bangladresh['title'] ?>
         <?php
-                $i++;
-            endforeach;
         }
         ?>
     </div>
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12 mt-50">
             <?php
-            if (isset($bangladresh) && count($bangladresh) > 0) {
+            if (isset($bangladreshDetail) && count($bangladreshDetail) > 0) {
                 $i = 0;
-                foreach ($bangladresh as $la) :
             ?>
-                    <div class="row pr12">
-                        <div class="col-4 title-bangladesh">
-                            <p><?= $la['detail'] ?></p>
-                        </div>
-                        <div class="col-2">
-                            <img src="<?= Path::backendUrl() . $la['image'] ?>" class="img-woman">
-                            <div class="alert alert-secondary  text-center">
-                                <p class="table-calendar"> <i class="fa fa-calendar" aria-hidden="true"> June 2023</i></p>
-                                <p> S&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;&nbsp;S
-                                </p>
-                                <p> 3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;5 <button class="btn btn-primary calendar-button" type="button">6</button>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;9
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-6 img-iconday">
-                            <img src="<?= Path::backendUrl() ?>image/img/button-1.png" class="img-button">
-                            <img src="<?= Path::backendUrl() ?>image/img/button-2.png" class="img-button">
-                            <img src="<?= Path::backendUrl() ?>image/img/button-4.png" class="img-button">
-                            <img src="<?= Path::backendUrl() ?>image/img/button-3.png" class="img-button">
+                <div class="row pr12">
+                    <div class="col-4 title-bangladesh">
+                        <p><?= $bangladreshDetail['title'] ?></p>
+                    </div>
+                    <div class="col-2">
+                        <img src="<?= Path::backendUrl() . $bangladreshDetail['image'] ?>" class="img-woman">
+                        <div class="alert alert-secondary  text-center">
+                            <p class="table-calendar"> <i class="fa fa-calendar" aria-hidden="true"> June 2023</i></p>
+                            <p> S&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;&nbsp;S
+                            </p>
+                            <p> 3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;5 <button class="btn btn-primary calendar-button" type="button">6</button>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;9
+                            </p>
                         </div>
                     </div>
+                    <div class="col-6 img-iconday">
+                        <img src="<?= Path::backendUrl() ?>image/img/button-1.png" class="img-button">
+                        <img src="<?= Path::backendUrl() ?>image/img/button-2.png" class="img-button">
+                        <img src="<?= Path::backendUrl() ?>image/img/button-4.png" class="img-button">
+                        <img src="<?= Path::backendUrl() ?>image/img/button-3.png" class="img-button">
+                    </div>
+                </div>
             <?php
-                    $i++;
-                endforeach;
             }
             ?>
         </div>
@@ -163,37 +158,34 @@ $this->title = 'Bangladesh';
             <?php
             if (isset($webinar) && count($webinar) > 0) {
                 $i = 0;
-                foreach ($webinar  as  $nar) :
             ?>
-                    <div class="col-12 title-join">
-                        <?= $nar['title'] ?>
-                    </div>
-                    <div class="col-12 title-topic mt-10">
-                        <p> <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $nar['detail'] ?></p>
-                    </div>
+                <div class="col-12 title-join">
+                    <?= $webinar['title'] ?>
+                </div>
+                <div class="col-12 title-topic mt-10">
+                    <p> <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $webinar['detail'] ?></p>
+                </div>
             <?php
-                    $i++;
-                endforeach;
             }
             ?>
             <div class="accordion mt-20" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            What are topic of webinar ?
+                            <?= $webinarDetail['title'] ?>
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>How can i join ?</strong>
-                            <p>It is as easy as to join through one single click by going to the following link -</p>
+                            <strong><?= $webinarDetail['detail'] ?></strong><br>
+                            <?= $webinarDetail['detail2'] ?>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Is there any certification associated ?
+                            <?= $webinarDetail['title'] ?>
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -205,7 +197,7 @@ $this->title = 'Bangladesh';
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Can i get recorded videos of the webinars or online seminars ?
+                            <?= $webinarDetail['title'] ?>
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -217,7 +209,7 @@ $this->title = 'Bangladesh';
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            How to create a community Account ?
+                            <?= $webinarDetail['title'] ?>
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
@@ -229,10 +221,19 @@ $this->title = 'Bangladesh';
             </div>
             <div class="col-12">
                 <button type="button" class="btn btn-primary button-register mt-30"> Register for Webinar</button>
-                <p class="title-sign-in">Already have account? <a href="#sign in" class="no-underline">Sign in</a></p>
+                <p class="title-sign-in"><?= $webinarDetail['title'] ?> <a href="#sign in" class="no-underline">Sign
+                        in</a></p>
             </div>
         </div>
     </div>
+    <?php
+    if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+        <div class="col-12 text-end pr-2">
+            <a href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $webinarDetail['contentBranchId']]) ?>" target="_blank">Edit</a>
+        <?php
+    }
+        ?>
+        </div>
 </div>
 
 

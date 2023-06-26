@@ -563,13 +563,14 @@ class DefaultController extends Controller
     {
         $branches = Branch::find()->select('branchId')->where(["status" => 1])->all();
 
-        $master = ContentBranch::find()->where(["contentBranchId" => 227])->one();
-        $masterDetail = ContentBranchDetail::find()->where(["contentBranchId" => 227])->all();
+        $master = ContentBranch::find()->where(["contentBranchId" => 347])->one();
+        $masterDetail = ContentBranchDetail::find()->where(["contentBranchId" => 347])->all();
 
         if (isset($branches) && count($branches) > 0) {
             foreach ($branches as $branch) :
                 $contentBranch = new ContentBranch();
                 $contentBranch->branchId = $branch->branchId;
+                $contentBranch->contentName = $master["contentName"];
                 $contentBranch->title = $master["title"];
                 $contentBranch->detail = $master["detail"];
                 $contentBranch->status = $master["status"];

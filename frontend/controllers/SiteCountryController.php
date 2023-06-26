@@ -2,6 +2,8 @@
 
 namespace frontend\controllers;
 
+use backend\models\tokyoconsulting\ContentBranchDetail as TokyoconsultingContentBranchDetail;
+use backend\models\tokyoconsulting\master\ContentBranchDetailMaster;
 use backend\models\tokyoconsulting\Member;
 use backend\models\tokyoconsulting\MemberHasType;
 use frontend\models\ResendVerificationEmailForm;
@@ -14,6 +16,7 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
 use common\models\tokyoconsulting\Content;
+use common\models\tokyoconsulting\ContentBranchDetail as ModelsTokyoconsultingContentBranchDetail;
 use common\models\tokyoconsulting\ContentDetail;
 use Exception;
 use frontend\models\PasswordResetRequestForm;
@@ -60,6 +63,10 @@ class SiteCountryController extends Controller
         //throw new exception($hash);
         $branchName = $hash;
         $bannerDetail = [];
+        $topicDetail = [];
+        $importDetail = [];
+        $bangladreshDetail = [];
+        $webinarDetail = [];
         $branch = Branch::find()->where(["branchName" => $branchName, "status" => 1])->asArray()->one();
         $userInThisBranch = 0;
         if (isset($branch) && !empty($branch)) {
@@ -73,21 +80,51 @@ class SiteCountryController extends Controller
                     ->asArray()
                     ->one();
             }
+
+            $topic = ContentBranch::find()
+                ->where(['title' => "TRENDING TOPICS", "branchId" => $branch["branchId"]])
+                ->asArray()
+                ->one();
+            if (isset($topic) && count($topic) > 0) {
+                $topicDetail = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $topic["contentBranchId"], "status" => 1])
+                    ->asArray()
+                    ->all();
+            }
+
+            $import = ContentBranch::find()
+                ->where(['title' => "import", "branchId" => $branch["branchId"]])
+                ->asArray()
+                ->one();
+            if (isset($import) && !empty($import)) {
+                $importDetail = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $import["contentBranchId"], "status" => 1])
+                    ->asArray()
+                    ->one();
+            }
+
+            $bangladresh = ContentBranch::find()
+                ->where(['title' => "JOIN FREE LIVE WEBINAR", "branchId" => $branch["branchId"]])
+                ->asArray()
+                ->one();
+            if (isset($bangladresh) && !empty($bangladresh)) {
+                $bangladreshDetail = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $bangladresh["contentBranchId"], "status" => 1])
+                    ->asArray()
+                    ->one();
+            }
+
+            $webinar = ContentBranch::find()
+                ->where(['title' => "Join us on the next webinar", "branchId" => $branch["branchId"]])
+                ->asArray()
+                ->one();
+            if (isset($webinar) && !empty($webinar)) {
+                $webinarDetail = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $webinar["contentBranchId"], "status" => 1])
+                    ->asArray()
+                    ->one();
+            }
         }
-        $port = Content::find()
-            ->where(['contentName' => "Import"])
-            ->asArray()
-            ->one();
-
-        $la = Content::find()
-            ->where(['contentName' => "Bangladresh"])
-            ->asArray()
-            ->one();
-
-        $nar = Content::find()
-            ->where(['contentName' => "Webinar"])
-            ->asArray()
-            ->one();
 
         $pro = Content::find()
             ->where(['contentName' => "Professiona"])
@@ -104,11 +141,6 @@ class SiteCountryController extends Controller
             ->asArray()
             ->one();
 
-        $tp = Content::find()
-            ->where(['contentName' => "Topic"])
-            ->asArray()
-            ->one();
-
         $r = Content::find()
             ->where(['contentName' => "Services"])
             ->asArray()
@@ -118,36 +150,13 @@ class SiteCountryController extends Controller
             ->where(['contentName' => "Servicesbangladesh"])
             ->asArray()
             ->one();
-        $import = [];
-        $bangladresh = [];
-        $webinar = [];
+
         $professiona = [];
         $legal = [];
         $footer = [];
-        $topic = [];
         $services = [];
         $servicesbangladesh = [];
 
-
-
-        if (isset($port) && !empty($port)) {
-            $import = ContentDetail::find()
-                ->where(["contentId" => $port["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
-        if (isset($la) && !empty($la)) {
-            $bangladresh = ContentDetail::find()
-                ->where(["contentId" => $la["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
-        if (isset($nar) && !empty($nar)) {
-            $webinar = ContentDetail::find()
-                ->where(["contentId" => $nar["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
         if (isset($pro) && !empty($pro)) {
             $professiona = ContentDetail::find()
                 ->where(["contentId" => $pro["contentId"], "status" => 1])
@@ -166,12 +175,7 @@ class SiteCountryController extends Controller
                 ->asArray()
                 ->all();
         }
-        if (isset($tp) && !empty($tp)) {
-            $topic = ContentDetail::find()
-                ->where(["contentId" => $tp["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
+
         if (isset($r) && !empty($r)) {
             $services = ContentDetail::find()
                 ->where(["contentId" => $r["contentId"], "status" => 1])
@@ -226,18 +230,23 @@ class SiteCountryController extends Controller
         }
         // throw new Exception(count($topic));
         return $this->render('index', [
-            "import" => $import,
             "bangladresh" => $bangladresh,
             "webinar" => $webinar,
             "professiona" => $professiona,
             "legal" => $legal,
             "footer" => $footer,
-            "topic" => $topic,
             "services" => $services,
             "servicesbangladesh" => $servicesbangladesh,
             "bannerDetail" => $bannerDetail,
             "canEdit" => $canEdit,
-            "userInThisBranch" => $userInThisBranch
+            "userInThisBranch" => $userInThisBranch,
+            "topic" => $topic,
+            "topicDetail" => $topicDetail,
+            "import" => $import,
+            "importDetail" => $importDetail,
+            "bangladreshDetail" => $bangladreshDetail,
+            "webinarDetail" => $webinarDetail,
+
 
         ]);
     }

@@ -39,7 +39,7 @@ class Path
 		if ($_SERVER['HTTP_HOST'] == "localhost") {
 			$url = 'http://localhost/tcfgroup/backend/web/';
 		} else {
-			$url = 'https://tcg-management-system.com/';
+			$url = 'https://backend.tokyoconsulting-group.com/';
 		}
 		return $url;
 	}

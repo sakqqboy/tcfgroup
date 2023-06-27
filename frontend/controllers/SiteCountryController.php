@@ -67,6 +67,8 @@ class SiteCountryController extends Controller
         $importDetail = [];
         $bangladreshDetail = [];
         $webinarDetail = [];
+        $professionalDetail = [];
+        $legalDetail = [];
         $branch = Branch::find()->where(["branchName" => $branchName, "status" => 1])->asArray()->one();
         $userInThisBranch = 0;
         if (isset($branch) && !empty($branch)) {
@@ -85,6 +87,7 @@ class SiteCountryController extends Controller
                 ->where(['title' => "TRENDING TOPICS", "branchId" => $branch["branchId"]])
                 ->asArray()
                 ->one();
+            $topicDetail = [];
             if (isset($topic) && count($topic) > 0) {
                 $topicDetail = ContentBranchDetail::find()
                     ->where(["contentBranchId" => $topic["contentBranchId"], "status" => 1])
@@ -122,14 +125,29 @@ class SiteCountryController extends Controller
                 $webinarDetail = ContentBranchDetail::find()
                     ->where(["contentBranchId" => $webinar["contentBranchId"], "status" => 1])
                     ->asArray()
-                    ->one();
+                    ->all();
+            }
+            $professional = ContentBranch::find()
+                ->where(['title' => "OUR PROFESSIONAL SERVICES", "branchId" => $branch["branchId"]])
+                ->asArray()
+                ->one();
+            if (isset($professional) && count($professional) > 0) {
+                $professionalDetail = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $professional["contentBranchId"], "status" => 1])
+                    ->asArray()
+                    ->all();
+            }
+            $legal = ContentBranch::find()
+                ->where(['title' => "Connect Experts", "branchId" => $branch["branchId"]])
+                ->asArray()
+                ->one();
+            if (isset($legal) && count($legal) > 0) {
+                $legalDetail = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $legal["contentBranchId"], "status" => 1])
+                    ->asArray()
+                    ->all();
             }
         }
-
-        $pro = Content::find()
-            ->where(['contentName' => "Professiona"])
-            ->asArray()
-            ->one();
 
         $gal = Content::find()
             ->where(['contentName' => "Legal"])
@@ -146,23 +164,10 @@ class SiteCountryController extends Controller
             ->asArray()
             ->one();
 
-        $profes = Content::find()
-            ->where(['contentName' => "Servicesbangladesh"])
-            ->asArray()
-            ->one();
-
-        $professiona = [];
         $legal = [];
         $footer = [];
         $services = [];
-        $servicesbangladesh = [];
 
-        if (isset($pro) && !empty($pro)) {
-            $professiona = ContentDetail::find()
-                ->where(["contentId" => $pro["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
         if (isset($gal) && !empty($gal)) {
             $legal = ContentDetail::find()
                 ->where(["contentId" => $gal["contentId"], "status" => 1])
@@ -179,12 +184,6 @@ class SiteCountryController extends Controller
         if (isset($r) && !empty($r)) {
             $services = ContentDetail::find()
                 ->where(["contentId" => $r["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
-        if (isset($profes) && !empty($profes)) {
-            $servicesbangladesh = ContentDetail::find()
-                ->where(["contentId" => $profes["contentId"], "status" => 1])
                 ->asArray()
                 ->all();
         }
@@ -231,12 +230,9 @@ class SiteCountryController extends Controller
         // throw new Exception(count($topic));
         return $this->render('index', [
             "bangladresh" => $bangladresh,
-            "webinar" => $webinar,
-            "professiona" => $professiona,
             "legal" => $legal,
             "footer" => $footer,
             "services" => $services,
-            "servicesbangladesh" => $servicesbangladesh,
             "bannerDetail" => $bannerDetail,
             "canEdit" => $canEdit,
             "userInThisBranch" => $userInThisBranch,
@@ -245,7 +241,11 @@ class SiteCountryController extends Controller
             "import" => $import,
             "importDetail" => $importDetail,
             "bangladreshDetail" => $bangladreshDetail,
+            "webinar" => $webinar,
             "webinarDetail" => $webinarDetail,
+            "professional" => $professional,
+            "professionalDetail" => $professionalDetail,
+            "legalDetail" => $legalDetail
 
 
         ]);

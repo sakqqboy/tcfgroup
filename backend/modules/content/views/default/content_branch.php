@@ -16,7 +16,8 @@ use yii\bootstrap5\ActiveForm;
     </div>
     <div class="row">
         <div class="col-lg-12 text-end">
-            <a class="btn btn-success buttons-size" href="<?= Yii::$app->homeUrl . 'content/default/create-content-branch' ?>">
+            <a class="btn btn-success buttons-size"
+                href="<?= Yii::$app->homeUrl . 'content/default/create-content-branch' ?>">
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
                 Create content
             </a>
@@ -40,7 +41,7 @@ use yii\bootstrap5\ActiveForm;
                     <?php
                     if (isset($branchId) && $branchId != '') {
                     ?>
-                        <option value="<?= $branchId ?>"><?= Branch::branchName($branchId) ?></option>
+                    <option value="<?= $branchId ?>"><?= Branch::branchName($branchId) ?></option>
                     <?php
                     }
                     ?>
@@ -49,7 +50,7 @@ use yii\bootstrap5\ActiveForm;
                     if (isset($branchs) && count($branchs) > 0) {
                         foreach ($branchs as $a) :
                     ?>
-                            <option value="<?= $a["branchId"] ?>"><?= $a["branchName"] ?></option>
+                    <option value="<?= $a["branchId"] ?>"><?= $a["branchName"] ?></option>
                     <?php
                         endforeach;
                     }
@@ -82,36 +83,40 @@ use yii\bootstrap5\ActiveForm;
                 $i = 1;
                 foreach ($contentbranch as $x) :
             ?>
-                    <tr id="contentbranch-<?= $x['contentBranchId'] ?>">
-                        <td><?= $i ?></td>
-                        <td><?= $x["contentName"] ?></td>
-                        <td><?= Branch::branchName($x['branchId']) ?></td>
-                        <td><?= $x["title"] ?></td>
-                        <td><?= $x["detail"] ?></td>
-                        <td><?= ContentBranchDetail::countContentBranchDetail($x['contentBranchId']) ?></td>
-                        <td width="20%">
-                            <a class="btn btn-primary bt-size" href="<?= Yii::$app->homeUrl . 'content/default/view-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $x['contentBranchId']]) ?>">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
-                            </a>
-                            <a class="btn btn-warning bt-size" href="<?= Yii::$app->homeUrl . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $x['contentBranchId']]) ?>">
-                                <i class="fa fa-pencil" aria-hidden="true"></i>
-                            </a>
-                            <a class="btn btn-danger bt-size" href="javascript:deleteContentBranch(<?= $x['contentBranchId'] ?>)">
-                                <i class="fa fa-trash" aria-hidden="true"></i>
-                            </a>
-                            <a class="btn btn-secondary bt-size" href="<?= Yii::$app->homeUrl . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $x['contentBranchId']]) ?>">
-                                <i class="fa fa-info-circle " aria-hidden="true"></i>
-                            </a>
-                        </td>
-                    </tr>
-                <?php
+            <tr id="contentbranch-<?= $x['contentBranchId'] ?>">
+                <td><?= $i ?></td>
+                <td><?= $x["contentName"] ?></td>
+                <td><?= Branch::branchName($x['branchId']) ?></td>
+                <td><?= $x["title"] ?></td>
+                <td><?= $x["detail"] ?></td>
+                <td><?= ContentBranchDetail::countContentBranchDetail($x['contentBranchId']) ?></td>
+                <td width="20%">
+                    <a class="btn btn-primary bt-size"
+                        href="<?= Yii::$app->homeUrl . 'content/default/view-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $x['contentBranchId']]) ?>">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-warning bt-size"
+                        href="<?= Yii::$app->homeUrl . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $x['contentBranchId']]) ?>">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-danger bt-size"
+                        href="javascript:deleteContentBranch(<?= $x['contentBranchId'] ?>)">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-secondary bt-size"
+                        href="<?= Yii::$app->homeUrl . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $x['contentBranchId']]) ?>">
+                        <i class="fa fa-info-circle " aria-hidden="true"></i>
+                    </a>
+                </td>
+            </tr>
+            <?php
                     $i++;
                 endforeach;
             } else {
                 ?>
-                <tr>
-                    <td colspan="12"> No data</td>
-                </tr>
+            <tr>
+                <td colspan="12"> No data</td>
+            </tr>
             <?php
             }
             ?>

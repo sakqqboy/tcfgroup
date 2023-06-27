@@ -8,6 +8,7 @@ function showContent(i) {
     }
     $("#content-title-" + i).slideDown('slow');
     $("#content-title2-" + i).slideDown('slow');
+
 }
 
 function showBangladresh(i) {
@@ -16,10 +17,12 @@ function showBangladresh(i) {
     while (b < total) {
         $("#bangladresh-detail-" + b).css("display", "none");
         $("#bangladresh-detail2-" + b).css("display", "none");
+        $("#bangladresh-detail3-" + b).css("display", "none");
         b++;
     }
     $("#bangladresh-detail-" + i).slideDown('slow');
     $("#bangladresh-detail2-" + i).slideDown('slow');
+    $("#bangladresh-detail3-" + i).slideDown('slow');
 }
 
 function showSiteindex2(i) {
@@ -30,6 +33,7 @@ function showSiteindex1(i) {
     $("#content2-siteindex2-" + i).css("display", "none");
     $("#content2-siteindex-" + i).show();
 }
+
 
 $('.no-underline-new').click(function () {
     $('.moretext').slideToggle();

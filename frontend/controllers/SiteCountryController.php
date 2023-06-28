@@ -3,6 +3,7 @@
 namespace frontend\controllers;
 
 use backend\models\tokyoconsulting\ContentBranchDetail as TokyoconsultingContentBranchDetail;
+use backend\models\tokyoconsulting\Country as TokyoconsultingCountry;
 use backend\models\tokyoconsulting\master\ContentBranchDetailMaster;
 use backend\models\tokyoconsulting\Member;
 use backend\models\tokyoconsulting\MemberHasType;
@@ -24,8 +25,10 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use frontend\models\tokyoconsulting\Branch;
+use frontend\models\tokyoconsulting\Client;
 use frontend\models\tokyoconsulting\ContentBranch;
 use frontend\models\tokyoconsulting\ContentBranchDetail;
+use frontend\models\tokyoconsulting\Country;
 use PHPUnit\Framework\Constraint\Count;
 use yii\db\Expression;
 use yii\widgets\ContentDecorator;
@@ -62,6 +65,8 @@ class SiteCountryController extends Controller
 
         //throw new exception($hash);
         $branchName = $hash;
+        $countryName = $hash;
+        $dropdown = $hash;
         $bannerDetail = [];
         $topicDetail = [];
         $importDetail = [];
@@ -70,6 +75,13 @@ class SiteCountryController extends Controller
         $professionalDetail = [];
         $legalDetail = [];
         $branch = Branch::find()->where(["branchName" => $branchName, "status" => 1])->asArray()->one();
+        $country = Country::find()->where(["countryName" => $countryName, "status" => 1])->asArray()->all();
+
+        $dropdown = Country::find()->where("status=1")
+            ->orderBy('countryName')
+            ->asArray()
+            ->all();
+
         $userInThisBranch = 0;
         if (isset($branch) && !empty($branch)) {
             $banner = ContentBranch::find()
@@ -141,18 +153,13 @@ class SiteCountryController extends Controller
                 ->where(['title' => "Connect Experts", "branchId" => $branch["branchId"]])
                 ->asArray()
                 ->one();
-            if (isset($legal) && count($legal) > 0) {
+            if (isset($legal) && !empty($legal)) {
                 $legalDetail = ContentBranchDetail::find()
                     ->where(["contentBranchId" => $legal["contentBranchId"], "status" => 1])
                     ->asArray()
-                    ->all();
+                    ->one();
             }
         }
-
-        $gal = Content::find()
-            ->where(['contentName' => "Legal"])
-            ->asArray()
-            ->one();
 
         $h = Content::find()
             ->where(['contentName' => "Footer"])
@@ -164,16 +171,9 @@ class SiteCountryController extends Controller
             ->asArray()
             ->one();
 
-        $legal = [];
         $footer = [];
         $services = [];
 
-        if (isset($gal) && !empty($gal)) {
-            $legal = ContentDetail::find()
-                ->where(["contentId" => $gal["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
         if (isset($h) && !empty($h)) {
             $footer = ContentDetail::find()
                 ->where(["contentId" => $h["contentId"], "status" => 1])
@@ -245,9 +245,9 @@ class SiteCountryController extends Controller
             "webinarDetail" => $webinarDetail,
             "professional" => $professional,
             "professionalDetail" => $professionalDetail,
-            "legalDetail" => $legalDetail
-
-
+            "legalDetail" => $legalDetail,
+            "country" => $country,
+            "dropdown" => $dropdown,
         ]);
     }
     public function actionNewsletter()
@@ -1278,5 +1278,31 @@ class SiteCountryController extends Controller
                 }
             endforeach;
         }
+    }
+
+    public function actionSaveClient()
+    {
+        $res = [];
+        if (isset($_POST["country"])) {
+            // throw new exception(print_r(Yii::$app->request->post(), true));
+            $client = new Client();
+            $client->countryId = $_POST["country"];
+            $client->typePerson = $_POST["typeperson"];
+            $client->company = $_POST["company"];
+            $client->name = $_POST["name"];
+            $client->position = $_POST["position"];
+            $client->email = $_POST["email"];
+            $client->phoneNumber = $_POST["phonenumber"];
+            $client->businessType = $_POST["businesstype"];
+            $client->question = $_POST["question"];
+            $client->detail = $_POST["detail"];
+            $client->createDateTime = new Expression('NOW()');
+            $client->updateDateTime = new Expression('NOW()');
+
+            if ($client->save(false)) {
+                $res["status"] = true;
+            }
+        }
+        return json_encode($res);
     }
 }

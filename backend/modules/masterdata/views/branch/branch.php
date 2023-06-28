@@ -13,7 +13,8 @@ $this->title = 'Branch';
     </div>
     <div class="row">
         <div class="col-lg-12 text-end">
-            <a class="btn btn-success buttons-size" href="<?= Yii::$app->homeUrl . '/masterdata/branch/create-branch' ?>">
+            <a class="btn btn-success buttons-size"
+                href="<?= Yii::$app->homeUrl . '/masterdata/branch/create-branch' ?>">
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
                 Create branch
             </a>
@@ -34,20 +35,20 @@ $this->title = 'Branch';
                     Branch
                 </div>
                 <select class="form-select" name="branchId" id="branchId" onchange="javascript:findInfo()" required>
-                <?php 
+                    <?php 
                     if(isset($branchId) && $branchId!='') { 
                 ?>
-                <option value="<?=$branchId?>"><?=Branch::branchName($branchId)?></option>
-                <?php
+                    <option value="<?=$branchId?>"><?=Branch::branchName($branchId)?></option>
+                    <?php
                     }
-                ?>   
-                <option value="">Please select your branch</option>
-                <?php
+                ?>
+                    <option value="">Please select your branch</option>
+                    <?php
                     if (isset($dropdown) && count($dropdown) > 0) {
                         foreach ($dropdown as $a) :
                 ?>
-                <option value="<?= $a["branchId"] ?>"><?= $a["branchName"] ?></option>
-                <?php
+                    <option value="<?= $a["branchId"] ?>"><?= $a["branchName"] ?></option>
+                    <?php
                     endforeach;
                     }
                 ?>
@@ -80,29 +81,31 @@ $this->title = 'Branch';
                 $i = 1;
                 foreach ($branch as $x) :
             ?>
-                    <tr id="branch-<?= $x['branchId'] ?>">
-                        <td><?= $i ?></td>
-                        <td><?= $x["branchName"] ?></td>
-                        <td width="20%">
-                            <a class="btn btn-primary bt-size" href="<?= Yii::$app->homeUrl . 'masterdata/branch/view-branch/' . ModelMaster::encodeParams(["branchId" => $x['branchId']]) ?>">
-                                <i class="fa fa-eye" aria-hidden="true"></i>
-                            </a>
-                            <a class="btn btn-warning bt-size" href="<?= Yii::$app->homeUrl . 'masterdata/branch/update-branch/' . ModelMaster::encodeParams(["branchId" => $x['branchId']]) ?>">
-                                <i class="fa fa-pencil" aria-hidden="true"></i>
-                            </a>
-                            <a class="btn btn-danger bt-size" href="javascript:deleteBranch(<?= $x['branchId'] ?>)">
-                                <i class="fa fa-trash" aria-hidden="true"></i>
-                            </a>
-                        </td>
-                    </tr>
-                <?php
+            <tr id="branch-<?= $x['branchId'] ?>">
+                <td><?= $i ?></td>
+                <td><?= $x["branchName"] ?></td>
+                <td width="20%">
+                    <a class="btn btn-primary bt-size"
+                        href="<?= Yii::$app->homeUrl . 'masterdata/branch/view-branch/' . ModelMaster::encodeParams(["branchId" => $x['branchId']]) ?>">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-warning bt-size"
+                        href="<?= Yii::$app->homeUrl . 'masterdata/branch/update-branch/' . ModelMaster::encodeParams(["branchId" => $x['branchId']]) ?>">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                    </a>
+                    <a class="btn btn-danger bt-size" href="javascript:deleteBranch(<?= $x['branchId'] ?>)">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </a>
+                </td>
+            </tr>
+            <?php
                     $i++;
                 endforeach;
             } else {
                 ?>
-                <tr>
-                    <td colspan="12"> No data</td>
-                </tr>
+            <tr>
+                <td colspan="12"> No data</td>
+            </tr>
             <?php
             }
             ?>

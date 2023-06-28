@@ -34,11 +34,13 @@ class AppAsset extends AssetBundle
         'css/country/login.css',
         'css/country/privacy.css',
         'css/country/formsignup.css',
+        'css/country/button_edit.css',
 
     ];
     public $js = [
         'js/content.js',
         'js/content2.js',
+        'js/client.js',
 
 
     ];

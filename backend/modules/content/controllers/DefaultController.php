@@ -223,7 +223,9 @@ class DefaultController extends Controller
 
             $imageObj = UploadedFile::getInstanceByName("image");
             if (isset($imageObj) && !empty($imageObj)) {
-                unlink(Path::getHost() . $contentDetail["image"]);
+                if (file_exists(Path::getHost() . $contentDetail["image"])) {
+                    unlink(Path::getHost() . $contentDetail["image"]);
+                }
                 $urlFolder = Path::getHost() . 'image/contentdetail/';
                 if (!file_exists($urlFolder)) {
                     mkdir($urlFolder, 0777, true);

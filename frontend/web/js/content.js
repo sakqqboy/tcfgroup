@@ -1,7 +1,7 @@
 function showContent(i) {
-    var total = $("#total-company").val();   //total คือ การเก็บค่าทั้งหมดว่ามีเท่าไหร่
+    var total = $("#total-company").val(); //total คือ การเก็บค่าทั้งหมดว่ามีเท่าไหร่
     var a = 0;
-    while (a < total) {    //การซ่อนข้อความที่ไม่ต้องการให้แสดงโดยใช้ while
+    while (a < total) { //การซ่อนข้อความที่ไม่ต้องการให้แสดงโดยใช้ while
         $("#content-title-" + a).css("display", "none");
         $("#content-title2-" + a).css("display", "none");
         a++;
@@ -22,20 +22,21 @@ function showBangladresh(i) {
     }
     $("#bangladresh-detail-" + i).slideDown('slow');
     $("#bangladresh-detail2-" + i).slideDown('slow');
-    $("#bangladresh-detail3-" + i).slideDown('slow');
+    $("#bangladresh-detail3-" + i).fadeIn();
 }
 
 function showSiteindex2(i) {
     $("#content2-siteindex-" + i).css("display", "none");
     $("#content2-siteindex2-" + i).show();
 }
+
 function showSiteindex1(i) {
     $("#content2-siteindex2-" + i).css("display", "none");
     $("#content2-siteindex-" + i).show();
 }
 
 
-$('.no-underline-new').click(function () {
+$('.no-underline-new').click(function() {
     $('.moretext').slideToggle();
     if ($('.no-underline-new').text() == "READ MORE") {
         $(this).text("READ MORE").style(color = "bule");
@@ -43,7 +44,7 @@ $('.no-underline-new').click(function () {
         $(this).text("read more")
     }
 });
-$('.no-underline-new1').click(function () {
+$('.no-underline-new1').click(function() {
     $('.moretext').slideToggle();
     if ($('.no-underline-new1').text() == "READ MORE") {
         $(this).text("READ MORE")
@@ -105,6 +106,3 @@ function showServicescard1(i) {
     $("#iconcard2-" + i).css("display", "none");
     $("#iconcard-" + i).show();
 }
-
-
-

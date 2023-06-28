@@ -254,17 +254,22 @@
     text-align: right;
 }
 
+.edit-content {
+    position: relative;
+    margin-top: -40px;
+    padding-right: 5px;
+    z-index: 99;
+}
+
 @media screen and (max-width: 768px) {
     .body-content {
         margin-top: 90px;
         font-size: 12px;
     }
-
     .page-title {
         font-size: 24px;
         padding-left: 60px;
     }
-
     .page-list-menu {
         text-align: center;
         font-size: 14px;

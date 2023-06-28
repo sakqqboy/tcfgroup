@@ -21,6 +21,7 @@ use frontend\models\ContactForm;
 use frontend\models\tokyoconsulting\Content as TokyoconsultingContent;
 use frontend\models\tokyoconsulting\ContentDetail;
 use frontend\models\tokyoconsulting\master\ContentMaster;
+use frontend\models\tokyoconsulting\MemberHasType;
 use PHPUnit\TextUI\Command;
 use yii\db\Expression;
 use yii\widgets\ContentDecorator;
@@ -50,12 +51,13 @@ class SiteController extends Controller
                         'allow' => true,
                         'roles' => ['@'],
                     ],
+
                 ],
             ],
             'verbs' => [
                 'class' => VerbFilter::class,
                 'actions' => [
-                    'logout' => ['post'],
+                    //  'logout' => ['post'],
                 ],
             ],
         ];
@@ -224,8 +226,24 @@ class SiteController extends Controller
                 ->asArray()
                 ->all();
         }
+        $admin = 0;
+        if (Yii::$app->user->id) {
+            $memberTypeAdmin = MemberHasType::find()
+                ->select("mt.memberTypeName")
+                ->JOIN("LEFT JOIN", "member_type mt", "member_has_type.memberTypeId = mt.memberTypeId")
+                //->leftJoin('member_type', 'member_type.memberTypeId = member_has_type.memberTypeId')
+                ->where([
+                    "member_has_type.memberId" => Yii::$app->user->id,
+                    "memberTypeName" => "Administrator"
+                ])
+                ->asArray()
+                ->one();
+        }
 
+        if (isset($memberTypeAdmin) && !empty($memberTypeAdmin)) {
 
+            $admin = 1;
+        }
         // throw new Exception(count($banners));
         // throw new Exception(count($branchcountry));
         // throw new Exception(count($company));
@@ -242,6 +260,13 @@ class SiteController extends Controller
             "branchcountry" => $branchcountry,
             "countrypage" => $countrypage,
             "titleservice" => $titleservice,
+            "admin" => $admin,
+            "index" => $index,
+            "pp" => $p,
+            "c" => $c,
+            "d" => $d,
+            "e" => $e,
+            "f" => $f
 
         ]);
     }
@@ -1145,7 +1170,7 @@ class SiteController extends Controller
     {
         Yii::$app->user->logout();
 
-        return $this->goHome();
+        return $this->redirect(Yii::$app->homeUrl . "site/index");
     }
 
     /**

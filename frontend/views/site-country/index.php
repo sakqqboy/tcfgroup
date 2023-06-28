@@ -8,7 +8,7 @@ use common\helpers\Path;
 use common\models\ModelMaster;
 use yii\bootstrap5\Offcanvas;
 
-$this->title = 'Bangladesh';
+$this->title = $branchName;
 ?>
 
 <div class="">
@@ -17,28 +17,26 @@ $this->title = 'Bangladesh';
         $i = 0;
 
     ?>
-    <div class="col-12">
-        <img src="<?= Path::backendUrl() . $bannerDetail['image'] ?>" class="image-TCG">
-    </div>
-    <div class="offset-1 col-10 text-star">
-        <?= $bannerDetail['detail'] ?> <br>
-        <?= $bannerDetail['detail2'] ?> <br>
-        <?= $bannerDetail['detail3'] ?><br>
-        <button type="button" class="btn btn-primary button-start"><?= $bannerDetail['detail4'] ?></button>
-    </div>
+        <div class="col-12">
+            <img src="<?= Path::backendUrl() . $bannerDetail['image'] ?>" class="image-TCG">
+        </div>
+        <div class="offset-1 col-10 text-star">
+            <?= $bannerDetail['detail'] ?> <br>
+            <?= $bannerDetail['detail2'] ?> <br>
+            <?= $bannerDetail['detail3'] ?><br>
+            <button type="button" class="btn btn-primary button-start"><?= $bannerDetail['detail4'] ?></button>
+        </div>
     <?php
 
     }
     if ($canEdit == 1 && $userInThisBranch == 1) { ?>
-    <div class="btn btn-warning bt-edit1">
-        <a class="bt-line"
-            href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $bannerDetail['contentBranchId']]) ?>"
-            target="_blank">Edit</a>
-        <?php
-
+        <div class="col-12 text-end mt-10">
+            <a class="bt-line btn btn-warning" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $bannerDetail['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+        </div>
+    <?php
     }
-        ?>
-    </div>
+    ?>
+
 </div>
 
 
@@ -47,9 +45,9 @@ $this->title = 'Bangladesh';
     if (isset($topic) && !empty($topic) > 0) {
         $i = 0;
     ?>
-    <div class="col-12 title-Trending">
-        <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $topic['title'] ?>
-    </div>
+        <div class="col-12 title-Trending">
+            <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $topic['title'] ?>
+        </div>
     <?php
     }
     ?>
@@ -59,23 +57,21 @@ $this->title = 'Bangladesh';
             $i = 0;
             foreach ($topicDetail as $td) :
         ?>
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10" id="content2-siteindex-<?= $i ?>"
-            onmouseover="javascript:showSiteindex2(<?= $i ?>)">
-            <div class="card-body">
-                <div class="col-12 body-copy1"></div>
-                <p class="home1"><?= $td['title'] ?></p>
-                <p class="home2"><?= $td['detail'] ?></p>
-            </div>
-        </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10" id="content2-siteindex-<?= $i ?>" onmouseover="javascript:showSiteindex2(<?= $i ?>)">
+                    <div class="card-body">
+                        <div class="col-12 body-copy1"></div>
+                        <p class="home1"><?= $td['title'] ?></p>
+                        <p class="home2"><?= $td['detail'] ?></p>
+                    </div>
+                </div>
 
-        <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10" style="display:none;"
-            id="content2-siteindex2-<?= $i ?>" onmouseleave="javascript:showSiteindex1(<?= $i ?>)">
-            <div class="card-body">
-                <div class="col-12 body-copy"></div>
-                <p class="home1-copy"><?= $td['title'] ?></p>
-                <p class="home2-copy"><?= $td['detail'] ?></p>
-            </div>
-        </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 card mt-10" style="display:none;" id="content2-siteindex2-<?= $i ?>" onmouseleave="javascript:showSiteindex1(<?= $i ?>)">
+                    <div class="card-body">
+                        <div class="col-12 body-copy"></div>
+                        <p class="home1-copy"><?= $td['title'] ?></p>
+                        <p class="home2-copy"><?= $td['detail'] ?></p>
+                    </div>
+                </div>
         <?php
                 $i++;
             endforeach;
@@ -84,14 +80,13 @@ $this->title = 'Bangladesh';
     </div>
     <?php
     if ($canEdit == 1 && $userInThisBranch == 1 && isset($topic["contentBranchId"])) { ?>
-    <div class="btn btn-warning bt-edit1">
-        <a class="bt-line"
-            href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $topic['contentBranchId']]) ?>"
-            target="_blank">Edit</a>
-        <?php
+        <div class="col-12 text-end mt-10">
+            <a class="bt-line btn btn-warning" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $topic['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+        </div>
+    <?php
     }
-        ?>
-    </div>
+    ?>
+
 </div>
 
 
@@ -100,30 +95,28 @@ $this->title = 'Bangladesh';
     if (isset($import) && !empty($import) > 0) {
         $i = 0;
     ?>
-    <div class="row">
-        <div class="col-lg-6 col-md-6 col-12">
-            <img src="<?= Path::backendUrl() . $importDetail['image'] ?>" class="img-transportation">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+                <img src="<?= Path::backendUrl() . $importDetail['image'] ?>" class="img-transportation">
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+                <p class="title-import mt-10"><?= $importDetail['title'] ?></p> <br>
+                <p class="title-zero"><?= $importDetail['detail'] ?></p> <br>
+                <p class="circle-icon"><a href="#read more" class="no-underline"> <?= $importDetail['detail2'] ?> <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a></p>
+            </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-12">
-            <p class="title-import mt-10"><?= $importDetail['title'] ?></p> <br>
-            <p class="title-zero"><?= $importDetail['detail'] ?></p> <br>
-            <p class="circle-icon"><a href="#read more" class="no-underline"> <?= $importDetail['detail2'] ?> <i
-                        class="fa fa-chevron-circle-right" aria-hidden="true"></i></a></p>
-        </div>
-    </div>
     <?php
     }
     ?>
     <?php
     if ($canEdit == 1 && $userInThisBranch == 1) { ?>
-    <div class="btn btn-warning bt-edit1">
-        <a class="bt-line"
-            href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $importDetail['contentBranchId']]) ?>"
-            target="_blank">Edit</a>
-        <?php
+        <div class="col-12 text-end">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $importDetail['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+        </div>
+    <?php
     }
-        ?>
-    </div>
+    ?>
+
 </div>
 
 
@@ -134,7 +127,7 @@ $this->title = 'Bangladesh';
         if (isset($bangladresh) && count($bangladresh) > 0) {
             $i = 0;
         ?>
-        <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $bangladresh['title'] ?>
+            <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $bangladresh['title'] ?>
         <?php
         }
         ?>
@@ -145,54 +138,51 @@ $this->title = 'Bangladesh';
             if (isset($bangladreshDetail) && count($bangladreshDetail) > 0) {
                 $i = 0;
             ?>
-            <div class="row pr12">
-                <div class="col-4 title-bangladesh">
-                    <p><?= $bangladreshDetail['title'] ?></p>
-                </div>
-                <div class="col-2">
-                    <img src="<?= Path::backendUrl() . $bangladreshDetail['image'] ?>" class="img-woman">
-                    <div class="alert alert-secondary  text-center">
-                        <p class="table-calendar"> <i class="fa fa-calendar" aria-hidden="true"> June 2023</i></p>
-                        <p> S&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;&nbsp;S
-                        </p>
-                        <p> 3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;5 <button
-                                class="btn btn-primary calendar-button"
-                                type="button">6</button>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;9
-                        </p>
+                <div class="row pr12">
+                    <div class="col-4 title-bangladesh">
+                        <p><?= $bangladreshDetail['title'] ?></p>
+                    </div>
+                    <div class="col-2">
+                        <img src="<?= Path::backendUrl() . $bangladreshDetail['image'] ?>" class="img-woman">
+                        <div class="alert alert-secondary  text-center">
+                            <p class="table-calendar"> <i class="fa fa-calendar" aria-hidden="true"> June 2023</i></p>
+                            <p> S&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;&nbsp;S
+                            </p>
+                            <p> 3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;5 <button class="btn btn-primary calendar-button" type="button">6</button>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;9
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6 img-iconday">
+                        <img src="<?= Path::backendUrl() ?>image/img/button-1.png" class="img-button">
+                        <img src="<?= Path::backendUrl() ?>image/img/button-2.png" class="img-button">
+                        <img src="<?= Path::backendUrl() ?>image/img/button-4.png" class="img-button">
+                        <img src="<?= Path::backendUrl() ?>image/img/button-3.png" class="img-button">
                     </div>
                 </div>
-                <div class="col-6 img-iconday">
-                    <img src="<?= Path::backendUrl() ?>image/img/button-1.png" class="img-button">
-                    <img src="<?= Path::backendUrl() ?>image/img/button-2.png" class="img-button">
-                    <img src="<?= Path::backendUrl() ?>image/img/button-4.png" class="img-button">
-                    <img src="<?= Path::backendUrl() ?>image/img/button-3.png" class="img-button">
-                </div>
-            </div>
             <?php
             }
             ?>
             <?php
             if ($canEdit == 1 && $userInThisBranch == 1) { ?>
-            <div class="btn btn-warning bt-edit2">
-                <a class="bt-line"
-                    href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $bangladreshDetail['contentBranchId']]) ?>"
-                    target="_blank">Edit</a>
-                <?php
+                <div class="col-12 text-end">
+                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $bangladreshDetail['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+                </div>
+            <?php
             }
-                ?>
-            </div>
+            ?>
+
         </div>
         <div class="col-lg-6 col-md-6 col-12">
             <?php
             if (isset($webinar) && count($webinar) > 0) {
                 $i = 0;
             ?>
-            <div class="col-12 title-join">
-                <?= $webinar['title'] ?>
-            </div>
-            <div class="col-12 title-topic mt-10">
-                <p> <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $webinar['detail'] ?></p>
-            </div>
+                <div class="col-12 title-join">
+                    <?= $webinar['title'] ?>
+                </div>
+                <div class="col-12 title-topic mt-10">
+                    <p> <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $webinar['detail'] ?></p>
+                </div>
             <?php
             }
             ?>
@@ -202,23 +192,19 @@ $this->title = 'Bangladesh';
                     $i = 1;
                     foreach ($webinarDetail as $w) :
                 ?>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="<?= $w['contentBranchDetailId'] ?>">
-                        <button class="<?= $i == 1 ? 'accordion-button' : 'accordion-button collapsed' ?>" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#a<?= $w['contentBranchDetailId'] ?>"
-                            aria-expanded="true" aria-controls="<?= $w['contentBranchDetailId'] ?>">
-                            <?= $w['title'] ?>
-                        </button>
-                    </h2>
-                    <div id="a<?= $w['contentBranchDetailId'] ?>"
-                        class="accordion-collapse collapse <?= $i == 1 ? 'show' : '' ?>"
-                        aria-labelledby="<?= $w['contentBranchDetailId'] ?>" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong><?= $w['detail'] ?></strong><br>
-                            <?= $w['detail2'] ?>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="<?= $w['contentBranchDetailId'] ?>">
+                                <button class="<?= $i == 1 ? 'accordion-button' : 'accordion-button collapsed' ?>" type="button" data-bs-toggle="collapse" data-bs-target="#a<?= $w['contentBranchDetailId'] ?>" aria-expanded="true" aria-controls="<?= $w['contentBranchDetailId'] ?>">
+                                    <?= $w['title'] ?>
+                                </button>
+                            </h2>
+                            <div id="a<?= $w['contentBranchDetailId'] ?>" class="accordion-collapse collapse <?= $i == 1 ? 'show' : '' ?>" aria-labelledby="<?= $w['contentBranchDetailId'] ?>" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong><?= $w['detail'] ?></strong><br>
+                                    <?= $w['detail2'] ?>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
                 <?php
                         $i++;
                     endforeach;
@@ -232,14 +218,13 @@ $this->title = 'Bangladesh';
             </div>
             <?php
             if ($canEdit == 1 && $userInThisBranch == 1) { ?>
-            <div class="btn btn-warning bt-edit3">
-                <a class="bt-line"
-                    href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $webinar['contentBranchId']]) ?>"
-                    target="_blank">Edit</a>
-                <?php
+                <div class="col-12 text-end">
+                    <a class="btn btn-warning  bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $webinar['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+                </div>
+            <?php
             }
-                ?>
-            </div>
+            ?>
+
         </div>
     </div>
     <div class="col-12 pr12 background-site">
@@ -247,11 +232,10 @@ $this->title = 'Bangladesh';
             <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
                 <?php if (isset($professional) && count($professional) > 0) {
                 ?>
-                <div class="col-lg-12 title-Trending"> <img src="<?= Path::backendUrl() ?>image/Rectangle1.png"
-                        class="image mr-1">
-                    <?= $professional['title'] ?>
-                </div>
-                <?php
+                    <div class="col-lg-12 title-Trending"> <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1">
+                        <?= $professional['title'] ?>
+                    </div>
+                    <?php
                 }
 
                 if (isset($professionalDetail) && count($professionalDetail) > 0) {
@@ -259,9 +243,9 @@ $this->title = 'Bangladesh';
                     foreach ($professionalDetail as $prode) : if ($i < 6) {
 
                     ?>
-                <div class="col-lg-12 Company">
-                    <li onclick="javascript:showBangladresh(<?= $i ?>)"><?= $prode['title'] ?></li>
-                </div>
+                            <div class="col-lg-12 Company">
+                                <li onclick="javascript:showBangladresh(<?= $i ?>)"><?= $prode['title'] ?></li>
+                            </div>
                 <?php
                         }
                         $i++;
@@ -275,14 +259,12 @@ $this->title = 'Bangladesh';
                     $i = 0;
                     foreach ($professionalDetail as $profes) :
                 ?>
-                <div class="col-12 text-legal pl-20" style="display: <?= $i == 0 ? '' : 'none' ?>"
-                    id="bangladresh-detail-<?= $i ?>">
-                    <?= $profes['detail'] ?>
-                </div>
-                <div class="col-12 Our pt-20 pl-20" style="display: <?= $i == 0 ? '' : 'none' ?>"
-                    id="bangladresh-detail2-<?= $i ?>"> <?= $profes['detail2'] ?> <br>
-                    <button type="button" class="btn btn-primary button-text5"><?= $profes['url'] ?></button>
-                </div>
+                        <div class="col-12 text-legal pl-20" style="display: <?= $i == 0 ? '' : 'none' ?>" id="bangladresh-detail-<?= $i ?>">
+                            <?= $profes['detail'] ?>
+                        </div>
+                        <div class="col-12 Our pt-20 pl-20" style="display: <?= $i == 0 ? '' : 'none' ?>" id="bangladresh-detail2-<?= $i ?>"> <?= $profes['detail2'] ?> <br>
+                            <button type="button" class="btn btn-primary button-text5"><?= $profes['url'] ?></button>
+                        </div>
                 <?php
 
                         $i++;
@@ -296,8 +278,7 @@ $this->title = 'Bangladesh';
                     foreach ($professionalDetail as $profes) :
 
                 ?>
-                <img src="<?= Path::backendUrl() . $profes['image'] ?>" class="img-zgif"
-                    style="display: <?= $i == 0 ? '' : 'none' ?>" id="bangladresh-detail3-<?= $i ?>">
+                        <img src="<?= Path::backendUrl() . $profes['image'] ?>" class="img-zgif" style="display: <?= $i == 0 ? '' : 'none' ?>" id="bangladresh-detail3-<?= $i ?>">
                 <?php
                         $i++;
                     endforeach;
@@ -307,18 +288,16 @@ $this->title = 'Bangladesh';
         </div>
         <?php
         if ($canEdit == 1 && $userInThisBranch == 1) { ?>
-        <div class="btn btn-warning mt-3 mb-3 bt-edit1">
-            <a class="bt-line"
-                href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $professional['contentBranchId']]) ?>"
-                target="_blank">Edit</a>
-            <?php
+            <div class="col-12 text-end mt-3 mb-3">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $professional['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+            </div>
+        <?php
         }
-            ?>
-        </div>
+        ?>
+
     </div>
     <div class="col-12">
-        <div class="col-12 connect-experts mt-40"><img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"
-                class="image mr-1"><?= $legal['title'] ?></div>
+        <div class="col-12 connect-experts mt-40"><img src="<?= Path::backendUrl() ?>image/img/Rectangle.png" class="image mr-1"><?= $legal['title'] ?></div>
         <div class="col-12 Get-free mt-30"><?= $legalDetail['title'] ?></div>
         <div class="col-12 If-you mt-10"><?= $legalDetail['detail'] ?></div>
         <div class="col-12 mt-30 pr12">
@@ -331,13 +310,12 @@ $this->title = 'Bangladesh';
                         <div class="col-5"><label for="formGroupExampleInput" class="form-label label-thin">&nbsp;
                                 &nbsp;
                                 &nbsp;
-                                Select Country</label><select class="form-select mt-10" name="countryid"
-                                aria-label="Default select example" id="countryid">
+                                Select Country</label><select class="form-select mt-10" name="countryid" aria-label="Default select example" id="countryid">
                                 <?php
                                 if (isset($country) && count($country) > 0) {
                                     foreach ($country as $x) :
                                 ?>
-                                <option value="<?= $x['countryId'] ?>"><?= $x['countryName'] ?></option>
+                                        <option value="<?= $x['countryId'] ?>"><?= $x['countryName'] ?></option>
                                 <?php
                                     endforeach;
                                 }
@@ -346,7 +324,7 @@ $this->title = 'Bangladesh';
                                 if (isset($dropdown) && count($dropdown) > 0) {
                                     foreach ($dropdown as $a) :
                                 ?>
-                                <option value="<?= $a["countryId"] ?>"><?= $a["countryName"] ?></option>
+                                        <option value="<?= $a["countryId"] ?>"><?= $a["countryName"] ?></option>
                                 <?php
                                     endforeach;
                                 }
@@ -357,45 +335,33 @@ $this->title = 'Bangladesh';
                             <div class="row mt-20">
                                 <div class="col-5 left-box-select">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="typeperson" id="legalEntity"
-                                            value="1">
+                                        <input class="form-check-input" type="radio" name="typeperson" id="legalEntity" value="1">
                                         <label class="form-check-label ml-10" for="legalEntity">Legal Entity</label>
                                     </div>
                                 </div>
                                 <div class="col-5 left-box-select">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="typeperson" id="individual"
-                                            value="2" checked>
+                                        <input class="form-check-input" type="radio" name="typeperson" id="individual" value="2" checked>
                                         <label class="form-check-label ml-10" for="individual">Individual</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="mb-3 your-company" style="margin-top: 30px;"><label for="exampleInputCompany"
-                            class="form-label label-thin">Your Company<span class="moon">*</span></label>
-                        <input type="Company" class="form-control" name="company" id="company"
-                            aria-describedby="company">
+                    <div class="mb-3 your-company" style="margin-top: 30px;"><label for="exampleInputCompany" class="form-label label-thin">Your Company<span class="moon">*</span></label>
+                        <input type="Company" class="form-control" name="company" id="company" aria-describedby="company">
                     </div>
                     <div class="mb-3 your-company"><label for="exampleInputName" class="form-label label-thin">Your
-                            Name<span class="moon">*</span></label><input type="Name" class="form-control" name="name"
-                            id="name" aria-describedby="name"></div>
-                    <div class="mb-3 your-company"><label for="exampleInputPosition"
-                            class="form-label label-thin">Position<span class="moon">*</span></label><input
-                            type="Position" class="form-control" name="position" id="position"
-                            aria-describedby="position"></div>
+                            Name<span class="moon">*</span></label><input type="Name" class="form-control" name="name" id="name" aria-describedby="name"></div>
+                    <div class="mb-3 your-company"><label for="exampleInputPosition" class="form-label label-thin">Position<span class="moon">*</span></label><input type="Position" class="form-control" name="position" id="position" aria-describedby="position"></div>
                     <div class="mb-3 your-company"><label for="exampleInputEmail" class="form-label label-thin">Your
-                            e-mail<span class="moon">*</span></label><input type="Email" class="form-control" id="email"
-                            name="email" aria-describedby="email"></div>
+                            e-mail<span class="moon">*</span></label><input type="Email" class="form-control" id="email" name="email" aria-describedby="email"></div>
                     <div class="mb-3 your-company">
                         <div class="row">
-                            <div class="col-6 text-start"><label for="exampleInputEmail"
-                                    class="form-label label-thin">Phone
-                                    Number<span class="moon">*</span></label><input type="text" class="form-control"
-                                    name="phonenumber" id="phonenumber" placeholder="+880" aria-label="Phone"></div>
+                            <div class="col-6 text-start"><label for="exampleInputEmail" class="form-label label-thin">Phone
+                                    Number<span class="moon">*</span></label><input type="text" class="form-control" name="phonenumber" id="phonenumber" placeholder="+880" aria-label="Phone"></div>
                             <div class="col-6"><label for="exampleInputEmail" class="form-label label-thin">Your
-                                    Business<span class="moon">*</span></label><select class="form-select"
-                                    name="businesstype" id="businesstype" aria-label="Default select example">
+                                    Business<span class="moon">*</span></label><select class="form-select" name="businesstype" id="businesstype" aria-label="Default select example">
                                     <option selected>Select business Type</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -408,14 +374,12 @@ $this->title = 'Bangladesh';
                 <!-- right side -->
                 <div class="col-lg-6 col-md-6 col-12 form-Questions mt-50 pr-40">
                     <div class="mb-3"><label for="exampleInputQuestions" class="form-label label-thin">Questions &
-                            Concern</label><input type="Questions" class="form-control" name="question" id="question"
-                            aria-describedby="Questions"></div>
+                            Concern</label><input type="Questions" class="form-control" name="question" id="question" aria-describedby="Questions"></div>
                     <div class="mb-3"><label for="exampleFormControlTextarea1" class="form-label label-thin">Details of
                             Inquiry</label><textarea class="form-control" name="detail" id="detail" rows="3"></textarea>
                     </div>
                     <div class="row">
-                        <div class="col-9 text-start label-thin mt-4">ATTACHMENT (IF ANY) <i class="fa fa-paperclip"
-                                aria-hidden="true"></i></div>
+                        <div class="col-9 text-start label-thin mt-4">ATTACHMENT (IF ANY) <i class="fa fa-paperclip" aria-hidden="true"></i></div>
                         <a class="col-3 mt-4 text-end btn btn-primary button-get" href="javascript:newClient()">
                             <div class="text-center">
                                 Get
@@ -430,8 +394,7 @@ $this->title = 'Bangladesh';
                         </div>
                         <div class="col-8 text-end mt-4">
                             <div class="contact-social mb-2">Email</div><a href="" class="no-underline3">
-                                <p class="info-tokyo">f-info@tokyoconsultinggroup.com <i class="fa fa-envelope"
-                                        aria-hidden="true"></i></p>
+                                <p class="info-tokyo">f-info@tokyoconsultinggroup.com <i class="fa fa-envelope" aria-hidden="true"></i></p>
                             </a>
                         </div>
                         <div class="col-4 text-start mt-4">
@@ -450,41 +413,36 @@ $this->title = 'Bangladesh';
         </div>
         <?php
         if ($canEdit == 1 && $userInThisBranch == 1) { ?>
-        <div class="btn btn-warning bt-edit1 mb-3">
-            <a class="bt-line"
-                href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $legalDetail['contentBranchId']]) ?>"
-                target="_blank">Edit</a>
-            <?php
+            <div class=" col-12 text-end mb-3">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $legalDetail['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+            </div>
+        <?php
         }
-            ?>
-        </div>
+        ?>
+
     </div>
     <?php if (isset($footer) && count($footer) > 0) {
         $i = 0;
         foreach ($footer as $h) :
     ?> <div class="col-12 pr12 blue pt-20 pb-10">
-        <div class="row">
-            <div class="col-1g-10 col-md-10 col-12 text-update">
-                <p><?= $h['title'] ?></p>
-                <p> <?= $h['detail'] ?></p>
+                <div class="row">
+                    <div class="col-1g-10 col-md-10 col-12 text-update">
+                        <p><?= $h['title'] ?></p>
+                        <p> <?= $h['detail'] ?></p>
+                    </div>
+                    <div class="col-1g-10 col-md-10 col-12 text-project">
+                        <p><?= $h['detail2'] ?></p>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-12 mt-10 input-group-form">
+                        <div class="input-group flex-nowrap"> <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span> <input type="text" class="form-control input-your-email" placeholder="Your Email address" aria-label="Your Email address with two button addons"> <button class="btn btn-primary" type="button"><?= $h['detail3'] ?></button> </div> <br>
+                    </div>
+                </div>
             </div>
-            <div class="col-1g-10 col-md-10 col-12 text-project">
-                <p><?= $h['detail2'] ?></p>
+            <div class="col-12 pr12">
+                <div class="row">
+                    <div class="offset-lg-6 col-lg-6 col-12 text-center"> <img src="<?= Path::backendUrl() . $h['image'] ?>" class="image-book"> </div>
+                </div>
             </div>
-            <div class="col-lg-5 col-md-6 col-12 mt-10 input-group-form">
-                <div class="input-group flex-nowrap"> <span class="input-group-text" id="addon-wrapping"><i
-                            class="fa fa-envelope"></i></span> <input type="text" class="form-control input-your-email"
-                        placeholder="Your Email address" aria-label="Your Email address with two button addons"> <button
-                        class="btn btn-primary" type="button"><?= $h['detail3'] ?></button> </div> <br>
-            </div>
-        </div>
-    </div>
-    <div class="col-12 pr12">
-        <div class="row">
-            <div class="offset-lg-6 col-lg-6 col-12 text-center"> <img src="<?= Path::backendUrl() . $h['image'] ?>"
-                    class="image-book"> </div>
-        </div>
-    </div>
     <?php $i++;
         endforeach;
     }

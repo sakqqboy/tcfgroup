@@ -1,6 +1,10 @@
+<?php
+
+use common\helpers\Path;
+?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-        <a href="<?= Yii::$app->homeUrl ?>" class="nav-link"><img src="<?= Yii::$app->homeUrl ?>img/tcg-group-bangladesh.png" class="" style="width: 200px;"></a>
+        <a href="<?= Yii::$app->homeUrl ?>" class="nav-link"><img src="<?= Path::backendUrl() ?>image/img/tcg-group-bangladesh.png" class="" style="width: 200px;"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="snavbar-toggler-icon">
                 <i class="fa fa-bars" aria-hidden="true"></i>

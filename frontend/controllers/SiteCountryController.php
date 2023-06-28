@@ -4,9 +4,8 @@ namespace frontend\controllers;
 
 use backend\models\tokyoconsulting\ContentBranchDetail as TokyoconsultingContentBranchDetail;
 use backend\models\tokyoconsulting\Country as TokyoconsultingCountry;
-use backend\models\tokyoconsulting\master\ContentBranchDetailMaster;
-use backend\models\tokyoconsulting\Member;
-use backend\models\tokyoconsulting\MemberHasType;
+use frontend\models\tokyoconsulting\Member;
+use frontend\models\tokyoconsulting\MemberHasType;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -213,7 +212,7 @@ class SiteCountryController extends Controller
             if (isset($member) && !empty($member)) {
                 $userInThisBranch = 1;
             }
-            $membertypeAdmin = MemberHasType::find()
+            $memberTypeAdmin = MemberHasType::find()
                 ->select("mt.memberTypeName")
                 ->JOIN("LEFT JOIN", "member_type mt", "member_has_type.memberTypeId = mt.memberTypeId")
                 //->leftJoin('member_type', 'member_type.memberTypeId = member_has_type.memberTypeId')
@@ -222,12 +221,14 @@ class SiteCountryController extends Controller
                     "memberTypeName" => "Administrator"
                 ])
                 ->asArray()
-                ->all();
-            if (isset($membertypeAdmin) && !empty($memberTypeAdmin)) {
+                ->one();
+
+            if (isset($memberTypeAdmin) && !empty($memberTypeAdmin)) {
+
                 $userInThisBranch = 1;
             }
         }
-        // throw new Exception(count($topic));
+        // throw new Exception($userInThisBranch . '=>' . $canEdit);
         return $this->render('index', [
             "bangladresh" => $bangladresh,
             "legal" => $legal,
@@ -248,6 +249,7 @@ class SiteCountryController extends Controller
             "legalDetail" => $legalDetail,
             "country" => $country,
             "dropdown" => $dropdown,
+            "branchName" => $branchName
         ]);
     }
     public function actionNewsletter()

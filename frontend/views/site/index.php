@@ -4,6 +4,7 @@
 
 use Codeception\Lib\Connector\Yii2;
 use common\helpers\Path;
+use common\models\ModelMaster;
 use yii\bootstrap5\Carousel;
 
 $this->title = 'TCFGROUP';
@@ -51,6 +52,14 @@ $this->title = 'TCFGROUP';
             </button>
         </div>
     </div>
+    <?php
+    if ($admin == 1) { ?>
+        <div class=" col-12 text-end edit-content">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $index['contentId']]) ?>" target="_blank">Edit</a>
+        </div>
+    <?php
+    }
+    ?>
 </div>
 
 
@@ -78,7 +87,6 @@ $this->title = 'TCFGROUP';
             <div class="col-lg-6 col-12">
                 <div class="row">
                     <div class="col-6 country-index">
-
                         <?php
                         if (isset($branch) && count($branch) > 0) {
                             $i = 0;
@@ -120,7 +128,16 @@ $this->title = 'TCFGROUP';
             </div>
         </div>
     </div>
+
 </div>
+<?php
+if ($admin == 1) { ?>
+    <div class=" col-12 text-end edit-content">
+        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $pp['contentId']]) ?>" target="_blank">Edit</a>
+    </div>
+<?php
+}
+?>
 
 <div class="col-12 pr12">
     <div class="row">
@@ -182,8 +199,14 @@ $this->title = 'TCFGROUP';
         </div>
     </div>
 </div>
-
-
+<?php
+if ($admin == 1) { ?>
+    <div class=" col-12 text-end edit-content">
+        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $c['contentId']]) ?>" target="_blank">Edit</a>
+    </div>
+<?php
+}
+?>
 
 <div class="col-12">
     <img src="<?= Path::backendUrl() ?>image/Yokhohama.png" class="image-Yokhohamaa">
@@ -214,6 +237,14 @@ $this->title = 'TCFGROUP';
 
     </div>
 </div>
+<?php
+if ($admin == 1) { ?>
+    <div class=" col-12 text-end edit-content">
+        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $d['contentId']]) ?>" target="_blank">Edit</a>
+    </div>
+<?php
+}
+?>
 
 
 
@@ -241,6 +272,14 @@ $this->title = 'TCFGROUP';
     }
     ?>
 </div>
+<?php
+if ($admin == 1) { ?>
+    <div class=" col-12 text-end edit-content">
+        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $e['contentId']]) ?>" target="_blank">Edit</a>
+    </div>
+<?php
+}
+?>
 
 
 
@@ -268,7 +307,14 @@ $this->title = 'TCFGROUP';
     ?>
 
 </div>
-
+<?php
+if ($admin == 1) { ?>
+    <div class=" col-12 text-end edit-content">
+        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $f['contentId']]) ?>" target="_blank">Edit</a>
+    </div>
+<?php
+}
+?>
 <div class="col-12">
     <div class="col-12 connect-experts mt-40">
         <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> Connect Experts

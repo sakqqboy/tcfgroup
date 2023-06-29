@@ -4,11 +4,10 @@
 
 use Codeception\Lib\Connector\Yii2;
 use common\helpers\Path;
+use common\models\ModelMaster;
 
 $this->title = 'People';
 ?>
-
-
 
 <div class="col-12">
     <?php
@@ -32,8 +31,16 @@ $this->title = 'People';
     }
     ?>
 </div>
-
-
+<div>
+<?php
+        if ($admin == 1) { ?>
+            <div class=" col-12 text-end mt-1 mb-3">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $at['contentId']]) ?>" target="_blank">Edit</a>
+            </div>
+        <?php
+        }
+    ?>
+</div>
 
 <div class="col-12 pr12 blackground-black mt-50 ">
     <div class="row">
@@ -73,7 +80,16 @@ $this->title = 'People';
         ?>
     </div>
 </div>
-
+<div>
+<?php
+        if ($admin == 1) { ?>
+            <div class=" col-12 text-end mt-1 mb-3">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $our['contentId']]) ?>" target="_blank">Edit</a>
+            </div>
+        <?php
+        }
+    ?>
+</div>
 
 <div class="col-12  title-employees mt-50">
     <?php
@@ -88,7 +104,6 @@ $this->title = 'People';
     }
     ?>
 </div>
-
 <div class="col-12 pr12 tcf-type">
     <div class="row">
         <?php
@@ -123,7 +138,6 @@ $this->title = 'People';
         </div>
     </div>
 </div>
-
 <div class="col-12">
     <?php
     if (isset($global) && count($global) > 0) {
@@ -135,6 +149,16 @@ $this->title = 'People';
             $i++;
         endforeach;
     }
+    ?>
+</div>
+<div>
+<?php
+        if ($admin == 1) { ?>
+            <div class=" col-12 text-end mt-1 mb-3">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $meetting['contentId']]) ?>" target="_blank">Edit</a>
+            </div>
+        <?php
+        }
     ?>
 </div>
 
@@ -191,7 +215,16 @@ $this->title = 'People';
         ?>
     </div>
 </div>
-
+<div>
+<?php
+        if ($admin == 1) { ?>
+            <div class=" col-12 text-end mt-1 mb-3">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $person['contentId']]) ?>" target="_blank">Edit</a>
+            </div>
+        <?php
+        }
+    ?>
+</div>
 
 <div class="col-12 pr12">
     <div class="row">
@@ -230,4 +263,15 @@ $this->title = 'People';
         ?>
     </div>
 </div>
+<div>
+<?php
+        if ($admin == 1) { ?>
+            <div class=" col-12 text-end mt-1 mb-3">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $work['contentId']]) ?>" target="_blank">Edit</a>
+            </div>
+        <?php
+        }
+    ?>
+</div>
+
 <div class="col-12 stye-people"></div>

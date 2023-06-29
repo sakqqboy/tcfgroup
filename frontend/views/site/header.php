@@ -22,10 +22,10 @@ use common\helpers\Path;
                     <a href="<?= Yii::$app->homeUrl ?>service" class="nav-link">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?= Yii::$app->homeUrl ?>site/people" class="nav-link">People</a>
+                    <a href="<?= Yii::$app->homeUrl ?>people" class="nav-link">People</a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?= Yii::$app->homeUrl ?>site/career" class="nav-link">Career & Recruitment </a>
+                    <a href="<?= Yii::$app->homeUrl ?>career" class="nav-link">Career & Recruitment </a>
                 </li>
                 <li class="nav-item">
                     <a href="<?= Yii::$app->homeUrl ?>site/about1" class="nav-link">About us</a>

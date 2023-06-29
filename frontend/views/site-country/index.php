@@ -419,7 +419,6 @@ $this->title = $branchName;
         <?php
         }
         ?>
-
     </div>
     <?php if (isset($footer) && count($footer) > 0) {
         $i = 0;

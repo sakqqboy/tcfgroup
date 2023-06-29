@@ -4,6 +4,7 @@
 
 use Codeception\Lib\Connector\Yii2;
 use common\helpers\Path;
+use common\models\ModelMaster;
 
 $this->title = 'Career';
 ?>
@@ -20,6 +21,16 @@ $this->title = 'Career';
             <div class="col-12">
                 <img src="<?= Path::backendUrl() . $jobtcf['image'] ?>" class="image-job-postd">
             </div>
+            <div>
+                <?php
+                    if ($admin == 1) { ?>
+                    <div class=" col-12 text-end mt-1 mb-3">
+                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $jobtcf['contentId']]) ?>" target="_blank">Edit</a>
+                    </div>
+                <?php
+                    }
+                ?>
+            </div>
             <div class="col-10 text-shape">
                 <?= $jobtcf['title'] ?> <br>
                 <?= $jobtcf['detail'] ?> <br>
@@ -32,8 +43,6 @@ $this->title = 'Career';
     }
     ?>
 </div>
-
-
 
 <div class="col-12 pr12">
     <?php
@@ -76,11 +85,17 @@ $this->title = 'Career';
         endforeach;
     }
     ?>
-
 </div>
-
-
-
+<div>
+<?php
+        if ($admin == 1) { ?>
+            <div class=" col-12 text-end mt-1 mb-3">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $the['contentId']]) ?>" target="_blank">Edit</a>
+            </div>
+        <?php
+        }
+    ?>
+</div>
 
 <div class="col-12 pr12">
 
@@ -120,7 +135,16 @@ $this->title = 'Career';
     }
     ?>
 </div>
-
+<div>
+<?php
+        if ($admin == 1) { ?>
+            <div class=" col-12 text-end mt-1 mb-3">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $more['contentId']]) ?>" target="_blank">Edit</a>
+            </div>
+        <?php
+        }
+    ?>
+</div>
 
 <div class="col-12">
     <?php
@@ -151,6 +175,16 @@ $this->title = 'Career';
         endforeach;
     }
     ?>
+    <div>
+        <?php
+        if ($admin == 1) { ?>
+            <div class=" col-12 text-end mt-1 mb-3">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $ex['contentId']]) ?>" target="_blank">Edit</a>
+            </div>
+        <?php
+            }
+        ?>
+    </div>
 
     <?php
     if (isset($apply) && count($apply) > 0) {
@@ -175,6 +209,16 @@ $this->title = 'Career';
         endforeach;
     }
     ?>
+    <div>
+        <?php
+        if ($admin == 1) { ?>
+            <div class=" col-12 text-end mt-1 mb-3">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $ap['contentId']]) ?>" target="_blank">Edit</a>
+            </div>
+        <?php
+            }
+        ?>
+    </div>
 
     <?php
     if (isset($professional) && count($professional) > 0) {
@@ -199,7 +243,17 @@ $this->title = 'Career';
     }
     ?>
 </div>
-
+<div>
+    <?php
+        if ($admin == 1) { 
+    ?>
+        <div class=" col-12 text-end mt-1 mb-3">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $pr['contentId']]) ?>" target="_blank">Edit</a>
+        </div>
+    <?php
+        }
+    ?>
+</div>
 
 <div class="col-12 pr12">
     <div class="row">
@@ -227,7 +281,17 @@ $this->title = 'Career';
         ?>
     </div>
 </div>
-
+<div>
+    <?php
+        if ($admin == 1) { 
+    ?>
+        <div class=" col-12 text-end mt-1 mb-3">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $cu['contentId']]) ?>" target="_blank">Edit</a>
+        </div>
+    <?php
+        }
+    ?>
+</div>
 
 <div class="col-12 pr12">
     <div class="row">
@@ -255,8 +319,17 @@ $this->title = 'Career';
                 </div>
     </div>
 </div>
-
-
+<div>
+    <?php
+        if ($admin == 1) { 
+    ?>
+        <div class=" col-12 text-end mt-1 mb-3">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $vo['contentId']]) ?>" target="_blank">Edit</a>
+        </div>
+    <?php
+        }
+    ?>
+</div>
 
 <div class="col-12  mt-50 col-background">
     <?php
@@ -270,6 +343,7 @@ $this->title = 'Career';
             <div class="col-12 text-TCG">
                 <?= $sh['detail'] ?>
             </div>
+            
     <?php
             $i++;
         endforeach;
@@ -301,8 +375,8 @@ $this->title = 'Career';
                             endforeach;
                         }
                         ?>
-
                     </div>
+                    
                     <div class="col-6 country-index">
                         <?php
                         if (isset($incountry) && count($incountry) > 0) {
@@ -341,8 +415,35 @@ $this->title = 'Career';
         </div>
     </div>
 </div>
-
-
+<div class="col-12 text-end mt-1 mb-3">
+    <?php
+        if ($admin == 1) { 
+    ?>
+        <span>
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $sh['contentId']]) ?>" target="_blank">Edit(ฺBG)</a>
+        </span>
+    <?php
+        }
+    ?>
+    <?php
+        if ($admin == 1) { 
+    ?>
+        <span>
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $di['contentId']]) ?>" target="_blank">Edit(Left)</a>
+        </span>
+    <?php
+        }
+    ?>
+    <?php
+        if ($admin == 1) { 
+    ?>
+        <span>
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $in['contentId']]) ?>" target="_blank">Edit(Right)</a>
+        </span>
+    <?php
+        }
+    ?>
+</div>
 
 <div class="col-12">
     <?php
@@ -377,6 +478,17 @@ $this->title = 'Career';
     }
     ?>
 </div>
+<div>
+    <?php
+        if ($admin == 1) { 
+    ?>
+        <div class=" col-12 text-end mt-1 mb-3">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $sh['contentId']]) ?>" target="_blank">Edit</a>
+        </div>
+    <?php
+        }
+    ?>
+</div>
 
 
 <div class="col-12 pr12 mt-20 form-dropdown">
@@ -408,6 +520,17 @@ $this->title = 'Career';
             ?>
         </div>
     </div>
+</div>
+<div>
+    <?php
+        if ($admin == 1) { 
+    ?>
+        <div class=" col-12 text-end mt-1 mb-3">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $btc['contentId']]) ?>" target="_blank">Edit</a>
+        </div>
+    <?php
+        }
+    ?>
 </div>
 
 
@@ -451,7 +574,17 @@ $this->title = 'Career';
         </div>
     </div>
 </div>
-
+<div>
+    <?php
+        if ($admin == 1) { 
+    ?>
+        <div class=" col-12 text-end mt-1 mb-3">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $cd['contentId']]) ?>" target="_blank">Edit</a>
+        </div>
+    <?php
+        }
+    ?>
+</div>
 
 <div class="col-12 pr12 mt-50 form-text-footer">
     <div class="row">
@@ -494,4 +627,15 @@ $this->title = 'Career';
             </div>
         </div>
     </div>
+</div>
+<div>
+    <?php
+        if ($admin == 1) { 
+    ?>
+        <div class=" col-12 text-end mt-1 mb-3">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $ft['contentId']]) ?>" target="_blank">Edit</a>
+        </div>
+    <?php
+        }
+    ?>
 </div>

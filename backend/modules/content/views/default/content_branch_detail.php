@@ -1,11 +1,13 @@
 <?php
     $this -> title = 'Content Detail';
-    use common\models\ModelMaster;
+
+use backend\models\tokyoconsulting\Branch;
+use common\models\ModelMaster;
 ?>
 <div class="col-lg-12">
 <div class="row">
         <div class="col-lg-12 mt-4 text-center font-title">
-            Content Branch Detail
+            Content Branch <?= Branch::branchName($contentbranch -> branchId) ?>
         </div>
     </div>
     <div class="row">

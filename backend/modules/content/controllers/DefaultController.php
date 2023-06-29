@@ -385,12 +385,16 @@ class DefaultController extends Controller
         $param = ModelMaster::decodeParams($hash);
         $contentBranchId = $param["contentBranchId"];
 
+        $contentbranch = ContentBranch::find()
+            ->where(["contentBranchId" => $contentBranchId])
+            ->one();
+
         $contentBranchDetail = ContentBranchDetail::find()
             ->where(["contentBranchId" => $contentBranchId])
             ->asArray()
             ->all();
 
-        return $this->render('content_branch_detail', ["contentBranchDetail" => $contentBranchDetail, "contentBranchId" => $contentBranchId]);
+        return $this->render('content_branch_detail', ["contentBranchDetail" => $contentBranchDetail, "contentBranchId" => $contentBranchId, "contentbranch" => $contentbranch]);
     }
 
     public function actionCreateContentBranchDetail($hash)

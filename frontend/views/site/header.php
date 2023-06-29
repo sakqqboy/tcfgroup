@@ -16,7 +16,7 @@ use common\helpers\Path;
                     <a href="<?= Yii::$app->homeUrl ?>philosophy" class="nav-link">Philosophy</a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?= Yii::$app->homeUrl ?>services" class="nav-link">Services</a>
+                    <a href="<?= Yii::$app->homeUrl ?>service" class="nav-link">Services</a>
                 </li>
                 <li class="nav-item">
                     <a href="<?= Yii::$app->homeUrl ?>people" class="nav-link">People</a>

@@ -80,6 +80,11 @@ class ServiceController extends Controller
             ->asArray()
             ->one();
 
+        $boat = Content::find()
+            ->where(["contentName" => "Boatpic"])
+            ->asArray()
+            ->one();
+
         $o = Content::find()
             ->where(["contentName" => "Founder"])
             ->asArray()
@@ -151,6 +156,7 @@ class ServiceController extends Controller
         $item = [];
         $detail = [];
         $picturegraphics = [];
+        $boatimg = [];
         $founder = [];
         $star = [];
         $itemstar = [];
@@ -164,6 +170,7 @@ class ServiceController extends Controller
         $background = [];
         $most = [];
         $countryindex2 = [];
+
 
 
         if (isset($r) && !empty($r)) {
@@ -199,6 +206,12 @@ class ServiceController extends Controller
         if (isset($tokyo) && !empty($tokyo)) {
             $picturegraphics = ContentDetail::find()
                 ->where(["contentId" => $tokyo["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+        if (isset($boat) && !empty($boat)) {
+            $boatimg = ContentDetail::find()
+                ->where(["contentId" => $boat["contentId"], "status" => 1])
                 ->asArray()
                 ->all();
         }
@@ -288,6 +301,7 @@ class ServiceController extends Controller
             "item" => $item,
             "detail" => $detail,
             "picturegraphics" => $picturegraphics,
+            "boatimg" => $boatimg,
             "founder" => $founder,
             "star" => $star,
             "itemstar" => $itemstar,

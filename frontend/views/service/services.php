@@ -19,7 +19,7 @@ $this->title = 'services';
         $i = 0;
         foreach ($services as $ser) :
     ?>
-    <img src="<?= Path::backendUrl() . $ser['image'] ?>" class="image-Linkedin-Cover">
+            <img src="<?= Path::backendUrl() . $ser['image'] ?>" class="image-Linkedin-Cover">
 
     <?php
             $i++;
@@ -28,11 +28,9 @@ $this->title = 'services';
     ?>
     <?php
     if ($admin == 1) { ?>
-    <div class=" col-12 text-end edit-content">
-        <a class="btn btn-warning bt-line"
-            href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $ser['contentId']]) ?>"
-            target="_blank">Edit</a>
-    </div>
+        <div class=" col-12 text-end edit-content">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $ser['contentId']]) ?>" target="_blank">Edit</a>
+        </div>
     <?php
     }
     ?>
@@ -46,22 +44,20 @@ $this->title = 'services';
             foreach ($bannerservices as $s) :
 
         ?>
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
-            <div class=" col-12 home-form mt-20">
-                <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $s['title'] ?>
-            </div>
-            <div class="col-lg-12 home-form-one">
-                <p> <?= $s['detail'] ?></p>
-                <p> <?= $s['detail2'] ?></p>
-                <p> <?= $s['detail3'] ?></p>
-            </div>
-            <div class="col-12 text-end mt-30">
-                <button type="button" id="prev" class="btn btn-outline-dark"><i class="fa fa-angle-left"
-                        aria-hidden="true"></i> </button>
-                <button type="button" id="next" class="btn btn-outline-dark"><i class="fa fa-angle-right"
-                        aria-hidden="true"></i> </button>
-            </div>
-        </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 mt-20">
+                    <div class=" col-12 home-form mt-20">
+                        <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $s['title'] ?>
+                    </div>
+                    <div class="col-lg-12 home-form-one">
+                        <p> <?= $s['detail'] ?></p>
+                        <p> <?= $s['detail2'] ?></p>
+                        <p> <?= $s['detail3'] ?></p>
+                    </div>
+                    <div class="col-12 text-end mt-30">
+                        <button type="button" id="prev" class="btn btn-outline-dark"><i class="fa fa-angle-left" aria-hidden="true"></i> </button>
+                        <button type="button" id="next" class="btn btn-outline-dark"><i class="fa fa-angle-right" aria-hidden="true"></i> </button>
+                    </div>
+                </div>
         <?php
                 $i++;
             endforeach;
@@ -73,23 +69,23 @@ $this->title = 'services';
             $i = 0;
             foreach ($background as $bk) :
         ?>
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12 show-text-home">
-            <div class="col-12 pl-20 home-two">
-                <p> <?= $bk['title'] ?></p>
-                <p><?= $bk['detail'] ?></p>
-            </div>
-            <div class="col-12 pt-20 pl-20 form-two">
-                <i class="fa fa-arrows-alt arrows-icon" aria-hidden="true"></i> <?= $bk['detail2'] ?>
-            </div>
-            <div class="col-12 pt-20 pl-20 form-tree">
-                <p> <?= $bk['detail3'] ?></p>
-                <p><?= $bk['detail4'] ?></p>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12 show-text-home">
+                    <div class="col-12 pl-20 home-two">
+                        <p> <?= $bk['title'] ?></p>
+                        <p><?= $bk['detail'] ?></p>
+                    </div>
+                    <div class="col-12 pt-20 pl-20 form-two">
+                        <i class="fa fa-arrows-alt arrows-icon" aria-hidden="true"></i> <?= $bk['detail2'] ?>
+                    </div>
+                    <div class="col-12 pt-20 pl-20 form-tree">
+                        <p> <?= $bk['detail3'] ?></p>
+                        <p><?= $bk['detail4'] ?></p>
 
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-12">
-            <img src="<?= Path::backendUrl() . $bk['image'] ?>" class="img-tree">
-        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <img src="<?= Path::backendUrl() . $bk['image'] ?>" class="img-tree">
+                </div>
         <?php
 
                 $i++;
@@ -99,11 +95,9 @@ $this->title = 'services';
     </div>
     <?php
     if ($admin == 1) { ?>
-    <div class=" col-12 text-end edit-content">
-        <a class="btn btn-warning bt-line"
-            href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $bk['contentId']]) ?>"
-            target="_blank">Edit</a>
-    </div>
+        <div class=" col-12 text-end edit-content">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $bk['contentId']]) ?>" target="_blank">Edit</a>
+        </div>
     <?php
     }
     ?>
@@ -116,25 +110,25 @@ $this->title = 'services';
         foreach ($box as $x) :
 
     ?>
-    <div class="row">
-        <div class="col-lg-6 col-md-6 col-12 mt-20">
-            <div class="col-12 form-select-one mt-20">
-                <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image-Rectangle1"> <?= $x['title'] ?>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12 mt-20">
+                    <div class="col-12 form-select-one mt-20">
+                        <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image-Rectangle1"> <?= $x['title'] ?>
+                    </div>
+                    <div class="col-12 pt-20 form-select-two">
+                        <p> <?= $x['detail'] ?></p>
+                        <p><?= $x['detail2'] ?></p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12 mt-50">
+                    <div class="col-12 form-select-tree">
+                        <?= $x['detail3'] ?>
+                    </div>
+                    <div class="col-12 pt-20">
+                        <img src="<?= Path::backendUrl() . $x['image'] ?>" class="image-Asset">
+                    </div>
+                </div>
             </div>
-            <div class="col-12 pt-20 form-select-two">
-                <p> <?= $x['detail'] ?></p>
-                <p><?= $x['detail2'] ?></p>
-            </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-12 mt-50">
-            <div class="col-12 form-select-tree">
-                <?= $x['detail3'] ?>
-            </div>
-            <div class="col-12 pt-20">
-                <img src="<?= Path::backendUrl() . $x['image'] ?>" class="image-Asset">
-            </div>
-        </div>
-    </div>
     <?php
 
             $i++;
@@ -143,11 +137,9 @@ $this->title = 'services';
     ?>
     <?php
     if ($admin == 1) { ?>
-    <div class=" col-12 text-end edit-content mt-4">
-        <a class="btn btn-warning bt-line"
-            href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $x['contentId']]) ?>"
-            target="_blank">Edit</a>
-    </div>
+        <div class=" col-12 text-end edit-content mt-4">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $x['contentId']]) ?>" target="_blank">Edit</a>
+        </div>
     <?php
     }
     ?>
@@ -162,9 +154,9 @@ $this->title = 'services';
                 $i = 0;
                 foreach ($services as $ser) :
             ?>
-            <div class="col-12 form-services mt-50">
-                <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $ser['title'] ?>
-            </div>
+                    <div class="col-12 form-services mt-50">
+                        <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $ser['title'] ?>
+                    </div>
             <?php
                     $i++;
                 endforeach;
@@ -184,7 +176,7 @@ $this->title = 'services';
 
 
                         ?>
-                        <option selected onclick="javasript:showCountry(<?= $i ?>)"> <?= $tryin['title'] ?> </option>
+                                    <option selected onclick="javasript:showCountry(<?= $i ?>)"> <?= $tryin['title'] ?> </option>
 
                         <?php
                                 }
@@ -206,12 +198,12 @@ $this->title = 'services';
                 $i = 0;
                 foreach ($stage as $select) :
             ?>
-            <div class="col-12 form-select-tree1">
-                <?= $select['title'] ?>
-            </div>
-            <div class="col-12 form-services">
-                <?= $select['detail'] ?>
-            </div>
+                    <div class="col-12 form-select-tree1">
+                        <?= $select['title'] ?>
+                    </div>
+                    <div class="col-12 form-services">
+                        <?= $select['detail'] ?>
+                    </div>
             <?php
                     $i++;
                 endforeach;
@@ -219,11 +211,9 @@ $this->title = 'services';
             ?>
             <?php
             if ($admin == 1) { ?>
-            <div class=" col-12 text-end edit-content mt-4">
-                <a class="btn btn-warning bt-line"
-                    href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $select['contentId']]) ?>"
-                    target="_blank">Edit</a>
-            </div>
+                <div class=" col-12 text-end edit-content mt-4">
+                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $select['contentId']]) ?>" target="_blank">Edit</a>
+                </div>
             <?php
             }
             ?>
@@ -237,19 +227,18 @@ $this->title = 'services';
                             if ($i < 6) {
 
                     ?>
-                    <div class="col-lg-4 col-md-6 col-sm-4 col-8">
-                        <div class="card col-10 mt-20 form-page-text">
-                            <div class="text-center">
-                                <img src="<?= Path::backendUrl() . $table['image'] ?>" class="card-img-top">
-                                <div class="card-body text-center">
-                                    <h6> <?= $table['title'] ?></h6>
-                                    <p><?= $table['detail'] ?></p>
-                                    <button type="button"
-                                        class="btn btn-outline-primary"><?= $table['detail2'] ?></button>
+                                <div class="col-lg-4 col-md-6 col-sm-4 col-8">
+                                    <div class="card col-10 mt-20 form-page-text">
+                                        <div class="text-center">
+                                            <img src="<?= Path::backendUrl() . $table['image'] ?>" class="card-img-top">
+                                            <div class="card-body text-center">
+                                                <h6> <?= $table['title'] ?></h6>
+                                                <p><?= $table['detail'] ?></p>
+                                                <button type="button" class="btn btn-outline-primary"><?= $table['detail2'] ?></button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
                     <?php
                             }
                             $i++;
@@ -262,11 +251,9 @@ $this->title = 'services';
     </div>
     <?php
     if ($admin == 1) { ?>
-    <div class=" col-12 text-end edit-content mt-2">
-        <a class="btn btn-warning bt-line"
-            href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $table['contentId']]) ?>"
-            target="_blank">Edit</a>
-    </div>
+        <div class=" col-12 text-end edit-content mt-2">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $table['contentId']]) ?>" target="_blank">Edit</a>
+        </div>
     <?php
     }
     ?>
@@ -281,13 +268,13 @@ $this->title = 'services';
                 $i = 0;
                 foreach ($founder as $o) :
             ?>
-            <div class="col-12 form-select-business mt-20">
-                <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $o['title'] ?>
-            </div>
-            <div class="col-12 mt-20">
-                <img src="<?= Path::backendUrl() . $o['image'] ?>">
-                <p><?= $o['detail'] ?></p>
-            </div>
+                    <div class="col-12 form-select-business mt-20">
+                        <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $o['title'] ?>
+                    </div>
+                    <div class="col-12 mt-20">
+                        <img src="<?= Path::backendUrl() . $o['image'] ?>">
+                        <p><?= $o['detail'] ?></p>
+                    </div>
             <?php
                     $i++;
                 endforeach;
@@ -295,11 +282,9 @@ $this->title = 'services';
             ?>
             <?php
             if ($admin == 1) { ?>
-            <div class=" col-12 text-end edit-content mt-2">
-                <a class="btn btn-warning bt-line"
-                    href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $o['contentId']]) ?>"
-                    target="_blank">Edit</a>
-            </div>
+                <div class=" col-12 text-end edit-content mt-2">
+                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $o['contentId']]) ?>" target="_blank">Edit</a>
+                </div>
             <?php
             }
             ?>
@@ -313,18 +298,16 @@ $this->title = 'services';
                             foreach ($item as $t) :
 
                         ?>
-                        <p><img src="<?= Path::backendUrl() . $t['image'] ?>" style="width: 90px;"></p>
-                        <?php
+                                <p><img src="<?= Path::backendUrl() . $t['image'] ?>" style="width: 90px;"></p>
+                                <?php
                                 if ($admin == 1) { ?>
-                        <div class=" col-12 text-end edit-content mt-2">
-                            <a class="btn btn-warning bt-line"
-                                href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $t['contentId']]) ?>"
-                                target="_blank">Edit</a>
-                        </div>
-                        <?php
+                                    <div class=" col-12 text-end edit-content mt-2">
+                                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $t['contentId']]) ?>" target="_blank">Edit</a>
+                                    </div>
+                                <?php
                                 }
                                 ?>
-                        <?php
+                            <?php
 
                                 $i++;
                             endforeach;
@@ -334,18 +317,16 @@ $this->title = 'services';
                             $i = 0;
                             foreach ($star as $u) :
                             ?>
-                        <p><img src="<?= Path::backendUrl() . $u['image'] ?>" style="width: 90px;"></p>
-                        <?php
+                                <p><img src="<?= Path::backendUrl() . $u['image'] ?>" style="width: 90px;"></p>
+                                <?php
                                 if ($admin == 1) { ?>
-                        <div class=" col-12 text-end edit-content mt-2">
-                            <a class="btn btn-warning bt-line"
-                                href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $u['contentId']]) ?>"
-                                target="_blank">Edit</a>
-                        </div>
-                        <?php
+                                    <div class=" col-12 text-end edit-content mt-2">
+                                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $u['contentId']]) ?>" target="_blank">Edit</a>
+                                    </div>
+                                <?php
                                 }
                                 ?>
-                        <?php
+                            <?php
                                 $i++;
                             endforeach;
                         }
@@ -354,15 +335,13 @@ $this->title = 'services';
                             $i = 0;
                             foreach ($itemstar as $v) :
                             ?>
-                        <p><img src="<?= Path::backendUrl() . $v['image'] ?>" style="width: 90px;"></p>
-                        <?php
+                                <p><img src="<?= Path::backendUrl() . $v['image'] ?>" style="width: 90px;"></p>
+                                <?php
                                 if ($admin == 1) { ?>
-                        <div class=" col-12 text-end edit-content mt-2">
-                            <a class="btn btn-warning bt-line"
-                                href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $v['contentId']]) ?>"
-                                target="_blank">Edit</a>
-                        </div>
-                        <?php
+                                    <div class=" col-12 text-end edit-content mt-2">
+                                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $v['contentId']]) ?>" target="_blank">Edit</a>
+                                    </div>
+                                <?php
                                 }
                                 ?>
                         <?php
@@ -379,18 +358,16 @@ $this->title = 'services';
                             foreach ($detail as $d) :
 
                         ?>
-                        <div class="col-12 ">
-                            <p class="text-Goal"><?= $d['title'] ?></p>
-                            <p class="text-one"><?= $d['detail'] ?></p>
-                        </div>
-                        <?php
+                                <div class="col-12 ">
+                                    <p class="text-Goal"><?= $d['title'] ?></p>
+                                    <p class="text-one"><?= $d['detail'] ?></p>
+                                </div>
+                                <?php
                                 if ($admin == 1) { ?>
-                        <div class=" col-12 text-end edit-content mt-2">
-                            <a class="btn btn-warning bt-line"
-                                href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $d['contentId']]) ?>"
-                                target="_blank">Edit</a>
-                        </div>
-                        <?php
+                                    <div class=" col-12 text-end edit-content mt-2">
+                                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $d['contentId']]) ?>" target="_blank">Edit</a>
+                                    </div>
+                                <?php
                                 }
                                 ?>
 
@@ -406,16 +383,14 @@ $this->title = 'services';
                             $i = 0;
                             foreach ($data as $g) :
                         ?>
-                        <p class="text-Goal"><?= $g['title'] ?></p>
-                        <p class="text-one"><?= $g['detail'] ?></p>
-                        <?php
+                                <p class="text-Goal"><?= $g['title'] ?></p>
+                                <p class="text-one"><?= $g['detail'] ?></p>
+                                <?php
                                 if ($admin == 1) { ?>
-                        <div class=" col-12 text-end edit-content mt-2">
-                            <a class="btn btn-warning bt-line"
-                                href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $g['contentId']]) ?>"
-                                target="_blank">Edit</a>
-                        </div>
-                        <?php
+                                    <div class=" col-12 text-end edit-content mt-2">
+                                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $g['contentId']]) ?>" target="_blank">Edit</a>
+                                    </div>
+                                <?php
                                 }
                                 ?>
                         <?php
@@ -429,16 +404,14 @@ $this->title = 'services';
                             $i = 0;
                             foreach ($drive  as $w) :
                         ?>
-                        <p class="text-Goal"><?= $w['title'] ?></p>
-                        <p class="text-one"><?= $w['detail'] ?></p>
-                        <?php
+                                <p class="text-Goal"><?= $w['title'] ?></p>
+                                <p class="text-one"><?= $w['detail'] ?></p>
+                                <?php
                                 if ($admin == 1) { ?>
-                        <div class=" col-12 text-end edit-content mt-2">
-                            <a class="btn btn-warning bt-line"
-                                href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $w['contentId']]) ?>"
-                                target="_blank">Edit</a>
-                        </div>
-                        <?php
+                                    <div class=" col-12 text-end edit-content mt-2">
+                                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $w['contentId']]) ?>" target="_blank">Edit</a>
+                                    </div>
+                                <?php
                                 }
                                 ?>
                         <?php
@@ -453,7 +426,7 @@ $this->title = 'services';
                             foreach ($button  as $q) :
                         ?>
 
-                        <button type="button" class="btn btn-primary"><?= $q['title'] ?></button>
+                                <button type="button" class="btn btn-primary"><?= $q['title'] ?></button>
                         <?php
                                 $i++;
                             endforeach;
@@ -470,7 +443,7 @@ $this->title = 'services';
                 $i = 0;
                 foreach ($button as $q) :
             ?>
-            <img src="<?= Path::backendUrl() . $q['image'] ?>" class="image-Group-6">
+                    <img src="<?= Path::backendUrl() . $q['image'] ?>" class="image-Group-6">
             <?php
 
                     $i++;
@@ -482,18 +455,34 @@ $this->title = 'services';
     </div>
     <?php
     if ($admin == 1) { ?>
-    <div class=" col-12 text-end edit-content mt-2">
-        <a class="btn btn-warning bt-line"
-            href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $q['contentId']]) ?>"
-            target="_blank">Edit(Button inside)</a>
-    </div>
+        <div class=" col-12 text-end edit-content mt-2">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $q['contentId']]) ?>" target="_blank">Edit(Button inside)</a>
+        </div>
     <?php
     }
     ?>
 </div>
 
 <div class="col-12">
-    <img src="<?= Path::backendUrl() ?>image/boat-1.png" class="image-boat-2">
+    <?php
+    if (isset($boatimg) && count($boatimg) > 0) {
+        $i = 0;
+        foreach ($boatimg as $boat) :
+    ?>
+            <img src="<?= Path::backendUrl() . $boat['image'] ?>" class="image-boat-2">
+    <?php
+            $i++;
+        endforeach;
+    }
+    ?>
+    <?php
+    if ($admin == 1) { ?>
+        <div class=" col-12 text-end edit-content mt-2">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $boat['contentId']]) ?>" target="_blank">Edit(BG)</a>
+        </div>
+    <?php
+    }
+    ?>
 </div>
 
 
@@ -507,17 +496,15 @@ $this->title = 'services';
                         $i = 0;
                         foreach ($services as $r) :
                     ?>
-                    <div class="col-12 text-the-best">
-                        <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $r['detail'] ?>
-                    </div>
-                    <?php
+                            <div class="col-12 text-the-best">
+                                <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $r['detail'] ?>
+                            </div>
+                            <?php
                             if ($admin == 1) { ?>
-                    <div class=" col-12 text-end edit-content mt-2">
-                        <a class="btn btn-warning bt-line"
-                            href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $r['contentId']]) ?>"
-                            target="_blank">Edit</a>
-                    </div>
-                    <?php
+                                <div class=" col-12 text-end edit-content mt-2">
+                                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $r['contentId']]) ?>" target="_blank">Edit</a>
+                                </div>
+                            <?php
                             }
                             ?>
                     <?php
@@ -533,13 +520,13 @@ $this->title = 'services';
                             if ($i < 3) {
 
                     ?>
-                    <div class="col-12 mt-10  page-1">
-                        <img src="<?= Path::backendUrl() . $tokyo['image'] ?>" class="image-account">
-                        <?= $tokyo['title'] ?>
-                    </div>
-                    <div class="col-12 select-project">
-                        <?= $tokyo['detail'] ?>
-                    </div>
+                                <div class="col-12 mt-10  page-1">
+                                    <img src="<?= Path::backendUrl() . $tokyo['image'] ?>" class="image-account">
+                                    <?= $tokyo['title'] ?>
+                                </div>
+                                <div class="col-12 select-project">
+                                    <?= $tokyo['detail'] ?>
+                                </div>
                     <?php
                             }
                             $i++;
@@ -548,11 +535,9 @@ $this->title = 'services';
                     ?>
                     <?php
                     if ($admin == 1) { ?>
-                    <div class=" col-12 text-end edit-content">
-                        <a class="btn btn-warning bt-line"
-                            href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $tokyo['contentId']]) ?>"
-                            target="_blank">Edit</a>
-                    </div>
+                        <div class=" col-12 text-end edit-content">
+                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $tokyo['contentId']]) ?>" target="_blank">Edit</a>
+                        </div>
                     <?php
                     }
                     ?>
@@ -565,18 +550,16 @@ $this->title = 'services';
                             $i = 0;
                             foreach ($most as $mos) :
                         ?>
-                        <div class="card form-card">
-                            <?= $mos['detail'] ?> <a href="#" class="no-underline"><span class="card download">
-                                    <?= $mos['detail2'] ?> <i class="fa fa-download" aria-hidden="true"></i> </a></span>
-                        </div>
-                        <?php
+                                <div class="card form-card">
+                                    <?= $mos['detail'] ?> <a href="#" class="no-underline"><span class="card download">
+                                            <?= $mos['detail2'] ?> <i class="fa fa-download" aria-hidden="true"></i> </a></span>
+                                </div>
+                                <?php
                                 if ($admin == 1) { ?>
-                        <div class=" col-12 text-end edit-content ml-5">
-                            <a class="btn btn-warning bt-line"
-                                href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $mos['contentId']]) ?>"
-                                target="_blank">Edit(Download)</a>
-                        </div>
-                        <?php
+                                    <div class=" col-12 text-end edit-content ml-5">
+                                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $mos['contentId']]) ?>" target="_blank">Edit(Download)</a>
+                                    </div>
+                                <?php
                                 }
                                 ?>
                         <?php
@@ -593,17 +576,15 @@ $this->title = 'services';
                         $i = 0;
                         foreach ($most as $mos) :
                     ?>
-                    <div class="col-12 text-form-most">
-                        <?= $mos['title'] ?>
-                    </div>
-                    <?php
+                            <div class="col-12 text-form-most">
+                                <?= $mos['title'] ?>
+                            </div>
+                            <?php
                             if ($admin == 1) { ?>
-                    <div class=" col-12 text-end edit-content ml-5">
-                        <a class="btn btn-warning bt-line"
-                            href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $mos['contentId']]) ?>"
-                            target="_blank">Edit</a>
-                    </div>
-                    <?php
+                                <div class=" col-12 text-end edit-content ml-5">
+                                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $mos['contentId']]) ?>" target="_blank">Edit</a>
+                                </div>
+                            <?php
                             }
                             ?>
                     <?php
@@ -619,12 +600,12 @@ $this->title = 'services';
                             if ($i < 3) {
 
                     ?>
-                    <div class="col-12 mt-10 page-2">
-                        <img src="<?= Path::backendUrl() . $tcf['image'] ?>" class="image-account"><?= $tcf['title'] ?>
-                    </div>
-                    <div class="col-12 select-project-1">
-                        <?= $tcf['detail'] ?>
-                    </div>
+                                <div class="col-12 mt-10 page-2">
+                                    <img src="<?= Path::backendUrl() . $tcf['image'] ?>" class="image-account"><?= $tcf['title'] ?>
+                                </div>
+                                <div class="col-12 select-project-1">
+                                    <?= $tcf['detail'] ?>
+                                </div>
                     <?php
                             }
                             $i++;
@@ -633,11 +614,9 @@ $this->title = 'services';
                     ?>
                     <?php
                     if ($admin == 1) { ?>
-                    <div class=" col-12 text-end edit-content">
-                        <a class="btn btn-warning bt-line"
-                            href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $tcf['contentId']]) ?>"
-                            target="_blank">Edit</a>
-                    </div>
+                        <div class=" col-12 text-end edit-content">
+                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $tcf['contentId']]) ?>" target="_blank">Edit</a>
+                        </div>
                     <?php
                     }
                     ?>
@@ -704,15 +683,13 @@ $this->title = 'services';
                         <div class="row mt-20">
                             <div class="col-5 left-box-select">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                                     <label class="form-check-label ml-10" for="flexRadioDefault1"> Legal Entity</label>
                                 </div>
                             </div>
                             <div class="col-5 left-box-select">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault2" checked>
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                                     <label class="form-check-label ml-10" for="flexRadioDefault2"> Individual</label>
                                 </div>
                             </div>
@@ -720,35 +697,29 @@ $this->title = 'services';
                     </div>
                 </div>
                 <div class="mb-3 your-company" style="margin-top: 30px;">
-                    <label for="exampleInputCompany" class="form-label label-thin"> Your Company<span
-                            class="moon">*</span></label>
+                    <label for="exampleInputCompany" class="form-label label-thin"> Your Company<span class="moon">*</span></label>
                     <input type="Company" class="form-control" id="exampleInputCompany" aria-describedby="company">
                 </div>
                 <div class="mb-3 your-company">
-                    <label for="exampleInputName" class="form-label label-thin"> Your Name<span
-                            class="moon">*</span></label>
+                    <label for="exampleInputName" class="form-label label-thin"> Your Name<span class="moon">*</span></label>
                     <input type="Name" class="form-control" id="exampleInputName" aria-describedby="name">
                 </div>
                 <div class="mb-3 your-company">
-                    <label for="exampleInputPosition" class="form-label label-thin"> Position<span
-                            class="moon">*</span></label>
+                    <label for="exampleInputPosition" class="form-label label-thin"> Position<span class="moon">*</span></label>
                     <input type="Position" class="form-control" id="exampleInputPosition" aria-describedby="position">
                 </div>
                 <div class="mb-3 your-company">
-                    <label for="exampleInputEmail" class="form-label label-thin"> Your e-mail<span
-                            class="moon">*</span></label>
+                    <label for="exampleInputEmail" class="form-label label-thin"> Your e-mail<span class="moon">*</span></label>
                     <input type="Email" class="form-control" id="exampleInputEmail" aria-describedby="email">
                 </div>
                 <div class="mb-3 your-company">
                     <div class="row">
                         <div class="col-6 text-start">
-                            <label for="exampleInputEmail" class="form-label label-thin"> Phone Number<span
-                                    class="moon">*</span></label>
+                            <label for="exampleInputEmail" class="form-label label-thin"> Phone Number<span class="moon">*</span></label>
                             <input type="text" class="form-control" placeholder="+880" aria-label="Phone">
                         </div>
                         <div class="col-6">
-                            <label for="exampleInputEmail" class="form-label label-thin"> Your Business<span
-                                    class="moon">*</span></label>
+                            <label for="exampleInputEmail" class="form-label label-thin"> Your Business<span class="moon">*</span></label>
                             <select class="form-select" aria-label="Default select example">
                                 <option selected> Select business Type</option>
                                 <option value="1">1</option>
@@ -762,8 +733,7 @@ $this->title = 'services';
             <div class="col-lg-6 col-md-6 col-12 form-Questions mt-50 pr-40">
                 <div class="mb-3">
                     <label for="exampleInputQuestions" class="form-label label-thin">Questions & Concern</label>
-                    <input type="Questions" class="form-control" id="exampleInputQuestions"
-                        aria-describedby="Questions">
+                    <input type="Questions" class="form-control" id="exampleInputQuestions" aria-describedby="Questions">
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label label-thin">Details of Inquiry</label>
@@ -771,8 +741,7 @@ $this->title = 'services';
                 </div>
                 <div class="row">
                     <div class="col-6 text-start label-thin mt-4">
-                        ATTACHMENT (IF ANY) <a href="" class="no-underline"><i class="fa fa-paperclip"
-                                aria-hidden="true"></i></a>
+                        ATTACHMENT (IF ANY) <a href="" class="no-underline"><i class="fa fa-paperclip" aria-hidden="true"></i></a>
                     </div>
                     <div class="col-6 mt-4 text-end">
                         <button type="button" class="btn btn-primary button-get">Get Free Appointment</button>
@@ -786,8 +755,7 @@ $this->title = 'services';
                     <div class="col-6 text-end mt-4">
                         <div class="contact-social mb-2">Email</div>
                         <a href="" class="no-underline">
-                            <p class="info-tokyo">f-info@tokyoconsultinggroup.com<i class="fa fa-envelope"
-                                    aria-hidden="true"></i></p>
+                            <p class="info-tokyo">f-info@tokyoconsultinggroup.com<i class="fa fa-envelope" aria-hidden="true"></i></p>
                         </a>
                     </div>
                     <div class="col-6 text-start mt-4">

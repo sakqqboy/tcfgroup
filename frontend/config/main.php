@@ -49,6 +49,7 @@ return [
             'showScriptName' => false,
             'rules' => [
                 'site-country/index/<hash>' => 'site-country/index',
+                'newsletter/index/<hash>' => 'newsletter/index',
             ]
         ],
         'assetManager' => [

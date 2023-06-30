@@ -4,6 +4,7 @@
 
 use Codeception\Lib\Connector\Yii2;
 use common\helpers\Path;
+use common\models\ModelMaster;
 
 $this->title = 'newsletter';
 ?>
@@ -47,7 +48,14 @@ $this->title = 'newsletter';
         endforeach;
     }
     ?>
-
+    <?php
+    if ($admin == 1) { ?>
+        <div class=" col-12 text-end edit-content mt-2">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $new['contentId']]) ?>" target="_blank">Edit</a>
+        </div>
+    <?php
+    }
+    ?>
 </div>
 
 <div class="col-12 pr12 mt-20">
@@ -63,6 +71,15 @@ $this->title = 'newsletter';
         endforeach;
     }
     ?>
+    <?php
+    if ($admin == 1) { ?>
+        <div class=" col-12 text-end edit-content mt-2">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $r['contentId']]) ?>" target="_blank">Edit Topic(In Detail 2)</a>
+        </div>
+    <?php
+    }
+    ?>
+
     <div class="row mt-50 procress">
         <?php
         if (isset($topic) && count($topic) > 0) {
@@ -94,6 +111,14 @@ $this->title = 'newsletter';
         }
         ?>
     </div>
+    <?php
+    if ($admin == 1) { ?>
+        <div class=" col-12 text-end edit-content mt-2">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $tp['contentId']]) ?>" target="_blank">Edit</a>
+        </div>
+    <?php
+    }
+    ?>
 </div>
 
 
@@ -119,6 +144,14 @@ $this->title = 'newsletter';
     <?php
             $i++;
         endforeach;
+    }
+    ?>
+    <?php
+    if ($admin == 1) { ?>
+        <div class=" col-12 text-end edit-content mt-2">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $port['contentId']]) ?>" target="_blank">Edit</a>
+        </div>
+    <?php
     }
     ?>
 </div>
@@ -152,12 +185,22 @@ $this->title = 'newsletter';
                         <p class="title-import1"><?= $ol['detail3'] ?><a href="" class="no-underline"><span class="read-more">
                                     <?= $ol['detail4'] ?></span></p></a>
 
+                        <?php
+                        if ($admin == 1) { ?>
+                            <div class=" col-12 text-end edit-content mt-2">
+                                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $ol['contentId']]) ?>" target="_blank">Edit</a>
+                            </div>
+                        <?php
+                        }
+                        ?>
+
                     </div>
             <?php
                     $i++;
                 endforeach;
             }
             ?>
+
             <div class="col-lg-6 col-md-6 col-12">
                 <div class="row">
                     <div class="col-6 text-end">
@@ -173,7 +216,6 @@ $this->title = 'newsletter';
                                         <p class="title-IAS1"> <?= $set['detail'] ?></p>
                                         <p class="title-carbon1"><?= $set['detail2'] ?> </p>
                                     </div>
-
                         <?php
                                 }
                                 $i++;
@@ -197,6 +239,14 @@ $this->title = 'newsletter';
                         }
                         ?>
                     </div>
+                    <?php
+                    if ($admin == 1) { ?>
+                        <div class=" col-12 text-end edit-content mt-2">
+                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $set['contentId']]) ?>" target="_blank">Edit</a>
+                        </div>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -228,6 +278,14 @@ $this->title = 'newsletter';
         }
         ?>
     </div>
+    <?php
+    if ($admin == 1) { ?>
+        <div class=" col-12 text-end edit-content mt-2">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $tax['contentId']]) ?>" target="_blank">Edit</a>
+        </div>
+    <?php
+    }
+    ?>
 </div>
 
 <div class="col-12 pr12 mt-50 links-taxas">
@@ -254,6 +312,14 @@ $this->title = 'newsletter';
             endforeach;
         }
         ?>
+        <?php
+        if ($admin == 1) { ?>
+            <div class=" col-12 text-end edit-content mt-2">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $ment['contentId']]) ?>" target="_blank">Edit</a>
+            </div>
+        <?php
+        }
+        ?>
         <div class="col-12 text-center mt-50">
             <?php
             if (isset($olderposts) && count($olderposts) > 0) {
@@ -265,6 +331,14 @@ $this->title = 'newsletter';
 
                     $i++;
                 endforeach;
+            }
+            ?>
+            <?php
+            if ($admin == 1) { ?>
+                <div class=" col-12 text-end edit-content mt-2">
+                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $ol['contentId']]) ?>" target="_blank">Edit button(In detail 5)</a>
+                </div>
+            <?php
             }
             ?>
         </div>
@@ -307,5 +381,13 @@ if (isset($footerbangladresh) && count($footerbangladresh) > 0) {
 
         $i++;
     endforeach;
+}
+?>
+<?php
+if ($admin == 1) { ?>
+    <div class=" col-12 text-end edit-content mt-2">
+        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $footerbangla['contentId']]) ?>" target="_blank">Edit</a>
+    </div>
+<?php
 }
 ?>

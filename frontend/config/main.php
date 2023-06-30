@@ -50,6 +50,7 @@ return [
             'rules' => [
                 'site-country/index/<hash>' => 'site-country/index',
                 'newsletter/index/<hash>' => 'newsletter/index',
+                'webinar/index/<hash>' => 'webinar/index',
             ]
         ],
         'assetManager' => [

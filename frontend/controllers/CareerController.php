@@ -244,7 +244,7 @@ class CareerController extends Controller
                  ->all();
          }
 
-         $admin = 0;
+        $admin = 0;
         if (Yii::$app->user->id) {
             $memberTypeAdmin = MemberHasType::find()
                 ->select("mt.memberTypeName")

@@ -4,6 +4,7 @@
 
 use Codeception\Lib\Connector\Yii2;
 use common\helpers\Path;
+use common\models\ModelMaster;
 
 $this->title = 'webinar';
 ?>
@@ -26,10 +27,8 @@ $this->title = 'webinar';
                     endforeach;
                 }
                 ?>
-
             </div>
         </div>
-
         <div class="col-lg-6 col-md-6 col-12">
             <?php
             if (isset($webinarvideo) && count($webinarvideo) > 0) {
@@ -52,8 +51,6 @@ $this->title = 'webinar';
                 if (isset($everyweek) & count($everyweek) > 0) {
                     $i = 0;
                     foreach ($everyweek as $icon) :
-
-
                 ?>
                         <div class="col-4 detail-calendar">
                             <div class="col-12">
@@ -68,7 +65,6 @@ $this->title = 'webinar';
                     endforeach;
                 }
                 ?>
-
                 <?php
                 if (isset($question) & count($question) > 0) {
                     $i = 0;
@@ -85,8 +81,6 @@ $this->title = 'webinar';
                     endforeach;
                 }
                 ?>
-
-
                 <?php
                 if (isset($mins) & count($mins) > 0) {
                     $i = 0;
@@ -96,6 +90,7 @@ $this->title = 'webinar';
                             <i class="fa fa-clock-o form-clock" aria-hidden="true"></i>
                             <p class="text-1"> <?= $icon3['title'] ?></p>
                             <p class="text-2"> <?= $icon3['detail'] ?></p>
+                            
                         </div>
                 <?php
                         $i++;
@@ -106,7 +101,6 @@ $this->title = 'webinar';
         </div>
     </div>
 </div>
-
 
 <div class="col-12 pr12" style="margin-top: 80px;">
     <div class="col-12 title-Trending">
@@ -157,88 +151,64 @@ $this->title = 'webinar';
                     endforeach;
                 }
                 ?>
+                
             </div>
             <div class="col-lg-6 col-md-6 col-12">
                 <?php
                 if (isset($webinar) && count($webinar) > 0) {
                     $i = 0;
-                    foreach ($webinar  as  $nar) :
                 ?>
-                        <div class="col-12 title-join">
-                            <?= $nar['title'] ?>
-                        </div>
-                        <div class="col-12 title-topic mt-10">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $nar['detail'] ?></p>
-                        </div>
+                    <div class="col-12 title-join">
+                        <?= $webinar['title'] ?>
+                    </div>
+                    <div class="col-12 title-topic mt-10">
+                        <p> <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $webinar['detail'] ?></p>
+                    </div>
                 <?php
-                        $i++;
-                    endforeach;
                 }
                 ?>
-                <div class="accordion mt-20" id="accordionExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                What are topic of webinar ?
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>How can i join ?</strong>
-                                <p>It is as easy as to join through one single click by going to the following link -
-                                </p>
-                            </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-6 col-12">
+                        <div class="accordion mt-20" id="accordionExample">
+                            <?php
+                            if (isset($webinarDetail) && count($webinarDetail) > 0) {
+                                $i = 1;
+                                foreach ($webinarDetail as $w) :
+                            ?>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="<?= $w['contentDetailId'] ?>">
+                                            <button class="<?= $i == 1 ? 'accordion-button' : 'accordion-button collapsed' ?>" type="button" data-bs-toggle="collapse" data-bs-target="#a<?= $w['contentDetailId'] ?>" aria-expanded="true" aria-controls="<?= $w['contentDetailId'] ?>">
+                                                <?= $w['title'] ?>
+                                            </button>
+                                        </h2>
+                                        <div id="a<?= $w['contentDetailId'] ?>" class="accordion-collapse collapse <?= $i == 1 ? 'show' : '' ?>" aria-labelledby="<?= $w['contentDetailId'] ?>" data-bs-parent="#accordionExample">
+                                            <div class="accordion-body">
+                                                <strong><?= $w['detail'] ?></strong><br>
+                                                <?= $w['detail2'] ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                            <?php
+                                    $i++;
+                                endforeach;
+                            }
+                            ?>
                         </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Is there any certification associated ?
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the second item's accordion body.</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Can i get recorded videos of the webinars or online seminars ?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the third item's accordion body.</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                How to create a community Account ?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>This is the third item's accordion body.</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <?php
-                    if (isset($register) && count($register) > 0) {
-                        $i = 0;
-                        foreach ($register as $regis) :
-                    ?>
-                            <button type="button" class="btn btn-primary button-register mt-30"> <?= $regis['title'] ?></button>
-                            <p class="title-sign-in"> <?= $regis['detail'] ?><a href="#sign in" class="no-underline">
-                                    <?= $regis['detail2'] ?></a></p>
+                        <?php
+                        if (isset($register) && count($register) > 0) {
+                            $i = 0;
+                            foreach ($register as $regis) :
+                        ?>
+                                <button type="button" class="btn btn-primary button-register mt-30"> <?= $regis['title'] ?></button>
+                                <p class="title-sign-in"> <?= $regis['detail'] ?><a href="#sign in" class="no-underline">
+                                        <?= $regis['detail2'] ?></a></p>
 
-                    <?php
-                        endforeach;
-                    }
-                    ?>
+                        <?php
+                            endforeach;
+                        }
+                        ?>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -262,7 +232,6 @@ $this->title = 'webinar';
             endforeach;
         }
         ?>
-
     </div>
     <form class="row g-3 mt-50 form-search1">
         <div class="col-4">
@@ -283,6 +252,7 @@ $this->title = 'webinar';
     </form>
 </div>
 
+
 <div class="col-12 pr12 mt-50">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12 all-player">
@@ -291,7 +261,6 @@ $this->title = 'webinar';
                 $i = 0;
                 foreach ($player1 as $py) :
                     if ($i < 5) {
-
             ?>
                         <div class="row pr12">
                             <div class="col-4">
@@ -374,6 +343,7 @@ $this->title = 'webinar';
                 endforeach;
             }
             ?>
+            
         </div>
     </div>
 </div>
@@ -383,8 +353,6 @@ $this->title = 'webinar';
     <span class="of-13"> Page &nbsp;&nbsp;1 &nbsp;&nbsp;&nbsp; of &nbsp;&nbsp;13</span>
     <button type="button" class="btn btn-primary"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
 </div>
-
-
 
 <div class="col-12 pr12" style="background-color: #F4F4F6;">
     <div class="col-12 pr12 mt-50">
@@ -406,6 +374,7 @@ $this->title = 'webinar';
             }
             ?>
         </div>
+        
     </div>
     <div class="row">
         <div class="col-lg-3 col-md-6 col-12 mt-50 pl-40">
@@ -414,7 +383,6 @@ $this->title = 'webinar';
                 $i = 0;
                 foreach ($comment as $com) :
                     if ($i < 2) {
-
             ?>
                         <div class="col-12 mt-20">
                             <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left:20px;">
@@ -442,6 +410,7 @@ $this->title = 'webinar';
                 endforeach;
             }
             ?>
+            
         </div>
         <div class="col-lg-3 col-md-6 col-12 mt-50 pl-30">
             <div class="col-12 mt-20">
@@ -602,8 +571,6 @@ $this->title = 'webinar';
     }
     ?>
 </div>
-
-
 <div class="col-12">
     <?php
     if (isset($meet) && count($meet) > 0) {
@@ -617,7 +584,6 @@ $this->title = 'webinar';
     }
     ?>
 </div>
-
 <div class="col-12 pr12">
     <?php
     if (isset($meet) && count($meet) > 0) {
@@ -638,6 +604,7 @@ $this->title = 'webinar';
     }
     ?>
 </div>
+
 
 <div class="col-12 pr12">
     <div class="row">

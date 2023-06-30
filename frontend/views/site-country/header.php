@@ -1,6 +1,8 @@
 <?php
 
 use common\helpers\Path;
+use common\models\ModelMaster;
+
 ?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
@@ -13,7 +15,7 @@ use common\helpers\Path;
         <div class="collapse navbar-collapse mt-3" id="navbarScroll">
             <ul class="navbar-nav me-auto  navbar-nav-scroll" style="margin: top 40px;padding-left: 150px;font-family:'klavika';font-size: 18px;line-height:35px;">
                 <li class="nav-item">
-                    <a href="<?= Yii::$app->homeUrl ?>site-country/newsletter" class="nav-link">Newsletter</a>
+                    <a href="<?= Yii::$app->homeUrl ?>site-country/newsletter/<?= ModelMaster::encodeParams(['branchName' => $branchName]) ?>" class="nav-link">Newsletter</a>
                 </li>
                 <li class="nav-item">
                     <a href="<?= Yii::$app->homeUrl ?>site-country/services" class="nav-link">Services</a>

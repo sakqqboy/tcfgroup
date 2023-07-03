@@ -63,6 +63,7 @@ return [
                 'content/default/create-content-detail/<hash>' => 'content/default/create-content-detail',
                 'content/default/update-content-detail/<hash>' => 'content/default/update-content-detail',
                 //contentbranch
+                'content/default/content-branch/<hash>' => 'content/default/content-branch',
                 'content/default/view-content-branch/<hash>' => 'content/default/view-content-branch',
                 'content/default/update-content-branch/<hash>' => 'content/default/update-content-branch',
                 'content/default/content-branch-result/<hash>' => 'content/default/content-branch-result',

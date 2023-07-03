@@ -267,6 +267,7 @@ class DefaultController extends Controller
         if (!Yii::$app->user->id) {
             return $this->redirect(Yii::$app->homeUrl . 'site/login');
         }
+
         $contentbranch = ContentBranch::find()
             ->asArray()
             ->all();

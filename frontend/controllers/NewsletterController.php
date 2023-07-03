@@ -8,6 +8,7 @@ use backend\models\tokyoconsulting\ContentBranchDetail;
 use backend\models\tokyoconsulting\Country;
 use backend\models\tokyoconsulting\Member;
 use backend\models\tokyoconsulting\MemberHasType;
+use common\models\ModelMaster;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
@@ -59,61 +60,29 @@ class NewsletterController extends Controller
     public function actionIndex($hash)
     {
 
-        $port = Content::find()
-            ->where(["contentName" => "Import"])
-            ->asArray()
-            ->one();
-
-        $ol = Content::find()
-            ->where(["contentName" => "Olderposts"])
-            ->asArray()
-            ->one();
-
-        $set = Content::find()
-            ->where(["contentName" => "Asset"])
-            ->asArray()
-            ->one();
-
-        $tax = Content::find()
-            ->where(["contentName" => "Taxassessment1"])
-            ->asArray()
-            ->one();
-
-        $ment = Content::find()
-            ->where(["contentName" => "Taxassessment2"])
-            ->asArray()
-            ->one();
-
         $footerbangla = Content::find()
             ->where(["contentName" => "Footerbangladresh"])
             ->asArray()
             ->one();
 
-        $tp = Content::find()
-            ->where(["contentName" => "Topic"])
-            ->asArray()
-            ->one();
-
-        $r = Content::find()
-            ->where(["contentName" => "Services"])
-            ->asArray()
-            ->one();
 
         $userInThisBranch = 0;
-        $branchName = $hash;
+        $canEdit = [];
+        $branchName = ModelMaster::decodeParams($hash);
         $countryName = $hash;
         $new = [];
         $newsletter = [];
         $import = [];
         $olderposts = [];
+        $ol = [];
         $asset = [];
         $taxassessment1 = [];
         $taxassessment2 = [];
         $footerbangladresh = [];
         $topic = [];
-        $services = [];
+        $tp = [];
 
-        $branch = Branch::find()->where(["branchName" => $branchName, "status" => 1])->asArray()->one();
+        $branch = Branch::find()->where(["branchName" => $branchName['branchName'], "status" => 1])->asArray()->one();
         $country = Country::find()->where(["countryName" => $countryName, "status" => 1])->asArray()->all();
 
 
@@ -126,57 +95,96 @@ class NewsletterController extends Controller
                 $newsletter = ContentBranchDetail::find()
                     ->where(["contentBranchId" => $new["contentBranchId"], "status" => 1])
                     ->asArray()
-                    ->one();
+                    ->all();
             }
         }
-        if (isset($port) && !empty($port)) {
-            $import = ContentDetail::find()
-                ->where(["contentId" => $port["contentId"], "status" => 1])
+
+        if (isset($branch) && !empty($branch)) {
+            $tp = ContentBranch::find()
+                ->where(['contentName' => "topicnewsletter", "branchId" => $branch["branchId"]])
                 ->asArray()
-                ->all();
+                ->one();
+            if (isset($tp) && count($tp) > 0) {
+                $topic = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $tp["contentBranchId"], "status" => 1])
+                    ->asArray()
+                    ->all();
+            }
         }
-        if (isset($ol) && !empty($ol)) {
-            $olderposts = ContentDetail::find()
-                ->where(["contentId" => $ol["contentId"], "status" => 1])
+
+        if (isset($branch) && !empty($branch)) {
+            $port = ContentBranch::find()
+                ->where(['contentName' => "importnewsletter", "branchId" => $branch["branchId"]])
                 ->asArray()
-                ->all();
+                ->one();
+            if (isset($port) && count($port) > 0) {
+                $import = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $port["contentBranchId"], "status" => 1])
+                    ->asArray()
+                    ->all();
+            }
         }
-        if (isset($set) && !empty($set)) {
-            $asset = ContentDetail::find()
-                ->where(["contentId" => $set["contentId"], "status" => 1])
+
+        if (isset($branch) && !empty($branch)) {
+            $ol = ContentBranch::find()
+                ->where(['contentName' => "Olderposts", "branchId" => $branch["branchId"]])
                 ->asArray()
-                ->all();
+                ->one();
+            if (isset($ol) && count($ol) > 0) {
+                $olderposts = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $ol["contentBranchId"], "status" => 1])
+                    ->asArray()
+                    ->all();
+            }
         }
-        if (isset($tax) && !empty($tax)) {
-            $taxassessment1 = ContentDetail::find()
-                ->where(["contentId" => $tax["contentId"], "status" => 1])
+
+        if (isset($branch) && !empty($branch)) {
+            $set = ContentBranch::find()
+                ->where(['contentName' => "Asset", "branchId" => $branch["branchId"]])
                 ->asArray()
-                ->all();
+                ->one();
+            if (isset($set) && count($set) > 0) {
+                $asset = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $set["contentBranchId"], "status" => 1])
+                    ->asArray()
+                    ->all();
+            }
         }
-        if (isset($ment) && !empty($ment)) {
-            $taxassessment2 = ContentDetail::find()
-                ->where(["contentId" => $ment["contentId"], "status" => 1])
+
+        if (isset($branch) && !empty($branch)) {
+            $tax = ContentBranch::find()
+                ->where(['contentName' => "Taxassessment1", "branchId" => $branch["branchId"]])
                 ->asArray()
-                ->all();
+                ->one();
+            if (isset($set) && count($tax) > 0) {
+                $taxassessment1 = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $tax["contentBranchId"], "status" => 1])
+                    ->asArray()
+                    ->all();
+            }
         }
+
+        if (isset($branch) && !empty($branch)) {
+            $ment = ContentBranch::find()
+                ->where(['contentName' => "Taxassessment2", "branchId" => $branch["branchId"]])
+                ->asArray()
+                ->one();
+            if (isset($ment) && count($ment) > 0) {
+                $taxassessment2 = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $ment["contentBranchId"], "status" => 1])
+                    ->asArray()
+                    ->all();
+            }
+        }
+
+
         if (isset($footerbangla) && !empty($footerbangla)) {
             $footerbangladresh = ContentDetail::find()
                 ->where(["contentId" => $footerbangla["contentId"], "status" => 1])
                 ->asArray()
                 ->all();
         }
-        if (isset($tp) && !empty($tp)) {
-            $topic = ContentDetail::find()
-                ->where(["contentId" => $tp["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
-        if (isset($r) && !empty($r)) {
-            $services = ContentDetail::find()
-                ->where(["contentId" => $r["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
+
         $canEdit = 0;
         if (Yii::$app->user->id) {
             $memberId = Yii::$app->user->id;
@@ -233,10 +241,11 @@ class NewsletterController extends Controller
             "taxassessment2" => $taxassessment2,
             "footerbangladresh" => $footerbangladresh,
             "topic" => $topic,
-            "services" => $services,
+            "tp" => $tp,
             "country" => $country,
             "userInThisBranch" => $userInThisBranch,
             "canEdit" => $canEdit,
+            "branchName" => $branchName['branchName'],
         ]);
     }
 }

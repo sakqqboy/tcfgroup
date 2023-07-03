@@ -267,6 +267,7 @@ class DefaultController extends Controller
         if (!Yii::$app->user->id) {
             return $this->redirect(Yii::$app->homeUrl . 'site/login');
         }
+
         $contentbranch = ContentBranch::find()
             ->asArray()
             ->all();
@@ -569,8 +570,8 @@ class DefaultController extends Controller
     {
         $branches = Branch::find()->select('branchId')->where(["status" => 1])->all();
 
-        $master = ContentBranch::find()->where(["contentBranchId" => 420])->one();
-        $masterDetail = ContentBranchDetail::find()->where(["contentBranchId" => 420])->all();
+        $master = ContentBranch::find()->where(["contentBranchId" => 611])->one();
+        $masterDetail = ContentBranchDetail::find()->where(["contentBranchId" => 611])->all();
 
         if (isset($branches) && count($branches) > 0) {
             foreach ($branches as $branch) :

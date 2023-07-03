@@ -51,6 +51,7 @@ return [
                 'site-country/index/<hash>' => 'site-country/index',
                 'newsletter/index/<hash>' => 'newsletter/index',
                 'webinar/index/<hash>' => 'webinar/index',
+                'about-us-country/index/<hash>' => 'about-us-country/index',
             ]
         ],
         'assetManager' => [

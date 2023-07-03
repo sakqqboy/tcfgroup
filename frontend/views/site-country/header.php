@@ -21,7 +21,7 @@ use common\models\ModelMaster;
                     <a href="<?= Yii::$app->homeUrl ?>site-country/services" class="nav-link">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?= Yii::$app->homeUrl ?>webinar" class="nav-link">Webinar</a>
+                    <a href="<?= Yii::$app->homeUrl ?>webinar/index/<?= ModelMaster::encodeParams(['branchName' => $branchName]) ?>" class="nav-link">Webinar</a>
                 </li>
                 <!-- <li class="nav-item">
                     <a href="<?= Yii::$app->homeUrl ?>site-country/career" class="nav-link">Career </a>

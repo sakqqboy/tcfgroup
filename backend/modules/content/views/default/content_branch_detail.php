@@ -1,5 +1,5 @@
 <?php
-    $this -> title = 'Content Detail';
+    $this -> title = 'Content Branch Detail';
 
 use backend\models\tokyoconsulting\Branch;
 use common\models\ModelMaster;

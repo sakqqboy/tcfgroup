@@ -7,6 +7,7 @@ use common\helpers\Path;
 use common\models\ModelMaster;
 
 $this->title = 'webinar';
+//throw new Exception(print_r($branchName,true));
 ?>
 
 
@@ -33,69 +34,58 @@ $this->title = 'webinar';
             <?php
             if (isset($webinarvideo) && count($webinarvideo) > 0) {
                 $i = 0;
-                foreach ($webinarvideo   as   $binar) :
+                foreach ($webinarvideo as $wv) :
             ?>
                     <div class="col-10 page-webinar">
-                        <?= $binar['detail'] ?>
+                        <?= $wv['detail'] ?>
                     </div>
                     <div class="col-10 page-webinar-home1">
-                        <?= $binar['detail2'] ?>
+                        <?= $wv['detail2'] ?>
                     </div>
             <?php
                 endforeach;
             }
             ?>
-
+            <div>
+                <?php
+                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($binar["contentBranchId"])) { 
+                ?>
+                        <div class="col-12 text-end mt-10">
+                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $binar['contentBranchId']]) ?>" target="_blank">Edit (<?=$branchName?>)</a>
+                        </div>
+                    <?php
+                    }
+                ?>
+            </div>
             <div class="row mt-50">
                 <?php
-                if (isset($everyweek) & count($everyweek) > 0) {
+                if (isset($detailvideo) & count($detailvideo) > 0) {
                     $i = 0;
-                    foreach ($everyweek as $icon) :
+                    foreach ($detailvideo as $dv) :
                 ?>
                         <div class="col-4 detail-calendar">
                             <div class="col-12">
-                                <i class="fa fa-calendar form-calendar1" aria-hidden="true"></i>
-                                <p class="text-1"> <?= $icon['title'] ?></p>
-                                <p class="text-2"><?= $icon['detail'] ?></p>
+                                <!-- <i class="fa fa-calendar form-calendar1" aria-hidden="true"></i> -->
+                                <?= $dv["detail2"]?>
+                                <p class="text-1"> <?= $dv['title'] ?></p>
+                                <p class="text-2"><?= $dv['detail'] ?></p>
                             </div>
                         </div>
                 <?php
-
                         $i++;
                     endforeach;
                 }
                 ?>
+            </div>
+            <div>
                 <?php
-                if (isset($question) & count($question) > 0) {
-                    $i = 0;
-                    foreach ($question as $icon2) :
+                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($dv["contentBranchId"])) { 
                 ?>
-                        <div class="col-4 detail-liveqa">
-                            <i class="fa fa-comments-o form-comment" aria-hidden="true"></i>
-                            <p class="text-1"> <?= $icon2['title'] ?></p>
-                            <p class="text-2"> <?= $icon2['detail'] ?></p>
+                        <div class="col-12 text-end mb-3">
+                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $dv['contentBranchId']]) ?>" target="_blank">Edit (<?=$branchName?>)</a>
                         </div>
                 <?php
-
-                        $i++;
-                    endforeach;
-                }
-                ?>
-                <?php
-                if (isset($mins) & count($mins) > 0) {
-                    $i = 0;
-                    foreach ($mins as $icon3) :
-                ?>
-                        <div class="col-4">
-                            <i class="fa fa-clock-o form-clock" aria-hidden="true"></i>
-                            <p class="text-1"> <?= $icon3['title'] ?></p>
-                            <p class="text-2"> <?= $icon3['detail'] ?></p>
-                            
-                        </div>
-                <?php
-                        $i++;
-                    endforeach;
-                }
+                    }
                 ?>
             </div>
         </div>
@@ -107,29 +97,26 @@ $this->title = 'webinar';
         <?php
         if (isset($bangladresh) && count($bangladresh) > 0) {
             $i = 0;
-            foreach ($bangladresh as $la) :
         ?>
-                <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $la['title'] ?>
+            <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $bangladresh['title'] ?>
         <?php
-                $i++;
-            endforeach;
         }
         ?>
     </div>
+
     <div class="col-12">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-12 mt-50">
                 <?php
-                if (isset($bangladresh) && count($bangladresh) > 0) {
+                if (isset($bangladreshDetail) && count($bangladreshDetail) > 0) {
                     $i = 0;
-                    foreach ($bangladresh as $la) :
                 ?>
                         <div class="row">
                             <div class="col-4 title-bangladesh">
-                                <p><?= $la['detail'] ?> </p>
+                                <p><?= $bangladreshDetail['title'] ?> </p>
                             </div>
                             <div class="col-2">
-                                <img src="<?= Path::backendUrl() . $la['image'] ?>" class="img-woman">
+                                <img src="<?= Path::backendUrl() . $bangladreshDetail['image'] ?>" class="img-woman">
                                 <div class="alert alert-secondary  text-center">
                                     <p class="table-calendar"> <i class="fa fa-calendar" aria-hidden="true"> June 2023</i></p>
                                     <p> S&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;&nbsp;S
@@ -148,10 +135,28 @@ $this->title = 'webinar';
                         </div>
                 <?php
                         $i++;
-                    endforeach;
                 }
                 ?>
-                
+                <div class="col-12 text-end mt-1 mb-3">
+                    <?php
+                        if ($canEdit == 1 && $userInThisBranch == 1 && isset($bangladresh["contentBranchId"])) { 
+                    ?>
+                            <span class="col-12 text-end">
+                                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $bangladresh['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?=$branchName?>)</a>
+                            </span>
+                    <?php
+                        }
+                    ?>
+                    <?php
+                        if ($canEdit == 1 && $userInThisBranch == 1 && isset($bangladreshDetail["contentBranchId"])) { 
+                    ?>
+                            <span class="col-12 text-end">
+                                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $bangladreshDetail['contentBranchId']]) ?>" target="_blank">Edit (IMG)(<?=$branchName?>)</a>
+                            </span>
+                    <?php
+                        }
+                    ?>
+                </div>
             </div>
             <div class="col-lg-6 col-md-6 col-12">
                 <?php
@@ -161,11 +166,11 @@ $this->title = 'webinar';
                     <div class="col-12 title-join">
                         <?= $webinar['title'] ?>
                     </div>
-                    <div class="col-12 title-topic mt-10">
-                        <p> <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $webinar['detail'] ?></p>
+                    <div class="col-12 title-topic">
+                        <p><img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $webinar['detail'] ?></p>
                     </div>
                 <?php
-                }
+                    }
                 ?>
                 <div class="row">
                     <div class="col-lg-12 col-md-6 col-12">
@@ -176,12 +181,12 @@ $this->title = 'webinar';
                                 foreach ($webinarDetail as $w) :
                             ?>
                                     <div class="accordion-item">
-                                        <h2 class="accordion-header" id="<?= $w['contentDetailId'] ?>">
-                                            <button class="<?= $i == 1 ? 'accordion-button' : 'accordion-button collapsed' ?>" type="button" data-bs-toggle="collapse" data-bs-target="#a<?= $w['contentDetailId'] ?>" aria-expanded="true" aria-controls="<?= $w['contentDetailId'] ?>">
+                                        <h2 class="accordion-header" id="<?= $w['contentBranchDetailId'] ?>">
+                                            <button class="<?= $i == 1 ? 'accordion-button' : 'accordion-button collapsed' ?>" type="button" data-bs-toggle="collapse" data-bs-target="#a<?= $w['contentBranchDetailId'] ?>" aria-expanded="true" aria-controls="<?= $w['contentBranchDetailId'] ?>">
                                                 <?= $w['title'] ?>
                                             </button>
                                         </h2>
-                                        <div id="a<?= $w['contentDetailId'] ?>" class="accordion-collapse collapse <?= $i == 1 ? 'show' : '' ?>" aria-labelledby="<?= $w['contentDetailId'] ?>" data-bs-parent="#accordionExample">
+                                        <div id="a<?= $w['contentBranchDetailId'] ?>" class="accordion-collapse collapse <?= $i == 1 ? 'show' : '' ?>" aria-labelledby="<?= $w['contentBranchDetailId'] ?>" data-bs-parent="#accordionExample">
                                             <div class="accordion-body">
                                                 <strong><?= $w['detail'] ?></strong><br>
                                                 <?= $w['detail2'] ?>
@@ -193,6 +198,26 @@ $this->title = 'webinar';
                                 endforeach;
                             }
                             ?>
+                            <div class="col-12 text-end mt-1 mb-3">
+                                <?php
+                                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($webinar["contentBranchId"])) { 
+                                ?>
+                                        <span class="col-12 text-end">
+                                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $webinar['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?=$branchName?>)</a>
+                                        </span>
+                                <?php
+                                    }
+                                ?>
+                                <?php
+                                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($w["contentBranchId"])) { 
+                                ?>
+                                        <span class="col-12 text-end">
+                                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $w['contentBranchId']]) ?>" target="_blank">Edit (<?=$branchName?>)</a>
+                                        </span>
+                                <?php
+                                    }
+                                ?>
+                            </div>
                         </div>
                         <?php
                         if (isset($register) && count($register) > 0) {
@@ -207,8 +232,18 @@ $this->title = 'webinar';
                             endforeach;
                         }
                         ?>
+                        <div>
+                            <?php
+                                if ($canEdit == 1 && $userInThisBranch == 1 && isset($regis["contentBranchId"])) { 
+                            ?>
+                                    <div class="col-12 text-end">
+                                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $regis['contentBranchId']]) ?>" target="_blank">Edit (<?=$branchName?>)</a>
+                                    </div>
+                            <?php
+                                }
+                            ?>
+                        </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -229,10 +264,32 @@ $this->title = 'webinar';
                     <?= $playlist['detail'] ?>
                 </div>
         <?php
+            $i++;
             endforeach;
         }
         ?>
+        <div class="col-12 text-end mt-3 mb-3">
+            <?php
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($playlist["contentBranchId"])) { 
+            ?>
+                    <span class="col-12 text-end">
+                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $playlist['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?=$branchName?>)</a>
+                    </span>
+            <?php
+                }
+            ?>
+            <?php
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($playlist["contentBranchId"])) { 
+            ?>
+                    <span class="col-12 text-end">
+                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $playlist['contentBranchId']]) ?>" target="_blank">Edit (<?=$branchName?>)</a>
+                    </span>
+            <?php
+                }
+            ?>
+        </div>
     </div>
+    
     <form class="row g-3 mt-50 form-search1">
         <div class="col-4">
             <input type="search" class="form-control" id="inputsearch" placeholder="Search, Business Videos">
@@ -373,178 +430,71 @@ $this->title = 'webinar';
                 endforeach;
             }
             ?>
+            <div class="col-12 text-end mt-3 mb-3">
+                <?php
+                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($pants["contentBranchId"])) { 
+                ?>
+                        <span class="col-12 text-end">
+                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $pants['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?=$branchName?>)</a>
+                        </span>
+                <?php
+                    }
+                ?>
+                <?php
+                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($pants["contentBranchId"])) { 
+                ?>
+                        <span class="col-12 text-end">
+                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $pants['contentBranchId']]) ?>" target="_blank">Edit (<?=$branchName?>)</a>
+                        </span>
+                <?php
+                    }
+                ?>
+            </div>
         </div>
-        
     </div>
+
     <div class="row">
-        <div class="col-lg-3 col-md-6 col-12 mt-50 pl-40">
-            <?php
+        <?php
             if (isset($comment) && count($comment) > 0) {
                 $i = 0;
-                foreach ($comment as $com) :
-                    if ($i < 2) {
-            ?>
-                        <div class="col-12 mt-20">
-                            <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left:20px;">
-                                <div class="card-body p-4" style="background-color: #FFFFFF;">
-                                    <div class="col-12">
-                                        <?= $com['title'] ?>
-                                    </div>
-                                    <div class="d-flex text-black mt-20">
-                                        <div class="flex-shrink-0">
-                                            <img src="<?= Path::backendUrl() . $com['image'] ?>" class="img-minnie">
-                                        </div>
-                                        <div class="flex-grow-1 ms-3">
-                                            <h5 class="mb-1"><?= $com['detail'] ?></h5>
-                                            <p class="mb-2 pb-1" style="color: #4F96FF;">
-                                                <?= $com['detail2'] ?>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                foreach ($comment as $com) :  
+        ?>
+        <div class="col-lg-3 col-md-6 col-12 mt-50 pl-40">
+            <div class="col-12 mt-20">
+                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left:20px;">
+                    <div class="card-body p-4" style="background-color: #FFFFFF;">
+                        <div class="col-12">
+                            <?= $com['title'] ?>
+                        </div>
+                        <div class="d-flex text-black mt-20">
+                            <div class="flex-shrink-0">
+                                <img src="<?= Path::backendUrl() . $com['image'] ?>" class="img-minnie">
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5 class="mb-1"><?= $com['detail'] ?></h5>
+                                <p class="mb-2 pb-1" style="color: #4F96FF;">
+                                    <?= $com['detail2'] ?>
+                                </p>
                             </div>
                         </div>
-            <?php
-                    }
-                    $i++;
-                endforeach;
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php  
+            endforeach;
             }
-            ?>
-            
+        ?>
+        <div>
+        <?php
+        if ($canEdit == 1 && $userInThisBranch == 1 && isset($com["contentBranchId"])) { 
+    ?>
+            <div class="col-12 text-end">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $com['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?=$branchName?>)</a>
         </div>
-        <div class="col-lg-3 col-md-6 col-12 mt-50 pl-30">
-            <div class="col-12 mt-20">
-                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left:20px;">
-                    <div class="card-body p-4" style="background-color: #FFFFFF;">
-                        <div class="col-12">
-                            I would just like to compliment Estelle Pestana. She has been most professional and gone to
-                            great lengths to assist me. Her patience with me as I continuously changed my plans is to be
-                            commended. Her service re-affirms why I always choose to book through an agency instead of
-                            directly. Thank you <div class="d-flex text-black mt-20">
-                                <div class="flex-shrink-0">
-                                    <img src="<?= Path::backendUrl() ?>image/img/veona.png" class="img-veona">
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h5 class="mb-1">Veona Watson</h5>
-                                    <p class="mb-2 pb-1" style="color: #4F96FF;">
-                                        @hi.veona
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 mt-20">
-                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left:20px;">
-                    <div class="card-body p-4" style="background-color: #FFFFFF;">
-                        <div class="col-12">
-                            I would just like to compliment Estelle Pestana. She has been most professional and gone to
-                            great lengths to assist me. Her patience with me as I continuously changed my plans is to be
-                            commended. Her service re-affirms why I always choose to book through an agency instead of
-                            directly. Thank you <div class="d-flex text-black mt-20">
-                                <div class="flex-shrink-0">
-                                    <img src="<?= Path::backendUrl() ?>image/img/paseka.png" class="img-veona">
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h5 class="mb-1">Paseka Nku</h5>
-                                    <p class="mb-2 pb-1" style="color: #4F96FF;">
-                                        @hey.nku
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-12 mt-50 pl-30">
-            <div class="col-12 mt-20">
-                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; width: 21rem;margin-left: 10px;">
-                    <div class="card-body p-4" style="background-color: #FFFFFF;">
-                        <div class="col-12">
-                            I would just like to compliment Estelle Pestana. She has been most professional and gone to
-                            great lengths to assist me. Her patience with me as I continuously changed my plans is to be
-                            commended. Her service re-affirms why I always choose to book through an agency instead of
-                            directly. Thank you <div class="d-flex text-black mt-20">
-                                <div class="flex-shrink-0">
-                                    <img src="<?= Path::backendUrl() ?>image/img/cherice.png" class="img-veona">
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h5 class="mb-1">Cherice</h5>
-                                    <p class="mb-2 pb-1" style="color: #4F96FF;">
-                                        @cherice.me
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 mt-20">
-                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; width: 21rem;margin-left: 10px;">
-                    <div class="card-body p-4" style="background-color: #FFFFFF;">
-                        <div class="col-12">
-                            I would just like to compliment Estelle Pestana. She has been most professional and gone to
-                            great lengths to assist me. Her patience with me as I continuously changed my plans is to be
-                            commended. Her service re-affirms why I always choose to book through an agency instead of
-                            directly. Thank you <div class="d-flex text-black mt-20">
-                                <div class="flex-shrink-0">
-                                    <img src="<?= Path::backendUrl() ?>image/img/thais.png" class="img-veona">
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h5 class="mb-1">Thais Carballal</h5>
-                                    <p class="mb-2 pb-1" style="color: #4F96FF;">
-                                        @myself.thais
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-12 mt-50 pl-30">
-            <div class="col-12 mt-20">
-                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left: 30px;">
-                    <div class="card-body p-4" style="background-color: #FFFFFF;">
-                        <div class="col-12">
-                            Many thanks for you kind and efficient service. I have already and will definitely continue
-                            to recommend your services to others in the future. Wishing you all a </div>
-                        <div class="d-flex text-black mt-20">
-                            <div class="flex-shrink-0">
-                                <img src="<?= Path::backendUrl() ?>image/img/minnie.png" class="img-minnie">
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                                <h5 class="mb-1">Minnie Horn</h5>
-                                <p class="mb-2 pb-1" style="color: #4F96FF;">
-                                    @hello.mimmie
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 mt-20">
-                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left: 30px;">
-                    <div class="card-body p-4" style="background-color: #FFFFFF;">
-                        <div class="col-12">
-                            Baie dankie en weereens dankie vir jou moeite. Ek moet net se - as ons iewers moet slaap en
-                            ek kan nie deur SA Places boek nie - dan los ek dit liewer! </div>
-                        <div class="d-flex text-black mt-20">
-                            <div class="flex-shrink-0">
-                                <img src="<?= Path::backendUrl() ?>image/img/vieona.png" class="img-minnie">
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                                <h5 class="mb-1">Veona Watson</h5>
-                                <p class="mb-2 pb-1" style="color: #4F96FF;">
-                                    @me.veona
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <?php
+        }
+    ?>
         </div>
         <div class="col-12 mt-50">
         </div>
@@ -604,36 +554,64 @@ $this->title = 'webinar';
     }
     ?>
 </div>
-
+<div class="col-12 text-end mt-3 mb-3">
+    <?php
+        if ($canEdit == 1 && $userInThisBranch == 1 && isset($mee["contentBranchId"])) { 
+    ?>
+            <span class="col-12 text-end">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $mee['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?=$branchName?>)</a>
+            </span>
+    <?php
+        }
+    ?>
+    <?php
+        if ($canEdit == 1 && $userInThisBranch == 1 && isset($mee["contentBranchId"])) { 
+    ?>
+            <span class="col-12 text-end">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $mee['contentBranchId']]) ?>" target="_blank">Edit (<?=$branchName?>)</a>
+            </span>
+    <?php
+        }
+    ?>
+</div>
 
 <div class="col-12 pr12">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12 data-table-form">
             <div class="accordion mt-20" id="accordionExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            What are topic of webinar ?
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>How can i join ?</strong>
-                            <p>It is as easy as to join through one single click by going to the following link -</p>
+                <?php
+                if (isset($freedetail) && count($freedetail) > 0) {
+                    $i = 1;
+                    foreach ($freedetail as $free) :
+                ?>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="<?= $free['contentBranchDetailId'] ?>">
+                            <button class="<?= $i == 1 ? 'accordion-button' : 'accordion-button collapsed' ?>" type="button" data-bs-toggle="collapse" data-bs-target="#a<?= $free['contentBranchDetailId'] ?>" aria-expanded="true" aria-controls="<?= $free['contentBranchDetailId'] ?>">
+                                <?= $free['title'] ?>
+                            </button>
+                        </h2>
+                        <div id="a<?= $free['contentBranchDetailId'] ?>" class="accordion-collapse collapse <?= $i == 1 ? 'show' : '' ?>" aria-labelledby="<?= $free['contentBranchDetailId'] ?>" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong><?= $free['detail'] ?></strong><br>
+                                <?= $free['detail2'] ?>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Is there any certification associated ?
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong>
+                <?php
+                    $i++;
+                    endforeach;
+                    }
+                ?>
+                <div>
+                    <?php
+                        if ($canEdit == 1 && $userInThisBranch == 1 && isset($free["contentBranchId"])) { 
+                    ?>
+                            <div class="col-12 text-end mt-3">
+                                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $free['contentBranchId']]) ?>" target="_blank">Edit (<?=$branchName?>)</a>
                         </div>
-                    </div>
+                    <?php
+                        }
+                    ?>
                 </div>
             </div>
         </div>

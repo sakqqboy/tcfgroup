@@ -7,6 +7,7 @@ use backend\models\tokyoconsulting\ContentBranch;
 use backend\models\tokyoconsulting\ContentBranchDetail;
 use backend\models\tokyoconsulting\Member;
 use backend\models\tokyoconsulting\MemberHasType;
+use common\models\ModelMaster;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
@@ -77,12 +78,25 @@ class WebinarController extends Controller
      public function actionIndex($hash)
     {
 
-        $branchName = $hash;
+        $branchName = ModelMaster::decodeParams($hash);
+        $webinarvideo = [];
+        $detailvideo = [];
+        $bangladresh = [];
+        $bangladreshDetail = [];
+        $webinar = [];
+        $webinarDetail = [];
+        $register = [];
+        $webinarplaylist = [];
+        $participants  = [];
+        $comment = [];
+        $meet = [];
+        $freedetail = [];
+        $userInThisBranch = 0;
+
         $branch = Branch::find()
-            ->where(["branchName" => $branchName, "status" => 1])
+            ->where(["branchName" => $branchName["branchName"], "status" => 1])
             ->asArray()
             ->one();
-
         if (isset($branch) && !empty($branch)) {
             $binar = ContentBranch::find()
                 ->where(['title' => "When People changes Their Perspective", "branchId" => $branch["branchId"]])
@@ -91,40 +105,119 @@ class WebinarController extends Controller
             if (isset($binar) && !empty($binar)) {
                 $webinarvideo = ContentBranchDetail::find()
                     ->where(["contentBranchId" => $binar["contentBranchId"], "status" => 1])
+                    ->orderBy("createDateTime")
+                    ->asArray()
+                    ->all();
+            }
+            
+            $video = ContentBranch::find()
+                ->where(['contentName' => "detailvideo", "branchId" => $branch["branchId"]])
+                ->asArray()
+                ->one();
+            if (isset($video) && !empty($video)) {
+                $detailvideo = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $video["contentBranchId"], "status" => 1])
+                    ->orderBy("createDateTime")
+                    ->asArray()
+                    ->all();
+            }
+
+            $bangladresh = ContentBranch::find()
+                ->where(['contentName' => "Bangladresh", "branchId" => $branch["branchId"]])
+                ->asArray()
+                ->one();
+            if (isset($bangladresh) && !empty($bangladresh)) {
+                $bangladreshDetail = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $bangladresh["contentBranchId"], "status" => 1])
+                    ->orderBy("createDateTime")
                     ->asArray()
                     ->one();
             }
+
+            $webinar = ContentBranch::find()
+                ->where(['contentName' => "Webinar", "branchId" => $branch["branchId"]])
+                ->asArray()
+                ->one();
+            if (isset($webinar) && !empty($webinar)) {
+                $webinarDetail = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $webinar["contentBranchId"], "status" => 1])
+                    ->orderBy("createDateTime")
+                    ->asArray()
+                    ->all();
+            }
+
+            $regis = ContentBranch::find()
+                ->where(['contentName' => "Register", "branchId" => $branch["branchId"]])
+                ->asArray()
+                ->one();
+            if (isset($regis) && !empty($regis)) {
+                $register = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $regis["contentBranchId"], "status" => 1])
+                    ->orderBy("createDateTime")
+                    ->asArray()
+                    ->all();
+            }
+
+            $playlist = ContentBranch::find()
+                ->where(['contentName' => "webinarplaylist", "branchId" => $branch["branchId"]])
+                ->asArray()
+                ->one();
+            if (isset($playlist) && !empty($playlist)) {
+                $webinarplaylist = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $playlist["contentBranchId"], "status" => 1])
+                    ->orderBy("createDateTime")
+                    ->asArray()
+                    ->all();
+            }
+
+            $pants = ContentBranch::find()
+                ->where(['contentName' => "Participants", "branchId" => $branch["branchId"]])
+                ->asArray()
+                ->one();
+            if (isset($pants) && !empty($pants)) {
+                $participants = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $pants["contentBranchId"], "status" => 1])
+                    ->orderBy("createDateTime")
+                    ->asArray()
+                    ->all();
+            }
+
+            $com = ContentBranch::find()
+                ->where(['contentName' => "Comment", "branchId" => $branch["branchId"]])
+                ->asArray()
+                ->one();
+            if (isset($com) && !empty($com)) {
+                $comment = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $com["contentBranchId"], "status" => 1])
+                    ->orderBy("createDateTime")
+                    ->asArray()
+                    ->all();
+            }
+
+            $mee = ContentBranch::find()
+                ->where(['contentName' => "Meet", "branchId" => $branch["branchId"]])
+                ->asArray()
+                ->one();
+            if (isset($mee) && !empty($mee)) {
+                $meet = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $mee["contentBranchId"], "status" => 1])
+                    ->orderBy("createDateTime")
+                    ->asArray()
+                    ->all();
+            }
+            
+            $free = ContentBranch::find()
+                ->where(['contentName' => "Free", "branchId" => $branch["branchId"]])
+                ->asArray()
+                ->one();
+            if (isset($free) && !empty($free)) {
+                $freedetail = ContentBranchDetail::find()
+                    ->where(["contentBranchId" => $free["contentBranchId"], "status" => 1])
+                    ->orderBy("createDateTime")
+                    ->asArray()
+                    ->all();
+            }
         }
-
-        $icon = Content::find()
-            ->where(["contentName" => "Everyweek"])
-            ->asArray()
-            ->one();
-
-        $icon2 = Content::find()
-            ->where(["contentName" => "Question"])
-            ->asArray()
-            ->one();
-
-        $icon3 = Content::find()
-            ->where(["contentName" => "Mins"])
-            ->asArray()
-            ->one();
-
-        $la = Content::find()
-            ->where(["contentName" => "Bangladresh"])
-            ->asArray()
-            ->one();
-
-        $regis = Content::find()
-            ->where(["contentName" => "Register"])
-            ->asArray()
-            ->one();
-
-        $playlist = Content::find()
-            ->where(["contentName" => "webinarplaylist"])
-            ->asArray()
-            ->one();
 
         $py = Content::find()
             ->where(["contentName" => "Player1"])
@@ -136,77 +229,9 @@ class WebinarController extends Controller
             ->asArray()
             ->one();
 
-        $pants = Content::find()
-            ->where(["contentName" => "Participants"])
-            ->asArray()
-            ->one();
-
-        $com = Content::find()
-            ->where(["contentName" => "Comment"])
-            ->asArray()
-            ->one();
-
-        $mee = Content::find()
-            ->where(["contentName" => "Meet"])
-            ->asArray()
-            ->one();
-        
-        $webinar = Content::find()
-            ->where(["contentName" => "Webinar"])
-            ->asArray()
-            ->one();
-
-        $binar = [];
-        $webinarvideo = [];
-        $everyweek = [];
-        $question = [];
-        $mins = [];
-        $bangladresh = [];
-        $register = [];
-        $webinarplaylist = [];
         $player1 = [];
         $player2 = [];
-        $participants  = [];
-        $comment = [];
-        $meet = [];
-        $webinarDetail = [];
 
-        if (isset($icon) && !empty($icon)) {
-            $everyweek = ContentDetail::find()
-                ->where(["contentId" => $icon["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
-        if (isset($icon2) && !empty($icon2)) {
-            $question = ContentDetail::find()
-                ->where(["contentId" => $icon2["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
-        if (isset($icon3) && !empty($icon3)) {
-            $mins = ContentDetail::find()
-                ->where(["contentId" => $icon3["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
-        if (isset($la) && !empty($la)) {
-            $bangladresh = ContentDetail::find()
-                ->where(["contentId" => $la["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
-        if (isset($register) && !empty($regis)) {
-            $register = ContentDetail::find()
-                ->where(["contentId" => $regis["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
-        if (isset($playlist) && !empty($playlist)) {
-            $webinarplaylist = ContentDetail::find()
-                ->where(["contentId" => $playlist["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
         if (isset($py) && !empty($py)) {
             $player1 = ContentDetail::find()
                 ->where(["contentId" => $py["contentId"], "status" => 1])
@@ -219,37 +244,12 @@ class WebinarController extends Controller
                 ->asArray()
                 ->all();
         }
-        if (isset($pants) && !empty($pants)) {
-            $participants = ContentDetail::find()
-                ->where(["contentId" => $pants["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
-        if (isset($com) && !empty($com)) {
-            $comment = ContentDetail::find()
-                ->where(["contentId" => $com["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
-        if (isset($mee) && !empty($mee)) {
-            $meet = ContentDetail::find()
-                ->where(["contentId" => $mee["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
-        if (isset($webinar) && !empty($webinar)) {
-            $webinarDetail = ContentDetail::find()
-                ->where(["contentId" => $webinar["contentId"], "status" => 1])
-                ->asArray()
-                ->all();
-        }
 
         // throw new Exception(count($webinar));
         // throw new Exception(count($everyweek));
         // throw new Exception(count($question));
 
         $canEdit = 0;
-        $userInThisBranch = 0;
         if (Yii::$app->user->id) {
             $memberId = Yii::$app->user->id;
             $membertype = MemberHasType::find()
@@ -294,10 +294,9 @@ class WebinarController extends Controller
         return $this->render('webinar', [
             "binar" => $binar,
             "webinarvideo" => $webinarvideo,
-            "everyweek" => $everyweek,
-            "question" => $question,
-            "mins" => $mins,
+            "detailvideo" => $detailvideo,
             "bangladresh" => $bangladresh,
+            "bangladreshDetail" => $bangladreshDetail,
             "webinar" => $webinar,
             "register" => $register,
             "webinarplaylist" => $webinarplaylist,
@@ -306,10 +305,11 @@ class WebinarController extends Controller
             "participants" => $participants,
             "comment" => $comment,
             "meet" => $meet,
+            "freedetail" => $freedetail,
             "canEdit" => $canEdit,
             "userInThisBranch" => $userInThisBranch,
             "webinarDetail" => $webinarDetail,
-            "branchName" => $branchName
+            "branchName" => $branchName["branchName"]
         ]);
     }
 

@@ -26,7 +26,7 @@ class AboutUsCountryController extends Controller
 
         $userInThisBranch = 0;
         $canEdit = [];
-        $branchName = ModelMaster::decodeParams($hash);
+        $branchName = $hash;
         $countryName = $hash;
         $bannerabout = [];
         $historytokyo = [];
@@ -39,7 +39,7 @@ class AboutUsCountryController extends Controller
         $globalexpansion = [];
         $aboutfounder = [];
 
-        $branch = Branch::find()->where(["branchName" => $branchName['branchName'], "status" => 1])->asArray()->one();
+        $branch = Branch::find()->where(["branchName" => $branchName, "status" => 1])->asArray()->one();
         $country = Country::find()->where(["countryName" => $countryName, "status" => 1])->asArray()->all();
 
         if (isset($branch) && !empty($branch)) {
@@ -229,7 +229,7 @@ class AboutUsCountryController extends Controller
             "country" => $country,
             "userInThisBranch" => $userInThisBranch,
             "canEdit" => $canEdit,
-            "branchName" => $branchName['branchName'],
+            "branchName" => $branchName,
         ]);
     }
 }

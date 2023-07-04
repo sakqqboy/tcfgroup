@@ -5,6 +5,7 @@
 
 use common\widgets\Alert;
 use frontend\assets\AppAsset;
+use frontend\models\tokyoconsulting\Branch;
 use rmrevin\yii\fontawesome\component\Icon;
 use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Html;
@@ -69,14 +70,18 @@ AppAsset::register($this);
     <main role="main" class="flex-shrink-0">
         <?php
         if (Yii::$app->controller->id == 'site') {
-
             echo $this->render("@frontend/views/site/header");
         } else {
             $url = Yii::$app->request->getUrl();
             $urlArr = explode('/', $url);
             $totalArr = count($urlArr);
             $branchName = $urlArr[$totalArr - 1];
-            echo $this->render("@frontend/views/site-country/header", ["branchName" => $branchName]);
+            $branch = Branch::find()->where(["branchName" => $branchName])->asArray()->one();
+            if (isset($branch) && !empty($branch)) {
+                echo $this->render("@frontend/views/site-country/header", ["branchName" => $branchName]);
+            } else {
+                echo $this->render("@frontend/views/site/header");
+            }
         }
         ?>
         <?= $content ?>

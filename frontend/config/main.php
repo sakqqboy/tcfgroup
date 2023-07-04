@@ -50,6 +50,8 @@ return [
             'rules' => [
                 'site-country/index/<hash>' => 'site-country/index',
                 'newsletter/index/<hash>' => 'newsletter/index',
+                'services/index/<hash>' => 'services/index',
+                'resource/index/<hash>' => 'resource/index',
                 'webinar/index/<hash>' => 'webinar/index',
                 'about-us-country/index/<hash>' => 'about-us-country/index',
             ]

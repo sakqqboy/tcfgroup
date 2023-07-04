@@ -75,10 +75,10 @@ class WebinarController extends Controller
      * @return mixed
      */
 
-     public function actionIndex($hash)
+    public function actionIndex($hash)
     {
 
-        $branchName = ModelMaster::decodeParams($hash);
+        $branchName = $hash;
         $webinarvideo = [];
         $detailvideo = [];
         $bangladresh = [];
@@ -94,7 +94,7 @@ class WebinarController extends Controller
         $userInThisBranch = 0;
 
         $branch = Branch::find()
-            ->where(["branchName" => $branchName["branchName"], "status" => 1])
+            ->where(["branchName" => $branchName, "status" => 1])
             ->asArray()
             ->one();
         if (isset($branch) && !empty($branch)) {
@@ -109,7 +109,7 @@ class WebinarController extends Controller
                     ->asArray()
                     ->all();
             }
-            
+
             $video = ContentBranch::find()
                 ->where(['contentName' => "detailvideo", "branchId" => $branch["branchId"]])
                 ->asArray()
@@ -205,7 +205,7 @@ class WebinarController extends Controller
                     ->asArray()
                     ->all();
             }
-            
+
             $free = ContentBranch::find()
                 ->where(['contentName' => "Free", "branchId" => $branch["branchId"]])
                 ->asArray()
@@ -309,28 +309,28 @@ class WebinarController extends Controller
             "canEdit" => $canEdit,
             "userInThisBranch" => $userInThisBranch,
             "webinarDetail" => $webinarDetail,
-            "branchName" => $branchName["branchName"]
+            "branchName" => $branchName
         ]);
     }
 
     public function actionWebinarVideo()
-     {
- 
+    {
+
         $pagevideo = Content::find()
             ->where(["contentName" => "Pagewebinarvideo"])
             ->asArray()
             ->one();
- 
+
         $name1 = Content::find()
             ->where(["contentName" => "Namevideo"])
             ->asArray()
             ->one();
- 
+
         $mary = Content::find()
             ->where(["contentName" => "Summary"])
             ->asArray()
             ->one();
- 
+
         $subfree = Content::find()
             ->where(["contentName" => "Subwebinar"])
             ->asArray()
@@ -340,17 +340,17 @@ class WebinarController extends Controller
             ->where(["contentName" => "Player1"])
             ->asArray()
             ->one();
- 
+
         $pla = Content::find()
             ->where(["contentName" => "Player2"])
             ->asArray()
             ->one();
-        
+
         $playlist = Content::find()
             ->where(["contentName" => "webinarplaylist"])
             ->asArray()
             ->one();
-        
+
         $pagewebinarvideo = [];
         $namevideo = [];
         $summary = [];
@@ -358,7 +358,7 @@ class WebinarController extends Controller
         $player1 = [];
         $player2 = [];
         $webinarplaylist = [];
- 
+
         if (isset($pagevideo) && !empty($pagevideo)) {
             $pagewebinarvideo = ContentDetail::find()
                 ->where(["contentId" => $pagevideo["contentId"], "status" => 1])
@@ -430,6 +430,6 @@ class WebinarController extends Controller
             "player1" => $player1,
             "player2" => $player2,
             "webinarplaylist" => $webinarplaylist
-         ]);
-     }
+        ]);
+    }
 }

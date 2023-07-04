@@ -68,7 +68,7 @@ class NewsletterController extends Controller
 
         $userInThisBranch = 0;
         $canEdit = [];
-        $branchName = ModelMaster::decodeParams($hash);
+        $branchName = $hash;
         $countryName = $hash;
         $new = [];
         $newsletter = [];
@@ -82,7 +82,7 @@ class NewsletterController extends Controller
         $topic = [];
         $tp = [];
 
-        $branch = Branch::find()->where(["branchName" => $branchName['branchName'], "status" => 1])->asArray()->one();
+        $branch = Branch::find()->where(["branchName" => $branchName, "status" => 1])->asArray()->one();
         $country = Country::find()->where(["countryName" => $countryName, "status" => 1])->asArray()->all();
 
 
@@ -245,7 +245,7 @@ class NewsletterController extends Controller
             "country" => $country,
             "userInThisBranch" => $userInThisBranch,
             "canEdit" => $canEdit,
-            "branchName" => $branchName['branchName'],
+            "branchName" => $branchName,
         ]);
     }
 }

@@ -68,15 +68,15 @@ AppAsset::register($this);
 
     <main role="main" class="flex-shrink-0">
         <?php
-        if (Yii::$app->controller->id == 'site-country') {
+        if (Yii::$app->controller->id == 'site') {
+
+            echo $this->render("@frontend/views/site/header");
+        } else {
             $url = Yii::$app->request->getUrl();
             $urlArr = explode('/', $url);
             $totalArr = count($urlArr);
             $branchName = $urlArr[$totalArr - 1];
             echo $this->render("@frontend/views/site-country/header", ["branchName" => $branchName]);
-        } else {
-
-            echo $this->render("@frontend/views/site/header");
         }
         ?>
         <?= $content ?>

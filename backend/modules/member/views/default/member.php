@@ -34,116 +34,118 @@ use yii\bootstrap5\ActiveForm;
                 'action' => Yii::$app->homeUrl . 'member/default/search-member'
             ]); 
         ?>
-        <div class="row pd-search">
-            <div class="col-lg-3 font-search">
-                Name<br>
-                <input type="text" name="fullname" class="font-input form-control" value="<?= isset($fullname) ? $fullname : '' ?>">
-            </div>
-        </div>
-        <div class="row mt-3 pd-search">
-            <div class="col-lg-2">
-                <div class="font-search">
-                    Branch
+        <div class="col-lg-12">
+            <div class="row mt-3 pd-search">
+                <div class="col-lg-2">
+                    <div class="font-search">
+                        Name or Email
+                    </div>
+                    <input type="text" name="nm" class="form-control" value="<?= isset($nm) ? $nm : '' ?>">
                 </div>
-                <select class="form-select" name="branchId" id="branchId" onchange="javascript:findInfo()" required>
-                    <?php 
-                    if(isset($branchId) && $branchId!='') { 
-                ?>
-                    <option value="<?=$branchId?>"><?=Branch::branchName($branchId)?></option>
-                    <?php
-                    }
-                ?>
-                    <option value="">Select branch</option>
-                    <?php
-                    if (isset($branchs) && count($branchs) > 0) {
-                        foreach ($branchs as $a) :
-                ?>
-                    <option value="<?= $a["branchId"] ?>"><?= $a["branchName"] ?></option>
-                    <?php
-                    endforeach;
-                    }
-                ?>
-                </select>
-            </div>
-            <div class="col-lg-2">
-                <div class="font-search">
-                    Section
+                <div class="col-lg-2">
+                    <div class="font-search">
+                        Branch
+                    </div>
+                    <select class="form-select" name="branchId" id="branchId" onchange="javascript:findInfo()" required>
+                        <?php 
+                        if(isset($branchId) && $branchId!='') { 
+                    ?>
+                        <option value="<?=$branchId?>"><?=Branch::branchName($branchId)?></option>
+                        <?php
+                        }
+                    ?>
+                        <option value="">Select branch</option>
+                        <?php
+                        if (isset($branchs) && count($branchs) > 0) {
+                            foreach ($branchs as $a) :
+                    ?>
+                        <option value="<?= $a["branchId"] ?>"><?= $a["branchName"] ?></option>
+                        <?php
+                        endforeach;
+                        }
+                    ?>
+                    </select>
                 </div>
-                <select class="form-select" id="sectionId" name="sectionId">
-                    <?php if(isset($sectionId) && $sectionId!='') 
-                    {
-                    
-                ?>
-                    <option value="<?=$sectionId?>"><?=Section::sectionName($sectionId)?></option>
-                    <?php
-                    }
-                ?>
-                    <option value="">Select section</option>
-                    <?php
-                    if (isset($section) && count($section) > 0) {
-                    foreach ($section as $a) :
-                ?>
-                    <option value="<?= $a["sectionId"] ?>"><?= $a["sectionName"] ?></option>
-                    <?php
-                    endforeach;
-                    }
-                ?>
-                </select>
-            </div>
-            <div class="col-lg-2">
-                <div class="font-search">
-                    Position
+                <div class="col-lg-2">
+                    <div class="font-search">
+                        Section
+                    </div>
+                    <select class="form-select" id="sectionId" name="sectionId">
+                        <?php if(isset($sectionId) && $sectionId!='') 
+                        {
+                        
+                    ?>
+                        <option value="<?=$sectionId?>"><?=Section::sectionName($sectionId)?></option>
+                        <?php
+                        }
+                    ?>
+                        <option value="">Select section</option>
+                        <?php
+                        if (isset($section) && count($section) > 0) {
+                        foreach ($section as $a) :
+                    ?>
+                        <option value="<?= $a["sectionId"] ?>"><?= $a["sectionName"] ?></option>
+                        <?php
+                        endforeach;
+                        }
+                    ?>
+                    </select>
                 </div>
-                <select class="form-select" id="positionId" name="positionId">
-                    <?php if(isset($positionId) && $positionId!='') 
-                    {
-                    
-                ?>
-                    <option value="<?=$positionId?>"><?=Position::positionName($positionId)?></option>
-                    <?php
-                    }
-                ?>
-                    <option value="">Select position</option>
-                    <?php
-                    if (isset($position) && count($position) > 0) {
-                    foreach ($position as $a) :
-                ?>
-                    <option value="<?= $a["positionId"] ?>"><?= $a["positionName"] ?></option>
-                    <?php
-                    endforeach;
-                    }
-                ?>
-                </select>
-            </div>
-            <div class="col-lg-2">
-                <div class="font-search">
-                    Team
+                <div class="col-lg-2">
+                    <div class="font-search">
+                        Position
+                    </div>
+                    <select class="form-select" id="positionId" name="positionId">
+                        <?php if(isset($positionId) && $positionId!='') 
+                        {
+                        
+                    ?>
+                        <option value="<?=$positionId?>"><?=Position::positionName($positionId)?></option>
+                        <?php
+                        }
+                    ?>
+                        <option value="">Select position</option>
+                        <?php
+                        if (isset($position) && count($position) > 0) {
+                        foreach ($position as $a) :
+                    ?>
+                        <option value="<?= $a["positionId"] ?>"><?= $a["positionName"] ?></option>
+                        <?php
+                        endforeach;
+                        }
+                    ?>
+                    </select>
                 </div>
-                <select class="form-select" id="teamId" name="teamId">
-                    <?php if(isset($teamId) && $teamId!='') 
-                    {
-                    
-                ?>
-                    <option value="<?=$teamId?>"><?=Team::teamName($teamId)?></option>
-                    <?php
-                    }
-                ?>
-                    <option value="">Select position</option>
-                    <?php
-                    if (isset($team) && count($team) > 0) {
-                    foreach ($team as $a) :
-                ?>
-                    <option value="<?= $a["teamId"] ?>"><?= $a["teamName"] ?></option>
-                    <?php
-                    endforeach;
-                    }
-                ?>
-                </select>
-            </div>
-            <div class="col-lg-2">
-                <button type="submit" class="btn btn-secondary bt-search">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
+                <div class="col-lg-2">
+                    <div class="font-search">
+                        Team
+                    </div>
+                    <select class="form-select" id="teamId" name="teamId">
+                        <?php if(isset($teamId) && $teamId!='') 
+                        {
+                        
+                    ?>
+                        <option value="<?=$teamId?>"><?=Team::teamName($teamId)?></option>
+                        <?php
+                        }
+                    ?>
+                        <option value="">Select position</option>
+                        <?php
+                        if (isset($team) && count($team) > 0) {
+                        foreach ($team as $a) :
+                    ?>
+                        <option value="<?= $a["teamId"] ?>"><?= $a["teamName"] ?></option>
+                        <?php
+                        endforeach;
+                        }
+                    ?>
+                    </select>
+                </div>
+                <div class="col-lg-2">
+                    <button type="submit" class="btn btn-secondary bt-search">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </div>
             </div>
         </div>
         <?php ActiveForm::end(); ?>

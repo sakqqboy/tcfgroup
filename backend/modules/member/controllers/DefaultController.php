@@ -325,7 +325,7 @@ class DefaultController extends Controller
         }
         return $this->redirect('search-result/' . ModelMaster::encodeParams([
             "branchId" => $_POST["branchId"],
-            "fullname" => $_POST['fullname'],
+            "nm" => $_POST['nm'],
             "sectionId" => $_POST["sectionId"],
             "teamId" => $_POST["teamId"],
             "positionId" => $_POST["positionId"]
@@ -340,7 +340,7 @@ class DefaultController extends Controller
         $param = ModelMaster::decodeParams($hash);
         $member = Member::find()
             ->where(['branchId' => $param["branchId"]])
-            ->andWhere('memberFirstName LIKE :fullname OR memberLastName LIKE :fullname', [':fullname' => '%' . $param["fullname"] . '%'])
+            ->andWhere('memberFirstName LIKE :nm OR memberLastName LIKE :nm OR email LIKE :nm', [':nm' => '%' . $param["nm"] . '%'])
             ->andFilterWhere(["sectionId" => $param["sectionId"]])
             ->andFilterWhere(["positionId" => $param["positionId"]])
             ->andFilterWhere(["teamId" => $param["teamId"]])
@@ -367,7 +367,7 @@ class DefaultController extends Controller
             ->all();
         return $this->render('member', [
             "member" => $member,
-            "fullname" => $param["fullname"],
+            "nm" => $param["nm"],
             "branchId" => $param["branchId"],
             "sectionId" => $param["sectionId"],
             "positionId" => $param["positionId"],

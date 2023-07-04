@@ -34,4 +34,15 @@ class ContentBranch extends \backend\models\tokyoconsulting\master\ContentBranch
     {
         return array_merge(parent::attributeLabels(), []);
     }
+
+    public static function contentBranchName($contentBranchId){
+        $contentbranchid = ContentBranch::find() -> where(["contentBranchId" => $contentBranchId]) -> asArray() -> one();
+        if(isset($contentbranchid) && !empty($contentbranchid)){
+        //    throw new Exception(print_r($branch,true));
+        return $contentbranchid["contentName"];
+        }else{
+           // $branch = Branch::find() -> where(["branchI" => $branchId]) -> asArray() -> one();
+            return null;
+      }
+    }
 }

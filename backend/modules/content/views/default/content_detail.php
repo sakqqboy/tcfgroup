@@ -1,11 +1,14 @@
 <?php
     $this -> title = 'Content Detail';
-    use common\models\ModelMaster;
+
+use backend\models\tokyoconsulting\Content;
+use backend\models\tokyoconsulting\ContentDetail;
+use common\models\ModelMaster;
 ?>
 <div class="col-lg-12">
 <div class="row">
         <div class="col-lg-12 mt-4 text-center font-title">
-            Content Detail
+        <?= Content::contentDetailName($contentDetailName -> contentId)?>
         </div>
     </div>
     <div class="row">

@@ -40,6 +40,7 @@ class DefaultController extends Controller
             return $this->redirect(Yii::$app->homeUrl . 'site/login');
         }
         $content = Content::find()->asArray()->all();
+        
         return $this->render('content', ["content" => $content]);
     }
 
@@ -116,6 +117,32 @@ class DefaultController extends Controller
         return json_encode($res);
     }
 
+    public function actionSearchContent()
+    {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
+        return $this->redirect('search-content-result/' . ModelMaster::encodeParams([
+            "nt" => $_POST['nt'],
+        ]));
+    }
+    public function actionSearchContentResult($hash)
+    {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
+
+        $param = ModelMaster::decodeParams($hash);
+        $content = Content::find()
+            ->where('contentName LIKE :nt OR title LIKE :nt', [':nt' => '%' . $param["nt"] . '%'])
+            ->all();
+
+        return $this->render('content', [
+            "content" => $content,
+            "nt" => $param["nt"],
+        ]);
+    }
+
     public function actionContentDetail($hash)
     {
         if (!Yii::$app->user->id) {
@@ -129,7 +156,11 @@ class DefaultController extends Controller
             ->asArray()
             ->all();
 
-        return $this->render('content_detail', ["contentDetail" => $contentDetail, "contentId" => $contentId]);
+        $contentDetailName = Content::find()
+            ->where(["contentId" => $contentId])
+            ->one();
+
+        return $this->render('content_detail', ["contentDetail" => $contentDetail, "contentId" => $contentId, "contentDetailName" => $contentDetailName]);
     }
 
     public function actionCreateContentDetail($hash)

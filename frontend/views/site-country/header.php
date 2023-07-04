@@ -4,9 +4,13 @@ use common\helpers\Path;
 use common\models\ModelMaster;
 
 ?>
+<!-- image/img/tcg-group-bangladesh.png -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-        <a href="<?= Yii::$app->homeUrl ?>" class="nav-link"><img src="<?= Path::backendUrl() ?>image/img/tcg-group-bangladesh.png" class="" style="width: 200px;"></a>
+        <a href="<?= Yii::$app->homeUrl ?>" class="nav-link"><img src="<?= Path::backendUrl() ?>image/tcg-group.png" class="" style="width: 200px;">
+
+        </a>
+        <p class="font-size12 text-primary" style="margin-bottom: -57px;;margin-left:-87px;"><?= $branchName ?></p>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="snavbar-toggler-icon">
                 <i class="fa fa-bars" aria-hidden="true"></i>

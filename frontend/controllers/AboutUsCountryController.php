@@ -15,6 +15,7 @@ use yii\filters\AccessControl;
 use common\models\tokyoconsulting\Content;
 use frontend\models\tokyoconsulting\ContentDetail;
 use Yii;
+use yii\db\Expression;
 
 /**
  * Site controller

@@ -106,10 +106,10 @@ $this->title = 'TCFGROUP';
                     </div>
                     <div class="col-6 country-index">
                         <?php
-                        if (isset($countrypage) && count($countrypage) > 0) {
+                        if (isset($branch) && count($branch) > 0) {
                             $i = 0;
-                            foreach ($countrypage as $p) :
-                                if ($i < 13) {
+                            foreach ($branch as $p) :
+                                if ($i > 12) {
                         ?>
                                     <p><a href="<?= Yii::$app->homeUrl . $p['url'] ?>" class="no-underline1">
                                             <img src="<?= Path::backendUrl() . $p['image'] ?>" class="img-country">

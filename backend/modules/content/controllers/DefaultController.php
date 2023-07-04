@@ -40,7 +40,7 @@ class DefaultController extends Controller
             return $this->redirect(Yii::$app->homeUrl . 'site/login');
         }
         $content = Content::find()->asArray()->all();
-        
+
         return $this->render('content', ["content" => $content]);
     }
 
@@ -255,7 +255,9 @@ class DefaultController extends Controller
             $imageObj = UploadedFile::getInstanceByName("image");
             if (isset($imageObj) && !empty($imageObj)) {
                 if (file_exists(Path::getHost() . $contentDetail["image"])) {
-                    unlink(Path::getHost() . $contentDetail["image"]);
+                    if ($contentDetail["image"] != null) {
+                        unlink(Path::getHost() . $contentDetail["image"]);
+                    }
                 }
                 $urlFolder = Path::getHost() . 'image/contentdetail/';
                 if (!file_exists($urlFolder)) {

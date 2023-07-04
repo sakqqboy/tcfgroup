@@ -33,4 +33,14 @@ class Content extends \backend\models\tokyoconsulting\master\ContentMaster{
     {
         return array_merge(parent::attributeLabels(), []);
     }
+    public static function contentDetailName($contentId){
+        $contentdetail = Content::find() -> where(["contentId" => $contentId]) -> asArray() -> one();
+        if(isset($contentdetail) && !empty($contentdetail)){
+        //    throw new Exception(print_r($branch,true));
+        return $contentdetail["contentName"];
+        }else{
+           // $branch = Branch::find() -> where(["branchI" => $branchId]) -> asArray() -> one();
+            return null;
+      }
+    }
 }

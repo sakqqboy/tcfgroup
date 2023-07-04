@@ -1,4 +1,9 @@
 <?php
+
+use yii\bootstrap5\ActiveForm;
+use backend\models\tokyoconsulting\ContentDetail;
+use common\models\ModelMaster;
+
     $this -> title = 'Content';
 ?>
 <div class="col-lg-12">
@@ -15,7 +20,31 @@
             </a>
         </div>
     </div><br>
-    <table class="table table-bordered table-hover text-center">
+    <div>
+        <?php
+            $form = ActiveForm::begin([
+                'id' => 'create-job-form',
+                'method' => 'post',
+                'options' => [
+                    'enctype' => 'multipart/form-data',
+                ],
+                'action' => Yii::$app->homeUrl . 'content/default/search-content'
+            ]); 
+        ?>
+            <div class="row pd-search">
+                <div class="col-lg-3 font-search">
+                    Name or Title<br>
+                    <input type="text" name="nt" class="font-input form-control" value="<?= isset($nt) ? $nt : '' ?>">
+                </div>
+                <div class="col-lg-2">
+                    <button type="submit" class="btn btn-secondary bt-search">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        <?php ActiveForm::end(); ?>
+    </div>
+    <table class="table table-bordered table-hover text-center mt-3">
         <thead class="table-secondary">
             <tr>
                 <th>No</th>
@@ -28,10 +57,6 @@
         </thead>
         <tbody>
             <?php
-
-                use backend\models\tokyoconsulting\ContentDetail;
-                use common\models\ModelMaster;
-
                 if(isset($content)){
                     $i=1;
                     foreach ($content as $x) :
@@ -69,5 +94,6 @@
                 }
                 ?>
         </tbody>
+
     </table>
 </div>

@@ -58,6 +58,7 @@ return [
                 //content
                 'content/default/view-content/<hash>' => 'content/default/view-content',
                 'content/default/update-content/<hash>' => 'content/default/update-content',
+                'content/default/search-content-result/<hash>' => 'content/default/search-content-result',
                 'content/default/content-detail/<hash>' => 'content/default/content-detail',
                 'content/default/view-content-detail/<hash>' => 'content/default/view-content-detail',
                 'content/default/create-content-detail/<hash>' => 'content/default/create-content-detail',

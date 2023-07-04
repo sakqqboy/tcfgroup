@@ -20,11 +20,11 @@ $form = ActiveForm::begin([
             <div class="row mt-3">
                 <div class="col-lg-6 input-fields">
                     Content name<br>
-                    <input type="text" name="contentname" id="member-address" class="input-data form-control col-lg-6" placeholder="Enter your content name" required>
+                    <input type="text" name="contentname" id="member-address" class="input-data form-control" placeholder="Enter your content name" required>
                 </div>
                 <div class="col-lg-6 input-fields">
                     Title<br>
-                    <input type="text" name="title" id="member-address" class="input-data form-control col-lg-6" placeholder="Enter your title">
+                    <input type="text" name="title" id="member-address" class="input-data form-control" placeholder="Enter your title">
                 </div>
                 <div class="col-lg-12 input-fields">
                     Branch<br>

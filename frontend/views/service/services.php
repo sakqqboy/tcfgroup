@@ -188,7 +188,7 @@ $this->title = 'services';
                 </div>
             </div>
             <div class="col-12 pic-asset">
-                <img src="<?= Path::backendUrl() ?>image/Asset-2.png" class="asset-10">
+                <img src="<?= Path::backendUrl() . $tryin['image'] ?>" class="asset-10">
             </div>
         </div>
 
@@ -273,6 +273,8 @@ $this->title = 'services';
                     </div>
                     <div class="col-12 mt-20">
                         <img src="<?= Path::backendUrl() . $o['image'] ?>">
+                    </div>
+                    <div class="col-12 mt-3">
                         <p><?= $o['detail'] ?></p>
                     </div>
             <?php

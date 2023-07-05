@@ -86,7 +86,7 @@ $form = ActiveForm::begin([
                 <div class="row">
                     <div class="col-lg-12 input-fields mt-2">
                         Picture<br>
-                        <input type="file" name="picture" class="form-control col-lg-6" required>
+                        <input type="file" name="picture" class="form-control col-lg-6">
                     </div>
                 </div>
             </div>

@@ -14,7 +14,7 @@ use common\models\ModelMaster;
     </div>
     <div class="row">
         <div class="col-lg-12 text-end">
-            <a class="btn btn-success buttons-size" href="<?=Yii::$app->homeUrl.'/content/default/create-content'?>">
+            <a class="btn btn-success buttons-size" href="<?=Yii::$app->homeUrl.'content/default/create-content'?>">
                 <i class="fa fa-plus-circle" aria-hidden="true"></i>
                 Create content
             </a>

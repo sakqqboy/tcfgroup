@@ -168,27 +168,21 @@ $this->title = 'services';
                 </div>
                 <div class="col-5">
                     <select class="form-select" aria-label="Default select example">
-                        <?php
-                        if (isset($countryindex2) && count($countryindex2)) {
-                            $i = 0;
-                            foreach ($countryindex2 as $tryin) :
-                                if ($i < 26) {
 
-
-                        ?>
-                                    <option selected onclick="javasript:showCountry(<?= $i ?>)"> <?= $tryin['title'] ?> </option>
-
-                        <?php
-                                }
-                                $i++;
-                            endforeach;
-                        }
-                        ?>
                     </select>
                 </div>
             </div>
             <div class="col-12 pic-asset">
-                <img src="<?= Path::backendUrl() ?>image/Asset-2.png" class="asset-10">
+                <?php
+                $countryindex['image'] = '';
+                if (isset($countryindex2) && count($countryindex2)) {
+                    foreach ($countryindex2 as $countryindex) :
+                ?>
+                        <img src="<?= Path::backendUrl() . $countryindex['image'] ?>" class="asset-10">
+                <?php
+                    endforeach;
+                }
+                ?>
             </div>
         </div>
 
@@ -273,6 +267,8 @@ $this->title = 'services';
                     </div>
                     <div class="col-12 mt-20">
                         <img src="<?= Path::backendUrl() . $o['image'] ?>">
+                    </div>
+                    <div class="col-12 mt-3">
                         <p><?= $o['detail'] ?></p>
                     </div>
             <?php

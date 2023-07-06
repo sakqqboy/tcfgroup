@@ -49,6 +49,7 @@ class ServiceController extends Controller
             $admin = 1;
         }
 
+        $tryin = [];
 
         $r = Content::find()
             ->where(["contentName" => "Services"])
@@ -314,6 +315,7 @@ class ServiceController extends Controller
             "stage" => $stage,
             "background" => $background,
             "most" => $most,
+            "tryin" => $tryin,
             "countryindex2" => $countryindex2,
             "admin" => $admin
 

@@ -36,9 +36,21 @@ use common\models\ModelMaster;
                 <li class="nav-item">
                     <a href="<?= Yii::$app->homeUrl ?>about-us-country/index/<?= $branchName ?>" class="nav-link">About us</a>
                 </li>
-                <li class="nav-item">
-                    <a href="<?= Yii::$app->homeUrl ?>site-country/login" class="nav-link">Log in</a>
-                </li>
+                <?php
+                if (Yii::$app->user->id) {
+                ?>
+                    <li class="nav-item">
+                        <a href="<?= Yii::$app->homeUrl ?>site/logout" class="nav-link">Log out</a>
+                    </li>
+                <?php
+                } else { ?>
+                    <li class="nav-item">
+                        <a href="<?= Yii::$app->homeUrl ?>site-country/login" class="nav-link">Log in</a>
+                    </li>
+                <?php
+
+                }
+                ?>
                 <!-- <li class="nav-item">
                     <a href="<?= Yii::$app->homeUrl ?>site-country/store" class="nav-link">Store</a>
                 </li> -->

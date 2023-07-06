@@ -262,7 +262,7 @@ class SiteController extends Controller
             "titleservice" => $titleservice,
             "admin" => $admin,
             "index" => $index,
-            "pp" => $p,
+            "pp" => $b,
             "c" => $c,
             "d" => $d,
             "e" => $e,

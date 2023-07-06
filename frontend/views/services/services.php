@@ -276,81 +276,57 @@ $this->title = 'services';
     </div>
 </div>
 
-<<<<<<< HEAD
-<div class="col-12">
-    <?php
-    if (isset($development) && count($development) > 0) {
-        $i = 0;
-        foreach ($development as $dave) :
-    ?>
-    <div class="col-12">
-        <img src="<?= Path::backendUrl() . $dave['image'] ?>" style="width:100%">
-    </div>
-    <div class="col-4 ser-company">
-        <p> <?= $dave['title'] ?> </p>
-    </div>
-    <div class="col-5 title-unlock">
-        <p> <?= $dave['detail'] ?></p>
-    </div>
-    <div class="col-5 button-namecontact">
-        <p> <button type="button" class="btn btn-primary"><?= $dave['detail2'] ?></button> </p>
-    </div>
-    <?php
-
-            $i++;
-        endforeach;
-    }
-    ?>
-</div>
-=======
 <div class="col-12" style="margin-top: 70px;">
-        <?php Carousel::widget([]); ?>
->>>>>>> 7f7101e2385d7a72bba669095ef4fbd5d6b0fe36
+    <?php Carousel::widget([]); ?>
 
-        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <?php
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <?php
                 if (isset($development) && count($development) > 0) {
                     $i = 0;
                     foreach ($development as $dev) :
                 ?>
-                        <div class="carousel-item <?= $i == 0 ? 'active' : '' ?>" data-bs-interval="10000">
-                            <img src="<?= Path::backendUrl() . $dev['image'] ?>" class="d-block" style="width:100%; margin-top:20px;">
-                            <div class="offset-1 col-11 text-title" >
-                                    <?= $dev['title'] ?><br>
-                                    <div class="text-detail">
-                                        <?= $dev['detail'] ?> <br>
-                                        <?= $dev['detail2'] ?><br>
-                                        <?= $dev['detail3'] ?><br>
-                                        <?= $dev['detail4'] ?><br>
-                                        <?= $dev['detail5'] ?><br>
-                                        <?= $dev['detail6'] ?><br>
-                                        <button type="button" class="btn btn-primary button-start mt-4"> <?= $dev['detail7'] ?></button>
-                                    </div>
-                            </div>
-                        </div>
-                <?php
+            <div class="carousel-item <?= $i == 0 ? 'active' : '' ?>" data-bs-interval="10000">
+                <img src="<?= Path::backendUrl() . $dev['image'] ?>" class="d-block"
+                    style="width:100%; margin-top:20px;">
+                <div class="offset-1 col-11 text-title">
+                    <?= $dev['title'] ?><br>
+                    <div class="text-detail">
+                        <?= $dev['detail'] ?> <br>
+                        <?= $dev['detail2'] ?><br>
+                        <?= $dev['detail3'] ?><br>
+                        <?= $dev['detail4'] ?><br>
+                        <?= $dev['detail5'] ?><br>
+                        <?= $dev['detail6'] ?><br>
+                        <button type="button" class="btn btn-primary button-start mt-4"> <?= $dev['detail7'] ?></button>
+                    </div>
+                </div>
+            </div>
+            <?php
                         $i++;
                     endforeach;
                 }
                 ?>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    
+</div>
+
 <div class="col-12 pr12 background-establish">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12">

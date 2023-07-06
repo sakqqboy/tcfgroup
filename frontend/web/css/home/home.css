@@ -9,6 +9,25 @@
     z-index: 99;
 }
 
+.text-title {
+    position: absolute;
+    margin-top: -27.5%;
+    margin-left: 150px;
+    font-family: 'Klavika';
+    font-size: 50px;
+    font-weight: 200;
+    line-height: 60px;
+    color: #2D8DD5;
+}
+
+.text-detail {
+    position: absolute;
+    font-family: 'Klavika';
+    font-size: 20px;
+    font-weight: 50;
+    line-height: 30px;
+    color: #eee;
+}
 
 .image-TCG {
     padding-top: 80px;

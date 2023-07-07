@@ -463,16 +463,16 @@ $this->title = 'services';
     <?php
     if (isset($boatimg) && count($boatimg) > 0) {
         $i = 0;
-        foreach ($boatimg as $boat) :
+        foreach ($boatimg as $img) :
     ?>
-            <img src="<?= Path::backendUrl() . $boat['image'] ?>" class="image-boat-2">
+            <img src="<?= Path::backendUrl() . $img['image'] ?>" class="image-boat-2">
     <?php
             $i++;
         endforeach;
     }
     ?>
     <?php
-    if ($admin == 1) { ?>
+    if ($admin == 1 && isset($boat) && !empty($boat)) { ?>
         <div class=" col-12 text-end edit-content mt-2">
             <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $boat['contentId']]) ?>" target="_blank">Edit(BG)</a>
         </div>

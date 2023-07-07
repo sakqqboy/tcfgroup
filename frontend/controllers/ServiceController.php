@@ -303,6 +303,7 @@ class ServiceController extends Controller
             "detail" => $detail,
             "picturegraphics" => $picturegraphics,
             "boatimg" => $boatimg,
+            "boat" => $boat,
             "founder" => $founder,
             "star" => $star,
             "itemstar" => $itemstar,

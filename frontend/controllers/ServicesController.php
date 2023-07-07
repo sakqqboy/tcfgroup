@@ -274,6 +274,7 @@ class ServicesController extends Controller
 			"together" => $together,
 			"contribute" => $contribute,
 			"understanding" => $understanding,
+			"standing" => $standing,
 			"companymarket" => $companymarket,
 			"newservices" => $newservices,
 			"shapestar" => $shapestar,
@@ -295,6 +296,7 @@ class ServicesController extends Controller
 			"sr" => $sr,
 			"sl" => $sl,
 			"dropdown" => $dropdown,
+			"newservices" => $newservices,
 
 		]);
 	}

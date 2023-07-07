@@ -123,22 +123,30 @@ $this->title = 'services';
     <div class="row">
         <div class="col-lg-6 col-md-12 col-12">
             <div class="col-12 title-Es">
-                <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> ESTABLISHING COMPANY IN BANGLADESH
+                <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"><?= $standing['title'] ?>
             </div>
+            <?php
+            if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                <div class="col-12 text-end">
+                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $standing['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
+                </div>
+            <?php
+            }
+            ?>
             <div class="col-12  mt-50">
                 <div class="row">
                     <?php
                     if (isset($understanding) && count($understanding) > 0) {
                         $i = 0;
-                        foreach ($understanding as $standing) :
+                        foreach ($understanding as $std) :
                             if ($i < 3) {
                     ?>
                                 <div class="col-4 Es1" id="limited-<?= $i ?>" onmouseover="javascript:showLimited2(<?= $i ?>)">
-                                    <?= $standing['title'] ?>
+                                    <?= $std['title'] ?>
                                 </div>
 
                                 <div class="col-4 copy-Es1" style="display:none;" id="limited2-<?= $i ?>" onmouseleave="javascript:showLimited1(<?= $i ?>)">
-                                    <?= $standing['title'] ?>
+                                    <?= $std['title'] ?>
                                     <div class="col-10 txt-es"></div>
                                 </div>
 
@@ -152,7 +160,7 @@ $this->title = 'services';
                 <?php
                 if ($canEdit == 1 && $userInThisBranch == 1) { ?>
                     <div class="col-12 text-end">
-                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $standing['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
+                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $std['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
                     </div>
                 <?php
                 }

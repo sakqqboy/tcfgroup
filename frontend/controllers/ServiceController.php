@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use backend\models\tokyoconsulting\Branch;
 use backend\models\tokyoconsulting\MemberHasType;
 use yii\web\Controller;
 use common\models\tokyoconsulting\Content;
@@ -49,7 +50,6 @@ class ServiceController extends Controller
             $admin = 1;
         }
 
-        $tryin = [];
 
         $r = Content::find()
             ->where(["contentName" => "Services"])
@@ -150,6 +150,12 @@ class ServiceController extends Controller
             ->asArray()
             ->one();
 
+        $topicform = Content::find()
+            ->where(["contentName" => "Topicform"])
+            ->asArray()
+            ->one();
+
+
 
         $services = [];
         $bannerservices = [];
@@ -171,6 +177,16 @@ class ServiceController extends Controller
         $background = [];
         $most = [];
         $countryindex2 = [];
+        $bHomeName = [];
+        $dropdown = [];
+        $topf = [];
+
+        $bHomeName = Branch::find()->where(["branchName" => $bHomeName, "status" => 1])->asArray()->all();
+
+        $dropdown = Branch::find()->where("status=1")
+            ->orderBy('branchName')
+            ->asArray()
+            ->all();
 
 
 
@@ -295,6 +311,16 @@ class ServiceController extends Controller
                 ->asArray()
                 ->all();
         }
+
+        if (isset($topicform) && !empty($topicform)) {
+            $topf = ContentDetail::find()
+                ->where(["contentId" => $topicform["contentId"], "status" => 1])
+                ->asArray()
+                ->all();
+        }
+
+
+
         return $this->render('services', [
             "services" => $services,
             "bannerservices" => $bannerservices,
@@ -318,7 +344,11 @@ class ServiceController extends Controller
             "most" => $most,
             "tryin" => $tryin,
             "countryindex2" => $countryindex2,
-            "admin" => $admin
+            "admin" => $admin,
+            "bHomeName" => $bHomeName,
+            "dropdown" => $dropdown,
+            "topicform" => $topicform,
+            "topf" => $topf
 
         ]);
     }

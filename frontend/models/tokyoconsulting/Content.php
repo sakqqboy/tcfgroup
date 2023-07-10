@@ -34,14 +34,18 @@ class Content extends \frontend\models\tokyoconsulting\master\ContentMaster
     }
     public static function footerBranch()
     {
+        $dataArr = [];
         $branch = Content::find()->where(["contentName" => 'Branchfooter'])->asArray()->one();
-        $detail = ContentDetail::find()->where(["contentId" => $branch["contentId"]])->all();
-        $contentId = $branch["contentId"];
-        $dataArr = [
-            "contentId" => $contentId,
-            "title" => $branch["title"],
-            "detail" => $detail
-        ];
+        if (isset($branch) && !empty($branch)) {
+            $detail = ContentDetail::find()->where(["contentId" => $branch["contentId"]])->all();
+            $contentId = $branch["contentId"];
+            $dataArr = [
+                "contentId" => $contentId,
+                "title" => $branch["title"],
+                "detail" => $detail
+            ];
+        }
+
         return $dataArr;
     }
 

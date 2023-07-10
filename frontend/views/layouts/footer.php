@@ -7,144 +7,133 @@ use common\models\ModelMaster;
 <div class="col-12 pr12 mt-50">
     <div class="row">
         <div class="col-lg-3 col-md-6 col-12 text-start box-logo-footer">
-            <img src="<?= Path::backendUrl()?>image/tcg-group.png" class="logo-footer">
+            <img src="<?= Path::backendUrl() ?>image/tcg-group.png" class="logo-footer">
         </div>
         <div class="col-lg-2 col-md-6 col-6 footer-box">
             <div class="row">
                 <div class="txt-internal mb-20">
-                    <?= $dataBranch["title"] ?>
+                    <?= isset($dataBranch["title"]) ? $dataBranch["title"] : '' ?>
                     <?php
-					if ($admin == 1) { ?>
-                    <div class=" col-12 text-end edit-content mt-1">
-                        <a class="btn btn-warning bt-line"
-                            href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $dataBranch['contentId']]) ?>"
-                            target="_blank">Edit</a>
-                    </div>
+                    if ($admin == 1) { ?>
+                        <div class=" col-12 text-end edit-content mt-1">
+                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $dataBranch['contentId']]) ?>" target="_blank">Edit</a>
+                        </div>
                     <?php
-					}
-					?>
+                    }
+                    ?>
                 </div>
                 <div class="col-6  text-start">
                     <div class="country-footer">
                         <?php
-						if (isset($dataBranch["detail"]) && count($dataBranch["detail"]) > 0) {
-							$i = 0;
-							foreach ($dataBranch["detail"] as $bl) :
-								if ($i < 13) {
-						?>
-                        <p><a href="<?= $bl['url'] ?>" class="no-underline"><?= $bl['title'] ?></a></p>
+                        if (isset($dataBranch["detail"]) && count($dataBranch["detail"]) > 0) {
+                            $i = 0;
+                            foreach ($dataBranch["detail"] as $bl) :
+                                if ($i < 13) {
+                        ?>
+                                    <p><a href="<?= Yii::$app->homeUrl . $bl['url'] ?>" class="no-underline"><?= $bl['title'] ?></a>
+                                    </p>
                         <?php
-								}
-								$i++;
-							endforeach;
-						}
-						?>
+                                }
+                                $i++;
+                            endforeach;
+                        }
+                        ?>
                     </div>
                 </div>
                 <div class="col-6 text-start country-footer">
                     <?php
-					if (isset($dataBranch["detail"]) && count($dataBranch["detail"]) > 0) {
-						$i = 0;
-						foreach ($dataBranch["detail"] as $br) :
-							if ($i > 12) {
-					?>
-                    <p><a href="<?= $br['url'] ?>" class="no-underline"><?= $br['title'] ?></a></p>
+                    if (isset($dataBranch["detail"]) && count($dataBranch["detail"]) > 0) {
+                        $i = 0;
+                        foreach ($dataBranch["detail"] as $br) :
+                            if ($i > 12) {
+                    ?>
+                                <p><a href="<?= Yii::$app->homeUrl . $br['url'] ?>" class="no-underline"><?= $br['title'] ?></a></p>
                     <?php
-							}
-							$i++;
-						endforeach;
-					}
-					?>
+                            }
+                            $i++;
+                        endforeach;
+                    }
+                    ?>
                 </div>
             </div>
             <?php
-			if ($admin == 1) { ?>
-            <div class=" col-12 text-end edit-content mt-1">
-                <a class="btn btn-warning bt-line"
-                    href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $dataBranch['contentId']]) ?>"
-                    target="_blank">Edit</a>
-            </div>
+            if ($admin == 1) { ?>
+                <div class=" col-12 text-end edit-content mt-1">
+                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $dataBranch['contentId']]) ?>" target="_blank">Edit</a>
+                </div>
             <?php
-			}
-			?>
+            }
+            ?>
 
         </div>
         <div class="col-lg-2 col-md-6 col-6 footer-box">
             <div class="txt-internal mb-20">
-                <?= $dataexplore["title"] ?>
+                <?= isset($dataexplore["title"]) ? $dataexplore["title"] : '' ?>
                 <?php
-				if ($admin == 1) { ?>
-                <div class=" col-12 text-end edit-content mt-1">
-                    <a class="btn btn-warning bt-line"
-                        href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $dataexplore['contentId']]) ?>"
-                        target="_blank">Edit</a>
-                </div>
+                if ($admin == 1) { ?>
+                    <div class=" col-12 text-end edit-content mt-1">
+                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $dataexplore['contentId']]) ?>" target="_blank">Edit</a>
+                    </div>
                 <?php
-				}
-				?>
+                }
+                ?>
             </div>
             <div class="country-footer">
                 <?php
-				if (isset($dataexplore["detailex"]) && count($dataexplore["detailex"]) > 0) {
-					$i = 0;
-					foreach ($dataexplore["detailex"] as $ex) :
-				?>
-                <p><a href="<?= $ex['url'] ?>" class="no-underline"><?= $ex['title'] ?></a></p>
+                if (isset($dataexplore["detailex"]) && count($dataexplore["detailex"]) > 0) {
+                    $i = 0;
+                    foreach ($dataexplore["detailex"] as $ex) :
+                ?>
+                        <p><a href="<?= $ex['url'] ?>" class="no-underline"><?= $ex['title'] ?></a></p>
                 <?php
 
-						$i++;
-					endforeach;
-				}
-				?>
+                        $i++;
+                    endforeach;
+                }
+                ?>
             </div>
             <?php
-			if ($admin == 1) { ?>
-            <div class=" col-12 text-end edit-content mt-1">
-                <a class="btn btn-warning bt-line"
-                    href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $dataexplore['contentId']]) ?>"
-                    target="_blank">Edit</a>
-            </div>
+            if ($admin == 1) { ?>
+                <div class=" col-12 text-end edit-content mt-1">
+                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $dataexplore['contentId']]) ?>" target="_blank">Edit</a>
+                </div>
             <?php
-			}
-			?>
+            }
+            ?>
         </div>
         <div class="col-lg-2 col-md-6 col-6 footer-box">
             <div class="txt-internal mb-20">
-                <?= $datapopular["title"] ?>
+                <?= isset($datapopular["title"]) ? $datapopular["title"] : '' ?>
                 <?php
-				if ($admin == 1) { ?>
-                <div class=" col-12 text-end edit-content mt-1">
-                    <a class="btn btn-warning bt-line"
-                        href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $datapopular['contentId']]) ?>"
-                        target="_blank">Edit</a>
-                </div>
+                if ($admin == 1) { ?>
+                    <div class=" col-12 text-end edit-content mt-1">
+                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $datapopular['contentId']]) ?>" target="_blank">Edit</a>
+                    </div>
                 <?php
-				}
-				?>
+                }
+                ?>
             </div>
             <div class="country-footer">
                 <?php
-				if (isset($datapopular["detailpop"]) && count($datapopular["detailpop"]) > 0) {
-					$i = 0;
-					foreach ($datapopular["detailpop"] as $pop) :
-				?>
-                <p><a href="<?= $pop['url'] ?>" class="no-underline"><?= $pop['title'] ?></a></p>
+                if (isset($datapopular["detailpop"]) && count($datapopular["detailpop"]) > 0) {
+                    $i = 0;
+                    foreach ($datapopular["detailpop"] as $pop) :
+                ?>
+                        <p><a href="<?= $pop['url'] ?>" class="no-underline"><?= $pop['title'] ?></a></p>
                 <?php
-						$i++;
-					endforeach;
-				}
-				?>
+                        $i++;
+                    endforeach;
+                }
+                ?>
             </div>
             <?php
-			if ($admin == 1) { ?>
-            <div class=" col-12 text-end edit-content mt-1">
-                <a class="btn btn-warning bt-line"
-                    href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $datapopular['contentId']]) ?>"
-                    target="_blank">Edit</a>
-            </div>
+            if ($admin == 1) { ?>
+                <div class=" col-12 text-end edit-content mt-1">
+                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $datapopular['contentId']]) ?>" target="_blank">Edit</a>
+                </div>
             <?php
-			}
-			?>
+            }
+            ?>
         </div>
         <div class="col-lg-3 col-md-6 col-6 footer-bottom">
             <a href="#"><i class="fa fa-facebook-square square-facebook" aria-hidden="true"></i></a>
@@ -158,8 +147,7 @@ use common\models\ModelMaster;
             <div class="col-lg-10 col-md-6 col-12" style="margin-top: 20px;">
                 <div class="input-group flex-nowrap">
                     <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
-                    <input type="text" class="form-control input-your-email" placeholder="Your Email address"
-                        aria-label="Your Email address with two button addons">
+                    <input type="text" class="form-control input-your-email" placeholder="Your Email address" aria-label="Your Email address with two button addons">
                     <button class="btn btn-primary input-your-email" type="button">Notify Me</button>
                 </div>
             </div>
@@ -171,8 +159,7 @@ use common\models\ModelMaster;
     <div class="row">
         <div class="col-lg-2 col-2 text-center">
             <div class="btn btn-group" role="group">
-                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
-                    data-bs-toggle="dropdown" aria-expanded="false">
+                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa fa-globe"></i> GLOBAL
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">

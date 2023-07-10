@@ -15,9 +15,11 @@ use common\models\ModelMaster;
                     <?= isset($dataBranch["title"]) ? $dataBranch["title"] : '' ?>
                     <?php
                     if ($admin == 1) { ?>
-                        <div class=" col-12 text-end edit-content mt-1">
-                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $dataBranch['contentId']]) ?>" target="_blank">Edit</a>
-                        </div>
+                    <div class=" col-12 text-end edit-content mt-1">
+                        <a class="btn btn-warning bt-line"
+                            href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $dataBranch['contentId']]) ?>"
+                            target="_blank">Edit</a>
+                    </div>
                     <?php
                     }
                     ?>
@@ -30,8 +32,8 @@ use common\models\ModelMaster;
                             foreach ($dataBranch["detail"] as $bl) :
                                 if ($i < 13) {
                         ?>
-                                    <p><a href="<?= Yii::$app->homeUrl . $bl['url'] ?>" class="no-underline"><?= $bl['title'] ?></a>
-                                    </p>
+                        <p><a href="<?= Yii::$app->homeUrl . $bl['url'] ?>" class="no-underline"><?= $bl['title'] ?></a>
+                        </p>
                         <?php
                                 }
                                 $i++;
@@ -47,7 +49,7 @@ use common\models\ModelMaster;
                         foreach ($dataBranch["detail"] as $br) :
                             if ($i > 12) {
                     ?>
-                                <p><a href="<?= Yii::$app->homeUrl . $br['url'] ?>" class="no-underline"><?= $br['title'] ?></a></p>
+                    <p><a href="<?= Yii::$app->homeUrl . $br['url'] ?>" class="no-underline"><?= $br['title'] ?></a></p>
                     <?php
                             }
                             $i++;
@@ -58,9 +60,11 @@ use common\models\ModelMaster;
             </div>
             <?php
             if ($admin == 1) { ?>
-                <div class=" col-12 text-end edit-content mt-1">
-                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $dataBranch['contentId']]) ?>" target="_blank">Edit</a>
-                </div>
+            <div class=" col-12 text-end edit-content mt-1">
+                <a class="btn btn-warning bt-line"
+                    href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $dataBranch['contentId']]) ?>"
+                    target="_blank">Edit</a>
+            </div>
             <?php
             }
             ?>
@@ -71,9 +75,11 @@ use common\models\ModelMaster;
                 <?= isset($dataexplore["title"]) ? $dataexplore["title"] : '' ?>
                 <?php
                 if ($admin == 1) { ?>
-                    <div class=" col-12 text-end edit-content mt-1">
-                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $dataexplore['contentId']]) ?>" target="_blank">Edit</a>
-                    </div>
+                <div class=" col-12 text-end edit-content mt-1">
+                    <a class="btn btn-warning bt-line"
+                        href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $dataexplore['contentId']]) ?>"
+                        target="_blank">Edit</a>
+                </div>
                 <?php
                 }
                 ?>
@@ -84,7 +90,7 @@ use common\models\ModelMaster;
                     $i = 0;
                     foreach ($dataexplore["detailex"] as $ex) :
                 ?>
-                        <p><a href="<?= $ex['url'] ?>" class="no-underline"><?= $ex['title'] ?></a></p>
+                <p><a href="<?= Yii::$app->homeUrl .$ex['url'] ?>" class="no-underline"><?= $ex['title'] ?></a></p>
                 <?php
 
                         $i++;
@@ -94,9 +100,11 @@ use common\models\ModelMaster;
             </div>
             <?php
             if ($admin == 1) { ?>
-                <div class=" col-12 text-end edit-content mt-1">
-                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $dataexplore['contentId']]) ?>" target="_blank">Edit</a>
-                </div>
+            <div class=" col-12 text-end edit-content mt-1">
+                <a class="btn btn-warning bt-line"
+                    href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $dataexplore['contentId']]) ?>"
+                    target="_blank">Edit</a>
+            </div>
             <?php
             }
             ?>
@@ -106,9 +114,11 @@ use common\models\ModelMaster;
                 <?= isset($datapopular["title"]) ? $datapopular["title"] : '' ?>
                 <?php
                 if ($admin == 1) { ?>
-                    <div class=" col-12 text-end edit-content mt-1">
-                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $datapopular['contentId']]) ?>" target="_blank">Edit</a>
-                    </div>
+                <div class=" col-12 text-end edit-content mt-1">
+                    <a class="btn btn-warning bt-line"
+                        href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $datapopular['contentId']]) ?>"
+                        target="_blank">Edit</a>
+                </div>
                 <?php
                 }
                 ?>
@@ -119,7 +129,7 @@ use common\models\ModelMaster;
                     $i = 0;
                     foreach ($datapopular["detailpop"] as $pop) :
                 ?>
-                        <p><a href="<?= $pop['url'] ?>" class="no-underline"><?= $pop['title'] ?></a></p>
+                <p><a href="<?= Yii::$app->homeUrl .$pop['url'] ?>" class="no-underline"><?= $pop['title'] ?></a></p>
                 <?php
                         $i++;
                     endforeach;
@@ -128,9 +138,11 @@ use common\models\ModelMaster;
             </div>
             <?php
             if ($admin == 1) { ?>
-                <div class=" col-12 text-end edit-content mt-1">
-                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $datapopular['contentId']]) ?>" target="_blank">Edit</a>
-                </div>
+            <div class=" col-12 text-end edit-content mt-1">
+                <a class="btn btn-warning bt-line"
+                    href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $datapopular['contentId']]) ?>"
+                    target="_blank">Edit</a>
+            </div>
             <?php
             }
             ?>
@@ -147,7 +159,8 @@ use common\models\ModelMaster;
             <div class="col-lg-10 col-md-6 col-12" style="margin-top: 20px;">
                 <div class="input-group flex-nowrap">
                     <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
-                    <input type="text" class="form-control input-your-email" placeholder="Your Email address" aria-label="Your Email address with two button addons">
+                    <input type="text" class="form-control input-your-email" placeholder="Your Email address"
+                        aria-label="Your Email address with two button addons">
                     <button class="btn btn-primary input-your-email" type="button">Notify Me</button>
                 </div>
             </div>
@@ -159,7 +172,8 @@ use common\models\ModelMaster;
     <div class="row">
         <div class="col-lg-2 col-2 text-center">
             <div class="btn btn-group" role="group">
-                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa fa-globe"></i> GLOBAL
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">

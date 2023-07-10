@@ -22,7 +22,8 @@ use common\models\ModelMaster;
     <div class="col-lg-5 col-md-6 col-10  mt-40">
         <div class="input-group flex-nowrap">
             <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
-            <input type="text" class="form-control input-your-email" placeholder="Your Email address" aria-label="Your Email address with two button addons">
+            <input type="text" class="form-control input-your-email" placeholder="Your Email address"
+                aria-label="Your Email address with two button addons">
             <button class="btn btn-primary input-your-email" type="button">Notify Me</button>
         </div>
     </div>
@@ -36,9 +37,11 @@ use common\models\ModelMaster;
                     <?= isset($datamore["title"]) ? $datamore["title"] : '' ?>
                     <?php
                     if ($canEdit == 1 && $userInThisBranch == 1) { ?>
-                        <div class=" col-12 text-end mt-1">
-                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $datamore['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
-                        </div>
+                    <div class=" col-12 text-end mt-1">
+                        <a class="btn btn-warning bt-line"
+                            href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $datamore['contentBranchId']]) ?>"
+                            target="_blank">Edit(<?= $branchName ?>)</a>
+                    </div>
                     <?php
                     }
                     ?>
@@ -49,7 +52,7 @@ use common\models\ModelMaster;
                         $i = 0;
                         foreach ($datamore["detailmore"] as $dm) :
                     ?>
-                            <p><a href="<?= $dm['url'] ?>" class="no-underline"><?= $dm['title'] ?></a></p>
+                    <p><a href="<?= Yii::$app->homeUrl .$dm['url'] ?>" class="no-underline"><?= $dm['title'] ?></a></p>
                     <?php
 
                             $i++;
@@ -58,9 +61,11 @@ use common\models\ModelMaster;
                     ?>
                     <?php
                     if ($canEdit == 1 && $userInThisBranch == 1) { ?>
-                        <div class=" col-12 text-end mt-1">
-                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $datamore['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
-                        </div>
+                    <div class=" col-12 text-end mt-1">
+                        <a class="btn btn-warning bt-line"
+                            href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $datamore['contentBranchId']]) ?>"
+                            target="_blank">Edit(<?= $branchName ?>)</a>
+                    </div>
                     <?php
                     }
                     ?>
@@ -72,9 +77,11 @@ use common\models\ModelMaster;
                 <?= isset($dataexplorebranch["title"]) ? $dataexplorebranch["title"] : '' ?>
                 <?php
                 if ($canEdit == 1 && $userInThisBranch == 1) { ?>
-                    <div class=" col-12 text-end mt-1">
-                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $dataexplorebranch['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
-                    </div>
+                <div class=" col-12 text-end mt-1">
+                    <a class="btn btn-warning bt-line"
+                        href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $dataexplorebranch['contentBranchId']]) ?>"
+                        target="_blank">Edit(<?= $branchName ?>)</a>
+                </div>
                 <?php
                 }
                 ?>
@@ -85,7 +92,7 @@ use common\models\ModelMaster;
                     $i = 0;
                     foreach ($dataexplorebranch["detailexp"] as $daex) :
                 ?>
-                        <p><a href="<?= $daex['url'] ?>" class="no-underline"><?= $daex['title'] ?></a></p>
+                <p><a href="<?=Yii::$app->homeUrl . $daex['url'] ?>" class="no-underline"><?= $daex['title'] ?></a></p>
                 <?php
 
                         $i++;
@@ -94,9 +101,11 @@ use common\models\ModelMaster;
                 ?>
                 <?php
                 if ($canEdit == 1 && $userInThisBranch == 1) { ?>
-                    <div class=" col-12 text-end mt-1">
-                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $dataexplorebranch['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
-                    </div>
+                <div class=" col-12 text-end mt-1">
+                    <a class="btn btn-warning bt-line"
+                        href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $dataexplorebranch['contentBranchId']]) ?>"
+                        target="_blank">Edit(<?= $branchName ?>)</a>
+                </div>
                 <?php
                 }
                 ?>
@@ -107,9 +116,11 @@ use common\models\ModelMaster;
                 <?= isset($datapopu["title"]) ? $datapopu["title"] : '' ?>
                 <?php
                 if ($canEdit == 1 && $userInThisBranch == 1) { ?>
-                    <div class=" col-12 text-end mt-1">
-                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $datapopu['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
-                    </div>
+                <div class=" col-12 text-end mt-1">
+                    <a class="btn btn-warning bt-line"
+                        href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $datapopu['contentBranchId']]) ?>"
+                        target="_blank">Edit(<?= $branchName ?>)</a>
+                </div>
                 <?php
                 }
                 ?>
@@ -120,7 +131,7 @@ use common\models\ModelMaster;
                     $i = 0;
                     foreach ($datapopu["detailpopu"] as $dapo) :
                 ?>
-                        <p><a href="<?= $dapo['url'] ?>" class="no-underline"><?= $dapo['title'] ?></a></p>
+                <p><a href="<?= Yii::$app->homeUrl .$dapo['url'] ?>" class="no-underline"><?= $dapo['title'] ?></a></p>
                 <?php
 
                         $i++;
@@ -129,9 +140,11 @@ use common\models\ModelMaster;
                 ?>
                 <?php
                 if ($canEdit == 1 && $userInThisBranch == 1) { ?>
-                    <div class=" col-12 text-end mt-1">
-                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $datapopu['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
-                    </div>
+                <div class=" col-12 text-end mt-1">
+                    <a class="btn btn-warning bt-line"
+                        href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $datapopu['contentBranchId']]) ?>"
+                        target="_blank">Edit(<?= $branchName ?>)</a>
+                </div>
                 <?php
                 }
                 ?>
@@ -143,9 +156,11 @@ use common\models\ModelMaster;
                     <?= isset($databranch["title"]) ? $databranch["title"] : '' ?>
                     <?php
                     if ($canEdit == 1 && $userInThisBranch == 1) { ?>
-                        <div class=" col-12 text-end mt-1">
-                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $databranch['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
-                        </div>
+                    <div class=" col-12 text-end mt-1">
+                        <a class="btn btn-warning bt-line"
+                            href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $databranch['contentBranchId']]) ?>"
+                            target="_blank">Edit(<?= $branchName ?>)</a>
+                    </div>
                     <?php
                     }
                     ?>
@@ -158,8 +173,8 @@ use common\models\ModelMaster;
                             foreach ($databranch["detailbranch"] as $db) :
                                 if ($i < 13) {
                         ?>
-                                    <p><a href="<?= Yii::$app->homeUrl . $db['url'] ?>" class="no-underline"><?= $db['title'] ?></a>
-                                    </p>
+                        <p><a href="<?= Yii::$app->homeUrl . $db['url'] ?>" class="no-underline"><?= $db['title'] ?></a>
+                        </p>
                         <?php
                                 }
                                 $i++;
@@ -175,7 +190,7 @@ use common\models\ModelMaster;
                         foreach ($databranch["detailbranch"] as $db) :
                             if ($i > 12) {
                     ?>
-                                <p><a href="<?= Yii::$app->homeUrl . $db['url'] ?>" class="no-underline"><?= $db['title'] ?></a></p>
+                    <p><a href="<?= Yii::$app->homeUrl . $db['url'] ?>" class="no-underline"><?= $db['title'] ?></a></p>
                     <?php
                             }
                             $i++;
@@ -186,9 +201,11 @@ use common\models\ModelMaster;
             </div>
             <?php
             if ($canEdit == 1 && $userInThisBranch == 1) { ?>
-                <div class=" col-12 text-end mt-1">
-                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $databranch['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
-                </div>
+            <div class=" col-12 text-end mt-1">
+                <a class="btn btn-warning bt-line"
+                    href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $databranch['contentBranchId']]) ?>"
+                    target="_blank">Edit(<?= $branchName ?>)</a>
+            </div>
             <?php
             }
             ?>
@@ -199,12 +216,16 @@ use common\models\ModelMaster;
                 Bangladesh</p>
             <p class="title-business-footer1">Business Hours</p>
 
-            <button class="btn btn-primary calendar-button1" type="button">SUN</button> <button class="btn btn-primary calendar-button1" type="button">MON</button>
-            <button class="btn btn-primary calendar-button1" type="button">TUE</button> <button class="btn btn-primary calendar-button1" type="button">WED</button>
-            <button class="btn btn-primary calendar-button1" type="button">THU</button> <button class="btn btn-outline-primary calendar-button1" type="button">FRI</button>
+            <button class="btn btn-primary calendar-button1" type="button">SUN</button> <button
+                class="btn btn-primary calendar-button1" type="button">MON</button>
+            <button class="btn btn-primary calendar-button1" type="button">TUE</button> <button
+                class="btn btn-primary calendar-button1" type="button">WED</button>
+            <button class="btn btn-primary calendar-button1" type="button">THU</button> <button
+                class="btn btn-outline-primary calendar-button1" type="button">FRI</button>
             <button class="btn btn-outline-primary calendar-button1" type="button">SAT</button>
             <h4>
-                <p class="mt-50 badge-table"><span class="badge bg-secondary">8:30 AM</span> <i class="fa fa-arrows-h" aria-hidden="true"></i> <span class="badge bg-secondary"> 5:30 PM</span></p>
+                <p class="mt-50 badge-table"><span class="badge bg-secondary">8:30 AM</span> <i class="fa fa-arrows-h"
+                        aria-hidden="true"></i> <span class="badge bg-secondary"> 5:30 PM</span></p>
             </h4>
             <div class="col-12 link-privacy">
                 <a href="<?= Yii::$app->homeUrl ?>site-country/privacy" class="none-line">
@@ -220,7 +241,8 @@ use common\models\ModelMaster;
     <div class="row">
         <div class="col-lg-2 col-2 footer-BD">
             <div class="btn btn-group" role="group">
-                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa fa-dot-circle-o" aria-hidden="true"></i> BD
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
@@ -231,7 +253,8 @@ use common\models\ModelMaster;
         </div>
         <div class="col-lg-2 col-2 footer-global">
             <div class="btn btn-group" role="group">
-                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa fa-globe"></i> GLOBAL
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">

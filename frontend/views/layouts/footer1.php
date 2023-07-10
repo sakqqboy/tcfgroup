@@ -36,7 +36,7 @@ use common\models\ModelMaster;
                 <div class="col-12 txt-internal mb-20">
                     <?= isset($datamore["title"]) ? $datamore["title"] : '' ?>
                     <?php
-                    if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($datamore['contentId'])) { ?>
                     <div class=" col-12 text-end mt-1">
                         <a class="btn btn-warning bt-line"
                             href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $datamore['contentBranchId']]) ?>"
@@ -52,7 +52,7 @@ use common\models\ModelMaster;
                         $i = 0;
                         foreach ($datamore["detailmore"] as $dm) :
                     ?>
-                    <p><a href="<?= Yii::$app->homeUrl .$dm['url'] ?>" class="no-underline"><?= $dm['title'] ?></a></p>
+                    <p><a href="<?= Yii::$app->homeUrl . $dm['url'] ?>" class="no-underline"><?= $dm['title'] ?></a></p>
                     <?php
 
                             $i++;
@@ -60,7 +60,7 @@ use common\models\ModelMaster;
                     }
                     ?>
                     <?php
-                    if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($datamore['contentId'])) { ?>
                     <div class=" col-12 text-end mt-1">
                         <a class="btn btn-warning bt-line"
                             href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $datamore['contentBranchId']]) ?>"
@@ -76,7 +76,7 @@ use common\models\ModelMaster;
             <div class="txt-internal mb-20">
                 <?= isset($dataexplorebranch["title"]) ? $dataexplorebranch["title"] : '' ?>
                 <?php
-                if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($dataexplorebranch['contentId'])) { ?>
                 <div class=" col-12 text-end mt-1">
                     <a class="btn btn-warning bt-line"
                         href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $dataexplorebranch['contentBranchId']]) ?>"
@@ -92,7 +92,7 @@ use common\models\ModelMaster;
                     $i = 0;
                     foreach ($dataexplorebranch["detailexp"] as $daex) :
                 ?>
-                <p><a href="<?=Yii::$app->homeUrl . $daex['url'] ?>" class="no-underline"><?= $daex['title'] ?></a></p>
+                <p><a href="<?= Yii::$app->homeUrl . $daex['url'] ?>" class="no-underline"><?= $daex['title'] ?></a></p>
                 <?php
 
                         $i++;
@@ -100,7 +100,7 @@ use common\models\ModelMaster;
                 }
                 ?>
                 <?php
-                if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($dataexplorebranch['contentId'])) { ?>
                 <div class=" col-12 text-end mt-1">
                     <a class="btn btn-warning bt-line"
                         href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $dataexplorebranch['contentBranchId']]) ?>"
@@ -115,7 +115,7 @@ use common\models\ModelMaster;
             <div class="txt-internal mb-20">
                 <?= isset($datapopu["title"]) ? $datapopu["title"] : '' ?>
                 <?php
-                if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($datapopu['contentId'])) { ?>
                 <div class=" col-12 text-end mt-1">
                     <a class="btn btn-warning bt-line"
                         href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $datapopu['contentBranchId']]) ?>"
@@ -131,7 +131,7 @@ use common\models\ModelMaster;
                     $i = 0;
                     foreach ($datapopu["detailpopu"] as $dapo) :
                 ?>
-                <p><a href="<?= Yii::$app->homeUrl .$dapo['url'] ?>" class="no-underline"><?= $dapo['title'] ?></a></p>
+                <p><a href="<?= Yii::$app->homeUrl . $dapo['url'] ?>" class="no-underline"><?= $dapo['title'] ?></a></p>
                 <?php
 
                         $i++;
@@ -139,7 +139,7 @@ use common\models\ModelMaster;
                 }
                 ?>
                 <?php
-                if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($datapopu['contentId'])) { ?>
                 <div class=" col-12 text-end mt-1">
                     <a class="btn btn-warning bt-line"
                         href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $datapopu['contentBranchId']]) ?>"
@@ -155,7 +155,7 @@ use common\models\ModelMaster;
                 <div class="txt-internal mb-20">
                     <?= isset($databranch["title"]) ? $databranch["title"] : '' ?>
                     <?php
-                    if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($databranch['contentId'])) { ?>
                     <div class=" col-12 text-end mt-1">
                         <a class="btn btn-warning bt-line"
                             href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $databranch['contentBranchId']]) ?>"
@@ -200,7 +200,7 @@ use common\models\ModelMaster;
                 </div>
             </div>
             <?php
-            if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+            if ($canEdit == 1 && $userInThisBranch == 1 && isset($databranch['contentId'])) { ?>
             <div class=" col-12 text-end mt-1">
                 <a class="btn btn-warning bt-line"
                     href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $databranch['contentBranchId']]) ?>"

@@ -14,7 +14,7 @@ use common\models\ModelMaster;
                 <div class="txt-internal mb-20">
                     <?= isset($dataBranch["title"]) ? $dataBranch["title"] : '' ?>
                     <?php
-                    if ($admin == 1) { ?>
+                    if ($admin == 1 && isset($dataBranch['contentId'])) { ?>
                     <div class=" col-12 text-end edit-content mt-1">
                         <a class="btn btn-warning bt-line"
                             href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $dataBranch['contentId']]) ?>"
@@ -59,7 +59,7 @@ use common\models\ModelMaster;
                 </div>
             </div>
             <?php
-            if ($admin == 1) { ?>
+            if ($admin == 1 && isset($dataBranch['contentId'])) { ?>
             <div class=" col-12 text-end edit-content mt-1">
                 <a class="btn btn-warning bt-line"
                     href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $dataBranch['contentId']]) ?>"
@@ -74,7 +74,7 @@ use common\models\ModelMaster;
             <div class="txt-internal mb-20">
                 <?= isset($dataexplore["title"]) ? $dataexplore["title"] : '' ?>
                 <?php
-                if ($admin == 1) { ?>
+                if ($admin == 1 && isset($dataexplore['contentId'])) { ?>
                 <div class=" col-12 text-end edit-content mt-1">
                     <a class="btn btn-warning bt-line"
                         href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $dataexplore['contentId']]) ?>"
@@ -90,7 +90,7 @@ use common\models\ModelMaster;
                     $i = 0;
                     foreach ($dataexplore["detailex"] as $ex) :
                 ?>
-                <p><a href="<?= Yii::$app->homeUrl .$ex['url'] ?>" class="no-underline"><?= $ex['title'] ?></a></p>
+                <p><a href="<?= Yii::$app->homeUrl . $ex['url'] ?>" class="no-underline"><?= $ex['title'] ?></a></p>
                 <?php
 
                         $i++;
@@ -99,7 +99,7 @@ use common\models\ModelMaster;
                 ?>
             </div>
             <?php
-            if ($admin == 1) { ?>
+            if ($admin == 1 && isset($dataexplore['contentId'])) { ?>
             <div class=" col-12 text-end edit-content mt-1">
                 <a class="btn btn-warning bt-line"
                     href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $dataexplore['contentId']]) ?>"
@@ -113,7 +113,7 @@ use common\models\ModelMaster;
             <div class="txt-internal mb-20">
                 <?= isset($datapopular["title"]) ? $datapopular["title"] : '' ?>
                 <?php
-                if ($admin == 1) { ?>
+                if ($admin == 1 && isset($datapopular['contentId'])) { ?>
                 <div class=" col-12 text-end edit-content mt-1">
                     <a class="btn btn-warning bt-line"
                         href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $datapopular['contentId']]) ?>"
@@ -129,7 +129,7 @@ use common\models\ModelMaster;
                     $i = 0;
                     foreach ($datapopular["detailpop"] as $pop) :
                 ?>
-                <p><a href="<?= Yii::$app->homeUrl .$pop['url'] ?>" class="no-underline"><?= $pop['title'] ?></a></p>
+                <p><a href="<?= Yii::$app->homeUrl . $pop['url'] ?>" class="no-underline"><?= $pop['title'] ?></a></p>
                 <?php
                         $i++;
                     endforeach;
@@ -137,7 +137,7 @@ use common\models\ModelMaster;
                 ?>
             </div>
             <?php
-            if ($admin == 1) { ?>
+            if ($admin == 1 && isset($datapopular['contentId'])) { ?>
             <div class=" col-12 text-end edit-content mt-1">
                 <a class="btn btn-warning bt-line"
                     href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $datapopular['contentId']]) ?>"

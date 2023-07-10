@@ -18,26 +18,22 @@ $this->title = 'contact';
             <div class="col-12">
                 <img src="<?= Path::backendUrl() ?>image/img/Resources.png" class="img-Resources">
             </div>
-            <div>
-            <?php
-                if ($canEdit == 1 && $userInThisBranch == 1) {
-            ?>
-                    <div class=" col-12 text-end mt-3">
-                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $resource['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
-                    </div>
-            <?php
-                }
-            ?>
-            </div>
             <div class="col-12 page-resource">
                 <?= $br['title'] ?>
             </div>
             <div class="col-12 detail-resource">
                 <?= $br['detail'] ?>
             </div>
-    <?php
+        <?php
             $i++;
         endforeach;
+    }
+    if ($canEdit == 1 && $userInThisBranch == 1 && isset($resource) && !empty($resource)) {
+        ?>
+        <div class=" col-12 text-end mt-3">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $resource['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+        </div>
+    <?php
     }
     ?>
 
@@ -111,13 +107,13 @@ $this->title = 'contact';
 </div>
 <div>
     <?php
-        if ($canEdit == 1 && $userInThisBranch == 1) {
+    if ($canEdit == 1 && $userInThisBranch == 1 && isset($tio) && !empty($tio)) {
     ?>
-            <div class=" col-12 text-end mt-3">
-                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $tio['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
-            </div>
+        <div class=" col-12 text-end mt-3">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $tio['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+        </div>
     <?php
-        }
+    }
     ?>
 </div>
 
@@ -142,7 +138,7 @@ $this->title = 'contact';
             ?>
         </tr>
     </thead>
-            
+
     <?php
     if (isset($tabledetail) && count($tabledetail) > 0) {
         $i = 0;
@@ -170,22 +166,22 @@ $this->title = 'contact';
 </table>
 <div class="col-12 text-end mt-3">
     <?php
-        if ($canEdit == 1 && $userInThisBranch == 1) {
+    if ($canEdit == 1 && $userInThisBranch == 1 && isset($des) && !empty($des)) {
     ?>
-            <span class=" col-12 text-end">
-                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $des['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?= $branchName ?>)</a>
-            </span>
+        <span class=" col-12 text-end">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $des['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?= $branchName ?>)</a>
+        </span>
     <?php
-        }
+    }
     ?>
     <?php
-        if ($canEdit == 1 && $userInThisBranch == 1) {
+    if ($canEdit == 1 && $userInThisBranch == 1 && isset($blede) && !empty($blede)) {
     ?>
-            <span class=" col-12 text-end">
-                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $blede['contentBranchId']]) ?>" target="_blank">Edit (D)(<?= $branchName ?>)</a>
-            </span>
+        <span class=" col-12 text-end">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $blede['contentBranchId']]) ?>" target="_blank">Edit (D)(<?= $branchName ?>)</a>
+        </span>
     <?php
-        }
+    }
     ?>
 </div>
 
@@ -218,24 +214,24 @@ $this->title = 'contact';
                                 <label for="formGroupExampleInput" class="form-label label-thin" id="countryid">
                                     &nbsp;&nbsp;&nbsp;Select Country</label>
                                 <select class="form-select mt-10" aria-label="Default select example">
-                                <?php
+                                    <?php
                                     if (isset($country) && count($country) > 0) {
                                         foreach ($country as $x) :
-                                ?>
+                                    ?>
                                             <option value="<?= $x['countryId'] ?>"><?= $x['countryName'] ?></option>
-                                <?php
+                                    <?php
                                         endforeach;
                                     }
-                                ?>
-                                <?php
+                                    ?>
+                                    <?php
                                     if (isset($dropdown) && count($dropdown) > 0) {
                                         foreach ($dropdown as $a) :
-                                ?>
+                                    ?>
                                             <option value="<?= $a["countryId"] ?>"><?= $a["countryName"] ?></option>
-                                <?php
+                                    <?php
                                         endforeach;
                                     }
-                                ?>
+                                    ?>
                                 </select>
                             </div>
                             <div class="col-12">
@@ -342,13 +338,13 @@ $this->title = 'contact';
         </div>
         <div>
             <?php
-                if ($canEdit == 1 && $userInThisBranch == 1) { 
+            if ($canEdit == 1 && $userInThisBranch == 1 && isset($legalDetail) && !empty($legalDetail)) {
             ?>
-                    <div class=" col-12 text-end">
-                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $legalDetail['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
-                    </div>
+                <div class=" col-12 text-end">
+                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $legalDetail['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+                </div>
             <?php
-                }
+            }
             ?>
         </div>
     </div>

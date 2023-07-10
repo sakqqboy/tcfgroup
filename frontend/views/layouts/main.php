@@ -6,6 +6,12 @@
 use common\widgets\Alert;
 use frontend\assets\AppAsset;
 use frontend\models\tokyoconsulting\Branch;
+use frontend\models\tokyoconsulting\Content;
+use frontend\models\tokyoconsulting\ContentBranch;
+use frontend\models\tokyoconsulting\ContentDetail;
+use frontend\models\tokyoconsulting\Country;
+use frontend\models\tokyoconsulting\Member;
+use frontend\models\tokyoconsulting\MemberHasType;
 use rmrevin\yii\fontawesome\component\Icon;
 use yii\bootstrap5\Breadcrumbs;
 use yii\bootstrap5\Html;
@@ -89,11 +95,99 @@ AppAsset::register($this);
 
     <div class="">
         <?php
-        if (Yii::$app->controller->id == 'site-country') {
 
-            echo $this->render("@frontend/views/layouts/footer1");
+        //Home
+        $dataBranch = Content::footerBranch();
+        $dataexplore = Content::footerExplore();
+        $datapopular = Content::footerPopular();
+        $datalofoot = Content::footerLogo();
+
+        //Branch
+        $datamore = ContentBranch::footerMoreAbout();
+        $dataexplorebranch = ContentBranch::footerExploreTcf();
+        $datapopu = ContentBranch::footerPopular();
+        $databranch = ContentBranch::footerCountryBranch();
+
+
+        if (Yii::$app->controller->id == 'site-country') {
+            $canEdit = 0;
+            if (Yii::$app->user->id) {
+                $memberId = Yii::$app->user->id;
+                $membertype = MemberHasType::find()
+                    ->select("mt.memberTypeName")
+                    ->JOIN("LEFT JOIN", "member_type mt", "member_has_type.memberTypeId = mt.memberTypeId")
+                    //->leftJoin('member_type', 'member_type.memberTypeId = member_has_type.memberTypeId')
+                    ->where([
+                        "member_has_type.memberId" => $memberId,
+                        "memberTypeName" => ["Administrator", "Creater", "Approver", "Frontend", "Backend"]
+                    ])
+                    ->asArray()
+                    ->all();
+
+                if (isset($membertype) && count($membertype) > 0) {
+                    $canEdit = 1;
+                }
+                $member = Member::find()
+                    ->select('b.branchId')
+                    ->JOIN("LEFT JOIN", "branch b", "b.branchId=member.branchId")
+                    ->where(["member.memberId" => $memberId, "b.branchName" => $branchName])
+                    ->one();
+                if (isset($member) && !empty($member)) {
+                    $userInThisBranch = 1;
+                }
+                $memberTypeAdmin = MemberHasType::find()
+                    ->select("mt.memberTypeName")
+                    ->JOIN("LEFT JOIN", "member_type mt", "member_has_type.memberTypeId = mt.memberTypeId")
+                    //->leftJoin('member_type', 'member_type.memberTypeId = member_has_type.memberTypeId')
+                    ->where([
+                        "member_has_type.memberId" => $memberId,
+                        "memberTypeName" => "Administrator"
+                    ])
+                    ->asArray()
+                    ->one();
+
+                if (isset($memberTypeAdmin) && !empty($memberTypeAdmin)) {
+
+                    $userInThisBranch = 1;
+                }
+            }
+            echo $this->render("@frontend/views/layouts/footer1", [
+                "canEdit" => $canEdit,
+                "userInThisBranch" => $userInThisBranch,
+                "branchName" => $branchName,
+                //data//
+                "datamore" => $datamore,
+                "dataexplorebranch" => $dataexplorebranch,
+                "datapopu" => $datapopu,
+                "databranch" => $databranch,
+
+            ]);
         } else {
-            echo $this->render("@frontend/views/layouts/footer");
+            $admin = 0;
+            if (Yii::$app->user->id) {
+                $memberTypeAdmin = MemberHasType::find()
+                    ->select("mt.memberTypeName")
+                    ->JOIN("LEFT JOIN", "member_type mt", "member_has_type.memberTypeId = mt.memberTypeId")
+                    //->leftJoin('member_type', 'member_type.memberTypeId = member_has_type.memberTypeId')
+                    ->where([
+                        "member_has_type.memberId" => Yii::$app->user->id,
+                        "memberTypeName" => "Administrator"
+                    ])
+                    ->asArray()
+                    ->one();
+            }
+
+            if (isset($memberTypeAdmin) && !empty($memberTypeAdmin)) {
+
+                $admin = 1;
+            }
+            echo $this->render("@frontend/views/layouts/footer", [
+                "dataBranch" => $dataBranch,
+                "dataexplore" => $dataexplore,
+                "datapopular" => $datapopular,
+                "datalofoot" => $datalofoot,
+                "admin" => $admin,
+            ]);
         }
         if (class_exists('yii\debug\Module')) {
             $this->off(\yii\web\View::EVENT_END_BODY, [\yii\debug\Module::getInstance(), 'renderToolbar']);

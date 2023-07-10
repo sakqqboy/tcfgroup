@@ -31,4 +31,7 @@ class Content extends \common\models\tokyoconsulting\master\ContentMaster{
     {
         return array_merge(parent::attributeLabels(), []);
     }
+    public static function footerBranch(){
+
+    }
 }

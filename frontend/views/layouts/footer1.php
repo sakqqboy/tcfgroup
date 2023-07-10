@@ -1,6 +1,8 @@
 <?php
 
 use common\helpers\Path;
+use common\models\ModelMaster;
+
 ?>
 <div class="col-12 footer1-country">
     <div class="col-12 pr12">
@@ -20,7 +22,8 @@ use common\helpers\Path;
     <div class="col-lg-5 col-md-6 col-10  mt-40">
         <div class="input-group flex-nowrap">
             <span class="input-group-text" id="addon-wrapping"><i class="fa fa-envelope"></i></span>
-            <input type="text" class="form-control input-your-email" placeholder="Your Email address" aria-label="Your Email address with two button addons">
+            <input type="text" class="form-control input-your-email" placeholder="Your Email address"
+                aria-label="Your Email address with two button addons">
             <button class="btn btn-primary input-your-email" type="button">Notify Me</button>
         </div>
     </div>
@@ -31,81 +34,180 @@ use common\helpers\Path;
         <div class="col-lg-2 col-md-6 col-6 footer-box">
             <div class="row">
                 <div class="col-12 txt-internal mb-20">
-                    More About us
+                    <?= $datamore["title"] ?>
+                    <?php
+                    if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                    <div class=" col-12 text-end mt-1">
+                        <a class="btn btn-warning bt-line"
+                            href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $datamore['contentBranchId']]) ?>"
+                            target="_blank">Edit(<?= $branchName ?>)</a>
+                    </div>
+                    <?php
+                    }
+                    ?>
                 </div>
                 <div class="country-footer1">
-                    <p><a href="#About us" class="no-underline">About us</a></p>
-                    <p><a href="#Contact us" class="no-underline">Contact us</a></p>
-                    <p><a href="#Work life at TCF" class="no-underline">Work life at TCF</a></p>
-                    <p><a href="#Our Work Philosophy" class="no-underline">Our Work Philosophy</a></p>
+                    <?php
+                    if (isset($datamore["detailmore"]) && count($datamore["detailmore"]) > 0) {
+                        $i = 0;
+                        foreach ($datamore["detailmore"] as $dm) :
+                    ?>
+                    <p><a href="<?= $dm['url'] ?>" class="no-underline"><?= $dm['title'] ?></a></p>
+                    <?php
+
+                            $i++;
+                        endforeach;
+                    }
+                    ?>
+                    <?php
+                    if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                    <div class=" col-12 text-end mt-1">
+                        <a class="btn btn-warning bt-line"
+                            href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $datamore['contentBranchId']]) ?>"
+                            target="_blank">Edit(<?= $branchName ?>)</a>
+                    </div>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>
         <div class="col-lg-2 col-md-6 col-6 footer-box">
             <div class="txt-internal mb-20">
-                Explore TCF
+                <?= $dataexplorebranch["title"] ?>
+                <?php
+                if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                <div class=" col-12 text-end mt-1">
+                    <a class="btn btn-warning bt-line"
+                        href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $dataexplorebranch['contentBranchId']]) ?>"
+                        target="_blank">Edit(<?= $branchName ?>)</a>
+                </div>
+                <?php
+                }
+                ?>
             </div>
             <div class="country-footer1">
-                <p><a href="#Home" class="no-underline"> Home</a></p>
-                <p><a href="#Webinar" class="no-underline">Webinar</a></p>
-                <p><a href="#Monthly Newsletter" class="no-underline">Monthly Newsletter</a></p>
-                <p><a href="#Weekly Newsletter" class="no-underline">Weekly Newsletter</a></p>
-                <p><a href="#Services" class="no-underline">Services</a></p>
-                <p><a href="#Resources" class="no-underline">Resources</a></p>
-                </a>
+                <?php
+                if (isset($dataexplorebranch["detailexp"]) && count($dataexplorebranch["detailexp"]) > 0) {
+                    $i = 0;
+                    foreach ($dataexplorebranch["detailexp"] as $daex) :
+                ?>
+                <p><a href="<?= $daex['url'] ?>" class="no-underline"><?= $daex['title'] ?></a></p>
+                <?php
+
+                        $i++;
+                    endforeach;
+                }
+                ?>
+                <?php
+                if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                <div class=" col-12 text-end mt-1">
+                    <a class="btn btn-warning bt-line"
+                        href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $dataexplorebranch['contentBranchId']]) ?>"
+                        target="_blank">Edit(<?= $branchName ?>)</a>
+                </div>
+                <?php
+                }
+                ?>
             </div>
         </div>
         <div class="col-lg-2 col-md-6 col-6 footer-box">
             <div class="txt-internal mb-20">
-                Popalar links
+                <?= $datapopu["title"] ?>
+                <?php
+                if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                <div class=" col-12 text-end mt-1">
+                    <a class="btn btn-warning bt-line"
+                        href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $datapopu['contentBranchId']]) ?>"
+                        target="_blank">Edit(<?= $branchName ?>)</a>
+                </div>
+                <?php
+                }
+                ?>
             </div>
             <div class="country-footer1">
-                <p><a href="#for Webinar" class="no-underline">Register for Webinar</a></p>
-                <p><a href="#Accounts & Taxatation" class="no-underline">Accounts & Taxatation</a></p>
-                <p><a href="#Jinji-no-Butai" class="no-underline">Jinji-no-Butai</a></p>
-                <p><a href="#Kuno Method" class="no-underline">Kuno Method</a></p>
-                <p><a href="#Human Matrix" class="no-underline">Human Matrix</a></p>
-                <p><a href="#Recorded Webinars" class="no-underline">Recorded Webinars</a></p>
+                <?php
+                if (isset($datapopu["detailpopu"]) && count($datapopu["detailpopu"]) > 0) {
+                    $i = 0;
+                    foreach ($datapopu["detailpopu"] as $dapo) :
+                ?>
+                <p><a href="<?= $dapo['url'] ?>" class="no-underline"><?= $dapo['title'] ?></a></p>
+                <?php
+
+                        $i++;
+                    endforeach;
+                }
+                ?>
+                <?php
+                if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                <div class=" col-12 text-end mt-1">
+                    <a class="btn btn-warning bt-line"
+                        href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $datapopu['contentBranchId']]) ?>"
+                        target="_blank">Edit(<?= $branchName ?>)</a>
+                </div>
+                <?php
+                }
+                ?>
             </div>
         </div>
         <div class="col-lg-2 col-md-6 col-6 footer-box">
             <div class="row">
                 <div class="txt-internal mb-20">
-                    International Branches
+                    <?= $databranch["title"] ?>
+                    <?php
+                    if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                    <div class=" col-12 text-end mt-1">
+                        <a class="btn btn-warning bt-line"
+                            href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $databranch['contentBranchId']]) ?>"
+                            target="_blank">Edit(<?= $branchName ?>)</a>
+                    </div>
+                    <?php
+                    }
+                    ?>
                 </div>
                 <div class="col-6 text-start" style="margin-left: -10px;">
                     <div class="country-footer">
-                        <p><a href="#Bangladesh" class="no-underline">Bangladesh</a></p>
-                        <p><a href="#Brazil" class="no-underline">Brazil</a></p>
-                        <p><a href="#Cambodia" class="no-underline">Cambodia</a></p>
-                        <p><a href="#Morocco" class="no-underline">Morocco</a></p>
-                        <p><a href="#China" class="no-underline">China</a></p>
-                        <p><a href="#Columbia" class="no-underline">Columbia</a></p>
-                        <p><a href="#Dubai (UAE)" class="no-underline">Dubai(UAE)</a></p>
-                        <p><a href="#Malaysia" class="no-underline">Malaysia</a></p>
-                        <p><a href="#Hong Kong" class="no-underline">Hong Kong</a></p>
-                        <p><a href="#Indonesia" class="no-underline">Indonesia</a></p>
-                        <p><a href="#Japan" class="no-underline">Japan</a></p>
-                        <p><a href="#Laos" class="no-underline">Laos</a></p>
-                        <p><a href="#Kenya" class="no-underline">Kenya</a></p>
+                        <?php
+                        if (isset($databranch["detailbranch"]) && count($databranch["detailbranch"]) > 0) {
+                            $i = 0;
+                            foreach ($databranch["detailbranch"] as $db) :
+                                if ($i < 13) {
+                        ?>
+                        <p><a href="<?= $db['url'] ?>" class="no-underline"><?= $db['title'] ?></a></p>
+                        <?php
+                                }
+                                $i++;
+                            endforeach;
+                        }
+                        ?>
                     </div>
                 </div>
                 <div class="col-6 text-start country-footer">
-                    <p><a href="#India" class="no-underline">India</a></p>
-                    <p><a href="#Mexico" class="no-underline">Mexico</a></p>
-                    <p><a href="#Mongolia" class="no-underline">Mongolia</a></p>
-                    <p><a href="#Mayanma" class="no-underline">Mayanma</a></p>
-                    <p><a href="#Niggeria" class="no-underline">Niggeria</a></p>
-                    <p><a href="#Peru" class="no-underline">Peru</a></p>
-                    <p><a href="#Philippines" class="no-underline">Philippines</a></p>
-                    <p><a href="#Russia" class="no-underline">Russia</a></p>
-                    <p><a href="#South Africa" class="no-underline">South Africa</a></p>
-                    <p><a href="#Singapore" class="no-underline">Singapore</a></p>
-                    <p><a href="#Sir Lanka" class="no-underline">Sir Lanka</a></p>
-                    <p><a href="#Thailand" class="no-underline">Thailand</a></p>
-                    <p><a href="#Turkey" class="no-underline">Turkey</a></p>
+                    <?php
+                    if (isset($databranch["detailbranch"]) && count($databranch["detailbranch"]) > 0) {
+                        $i = 0;
+                        foreach ($databranch["detailbranch"] as $db) :
+                            if ($i > 12) {
+                    ?>
+                    <p><a href="<?= $db['url'] ?>" class="no-underline"><?= $db['title'] ?></a></p>
+                    <?php
+                            }
+                            $i++;
+                        endforeach;
+                    }
+                    ?>
                 </div>
             </div>
+            <?php
+            if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+            <div class=" col-12 text-end mt-1">
+                <a class="btn btn-warning bt-line"
+                    href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $databranch['contentBranchId']]) ?>"
+                    target="_blank">Edit(<?= $branchName ?>)</a>
+            </div>
+            <?php
+            }
+            ?>
         </div>
         <div class="col-lg-4 col-md-6 col-12 text-start box-logo-footer" style="margin-top: -120px;" id="button-update">
             <img src="<?= Path::backendUrl() ?>image/img/tcf-bangladesh.png" class="logo-footer">
@@ -113,12 +215,16 @@ use common\helpers\Path;
                 Bangladesh</p>
             <p class="title-business-footer1">Business Hours</p>
 
-            <button class="btn btn-primary calendar-button1" type="button">SUN</button> <button class="btn btn-primary calendar-button1" type="button">MON</button>
-            <button class="btn btn-primary calendar-button1" type="button">TUE</button> <button class="btn btn-primary calendar-button1" type="button">WED</button>
-            <button class="btn btn-primary calendar-button1" type="button">THU</button> <button class="btn btn-outline-primary calendar-button1" type="button">FRI</button>
+            <button class="btn btn-primary calendar-button1" type="button">SUN</button> <button
+                class="btn btn-primary calendar-button1" type="button">MON</button>
+            <button class="btn btn-primary calendar-button1" type="button">TUE</button> <button
+                class="btn btn-primary calendar-button1" type="button">WED</button>
+            <button class="btn btn-primary calendar-button1" type="button">THU</button> <button
+                class="btn btn-outline-primary calendar-button1" type="button">FRI</button>
             <button class="btn btn-outline-primary calendar-button1" type="button">SAT</button>
             <h4>
-                <p class="mt-50 badge-table"><span class="badge bg-secondary">8:30 AM</span> <i class="fa fa-arrows-h" aria-hidden="true"></i> <span class="badge bg-secondary"> 5:30 PM</span></p>
+                <p class="mt-50 badge-table"><span class="badge bg-secondary">8:30 AM</span> <i class="fa fa-arrows-h"
+                        aria-hidden="true"></i> <span class="badge bg-secondary"> 5:30 PM</span></p>
             </h4>
             <div class="col-12 link-privacy">
                 <a href="<?= Yii::$app->homeUrl ?>site-country/privacy" class="none-line">
@@ -134,7 +240,8 @@ use common\helpers\Path;
     <div class="row">
         <div class="col-lg-2 col-2 footer-BD">
             <div class="btn btn-group" role="group">
-                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa fa-dot-circle-o" aria-hidden="true"></i> BD
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
@@ -145,7 +252,8 @@ use common\helpers\Path;
         </div>
         <div class="col-lg-2 col-2 footer-global">
             <div class="btn btn-group" role="group">
-                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <button id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle"
+                    data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa fa-globe"></i> GLOBAL
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">

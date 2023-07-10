@@ -67,6 +67,7 @@ class Content extends \frontend\models\tokyoconsulting\master\ContentMaster
 
     public static function footerPopular()
     {
+        $datapopular = [];
         $popular = Content::find()->where(["contentName" => 'Popular'])->asArray()->one();
         if (isset($popular) && !empty($popular)) {
             $detailpop = ContentDetail::find()->where(["contentId" => $popular["contentId"]])->all();
@@ -82,6 +83,7 @@ class Content extends \frontend\models\tokyoconsulting\master\ContentMaster
 
     public static function footerLogo()
     {
+        $datalofoot = [];
         $logofooter = Content::find()->where(["contentName" => 'Logofooter'])->asArray()->one();
         if (isset($logofooter) && !empty($logofooter)) {
             $detaillogo = ContentDetail::find()->where(["contentId" => $logofooter["contentId"]])->one();

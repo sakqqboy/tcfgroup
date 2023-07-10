@@ -38,6 +38,7 @@ class ContentBranch extends \frontend\models\tokyoconsulting\master\ContentBranc
 
     public static function footerMoreAbout()
     {
+        $datamore = [];
         $footmore = ContentBranch::find()->where(["contentName" => 'Footermoreabout'])->asArray()->one();
         if (isset($footmore) && !empty($footmore)) {
             $detailmore = ContentBranchDetail::find()->where(["contentBranchId" => $footmore["contentBranchId"]])->all();
@@ -53,6 +54,7 @@ class ContentBranch extends \frontend\models\tokyoconsulting\master\ContentBranc
 
     public static function footerExploreTcf()
     {
+        $dataexplorebranch = [];
         $footexp = ContentBranch::find()->where(["contentName" => 'Footerexplore'])->asArray()->one();
         if (isset($footexp) && !empty($footexp)) {
             $detailexp = ContentBranchDetail::find()->where(["contentBranchId" => $footexp["contentBranchId"]])->all();
@@ -68,6 +70,7 @@ class ContentBranch extends \frontend\models\tokyoconsulting\master\ContentBranc
 
     public static function footerPopular()
     {
+        $datapopu = [];
         $footpopu = ContentBranch::find()->where(["contentName" => 'Footerpopular'])->asArray()->one();
         if (isset($footpopu) && !empty($footpopu)) {
             $detailpopu = ContentBranchDetail::find()->where(["contentBranchId" => $footpopu["contentBranchId"]])->all();
@@ -83,6 +86,7 @@ class ContentBranch extends \frontend\models\tokyoconsulting\master\ContentBranc
 
     public static function footerCountryBranch()
     {
+        $databranch = [];
         $footbranch = ContentBranch::find()->where(["contentName" => 'Footerbranch'])->asArray()->one();
         if (isset($footbranch) && !empty($footbranch)) {
             $detailbranch = ContentBranchDetail::find()->where(["contentBranchId" => $footbranch["contentBranchId"]])->all();

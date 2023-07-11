@@ -9,6 +9,7 @@ use backend\models\tokyoconsulting\ContentBranchDetail;
 use backend\models\tokyoconsulting\ContentDetail;
 use common\helpers\Path;
 use common\models\ModelMaster;
+use frontend\models\tokyoconsulting\ContentBranch as TokyoconsultingContentBranch;
 use Yii;
 use yii\db\Expression;
 use yii\web\Controller;
@@ -411,6 +412,7 @@ class DefaultController extends Controller
         }
         return json_encode($res);
     }
+
     public function actionContentBranchDetail($hash)
     {
         if (!Yii::$app->user->id) {
@@ -572,6 +574,7 @@ class DefaultController extends Controller
             return $this->redirect(Yii::$app->homeUrl . 'site/login');
         }
         return $this->redirect('content-branch-result/' . ModelMaster::encodeParams([
+            "bnt" => $_POST['bnt'],
             "branchId" => $_POST["branchId"],
         ]));
     }
@@ -583,11 +586,14 @@ class DefaultController extends Controller
         }
 
         $param = ModelMaster::decodeParams($hash);
+
         $contentbranch = ContentBranch::find()
             ->where(['branchId' => $param["branchId"]])
+            ->andWhere('contentName LIKE :bnt OR title LIKE :bnt', [':bnt' => '%' . $param["bnt"] . '%'])
             ->all();
 
-        $branchs = Branch::find()->where("status=1")
+        $branchs = Branch::find()
+            ->where("status=1")
             ->orderBy('branchName')
             ->asArray()
             ->all();
@@ -595,6 +601,7 @@ class DefaultController extends Controller
         return $this->render('content_branch', [
             "contentbranch" => $contentbranch,
             "branchs" => $branchs,
+            "bnt" => $param["bnt"],
             "branchId" => $param["branchId"],
         ]);
     }

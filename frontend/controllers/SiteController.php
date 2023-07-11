@@ -20,6 +20,7 @@ use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use frontend\models\tokyoconsulting\Content as TokyoconsultingContent;
 use frontend\models\tokyoconsulting\ContentDetail;
+use frontend\models\tokyoconsulting\Country;
 use frontend\models\tokyoconsulting\master\ContentMaster;
 use frontend\models\tokyoconsulting\MemberHasType;
 use PHPUnit\TextUI\Command;
@@ -90,6 +91,24 @@ class SiteController extends Controller
     {
 
         // throw new Exception(Yii::$app->user->id);
+        $dropdown = [];
+        $subtopicDetail = [];
+
+        $dropdown = Country::find()->where("status=1")
+            ->orderBy('countryName')
+            ->asArray()
+            ->all();
+
+        $subtopic = Content::find()
+            ->where(['contentName' => "Subtopic"])
+            ->asArray()
+            ->one();
+        if (isset($subtopic) && !empty($subtopic)) {
+            $subtopicDetail = ContentDetail::find()
+                ->where(["contentId" => $subtopic["contentId"], "status" => 1])
+                ->asArray()
+                ->one();
+        }
 
         $index = Content::find()
             ->where(["contentName" => "Banner"])
@@ -266,7 +285,10 @@ class SiteController extends Controller
             "c" => $c,
             "d" => $d,
             "e" => $e,
-            "f" => $f
+            "f" => $f,
+            "dropdown" => $dropdown,
+            "subtopic" => $subtopic,
+            "subtopicDetail" => $subtopicDetail,
 
         ]);
     }

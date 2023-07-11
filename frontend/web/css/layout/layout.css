@@ -255,10 +255,10 @@
 }
 
 .edit-content {
-    position: relative;
+    /* position: relative; */
     margin-top: -40px;
     padding-right: 5px;
-    z-index: 99;
+    /* z-index: 99; */
 }
 
 @media screen and (max-width: 768px) {

@@ -31,7 +31,7 @@ class ServicesController extends Controller
 		$userInThisBranch = 0;
 		$canEdit = [];
 		$branchName = $hash;
-		$bName = $hash;
+		$countryName = $hash;
 		$dropdown = $hash;
 		$together = [];
 		$contribute = [];
@@ -49,10 +49,10 @@ class ServicesController extends Controller
 		$serright = [];
 
 		$branch = Branch::find()->where(["branchName" => $branchName, "status" => 1])->asArray()->one();
-		$bName = Branch::find()->where(["branchName" => $bName, "status" => 1])->asArray()->all();
+		$country = Country::find()->where(["countryName" => $countryName, "status" => 1])->asArray()->all();
 
-		$dropdown = Branch::find()->where("status=1")
-			->orderBy('branchName')
+		$dropdown = Country::find()->where("status=1")
+			->orderBy('countryName')
 			->asArray()
 			->all();
 
@@ -288,7 +288,7 @@ class ServicesController extends Controller
 			"userInThisBranch" => $userInThisBranch,
 			"canEdit" => $canEdit,
 			"branchName" => $branchName,
-			"bName" => $bName,
+			"country" => $country,
 			"s" => $s,
 			"marketing" => $marketing,
 			"serleft" => $serleft,

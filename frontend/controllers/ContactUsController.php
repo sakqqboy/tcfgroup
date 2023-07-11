@@ -2,10 +2,13 @@
 
 namespace frontend\controllers;
 
+use Exception;
+use frontend\models\tokyoconsulting\ContactUs;
 use frontend\models\tokyoconsulting\Content;
 use frontend\models\tokyoconsulting\ContentDetail;
 use frontend\models\tokyoconsulting\MemberHasType;
 use Yii;
+use yii\db\Expression;
 use yii\web\Controller;
 
 class ContactUsController extends Controller
@@ -70,4 +73,29 @@ class ContactUsController extends Controller
 			"admin" => $admin
 		]);
 	}
+	public function actionSaveContact()
+    {
+        $res = [];
+        if (isset($_POST["hearus"])) {
+            //throw new Exception(print_r(Yii::$app->request->post(), true));
+            $contact = new ContactUs();
+            $contact->hearUs = $_POST["hearus"];
+            $contact->countryName = $_POST["countryname"];
+            $contact->fullName = $_POST["fullname"];
+            $contact->birthdate = $_POST["birthdate"];
+            $contact->address = $_POST["address"];
+            $contact->cityName = $_POST["cityname"];
+            $contact->postalCode = $_POST["postalcode"];
+            $contact->email = $_POST["email"];
+            $contact->phoneNumber = $_POST["phonenumber"];
+			$contact->image = $_POST["image"];
+            $contact->createDateTime = new Expression('NOW()');
+            $contact->updateDateTime = new Expression('NOW()');
+
+            if ($contact->save(false)) {
+                $res["status"] = true;
+            }
+        }
+        return json_encode($res);
+    }
 }

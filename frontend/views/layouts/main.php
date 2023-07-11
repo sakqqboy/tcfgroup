@@ -108,7 +108,7 @@ AppAsset::register($this);
         $datapopu = ContentBranch::footerPopular();
         $databranch = ContentBranch::footerCountryBranch();
 
-
+        $userInThisBranch = 0;
         if (Yii::$app->controller->id == 'site-country') {
             $canEdit = 0;
             if (Yii::$app->user->id) {

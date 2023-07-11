@@ -302,7 +302,8 @@ $this->title = 'contact';
                                 ATTACHMENT (IF ANY) <i class="fa fa-paperclip" aria-hidden="true"></i>
                             </div>
                             <div class="col-6 mt-4 text-end">
-                                <a type="button" class="btn btn-primary button-get" href="javascript:newClient()">Get Free Appointment</a>
+                                <a type="button" class="btn btn-primary button-get" href="javascript:newClient()">Get
+                                    Free Appointment</a>
                             </div>
                             <div class="col-4 text-start mt-4">
                                 <div class="contact-social mb-2">Whatsapp</div>
@@ -313,7 +314,7 @@ $this->title = 'contact';
                             </div>
                             <div class="col-8 text-end mt-4">
                                 <div class="contact-social mb-2">Email</div>
-                                <a href="" class="no-underline3">
+                                <a href="mailto:f-info@tokyoconsultinggroup.com" class="no-underline3">
                                     <p class="info-tokyo">f-info@tokyoconsultinggroup.com <i class="fa fa-envelope" aria-hidden="true"></i></p>
                                 </a>
                             </div>

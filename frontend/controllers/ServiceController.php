@@ -7,6 +7,7 @@ use backend\models\tokyoconsulting\MemberHasType;
 use yii\web\Controller;
 use common\models\tokyoconsulting\Content;
 use frontend\models\tokyoconsulting\ContentDetail;
+use frontend\models\tokyoconsulting\Country;
 use Yii;
 
 /**
@@ -34,6 +35,25 @@ class ServiceController extends Controller
 
     public function actionIndex()
     {
+        $dropdown = [];
+        $subtopicDetail = [];
+
+        $dropdown = Country::find()->where("status=1")
+            ->orderBy('countryName')
+            ->asArray()
+            ->all();
+
+        $subtopic = Content::find()
+            ->where(['contentName' => "Subtopic"])
+            ->asArray()
+            ->one();
+        if (isset($subtopic) && !empty($subtopic)) {
+            $subtopicDetail = ContentDetail::find()
+                ->where(["contentId" => $subtopic["contentId"], "status" => 1])
+                ->asArray()
+                ->one();
+        }
+
         $admin = 0;
         if (Yii::$app->user->id) {
             $memberTypeAdmin = MemberHasType::find()
@@ -49,7 +69,6 @@ class ServiceController extends Controller
         if (isset($memberTypeAdmin) && !empty($memberTypeAdmin)) {
             $admin = 1;
         }
-
 
         $r = Content::find()
             ->where(["contentName" => "Services"])
@@ -177,18 +196,7 @@ class ServiceController extends Controller
         $background = [];
         $most = [];
         $countryindex2 = [];
-        $bHomeName = [];
-        $dropdown = [];
         $topf = [];
-
-        $bHomeName = Branch::find()->where(["branchName" => $bHomeName, "status" => 1])->asArray()->all();
-
-        $dropdown = Branch::find()->where("status=1")
-            ->orderBy('branchName')
-            ->asArray()
-            ->all();
-
-
 
         if (isset($r) && !empty($r)) {
             $services = ContentDetail::find()
@@ -345,10 +353,11 @@ class ServiceController extends Controller
             "tryin" => $tryin,
             "countryindex2" => $countryindex2,
             "admin" => $admin,
-            "bHomeName" => $bHomeName,
             "dropdown" => $dropdown,
             "topicform" => $topicform,
-            "topf" => $topf
+            "topf" => $topf,
+            "subtopic" => $subtopic,
+            "subtopicDetail" => $subtopicDetail,
 
         ]);
     }

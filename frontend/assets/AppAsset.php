@@ -41,6 +41,7 @@ class AppAsset extends AssetBundle
         'js/content.js',
         'js/content2.js',
         'js/client.js',
+        'js/contact_us.js',
 
 
     ];

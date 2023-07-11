@@ -5,6 +5,8 @@
 use Codeception\Lib\Connector\Yii2;
 use common\helpers\Path;
 use common\models\ModelMaster;
+use yii\bootstrap5\Carousel;
+use yii\rbac\Item;
 
 $this->title = 'Career';
 ?>
@@ -23,12 +25,12 @@ $this->title = 'Career';
             </div>
             <div>
                 <?php
-                    if ($admin == 1) { ?>
+                if ($admin == 1) { ?>
                     <div class=" col-12 text-end mt-1 mb-3">
                         <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $jobtcf['contentId']]) ?>" target="_blank">Edit</a>
                     </div>
                 <?php
-                    }
+                }
                 ?>
             </div>
             <div class="col-10 text-shape">
@@ -87,13 +89,13 @@ $this->title = 'Career';
     ?>
 </div>
 <div>
-<?php
-        if ($admin == 1) { ?>
-            <div class=" col-12 text-end mt-1 mb-3">
-                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $the['contentId']]) ?>" target="_blank">Edit</a>
-            </div>
-        <?php
-        }
+    <?php
+    if ($admin == 1) { ?>
+        <div class=" col-12 text-end mt-1 mb-3">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $the['contentId']]) ?>" target="_blank">Edit</a>
+        </div>
+    <?php
+    }
     ?>
 </div>
 
@@ -136,13 +138,13 @@ $this->title = 'Career';
     ?>
 </div>
 <div>
-<?php
-        if ($admin == 1) { ?>
-            <div class=" col-12 text-end mt-1 mb-3">
-                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $more['contentId']]) ?>" target="_blank">Edit</a>
-            </div>
-        <?php
-        }
+    <?php
+    if ($admin == 1) { ?>
+        <div class=" col-12 text-end mt-1 mb-3">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $more['contentId']]) ?>" target="_blank">Edit</a>
+        </div>
+    <?php
+    }
     ?>
 </div>
 
@@ -182,7 +184,7 @@ $this->title = 'Career';
                 <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $ex['contentId']]) ?>" target="_blank">Edit</a>
             </div>
         <?php
-            }
+        }
         ?>
     </div>
 
@@ -216,7 +218,7 @@ $this->title = 'Career';
                 <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $ap['contentId']]) ?>" target="_blank">Edit</a>
             </div>
         <?php
-            }
+        }
         ?>
     </div>
 
@@ -245,13 +247,13 @@ $this->title = 'Career';
 </div>
 <div>
     <?php
-        if ($admin == 1) { 
+    if ($admin == 1) {
     ?>
         <div class=" col-12 text-end mt-1 mb-3">
             <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $pr['contentId']]) ?>" target="_blank">Edit</a>
         </div>
     <?php
-        }
+    }
     ?>
 </div>
 
@@ -283,52 +285,61 @@ $this->title = 'Career';
 </div>
 <div>
     <?php
-        if ($admin == 1) { 
+    if ($admin == 1) {
     ?>
         <div class=" col-12 text-end mt-1 mb-3">
             <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $cu['contentId']]) ?>" target="_blank">Edit</a>
         </div>
     <?php
-        }
+    }
     ?>
 </div>
 
 <div class="col-12 pr12">
     <div class="row">
-        <?php
-        if (isset($video)  && count($video) > 0) {
-            $i = 0;
-            foreach ($video as $vo) :
-        ?>
-                <div class="col-12">
-                    <div class="text-center">
-                        <a href="#" class="no-underline"><i class="fa fa-chevron-circle-left title-left" aria-hidden="true"></i></a> <img src="<?= Yii::$app->homeUrl . $vo['image'] ?>" class="image-TCF-GROUP"> <a href="#" class="no-underline"><i class="fa fa-chevron-circle-right title-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <div class="text-center">
-                        <span class="badge bg-primary life-play"> <a href="#" class="no-underline4"> <i class="fa fa-play-circle play-auto" aria-hidden="true"></i></a>
-                            <?= $vo['detail'] ?>
-                        </span>
+        <?php Carousel::widget([]); ?>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+            <div class="col-12 carousel-inner text-center">
                 <?php
-                $i++;
-            endforeach;
-        }
+                if (isset($video)  && count($video) > 0) {
+                    $i = 0;
+                    foreach ($video as $vo) :
                 ?>
-                    </div>
-                </div>
+                        <div class="carousel-item <?= $i == 0 ? 'active' : '' ?>" data-bs-interval="10000" style="">
+                            <img src="<?= Path::backendUrl() . $vo['image'] ?>" class="image-TCF-GROUP"><br>
+                            <div class="badge bg-primary life-play mt-3"> <a href="#" class="no-underline4"> <i class="fa fa-play-circle play-auto" aria-hidden="true"></i></a>
+                                <?= $vo['detail'] ?>
+                            </div>
+                        </div>
+
+
+                <?php
+                        $i++;
+                    endforeach;
+                }
+                ?>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <i class="fa fa-chevron-circle-left title-left" aria-hidden="true" style="color: black;font-size: 35px;"></i>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <i class="fa fa-chevron-circle-right title-right" aria-hidden="true" style="color: black;font-size: 35px;"></i>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
     </div>
 </div>
-<div>
-    <?php
-        if ($admin == 1) { 
-    ?>
-        <div class=" col-12 text-end mt-1 mb-3">
-            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $vo['contentId']]) ?>" target="_blank">Edit</a>
-        </div>
-    <?php
-        }
-    ?>
+<?php
+if ($admin == 1) {
+?>
+    <div class=" col-12 text-end mt-1 mb-3">
+        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $vo['contentId']]) ?>" target="_blank">Edit</a>
+    </div>
+<?php
+}
+?>
 </div>
 
 <div class="col-12  mt-50 col-background">
@@ -343,7 +354,7 @@ $this->title = 'Career';
             <div class="col-12 text-TCG">
                 <?= $sh['detail'] ?>
             </div>
-            
+
     <?php
             $i++;
         endforeach;
@@ -376,7 +387,7 @@ $this->title = 'Career';
                         }
                         ?>
                     </div>
-                    
+
                     <div class="col-6 country-index">
                         <?php
                         if (isset($incountry) && count($incountry) > 0) {
@@ -417,31 +428,31 @@ $this->title = 'Career';
 </div>
 <div class="col-12 text-end mt-1 mb-3">
     <?php
-        if ($admin == 1) { 
+    if ($admin == 1) {
     ?>
         <span>
             <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $sh['contentId']]) ?>" target="_blank">Edit(ฺBG)</a>
         </span>
     <?php
-        }
+    }
     ?>
     <?php
-        if ($admin == 1) { 
+    if ($admin == 1) {
     ?>
         <span>
             <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $di['contentId']]) ?>" target="_blank">Edit(Left)</a>
         </span>
     <?php
-        }
+    }
     ?>
     <?php
-        if ($admin == 1) { 
+    if ($admin == 1) {
     ?>
         <span>
             <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $in['contentId']]) ?>" target="_blank">Edit(Right)</a>
         </span>
     <?php
-        }
+    }
     ?>
 </div>
 
@@ -480,13 +491,13 @@ $this->title = 'Career';
 </div>
 <div>
     <?php
-        if ($admin == 1) { 
+    if ($admin == 1) {
     ?>
         <div class=" col-12 text-end mt-1 mb-3">
             <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $sh['contentId']]) ?>" target="_blank">Edit</a>
         </div>
     <?php
-        }
+    }
     ?>
 </div>
 
@@ -523,13 +534,13 @@ $this->title = 'Career';
 </div>
 <div>
     <?php
-        if ($admin == 1) { 
+    if ($admin == 1) {
     ?>
         <div class=" col-12 text-end mt-1 mb-3">
             <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $btc['contentId']]) ?>" target="_blank">Edit</a>
         </div>
     <?php
-        }
+    }
     ?>
 </div>
 
@@ -576,13 +587,13 @@ $this->title = 'Career';
 </div>
 <div>
     <?php
-        if ($admin == 1) { 
+    if ($admin == 1) {
     ?>
         <div class=" col-12 text-end mt-1 mb-3">
             <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $cd['contentId']]) ?>" target="_blank">Edit</a>
         </div>
     <?php
-        }
+    }
     ?>
 </div>
 
@@ -630,12 +641,12 @@ $this->title = 'Career';
 </div>
 <div>
     <?php
-        if ($admin == 1) { 
+    if ($admin == 1) {
     ?>
         <div class=" col-12 text-end mt-1 mb-3">
             <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $ft['contentId']]) ?>" target="_blank">Edit</a>
         </div>
     <?php
-        }
+    }
     ?>
 </div>

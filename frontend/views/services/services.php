@@ -32,7 +32,7 @@ $this->title = 'services';
     }
     ?>
     <?php
-    if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+    if ($canEdit == 1 && $userInThisBranch == 1 && isset($ther['contentBranchId'])) { ?>
         <div class=" col-12 text-end">
             <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $ther['contentBranchId']]) ?>" target="_blank">Edit[BG](<?= $branchName ?>)</a>
         </div>
@@ -65,7 +65,7 @@ $this->title = 'services';
             ?>
 
             <?php
-            if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+            if ($canEdit == 1 && $userInThisBranch == 1 && isset($tri['contentBranchId'])) { ?>
                 <div class="col-12 text-end">
                     <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $tri['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
                 </div>
@@ -123,10 +123,16 @@ $this->title = 'services';
     <div class="row">
         <div class="col-lg-6 col-md-12 col-12">
             <div class="col-12 title-Es">
-                <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"><?= $standing['title'] ?>
+                <?php
+                    if(isset($standing) && !empty($standing)) {
+                ?>
+                    <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"><?= $standing['title']?>
+                <?php
+                    }
+                ?>
             </div>
             <?php
-            if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+            if ($canEdit == 1 && $userInThisBranch == 1 && isset($standing['contentBranchId'])) { ?>
                 <div class="col-12 text-end">
                     <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $standing['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
                 </div>
@@ -158,7 +164,7 @@ $this->title = 'services';
                     ?>
                 </div>
                 <?php
-                if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($std['contentBranchId'])) { ?>
                     <div class="col-12 text-end">
                         <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $std['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
                     </div>
@@ -169,9 +175,15 @@ $this->title = 'services';
 
 
             <div class="col-12 Es1"><br>
-                <p><?= $s['detail'] ?></p> <br>
                 <?php
-                if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                    if(isset($s) && !empty($s)) {
+                ?>
+                        <p><?= $s['detail'] ?></p> <br>
+                <?php
+                    }
+                ?>
+                <?php
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($s['contentBranchId'])) { ?>
                     <div class="col-12 text-end">
                         <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $s['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
                     </div>
@@ -193,7 +205,7 @@ $this->title = 'services';
                 }
                 ?>
                 <?php
-                if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($s['contentBranchId'])) { ?>
                     <div class="col-12 text-end">
                         <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $s['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
                     </div>
@@ -223,7 +235,7 @@ $this->title = 'services';
                     }
                     ?>
                     <?php
-                    if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($nmlider['contentBranchId'])) { ?>
                         <div class="col-12 text-end">
                             <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $nmlider['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
                         </div>
@@ -240,10 +252,16 @@ $this->title = 'services';
 <div class="col-12 pr12">
     <div class="row">
         <div class="col-12 title-frequently">
-            <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"><?= $shape['title'] ?>
+            <?php
+                if(isset($shape) && !empty($shpae)) {
+            ?>
+                <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"><?= $shape['title'] ?>
+            <?php
+                }
+            ?>            
         </div>
         <?php
-        if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+        if ($canEdit == 1 && $userInThisBranch == 1 && isset($shape['contentBranchId'])) { ?>
             <div class="col-12 text-center">
                 <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $shape['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
             </div>
@@ -288,7 +306,7 @@ $this->title = 'services';
                 ?>
             </div>
             <?php
-            if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+            if ($canEdit == 1 && $userInThisBranch == 1 && isset($sup['contentBranchId'])) { ?>
                 <div class="col-12 text-end">
                     <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $sup['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
                 </div>
@@ -313,11 +331,17 @@ $this->title = 'services';
                 }
                 ?>
                 <a href="#" class="none-underline">
-                    <p class="text-end mt-50"><?= $marketing['detail2'] ?><i class="fa fa-chevron-right" aria-hidden="true"></i></p>
+                    <?php
+                        if(isset($marketing) && !empty($marketing)) {
+                    ?>
+                            <p class="text-end mt-50"><?= $marketing['detail2'] ?><i class="fa fa-chevron-right" aria-hidden="true"></i></p>
+                    <?php
+                        }
+                    ?>
                 </a>
             </div>
             <?php
-            if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+            if ($canEdit == 1 && $userInThisBranch == 1 && isset($marketing['contentBranchId'])) { ?>
                 <div class="col-12 text-end">
                     <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $marketing['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
                 </div>
@@ -353,7 +377,7 @@ $this->title = 'services';
                 </div>
             </div>
             <?php
-            if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+            if ($canEdit == 1 && $userInThisBranch == 1 && isset($lected['contentBranchId'])) { ?>
                 <div class="col-12 text-end">
                     <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $lected['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
                 </div>
@@ -410,7 +434,7 @@ $this->title = 'services';
         </button>
     </div>
     <?php
-    if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+    if ($canEdit == 1 && $userInThisBranch == 1 && isset($dev['contentBranchId'])) { ?>
         <div class="col-12 text-end">
             <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $dev['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
         </div>
@@ -552,9 +576,15 @@ $this->title = 'services';
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12">
             <div class="col-12 service-stage">
-                <img src="<?= Yii::$app->homeUrl ?>image/img/Rectangle.png"><?= $sl['title'] ?>
                 <?php
-                if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                    if(isset($sl) && !empty($sl)) {
+                ?>
+                        <img src="<?= Yii::$app->homeUrl ?>image/img/Rectangle.png"><?= $sl['title'] ?>
+                <?php
+                    }
+                ?>
+                <?php
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($sl['contentBranchId'])) { ?>
                     <div class="col-12 text-end mt-3">
                         <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $sl['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
                     </div>
@@ -568,20 +598,12 @@ $this->title = 'services';
                 </div>
                 <div class="col-5 country">
                     <select class="form-select" aria-label="Default select example">
-                        <?php
-                        if (isset($bName) && count($bName) > 0) {
-                            foreach ($bName as $b) :
-                        ?>
-                                <option value="<?= $b['branchId'] ?>"><?= $b['branchName'] ?></option>
-                        <?php
-                            endforeach;
-                        }
-                        ?>
+                        <option>Select country</option>
                         <?php
                         if (isset($dropdown) && count($dropdown) > 0) {
                             foreach ($dropdown as $dd) :
                         ?>
-                                <option value="<?= $dd["branchId"] ?>"><?= $dd["branchName"] ?></option>
+                                <option value="<?= $dd["countryId"] ?>"><?= $dd["countryName"] ?></option>
                         <?php
                             endforeach;
                         }
@@ -602,7 +624,7 @@ $this->title = 'services';
                 }
                 ?>
                 <?php
-                if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($sleft['contentBranchId'])) { ?>
                     <div class="col-12 text-end mt-3">
                         <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $sleft['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
                     </div>
@@ -613,9 +635,15 @@ $this->title = 'services';
         </div>
         <div class="col-lg-6 col-md-6 col-12">
             <div class="col-12 services-account">
-                <p> <?= $sr['detail'] ?></p>
                 <?php
-                if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                    if(isset($sr) && !empty($sr)) {
+                ?>
+                        <p> <?= $sr['detail'] ?></p>
+                <?php
+                    }
+                ?>
+                <?php
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($sr['contentBranchId'])) { ?>
                     <div class="col-12 text-end mt-3">
                         <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $sr['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
                     </div>
@@ -649,7 +677,7 @@ $this->title = 'services';
                     ?>
                 </div>
                 <?php
-                if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($sright['contentBranchId'])) { ?>
                     <div class="col-12 text-end mt-3">
                         <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $sright['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
                     </div>
@@ -684,21 +712,13 @@ $this->title = 'services';
                             <div class="col-5">
                                 <label for="formGroupExampleInput" class="form-label label-thin">
                                     &nbsp;&nbsp;&nbsp;Select Country</label>
-                                <select class="form-select mt-10" aria-label="Default select example">
-                                    <?php
-                                    if (isset($bName) && count($bName) > 0) {
-                                        foreach ($bName as $b) :
-                                    ?>
-                                            <option value="<?= $b['branchId'] ?>"><?= $b['branchName'] ?></option>
-                                    <?php
-                                        endforeach;
-                                    }
-                                    ?>
+                                <select class="form-select mt-10" name="countryid" id="countryid" aria-label="Default select example">
+                                    <option>Select country</option>
                                     <?php
                                     if (isset($dropdown) && count($dropdown) > 0) {
                                         foreach ($dropdown as $dd) :
                                     ?>
-                                            <option value="<?= $dd["branchId"] ?>"><?= $dd["branchName"] ?></option>
+                                            <option value="<?= $dd["countryId"] ?>"><?= $dd["countryName"] ?></option>
                                     <?php
                                         endforeach;
                                     }
@@ -709,15 +729,15 @@ $this->title = 'services';
                                 <div class="row mt-20">
                                     <div class="col-5 left-box-select">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                            <label class="form-check-label ml-10" for="flexRadioDefault1"> Legal
+                                            <input class="form-check-input" type="radio" name="typeperson" id="legalEntity" value="1">
+                                            <label class="form-check-label ml-10" for="legalEntity"> Legal
                                                 Entity</label>
                                         </div>
                                     </div>
                                     <div class="col-5 left-box-select">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                            <label class="form-check-label ml-10" for="flexRadioDefault2">
+                                            <input class="form-check-input" type="radio" name="typeperson" id="individual" value="2" checked>
+                                            <label class="form-check-label ml-10" for="individual">
                                                 Individual</label>
                                         </div>
                                     </div>
@@ -726,29 +746,29 @@ $this->title = 'services';
                         </div>
                         <div class="mb-3 your-company" style="margin-top: 30px;">
                             <label for="exampleInputCompany" class="form-label label-thin"> Your Company<span class="moon">*</span></label>
-                            <input type="Company" class="form-control" id="exampleInputCompany" aria-describedby="company">
+                            <input type="Company" class="form-control" name="company" id="company" aria-describedby="company">
                         </div>
                         <div class="mb-3 your-company">
                             <label for="exampleInputName" class="form-label label-thin"> Your Name<span class="moon">*</span></label>
-                            <input type="Name" class="form-control" id="exampleInputName" aria-describedby="name">
+                            <input type="Name" class="form-control" name="name" id="name" aria-describedby="name">
                         </div>
                         <div class="mb-3 your-company">
                             <label for="exampleInputPosition" class="form-label label-thin"> Position<span class="moon">*</span></label>
-                            <input type="Position" class="form-control" id="exampleInputPosition" aria-describedby="position">
+                            <input type="Position" class="form-control" name="position" id="position" aria-describedby="position">
                         </div>
                         <div class="mb-3 your-company">
                             <label for="exampleInputEmail" class="form-label label-thin"> Your e-mail<span class="moon">*</span></label>
-                            <input type="Email" class="form-control" id="exampleInputEmail" aria-describedby="email">
+                            <input type="Email" class="form-control" id="email" name="email" aria-describedby="email">
                         </div>
                         <div class="mb-3 your-company">
                             <div class="row">
                                 <div class="col-6 text-start">
                                     <label for="exampleInputEmail" class="form-label label-thin"> Phone Number<span class="moon">*</span></label>
-                                    <input type="number" class="form-control" placeholder="+880" aria-label="Phone">
+                                    <input type="number" class="form-control" name="phonenumber" id="phonenumber" placeholder="+880" aria-label="Phone">
                                 </div>
                                 <div class="col-6">
                                     <label for="exampleInputEmail" class="form-label label-thin"> Your Business<span class="moon">*</span></label>
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select" name="businesstype" id="businesstype" aria-label="Default select example">
                                         <option selected> Select business Type</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -761,12 +781,12 @@ $this->title = 'services';
                     <div class="col-lg-6 col-md-6 col-12 form-Questions mt-50 pr-40">
                         <div class="mb-3">
                             <label for="exampleInputQuestions" class="form-label label-thin">Questions & Concern</label>
-                            <input type="Questions" class="form-control" id="exampleInputQuestions" aria-describedby="Questions">
+                            <input type="Questions" class="form-control" name="question" id="question" aria-describedby="Questions">
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label label-thin">Details of
                                 Inquiry</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea class="form-control" name="detail" id="detail" rows="3"></textarea>
                         </div>
                         <div class="row">
                             <div class="col-6 text-start label-thin mt-4">
@@ -774,7 +794,7 @@ $this->title = 'services';
 
                             </div>
                             <div class="col-6 mt-4 text-end">
-                                <button type="button" class="btn btn-primary button-get">Get Free Appointment</button>
+                                <a class="btn btn-primary button-get" href="javascript:newClient()">Get Free Appointment</a>
                             </div>
                             <div class="col-4 text-start mt-4">
                                 <div class="contact-social mb-2">Whatsapp</div>

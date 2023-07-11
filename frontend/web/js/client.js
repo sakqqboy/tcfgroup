@@ -19,38 +19,47 @@ function newClient() {
     var question = $("#question").val();
     var detail = $("#detail").val();
 
-    url = $url + 'site-country/save-client'
-    $.ajax({
-        type: "POST",
-        dataType: 'json',
-        url: url,
-        data: {
-            country: country,
-            typeperson: typeperson,
-            company: company,
-            name: name,
-            position: position,
-            email: email,
-            phonenumber: phonenumber,
-            businesstype: businesstype,
-            question: question,
-            detail: detail,
-        },
-        success: function (data) {
-            if (data.status) {
-                //ให้ alert ว่า your request was successful  และ เคลียร์ทุกช่องที่กรอกให้ว่าง
-                alert('Your request was successful');
-                $("#countryid").val('');
-                $("input[name='typeperson']").prop('checked', false);
-                $("#company").val('');
-                $("#name").val('');
-                $("#position").val('');
-                $("#email").val('');
-                $("#phonenumber").val('');
-                $("#businesstype").val('');
-                $("#question").val('');
-                $("#detail").val('');
+    canSave = 1;
+    if(country == '' || typeperson == '' || company == '' || name == '' || position == '' || email == '' || phonenumber == '' || businesstype == '' || question == '' || detail == '') {
+        canSave = 0;
+    }
+
+    if(canSave == 1){
+        url = $url + 'site-country/save-client'
+        $.ajax({
+            type: "POST",
+            dataType: 'json',
+            url: url,
+            data: {
+                country: country,
+                typeperson: typeperson,
+                company: company,
+                name: name,
+                position: position,
+                email: email,
+                phonenumber: phonenumber,
+                businesstype: businesstype,
+                question: question,
+                detail: detail,
+            },
+            success: function (data) {
+                if (data.status) {
+                    //ให้ alert ว่า your request was successful  และ เคลียร์ทุกช่องที่กรอกให้ว่าง
+                    alert('Your request was successful');
+                    $("#countryid").val('');
+                    $("input[name='typeperson']").prop('checked', false);
+                    $("#company").val('');
+                    $("#name").val('');
+                    $("#position").val('');
+                    $("#email").val('');
+                    $("#phonenumber").val('');
+                    $("#businesstype").val('');
+                    $("#question").val('');
+                    $("#detail").val('');
+                }
             }
-        }
-    });
+        });
+    } else {
+        alert('Please enter your contact !');
+    }
 }

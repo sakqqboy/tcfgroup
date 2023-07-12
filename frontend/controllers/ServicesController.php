@@ -18,10 +18,6 @@ class ServicesController extends Controller
 	public function actionIndex($hash)
 	{
 
-		$newcountry = Content::find()
-			->where(["contentName" => "Selectioncountry"])
-			->asArray()
-			->one();
 
 		$icon5 = Content::find()
 			->where(["contentName" => "Garmenticon"])
@@ -47,6 +43,9 @@ class ServicesController extends Controller
 		$garmenticon = [];
 		$serleft = [];
 		$serright = [];
+		$branchserpage = [];
+		$imgcountrydetail = [];
+
 
 		$branch = Branch::find()->where(["branchName" => $branchName, "status" => 1])->asArray()->one();
 		$country = Country::find()->where(["countryName" => $countryName, "status" => 1])->asArray()->all();
@@ -56,6 +55,18 @@ class ServicesController extends Controller
 			->asArray()
 			->all();
 
+		if (isset($branch) && !empty($branch)) {
+			$bsp = ContentBranch::find()
+				->where(['contentName' => "Branch", "branchId" => $branch["branchId"]])
+				->asArray()
+				->one();
+			if (isset($bsp) && !empty($bsp)) {
+				$branchserpage = ContentBranchDetail::find()
+					->where(["contentBranchId" => $bsp["contentBranchId"], "status" => 1])
+					->asArray()
+					->all();
+			}
+		}
 
 		if (isset($branch) && !empty($branch)) {
 			$ther = ContentBranch::find()
@@ -213,14 +224,33 @@ class ServicesController extends Controller
 			}
 		}
 
-
-
-		if (isset($newcountry) && !empty($newcountry)) {
-			$selectioncountry = ContentDetail::find()
-				->where(["contentId" => $newcountry["contentId"], "status" => 1])
+		if (isset($branch) && !empty($branch)) {
+			$bsp = ContentBranch::find()
+				->where(['contentName' => "Branch", "branchId" => $branch["branchId"]])
 				->asArray()
-				->all();
+				->one();
+			if (isset($bsp) && !empty($bsp)) {
+				$branchserpage = ContentBranchDetail::find()
+					->where(["contentBranchId" => $bsp["contentBranchId"], "status" => 1])
+					->asArray()
+					->all();
+			}
 		}
+
+
+		if (isset($branch) && !empty($branch)) {
+			$imgcountry = ContentBranch::find()
+				->where(['contentName' => "Imagecountry", "branchId" => $branch["branchId"]])
+				->asArray()
+				->one();
+			if (isset($imgcountry) && !empty($imgcountry)) {
+				$imgcountrydetail = ContentBranchDetail::find()
+					->where(["contentBranchId" => $imgcountry["contentBranchId"], "status" => 1])
+					->asArray()
+					->one();
+			}
+		}
+
 		if (isset($icon5) && !empty($icon5)) {
 			$garmenticon = ContentDetail::find()
 				->where(["contentId" => $icon5["contentId"], "status" => 1])
@@ -284,6 +314,7 @@ class ServicesController extends Controller
 			"development" => $development,
 			"nameslider" => $nameslider,
 			"selectioncountry" => $selectioncountry,
+			"imgcountrydetail" => $imgcountrydetail,
 			"garmenticon" => $garmenticon,
 			"userInThisBranch" => $userInThisBranch,
 			"canEdit" => $canEdit,
@@ -297,6 +328,8 @@ class ServicesController extends Controller
 			"sl" => $sl,
 			"dropdown" => $dropdown,
 			"newservices" => $newservices,
+			"bsp" => $bsp,
+			"branchserpage" => $branchserpage,
 
 		]);
 	}

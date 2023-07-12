@@ -20,6 +20,7 @@ class AppAsset extends AssetBundle
         'css/home/people.css',
         'css/home/about1.css',
         'css/home/contact1.css',
+        'css/home/header.css',
         'css/layout/layout.css',
         'css/layout/font.css',
         'css/country/home1.css',

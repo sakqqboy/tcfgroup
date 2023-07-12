@@ -143,8 +143,8 @@ class AboutUsController extends Controller
 				$branch = Branch::find()->select('branchId')
 					->where(["status" => 1, "branchName" => $cd["title"]])
 					->one();
-				$start = 467;
-				while ($start < 495) {
+				$start = 1182;
+				while ($start < 1186) {
 					$contentBranch = ContentBranch::find()->where(["contentBranchId" => $start])->one();
 					if (isset($contentBranch) && !empty($contentBranch)) {
 						$newContentBranch = new ContentBranch();

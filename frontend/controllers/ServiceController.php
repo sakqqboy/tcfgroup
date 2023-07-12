@@ -358,6 +358,7 @@ class ServiceController extends Controller
             "topf" => $topf,
             "subtopic" => $subtopic,
             "subtopicDetail" => $subtopicDetail,
+            "bk" => $bk,
 
         ]);
     }

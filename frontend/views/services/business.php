@@ -4,7 +4,8 @@ use common\helpers\Path;
 use common\models\ModelMaster;
 
 ?>
-<div class="col-12 pr12 bk-busi">
+<!-- <div class="col-12 pr12 bk-busi"> -->
+<div class="col-12 pr12" style="background: white;padding-bottom: 50px;">
     <div class="row">
         <div class="col-lg-1">
             <!-- Empty Space -->
@@ -21,11 +22,11 @@ use common\models\ModelMaster;
             </div>
             <div class="col-9 Bs1">
                 <?php
-                    if (isset($busi) && !empty($busi)) {
+                if (isset($busi) && !empty($busi)) {
                 ?>
-                <?= $busi['detail'] ?>
+                    <?= $busi['detail'] ?>
                 <?php
-                    }
+                }
                 ?>
             </div>
             <?php
@@ -88,7 +89,7 @@ use common\models\ModelMaster;
             </div>
         </div>
 
-        <div class="col-lg-3 col-md-12 col-12">
+        <div class="col-lg-3 col-md-12 col-12" style="padding-right: 0px;">
             <img class="nation-flag" src="<?= Path::backendUrl() ?>image/img/sad.png">
         </div>
     </div>

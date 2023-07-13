@@ -20,7 +20,13 @@ use common\models\ModelMaster;
                 ?>
             </div>
             <div class="col-9 Bs1">
+                <?php
+                    if (isset($busi) && !empty($busi)) {
+                ?>
                 <?= $busi['detail'] ?>
+                <?php
+                    }
+                ?>
             </div>
             <?php
             if ($canEdit == 1 && $userInThisBranch == 1 && isset($busi['contentBranchId'])) {

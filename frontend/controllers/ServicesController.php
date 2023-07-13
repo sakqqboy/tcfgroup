@@ -48,6 +48,8 @@ class ServicesController extends Controller
 		$imgcountrydetail = [];
 		$topiccountrydetail = [];
 		$businessdetail = [];
+		$wikiimage = [];
+		$busi = [];
 
 
 		$branch = Branch::find()->where(["branchName" => $branchName, "status" => 1])->asArray()->one();

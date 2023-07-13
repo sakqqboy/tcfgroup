@@ -153,10 +153,7 @@ $this->title = $branchName;
                         </div>
                     </div>
                     <div class="col-6 img-iconday">
-                        <img src="<?= Path::backendUrl() ?>image/img/button-1.png" class="img-button">
-                        <img src="<?= Path::backendUrl() ?>image/img/button-2.png" class="img-button">
-                        <img src="<?= Path::backendUrl() ?>image/img/button-4.png" class="img-button">
-                        <img src="<?= Path::backendUrl() ?>image/img/button-3.png" class="img-button">
+
                     </div>
                 </div>
             <?php

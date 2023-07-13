@@ -10,65 +10,23 @@ use yii\bootstrap5\Carousel;
 $this->title = 'services';
 ?>
 
-<div class="col-12">
-    <?php
-    if (isset($together) && !empty($together)) {
-        $i = 0;
-        foreach ($together as $tg) :
-    ?>
-    <div class="col-12">
-        <img src="<?= Path::backendUrl() . $tg['image'] ?>" class="width1">
+<?= $this->render('part1', [
+    "together" => $together,
+    "ther" => $ther,
+    "userInThisBranch" => $userInThisBranch,
+    "canEdit" => $canEdit,
+    "branchName" => $branchName,
+]) ?>
 
-    </div>
-    <div class="col-12 serviecs-h1">
-        <p> <?= $tg['title'] ?></p>
-    </div>
-    <div class="col-12 serviecs-h2">
-        <p> <?= $tg['detail'] ?></p>
-    </div>
-    <div class="offset-1 col-11">
-        <button type="button" class="btn btn-primary button-start"> <?= $tg['detail2'] ?></button>
-    </div>
-    <?php
-            if ($canEdit == 1 && $userInThisBranch == 1 && isset($ther['contentBranchId'])) {
-            ?>
-    <div class="col-12 text-end pr12 mt-4">
-        <a class="btn btn-warning bt-line"
-            href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $ther['contentBranchId']]) ?>"
-            target="_blank">Edit(<?= $branchName ?>)</a>
-    </div>
-    <?php
-            }
-            ?>
-    <?php
-            if ($canEdit == 1 && $userInThisBranch == 1 && isset($ther['contentBranchId'])) {
-            ?>
-    <div class="col-12 text-end pr12 mt-2">
-        <a class="btn btn-warning bt-line"
-            href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $ther['contentBranchId']]) ?>"
-            target="_blank">Edit[BG](<?= $branchName ?>)</a>
-    </div>
-    <?php
-            }
-            ?>
-    <?php
-            $i++;
-        endforeach;
-    }
-    ?>
-</div>
-<?= $this->render(
-    'business',
-    [
-        "businessdetail" => $businessdetail,
-        "busi" => $busi,
-        "wikiimage" => $wikiimage,
-        "wiki" => $wiki,
-        "userInThisBranch" => $userInThisBranch,
-        "canEdit" => $canEdit,
-        "branchName" => $branchName,
-    ]
-) ?>
+<?= $this->render('business', [
+    "businessdetail" => $businessdetail,
+    "busi" => $busi,
+    "wikiimage" => $wikiimage,
+    "wiki" => $wiki,
+    "userInThisBranch" => $userInThisBranch,
+    "canEdit" => $canEdit,
+    "branchName" => $branchName,
+]) ?>
 <?= $this->render('part3', [
     "standing" => $standing,
     "understanding" => $understanding,
@@ -79,216 +37,16 @@ $this->title = 'services';
     "branchName" => $branchName,
 ]) ?>
 
+<?= $this->render('part4', [
+    "standing" => $standing,
+    "understanding" => $understanding,
+    "canEdit" => $canEdit,
+    "userInThisBranch" => $userInThisBranch,
+    "newservices" => $newservices,
+    "nameslider" => $nameslider,
+    "branchName" => $branchName,
+]) ?>
 
-<div class="col-12 pr12">
-    <div class="row">
-        <div class="col-12 title-frequently">
-            <?php
-            if (isset($shape) && !empty($shpae)) {
-            ?>
-            <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"><?= $shape['title'] ?>
-            <?php
-            }
-            ?>
-        </div>
-        <?php
-        if ($canEdit == 1 && $userInThisBranch == 1 && isset($shape['contentBranchId'])) { ?>
-        <div class="col-12 text-center">
-            <a class="btn btn-warning bt-line"
-                href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $shape['contentBranchId']]) ?>"
-                target="_blank">Edit(<?= $branchName ?>)</a>
-        </div>
-        <?php
-        }
-        ?>
-        <div class="col-lg-3 col-md-6 col-12">
-            <?php
-            if (isset($shapestar) && count($shapestar) > 0) {
-                $i = 0;
-                foreach ($shapestar as $shape) :
-                    if ($i < 4) {
-            ?>
-
-            <p class="form-legal" id="content2-legal-<?= $i ?>" onmouseover="javascript:showLegal2(<?= $i ?>)">
-                <?= $shape['title'] ?></p>
-
-            <p class="form-legal-copy" style="display: none;" id="content2-legal2-<?= $i ?>"
-                onmouseleave="javascript:showLegal1(<?= $i ?>)"><?= $shape['title'] ?></p>
-
-            <?php
-                    }
-                    $i++;
-                endforeach;
-            }
-            ?>
-        </div>
-        <div class="col-lg-3 col-md-4 col-12 show-text-home">
-            <div class="col-12">
-                <?php
-                if (isset($support) && count($support) > 0) {
-                    $i = 0;
-                    foreach ($support as $sup) :
-                        if ($i < 6) {
-                ?>
-                <p class="font-text"> <?= $sup['title'] ?></p>
-                <p class="services-name"> <?= $sup['detail'] ?></p>
-                <?php
-                        }
-                        $i++;
-                    endforeach;
-                }
-                ?>
-            </div>
-            <?php
-            if ($canEdit == 1 && $userInThisBranch == 1 && isset($sup['contentBranchId'])) { ?>
-            <div class="col-12 text-end">
-                <a class="btn btn-warning bt-line"
-                    href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $sup['contentBranchId']]) ?>"
-                    target="_blank">Edit(<?= $branchName ?>)</a>
-            </div>
-            <?php
-            }
-            ?>
-        </div>
-        <div class="col-lg-3 col-md-4 col-12 show-ser">
-            <div class="col-12">
-                <?php
-                if (isset($companymarket) && count($companymarket) > 0) {
-                    $i = 0;
-                    foreach ($companymarket as $marketing) :
-                        if ($i < 4) {
-                ?>
-                <p class="font-text"><?= $marketing['title'] ?></p>
-                <p class="services-name"><?= $marketing['detail'] ?></p>
-                <?php
-                        }
-                        $i++;
-                    endforeach;
-                }
-                ?>
-                <a href="#" class="none-underline">
-                    <?php
-                    if (isset($marketing) && !empty($marketing)) {
-                    ?>
-                    <p class="text-end mt-50"><?= $marketing['detail2'] ?><i class="fa fa-chevron-right"
-                            aria-hidden="true"></i></p>
-                    <?php
-                    }
-                    ?>
-                </a>
-            </div>
-            <?php
-            if ($canEdit == 1 && $userInThisBranch == 1 && isset($marketing['contentBranchId'])) { ?>
-            <div class="col-12 text-end">
-                <a class="btn btn-warning bt-line"
-                    href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $marketing['contentBranchId']]) ?>"
-                    target="_blank">Edit(<?= $branchName ?>)</a>
-            </div>
-            <?php
-            }
-            ?>
-        </div>
-
-
-        <div class="col-lg-3 col-md-6 col-12 show-text-home">
-            <div class="col-12 name-show-text-home" style="font-family: 'klavika'; font-weight:100;">
-                <?php
-                if (isset($related) && count($related) > 0) {
-                    $i = 0;
-                    foreach ($related as $lected) :
-
-                ?>
-                <p class="related"><?= $lected['title'] ?></p>
-                <p class="services-name"><?= $lected['detail'] ?></p>
-                <p class="services-name"><?= $lected['detail2'] ?></p>
-                <p class="services-name"><?= $lected['detail3'] ?></p>
-                <p class="services-name"><?= $lected['detail4'] ?></p>
-                <p class="name-ask mt-50"><?= $lected['detail5'] ?> </p>
-                <p class="services-name"><?= $lected['detail6'] ?></p>
-                <?php
-
-                        $i++;
-                    endforeach;
-                }
-                ?>
-                <div class="alert alert-primary" role="alert">
-                    <a href="#wiki.com"><img src="<?= Path::backendUrl() ?>image/img/wiki.com.png"></a>
-                </div>
-            </div>
-            <?php
-            if ($canEdit == 1 && $userInThisBranch == 1 && isset($lected['contentBranchId'])) { ?>
-            <div class="col-12 text-end">
-                <a class="btn btn-warning bt-line"
-                    href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $lected['contentBranchId']]) ?>"
-                    target="_blank">Edit(<?= $branchName ?>)</a>
-            </div>
-            <?php
-            }
-            ?>
-        </div>
-    </div>
-</div>
-
-<div class="col-12 pr12" style="margin-top: 70px;">
-    <?php Carousel::widget([]); ?>
-
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <?php
-            if (isset($development) && count($development) > 0) {
-                $i = 0;
-                foreach ($development as $dev) :
-            ?>
-            <div class="carousel-item <?= $i == 0 ? 'active' : '' ?>" data-bs-interval="10000">
-                <img src="<?= Path::backendUrl() . $dev['image'] ?>" class="d-block"
-                    style="width:100%; margin-top:20px;">
-                <div class="offset-1 col-11 text-title">
-                    <?= $dev['title'] ?><br>
-                    <div class="text-detail">
-                        <?= $dev['detail'] ?> <br>
-                        <?= $dev['detail2'] ?><br>
-                        <?= $dev['detail3'] ?><br>
-                        <?= $dev['detail4'] ?><br>
-                        <?= $dev['detail5'] ?><br>
-                        <?= $dev['detail6'] ?><br>
-                        <button type="button" class="btn btn-primary button-start mt-4"> <?= $dev['detail7'] ?></button>
-                    </div>
-                </div>
-            </div>
-            <?php
-                    $i++;
-                endforeach;
-            }
-            ?>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <?php
-    if ($canEdit == 1 && $userInThisBranch == 1 && isset($dev['contentBranchId'])) { ?>
-    <div class="col-12 text-end">
-        <a class="btn btn-warning bt-line"
-            href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $dev['contentBranchId']]) ?>"
-            target="_blank">Edit(<?= $branchName ?>)</a>
-    </div>
-    <?php
-    }
-    ?>
-</div>
 
 <div class="col-12 pr12 background-establish pb-5">
     <div class="row">

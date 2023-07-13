@@ -1,16 +1,77 @@
-<!-- <?php
+<?php
 
-        use common\helpers\Path;
-        ?>
+use common\helpers\Path;
+use common\models\ModelMaster;
+
+?>
 <div class="col-12 pr12 bk-busi">
     <div class="row">
+        <div class="col-lg-1">
+            <!-- Empty Space -->
+        </div>
         <div class="col-lg-8 col-md-12 col-12">
             <div class="col-12 mt-5 title-busi">
-                <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> Business Opportunities in Bangladesh
+                <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $busi['title'] ?>
+            </div>
+            <div class="col-9 Bs1">
+                <?= $busi['detail'] ?>
+            </div>
+            <?php
+            if ($canEdit == 1 && $userInThisBranch == 1 && isset($busi['contentBranchId'])) {
+            ?>
+                <div class="col-12 text-end pr12 mt-5">
+                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $busi['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
+                </div>
+            <?php
+            }
+            ?>
+            <div class="row">
+                <?php
+                if (isset($businessdetail) && count($businessdetail) > 0) {
+                    $i = 0;
+                    foreach ($businessdetail as $bsdt) :
+                ?>
+                        <div class="col-3 cardbusiness">
+
+                            <div class="col-12 cardbu">
+                                <p class="card-title card-title-bu">
+                                    <img src="<?= Path::backendUrl() . $bsdt['image'] ?>" class="<?= $bsdt['title'] == 'ICT & Electronics' ? 'width-ict' : '' ?>">
+                                    <?= $bsdt['title'] ?>
+                                </p>
+                                <p class="card-text cardbudetail"><?= $bsdt['detail'] ?></p>
+                            </div>
+                        </div>
+                <?php
+                        $i++;
+                    endforeach;
+                }
+                ?>
+                <?php
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($busi['contentBranchId'])) {
+                ?>
+                    <div class="col-12 text-end pr12 mt-5">
+                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $busi['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
+                    </div>
+                <?php
+                }
+                ?>
+            </div>
+            <div class="col-3 col-md-12 col-12">
+                <img class="imgwiki" src="<?= Path::backendUrl() . $wikiimage['image'] ?>">
+                <?php
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($wikiimage['contentBranchId'])) {
+                ?>
+                    <div class="col-12 text-end pr12 mt-5">
+                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $wikiimage['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
+                    </div>
+                <?php
+                }
+                ?>
             </div>
         </div>
-        <div class="col-lg-4 col-md-12 col-12 mt-5">
-            <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> Business Opportunities in Bangladesh
+
+        <div class="col-lg-3 col-md-12 col-12">
+            <img class="nation-flag" src="<?= Path::backendUrl() ?>image/img/sad.png">
         </div>
     </div>
-</div> -->
+</div>

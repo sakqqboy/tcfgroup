@@ -47,6 +47,7 @@ class ServicesController extends Controller
 		$branchserpage = [];
 		$imgcountrydetail = [];
 		$topiccountrydetail = [];
+		$businessdetail = [];
 
 
 		$branch = Branch::find()->where(["branchName" => $branchName, "status" => 1])->asArray()->one();
@@ -57,6 +58,32 @@ class ServicesController extends Controller
 			->asArray()
 			->all();
 
+
+		if (isset($branch) && !empty($branch)) {
+			$busi = ContentBranch::find()
+				->where(['contentName' => "Business", "branchId" => $branch["branchId"]])
+				->asArray()
+				->one();
+			if (isset($busi) && !empty($busi)) {
+				$businessdetail = ContentBranchDetail::find()
+					->where(["contentBranchId" => $busi["contentBranchId"], "status" => 1])
+					->asArray()
+					->all();
+			}
+		}
+
+		if (isset($branch) && !empty($branch)) {
+			$wiki = ContentBranch::find()
+				->where(['contentName' => "Wikipic", "branchId" => $branch["branchId"]])
+				->asArray()
+				->one();
+			if (isset($wiki) && !empty($wiki)) {
+				$wikiimage = ContentBranchDetail::find()
+					->where(["contentBranchId" => $wiki["contentBranchId"], "status" => 1])
+					->asArray()
+					->one();
+			}
+		}
 		if (isset($branch) && !empty($branch)) {
 			$bsp = ContentBranch::find()
 				->where(['contentName' => "Branch", "branchId" => $branch["branchId"]])
@@ -349,6 +376,10 @@ class ServicesController extends Controller
 			"topiccountrydetail" => $topiccountrydetail,
 			"topiccountry" => $topiccountry,
 			"tri" => $tri,
+			"businessdetail" => $businessdetail,
+			"busi" => $busi,
+			"wikiimage" => $wikiimage,
+			"wiki" => $wiki,
 
 		]);
 	}

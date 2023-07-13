@@ -82,6 +82,7 @@ AppAsset::register($this);
             $urlArr = explode('/', $url);
             $totalArr = count($urlArr);
             $branchName = $urlArr[$totalArr - 1];
+            $branchName = str_replace('%20', ' ', $branchName);
             $branch = Branch::find()->where(["branchName" => $branchName])->asArray()->one();
             if (isset($branch) && !empty($branch)) {
                 echo $this->render("@frontend/views/site-country/header", ["branchName" => $branchName]);

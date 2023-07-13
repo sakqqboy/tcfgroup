@@ -1,6 +1,6 @@
 <?php
     use common\helpers\Path;
-use common\models\ModelMaster;
+    use common\models\ModelMaster;
 
 ?>
 

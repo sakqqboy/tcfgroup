@@ -325,6 +325,7 @@ class SiteCountryController extends Controller
         $together = [];
         $contribute = [];
         $understanding = [];
+        $marketing = [];
         $companymarket  = [];
         $newservices = [];
         $shapestar = [];
@@ -416,6 +417,7 @@ class SiteCountryController extends Controller
             "together" => $together,
             "contribute" => $contribute,
             "understanding" => $understanding,
+            "marketing" => $marketing,
             "companymarket" => $companymarket,
             "newservices" => $newservices,
             "shapestar" => $shapestar,

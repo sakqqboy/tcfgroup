@@ -44,6 +44,16 @@
                 endforeach;
             }
             ?>
+            <?php
+            if ($canEdit == 1 && $userInThisBranch == 1 && isset($shape['contentBranchId'])) { ?>
+            <div class="col-12 text-end">
+                <a class="btn btn-warning bt-line"
+                    href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $shape['contentBranchId']]) ?>"
+                    target="_blank">Edit(<?= $branchName ?>)</a>
+            </div>
+            <?php
+            }
+            ?>
         </div>
         <div class="col-lg-3 col-md-4 col-12 show-text-home">
             <div class="col-12">
@@ -78,11 +88,11 @@
                 <?php
                 if (isset($companymarket) && count($companymarket) > 0) {
                     $i = 0;
-                    foreach ($companymarket as $marketing) :
+                    foreach ($companymarket as $cm) :
                         if ($i < 4) {
                 ?>
-                <p class="font-text"><?= $marketing['title'] ?></p>
-                <p class="services-name"><?= $marketing['detail'] ?></p>
+                <p class="font-text"><?= $cm['title'] ?></p>
+                <p class="services-name"><?= $cm['detail'] ?></p>
                 <?php
                         }
                         $i++;
@@ -93,7 +103,7 @@
                     <?php
                     if (isset($marketing) && !empty($marketing)) {
                     ?>
-                    <p class="text-end mt-50"><?= $marketing['detail2'] ?><i class="fa fa-chevron-right"
+                    <p class="text-end mt-50"><?= $marketing['detail'] ?><i class="fa fa-chevron-right"
                             aria-hidden="true"></i></p>
                     <?php
                     }
@@ -128,15 +138,15 @@
                 <p class="services-name"><?= $lected['detail4'] ?></p>
                 <p class="name-ask mt-50"><?= $lected['detail5'] ?> </p>
                 <p class="services-name"><?= $lected['detail6'] ?></p>
+                <div class="alert alert-primary" role="alert">
+                    <a href="#wiki.com"><img src="<?= Path::backendUrl() . $lected['image'] ?>"></a>
+                </div>
                 <?php
 
                         $i++;
                     endforeach;
                 }
                 ?>
-                <div class="alert alert-primary" role="alert">
-                    <a href="#wiki.com"><img src="<?= Path::backendUrl() ?>image/img/wiki.com.png"></a>
-                </div>
             </div>
             <?php
             if ($canEdit == 1 && $userInThisBranch == 1 && isset($lected['contentBranchId'])) { ?>

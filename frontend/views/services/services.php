@@ -38,12 +38,14 @@ $this->title = 'services';
 ]) ?>
 
 <?= $this->render('part4', [
-    "standing" => $standing,
-    "understanding" => $understanding,
+    "shape" => $shape,
+    "shapestar" => $shapestar,
+    "support" => $support,
+    "marketing" => $marketing,
+    "companymarket" => $companymarket,
+    "related" => $related,
     "canEdit" => $canEdit,
     "userInThisBranch" => $userInThisBranch,
-    "newservices" => $newservices,
-    "nameslider" => $nameslider,
     "branchName" => $branchName,
 ]) ?>
 

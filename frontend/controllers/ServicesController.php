@@ -79,7 +79,7 @@ class ServicesController extends Controller
 				$together = ContentBranchDetail::find()
 					->where(["contentBranchId" => $ther["contentBranchId"], "status" => 1])
 					->asArray()
-					->one();
+					->all();
 			}
 		}
 
@@ -343,7 +343,6 @@ class ServicesController extends Controller
 			"sr" => $sr,
 			"sl" => $sl,
 			"dropdown" => $dropdown,
-			"newservices" => $newservices,
 			"bsp" => $bsp,
 			"branchserpage" => $branchserpage,
 			"topiccountrydetail" => $topiccountrydetail,

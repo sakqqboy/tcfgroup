@@ -29,6 +29,7 @@ class ServicesController extends Controller
 		$branchName = $hash;
 		$countryName = $hash;
 		$dropdown = $hash;
+		$ther = [];
 		$together = [];
 		$contribute = [];
 		$understanding = [];
@@ -45,6 +46,7 @@ class ServicesController extends Controller
 		$serright = [];
 		$branchserpage = [];
 		$imgcountrydetail = [];
+		$topiccountrydetail = [];
 
 
 		$branch = Branch::find()->where(["branchName" => $branchName, "status" => 1])->asArray()->one();
@@ -77,7 +79,7 @@ class ServicesController extends Controller
 				$together = ContentBranchDetail::find()
 					->where(["contentBranchId" => $ther["contentBranchId"], "status" => 1])
 					->asArray()
-					->all();
+					->one();
 			}
 		}
 
@@ -251,6 +253,19 @@ class ServicesController extends Controller
 			}
 		}
 
+		if (isset($branch) && !empty($branch)) {
+			$topiccountry = ContentBranch::find()
+				->where(['contentName' => "Topiccountry", "branchId" => $branch["branchId"]])
+				->asArray()
+				->one();
+			if (isset($topiccountry) && !empty($topiccountry)) {
+				$topiccountrydetail = ContentBranchDetail::find()
+					->where(["contentBranchId" => $topiccountry["contentBranchId"], "status" => 1])
+					->asArray()
+					->all();
+			}
+		}
+
 		if (isset($icon5) && !empty($icon5)) {
 			$garmenticon = ContentDetail::find()
 				->where(["contentId" => $icon5["contentId"], "status" => 1])
@@ -301,6 +316,7 @@ class ServicesController extends Controller
 		}
 
 		return $this->render('services', [
+			"ther" => $ther,
 			"together" => $together,
 			"contribute" => $contribute,
 			"understanding" => $understanding,
@@ -330,6 +346,9 @@ class ServicesController extends Controller
 			"newservices" => $newservices,
 			"bsp" => $bsp,
 			"branchserpage" => $branchserpage,
+			"topiccountrydetail" => $topiccountrydetail,
+			"topiccountry" => $topiccountry,
+			"tri" => $tri,
 
 		]);
 	}

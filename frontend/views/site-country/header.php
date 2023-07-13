@@ -10,7 +10,10 @@ use common\models\ModelMaster;
         <a href="<?= Yii::$app->homeUrl ?>" class="nav-link"><img src="<?= Path::backendUrl() ?>image/tcg-group.png" class="" style="width: 200px;">
 
         </a>
-        <p class="font-size12 text-primary" style="margin-bottom: -57px;;margin-left:-87px;"><?= $branchName ?></p>
+        <p class="font-size14 text-primary" style="margin-bottom: -57px;;margin-left:-87px;">
+            <a href="<?= Yii::$app->homeUrl ?>site-country/index/<?= $branchName ?>" class="no-underline">
+                <?= $branchName ?>
+        </p>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="snavbar-toggler-icon">
                 <i class="fa fa-bars" aria-hidden="true"></i>

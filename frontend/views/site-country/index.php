@@ -29,9 +29,9 @@ $this->title = $branchName;
     <?php
 
     }
-    if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+    if ($canEdit == 1 && $userInThisBranch == 1 && isset($banner['contentBranchId'])) { ?>
         <div class="col-12 text-end mt-10">
-            <a class="bt-line btn btn-warning" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $bannerDetail['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+            <a class="bt-line btn btn-warning" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $banner['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
         </div>
     <?php
     }
@@ -109,9 +109,9 @@ $this->title = $branchName;
     }
     ?>
     <?php
-    if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+    if ($canEdit == 1 && $userInThisBranch == 1 && isset($import['contentBranchId'])) { ?>
         <div class="col-12 text-end">
-            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $importDetail['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $import['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
         </div>
     <?php
     }
@@ -287,7 +287,7 @@ $this->title = $branchName;
             </div>
         </div>
         <?php
-        if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+        if ($canEdit == 1 && $userInThisBranch == 1 && isset($professional['contentBranchId'])) { ?>
             <div class="col-12 text-end mt-3 mb-3">
                 <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $professional['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
             </div>
@@ -297,15 +297,18 @@ $this->title = $branchName;
 
     </div>
     <div class="col-12">
-        <div class="col-12 connect-experts mt-40"><img src="<?= Path::backendUrl() ?>image/img/Rectangle.png" class="image mr-1"><?= $legal['title'] ?></div>
-        <div class="col-12 Get-free mt-30"><?= $legalDetail['title'] ?></div>
-        <div class="col-12 If-you mt-10"><?= $legalDetail['detail'] ?></div>
+        <div class="col-12 connect-experts mt-40">
+            <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png" class="image mr-1">
+            <?= isset($legal['title']) ? $legal['title'] : '' ?>
+        </div>
+        <div class="col-12 Get-free mt-30"><?= isset($legalDetail['title']) ? $legalDetail['title'] : '' ?></div>
+        <div class="col-12 If-you mt-10"><?= isset($legalDetail['detail']) ? $legalDetail['detail'] : '' ?></div>
         <div class="col-12 mt-30 pr12">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-12 mt-50 pl-40 pr-40 form-input">
                     <div class="row">
                         <div class="col-7">
-                            <p class="If-you2"><?= $legalDetail['detail2'] ?></p>
+                            <p class="If-you2"><?= isset($legalDetail['detail2']) ? $legalDetail['detail2'] : '' ?></p>
                         </div>
                         <div class="col-5"><label for="formGroupExampleInput" class="form-label label-thin">&nbsp;
                                 &nbsp;
@@ -412,9 +415,9 @@ $this->title = $branchName;
             </div>
         </div>
         <?php
-        if ($canEdit == 1 && $userInThisBranch == 1) { ?>
+        if ($canEdit == 1 && $userInThisBranch == 1 && isset($legal["contentBranchId"])) { ?>
             <div class=" col-12 text-end mb-3">
-                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $legalDetail['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $legal['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
             </div>
         <?php
         }

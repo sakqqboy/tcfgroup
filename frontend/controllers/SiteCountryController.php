@@ -64,16 +64,20 @@ class SiteCountryController extends Controller
     {
 
         //throw new exception($hash);
-        $branchName = $hash;
+        $branchName = str_replace('%20', ' ', $hash);
         $countryName = $hash;
         $dropdown = $hash;
         $bannerDetail = [];
         $topicDetail = [];
         $importDetail = [];
+        $import = [];
         $bangladreshDetail = [];
         $webinarDetail = [];
+        $professional = [];
         $professionalDetail = [];
         $legalDetail = [];
+        $legal = [];
+        $banner = [];
         $branch = Branch::find()->where(["branchName" => $branchName, "status" => 1])->asArray()->one();
         $country = Country::find()->where(["countryName" => $countryName, "status" => 1])->asArray()->all();
 
@@ -250,7 +254,8 @@ class SiteCountryController extends Controller
             "legalDetail" => $legalDetail,
             "country" => $country,
             "dropdown" => $dropdown,
-            "branchName" => $branchName
+            "branchName" => $branchName,
+            "banner" => $banner
         ]);
     }
 

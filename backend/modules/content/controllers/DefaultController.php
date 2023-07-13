@@ -304,6 +304,7 @@ class DefaultController extends Controller
 
         $contentbranch = ContentBranch::find()
             ->asArray()
+            ->limit(200)
             ->all();
 
         $branchs = Branch::find()->where("status=1")

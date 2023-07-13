@@ -48,13 +48,13 @@ $this->title = 'webinar';
             ?>
             <div>
                 <?php
-                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($binar["contentBranchId"])) { 
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($binar["contentBranchId"])) {
                 ?>
-                        <div class="col-12 text-end mt-10">
-                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $binar['contentBranchId']]) ?>" target="_blank">Edit (<?=$branchName?>)</a>
-                        </div>
-                    <?php
-                    }
+                    <div class="col-12 text-end mt-10">
+                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $binar['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+                    </div>
+                <?php
+                }
                 ?>
             </div>
             <div class="row mt-50">
@@ -66,7 +66,7 @@ $this->title = 'webinar';
                         <div class="col-4 detail-calendar">
                             <div class="col-12">
                                 <!-- <i class="fa fa-calendar form-calendar1" aria-hidden="true"></i> -->
-                                <?= $dv["detail2"]?>
+                                <?= $dv["detail2"] ?>
                                 <p class="text-1"> <?= $dv['title'] ?></p>
                                 <p class="text-2"><?= $dv['detail'] ?></p>
                             </div>
@@ -79,13 +79,13 @@ $this->title = 'webinar';
             </div>
             <div>
                 <?php
-                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($dv["contentBranchId"])) { 
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($dv["contentBranchId"])) {
                 ?>
-                        <div class="col-12 text-end mb-3">
-                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $dv['contentBranchId']]) ?>" target="_blank">Edit (<?=$branchName?>)</a>
-                        </div>
+                    <div class="col-12 text-end mb-3">
+                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $dv['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+                    </div>
                 <?php
-                    }
+                }
                 ?>
             </div>
         </div>
@@ -111,50 +111,50 @@ $this->title = 'webinar';
                 if (isset($bangladreshDetail) && count($bangladreshDetail) > 0) {
                     $i = 0;
                 ?>
-                        <div class="row">
-                            <div class="col-4 title-bangladesh">
-                                <p><?= $bangladreshDetail['title'] ?> </p>
-                            </div>
-                            <div class="col-2">
-                                <img src="<?= Path::backendUrl() . $bangladreshDetail['image'] ?>" class="img-woman">
-                                <div class="alert alert-secondary  text-center">
-                                    <p class="table-calendar"> <i class="fa fa-calendar" aria-hidden="true"> June 2023</i></p>
-                                    <p> S&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;&nbsp;S
-                                    </p>
-                                    <p> 3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;5 <button class="btn btn-primary calendar-button" type="button">6</button>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;9
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="col-6 img-iconday">
-                                <img src="<?= Path::backendUrl() ?>image/img/button-1.png" class="img-button">
-                                <img src="<?= Path::backendUrl() ?>image/img/button-2.png" class="img-button">
-                                <img src="<?= Path::backendUrl() ?>image/img/button-4.png" class="img-button">
-                                <img src="<?= Path::backendUrl() ?>image/img/button-3.png" class="img-button">
+                    <div class="row">
+                        <div class="col-4 title-bangladesh">
+                            <p><?= $bangladreshDetail['title'] ?> </p>
+                        </div>
+                        <div class="col-2">
+                            <img src="<?= Path::backendUrl() . $bangladreshDetail['image'] ?>" class="img-woman">
+                            <div class="alert alert-secondary  text-center">
+                                <p class="table-calendar"> <i class="fa fa-calendar" aria-hidden="true"> June 2023</i></p>
+                                <p> S&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;&nbsp;S
+                                </p>
+                                <p> 3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;5 <button class="btn btn-primary calendar-button" type="button">6</button>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;9
+                                </p>
                             </div>
                         </div>
+
+                        <div class="col-6 img-iconday">
+                            <img src="<?= Path::backendUrl() ?>image/img/button-1.png" class="img-button">
+                            <img src="<?= Path::backendUrl() ?>image/img/button-2.png" class="img-button">
+                            <img src="<?= Path::backendUrl() ?>image/img/button-4.png" class="img-button">
+                            <img src="<?= Path::backendUrl() ?>image/img/button-3.png" class="img-button">
+                        </div>
+                    </div>
                 <?php
-                        $i++;
+                    $i++;
                 }
                 ?>
                 <div class="col-12 text-end mt-1 mb-3">
                     <?php
-                        if ($canEdit == 1 && $userInThisBranch == 1 && isset($bangladresh["contentBranchId"])) { 
+                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($bangladresh["contentBranchId"])) {
                     ?>
-                            <span class="col-12 text-end">
-                                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $bangladresh['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?=$branchName?>)</a>
-                            </span>
+                        <span class="col-12 text-end">
+                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $bangladresh['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?= $branchName ?>)</a>
+                        </span>
                     <?php
-                        }
+                    }
                     ?>
                     <?php
-                        if ($canEdit == 1 && $userInThisBranch == 1 && isset($bangladreshDetail["contentBranchId"])) { 
+                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($bangladreshDetail["contentBranchId"])) {
                     ?>
-                            <span class="col-12 text-end">
-                                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $bangladreshDetail['contentBranchId']]) ?>" target="_blank">Edit (IMG)(<?=$branchName?>)</a>
-                            </span>
+                        <span class="col-12 text-end">
+                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $bangladreshDetail['contentBranchId']]) ?>" target="_blank">Edit (IMG)(<?= $branchName ?>)</a>
+                        </span>
                     <?php
-                        }
+                    }
                     ?>
                 </div>
             </div>
@@ -170,7 +170,7 @@ $this->title = 'webinar';
                         <p><img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $webinar['detail'] ?></p>
                     </div>
                 <?php
-                    }
+                }
                 ?>
                 <div class="row">
                     <div class="col-lg-12 col-md-6 col-12">
@@ -200,22 +200,22 @@ $this->title = 'webinar';
                             ?>
                             <div class="col-12 text-end mt-1 mb-3">
                                 <?php
-                                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($webinar["contentBranchId"])) { 
+                                if ($canEdit == 1 && $userInThisBranch == 1 && isset($webinar["contentBranchId"])) {
                                 ?>
-                                        <span class="col-12 text-end">
-                                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $webinar['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?=$branchName?>)</a>
-                                        </span>
+                                    <span class="col-12 text-end">
+                                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $webinar['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?= $branchName ?>)</a>
+                                    </span>
                                 <?php
-                                    }
+                                }
                                 ?>
                                 <?php
-                                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($w["contentBranchId"])) { 
+                                if ($canEdit == 1 && $userInThisBranch == 1 && isset($w["contentBranchId"])) {
                                 ?>
-                                        <span class="col-12 text-end">
-                                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $w['contentBranchId']]) ?>" target="_blank">Edit (<?=$branchName?>)</a>
-                                        </span>
+                                    <span class="col-12 text-end">
+                                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $w['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+                                    </span>
                                 <?php
-                                    }
+                                }
                                 ?>
                             </div>
                         </div>
@@ -234,13 +234,13 @@ $this->title = 'webinar';
                         ?>
                         <div>
                             <?php
-                                if ($canEdit == 1 && $userInThisBranch == 1 && isset($regis["contentBranchId"])) { 
+                            if ($canEdit == 1 && $userInThisBranch == 1 && isset($regis["contentBranchId"])) {
                             ?>
-                                    <div class="col-12 text-end">
-                                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $regis['contentBranchId']]) ?>" target="_blank">Edit (<?=$branchName?>)</a>
-                                    </div>
+                                <div class="col-12 text-end">
+                                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $regis['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+                                </div>
                             <?php
-                                }
+                            }
                             ?>
                         </div>
                     </div>
@@ -264,32 +264,32 @@ $this->title = 'webinar';
                     <?= $playlist['detail'] ?>
                 </div>
         <?php
-            $i++;
+                $i++;
             endforeach;
         }
         ?>
         <div class="col-12 text-end mt-3 mb-3">
             <?php
-                if ($canEdit == 1 && $userInThisBranch == 1 && isset($playlist["contentBranchId"])) { 
+            if ($canEdit == 1 && $userInThisBranch == 1 && isset($playlist["contentBranchId"])) {
             ?>
-                    <span class="col-12 text-end">
-                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $playlist['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?=$branchName?>)</a>
-                    </span>
+                <span class="col-12 text-end">
+                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $playlist['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?= $branchName ?>)</a>
+                </span>
             <?php
-                }
+            }
             ?>
             <?php
-                if ($canEdit == 1 && $userInThisBranch == 1 && isset($playlist["contentBranchId"])) { 
+            if ($canEdit == 1 && $userInThisBranch == 1 && isset($playlist["contentBranchId"])) {
             ?>
-                    <span class="col-12 text-end">
-                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $playlist['contentBranchId']]) ?>" target="_blank">Edit (<?=$branchName?>)</a>
-                    </span>
+                <span class="col-12 text-end">
+                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $playlist['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+                </span>
             <?php
-                }
+            }
             ?>
         </div>
     </div>
-    
+
     <form class="row g-3 mt-50 form-search1">
         <div class="col-4">
             <input type="search" class="form-control" id="inputsearch" placeholder="Search, Business Videos">
@@ -400,7 +400,7 @@ $this->title = 'webinar';
                 endforeach;
             }
             ?>
-            
+
         </div>
     </div>
 </div>
@@ -432,22 +432,22 @@ $this->title = 'webinar';
             ?>
             <div class="col-12 text-end mt-3 mb-3">
                 <?php
-                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($pants["contentBranchId"])) { 
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($pants["contentBranchId"])) {
                 ?>
-                        <span class="col-12 text-end">
-                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $pants['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?=$branchName?>)</a>
-                        </span>
+                    <span class="col-12 text-end">
+                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $pants['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?= $branchName ?>)</a>
+                    </span>
                 <?php
-                    }
+                }
                 ?>
                 <?php
-                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($pants["contentBranchId"])) { 
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($pants["contentBranchId"])) {
                 ?>
-                        <span class="col-12 text-end">
-                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $pants['contentBranchId']]) ?>" target="_blank">Edit (<?=$branchName?>)</a>
-                        </span>
+                    <span class="col-12 text-end">
+                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $pants['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+                    </span>
                 <?php
-                    }
+                }
                 ?>
             </div>
         </div>
@@ -455,46 +455,46 @@ $this->title = 'webinar';
 
     <div class="row">
         <?php
-            if (isset($comment) && count($comment) > 0) {
-                $i = 0;
-                foreach ($comment as $com) :  
+        if (isset($comment) && count($comment) > 0) {
+            $i = 0;
+            foreach ($comment as $com) :
         ?>
-        <div class="col-lg-3 col-md-6 col-12 mt-50 pl-40">
-            <div class="col-12 mt-20">
-                <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left:20px;">
-                    <div class="card-body p-4" style="background-color: #FFFFFF;">
-                        <div class="col-12">
-                            <?= $com['title'] ?>
-                        </div>
-                        <div class="d-flex text-black mt-20">
-                            <div class="flex-shrink-0">
-                                <img src="<?= Path::backendUrl() . $com['image'] ?>" class="img-minnie">
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                                <h5 class="mb-1"><?= $com['detail'] ?></h5>
-                                <p class="mb-2 pb-1" style="color: #4F96FF;">
-                                    <?= $com['detail2'] ?>
-                                </p>
+                <div class="col-lg-3 col-md-6 col-12 mt-50 pl-40">
+                    <div class="col-12 mt-20">
+                        <div class="card" style="border-radius: 30px; font-size:12px; font-family:'klavika'; font-weight:100; line-height: 19px; margin-left:20px;">
+                            <div class="card-body p-4" style="background-color: #FFFFFF;">
+                                <div class="col-12">
+                                    <?= $com['title'] ?>
+                                </div>
+                                <div class="d-flex text-black mt-20">
+                                    <div class="flex-shrink-0">
+                                        <img src="<?= Path::backendUrl() . $com['image'] ?>" class="img-minnie">
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <h5 class="mb-1"><?= $com['detail'] ?></h5>
+                                        <p class="mb-2 pb-1" style="color: #4F96FF;">
+                                            <?= $com['detail2'] ?>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <?php  
+        <?php
             endforeach;
-            }
+        }
         ?>
         <div>
-        <?php
-        if ($canEdit == 1 && $userInThisBranch == 1 && isset($com["contentBranchId"])) { 
-    ?>
-            <div class="col-12 text-end">
-                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $com['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?=$branchName?>)</a>
-        </div>
-    <?php
-        }
-    ?>
+            <?php
+            if ($canEdit == 1 && $userInThisBranch == 1 && isset($com["contentBranchId"])) {
+            ?>
+                <div class="col-12 text-end">
+                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $com['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?= $branchName ?>)</a>
+                </div>
+            <?php
+            }
+            ?>
         </div>
         <div class="col-12 mt-50">
         </div>
@@ -556,22 +556,22 @@ $this->title = 'webinar';
 </div>
 <div class="col-12 text-end mt-3 mb-3">
     <?php
-        if ($canEdit == 1 && $userInThisBranch == 1 && isset($mee["contentBranchId"])) { 
+    if ($canEdit == 1 && $userInThisBranch == 1 && isset($mee["contentBranchId"])) {
     ?>
-            <span class="col-12 text-end">
-                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $mee['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?=$branchName?>)</a>
-            </span>
+        <span class="col-12 text-end">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $mee['contentBranchId']]) ?>" target="_blank">Edit (TP)(<?= $branchName ?>)</a>
+        </span>
     <?php
-        }
+    }
     ?>
     <?php
-        if ($canEdit == 1 && $userInThisBranch == 1 && isset($mee["contentBranchId"])) { 
+    if ($canEdit == 1 && $userInThisBranch == 1 && isset($mee["contentBranchId"])) {
     ?>
-            <span class="col-12 text-end">
-                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $mee['contentBranchId']]) ?>" target="_blank">Edit (<?=$branchName?>)</a>
-            </span>
+        <span class="col-12 text-end">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $mee['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
+        </span>
     <?php
-        }
+    }
     ?>
 </div>
 
@@ -584,33 +584,33 @@ $this->title = 'webinar';
                     $i = 1;
                     foreach ($freedetail as $free) :
                 ?>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="<?= $free['contentBranchDetailId'] ?>">
-                            <button class="<?= $i == 1 ? 'accordion-button' : 'accordion-button collapsed' ?>" type="button" data-bs-toggle="collapse" data-bs-target="#a<?= $free['contentBranchDetailId'] ?>" aria-expanded="true" aria-controls="<?= $free['contentBranchDetailId'] ?>">
-                                <?= $free['title'] ?>
-                            </button>
-                        </h2>
-                        <div id="a<?= $free['contentBranchDetailId'] ?>" class="accordion-collapse collapse <?= $i == 1 ? 'show' : '' ?>" aria-labelledby="<?= $free['contentBranchDetailId'] ?>" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong><?= $free['detail'] ?></strong><br>
-                                <?= $free['detail2'] ?>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="<?= $free['contentBranchDetailId'] ?>">
+                                <button class="<?= $i == 1 ? 'accordion-button' : 'accordion-button collapsed' ?>" type="button" data-bs-toggle="collapse" data-bs-target="#a<?= $free['contentBranchDetailId'] ?>" aria-expanded="true" aria-controls="<?= $free['contentBranchDetailId'] ?>">
+                                    <?= $free['title'] ?>
+                                </button>
+                            </h2>
+                            <div id="a<?= $free['contentBranchDetailId'] ?>" class="accordion-collapse collapse <?= $i == 1 ? 'show' : '' ?>" aria-labelledby="<?= $free['contentBranchDetailId'] ?>" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong><?= $free['detail'] ?></strong><br>
+                                    <?= $free['detail2'] ?>
+                                </div>
                             </div>
                         </div>
-                    </div>
                 <?php
-                    $i++;
+                        $i++;
                     endforeach;
-                    }
+                }
                 ?>
                 <div>
                     <?php
-                        if ($canEdit == 1 && $userInThisBranch == 1 && isset($free["contentBranchId"])) { 
+                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($free["contentBranchId"])) {
                     ?>
-                            <div class="col-12 text-end mt-3">
-                                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $free['contentBranchId']]) ?>" target="_blank">Edit (<?=$branchName?>)</a>
+                        <div class="col-12 text-end mt-3">
+                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $free['contentBranchId']]) ?>" target="_blank">Edit (<?= $branchName ?>)</a>
                         </div>
                     <?php
-                        }
+                    }
                     ?>
                 </div>
             </div>

@@ -23,3 +23,12 @@ function previousContent(y) {
     $("#background-" + y).hide();
     $("#background-" + prev).fadeIn();
 }
+
+function servicesPart3(i) {
+    var a = 0;
+    while (a < 4) { //การซ่อนข้อความที่ไม่ต้องการให้แสดงโดยใช้ while
+        $("#newservices-" + a).css("display", "none");
+        a++;
+    }
+    $("#newservices-" + i).show();
+}

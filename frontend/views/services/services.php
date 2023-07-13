@@ -12,123 +12,51 @@ $this->title = 'services';
 
 <div class="col-12">
     <?php
-    if (isset($together) && count($together) > 0) {
-        $i = 0;
-        foreach ($together as $ther) :
+    if (isset($together) && !empty($together)) {
     ?>
-            <div class="col-12">
-                <img src="<?= Path::backendUrl() . $ther['image'] ?>" class="width1">
+        <div class="col-12">
+            <img src="<?= Path::backendUrl() . $together['image'] ?>" class="width1">
 
-            </div>
-            <div class="col-12 serviecs-h1">
-                <p> <?= $ther['title'] ?></p>
-            </div>
-            <div class="col-12 serviecs-h2">
-                <p> <?= $ther['detail'] ?></p>
-            </div>
-    <?php
-            $i++;
-        endforeach;
-    }
-    ?>
-    <?php
-    if ($canEdit == 1 && $userInThisBranch == 1 && isset($ther['contentBranchId'])) { ?>
-        <div class=" col-12 text-end">
-            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $ther['contentBranchId']]) ?>" target="_blank">Edit[BG](<?= $branchName ?>)</a>
         </div>
+        <div class="col-12 serviecs-h1">
+            <p> <?= $ther['title'] ?></p>
+        </div>
+        <div class="col-12 serviecs-h2">
+            <p> <?= $ther['detail'] ?></p>
+        </div>
+        <?php
+        if ($canEdit == 1 && $userInThisBranch == 1 && isset($ther['contentBranchId'])) {
+        ?>
+            <div class="col-12 text-end pr12">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $ther['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
+            </div>
+        <?php
+        }
+        ?>
+        <?php
+        if ($canEdit == 1 && $userInThisBranch == 1 && isset($together['contentBranchId'])) {
+        ?>
+            <div class="col-12 text-end pr12 mt-5">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $together['contentBranchId']]) ?>" target="_blank">Edit[BG](<?= $branchName ?>)</a>
+            </div>
+        <?php
+        }
+        ?>
     <?php
     }
     ?>
 </div>
-
-
-<div class="col-12 pr12">
-    <div class="row">
-        <?php
-        if (isset($contribute) && count($contribute) > 0) {
-            $i = 0;
-            foreach ($contribute as $tri) :
-        ?>
-                <div class="col-12 p-services">
-                    <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $tri['title'] ?>
-                </div>
-
-                <div class="col-lg-8 col-md-12 col-12 page-ser1">
-                    <div class="col-12 textservices">
-                        <p><?= $tri['detail'] ?></p>
-                    </div>
-
-            <?php
-                $i++;
-            endforeach;
-        }
-            ?>
-
-            <?php
-            if ($canEdit == 1 && $userInThisBranch == 1 && isset($tri['contentBranchId'])) { ?>
-                <div class="col-12 text-end">
-                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $tri['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
-                </div>
-            <?php
-            }
-            ?>
-
-            <div class="row">
-                <?php
-                if (isset($garmenticon) && count($garmenticon) > 0) {
-                    $i = 0;
-                    foreach ($garmenticon as $icon5) :
-                        if ($i < 8) {
-
-                ?>
-                            <div class="col-lg-3 col-md-5 col-sm-5 col-6 card c-body" onmouseover="javascript:showServicescard2(<?= $i ?>)" id="iconcard-<?= $i ?>">
-                                <div class="card-body">
-                                    <span class="title-garment"> <img src="<?= Path::backendUrl() . $icon5['image'] ?>" class="width2"> &nbsp;&nbsp;<?= $icon5['title'] ?></span>
-                                    <p class="brunch-garment"><?= $icon5['detail'] ?></p>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-5 col-sm-5 col-6 card c-body-copy" style="display:none;" id="iconcard2-<?= $i ?>" onmouseleave="javascript:showServicescard1(<?= $i ?>)">
-                                <div class="card-body">
-                                    <span class="title-garment-copy"> <img src="<?= Path::backendUrl() . $icon5['image'] ?>" class="width2"> &nbsp;&nbsp;<?= $icon5['title'] ?></span>
-                                    <p class="brunch-garment-copy"><?= $icon5['detail'] ?></p>
-                                </div>
-                            </div>
-                <?php
-                        }
-                        $i++;
-                    endforeach;
-                }
-                ?>
-            </div>
-
-                </div>
-                <?php
-                if (isset($contribute) && count($contribute) > 0) {
-                    $i = 0;
-                    foreach ($contribute as $tri) :
-                ?>
-                        <div class="col-lg-4 col-md-6 col-12" style="padding-right:0px;">
-                            <img src="<?= Path::backendUrl() . $tri['image'] ?>" class="img-width-services">
-                        </div>
-                <?php
-                        $i++;
-                    endforeach;
-                }
-                ?>
-    </div>
-</div>
-
+<?= $this->render('business') ?>
 <div class="col-12 pr12 bk-ser">
     <div class="row">
         <div class="col-lg-6 col-md-12 col-12">
             <div class="col-12 title-Es">
                 <?php
-                    if(isset($standing) && !empty($standing)) {
+                if (isset($standing) && !empty($standing)) {
                 ?>
-                    <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"><?= $standing['title']?>
+                    <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"><?= $standing['title'] ?>
                 <?php
-                    }
+                }
                 ?>
             </div>
             <?php
@@ -176,11 +104,11 @@ $this->title = 'services';
 
             <div class="col-12 Es1"><br>
                 <?php
-                    if(isset($s) && !empty($s)) {
+                if (isset($s) && !empty($s)) {
                 ?>
-                        <p><?= $s['detail'] ?></p> <br>
+                    <p><?= $s['detail'] ?></p> <br>
                 <?php
-                    }
+                }
                 ?>
                 <?php
                 if ($canEdit == 1 && $userInThisBranch == 1 && isset($s['contentBranchId'])) { ?>
@@ -221,7 +149,7 @@ $this->title = 'services';
                     <img src="<?= Path::backendUrl() ?>image/img/long.png" class="width-long">
                 </div>
 
-                <div class="col-lg-11 col-md-12 col-12 Name-Clearance">
+                <div class="col-lg-11 col-md-12 col-12 Name-Clearance mt-5">
                     <?php
                     if (isset($nameslider) && count($nameslider) > 0) {
                         $i = 0;
@@ -253,12 +181,12 @@ $this->title = 'services';
     <div class="row">
         <div class="col-12 title-frequently">
             <?php
-                if(isset($shape) && !empty($shpae)) {
+            if (isset($shape) && !empty($shpae)) {
             ?>
                 <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"><?= $shape['title'] ?>
             <?php
-                }
-            ?>            
+            }
+            ?>
         </div>
         <?php
         if ($canEdit == 1 && $userInThisBranch == 1 && isset($shape['contentBranchId'])) { ?>
@@ -332,11 +260,11 @@ $this->title = 'services';
                 ?>
                 <a href="#" class="none-underline">
                     <?php
-                        if(isset($marketing) && !empty($marketing)) {
+                    if (isset($marketing) && !empty($marketing)) {
                     ?>
-                            <p class="text-end mt-50"><?= $marketing['detail2'] ?><i class="fa fa-chevron-right" aria-hidden="true"></i></p>
+                        <p class="text-end mt-50"><?= $marketing['detail2'] ?><i class="fa fa-chevron-right" aria-hidden="true"></i></p>
                     <?php
-                        }
+                    }
                     ?>
                 </a>
             </div>
@@ -388,7 +316,7 @@ $this->title = 'services';
     </div>
 </div>
 
-<div class="col-12" style="margin-top: 70px;">
+<div class="col-12 pr12" style="margin-top: 70px;">
     <?php Carousel::widget([]); ?>
 
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -443,132 +371,144 @@ $this->title = 'services';
     ?>
 </div>
 
-<div class="col-12 pr12 background-establish">
+<div class="col-12 pr12 background-establish pb-5">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-12">
             <?php
-            if (isset($selectioncountry) && count($selectioncountry) > 0) {
-                $i = 0;
-                foreach ($selectioncountry as $newcountry) :
+            if (isset($topiccountry) && count($topiccountry) > 0) {
+
             ?>
-                    <div class="col-12 title-establish">
-                        <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $newcountry['title'] ?>
+                <div class="col-12 title-establish">
+                    <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $topiccountry['title'] ?>
+                </div>
+                <div class="col-12 title-select">
+                    <p> <?= $topiccountry['detail'] ?></p>
+                </div>
+                <?php
+                if ($canEdit == 1 && $userInThisBranch == 1 && isset($topiccountry['contentBranchId'])) { ?>
+                    <div class="col-12 text-end">
+                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $topiccountry['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
                     </div>
-                    <div class="col-12 title-select">
-                        <p> <?= $newcountry['detail'] ?></p>
-                    </div>
+                <?php
+                }
+                ?>
             <?php
-                    $i++;
-                endforeach;
             }
             ?>
 
             <div class="col-12 pr12 mt-50">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-4 select-country1">
-                        <a href="" class="none-underline1">
-                            <p class="bang"> <img src="<?= Path::backendUrl() ?>image/img/Bangladesh.png">Bangladresh
-                            </p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/brazil.png"> Brazil</p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/combodia.png"> Combodia</p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/china.png"> China</p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/columbia.png"> Columbia</p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/dubai.png"> Dubai(UAE)</p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/hong kong.png"> Hong Kong</p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/india.png"> India</p>
-                        </a>
+                        <?php
+                        if (isset($branchserpage) && count($branchserpage) > 0) {
+                            $i = 0;
+                            foreach ($branchserpage as $bs) :
+                                if ($i < 8) {
+                        ?>
+                                    <a href="<?= Yii::$app->homeUrl . $bs['url'] ?>">
+                                        <p class="no-underline1">
+                                            <img src="<?= Path::backendUrl() . $bs['image'] ?>">
+                                            <?= $bs['title'] ?>
+                                        </p>
+                                    </a>
+                        <?php
+                                }
+                                $i++;
+                            endforeach;
+                        }
+                        ?>
                     </div>
+
                     <div class="col-lg-3 col-md-6 col-4 select-country2">
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/indonesia.png"> Indonesia </p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/kenya.png"> Kenya</p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/japan.png" class="width-japan"> Japan</p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/laos.png"> Laos</p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/malaysia.png"> Malaysia</p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/maxico.png"> Maxico</p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/mongolia.png"> Mongolia</p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/morocco.png"> Morocco</p>
-                        </a>
+                        <?php
+                        if (isset($branchserpage) && count($branchserpage) > 0) {
+                            $i = 0;
+                            foreach ($branchserpage as $bs2) :
+                                if ($i > 7 && $i < 16) {
+                        ?>
+                                    <a href="<?= Yii::$app->homeUrl . $bs2['url'] ?>">
+                                        <p class="no-underline1">
+                                            <img src="<?= Path::backendUrl() . $bs2['image'] ?>" class="<?= $bs2['title'] == 'Japan' ? 'width-japan' : '' ?>">
+                                            <?= $bs2['title'] ?>
+                                        </p>
+                                    </a>
+                        <?php
+                                }
+                                $i++;
+                            endforeach;
+                        }
+                        ?>
                     </div>
                     <div class="col-lg-4 col-md-6 col-4 select-country3">
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/mayanmar.png"> Mayanmar</p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/nigeria.png" class="width-japan"> Nigeria
-                            </p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/peru.png"> Peru</p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/philippines.png"> Philippines</p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/russia.png"> Russia</p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/south Africa.png"> South Africa</p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/singapore.png"> Singapore</p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/sir Lanka.png"> Sir Lanka</p>
-                        </a>
+                        <?php
+                        if (isset($branchserpage) && count($branchserpage) > 0) {
+                            $i = 0;
+                            foreach ($branchserpage as $bs3) :
+                                if ($i > 15 && $i < 24) {
+                        ?>
+                                    <a href="<?= Yii::$app->homeUrl . $bs3['url'] ?>">
+                                        <p class="no-underline1">
+                                            <img src="<?= Path::backendUrl() . $bs3['image'] ?>">
+                                            <?= $bs3['title'] ?>
+                                        </p>
+                                    </a>
+                        <?php
+                                }
+                                $i++;
+                            endforeach;
+                        }
+                        ?>
                     </div>
                     <div class="col-lg-2 col-md-6 col-4 select-country4">
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/thailand.png"> Thailand</p>
-                        </a>
-                        <a href="" class="none-underline1">
-                            <p> <img src="<?= Path::backendUrl() ?>image/img/turkey.png" class="width-japan"> Turkey</p>
-                        </a>
+                        <?php
+                        if (isset($branchserpage) && count($branchserpage) > 0) {
+                            $i = 0;
+                            foreach ($branchserpage as $bs4) :
+                                if ($i > 23 && $i < 26) {
+                        ?>
+                                    <a href="<?= Yii::$app->homeUrl . $bs4['url'] ?>">
+                                        <p class="no-underline1">
+                                            <img src="<?= Path::backendUrl() . $bs4['image'] ?>" class="<?= $bs4['title'] == 'Nigeria' ? 'width-japan' : '' ?>">
+                                            <?= $bs4['title'] ?>
+                                        </p>
+                                    </a>
+                        <?php
+                                }
+                                $i++;
+                            endforeach;
+                        }
+                        ?>
                     </div>
                 </div>
             </div>
-        </div>
-        <?php
-        if (isset($selectioncountry) && count($selectioncountry) > 0) {
-            $i = 0;
-            foreach ($selectioncountry as $newcountry) :
-        ?>
-                <div class="col-lg-6 col-md-6 col-12">
-                    <img src="<?= Yii::$app->homeUrl . $newcountry['image'] ?>" class="width-group">
+            <?php
+            if ($canEdit == 1 && $userInThisBranch == 1 && isset($bsp['contentBranchId'])) { ?>
+                <div class="col-12 text-end">
+                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $bsp['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
                 </div>
-        <?php
-                $i++;
-            endforeach;
-        }
-        ?>
+            <?php
+            }
+            ?>
+        </div>
+        <div class="col-lg-6 col-md-6 col-12">
+            <?php
+            if (isset($imgcountrydetail) && count($imgcountrydetail) > 0) {
+            ?>
+                <div class="col-lg-12 col-md-6">
+                    <img src=" <?= Path::backendUrl()  . $imgcountrydetail['image'] ?>" class="width-group">
+                </div>
+            <?php
+            }
+            ?>
+            <?php
+            if ($canEdit == 1 && $userInThisBranch == 1 && isset($imgcountrydetail['contentBranchId'])) { ?>
+                <div class="col-12 text-end">
+                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $imgcountrydetail['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
     </div>
 </div>
 
@@ -577,11 +517,11 @@ $this->title = 'services';
         <div class="col-lg-6 col-md-6 col-12">
             <div class="col-12 service-stage">
                 <?php
-                    if(isset($sl) && !empty($sl)) {
+                if (isset($sl) && !empty($sl)) {
                 ?>
-                        <img src="<?= Yii::$app->homeUrl ?>image/img/Rectangle.png"><?= $sl['title'] ?>
+                    <img src="<?= Yii::$app->homeUrl ?>image/img/Rectangle.png"><?= $sl['title'] ?>
                 <?php
-                    }
+                }
                 ?>
                 <?php
                 if ($canEdit == 1 && $userInThisBranch == 1 && isset($sl['contentBranchId'])) { ?>
@@ -636,11 +576,11 @@ $this->title = 'services';
         <div class="col-lg-6 col-md-6 col-12">
             <div class="col-12 services-account">
                 <?php
-                    if(isset($sr) && !empty($sr)) {
+                if (isset($sr) && !empty($sr)) {
                 ?>
-                        <p> <?= $sr['detail'] ?></p>
+                    <p> <?= $sr['detail'] ?></p>
                 <?php
-                    }
+                }
                 ?>
                 <?php
                 if ($canEdit == 1 && $userInThisBranch == 1 && isset($sr['contentBranchId'])) { ?>
@@ -689,7 +629,7 @@ $this->title = 'services';
     </div>
 </div>
 
-<div class="col-12 mt-50">
+<div class="col-12 pr12 mt-50">
     <div class="container">
         <div class="alert alert-primary" role="alert">
             <div class="col-12 connect-experts mt-40">
@@ -794,7 +734,8 @@ $this->title = 'services';
 
                             </div>
                             <div class="col-6 mt-4 text-end">
-                                <a class="btn btn-primary button-get" href="javascript:newClient()">Get Free Appointment</a>
+                                <a class="btn btn-primary button-get" href="javascript:newClient()">Get Free
+                                    Appointment</a>
                             </div>
                             <div class="col-4 text-start mt-4">
                                 <div class="contact-social mb-2">Whatsapp</div>

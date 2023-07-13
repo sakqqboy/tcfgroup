@@ -37,7 +37,7 @@ use common\models\ModelMaster;
                     <a href="<?= Yii::$app->homeUrl ?>about-us-country/index/<?= $branchName ?>" class="nav-link">About us</a>
                 </li>
                 <?php
-                if (Yii::$app->user->id) {
+                if (isset(Yii::$app->user->id)) {
                 ?>
                     <li class="nav-item <?= Yii::$app->controller->action->id == 'logout' ? 'selected-menu' : '' ?>">
                         <a href="<?= Yii::$app->homeUrl ?>site/logout" class="nav-link">Log out</a>

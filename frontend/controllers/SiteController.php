@@ -90,7 +90,6 @@ class SiteController extends Controller
     public function actionIndex()
     {
 
-        // throw new Exception(Yii::$app->user->id);
         $dropdown = [];
         $subtopicDetail = [];
 
@@ -246,7 +245,7 @@ class SiteController extends Controller
                 ->all();
         }
         $admin = 0;
-        if (Yii::$app->user->id) {
+        if (isset(Yii::$app->user->id)) {
             $memberTypeAdmin = MemberHasType::find()
                 ->select("mt.memberTypeName")
                 ->JOIN("LEFT JOIN", "member_type mt", "member_has_type.memberTypeId = mt.memberTypeId")
@@ -260,7 +259,6 @@ class SiteController extends Controller
         }
 
         if (isset($memberTypeAdmin) && !empty($memberTypeAdmin)) {
-
             $admin = 1;
         }
         // throw new Exception(count($banners));

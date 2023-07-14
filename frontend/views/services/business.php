@@ -5,7 +5,7 @@ use common\models\ModelMaster;
 
 ?>
 <!-- <div class="col-12 pr12 bk-busi"> -->
-<div class="col-12 pr12" style="background: white;padding-bottom: 50px;">
+<div class="col-12 pr12" style="background: white;padding-bottom: 50px;margin-top:20px;">
     <div class="row">
         <div class="col-lg-1">
             <!-- Empty Space -->

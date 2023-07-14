@@ -30,7 +30,7 @@
 
 .banner-text-service {
     position: relative;
-    margin-top: -270px;
+    margin-top: -380px;
 }
 
 .button-start {
@@ -118,7 +118,6 @@
 
 .bk-ser {
     background: #031022;
-    margin-top: 130px;
     padding-bottom: 10px;
 }
 
@@ -408,37 +407,47 @@
     .serviecs-h1 {
         padding-top: 120px;
     }
+
     .serviecs-h2 {
         margin-top: -40px;
         font-size: 50px;
     }
+
     .p-services {
         margin-top: 100px;
     }
+
     .img-width-services {
         margin-top: -70px;
     }
+
     .form-legal {
         padding-top: 70px;
     }
+
     .show-ser {
         margin-top: 80px;
     }
+
     .name-show-text-home {
         margin-left: 5px;
     }
+
     .ser-company {
         margin-top: -390px;
         font-size: 27px;
     }
+
     .title-unlock {
         width: 450px;
     }
+
     .title-establish {
         padding-top: 130px;
         font-size: 21px;
         width: 600px;
     }
+
     .service-stage {
         font-size: 21px;
         width: 480px;
@@ -451,72 +460,89 @@
         font-size: 20px;
         padding-left: 20px;
     }
+
     .serviecs-h2 {
         margin-top: -60px;
         font-size: 20px;
         padding-left: 20px;
     }
+
     .p-services {
         margin-top: 20px;
         padding-left: 40px;
         font-size: 19px;
     }
+
     .page-ser1 {
         padding-left: 30px;
     }
+
     .textservices {
         width: 440px;
         font-size: 14px;
         line-height: 18px;
         margin-top: 10px;
     }
+
     .links-wiki {
         padding-top: 30px;
     }
+
     .img-width-services {
         padding-top: 100px;
         height: 108.8%;
     }
+
     .Name-Clearance {
         margin-top: -560px;
     }
+
     .width-long {
         width: 39px;
         margin-left: 30px;
     }
+
     .title-Es {
         padding-left: 30px;
         font-size: 19px;
     }
+
     .Es1 {
         padding-left: 40px;
     }
+
     .services1 {
         font-size: 15px;
         margin-left: 60px;
     }
+
     .services2 {
         font-size: 12px;
         width: 350px;
         margin-left: 60px;
     }
+
     .title-frequently {
         padding-left: 40px;
         font-size: 19px;
     }
+
     .show-text-home {
         padding-left: 40px;
     }
+
     .show-ser {
         padding-left: 40px;
         margin-top: 10px;
     }
+
     .ser-company {
         margin-left: 25px;
         padding-top: 150px;
         font-size: 20px;
         width: 250px;
     }
+
     .title-unlock {
         width: 280px;
         font-size: 8px;
@@ -524,42 +550,53 @@
         margin-top: -30px;
         padding-left: 25px;
     }
+
     .button-namecontact {
         padding-top: 20px;
         padding-left: 25px;
     }
+
     .title-establish {
         padding-left: 35px;
         font-size: 19px;
         margin-top: -80px;
     }
+
     .title-select {
         padding-left: 35px;
     }
+
     .select-country1 {
         padding-left: 40px;
     }
+
     .select-country2 {
         padding-left: 40px;
     }
+
     .select-country3 {
         padding-left: 20px;
     }
+
     .select-country4 {
         padding-left: 40px;
     }
+
     .width-group {
         margin-top: -390px;
     }
+
     .service-stage {
         padding-left: 30px;
         font-size: 19px;
     }
+
     .services-account {
         margin-top: -50px;
         padding-left: 30px;
         font-size: 19px;
     }
+
     .accordion-flush {
         padding-left: 20px;
     }

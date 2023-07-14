@@ -33,7 +33,7 @@ if (isset($together) && !empty($together)) {
 <?php
 if ($canEdit == 1 && $userInThisBranch == 1 && isset($ther['contentBranchId'])) {
 ?>
-    <div class="col-12 text-end pr12" style="padding-right:0px;margin-top:-37px;">
+    <div class="col-12 text-end pr12" style="padding-right:0px;margin-top:80px;">
         <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $ther['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
         <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $ther['contentBranchId']]) ?>" target="_blank">Edit[BG](<?= $branchName ?>)</a>
     </div>

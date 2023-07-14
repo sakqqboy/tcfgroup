@@ -609,81 +609,83 @@ class DefaultController extends Controller
 
     public function actionInsertContentBranch()
     {
-      $content = Content::find()->where(["contentName" => "branch"])->one();
-		if (isset($content) && !empty($content)) {
-			$contentDetail = ContentDetail::find()
-				->where(["contentId" => $content->contentId])
-				->andWhere("title!='Bangladesh'")
-				->all();
-
-			foreach ($contentDetail as $cd) :
-				$branch = Branch::find()->select('branchId')
-					->where(["status" => 1, "branchName" => $cd["title"]])
-					->one();
-
-        $master = ContentBranch::find()->where(["contentName" => [
-            'Together',
-            'Business',
-            'Wikipic', 
-            'Branch', 
-            'Contribute', 
-            'Understanding', 
-            'Newservices', 
-            'Nameslider', 
-            'Shapestar', 
-            'Support', 
-            'Companymarket',
-            'Related',
-            'Development',
-            'ServiceLeft',
-            'Serviceright',
-            'Imagecountry',
-            'Topiccountry',
-            'Garmenticon',
-            ]])
-            ->all();
-
-        if(isset($master) && count($master) > 0){
-            foreach ($master as $mter) :
-                $masterDetail = ContentBranchDetail::find()
-                ->where(["contentBranchId" => $mter -> contentBranchId])
+        $content = Content::find()->where(["contentName" => "branch"])->one();
+        if (isset($content) && !empty($content)) {
+            $contentDetail = ContentDetail::find()
+                ->where(["contentId" => $content->contentId])
+                ->andWhere("title!='Bangladesh'")
                 ->all();
-          
-        // if (isset($branches) && count($branches) > 0) {
-        //     foreach ($branches as $branch) :
-                $contentBranch = new ContentBranch();
-                $contentBranch->branchId = $branch->branchId;
-                $contentBranch->contentName = $mter["contentName"];
-                $contentBranch->title = $mter["title"];
-                $contentBranch->detail = $mter["detail"];
-                $contentBranch->status = $mter["status"];
-                $contentBranch->createDateTime = new Expression ('NOW()');
-                $contentBranch->updateDateTime = new Expression ('NOW()');
-                if ($contentBranch->save(false)) {
-                    $contentBranchId = Yii::$app->db->lastInsertID;
 
-                    foreach ($masterDetail as $x) :
-                        $contentBranchDetail = new ContentBranchDetail();
-                        $contentBranchDetail->contentBranchId = $contentBranchId;
-                        $contentBranchDetail->title = $x["title"];
-                        $contentBranchDetail->detail = $x["detail"];
-                        $contentBranchDetail->detail2 = $x["detail2"];
-                        $contentBranchDetail->detail3 = $x["detail3"];
-                        $contentBranchDetail->detail4 = $x["detail4"];
-                        $contentBranchDetail->detail5 = $x["detail5"];
-                        $contentBranchDetail->detail6 = $x["detail6"];
-                        $contentBranchDetail->detail7 = $x["detail7"];
-                        $contentBranchDetail->image = $x["image"];
-                        $contentBranchDetail->url = $x["url"];
-                        $contentBranchDetail->status = $x["status"];
-                        $contentBranchDetail->createDatetime = new Expression ('NOW()');
-                        $contentBranchDetail->updateDatetime = new Expression ('NOW()');
+            foreach ($contentDetail as $cd) :
+                $branch = Branch::find()->select('branchId')
+                    ->where(["status" => 1, "branchName" => $cd["title"]])
+                    ->one();
 
-                        $contentBranchDetail->save(false);
+                $master = ContentBranch::find()->where(["contentName" => [
+                    'Together',
+                    'Business',
+                    'Wikipic',
+                    'Branch',
+                    'Contribute',
+                    'Understanding',
+                    'Newservices',
+                    'Nameslider',
+                    'Shapestar',
+                    'Support',
+                    'Companymarket',
+                    'Related',
+                    'Development',
+                    'ServiceLeft',
+                    'Serviceright',
+                    'Imagecountry',
+                    'Topiccountry',
+                    'Garmenticon',
+                ], "branchId" => 24])
+                    ->asArray()
+                    ->all();
+
+                if (isset($master) && count($master) > 0) {
+                    foreach ($master as $mter) :
+                        $masterDetail = ContentBranchDetail::find()
+                            ->where(["contentBranchId" => $mter["contentBranchId"]])
+                            ->asArray()
+                            ->all();
+
+                        // if (isset($branches) && count($branches) > 0) {
+                        //     foreach ($branches as $branch) :
+                        $contentBranch = new ContentBranch();
+                        $contentBranch->branchId = $branch->branchId;
+                        $contentBranch->contentName = $mter["contentName"];
+                        $contentBranch->title = $mter["title"];
+                        $contentBranch->detail = $mter["detail"];
+                        $contentBranch->status = $mter["status"];
+                        $contentBranch->createDateTime = new Expression('NOW()');
+                        $contentBranch->updateDateTime = new Expression('NOW()');
+                        if ($contentBranch->save(false)) {
+                            $contentBranchId = Yii::$app->db->lastInsertID;
+
+                            foreach ($masterDetail as $x) :
+                                $contentBranchDetail = new ContentBranchDetail();
+                                $contentBranchDetail->contentBranchId = $contentBranchId;
+                                $contentBranchDetail->title = $x["title"];
+                                $contentBranchDetail->detail = $x["detail"];
+                                $contentBranchDetail->detail2 = $x["detail2"];
+                                $contentBranchDetail->detail3 = $x["detail3"];
+                                $contentBranchDetail->detail4 = $x["detail4"];
+                                $contentBranchDetail->detail5 = $x["detail5"];
+                                $contentBranchDetail->detail6 = $x["detail6"];
+                                $contentBranchDetail->detail7 = $x["detail7"];
+                                $contentBranchDetail->image = $x["image"];
+                                $contentBranchDetail->url = $x["url"];
+                                $contentBranchDetail->status = $x["status"];
+                                $contentBranchDetail->createDatetime = new Expression('NOW()');
+                                $contentBranchDetail->updateDatetime = new Expression('NOW()');
+
+                                $contentBranchDetail->save(false);
+                            endforeach;
+                        }
                     endforeach;
                 }
-            endforeach;
-            }
             endforeach;
         }
     }

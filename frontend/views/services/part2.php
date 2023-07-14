@@ -4,7 +4,7 @@ use common\helpers\Path;
 use common\models\ModelMaster;
 
 ?>
-<div class="col-12 pr12 bk-busi">
+<div class="col-12 pr12 bk-busi" style="margin-top:<?= ($canEdit == 1 && $userInThisBranch == 1) ? '3.5px;' : '120.5px;' ?>">
     <!-- <div class="col-12 pr12" style="background: white;padding-bottom: 50px;margin-top:20px;border: black 2px;"> -->
     <div class="row">
         <div class="col-lg-1">

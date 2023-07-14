@@ -609,21 +609,56 @@ class DefaultController extends Controller
 
     public function actionInsertContentBranch()
     {
-        $branches = Branch::find()->select('branchId')->where(["status" => 1])->all();
+      $content = Content::find()->where(["contentName" => "branch"])->one();
+		if (isset($content) && !empty($content)) {
+			$contentDetail = ContentDetail::find()
+				->where(["contentId" => $content->contentId])
+				->andWhere("title!='Bangladesh'")
+				->all();
 
-        $master = ContentBranch::find()->where(["contentBranchId" => 755])->one();
-        $masterDetail = ContentBranchDetail::find()->where(["contentBranchId" => 755])->all();
+			foreach ($contentDetail as $cd) :
+				$branch = Branch::find()->select('branchId')
+					->where(["status" => 1, "branchName" => $cd["title"]])
+					->one();
 
-        if (isset($branches) && count($branches) > 0) {
-            foreach ($branches as $branch) :
+        $master = ContentBranch::find()->where(["contentName" => [
+            'Together',
+            'Business',
+            'Wikipic', 
+            'Branch', 
+            'Contribute', 
+            'Understanding', 
+            'Newservices', 
+            'Nameslider', 
+            'Shapestar', 
+            'Support', 
+            'Companymarket',
+            'Related',
+            'Development',
+            'ServiceLeft',
+            'Serviceright',
+            'Imagecountry',
+            'Topiccountry',
+            'Garmenticon',
+            ]])
+            ->all();
+
+        if(isset($master) && count($master) > 0){
+            foreach ($master as $mter) :
+                $masterDetail = ContentBranchDetail::find()
+                ->where(["contentBranchId" => $mter -> contentBranchId])
+                ->all();
+          
+        // if (isset($branches) && count($branches) > 0) {
+        //     foreach ($branches as $branch) :
                 $contentBranch = new ContentBranch();
                 $contentBranch->branchId = $branch->branchId;
-                $contentBranch->contentName = $master["contentName"];
-                $contentBranch->title = $master["title"];
-                $contentBranch->detail = $master["detail"];
-                $contentBranch->status = $master["status"];
-                $contentBranch->createDateTime = $master["createDateTime"];
-                $contentBranch->updateDateTime = $master["updateDateTime"];
+                $contentBranch->contentName = $mter["contentName"];
+                $contentBranch->title = $mter["title"];
+                $contentBranch->detail = $mter["detail"];
+                $contentBranch->status = $mter["status"];
+                $contentBranch->createDateTime = new Expression ('NOW()');
+                $contentBranch->updateDateTime = new Expression ('NOW()');
                 if ($contentBranch->save(false)) {
                     $contentBranchId = Yii::$app->db->lastInsertID;
 
@@ -641,12 +676,14 @@ class DefaultController extends Controller
                         $contentBranchDetail->image = $x["image"];
                         $contentBranchDetail->url = $x["url"];
                         $contentBranchDetail->status = $x["status"];
-                        $contentBranchDetail->createDatetime = $x["createDatetime"];
-                        $contentBranchDetail->updateDatetime = $x["updateDatetime"];
+                        $contentBranchDetail->createDatetime = new Expression ('NOW()');
+                        $contentBranchDetail->updateDatetime = new Expression ('NOW()');
 
                         $contentBranchDetail->save(false);
                     endforeach;
                 }
+            endforeach;
+            }
             endforeach;
         }
     }

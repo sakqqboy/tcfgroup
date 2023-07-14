@@ -39,8 +39,8 @@ use common\models\ModelMaster;
                             foreach ($branchserpage as $bs) :
                                 if ($i < 8) {
                         ?>
-                                    <a href="<?= Yii::$app->homeUrl . $bs['url'] ?>">
-                                        <p class="no-underline1">
+                                    <a class="no-underline1" href="<?= Yii::$app->homeUrl . $bs['url'] ?>">
+                                        <p>
                                             <img src="<?= Path::backendUrl() . $bs['image'] ?>">
                                             <?= $bs['title'] ?>
                                         </p>
@@ -60,8 +60,8 @@ use common\models\ModelMaster;
                             foreach ($branchserpage as $bs2) :
                                 if ($i > 7 && $i < 16) {
                         ?>
-                                    <a href="<?= Yii::$app->homeUrl . $bs2['url'] ?>">
-                                        <p class="no-underline1">
+                                    <a class="no-underline1" href="<?= Yii::$app->homeUrl . $bs2['url'] ?>">
+                                        <p>
                                             <img src="<?= Path::backendUrl() . $bs2['image'] ?>" class="<?= $bs2['title'] == 'Japan' ? 'width-japan' : '' ?>">
                                             <?= $bs2['title'] ?>
                                         </p>
@@ -80,8 +80,8 @@ use common\models\ModelMaster;
                             foreach ($branchserpage as $bs3) :
                                 if ($i > 15 && $i < 24) {
                         ?>
-                                    <a href="<?= Yii::$app->homeUrl . $bs3['url'] ?>">
-                                        <p class="no-underline1">
+                                    <a class="no-underline1" href="<?= Yii::$app->homeUrl . $bs3['url'] ?>">
+                                        <p>
                                             <img src="<?= Path::backendUrl() . $bs3['image'] ?>">
                                             <?= $bs3['title'] ?>
                                         </p>
@@ -100,8 +100,8 @@ use common\models\ModelMaster;
                             foreach ($branchserpage as $bs4) :
                                 if ($i > 23 && $i < 26) {
                         ?>
-                                    <a href="<?= Yii::$app->homeUrl . $bs4['url'] ?>">
-                                        <p class="no-underline1">
+                                    <a class="no-underline1" href="<?= Yii::$app->homeUrl . $bs4['url'] ?>">
+                                        <p>
                                             <img src="<?= Path::backendUrl() . $bs4['image'] ?>" class="<?= $bs4['title'] == 'Nigeria' ? 'width-japan' : '' ?>">
                                             <?= $bs4['title'] ?>
                                         </p>

@@ -11,19 +11,19 @@
             ?>
             <img src="<?= Path ::backendUrl() ?>image/img/Rectangle.png"><?= $shape['title'] ?>
             <?php
+            if ($canEdit == 1 && $userInThisBranch == 1 && isset($shape['contentBranchId'])) { ?>
+            <div class="col-12">
+                <a class="btn btn-warning bt-line mt-2"
+                    href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $shape['contentBranchId']]) ?>"
+                    target="_blank">Edit(<?= $branchName ?>)</a>
+            </div>
+            <?php
+            }
+            ?>
+            <?php
             }
             ?>
         </div>
-        <?php
-        if ($canEdit == 1 && $userInThisBranch == 1 && isset($shape['contentBranchId'])) { ?>
-        <div class="col-12 text-center">
-            <a class="btn btn-warning bt-line"
-                href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $shape['contentBranchId']]) ?>"
-                target="_blank">Edit(<?= $branchName ?>)</a>
-        </div>
-        <?php
-        }
-        ?>
         <div class="col-lg-3 col-md-6 col-12">
             <?php
             if (isset($shapestar) && count($shapestar) > 0) {
@@ -74,7 +74,7 @@
             </div>
             <?php
             if ($canEdit == 1 && $userInThisBranch == 1 && isset($sup['contentBranchId'])) { ?>
-            <div class="col-12 text-end">
+            <div class="col-12 text-end mb-2">
                 <a class="btn btn-warning bt-line"
                     href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $sup['contentBranchId']]) ?>"
                     target="_blank">Edit(<?= $branchName ?>)</a>
@@ -108,11 +108,21 @@
                     <?php
                     }
                     ?>
+                    <?php
+                    if ($canEdit == 1 && $userInThisBranch == 1 && isset($marketing['contentBranchId'])) { ?>
+                    <div class="col-12 text-end">
+                        <a class="btn btn-warning bt-line"
+                            href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $marketing['contentBranchId']]) ?>"
+                            target="_blank">Edit(Show)(<?= $branchName ?>)</a>
+                    </div>
+                    <?php
+                    }
+                    ?>
                 </a>
             </div>
             <?php
             if ($canEdit == 1 && $userInThisBranch == 1 && isset($marketing['contentBranchId'])) { ?>
-            <div class="col-12 text-end">
+            <div class="col-12 text-end mt-3">
                 <a class="btn btn-warning bt-line"
                     href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $marketing['contentBranchId']]) ?>"
                     target="_blank">Edit(<?= $branchName ?>)</a>

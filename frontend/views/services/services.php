@@ -10,15 +10,18 @@ use yii\bootstrap5\Carousel;
 $this->title = 'services';
 ?>
 
-<?= $this->render('part1', [
-    "together" => $together,
-    "ther" => $ther,
-    "userInThisBranch" => $userInThisBranch,
-    "canEdit" => $canEdit,
-    "branchName" => $branchName,
-]) ?>
+<div class="col-12" id="services-part1">
+    <?= $this->render('part1', [
+        "together" => $together,
+        "ther" => $ther,
+        "userInThisBranch" => $userInThisBranch,
+        "canEdit" => $canEdit,
+        "branchName" => $branchName,
+    ]) ?>
+</div>
 
-<?= $this->render('part2', [
+<div class="col-12" id="services-part2">
+    <?= $this->render('part2', [
     "businessdetail" => $businessdetail,
     "busi" => $busi,
     "wikiimage" => $wikiimage,
@@ -27,7 +30,10 @@ $this->title = 'services';
     "canEdit" => $canEdit,
     "branchName" => $branchName,
 ]) ?>
-<?= $this->render('part3', [
+</div>
+
+<div class="col-12" id="services-part3">
+    <?= $this->render('part3', [
     "standing" => $standing,
     "understanding" => $understanding,
     "canEdit" => $canEdit,
@@ -36,8 +42,10 @@ $this->title = 'services';
     "nameslider" => $nameslider,
     "branchName" => $branchName,
 ]) ?>
+</div>
 
-<?= $this->render('part4', [
+<div class="col-12" id="services-part4">
+    <?= $this->render('part4', [
     "shape" => $shape,
     "shapestar" => $shapestar,
     "support" => $support,
@@ -48,8 +56,10 @@ $this->title = 'services';
     "userInThisBranch" => $userInThisBranch,
     "branchName" => $branchName,
 ]) ?>
+</div>
 
-<?= $this->render('part5', [
+<div class="col-12" id="services-part5">
+    <?= $this->render('part5', [
     "topiccountry" => $topiccountry,
     "branchserpage" => $branchserpage,
     "bsp" => $bsp,
@@ -58,8 +68,10 @@ $this->title = 'services';
     "userInThisBranch" => $userInThisBranch,
     "branchName" => $branchName,
 ]) ?>
+</div>
 
-<?= $this->render('part6', [
+<div class="col-12" id="services-part6">
+    <?= $this->render('part6', [
     "sl" => $sl,
     "dropdown" => $dropdown,
     "serleft" => $serleft,
@@ -69,6 +81,7 @@ $this->title = 'services';
     "userInThisBranch" => $userInThisBranch,
     "branchName" => $branchName,
 ]) ?>
+</div>
 
 <?= $this->render('part7', [
     "dropdown" => $dropdown,

@@ -13,18 +13,18 @@
                     if (isset($standing) && !empty($standing)) {
                     ?>
                         <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"><?= $standing['title'] ?>
+                        <?php
+                        if ($canEdit == 1 && $userInThisBranch == 1 && isset($standing['contentBranchId'])) { ?>
+                            <div class="col-12 mt-2">
+                                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $standing['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
+                            </div>
+                        <?php
+                        }
+                        ?>
                     <?php
                     }
                     ?>
                 </div>
-                <?php
-                if ($canEdit == 1 && $userInThisBranch == 1 && isset($standing['contentBranchId'])) { ?>
-                    <div class="col-12 text-end">
-                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $standing['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
-                    </div>
-                <?php
-                }
-                ?>
                 <div class="col-12 mt-80">
                     <div class="row" style="height: 30px;">
                         <?php

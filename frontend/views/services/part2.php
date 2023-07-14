@@ -4,8 +4,8 @@ use common\helpers\Path;
 use common\models\ModelMaster;
 
 ?>
-<!-- <div class="col-12 pr12 bk-busi"> -->
-<div class="col-12 pr12" style="background: white;padding-bottom: 50px;margin-top:20px;">
+<div class="col-12 pr12 bk-busi">
+    <!-- <div class="col-12 pr12" style="background: white;padding-bottom: 50px;margin-top:20px;border: black 2px;"> -->
     <div class="row">
         <div class="col-lg-1">
             <!-- Empty Space -->
@@ -15,7 +15,7 @@ use common\models\ModelMaster;
                 <?php
                 if (isset($busi) && !empty($busi)) {
                 ?>
-                <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $busi['title'] ?>
+                    <img src="<?= Path::backendUrl() ?>image/img/Rectangle.png"> <?= $busi['title'] ?>
                 <?php
                 }
                 ?>
@@ -24,7 +24,7 @@ use common\models\ModelMaster;
                 <?php
                 if (isset($busi) && !empty($busi)) {
                 ?>
-                <?= $busi['detail'] ?>
+                    <?= $busi['detail'] ?>
                 <?php
                 }
                 ?>
@@ -32,11 +32,9 @@ use common\models\ModelMaster;
             <?php
             if ($canEdit == 1 && $userInThisBranch == 1 && isset($busi['contentBranchId'])) {
             ?>
-            <div class="col-12 text-end pr12 mt-5">
-                <a class="btn btn-warning bt-line"
-                    href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $busi['contentBranchId']]) ?>"
-                    target="_blank">Edit(<?= $branchName ?>)</a>
-            </div>
+                <div class="col-12 text-end pr12 mt-5">
+                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $busi['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
+                </div>
             <?php
             }
             ?>
@@ -46,17 +44,16 @@ use common\models\ModelMaster;
                     $i = 0;
                     foreach ($businessdetail as $bsdt) :
                 ?>
-                <div class="col-3 cardbusiness">
+                        <div class="col-3 cardbusiness">
 
-                    <div class="col-12 cardbu">
-                        <p class="card-title card-title-bu">
-                            <img src="<?= Path::backendUrl() . $bsdt['image'] ?>"
-                                class="<?= $bsdt['title'] == 'ICT & Electronics' ? 'width-ict' : '' ?>">
-                            <?= $bsdt['title'] ?>
-                        </p>
-                        <p class="card-text cardbudetail"><?= $bsdt['detail'] ?></p>
-                    </div>
-                </div>
+                            <div class="col-12 cardbu">
+                                <p class="card-title card-title-bu">
+                                    <img src="<?= Path::backendUrl() . $bsdt['image'] ?>" class="<?= $bsdt['title'] == 'ICT & Electronics' ? 'width-ict' : '' ?>">
+                                    <?= $bsdt['title'] ?>
+                                </p>
+                                <p class="card-text cardbudetail"><?= $bsdt['detail'] ?></p>
+                            </div>
+                        </div>
                 <?php
                         $i++;
                     endforeach;
@@ -65,11 +62,9 @@ use common\models\ModelMaster;
                 <?php
                 if ($canEdit == 1 && $userInThisBranch == 1 && isset($busi['contentBranchId'])) {
                 ?>
-                <div class="col-12 text-end pr12 mt-5">
-                    <a class="btn btn-warning bt-line"
-                        href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $busi['contentBranchId']]) ?>"
-                        target="_blank">Edit(<?= $branchName ?>)</a>
-                </div>
+                    <div class="col-12 text-end pr12 mt-5">
+                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $busi['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
+                    </div>
                 <?php
                 }
                 ?>
@@ -78,18 +73,16 @@ use common\models\ModelMaster;
                 <?php
                 if (isset($wikiimage) && !empty($wikiimage)) {
                 ?>
-                <img class="imgwiki" src="<?= Path::backendUrl() . $wikiimage['image'] ?>">
+                    <img class="imgwiki" src="<?= Path::backendUrl() . $wikiimage['image'] ?>">
                 <?php
                 }
                 ?>
                 <?php
                 if ($canEdit == 1 && $userInThisBranch == 1 && isset($wikiimage['contentBranchId'])) {
                 ?>
-                <div class="col-12 text-end pr12 mt-5">
-                    <a class="btn btn-warning bt-line"
-                        href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $wikiimage['contentBranchId']]) ?>"
-                        target="_blank">Edit(<?= $branchName ?>)</a>
-                </div>
+                    <div class="col-12 text-end pr12 mt-5">
+                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $wikiimage['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
+                    </div>
                 <?php
                 }
                 ?>

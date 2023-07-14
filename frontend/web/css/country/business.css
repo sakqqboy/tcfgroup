@@ -8,8 +8,10 @@
 
 .bk-busi {
     background: white;
-    padding-top: 170px;
+    /* padding-top: 170px; */
     padding-bottom: 50px;
+    /* border: 5px solid red; */
+    margin-top: 11px;
 }
 
 .Bs1 {
@@ -21,7 +23,6 @@
     letter-spacing: 0em;
     text-align: left;
     margin-top: 50px;
-
 }
 
 .cardbusiness {

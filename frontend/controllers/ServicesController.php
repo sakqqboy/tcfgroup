@@ -17,13 +17,6 @@ class ServicesController extends Controller
 {
 	public function actionIndex($hash)
 	{
-
-
-		$icon5 = Content::find()
-			->where(["contentName" => "Garmenticon"])
-			->asArray()
-			->one();
-
 		$userInThisBranch = 0;
 		$canEdit = [];
 		$branchName = $hash;
@@ -256,20 +249,6 @@ class ServicesController extends Controller
 		}
 
 		if (isset($branch) && !empty($branch)) {
-			$bsp = ContentBranch::find()
-				->where(['contentName' => "Branch", "branchId" => $branch["branchId"]])
-				->asArray()
-				->one();
-			if (isset($bsp) && !empty($bsp)) {
-				$branchserpage = ContentBranchDetail::find()
-					->where(["contentBranchId" => $bsp["contentBranchId"], "status" => 1])
-					->asArray()
-					->all();
-			}
-		}
-
-
-		if (isset($branch) && !empty($branch)) {
 			$imgcountry = ContentBranch::find()
 				->where(['contentName' => "Imagecountry", "branchId" => $branch["branchId"]])
 				->asArray()
@@ -294,12 +273,18 @@ class ServicesController extends Controller
 					->all();
 			}
 		}
-
-		if (isset($icon5) && !empty($icon5)) {
-			$garmenticon = ContentDetail::find()
-				->where(["contentId" => $icon5["contentId"], "status" => 1])
+		
+		if (isset($branch) && !empty($branch)) {
+			$icon5 = Content::find()
+				->where(["contentName" => "Garmenticon"])
 				->asArray()
-				->all();
+				->one();
+			if (isset($icon5) && !empty($icon5)) {
+				$garmenticon = ContentDetail::find()
+					->where(["contentId" => $icon5["contentId"], "status" => 1])
+					->asArray()
+					->all();
+			}
 		}
 
 		$canEdit = 0;

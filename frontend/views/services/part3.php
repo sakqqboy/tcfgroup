@@ -53,7 +53,7 @@
                     </div>
                     <?php
                     if ($canEdit == 1 && $userInThisBranch == 1 && isset($std['contentBranchId'])) { ?>
-                        <div class="col-12 text-end">
+                        <div class="col-12 mt-2">
                             <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-branch-detail/' . ModelMaster::encodeParams(["contentBranchId" => $std['contentBranchId']]) ?>" target="_blank">Edit(<?= $branchName ?>)</a>
                         </div>
                     <?php

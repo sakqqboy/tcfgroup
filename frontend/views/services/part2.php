@@ -69,7 +69,7 @@ use common\models\ModelMaster;
                 }
                 ?>
             </div>
-            <div class="col-3 col-md-12 col-12">
+            <div class="col-3 col-md-12 col-12 mb-4">
                 <?php
                 if (isset($wikiimage) && !empty($wikiimage)) {
                 ?>

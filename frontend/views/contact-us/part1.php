@@ -1,0 +1,65 @@
+<?php
+
+use common\helpers\Path;
+use common\models\ModelMaster;
+?>
+
+<div class="col-12">
+    <?php
+    if (isset($contact) && count($contact) > 0) {
+        $i = 0;
+        foreach ($contact as $tact) :
+    ?>
+    <div class="col-12">
+        <img src="<?= Path::backendUrl() . $tact['image'] ?>" class="image-Google-Forms-Job">
+    </div>
+
+    <div class="col-12 line-back">
+        <a href="#" class="no-underline"><i class="fa fa-chevron-left" aria-hidden="true"> <?= $tact['title'] ?></i></a>
+    </div>
+
+    <div class="col-12 name-text-applying">
+        <?= $tact['detail'] ?><span class="txt-cousultant"><?= $tact['detail2'] ?></span>
+    </div>
+    <?php
+            $i++;
+        endforeach;
+    }
+    ?>
+</div>
+<?php
+if ($admin == 1) { ?>
+<div class=" col-12 text-end edit-content">
+    <a class="btn btn-warning bt-line"
+        href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $contactContent['contentId']]) ?>"
+        target="_blank">Edit</a>
+</div>
+<?php
+}
+?>
+
+<div class="col-12 pr12 form-range2">
+    <div class="row">
+        <div class="col-12">
+            <label for="customRange2" class="form-label"></label>
+            <input type="range" class="form-range" min="0" max="4" id="customRange2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <p class="form-font-small"> My Information</p>
+        </div>
+        <div class="col-3 fr-1">
+            <p class="form-font-small"> My Experience</p>
+        </div>
+        <div class="col-3 fr-2">
+            <p class="form-font-small"> Application Question</p>
+        </div>
+        <div class="col-2 fr-3">
+            <p class="form-font-small"> Attechments</p>
+        </div>
+        <div class="col-1 fr-4">
+            <p class="form-font-small"> Review & Submit</p>
+        </div>
+    </div>
+</div>

@@ -33,4 +33,15 @@ class Part extends \frontend\models\tokyoconsulting\master\PartMaster{
     {
         return array_merge(parent::attributeLabels(), []);
     }
+    public static function IsShow($partId) {
+        $isshow = Part::find()
+        ->select('status')
+        ->where(['partName' => $partId])
+        ->one();
+        if(isset($isshow) && !empty($isshow)) {
+            return $isshow -> status;
+        } else {
+            return 0;
+        }
+    }
 }

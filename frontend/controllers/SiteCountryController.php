@@ -29,6 +29,7 @@ use frontend\models\tokyoconsulting\Client;
 use frontend\models\tokyoconsulting\ContentBranch;
 use frontend\models\tokyoconsulting\ContentBranchDetail;
 use frontend\models\tokyoconsulting\Country;
+use frontend\models\tokyoconsulting\Part;
 use PHPUnit\Framework\Constraint\Count;
 use yii\db\Expression;
 use yii\widgets\ContentDecorator;
@@ -797,6 +798,20 @@ class SiteCountryController extends Controller
                 $res["status"] = true;
             }
         }
+        return json_encode($res);
+    }
+    public function actionUpdateShowContent()
+    {
+        $showcontent = Part::find()
+        ->where(["partName" => $_POST["partId"]])
+        ->one();
+
+        if (isset($showcontent) && !empty($showcontent)) {
+            $showcontent -> status = $_POST["switches"];
+
+            $showcontent->save(false);
+        }
+        $res["status"] = true;
         return json_encode($res);
     }
 }

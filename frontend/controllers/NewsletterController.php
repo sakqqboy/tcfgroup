@@ -246,6 +246,7 @@ class NewsletterController extends Controller
             "userInThisBranch" => $userInThisBranch,
             "canEdit" => $canEdit,
             "branchName" => $branchName,
+            "branchId" => $branch['branchId'],
         ]);
     }
 }

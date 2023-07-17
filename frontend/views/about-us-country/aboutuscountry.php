@@ -11,7 +11,7 @@ $this->title = 'about us country';
 ?>
 
 <?php
-    $isShow = Part::IsShow('aboutuscountry-part1');
+    $isShow = Part::IsShow('aboutuscountry-part1', $branchId);
 ?>
 
 <div class="col-12" id="aboutuscountry-part1" style="opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : ''?>">
@@ -36,7 +36,7 @@ $this->title = 'about us country';
 </div>
 
 <?php
-    $isShow = Part::IsShow('aboutuscountry-part2');
+    $isShow = Part::IsShow('aboutuscountry-part2', $branchId);
 ?>
 <div class="col-12" id="aboutuscountry-part2" style="opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : ''?>">
     <?php
@@ -61,7 +61,7 @@ $this->title = 'about us country';
 </div>
 
 <?php
-    $isShow = Part::IsShow('aboutuscountry-part3');
+    $isShow = Part::IsShow('aboutuscountry-part3', $branchId);
 ?>
 <div class="col-12" id="aboutuscountry-part3" style="opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : ''?>">
     <?php
@@ -90,7 +90,7 @@ $this->title = 'about us country';
 </div>
 
 <?php
-    $isShow = Part::IsShow('aboutuscountry-part4');
+    $isShow = Part::IsShow('aboutuscountry-part4', $branchId);
 ?>
 <div class="col-12" id="aboutuscountry-part4" style="opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : ''?>">
     <?php

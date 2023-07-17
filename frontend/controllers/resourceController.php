@@ -154,6 +154,7 @@ class ResourceController extends Controller
 			"description" => $description,
 			"tabledetail" => $tabledetail,
 			"legalDetail" => $legalDetail,
+			"branchId" => $branch['branchId'],
 		]);
 	}
 	public function actionSaveClient()

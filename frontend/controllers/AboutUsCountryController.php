@@ -231,6 +231,7 @@ class AboutUsCountryController extends Controller
             "userInThisBranch" => $userInThisBranch,
             "canEdit" => $canEdit,
             "branchName" => $branchName,
+            "branchId" => $branch['branchId'],
         ]);
     }
 }

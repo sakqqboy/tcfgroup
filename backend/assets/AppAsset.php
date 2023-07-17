@@ -25,6 +25,7 @@ class AppAsset extends AssetBundle
         'css/createcontent.css',
         'css/content_branch.css',
         'css/membertype.css',
+        'css/part.css',
 
 
 

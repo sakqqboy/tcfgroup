@@ -83,6 +83,14 @@
                     </span>
                 </a>
             </li>
+            <li class="li-menu <?= $action == 'index' ? 'bg-list' : '' ?>">
+                <a href="<?= Yii::$app->homeUrl . 'part/part/index' ?>">
+                    <i class="fa fa-file-text fas" aria-hidden="true"></i>
+                    <span class="nav-items">
+                        Part
+                    </span>
+                </a>
+            </li>
         </div>
     </ul>
 </nav>

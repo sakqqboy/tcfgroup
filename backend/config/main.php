@@ -18,6 +18,9 @@ return [
         'content' => [
             'class' => 'backend\modules\content\content',
         ],
+        'part' => [
+            'class' => 'backend\modules\part\part',
+        ],
         'member' => [
             'class' => 'backend\modules\member\member'
         ],

@@ -46,6 +46,7 @@ class AppAsset extends AssetBundle
         'js/client.js',
         'js/contact_us.js',
         'js/service.js',
+        'js/show_content.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

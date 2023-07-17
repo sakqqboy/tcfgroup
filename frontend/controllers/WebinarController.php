@@ -309,7 +309,8 @@ class WebinarController extends Controller
             "canEdit" => $canEdit,
             "userInThisBranch" => $userInThisBranch,
             "webinarDetail" => $webinarDetail,
-            "branchName" => $branchName
+            "branchName" => $branchName,
+            "branchId" => $branch['branchId'],
         ]);
     }
 

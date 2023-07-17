@@ -366,6 +366,7 @@ class ServicesController extends Controller
 			"busi" => $busi,
 			"wikiimage" => $wikiimage,
 			"wiki" => $wiki,
+			"branchId" => $branch['branchId'],
 
 		]);
 	}

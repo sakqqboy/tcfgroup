@@ -690,6 +690,18 @@ class DefaultController extends Controller
             endforeach;
         }
     }
+
+    public function actionDeleteAllBranch()
+    {
+        $contentbr = ContentBranch::find()->where("branchId != 24")->all();
+        if (isset($contentbr) && count($contentbr) > 0) {
+            foreach ($contentbr as $cbr) :
+                ContentBranchDetail::deleteAll(["contentBranchId" => $cbr->contentBranchId]);
+                $cbr->delete();
+            endforeach;
+        }
+    }
+
     public function actionInsertPartBranch()
     {
         $content = Content::find()->where(["contentName" => "branch"])->one();

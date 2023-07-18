@@ -13,21 +13,10 @@ $this->title = 'People';
     $isShow2 = Part::IsShow2('people-part1');
 ?>
 <div class="col-12" id="people-part1" style="opacity: <?= $isShow2 == 0 ? '0.3' : '1' ?>; display: <?= ($isShow2 == 0 && $admin == 0 ) ? 'none' : ''?>">
-    <?php
-        if($admin == 1) {
-    ?>
-        <div class="col-12">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-people-part1" onchange="javascript:showContent('people-part1')" value=" <?= $isShow2 == 1 ? '0' : '1' ?>"  <?= $isShow2 == 1 ? 'checked' : '1' ?>>
-                <label class="form-check-label" for="switch-people-part1">Show</label>
-            </div>
-        </div>
-    <?php
-        }
-    ?>
     <?= $this->render('part1', [
         "people" => $people,
         "admin" => $admin,
+        "isShow2" => $isShow2,
     ]) ?>
 </div>
 

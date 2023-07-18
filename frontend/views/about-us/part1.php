@@ -4,6 +4,18 @@ use common\helpers\Path;
 use common\models\ModelMaster;
 ?>
 
+<?php
+    if($admin == 1) {
+?>
+    <div class="col-12" style="margin-top: 90px; margin-bottom: -85px; position: relative;">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="switch-aboutus-part1" onchange="javascript:showContent('aboutus-part1')" value=" <?= $isShow2 == 1 ? '0' : '1' ?>"  <?= $isShow2 == 1 ? 'checked' : '1' ?>>
+            <label class="form-check-label" for="switch-aboutus-part1">Show</label>
+        </div>
+    </div>
+<?php
+    }
+?>
 <div class="col-12">
     <?php
     if (isset($vision) && count($vision) > 0) {

@@ -15,24 +15,13 @@ $this->title = 'webinar';
     $isShow = Part::IsShow('webinar-part1', $branchId);
 ?>
 <div class="col-12" id="webinar-part1" style="opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : ''?>">
-    <?php
-        if($canEdit == 1 && $userInThisBranch == 1) {
-    ?>
-        <div class="col-12">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part1" onchange="javascript:showContent('webinar-part1')" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
-                <label class="form-check-label" for="switch-webinar-part1">Show</label>
-            </div>
-        </div>
-    <?php
-        }
-    ?>
     <?= $this->render('part1', [
         "webinarvideo" => $webinarvideo,
         "detailvideo" => $detailvideo,
         "userInThisBranch" => $userInThisBranch,
         "canEdit" => $canEdit,
         "branchName" => $branchName,
+        "isShow" => $isShow,
     ]) ?>
 </div>
 

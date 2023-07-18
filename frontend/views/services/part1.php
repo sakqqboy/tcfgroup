@@ -4,7 +4,18 @@ use common\helpers\Path;
 use common\models\ModelMaster;
 ?>
 
-
+<?php
+    if($canEdit == 1 && $userInThisBranch == 1) {
+?>
+    <div class="col-12" style="margin-top: 90px; margin-bottom: -85px;">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="switch-services-part1" onchange="javascript:showContent('services-part1')" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+            <label class="form-check-label" for="switch-services-part1">Show</label>
+        </div>
+    </div>
+<?php
+    }
+?>
 <?php
 if (isset($together) && !empty($together)) {
     $i = 0;

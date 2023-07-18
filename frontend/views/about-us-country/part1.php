@@ -3,6 +3,18 @@ use common\helpers\Path;
 use common\models\ModelMaster;
 ?>
 
+<?php
+    if($canEdit == 1 && $userInThisBranch == 1) {
+?>
+    <div class="col-12" style="margin-top: 90px; margin-bottom: -85px; position: relative;">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="switch-aboutuscountry-part1" onchange="javascript:showContent('aboutuscountry-part1')" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+            <label class="form-check-label" for="switch-aboutuscountry-part1">Show</label>
+        </div>
+    </div>
+<?php
+    }
+?>
 <div class="col-12">
     <?php
     if (isset($bannerabout) && count($bannerabout) > 0) {

@@ -16,7 +16,6 @@ $this->title = 'Career';
 $isShow2 = Part::IsShow2('career-part1');
 ?>
 <div class="col-12" id="career-part1" style="opacity: <?= $isShow2 == 0 ? '0.3' : '1' ?>; display: <?= ($isShow2 == 0 && $admin == 0) ? 'none' : '' ?>">
-
     <?= $this->render('part1', [
         "career" => $career,
         "admin" => $admin,

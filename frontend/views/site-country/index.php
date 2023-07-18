@@ -37,7 +37,7 @@ $isShow = Part::IsShow('admin-branch-part2', $branchId);
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-admin-branch-part2" onchange="javascript:showContent('admin-branch-part2')" value=" <?= $isShow == 1 ? '0' : '1' ?>" <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-admin-branch-part2" onchange="javascript:showContentBranch('admin-branch-part2', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>" <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-admin-branch-part2">Show</label>
             </div>
         </div>
@@ -64,7 +64,7 @@ $isShow = Part::IsShow('admin-branch-part3', $branchId);
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-admin-branch-part3" onchange="javascript:showContent('admin-branch-part3')" value=" <?= $isShow == 1 ? '0' : '1' ?>" <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-admin-branch-part3" onchange="javascript:showContentBranch('admin-branch-part3', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>" <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-admin-branch-part3">Show</label>
             </div>
         </div>
@@ -92,7 +92,7 @@ $isShow = Part::IsShow('admin-branch-part4', $branchId);
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-admin-branch-part4" onchange="javascript:showContent('admin-branch-part4')" value=" <?= $isShow == 1 ? '0' : '1' ?>" <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-admin-branch-part4" onchange="javascript:showContentBranch('admin-branch-part4', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>" <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-admin-branch-part4">Show</label>
             </div>
         </div>
@@ -122,7 +122,7 @@ $isShow = Part::IsShow('admin-branch-part5', $branchId);
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-admin-branch-part5" onchange="javascript:showContent('admin-branch-part5')" value=" <?= $isShow == 1 ? '0' : '1' ?>" <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-admin-branch-part5" onchange="javascript:showContentBranch('admin-branch-part5', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>" <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-admin-branch-part5">Show</label>
             </div>
         </div>
@@ -149,7 +149,7 @@ $isShow = Part::IsShow('admin-branch-part6', $branchId);
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-admin-branch-part6" onchange="javascript:showContent('admin-branch-part6')" value=" <?= $isShow == 1 ? '0' : '1' ?>" <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-admin-branch-part6" onchange="javascript:showContentBranch('admin-branch-part6', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>" <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-admin-branch-part6">Show</label>
             </div>
         </div>

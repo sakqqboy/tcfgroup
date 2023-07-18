@@ -7,6 +7,18 @@ use yii\bootstrap5\Carousel;
 
 <div class="">
     <div class="col-12" style="margin-top: 70px;">
+        <?php
+        if ($admin == 1) {
+        ?>
+            <div class="col-12" style="margin-top: 100px;margin-bottom: -10px;">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="switch-admin-part1" onchange="javascript:showContent('admin-part1')" value=" <?= $isShow2 == 1 ? '0' : '1' ?>" <?= $isShow2 == 1 ? 'checked' : '1' ?>>
+                    <label class="form-check-label" for="switch-admin-part1">Show (Banner)</label>
+                </div>
+            </div>
+        <?php
+        }
+        ?>
         <?php Carousel::widget([]); ?>
 
         <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -55,16 +67,5 @@ use yii\bootstrap5\Carousel;
     <?php
     }
     ?>
-    <?php
-    if ($admin == 1) {
-    ?>
-        <div class="col-12">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-admin-part1" onchange="javascript:showContent('admin-part1')" value=" <?= $isShow2 == 1 ? '0' : '1' ?>" <?= $isShow2 == 1 ? 'checked' : '1' ?>>
-                <label class="form-check-label" for="switch-admin-part1">Show (Banner)</label>
-            </div>
-        </div>
-    <?php
-    }
-    ?>
+
 </div>

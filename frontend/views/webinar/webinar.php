@@ -22,6 +22,7 @@ $this->title = 'webinar';
         "canEdit" => $canEdit,
         "branchName" => $branchName,
         "isShow" => $isShow,
+        "branchId" => $branchId,
     ]) ?>
 </div>
 
@@ -34,7 +35,7 @@ $this->title = 'webinar';
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part2" onchange="javascript:showContent('webinar-part2')" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part2" onchange="javascript:showContentBranch('webinar-part2', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-webinar-part2">Show</label>
             </div>
         </div>
@@ -62,7 +63,7 @@ $this->title = 'webinar';
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part3" onchange="javascript:showContent('webinar-part3')" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part3" onchange="javascript:showContentBranch('webinar-part3', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-webinar-part3">Show</label>
             </div>
         </div>
@@ -86,7 +87,7 @@ $this->title = 'webinar';
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part4" onchange="javascript:showContent('webinar-part3')" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part4" onchange="javascript:showContentBranch('webinar-part4', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-webinar-part4">Show</label>
             </div>
         </div>
@@ -111,7 +112,7 @@ $this->title = 'webinar';
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part5" onchange="javascript:showContent('webinar-part5')" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part5" onchange="javascript:showContentBranch('webinar-part5', <?= $branchId ?>)" value="<?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-webinar-part5">Show</label>
             </div>
         </div>
@@ -130,7 +131,7 @@ $this->title = 'webinar';
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part6 " onchange="javascript:showContent('webinar-part6')" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part6 " onchange="javascript:showContentBranch('webinar-part6', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-webinar-part6">Show</label>
             </div>
         </div>
@@ -155,7 +156,7 @@ $this->title = 'webinar';
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part7 " onchange="javascript:showContent('webinar-part7')" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part7 " onchange="javascript:showContentBranch('webinar-part7', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-webinar-part7">Show</label>
             </div>
         </div>
@@ -179,7 +180,7 @@ $this->title = 'webinar';
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part8 " onchange="javascript:showContent('webinar-part8')" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part8 " onchange="javascript:showContentBranch('webinar-part8', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-webinar-part8">Show</label>
             </div>
         </div>

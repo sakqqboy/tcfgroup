@@ -22,7 +22,7 @@ use common\models\ModelMaster;
     if ($canEdit == 1 && $userInThisBranch == 1) { ?>
     <div class=" col-12 text-end mb-3">
         <a class="btn btn-warning bt-line"
-            href="<?= Path::backendUrl() . 'content/default/content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $tp['contentBranchId']]) ?>"
+            href="<?= Path::backendUrl() . 'content/default/update-content-branch/' . ModelMaster::encodeParams(["contentBranchId" => $tp['contentBranchId']]) ?>"
             target="_blank">Edit(<?= $branchName ?>)</a>
     </div>
     <?php

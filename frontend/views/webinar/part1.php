@@ -9,7 +9,7 @@
 ?>
     <div class="col-12" style="margin-top: 90px; margin-bottom: -85px;">
         <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part1" onchange="javascript:showContent('webinar-part1')" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+            <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part1" onchange="javascript:showContentBranch('webinar-part1', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
             <label class="form-check-label" for="switch-webinar-part1">Show</label>
         </div>
     </div>

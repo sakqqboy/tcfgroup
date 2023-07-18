@@ -9,7 +9,7 @@ use common\models\ModelMaster;
 ?>
     <div class="col-12" style="margin-top: 90px; margin-bottom: -85px;">
         <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="switch-services-part1" onchange="javascript:showContent('services-part1')" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+            <input class="form-check-input" type="checkbox" role="switch" id="switch-services-part1" onchange="javascript:showContentBranch('services-part1', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
             <label class="form-check-label" for="switch-services-part1">Show</label>
         </div>
     </div>

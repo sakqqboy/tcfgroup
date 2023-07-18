@@ -815,4 +815,18 @@ class SiteCountryController extends Controller
         $res["status"] = true;
         return json_encode($res);
     }
+    public function actionUpdateShowContentBranch()
+    {
+        $showcontent = Part::find()
+            ->where(["partName" => $_POST["partId"], "branchId" => $_POST['branchId']])
+            ->one();
+
+        if (isset($showcontent) && !empty($showcontent)) {
+            $showcontent->status = $_POST["switches"];
+
+            $showcontent->save(false);
+        }
+        $res["status"] = true;
+        return json_encode($res);
+    }
 }

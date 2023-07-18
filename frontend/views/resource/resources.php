@@ -21,6 +21,7 @@ $this->title = 'contact';
         "canEdit" => $canEdit,
         "branchName" => $branchName,
         "isShow" => $isShow,
+        "branchId" => $branchId,
     ]) ?>
 </div>
 
@@ -33,7 +34,7 @@ $this->title = 'contact';
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-resources-part2" onchange="javascript:showContent('resources-part2')" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-resources-part2" onchange="javascript:showContentBranch('resources-part2', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-resources-part2">Show</label>
             </div>
         </div>
@@ -58,7 +59,7 @@ $this->title = 'contact';
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-resources-part3" onchange="javascript:showContent('resources-part3')" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-resources-part3" onchange="javascript:showContentBranch('resources-part3', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-resources-part3 ">Show</label>
             </div>
         </div>
@@ -86,7 +87,7 @@ $this->title = 'contact';
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-resources-part4" onchange="javascript:showContent('resources-part4')" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-resources-part4" onchange="javascript:showContentBranch('resources-part4', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-resources-part4 ">Show</label>
             </div>
         </div>

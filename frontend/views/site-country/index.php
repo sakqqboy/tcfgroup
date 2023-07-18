@@ -22,7 +22,8 @@ $isShow = Part::IsShow('admin-branch-part1', $branchId);
         "userInThisBranch" => $userInThisBranch,
         "banner" => $banner,
         "branchName" => $branchName,
-        "isShow" => $isShow
+        "isShow" => $isShow,
+        "branchId" => $branchId,
     ]) ?>
 
 

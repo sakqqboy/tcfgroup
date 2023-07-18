@@ -1,7 +1,8 @@
 <?php
-    use common\helpers\Path;
-    use common\models\ModelMaster;
-    use yii\bootstrap5\Carousel;
+
+use common\helpers\Path;
+use common\models\ModelMaster;
+use yii\bootstrap5\Carousel;
 ?>
 
 <div class="">
@@ -45,10 +46,23 @@
             </button>
         </div>
     </div>
+
     <?php
     if ($admin == 1) { ?>
         <div class=" col-12 text-end edit-content" style="position: relative;">
             <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $index['contentId']]) ?>" target="_blank">Edit</a>
+        </div>
+    <?php
+    }
+    ?>
+    <?php
+    if ($admin == 1) {
+    ?>
+        <div class="col-12">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-admin-part1" onchange="javascript:showContent('admin-part1')" value=" <?= $isShow2 == 1 ? '0' : '1' ?>" <?= $isShow2 == 1 ? 'checked' : '1' ?>>
+                <label class="form-check-label" for="switch-admin-part1">Show (Banner)</label>
+            </div>
         </div>
     <?php
     }

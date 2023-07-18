@@ -256,6 +256,7 @@ class SiteCountryController extends Controller
             "country" => $country,
             "dropdown" => $dropdown,
             "branchName" => $branchName,
+            "branchId" => $branch["branchId"],
             "banner" => $banner
         ]);
     }
@@ -803,11 +804,11 @@ class SiteCountryController extends Controller
     public function actionUpdateShowContent()
     {
         $showcontent = Part::find()
-        ->where(["partName" => $_POST["partId"]])
-        ->one();
+            ->where(["partName" => $_POST["partId"]])
+            ->one();
 
         if (isset($showcontent) && !empty($showcontent)) {
-            $showcontent -> status = $_POST["switches"];
+            $showcontent->status = $_POST["switches"];
 
             $showcontent->save(false);
         }

@@ -3,7 +3,7 @@
 namespace backend\modules\part\controllers;
 
 use backend\models\tokyoconsulting\Branch;
-use common\models\tokyoconsulting\part;
+use backend\models\tokyoconsulting\Part;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;

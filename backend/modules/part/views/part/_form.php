@@ -25,7 +25,7 @@ use yii\widgets\ActiveForm;
                             <div class="col-lg-6 input-part">
                                 Branch Name
                             </div>
-                            <select class="input-part form-control col-lg-6" name="Part[branchId]" required>
+                            <select class="input-part form-control col-lg-6" name="Part[branchId]">
                                 <option value="">Please select your branch</option>
                                 <?php
                                 if (isset($branchs) && count($branchs) > 0) {

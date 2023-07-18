@@ -157,7 +157,7 @@ $isShow = Part::IsShow('newsletter-part7', $branchId);
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-newsletter-part7" onchange="javascript:showContentBranch('newsletter-part7', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? '1' : 'checked' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-newsletter-part7" onchange="javascript:showContentBranch('newsletter-part7', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-newsletter-part7">Show</label>
             </div>
         </div>

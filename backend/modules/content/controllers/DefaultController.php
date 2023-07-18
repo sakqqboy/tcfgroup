@@ -7,6 +7,7 @@ use backend\models\tokyoconsulting\Content;
 use backend\models\tokyoconsulting\ContentBranch;
 use backend\models\tokyoconsulting\ContentBranchDetail;
 use backend\models\tokyoconsulting\ContentDetail;
+use backend\models\tokyoconsulting\Part;
 use common\helpers\Path;
 use common\models\ModelMaster;
 use frontend\models\tokyoconsulting\ContentBranch as TokyoconsultingContentBranch;
@@ -686,6 +687,36 @@ class DefaultController extends Controller
                         }
                     endforeach;
                 }
+            endforeach;
+        }
+    }
+    public function actionInsertPartBranch()
+    {
+        $content = Content::find()->where(["contentName" => "branch"])->one();
+        if (isset($content) && !empty($content)) {
+            $contentDetail = ContentDetail::find()
+                ->where(["contentId" => $content->contentId, "status" => 1])
+                ->andWhere("title!='Bangladesh'")
+                ->all();
+            foreach ($contentDetail as $pb) :
+                $branch = Branch::find()->select('branchId')
+                    ->where(["status" => 1, "branchName" => $pb["title"]])
+                    ->one();
+                $master = Part::find()->where(["branchId" => 24])
+                    ->asArray()
+                    ->all();
+                if (isset($master) && count($master) > 0) {
+                    foreach ($master as $mter) :
+                        $partBranch = new Part();
+                        $partBranch->partName = $mter["partName"];
+                        $partBranch->branchId = $branch->branchId;
+                        $partBranch->status = 1;
+                        $partBranch->createDateTime = new Expression('NOW()');
+                        $partBranch->updateDateTime = new Expression('NOW()');
+                        $partBranch->save(false);
+                    endforeach;
+                }
+
             endforeach;
         }
     }

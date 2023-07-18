@@ -86,8 +86,11 @@ class SiteController extends Controller
      *
      * @return mixed
      */
-
     public function actionIndex()
+    {
+        return $this->redirect(Yii::$app->homeUrl . 'site/home');
+    }
+    public function actionHome()
     {
 
         $dropdown = [];
@@ -174,9 +177,6 @@ class SiteController extends Controller
         $countrypage = [];
         $titleservice = [];
 
-
-
-
         if (isset($index) && !empty($index)) {
             $banners = ContentDetail::find()
                 ->where(["contentId" => $index["contentId"], "status" => 1])
@@ -261,9 +261,7 @@ class SiteController extends Controller
         if (isset($memberTypeAdmin) && !empty($memberTypeAdmin)) {
             $admin = 1;
         }
-        // throw new Exception(count($banners));
-        // throw new Exception(count($branchcountry));
-        // throw new Exception(count($company));
+
 
         return $this->render('index', [
             "banners" => $banners,

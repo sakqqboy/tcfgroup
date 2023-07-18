@@ -622,26 +622,28 @@ class DefaultController extends Controller
                     ->where(["status" => 1, "branchName" => $cd["title"]])
                     ->one();
 
-                $master = ContentBranch::find()->where(["contentName" => [
-                    'Together',
-                    'Business',
-                    'Wikipic',
-                    'Branch',
-                    'Contribute',
-                    'Understanding',
-                    'Newservices',
-                    'Nameslider',
-                    'Shapestar',
-                    'Support',
-                    'Companymarket',
-                    'Related',
-                    'Development',
-                    'ServiceLeft',
-                    'Serviceright',
-                    'Imagecountry',
-                    'Topiccountry',
-                    'Garmenticon',
-                ], "branchId" => 24])
+                $master = ContentBranch::find()->where(
+                    // ["contentName" => [
+                    // 'Together',
+                    // 'Business',
+                    // 'Wikipic',
+                    // 'Branch',
+                    // 'Contribute',
+                    // 'Understanding',
+                    // 'Newservices',
+                    // 'Nameslider',
+                    // 'Shapestar',
+                    // 'Support',
+                    // 'Companymarket',
+                    // 'Related',
+                    // 'Development',
+                    // 'ServiceLeft',
+                    // 'Serviceright',
+                    // 'Imagecountry',
+                    // 'Topiccountry',
+                    // 'Garmenticon',
+                // ], 
+                ["branchId" => 24])
                     ->asArray()
                     ->all();
 
@@ -659,7 +661,7 @@ class DefaultController extends Controller
                         $contentBranch->contentName = $mter["contentName"];
                         $contentBranch->title = $mter["title"];
                         $contentBranch->detail = $mter["detail"];
-                        $contentBranch->status = $mter["status"];
+                        $contentBranch->status = 1;
                         $contentBranch->createDateTime = new Expression('NOW()');
                         $contentBranch->updateDateTime = new Expression('NOW()');
                         if ($contentBranch->save(false)) {
@@ -678,7 +680,7 @@ class DefaultController extends Controller
                                 $contentBranchDetail->detail7 = $x["detail7"];
                                 $contentBranchDetail->image = $x["image"];
                                 $contentBranchDetail->url = $x["url"];
-                                $contentBranchDetail->status = $x["status"];
+                                $contentBranchDetail->status = 1;
                                 $contentBranchDetail->createDatetime = new Expression('NOW()');
                                 $contentBranchDetail->updateDatetime = new Expression('NOW()');
 

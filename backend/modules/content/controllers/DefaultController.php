@@ -642,8 +642,9 @@ class DefaultController extends Controller
                     // 'Imagecountry',
                     // 'Topiccountry',
                     // 'Garmenticon',
-                // ], 
-                ["branchId" => 24])
+                    // ], 
+                    ["branchId" => 24]
+                )
                     ->asArray()
                     ->all();
 
@@ -704,8 +705,10 @@ class DefaultController extends Controller
         }
     }
 
+
     public function actionInsertPartBranch()
     {
+        Part::deleteAll("branchId != 24");
         $content = Content::find()->where(["contentName" => "branch"])->one();
         if (isset($content) && !empty($content)) {
             $contentDetail = ContentDetail::find()

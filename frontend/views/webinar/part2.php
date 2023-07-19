@@ -39,11 +39,33 @@ use common\models\ModelMaster;
                             </div>
                         </div>
 
-                        <div class="col-6 img-iconday">
-                            <img src="<?= Path::backendUrl() ?>image/img/button-1.png" class="img-button">
-                            <img src="<?= Path::backendUrl() ?>image/img/button-2.png" class="img-button">
-                            <img src="<?= Path::backendUrl() ?>image/img/button-4.png" class="img-button">
-                            <img src="<?= Path::backendUrl() ?>image/img/button-3.png" class="img-button">
+                        <div class="col-lg-6 col-md-6 col-6 img-iconday">
+                            <div class="row">
+                                <div class="col-3">
+                                    <span class="badge badg-dayss">
+                                        <strong class="strong-days">09</strong>
+                                        <p class="dayss">days</p>
+                                    </span>
+                                </div>
+                                <div class="col-3">
+                                    <span class="badge badg-dayss">
+                                        <strong class="strong-days">14</strong>
+                                        <p class="dayss">Hours</p>
+                                    </span>
+                                </div>
+                                <div class="col-3">
+                                    <span class="badge badg-dayss">
+                                        <strong class="strong-days">35</strong>
+                                        <p class="dayss">Mins</p>
+                                    </span>
+                                </div>
+                                <div class="col-3">
+                                    <span class="badge badg-dayss">
+                                        <strong class="strong-days">42</strong>
+                                        <p class="dayss">Secs</p>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 <?php

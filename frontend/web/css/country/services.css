@@ -21,6 +21,7 @@
     color: #FFFFFF;
 }
 
+
 .banner-box-service {
     margin-top: 91px;
     /* border: black solid thin; */
@@ -456,7 +457,7 @@
 
 @media(max-width: 768px) {
     .serviecs-h1 {
-        padding-top: 220px;
+        padding-top: 250px;
         font-size: 20px;
         padding-left: 20px;
     }
@@ -599,5 +600,14 @@
 
     .accordion-flush {
         padding-left: 20px;
+    }
+
+    .button-start {
+        margin-top: -140px;
+        margin-left: -20px;
+    }
+
+    .title-busi {
+        margin-top: -30px;
     }
 }

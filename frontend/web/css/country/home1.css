@@ -45,6 +45,21 @@
     margin-left: 0px;
 }
 
+.strong-days {
+    font-size: 30px;
+}
+
+.dayss {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.badg-dayss {
+    height: 60px;
+    width: 60px;
+    background-color: #265AA7;
+}
+
 .table-calendar {
     color: #265AA7;
     font-family: 'Klavika';
@@ -111,9 +126,7 @@
     margin-top: 40px;
     min-height: 100px;
     padding-top: 20px;
-
 }
-
 
 .home2 {
     font-size: 13px;
@@ -135,10 +148,6 @@
     width: 500px;
     margin-left: -120px;
     padding-top: 60px;
-}
-
-.img-button {
-    width: 60px;
 }
 
 .title-topic {
@@ -441,5 +450,18 @@
         padding-left: 30px;
     }
 
+    .dayss {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    .badg-dayss {
+        height: 50px;
+        width: 55px;
+    }
+
+    .strong-days {
+        font-size: 20px;
+    }
 
 }

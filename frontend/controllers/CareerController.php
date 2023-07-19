@@ -158,7 +158,6 @@ class CareerController extends Controller
         $card = [];
         $footercontact = [];
 
-
         if (isset($jobtcf) && !empty($jobtcf)) {
             $career = ContentDetail::find()
                 ->where(["contentId" => $jobtcf["contentId"], "status" => 1])
@@ -279,7 +278,8 @@ class CareerController extends Controller
             "card" => $card,
             "footercontact" => $footercontact,
             "admin" => $admin,
-            "vo" => $vo
+            "vo" => $vo,
+            "sh" => $sh,
         ]);
     }
 }

@@ -6,9 +6,7 @@ use common\models\ModelMaster;
 
 <div class="col-12  mt-50 col-background">
     <?php
-    if (isset($show) && count($show) > 0) {
-        $i = 0;
-        foreach ($show as $sh) :
+    if (isset($sh) && count($sh) > 0) {
     ?>
     <div class="col-12 Global-Business">
         <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $sh['title'] ?>
@@ -16,10 +14,17 @@ use common\models\ModelMaster;
     <div class="col-12 text-TCG">
         <?= $sh['detail'] ?>
     </div>
-
     <?php
-            $i++;
-        endforeach;
+        if ($admin == 1) { ?>
+    <div class=" col-12 edit-content" style=>
+        <a class="btn btn-warning bt-line" style="margin-left: 350px;"
+            href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $sh['contentId']]) ?>"
+            target="_blank">Edit</a>
+    </div>
+    <?php
+        }
+        ?>
+    <?php
     }
     ?>
 

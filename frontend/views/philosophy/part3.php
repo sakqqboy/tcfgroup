@@ -17,8 +17,7 @@ use common\models\ModelMaster;
                     <p class="YASUNARI"><?= $we['detail2'] ?></p>
                     <?php
                     if ($admin == 1) { ?>
-                        <div class=" col-12 text-end edit-content">
-
+                        <div class=" col-12 text-end" style="position: relative;">
                             <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $we['contentId']]) ?>" target="_blank">Edit</a>
                         </div>
                     <?php

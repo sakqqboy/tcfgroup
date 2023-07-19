@@ -2,10 +2,10 @@
 
 namespace frontend\controllers;
 
-use backend\models\tokyoconsulting\Branch;
+use frontend\models\tokyoconsulting\Branch;
 use backend\models\tokyoconsulting\MemberHasType;
 use yii\web\Controller;
-use common\models\tokyoconsulting\Content;
+use frontend\models\tokyoconsulting\Content;
 use frontend\models\tokyoconsulting\ContentDetail;
 use frontend\models\tokyoconsulting\Country;
 use Yii;

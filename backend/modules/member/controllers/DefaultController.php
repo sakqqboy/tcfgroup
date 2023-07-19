@@ -60,7 +60,7 @@ class DefaultController extends Controller
             $member = new Member();
             $member->prefix = $_POST["prefix"];
             $member->username = $_POST["username"];
-            $member->password_hash = $_POST["password"];
+            $member->password_hash = md5($_POST["password"]);
             $member->memberFirstName = $_POST["firstname"];
             $member->memberLastName = $_POST["lastname"];
             $member->memberNickName = $_POST["nickname"];
@@ -201,7 +201,7 @@ class DefaultController extends Controller
             if (isset($member) && !empty($member)) {
                 $member->prefix = $_POST["prefix"];
                 $member->username = $_POST["username"];
-                $member->password_hash = $_POST["password"];
+                $member->password_hash = md5($_POST["password"]);
                 $member->memberFirstName = $_POST["firstname"];
                 $member->memberLastName = $_POST["lastname"];
                 $member->memberNickName = $_POST["nickname"];

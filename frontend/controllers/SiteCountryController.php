@@ -2,8 +2,6 @@
 
 namespace frontend\controllers;
 
-use backend\models\tokyoconsulting\ContentBranchDetail as TokyoconsultingContentBranchDetail;
-use backend\models\tokyoconsulting\Country as TokyoconsultingCountry;
 use frontend\models\tokyoconsulting\Member;
 use frontend\models\tokyoconsulting\MemberHasType;
 use frontend\models\ResendVerificationEmailForm;
@@ -16,9 +14,8 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
 use common\models\ModelMaster;
-use common\models\tokyoconsulting\Content;
-use common\models\tokyoconsulting\ContentBranchDetail as ModelsTokyoconsultingContentBranchDetail;
-use common\models\tokyoconsulting\ContentDetail;
+use frontend\models\tokyoconsulting\Content;
+use frontend\models\tokyoconsulting\ContentDetail;
 use Exception;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;

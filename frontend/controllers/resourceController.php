@@ -2,12 +2,12 @@
 
 namespace frontend\controllers;
 
-use backend\models\tokyoconsulting\Branch;
-use backend\models\tokyoconsulting\Client;
-use backend\models\tokyoconsulting\ContentBranch;
-use backend\models\tokyoconsulting\ContentBranchDetail;
-use backend\models\tokyoconsulting\Country;
-use backend\models\tokyoconsulting\Member;
+use frontend\models\tokyoconsulting\Branch;
+use frontend\models\tokyoconsulting\Client;
+use frontend\models\tokyoconsulting\ContentBranch;
+use frontend\models\tokyoconsulting\ContentBranchDetail;
+use frontend\models\tokyoconsulting\Country;
+use frontend\models\tokyoconsulting\Member;
 use Exception;
 use frontend\models\tokyoconsulting\Content;
 use frontend\models\tokyoconsulting\ContentDetail;

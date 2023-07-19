@@ -2,11 +2,11 @@
 
 namespace frontend\controllers;
 
-use backend\models\tokyoconsulting\MemberHasType;
+use frontend\models\tokyoconsulting\MemberHasType;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\models\tokyoconsulting\Content;
+use frontend\models\tokyoconsulting\Content;
 use frontend\models\tokyoconsulting\ContentDetail;
 use Yii;
 
@@ -70,7 +70,7 @@ class PeopleController extends Controller
      * @return mixed
      */
 
-public function actionIndex()
+    public function actionIndex()
     {
 
         $at = Content::find()
@@ -181,7 +181,7 @@ public function actionIndex()
 
             $admin = 1;
         }
-        
+
         return $this->render('people', [
             "people" => $people,
             "textmain" => $textmain,

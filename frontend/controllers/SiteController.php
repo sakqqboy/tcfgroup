@@ -273,6 +273,7 @@ class SiteController extends Controller
             "branchcountry" => $branchcountry,
             "countrypage" => $countrypage,
             "titleservice" => $titleservice,
+            "sertitle" => $sertitle,
             "admin" => $admin,
             "index" => $index,
             "pp" => $b,

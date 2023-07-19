@@ -11,17 +11,18 @@ use common\models\ModelMaster;
         <div class="col-12 pt-20 Global-Business">
             <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $n['title'] ?>
         </div>
-        <div class="col-12 text-TCG">
-            <?= $n['detail'] ?>
-        </div>
         <?php
         if ($admin == 1) { ?>
-            <div class=" col-12 edit-content">
-                <a class="btn btn-warning bt-line" style="margin-left: 350px;" href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $n['contentId']]) ?>" target="_blank">Edit</a>
+            <div class="col-12 text-end">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $n['contentId']]) ?>" target="_blank">Edit</a>
             </div>
         <?php
         }
         ?>
+        <div class="col-12 text-TCG">
+            <?= $n['detail'] ?>
+        </div>
+
     <?php
 
     }

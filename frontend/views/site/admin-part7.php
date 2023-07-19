@@ -21,6 +21,12 @@ use common\models\ModelMaster;
             <?= $subtopicDetail['title'] ?>
         <?php
         }
+        if ($admin == 1) { ?>
+            <div class=" col-12 edit-content text-end">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $subtopicDetail['contentId']]) ?>" target="_blank">Edit</a>
+            </div>
+        <?php
+        }
         ?>
     </div>
     <div class="col-12 If-you mt-10">

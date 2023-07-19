@@ -18,13 +18,11 @@ use common\models\ModelMaster;
                     </div>
                     <?php
                     if ($admin == 1) { ?>
-                        <div class=" col-12 edit-content">
-                            <a class="btn btn-warning bt-line" style="margin-left: 440px;" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $sertitle['contentId']]) ?>" target="_blank">Edit</a>
+                        <div class=" col-12 text-end">
+                            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $sertitle['contentId']]) ?>" target="_blank">Edit</a>
                         </div>
                     <?php
                     }
-                    ?>
-                    <?php
                     $i++;
                 endforeach;
             }

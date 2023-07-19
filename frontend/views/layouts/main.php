@@ -91,7 +91,9 @@ AppAsset::register($this);
             }
         }
         ?>
-        <?= $content ?>
+        <div class="col-12" style="margin-top: 90px;">
+            <?= $content ?>
+        </div>
     </main>
 
     <div class="">

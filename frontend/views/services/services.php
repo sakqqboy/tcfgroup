@@ -12,9 +12,9 @@ $this->title = 'services';
 ?>
 
 <?php
-    $isShow = Part::IsShow('services-part1', $branchId);
+$isShow = Part::IsShow('services-part1', $branchId);
 ?>
-<div class="col-12" id="services-part1" style="opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : ''?>">
+<div class="col-12" id="services-part1" style="opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : '' ?>">
     <?= $this->render('part1', [
         "together" => $together,
         "ther" => $ther,
@@ -27,162 +27,162 @@ $this->title = 'services';
 </div>
 
 <?php
-    $isShow = Part::IsShow('services-part2', $branchId);
+$isShow = Part::IsShow('services-part2', $branchId);
 ?>
-<div class="col-12" id="services-part2" style="opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : ''?>">
+<div class="col-12" id="services-part2" style="opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : '' ?>">
     <?php
-        if($canEdit == 1 && $userInThisBranch == 1) {
+    if ($canEdit == 1 && $userInThisBranch == 1) {
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-services-part2" onchange="javascript:showContentBranch('services-part2', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-services-part2" onchange="javascript:showContentBranch('services-part2', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>" <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-services-part2">Show</label>
             </div>
         </div>
     <?php
-        }
+    }
     ?>
     <?= $this->render('part2', [
-    "businessdetail" => $businessdetail,
-    "busi" => $busi,
-    "wikiimage" => $wikiimage,
-    "wiki" => $wiki,
-    "userInThisBranch" => $userInThisBranch,
-    "canEdit" => $canEdit,
-    "branchName" => $branchName,
-]) ?>
+        "businessdetail" => $businessdetail,
+        "busi" => $busi,
+        "wikiimage" => $wikiimage,
+        "wiki" => $wiki,
+        "userInThisBranch" => $userInThisBranch,
+        "canEdit" => $canEdit,
+        "branchName" => $branchName,
+    ]) ?>
 </div>
 
 <?php
-    $isShow = Part::IsShow('services-part3', $branchId);
+$isShow = Part::IsShow('services-part3', $branchId);
 ?>
-<div class="col-12" id="services-part3" style="opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : ''?>">
+<div class="col-12" id="services-part3" style="margin-top: 100px;margin-bottom: -10px; opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : '' ?>">
     <?php
-        if($canEdit == 1 && $userInThisBranch == 1) {
+    if ($canEdit == 1 && $userInThisBranch == 1) {
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-services-part3" onchange="javascript:showContentBranch('services-part3', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-services-part3" onchange="javascript:showContentBranch('services-part3', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>" <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-services-part3">Show</label>
             </div>
         </div>
     <?php
-        }
+    }
     ?>
     <?= $this->render('part3', [
-    "standing" => $standing,
-    "understanding" => $understanding,
-    "canEdit" => $canEdit,
-    "userInThisBranch" => $userInThisBranch,
-    "newservices" => $newservices,
-    "nameslider" => $nameslider,
-    "branchName" => $branchName,
-]) ?>
+        "standing" => $standing,
+        "understanding" => $understanding,
+        "canEdit" => $canEdit,
+        "userInThisBranch" => $userInThisBranch,
+        "newservices" => $newservices,
+        "nameslider" => $nameslider,
+        "branchName" => $branchName,
+    ]) ?>
 </div>
 
 <?php
-    $isShow = Part::IsShow('services-part4', $branchId);
+$isShow = Part::IsShow('services-part4', $branchId);
 ?>
-<div class="col-12" id="services-part4" style="opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : ''?>">
+<div class="col-12" id="services-part4" style="margin-top: 20px; opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : '' ?>">
     <?php
-        if($canEdit == 1 && $userInThisBranch == 1) {
+    if ($canEdit == 1 && $userInThisBranch == 1) {
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-services-part4" onchange="javascript:showContentBranch('services-part4', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-services-part4" onchange="javascript:showContentBranch('services-part4', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>" <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-services-part4">Show</label>
             </div>
         </div>
     <?php
-        }
+    }
     ?>
     <?= $this->render('part4', [
-    "shape" => $shape,
-    "shapestar" => $shapestar,
-    "support" => $support,
-    "marketing" => $marketing,
-    "companymarket" => $companymarket,
-    "related" => $related,
-    "canEdit" => $canEdit,
-    "userInThisBranch" => $userInThisBranch,
-    "branchName" => $branchName,
-]) ?>
+        "shape" => $shape,
+        "shapestar" => $shapestar,
+        "support" => $support,
+        "marketing" => $marketing,
+        "companymarket" => $companymarket,
+        "related" => $related,
+        "canEdit" => $canEdit,
+        "userInThisBranch" => $userInThisBranch,
+        "branchName" => $branchName,
+    ]) ?>
 </div>
 
 <?php
-    $isShow = Part::IsShow('services-part5', $branchId);
+$isShow = Part::IsShow('services-part5', $branchId);
 ?>
-<div class="col-12" id="services-part5" style="opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : ''?>">
+<div class="col-12" id="services-part5" style="opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : '' ?>">
     <?php
-        if($canEdit == 1 && $userInThisBranch == 1) {
+    if ($canEdit == 1 && $userInThisBranch == 1) {
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-services-part5" onchange="javascript:showContentBranch('services-part5', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-services-part5" onchange="javascript:showContentBranch('services-part5', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>" <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-services-part5">Show</label>
             </div>
         </div>
     <?php
-        }
+    }
     ?>
     <?= $this->render('part5', [
-    "topiccountry" => $topiccountry,
-    "branchserpage" => $branchserpage,
-    "bsp" => $bsp,
-    "imgcountrydetail" => $imgcountrydetail,
-    "canEdit" => $canEdit,
-    "userInThisBranch" => $userInThisBranch,
-    "branchName" => $branchName,
-]) ?>
+        "topiccountry" => $topiccountry,
+        "branchserpage" => $branchserpage,
+        "bsp" => $bsp,
+        "imgcountrydetail" => $imgcountrydetail,
+        "canEdit" => $canEdit,
+        "userInThisBranch" => $userInThisBranch,
+        "branchName" => $branchName,
+    ]) ?>
 </div>
 
 <?php
-    $isShow = Part::IsShow('services-part6', $branchId);
+$isShow = Part::IsShow('services-part6', $branchId);
 ?>
-<div class="col-12" id="services-part6" style="opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : ''?>">
+<div class="col-12" id="services-part6" style="opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : '' ?>">
     <?php
-        if($canEdit == 1 && $userInThisBranch == 1) {
+    if ($canEdit == 1 && $userInThisBranch == 1) {
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-services-part6" onchange="javascript:showContentBranch('services-part6', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-services-part6" onchange="javascript:showContentBranch('services-part6', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>" <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-services-part6">Show</label>
             </div>
         </div>
     <?php
-        }
+    }
     ?>
     <?= $this->render('part6', [
-    "sl" => $sl,
-    "dropdown" => $dropdown,
-    "serleft" => $serleft,
-    "sr" => $sr,
-    "serright" => $serright,
-    "canEdit" => $canEdit,
-    "userInThisBranch" => $userInThisBranch,
-    "branchName" => $branchName,
-]) ?>
+        "sl" => $sl,
+        "dropdown" => $dropdown,
+        "serleft" => $serleft,
+        "sr" => $sr,
+        "serright" => $serright,
+        "canEdit" => $canEdit,
+        "userInThisBranch" => $userInThisBranch,
+        "branchName" => $branchName,
+    ]) ?>
 </div>
 
 <?php
-    $isShow = Part::IsShow('services-part7', $branchId);
+$isShow = Part::IsShow('services-part7', $branchId);
 ?>
-<div class="col-12" id="services-part7" style="opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : ''?>">
+<div class="col-12" id="services-part7" style="opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : '' ?>">
     <?php
-        if($canEdit == 1 && $userInThisBranch == 1) {
+    if ($canEdit == 1 && $userInThisBranch == 1) {
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-services-part7" onchange="javascript:showContentBranch('services-part7', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-services-part7" onchange="javascript:showContentBranch('services-part7', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>" <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-services-part7">Show</label>
             </div>
         </div>
     <?php
-        }
+    }
     ?>
-<?= $this->render('part7', [
-    "dropdown" => $dropdown,
-    "canEdit" => $canEdit,
-    "userInThisBranch" => $userInThisBranch,
-    "branchName" => $branchName,
-]) ?>
+    <?= $this->render('part7', [
+        "dropdown" => $dropdown,
+        "canEdit" => $canEdit,
+        "userInThisBranch" => $userInThisBranch,
+        "branchName" => $branchName,
+    ]) ?>

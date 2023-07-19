@@ -74,6 +74,7 @@ $isShow2 = Part::IsShow2('admin-part3');
     ?>
     <?= $this->render('admin-part3', [
         "titleservice" => $titleservice,
+        "sertitle" => $sertitle,
         "company" => $company,
         "c" => $c,
         "admin" => $admin,

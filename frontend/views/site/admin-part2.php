@@ -16,7 +16,7 @@ use common\models\ModelMaster;
         </div>
         <?php
         if ($admin == 1) { ?>
-            <div class=" col-12 edit-content" style=>
+            <div class=" col-12 edit-content">
                 <a class="btn btn-warning bt-line" style="margin-left: 350px;" href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $n['contentId']]) ?>" target="_blank">Edit</a>
             </div>
         <?php

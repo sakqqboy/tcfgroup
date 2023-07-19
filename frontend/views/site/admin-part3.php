@@ -1,6 +1,7 @@
 <?php
-    use common\helpers\Path;
-    use common\models\ModelMaster;
+
+use common\helpers\Path;
+use common\models\ModelMaster;
 ?>
 
 <div class="col-12 pr12">
@@ -15,6 +16,14 @@
                     <div class="col-lg-12 text-establish">
                         <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $sertitle['title'] ?>
                     </div>
+                    <?php
+                    if ($admin == 1) { ?>
+                        <div class=" col-12 edit-content">
+                            <a class="btn btn-warning bt-line" style="margin-left: 440px;" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $sertitle['contentId']]) ?>" target="_blank">Edit</a>
+                        </div>
+                    <?php
+                    }
+                    ?>
                     <?php
                     $i++;
                 endforeach;

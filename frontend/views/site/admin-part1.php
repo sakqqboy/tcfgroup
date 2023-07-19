@@ -61,7 +61,7 @@ use yii\bootstrap5\Carousel;
 
     <?php
     if ($admin == 1) { ?>
-        <div class=" col-12 text-end edit-content" style="position: relative;">
+        <div class=" col-12 text-end edit-content" style="position: relative;z-index:99;">
             <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $index['contentId']]) ?>" target="_blank">Edit</a>
         </div>
     <?php

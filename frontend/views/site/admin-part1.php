@@ -6,7 +6,7 @@ use yii\bootstrap5\Carousel;
 ?>
 
 <div class="">
-    <div class="col-12" style="margin-top: 70px;">
+    <div class="col-12">
         <?php
         if ($admin == 1) {
         ?>

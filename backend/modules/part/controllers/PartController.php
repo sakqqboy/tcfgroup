@@ -4,6 +4,8 @@ namespace backend\modules\part\controllers;
 
 use backend\models\tokyoconsulting\Branch;
 use backend\models\tokyoconsulting\Part;
+use common\models\ModelMaster;
+use Yii;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -163,5 +165,42 @@ class PartController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+    public function actionSearchPart()
+    {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
+        return $this->redirect('content-branch-result/' . ModelMaster::encodeParams([
+            "pn" => $_POST['pn'],
+            "branchId" => $_POST["branchId"],
+        ]));
+    }
+
+    public function actionPartResult($hash)
+    {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
+
+        $param = ModelMaster::decodeParams($hash);
+
+        $contentpart = Part::find()
+            ->where(['branchId' => $param["branchId"]])
+            ->andWhere('partName LIKE :pn', [':pn' => '%' . $param["pn"] . '%'])
+            ->all();
+
+        $branchs = Branch::find()
+            ->where("status=1")
+            ->orderBy('branchName')
+            ->asArray()
+            ->all();
+
+        return $this->render('content_branch', [
+            "contentpart" => $contentpart,
+            "branchs" => $branchs,
+            "pn" => $param["pn"],
+            "branchId" => $param["branchId"],
+        ]);
     }
 }

@@ -15,7 +15,8 @@ $this->title = 'Career';
 <?php
 $isShow2 = Part::IsShow2('career-part1');
 ?>
-<div class="col-12" id="career-part1" style="opacity: <?= $isShow2 == 0 ? '0.3' : '1' ?>; display: <?= ($isShow2 == 0 && $admin == 0) ? 'none' : '' ?>">
+<div class="col-12" id="career-part1"
+    style="opacity: <?= $isShow2 == 0 ? '0.3' : '1' ?>; display: <?= ($isShow2 == 0 && $admin == 0) ? 'none' : '' ?>">
     <?= $this->render('part1', [
         "career" => $career,
         "admin" => $admin,
@@ -26,16 +27,19 @@ $isShow2 = Part::IsShow2('career-part1');
 <?php
 $isShow2 = Part::IsShow2('career-part2');
 ?>
-<div class="col-12" id="career-part2" style="opacity: <?= $isShow2 == 0 ? '0.3' : '1' ?>; display: <?= ($isShow2 == 0 && $admin == 0) ? 'none' : '' ?>">
+<div class="col-12" id="career-part2"
+    style="opacity: <?= $isShow2 == 0 ? '0.3' : '1' ?>; display: <?= ($isShow2 == 0 && $admin == 0) ? 'none' : '' ?>">
     <?php
     if ($admin == 1) {
     ?>
-        <div class="col-12">
-            <div class="form-check form-switch" style="margin-bottom:-320px;margin-top:280px;position:relative;">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-career-part2" onchange="javascript:showContent('career-part2')" value=" <?= $isShow2 == 1 ? '0' : '1' ?>" <?= $isShow2 == 1 ? 'checked' : '1' ?>>
-                <label class="form-check-label" for="switch-career-part2">Show</label>
-            </div>
+    <div class="col-12">
+        <div class="form-check form-switch" style="margin-bottom:-320px;margin-top:280px;position:relative;">
+            <input class="form-check-input" type="checkbox" role="switch" id="switch-career-part2"
+                onchange="javascript:showContent('career-part2')" value=" <?= $isShow2 == 1 ? '0' : '1' ?>"
+                <?= $isShow2 == 1 ? 'checked' : '1' ?>>
+            <label class="form-check-label" for="switch-career-part2">Show</label>
         </div>
+    </div>
     <?php
     }
     ?>
@@ -50,16 +54,19 @@ $isShow2 = Part::IsShow2('career-part2');
 <?php
 $isShow2 = Part::IsShow2('career-part3');
 ?>
-<div class="col-12" id="career-part3" style="opacity: <?= $isShow2 == 0 ? '0.3' : '1' ?>; display: <?= ($isShow2 == 0 && $admin == 0) ? 'none' : '' ?>">
+<div class="col-12" id="career-part3"
+    style="opacity: <?= $isShow2 == 0 ? '0.3' : '1' ?>; display: <?= ($isShow2 == 0 && $admin == 0) ? 'none' : '' ?>">
     <?php
     if ($admin == 1) {
     ?>
-        <div class="col-12">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-career-part3" onchange="javascript:showContent('career-part3')" value=" <?= $isShow2 == 1 ? '0' : '1' ?>" <?= $isShow2 == 1 ? 'checked' : '1' ?>>
-                <label class="form-check-label" for="switch-career-part3">Show</label>
-            </div>
+    <div class="col-12">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="switch-career-part3"
+                onchange="javascript:showContent('career-part3')" value=" <?= $isShow2 == 1 ? '0' : '1' ?>"
+                <?= $isShow2 == 1 ? 'checked' : '1' ?>>
+            <label class="form-check-label" for="switch-career-part3">Show</label>
         </div>
+    </div>
     <?php
     }
     ?>
@@ -74,16 +81,19 @@ $isShow2 = Part::IsShow2('career-part3');
 <?php
 $isShow2 = Part::IsShow2('career-part4');
 ?>
-<div class="col-12" id="career-part4" style="opacity: <?= $isShow2 == 0 ? '0.3' : '1' ?>; display: <?= ($isShow2 == 0 && $admin == 0) ? 'none' : '' ?>">
+<div class="col-12" id="career-part4"
+    style="opacity: <?= $isShow2 == 0 ? '0.3' : '1' ?>; display: <?= ($isShow2 == 0 && $admin == 0) ? 'none' : '' ?>">
     <?php
     if ($admin == 1) {
     ?>
-        <div class="col-12">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-career-part4" onchange="javascript:showContent('career-part4')" value=" <?= $isShow2 == 1 ? '0' : '1' ?>" <?= $isShow2 == 1 ? 'checked' : '1' ?>>
-                <label class="form-check-label" for="switch-career-part4">Show</label>
-            </div>
+    <div class="col-12">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="switch-career-part4"
+                onchange="javascript:showContent('career-part4')" value=" <?= $isShow2 == 1 ? '0' : '1' ?>"
+                <?= $isShow2 == 1 ? 'checked' : '1' ?>>
+            <label class="form-check-label" for="switch-career-part4">Show</label>
         </div>
+    </div>
     <?php
     }
     ?>
@@ -97,16 +107,19 @@ $isShow2 = Part::IsShow2('career-part4');
 <?php
 $isShow2 = Part::IsShow2('career-part5');
 ?>
-<div class="col-12" id="career-part5" style="opacity: <?= $isShow2 == 0 ? '0.3' : '1' ?>; display: <?= ($isShow2 == 0 && $admin == 0) ? 'none' : '' ?>">
+<div class="col-12" id="career-part5"
+    style="opacity: <?= $isShow2 == 0 ? '0.3' : '1' ?>; display: <?= ($isShow2 == 0 && $admin == 0) ? 'none' : '' ?>">
     <?php
     if ($admin == 1) {
     ?>
-        <div class="col-12">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-career-part5" onchange="javascript:showContent('career-part5')" value=" <?= $isShow2 == 1 ? '0' : '1' ?>" <?= $isShow2 == 1 ? 'checked' : '1' ?>>
-                <label class="form-check-label" for="switch-career-part5">Show</label>
-            </div>
+    <div class="col-12">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="switch-career-part5"
+                onchange="javascript:showContent('career-part5')" value=" <?= $isShow2 == 1 ? '0' : '1' ?>"
+                <?= $isShow2 == 1 ? 'checked' : '1' ?>>
+            <label class="form-check-label" for="switch-career-part5">Show</label>
         </div>
+    </div>
     <?php
     }
     ?>
@@ -115,22 +128,26 @@ $isShow2 = Part::IsShow2('career-part5');
         "discovercountry" => $discovercountry,
         "incountry" => $incountry,
         "admin" => $admin,
+        "sh" => $sh,
     ]) ?>
 </div>
 
 <?php
 $isShow2 = Part::IsShow2('career-part6');
 ?>
-<div class="col-12" id="career-part6" style="opacity: <?= $isShow2 == 0 ? '0.3' : '1' ?>; display: <?= ($isShow2 == 0 && $admin == 0) ? 'none' : '' ?>">
+<div class="col-12" id="career-part6"
+    style="opacity: <?= $isShow2 == 0 ? '0.3' : '1' ?>; display: <?= ($isShow2 == 0 && $admin == 0) ? 'none' : '' ?>">
     <?php
     if ($admin == 1) {
     ?>
-        <div class="col-12">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-career-part6" onchange="javascript:showContent('career-part6')" value=" <?= $isShow2 == 1 ? '0' : '1' ?>" <?= $isShow2 == 1 ? 'checked' : '1' ?>>
-                <label class="form-check-label" for="switch-career-part6">Show</label>
-            </div>
+    <div class="col-12">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="switch-career-part6"
+                onchange="javascript:showContent('career-part6')" value=" <?= $isShow2 == 1 ? '0' : '1' ?>"
+                <?= $isShow2 == 1 ? 'checked' : '1' ?>>
+            <label class="form-check-label" for="switch-career-part6">Show</label>
         </div>
+    </div>
     <?php
     }
     ?>
@@ -145,16 +162,19 @@ $isShow2 = Part::IsShow2('career-part6');
 <?php
 $isShow2 = Part::IsShow2('career-part7');
 ?>
-<div class="col-12" id="career-part7" style="opacity: <?= $isShow2 == 0 ? '0.3' : '1' ?>; display: <?= ($isShow2 == 0 && $admin == 0) ? 'none' : '' ?>">
+<div class="col-12" id="career-part7"
+    style="opacity: <?= $isShow2 == 0 ? '0.3' : '1' ?>; display: <?= ($isShow2 == 0 && $admin == 0) ? 'none' : '' ?>">
     <?php
     if ($admin == 1) {
     ?>
-        <div class="col-12">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-career-part7" onchange="javascript:showContent('career-part7')" value=" <?= $isShow2 == 1 ? '0' : '1' ?>" <?= $isShow2 == 1 ? 'checked' : '1' ?>>
-                <label class="form-check-label" for="switch-career-part7">Show</label>
-            </div>
+    <div class="col-12">
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="switch-career-part7"
+                onchange="javascript:showContent('career-part7')" value=" <?= $isShow2 == 1 ? '0' : '1' ?>"
+                <?= $isShow2 == 1 ? 'checked' : '1' ?>>
+            <label class="form-check-label" for="switch-career-part7">Show</label>
         </div>
+    </div>
     <?php
     }
     ?>

@@ -131,7 +131,7 @@ $this->title = 'webinar';
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part6 " onchange="javascript:showContentBranch('webinar-part6', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part6" onchange="javascript:showContentBranch('webinar-part6', <?= $branchId ?>)" value="<?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-webinar-part6">Show</label>
             </div>
         </div>
@@ -156,7 +156,7 @@ $this->title = 'webinar';
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part7 " onchange="javascript:showContentBranch('webinar-part7', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part7" onchange="javascript:showContentBranch('webinar-part7', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-webinar-part7">Show</label>
             </div>
         </div>
@@ -180,7 +180,7 @@ $this->title = 'webinar';
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part8 " onchange="javascript:showContentBranch('webinar-part8', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-webinar-part8" onchange="javascript:showContentBranch('webinar-part8', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>"  <?= $isShow == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-webinar-part8">Show</label>
             </div>
         </div>

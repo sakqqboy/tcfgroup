@@ -53,7 +53,7 @@ $this->title = 'Philosophy';
     ?>
         <div class="col-12">
             <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-philosophy-part3" onchange="javascript:showContent('philosophy-part3')" value=" <?= $isShow2 == 1 ? '0' : '1' ?>"  <?= $isShow2 == 1 ? 'checked' : '1' ?>>
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-philosophy-part3" onchange="javascript:showContent('philosophy-part3')" value="<?= $isShow2 == 1 ? '0' : '1' ?>"  <?= $isShow2 == 1 ? 'checked' : '1' ?>>
                 <label class="form-check-label" for="switch-philosophy-part3">Show</label>
             </div>
         </div>

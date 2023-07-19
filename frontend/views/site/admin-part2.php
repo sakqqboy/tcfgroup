@@ -1,23 +1,29 @@
 <?php
-    use common\helpers\Path;
-    use common\models\ModelMaster;
+
+use common\helpers\Path;
+use common\models\ModelMaster;
 ?>
 
 <div class="col-12 col-background">
     <?php
-    if (isset($country) && count($country) > 0) {
-        $i = 0;
-        foreach ($country as $n) :
+    if (isset($n) && count($n) > 0) {
     ?>
-            <div class="col-12 pt-20 Global-Business">
-                <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $n['title'] ?>
+        <div class="col-12 pt-20 Global-Business">
+            <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $n['title'] ?>
+        </div>
+        <div class="col-12 text-TCG">
+            <?= $n['detail'] ?>
+        </div>
+        <?php
+        if ($admin == 1) { ?>
+            <div class=" col-12 edit-content" style=>
+                <a class="btn btn-warning bt-line" style="margin-left: 350px;" href="<?= Path::backendUrl() . 'content/default/update-content/' . ModelMaster::encodeParams(["contentId" => $n['contentId']]) ?>" target="_blank">Edit</a>
             </div>
-            <div class="col-12 text-TCG">
-                <?= $n['detail'] ?>
-            </div>
+        <?php
+        }
+        ?>
     <?php
-            $i++;
-        endforeach;
+
     }
     ?>
 

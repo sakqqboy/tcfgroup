@@ -1,4 +1,4 @@
-function showContent(i) {
+function showContentAdmin(i) {
     var total = $("#total-company").val(); //total คือ การเก็บค่าทั้งหมดว่ามีเท่าไหร่
     var a = 0;
     while (a < total) { //การซ่อนข้อความที่ไม่ต้องการให้แสดงโดยใช้ while

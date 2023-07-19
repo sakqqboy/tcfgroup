@@ -35,7 +35,7 @@ use common\models\ModelMaster;
 
                     ?>
                         <div class="col-lg-12 Company">
-                            <li onclick="javascript:showContent(<?= $i ?>)"> <?= $c['title'] ?> </li>
+                            <li onclick="javascript:showContentAdmin(<?= $i ?>)"> <?= $c['title'] ?> </li>
                         </div>
 
             <?php

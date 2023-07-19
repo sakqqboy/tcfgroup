@@ -2,17 +2,17 @@
 
 namespace frontend\controllers;
 
-use backend\models\tokyoconsulting\Branch;
-use backend\models\tokyoconsulting\ContentBranch;
-use backend\models\tokyoconsulting\ContentBranchDetail;
-use backend\models\tokyoconsulting\Country;
-use backend\models\tokyoconsulting\Member;
-use backend\models\tokyoconsulting\MemberHasType;
+use frontend\models\tokyoconsulting\Branch;
+use frontend\models\tokyoconsulting\ContentBranch;
+use frontend\models\tokyoconsulting\ContentBranchDetail;
+use frontend\models\tokyoconsulting\Country;
+use frontend\models\tokyoconsulting\Member;
+use frontend\models\tokyoconsulting\MemberHasType;
 use common\models\ModelMaster;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use common\models\tokyoconsulting\Content;
+use frontend\models\tokyoconsulting\Content;
 use frontend\models\tokyoconsulting\ContentDetail;
 use Yii;
 

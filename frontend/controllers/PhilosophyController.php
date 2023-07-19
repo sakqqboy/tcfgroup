@@ -2,9 +2,9 @@
 
 namespace frontend\controllers;
 
-use backend\models\tokyoconsulting\MemberHasType;
+use frontend\models\tokyoconsulting\MemberHasType;
 use yii\web\Controller;
-use common\models\tokyoconsulting\Content;
+use frontend\models\tokyoconsulting\Content;
 use frontend\models\tokyoconsulting\ContentDetail;
 use Yii;
 

@@ -642,8 +642,9 @@ class DefaultController extends Controller
                     // 'Imagecountry',
                     // 'Topiccountry',
                     // 'Garmenticon',
-                // ], 
-                ["branchId" => 24])
+                    // ], 
+                    ["branchId" => 24]
+                )
                     ->asArray()
                     ->all();
 
@@ -666,7 +667,6 @@ class DefaultController extends Controller
                         $contentBranch->updateDateTime = new Expression('NOW()');
                         if ($contentBranch->save(false)) {
                             $contentBranchId = Yii::$app->db->lastInsertID;
-
                             foreach ($masterDetail as $x) :
                                 $contentBranchDetail = new ContentBranchDetail();
                                 $contentBranchDetail->contentBranchId = $contentBranchId;
@@ -683,7 +683,6 @@ class DefaultController extends Controller
                                 $contentBranchDetail->status = 1;
                                 $contentBranchDetail->createDatetime = new Expression('NOW()');
                                 $contentBranchDetail->updateDatetime = new Expression('NOW()');
-
                                 $contentBranchDetail->save(false);
                             endforeach;
                         }
@@ -702,6 +701,7 @@ class DefaultController extends Controller
                 $cbr->delete();
             endforeach;
         }
+        Branch::deleteAll(["status" => 99]);
     }
 
     public function actionInsertPartBranch()

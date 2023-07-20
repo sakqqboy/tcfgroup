@@ -45,15 +45,16 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?php
                     if (isset($branchId) && $branchId != '') {
                     ?>
-                        <option value="<?= $branchId ?>"><?= Branch::branchName($branchId) ?></option>
+                    <option value="<?= $branchId ?>"><?= Branch::branchName($branchId) ?></option>
                     <?php
                     }
                     ?>
+                    <option value="">Please select your branch</option>
                     <?php
                     if (isset($branchs) && count($branchs) > 0) {
                         foreach ($branchs as $br) :
                     ?>
-                            <option value="<?= $br['branchId'] ?>"><?= $br['branchName'] ?></option>
+                    <option value="<?= $br['branchId'] ?>"><?= $br['branchName'] ?></option>
                     <?php
                         endforeach;
                     }

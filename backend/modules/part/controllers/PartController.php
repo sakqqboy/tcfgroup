@@ -206,9 +206,9 @@ class PartController extends Controller
                 ->where(['like', 'partName', $param["pn"]])
                 ->andFilterWhere(['branchId' => $param["branchId"]]),
 
-            // 'pagination' => [
-            //     'pageSize' => 50
-            // ],
+            'pagination' => [
+                'pageSize' => 50
+            ],
             'sort' => [
                 'defaultOrder' => [
                     'partId' => SORT_DESC,

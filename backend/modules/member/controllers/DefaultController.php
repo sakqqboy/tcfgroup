@@ -311,7 +311,6 @@ class DefaultController extends Controller
                 $textTeam .= '<option value=' . $team["teamId"] . '>' . $team["teamName"] . '</option>';
             endforeach;
         }
-
         $res["textSection"] = $textSection;
         $res["textPosition"] = $textPosition;
         $res["textTeam"] = $textTeam;

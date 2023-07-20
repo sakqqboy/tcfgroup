@@ -2,7 +2,6 @@
 
 namespace frontend\controllers;
 
-use frontend\models\tokyoconsulting\Member;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -13,7 +12,6 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
 use frontend\models\tokyoconsulting\Content;
-use Exception;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
@@ -21,9 +19,6 @@ use frontend\models\ContactForm;
 use frontend\models\tokyoconsulting\ContentDetail;
 use frontend\models\tokyoconsulting\Country;
 use frontend\models\tokyoconsulting\MemberHasType;
-use PHPUnit\TextUI\Command;
-use yii\db\Expression;
-use yii\widgets\ContentDecorator;
 
 /**
  * Site controller

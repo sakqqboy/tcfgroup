@@ -55,9 +55,16 @@ class PartController extends Controller
 
         ]);
 
+        $branchs = Branch::find()
+            ->where("status=1")
+            ->orderBy('branchName')
+            ->asArray()
+            ->all();
+
 
         return $this->render('index', [
             'dataProvider' => $dataProvider,
+            'branchs' => $branchs,
         ]);
     }
 
@@ -171,9 +178,13 @@ class PartController extends Controller
         if (!Yii::$app->user->id) {
             return $this->redirect(Yii::$app->homeUrl . 'site/login');
         }
-        return $this->redirect('content-branch-result/' . ModelMaster::encodeParams([
-            "pn" => $_POST['pn'],
-            "branchId" => $_POST["branchId"],
+
+        $pn = isset($_POST['pn']) ? $_POST['pn'] : '';
+        $branchId = isset($_POST['branchId']) ? $_POST['branchId'] : '';
+
+        return $this->redirect('part-result/' . ModelMaster::encodeParams([
+            "pn" => $pn,
+            "branchId" => $branchId,
         ]));
     }
 
@@ -185,19 +196,34 @@ class PartController extends Controller
 
         $param = ModelMaster::decodeParams($hash);
 
-        $contentpart = Part::find()
-            ->where(['branchId' => $param["branchId"]])
-            ->andWhere('partName LIKE :pn', [':pn' => '%' . $param["pn"] . '%'])
-            ->all();
+        // $contentpart = Part::find()
+        //     ->where(['branchId' => $param["branchId"]])
+        //     ->andWhere(['like', 'partName', $param["pn"]])
+        //     ->all();
+        $dataProvider = new ActiveDataProvider([
+            'query' => Part::find()
 
+                ->where(['like', 'partName', $param["pn"]])
+                ->andFilterWhere(['branchId' => $param["branchId"]]),
+
+            // 'pagination' => [
+            //     'pageSize' => 50
+            // ],
+            'sort' => [
+                'defaultOrder' => [
+                    'partId' => SORT_DESC,
+                ]
+            ],
+
+        ]);
         $branchs = Branch::find()
             ->where("status=1")
             ->orderBy('branchName')
             ->asArray()
             ->all();
 
-        return $this->render('content_branch', [
-            "contentpart" => $contentpart,
+        return $this->render('index', [
+            "dataProvider" => $dataProvider,
             "branchs" => $branchs,
             "pn" => $param["pn"],
             "branchId" => $param["branchId"],

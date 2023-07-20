@@ -20,15 +20,15 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::encode($this->title) ?>
     </div>
     <?php
-    $form = ActiveForm::begin([
-        'id' => 'create-job-form',
-        'method' => 'post',
-        'options' => [
-            'enctype' => 'multipart/form-data',
-        ],
-        'action' => Yii::$app->homeUrl . 'content/default/search-content-branch'
-    ]);
-    ?>
+$form = ActiveForm::begin([
+    'id' => 'create-job-form',
+    'method' => 'post',
+    'options' => [
+        'enctype' => 'multipart/form-data',
+    ],
+    'action' => Yii::$app->homeUrl . 'part/part/search-part'
+]);
+?>
     <div class="col-lg-12">
         <div class="row mt-3 pd-search">
             <div class="col-lg-3">
@@ -40,26 +40,18 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-lg-3">
                 <div class="font-search">
                     Branch
-
                 </div>
-                <select class="font-input form-select" name="branchId" id="branchId" required>
-                    <?php
-                    if (isset($branchId) && $branchId != '') {
-                    ?>
-                    <option value="<?= $branchId ?>"><?= Branch::branchName($branchId) ?></option>
-                    <?php
-                    }
-                    ?>
+                <select class="input-part form-control col-lg-6" name="branchId">
                     <option value="">Please select your branch</option>
                     <?php
-                    if (isset($branchs) && count($branchs) > 0) {
-                        foreach ($branchs as $a) :
-                    ?>
-                    <option value="<?= $a["branchId"] ?>"><?= $a["branchName"] ?></option>
+                if (isset($branchs) && count($branchs) > 0) {
+                    foreach ($branchs as $br) :
+                ?>
+                    <option value="<?= $br['branchId'] ?>"><?= $br['branchName'] ?></option>
                     <?php
-                        endforeach;
-                    }
-                    ?>
+                    endforeach;
+                }
+                ?>
                 </select>
             </div>
             <div class="col-lg-3">
@@ -70,9 +62,10 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
     <?php
-    ActiveForm::end();
-    ?>
+ActiveForm::end();
+?>
 </div>
+
 
 <div class="col-lg-12 text-end">
     <?= Html::a('<i class="fa fa-plus-circle" aria-hidden="true"></i> Create Part', ['create'], ['class' => 'btn btn-success']) ?>

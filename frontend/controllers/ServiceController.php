@@ -2,7 +2,7 @@
 
 namespace frontend\controllers;
 
-use frontend\models\tokyoconsulting\Branch;
+
 use backend\models\tokyoconsulting\MemberHasType;
 use yii\web\Controller;
 use frontend\models\tokyoconsulting\Content;
@@ -15,24 +15,6 @@ use Yii;
  */
 class ServiceController extends Controller
 {
-
-    /**
-     * {@inheritdoc}
-     */
-    public function actions()
-    {
-        return [
-            'error' => [
-                'class' => \yii\web\ErrorAction::class,
-            ],
-            'captcha' => [
-                'class' => \yii\captcha\CaptchaAction::class,
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-            ],
-        ];
-    }
-
-
     public function actionIndex()
     {
         $dropdown = [];

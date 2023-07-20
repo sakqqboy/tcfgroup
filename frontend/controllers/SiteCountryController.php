@@ -4,60 +4,23 @@ namespace frontend\controllers;
 
 use frontend\models\tokyoconsulting\Member;
 use frontend\models\tokyoconsulting\MemberHasType;
-use frontend\models\ResendVerificationEmailForm;
-use frontend\models\VerifyEmailForm;
-use Yii;
-use yii\base\InvalidArgumentException;
-use yii\web\BadRequestHttpException;
 use yii\web\Controller;
-use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
-use common\models\LoginForm;
-use common\models\ModelMaster;
 use frontend\models\tokyoconsulting\Content;
 use frontend\models\tokyoconsulting\ContentDetail;
-use Exception;
-use frontend\models\PasswordResetRequestForm;
-use frontend\models\ResetPasswordForm;
-use frontend\models\SignupForm;
-use frontend\models\ContactForm;
 use frontend\models\tokyoconsulting\Branch;
 use frontend\models\tokyoconsulting\Client;
 use frontend\models\tokyoconsulting\ContentBranch;
 use frontend\models\tokyoconsulting\ContentBranchDetail;
 use frontend\models\tokyoconsulting\Country;
 use frontend\models\tokyoconsulting\Part;
-use PHPUnit\Framework\Constraint\Count;
+use Yii;
 use yii\db\Expression;
-use yii\widgets\ContentDecorator;
 
 /**
  * Site controller
  */
 class SiteCountryController extends Controller
 {
-
-    /**
-     * {@inheritdoc}
-     */
-    public function actions()
-    {
-        return [
-            'error' => [
-                'class' => \yii\web\ErrorAction::class,
-            ],
-            'captcha' => [
-                'class' => \yii\captcha\CaptchaAction::class,
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-            ],
-        ];
-    }
-
-    /**
-     * Displays homepage.
-     *
-     * @return mixed
-     */
     public function actionIndex($hash)
     {
 

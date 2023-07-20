@@ -102,7 +102,9 @@ return [
                 //teamposition
                 'masterdata/team-position/team-position/<hash>' => 'masterdata/team-position/team-position',
                 'masterdata/team-position/view-team-position/<hash>' => 'masterdata/team-position/view-team-position',
-                'masterdata/team-position/update-team-position/<hash>' => 'masterdata/team-position/update-team-position'
+                'masterdata/team-position/update-team-position/<hash>' => 'masterdata/team-position/update-team-position',
+                //part
+                'part/part/part-result/<hash>' => 'part/part/part-result',
             ],
         ],
         'assetManager' => [

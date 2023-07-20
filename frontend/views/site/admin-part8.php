@@ -1,9 +1,4 @@
 <?php
-    use common\helpers\Path;
-    use common\models\ModelMaster;
-?>
-
-<?php
 if (isset($footer) && count($footer) > 0) {
     $i = 0;
     foreach ($footer as $h) :

@@ -226,7 +226,7 @@ class PartController extends Controller
             "dataProvider" => $dataProvider,
             "branchs" => $branchs,
             "pn" => $param["pn"],
-            "branchId" => $param["branchId"],
+            "branchId" => $param["branchId"]
         ]);
     }
 }

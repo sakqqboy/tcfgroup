@@ -2,7 +2,7 @@
 
 namespace frontend\controllers;
 
-use frontend\models\tokyoconsulting\Branch;
+
 use backend\models\tokyoconsulting\MemberHasType;
 use yii\web\Controller;
 use frontend\models\tokyoconsulting\Content;

@@ -19,9 +19,6 @@ use frontend\models\ContactForm;
 use frontend\models\tokyoconsulting\ContentDetail;
 use frontend\models\tokyoconsulting\Country;
 use frontend\models\tokyoconsulting\MemberHasType;
-use PHPUnit\TextUI\Command;
-use yii\db\Expression;
-use yii\widgets\ContentDecorator;
 
 /**
  * Site controller

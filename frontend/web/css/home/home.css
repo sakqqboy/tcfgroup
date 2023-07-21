@@ -872,7 +872,7 @@
     }
 
     .header-branch {
-        display: flex;
+        position: fixed;
         margin-bottom: -57px;
         margin-left: -317px;
     }

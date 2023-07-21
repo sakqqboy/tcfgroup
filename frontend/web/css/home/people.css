@@ -168,60 +168,62 @@
 
     .card-title1 {
         width: 8rem;
-        margin-top: 60px;
+        margin-top: 67px;
         margin-left: -50px;
 
     }
 
     .card-title2 {
         width: 8rem;
-        margin-left: 100px;
-        margin-top: 55px;
+        margin-left: 35px;
+        margin-top: 61px;
     }
 
     .card-title-home {
-        font-size: 10px;
+        font-size: 15px;
         line-height: 15px;
     }
 
     .title1 {
-        font-size: 5px;
+        font-size: 10px;
         line-height: 5px;
-        margin-top: 5px;
+        margin-top: -2px;
     }
 
     .title2 {
-        font-size: 5px;
-        line-height: 5px;
-        margin-top: -10px;
+        font-size: 8px;
+        line-height: 8px;
+        margin-top: -7px;
     }
 
     .title3 {
         font-size: 5px;
         line-height: 5px;
+        margin-top: -8px;
     }
 
 
     .card-title-page {
-        font-size: 9px;
+        font-size: 15px;
         line-height: 15px;
     }
 
     .title4 {
-        font-size: 5px;
+        font-size: 10px;
         line-height: 5px;
+        margin-top: -2px;
     }
 
-
     .title5 {
-        font-size: 5px;
-        line-height: 5px;
-        margin-top: -10px;
+        font-size: 8px;
+        line-height: 8px;
+        margin-top: -7px;
     }
 
     .title6 {
         font-size: 5px;
-        line-height: 2px;
+        line-height: 5px;
+        margin-top: -8px;
     }
 
     .text-name-kuno {

@@ -45,7 +45,6 @@ use common\models\ModelMaster;
                     foreach ($businessdetail as $bsdt) :
                 ?>
                         <div class="col-3 cardbusiness">
-
                             <div class="col-12 cardbu">
                                 <p class="card-title card-title-bu">
                                     <img src="<?= Path::backendUrl() . $bsdt['image'] ?>" class="<?= $bsdt['title'] == 'ICT & Electronics' ? 'width-ict' : '' ?>">

@@ -20,7 +20,6 @@
     border-radius: 8px;
 }
 
-
 .main-page-form {
     width: 12rem;
 }
@@ -464,4 +463,15 @@
         font-size: 20px;
     }
 
+    .card-body {
+        border-radius: 8px;
+        width: 13em;
+    }
+    
+    .card-body2 {
+        border-radius: 8px;
+        margin-top: -50px;
+        width: 13em;
+    }
+    
 }

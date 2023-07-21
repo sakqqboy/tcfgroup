@@ -554,6 +554,11 @@
         font-size: 12px;
     }
 
+    .header-branch {
+        margin-bottom: -57px;
+        margin-left: -555px;
+    }
+
 }
 
 @media(max-width: 768px) {
@@ -867,7 +872,8 @@
     }
 
     .header-branch {
+        display: flex;
         margin-bottom: -57px;
-        margin-left: -370px;
+        margin-left: -317px;
     }
 }

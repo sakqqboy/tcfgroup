@@ -10,7 +10,7 @@ use common\models\ModelMaster;
         <a href="<?= Yii::$app->homeUrl ?>site/index" class="nav-link"><img src="<?= Path::backendUrl() ?>image/tcg-group.png" class="" style="width: 200px;">
 
         </a>
-        <p class="font-size14 text-primary" style="margin-bottom: -57px;;margin-left:-87px;">
+        <p class="font-size14 text-primary header-branch">
             <a href="<?= Yii::$app->homeUrl ?>site-country/index/<?= $branchName ?>" class="no-underline">
                 <?= $branchName ?>
         </p>

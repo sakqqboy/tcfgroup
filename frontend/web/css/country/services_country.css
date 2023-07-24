@@ -619,4 +619,8 @@
     .form-legal-copy {
         font-size: 20px;
     }
+
+    .service-part2 {
+        margin-top: -50px !important;
+    }
 }

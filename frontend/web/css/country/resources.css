@@ -190,10 +190,12 @@
 
     .table1 {
         font-size: 9px;
+        text-align: center;
     }
 
     .table2 {
         font-size: 8px;
+        text-align: center;
     }
 
     .search-resources {

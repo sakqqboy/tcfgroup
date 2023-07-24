@@ -584,7 +584,7 @@
     }
 
     .width-group {
-        margin-top: -390px;
+        /* margin-top: 10px; */
     }
 
     .service-stage {
@@ -609,5 +609,14 @@
 
     .title-busi {
         margin-top: -30px;
+    }
+
+    .form-legal {
+        font-size: 17px;
+        padding-top: 15px;
+    }
+
+    .form-legal-copy {
+        font-size: 20px;
     }
 }

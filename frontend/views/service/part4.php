@@ -90,7 +90,7 @@ use common\models\ModelMaster;
                             if ($i < 6) {
 
                     ?>
-                    <div class="col-lg-4 col-md-6 col-sm-4 col-8">
+                    <div class="col-lg-4 col-md-6 col-sm-4 col-6">
                         <div class="card col-10 mt-20 form-page-text">
                             <div class="text-center">
                                 <img src="<?= Path::backendUrl() . $table['image'] ?>" class="card-img-top">

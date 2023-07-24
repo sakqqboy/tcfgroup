@@ -70,3 +70,20 @@
     width: 32px;
     height: 32px;
 }
+
+@media(max-width: 768px) {
+    .title-busi {
+        text-align: start;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    .Bs1 {
+        /* padding-left: 100px; */
+        padding-left: 20px;
+    }
+
+    .bk-busi {
+        padding-bottom: -2000px;
+    }
+}

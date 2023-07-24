@@ -35,7 +35,7 @@
 }
 
 .button-start {
-    margin-left: -35px;
+    margin-left: 0.5px;
 }
 
 .p-services {
@@ -584,7 +584,7 @@
     }
 
     .width-group {
-        margin-top: -390px;
+        /* margin-top: 10px; */
     }
 
     .service-stage {
@@ -603,11 +603,24 @@
     }
 
     .button-start {
-        margin-top: -140px;
-        margin-left: -20px;
+        /* margin-top: -140px; */
+        margin-left: 0.5px;
     }
 
     .title-busi {
         margin-top: -30px;
+    }
+
+    .form-legal {
+        font-size: 17px;
+        padding-top: 15px;
+    }
+
+    .form-legal-copy {
+        font-size: 20px;
+    }
+
+    .service-part2 {
+        margin-top: -50px !important;
     }
 }

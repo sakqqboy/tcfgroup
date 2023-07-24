@@ -66,7 +66,7 @@ use common\models\ModelMaster;
                             if ($i < 3) {
 
                     ?>
-                    <div class="col-12 mt-10  page-1">
+                    <div class="col-12 mt-10 page-1">
                         <img src="<?= Path::backendUrl() . $tokyo['image'] ?>" class="image-account">
                         <?= $tokyo['title'] ?>
                     </div>

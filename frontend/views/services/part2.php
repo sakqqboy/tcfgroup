@@ -4,7 +4,7 @@ use common\helpers\Path;
 use common\models\ModelMaster;
 
 ?>
-<div class="col-12 pr12 bk-busi" style="margin-top:<?= ($canEdit == 1 && $userInThisBranch == 1) ? '3.5px;' : '120.5px;' ?>">
+<div class="col-12 pr12 bk-busi service-part2" style="margin-top:<?= ($canEdit == 1 && $userInThisBranch == 1) ? '3.5px;' : '120.5px;' ?>">
     <!-- <div class="col-12 pr12" style="background: white;padding-bottom: 50px;margin-top:20px;border: black 2px;"> -->
     <div class="row">
         <div class="col-lg-1">
@@ -44,8 +44,7 @@ use common\models\ModelMaster;
                     $i = 0;
                     foreach ($businessdetail as $bsdt) :
                 ?>
-                        <div class="col-3 cardbusiness">
-
+                        <div class="col-lg-3 col-md-4 col-6 cardbusiness">
                             <div class="col-12 cardbu">
                                 <p class="card-title card-title-bu">
                                     <img src="<?= Path::backendUrl() . $bsdt['image'] ?>" class="<?= $bsdt['title'] == 'ICT & Electronics' ? 'width-ict' : '' ?>">

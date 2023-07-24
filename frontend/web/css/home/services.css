@@ -153,6 +153,7 @@
 
 .image-boat-2 {
     width: 100%;
+    padding-bottom: 20px;
 }
 
 .form-services {
@@ -229,6 +230,7 @@
 .text-form-most {
     font-size: 14px;
     font-weight: 100;
+    margin-top: 20px;
     width: 600px;
     font-family: 'klavika';
 }
@@ -412,12 +414,17 @@
 
     .text-the-best {
         font-size: 15px;
-        margin-top: -20px;
+        margin-top: -50px;
         padding-left: 10px;
     }
 
     .image-account {
         width: 20px;
+    }
+    
+    .image-boat-2 {
+        width: 100%;
+        padding-bottom: 20px;
     }
 
     .page-1 {
@@ -439,7 +446,7 @@
         margin-left: 10px;
         width: 290px;
         height: 0px;
-        margin-top: 30px;
+        margin-top: 15px;
         padding-bottom: 15px;
 
     }
@@ -478,7 +485,7 @@
         font-size: 6px;
         width: 200px;
         line-height: 7px;
-        margin-top: 1px;
+        margin-top: -25px;
         margin-left: -10px;
     }
 
@@ -516,5 +523,8 @@
 
     .form-oftcf {
         padding-left: 40px;
+    }
+    .home-two {
+        margin-top: 40px;
     }
 }

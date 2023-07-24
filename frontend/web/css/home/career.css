@@ -34,6 +34,7 @@
 .image-philosophy {
     margin-top: 50px;
     width: 100%;
+    margin-left: 10px;
 }
 
 .text-future {
@@ -520,5 +521,11 @@
     .play-auto {
         font-size: 20px;
         padding-right: 10px;
+    }
+
+    .image-philosophy {
+        margin-top: 50px;
+        width: 100%;
+        margin-left: 12px;
     }
 }

@@ -216,16 +216,21 @@ use common\models\ModelMaster;
                 Bangladesh</p>
             <p class="title-business-footer1">Business Hours</p>
 
-            <button class="btn btn-primary calendar-button1 sun-calendar-button1" type="button">SUN</button> <button
-                class="btn btn-primary calendar-button1" type="button">MON</button>
-            <button class="btn btn-primary calendar-button1" type="button">TUE</button> <button
-                class="btn btn-primary calendar-button1" type="button">WED</button>
-            <button class="btn btn-primary calendar-button1" type="button">THU</button> <button
-                class="btn btn-outline-primary calendar-button1" type="button">FRI</button>
-            <button class="btn btn-outline-primary calendar-button1" type="button">SAT</button>
+            <div class="day-cal">
+                <button class="btn btn-primary calendar-button1" type="button">SUN</button>
+                <button class="btn btn-primary calendar-button1" type="button">MON</button>
+                <button class="btn btn-primary calendar-button1" type="button">TUE</button>
+                <button class="btn btn-primary calendar-button1" type="button">WED</button>
+                <button class="btn btn-primary calendar-button1" type="button">THU</button>
+                <button class="btn btn-outline-primary calendar-button1" type="button">FRI</button>
+                <button class="btn btn-outline-primary calendar-button1" type="button">SAT</button>
+            </div>
+
             <h4>
-                <p class="mt-50 badge-table"><span class="badge bg-secondary">8:30 AM</span> <i class="fa fa-arrows-h"
-                        aria-hidden="true"></i> <span class="badge bg-secondary"> 5:30 PM</span></p>
+                <p class="mt-50 badge-table">
+                    <span class="badge bg-secondary">8:30 AM</span> <i class="fa fa-arrows-h" aria-hidden="true"></i>
+                    <span class="badge bg-secondary"> 5:30 PM</span>
+                </p>
             </h4>
             <div class="col-12 link-privacy">
                 <a href="<?= Yii::$app->homeUrl ?>site-country/privacy" class="none-line">
@@ -233,6 +238,7 @@ use common\models\ModelMaster;
                 </a>
             </div>
         </div>
+
     </div>
 </div>
 
@@ -265,7 +271,8 @@ use common\models\ModelMaster;
         </div>
         <div class="col-lg-8 col-10">
             <div class="text-footer">
-                @ Copyright 2023 Tokyo Consulting Firm Limited,<a href="#All Rights Reserved" class="links">All Rights
+                @ Copyright 2023 Tokyo Consulting Firm Limited,<a href="#All Rights Reserved" class="links">All
+                    Rights
                     Reserved</a> ,10th Floor Safura Tower 20, Kemal Ataturk Avenue Banani Dhaka
             </div>
             <div class="footer-links mt-10">

@@ -381,7 +381,7 @@
     }
 
     .sun-calendar-button1 {
-        margin-left: 23px;
+        margin-left: 25px;
     }
 
     .card-home1 {
@@ -476,6 +476,10 @@
         border-radius: 8px;
         margin-top: -50px;
         width: 13em;
+    }
+
+    .day-cal {
+        margin-left: 17px;
     }
 
 }

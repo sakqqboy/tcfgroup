@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use common\helpers\Path;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -11,6 +12,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use Exception;
 use frontend\models\tokyoconsulting\Content;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
@@ -889,5 +891,16 @@ class SiteController extends Controller
         return $this->render('resendVerificationEmail', [
             'model' => $model
         ]);
+    }
+    public function actionCallApi() {
+        $ch1 = curl_init();
+            curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch1, CURLOPT_URL, Path::backendUrl().'content/default/res-api?branchName=Bangladesh');
+            $result1 = curl_exec($ch1);
+            curl_close($ch1);
+
+            $obj = json_decode($result1, true);
+            throw new Exception (print_r($obj, true));
     }
 }

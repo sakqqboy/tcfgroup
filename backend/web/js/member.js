@@ -22,3 +22,23 @@ function findInfo() {
         }
     });
 }
+
+function saveMemberType(memberId, memberTypeId) {
+    if($( "#checkbox-" + memberTypeId + "-" + memberId ).prop("checked") == true){
+        var fag = 1;
+    } else {
+        var fag = 0;
+    }
+    url = $url + 'member/default/save-member-check'
+    $.ajax({
+        type: "POST",
+        dataType: 'json',
+        url: url,
+        data: { 
+            memberId: memberId, 
+            memberTypeId: memberTypeId, 
+            fag: fag
+        },
+        success: function (data) {}
+    });
+}

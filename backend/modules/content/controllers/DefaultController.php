@@ -737,13 +737,21 @@ class DefaultController extends Controller
             endforeach;
         }
     }
-    public function actionResApi($contentName)
+    public function actionResApi($branchName)
     {
-
-        $conBang = Content::find()
-            ->where(["contentName" => "Bannerservices"])
+        //  $content = Content::find()->where(["contentName" => $content])->one();
+        $x = Branch::find()
+            ->Where(["branchName" => $branchName])
             ->asArray()
-            ->all();
-        return json_encode($conBang);
+            ->one();
+
+        if (isset($x) && !empty($x)) {
+            $y = ContentBranch::find()
+                ->select('contentName')
+                ->where(["branchId" => $x["branchId"]])
+                ->asArray()
+                ->all();
+        }
+        return json_encode($y);
     }
 }

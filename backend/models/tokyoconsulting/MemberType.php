@@ -31,4 +31,19 @@ class MemberType extends \backend\models\tokyoconsulting\master\MemberTypeMaster
     {
         return array_merge(parent::attributeLabels(), []);
     }
+    public static function memberTypeName($memberTypeId)
+    {
+        if ($memberTypeId != '') {
+            $membertype = MemberType::find()->where(["memberTypeId" => $memberTypeId])->asArray()->one();
+            if (isset($membertype) && !empty($membertype)) {
+                //    throw new Exception(print_r($branch,true));
+                return $membertype["memberTypeName"];
+            } else {
+                // $branch = Branch::find() -> where(["branchI" => $branchId]) -> asArray() -> one();
+                return null;
+            }
+        } else {
+            return null;
+        }
+    }
 }

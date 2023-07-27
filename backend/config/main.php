@@ -83,6 +83,9 @@ return [
                 //membertype
                 'member/default/view-member-type/<hash>' => 'member/default/view-member-type',
                 'member/default/update-member-type/<hash>' => 'member/default/update-member-type',
+                //membercheck
+                'member/default/member-check/<hash>' => 'member/default/member-check',
+                'member/default/member-check-result/<hash>' => 'member/default/member-check-result',
                 //branch
                 'masterdata/branch/view-branch/<hash>' => 'masterdata/branch/view-branch',
                 'masterdata/branch/update-branch/<hash>' => 'masterdata/branch/update-branch',

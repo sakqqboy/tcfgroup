@@ -35,6 +35,14 @@
                     </span>
                 </a>
             </li>
+            <li class="li-menu <?= $action == 'member-check' ? 'bg-list' : '' ?>">
+                <a href="<?= Yii::$app->homeUrl . 'member/default/member-check' ?>">
+                    <i class="fa fa-user fas" aria-hidden="true"></i>
+                    <span class="nav-items">
+                        Member Check
+                    </span>
+                </a>
+            </li>
             <li class="li-menu <?= $action == 'member-type' ? 'bg-list' : '' ?>">
                 <a href="<?= Yii::$app->homeUrl . 'member/default/member-type' ?>">
                     <i class="fa fa-user fas" aria-hidden="true"></i>

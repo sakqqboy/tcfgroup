@@ -457,4 +457,89 @@ class DefaultController extends Controller
 
         return json_encode($res);
     }
+    public function actionMemberCheck()
+    {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
+        $member = Member::find()->asArray()->all();
+
+        $branchs = Branch::find()->where("status=1")
+            ->orderBy('branchName')
+            ->asArray()
+            ->all();
+
+        $membertype = MemberType::find()
+            ->select('memberTypeId,memberTypeName')
+            ->where("status=1")
+            ->asArray()
+            ->all();
+
+        return $this->render('member_check', [
+            "member" => $member,
+            "membertype" => $membertype,
+            "branchs" => $branchs,
+        ]);
+    }
+    public function actionSearchMemberCheck()
+    {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
+        return $this->redirect('member-check-result/' . ModelMaster::encodeParams([
+            "fl" => $_POST['fl'],
+            "branchId" => $_POST["branchId"],
+        ]));
+    }
+    public function actionMemberCheckResult($hash)
+    {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
+
+        $param = ModelMaster::decodeParams($hash);
+        $member = Member::find()
+            ->where(['branchId' => $param["branchId"]])
+            ->andWhere('memberFirstName LIKE :fl OR memberLastName LIKE :fl', [':fl' => '%' . $param["fl"] . '%'])
+            ->all();
+
+        $branchs = Branch::find()
+            ->where("status=1")
+            ->orderBy('branchName')
+            ->asArray()
+            ->all();
+
+        $membertype = MemberType::find()
+            ->select('memberTypeName')
+            ->where("status=1")
+            ->asArray()
+            ->all();
+
+        return $this->render('member_check', [
+            "member" => $member,
+            "branchs" => $branchs,
+            "membertype" => $membertype,
+            "fl" => $param["fl"],
+            "branchId" => $param["branchId"],
+        ]);
+    }
+    public function actionSaveMemberCheck() 
+    {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
+
+        if ($_POST["fag"] == 1) {
+            $check = new MemberHasType();
+            $check->memberId = $_POST["memberId"];
+            $check->memberTypeId = $_POST["memberTypeId"];
+        
+            if ($check->save(false)) {
+            
+            }
+        } else {
+            MemberHasType::deleteAll(['memberId' => $_POST["memberId"], 'memberTypeId' => $_POST["memberTypeId"]]);
+        }
+        
+    }
 }

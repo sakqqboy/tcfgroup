@@ -40,6 +40,7 @@ class MemberHasType extends \backend\models\tokyoconsulting\master\MemberHasType
         $memberType = MemberHasType::find()
             ->select('mt.memberTypeName')
             ->JOIN("LEFT JOIN", "member_type mt", "member_has_type.memberTypeId = mt.memberTypeId")
+            ->orderBy('mt.memberTypeId')
             ->where(["member_has_type.memberId" => $memberId])
             ->asArray()
             ->all();
@@ -85,5 +86,19 @@ class MemberHasType extends \backend\models\tokyoconsulting\master\MemberHasType
             $checked = 1;
         }
         return $checked;
+    }
+    public static function checkType($memberId, $memberTypeId)
+    {
+        $has = 0;
+
+        $membercheck = MemberHasType::find()
+        ->where([ "memberId" => $memberId, "memberTypeId" => $memberTypeId])
+        ->asArray()
+        ->all();
+
+        if (isset($membercheck) && count($membercheck) > 0) {
+            $has = 1;
+        }
+        return $has;
     }
 }

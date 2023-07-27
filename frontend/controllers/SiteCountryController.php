@@ -2,6 +2,8 @@
 
 namespace frontend\controllers;
 
+use common\helpers\Path;
+use Exception;
 use frontend\models\tokyoconsulting\Member;
 use frontend\models\tokyoconsulting\MemberHasType;
 use yii\web\Controller;
@@ -788,5 +790,18 @@ class SiteCountryController extends Controller
         }
         $res["status"] = true;
         return json_encode($res);
+    }
+
+    public function actionCallApi()
+    {
+        $ch1 = curl_init();
+        curl_setopt($ch1, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch1, CURLOPT_URL, Path::backendUrl() . "content/default/res-api?contentName=Bannerservices");
+        $result1 = curl_exec($ch1);
+        curl_close($ch1);
+
+        $obj = json_decode($result1, true);
+        throw new Exception(print_r($obj, true));
     }
 }

@@ -7,6 +7,7 @@ use backend\models\tokyoconsulting\Content;
 use backend\models\tokyoconsulting\ContentBranch;
 use backend\models\tokyoconsulting\ContentBranchDetail;
 use backend\models\tokyoconsulting\ContentDetail;
+use backend\models\tokyoconsulting\Member;
 use backend\models\tokyoconsulting\Part;
 use common\helpers\Path;
 use common\models\ModelMaster;
@@ -735,5 +736,14 @@ class DefaultController extends Controller
 
             endforeach;
         }
+    }
+    public function actionResApi($contentName)
+    {
+
+        $conBang = Content::find()
+            ->where(["contentName" => "Bannerservices"])
+            ->asArray()
+            ->all();
+        return json_encode($conBang);
     }
 }

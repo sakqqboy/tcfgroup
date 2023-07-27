@@ -2,10 +2,10 @@
 
 namespace frontend\controllers;
 
-use Exception;
 use frontend\models\tokyoconsulting\ContactUs;
 use frontend\models\tokyoconsulting\Content;
 use frontend\models\tokyoconsulting\ContentDetail;
+use frontend\models\tokyoconsulting\Country;
 use frontend\models\tokyoconsulting\MemberHasType;
 use Yii;
 use yii\db\Expression;
@@ -18,6 +18,24 @@ class ContactUsController extends Controller
 		$contact = [];
 		$footercontact = [];
 		$disclaimer = [];
+		$dropdown = [];
+		$subtopicDetail = [];
+
+		$dropdown = Country::find()->where("status=1")
+			->orderBy('countryName')
+			->asArray()
+			->all();
+
+		$subtopic = Content::find()
+			->where(['contentName' => "Subtopic"])
+			->asArray()
+			->one();
+		if (isset($subtopic) && !empty($subtopic)) {
+			$subtopicDetail = ContentDetail::find()
+				->where(["contentId" => $subtopic["contentId"], "status" => 1])
+				->asArray()
+				->one();
+		}
 		$contactContent = Content::find()
 			->where(["contentName" => "Contact"])
 			->asArray()
@@ -48,6 +66,16 @@ class ContactUsController extends Controller
 				->asArray()
 				->all();
 		}
+		$application = Content::find()
+			->where(["contentName" => "Application"])
+			->asArray()
+			->one();
+		if (isset($application) && !empty($application)) {
+			$app = ContentDetail::find()
+				->where(["contentId" => $application["contentId"], "status" => 1])
+				->asArray()
+				->all();
+		}
 		$admin = 0;
 		if (Yii::$app->user->id) {
 			$memberTypeAdmin = MemberHasType::find()
@@ -70,32 +98,38 @@ class ContactUsController extends Controller
 			"footercontactContent" => $footercontactContent,
 			"disclaimer" => $disclaimer,
 			"disclaimerContent" => $disclaimerContent,
-			"admin" => $admin
+			"admin" => $admin,
+			"dropdown" => $dropdown,
+			"subtopic" => $subtopic,
+			"subtopicDetail" => $subtopicDetail,
+			"application" => $application,
+			"app" => $app,
+
 		]);
 	}
 	public function actionSaveContact()
-    {
-        $res = [];
-        if (isset($_POST["hearus"])) {
-            //throw new Exception(print_r(Yii::$app->request->post(), true));
-            $contact = new ContactUs();
-            $contact->hearUs = $_POST["hearus"];
-            $contact->countryName = $_POST["countryname"];
-            $contact->fullName = $_POST["fullname"];
-            $contact->birthdate = $_POST["birthdate"];
-            $contact->address = $_POST["address"];
-            $contact->cityName = $_POST["cityname"];
-            $contact->postalCode = $_POST["postalcode"];
-            $contact->email = $_POST["email"];
-            $contact->phoneNumber = $_POST["phonenumber"];
+	{
+		$res = [];
+		if (isset($_POST["hearus"])) {
+			//throw new Exception(print_r(Yii::$app->request->post(), true));
+			$contact = new ContactUs();
+			$contact->hearUs = $_POST["hearus"];
+			$contact->countryName = $_POST["countryname"];
+			$contact->fullName = $_POST["fullname"];
+			$contact->birthdate = $_POST["birthdate"];
+			$contact->address = $_POST["address"];
+			$contact->cityName = $_POST["cityname"];
+			$contact->postalCode = $_POST["postalcode"];
+			$contact->email = $_POST["email"];
+			$contact->phoneNumber = $_POST["phonenumber"];
 			$contact->image = $_POST["image"];
-            $contact->createDateTime = new Expression('NOW()');
-            $contact->updateDateTime = new Expression('NOW()');
+			$contact->createDateTime = new Expression('NOW()');
+			$contact->updateDateTime = new Expression('NOW()');
 
-            if ($contact->save(false)) {
-                $res["status"] = true;
-            }
-        }
-        return json_encode($res);
-    }
+			if ($contact->save(false)) {
+				$res["status"] = true;
+			}
+		}
+		return json_encode($res);
+	}
 }

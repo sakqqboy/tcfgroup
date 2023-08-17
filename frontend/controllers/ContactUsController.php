@@ -20,6 +20,7 @@ class ContactUsController extends Controller
 		$disclaimer = [];
 		$dropdown = [];
 		$subtopicDetail = [];
+		$app = [];
 
 		$dropdown = Country::find()->where("status=1")
 			->orderBy('countryName')

@@ -290,74 +290,110 @@
 
 }
 
-.copy-pic-asset {
-    margin-top: 200px;
-}
-
-
-.asset-4 {
-    margin-top: -200px;
-    margin-left: -120px;
-    width: 38%;
-    cursor: pointer;
-}
-
-.asset-5 {
-    margin-top: -295px;
-    margin-left: -100px;
-    width: 40%;
-    cursor: pointer;
-}
-
-.asset-6 {
-    margin-top: -299px;
-    margin-left: -56px;
+.as-set-2 {
     width: 33%;
-    cursor: pointer;
-
-}
-
-.asset-7 {
-    margin-top: -350px;
-    margin-left: 276px;
-    width: 32%;
-    cursor: pointer;
-
-}
-
-.asset-8 {
-    margin-top: -210px;
-    margin-left: 300px;
-    width: 31%;
-    cursor: pointer;
-
-}
-
-.asset-9 {
-    margin-top: -84px;
-    margin-left: 265px;
-    width: 34%;
+    margin-left: -60px;
+    margin-top: 30px;
     cursor: pointer;
 }
 
-.asset-10 {
-    margin-top: -150px;
-    margin-left: 0px;
-    width: 100%;
-}
-
-.asset-11 {
+.copy-as-set-2 {
     width: 30%;
+    margin-left: -60px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.as-set-3 {
+    width: 38%;
+    margin-left: -30%;
+    margin-top: -200px;
+    cursor: pointer;
+}
+
+.copy-as-set-3 {
+    width: 40%;
+    margin-left: -30%;
+    margin-top: -200px;
     cursor: pointer;
 }
 
 
+.as-set-4 {
+    width: 32%;
+    margin-left: -75px;
+    margin-top: -305px;
+    cursor: pointer;
+}
 
+.copy-as-set-4 {
+    width: 43%;
+    margin-left: -100px;
+    margin-top: -311px;
+    cursor: pointer;
+}
 
+.as-set-5 {
+    width: 28%;
+    margin-left: -10px;
+    margin-top: -299px;
+    cursor: pointer;
+}
 
+.copy-as-set-5 {
+    width: 34%;
+    margin-left: -35px;
+    margin-top: -300px;
+    cursor: pointer;
+}
 
+.as-set-6 {
+    width: 35%;
+    margin-left: 240px;
+    margin-top: -385px;
+    cursor: pointer;
+}
 
+.copy-as-set-6 {
+    width: 33%;
+    margin-left: 240px;
+    margin-top: -385px;
+    cursor: pointer;
+}
 
+.as-set-7 {
+    width: 34%;
+    margin-left: 265px;
+    margin-top: -240px;
+    cursor: pointer;
+}
+
+.copy-as-set-7 {
+    width: 31%;
+    margin-left: 270px;
+    margin-top: -240px;
+    cursor: pointer;
+}
+
+.as-set-8 {
+    width: 39%;
+    margin-left: 235px;
+    margin-top: -98px;
+    cursor: pointer;
+}
+
+.copy-as-set-8 {
+    width: 36%;
+    margin-left: 235px;
+    margin-top: -98px;
+    cursor: pointer;
+}
+
+.as-set-9 {
+    width: 48%;
+    margin-top: -370px;
+    margin-left: 75px;
+}
 
 @media(max-width: 1280px) {
     .title-all {

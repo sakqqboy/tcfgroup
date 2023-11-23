@@ -54,6 +54,34 @@ $isShow = Part::IsShow('services-part2', $branchId);
 </div>
 
 <?php
+$isShow = Part::IsShow('services-part6', $branchId);
+?>
+<div class="col-12" id="services-part6" style="opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : '' ?>">
+    <?php
+    if ($canEdit == 1 && $userInThisBranch == 1) {
+    ?>
+        <div class="col-12">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="switch-services-part6" onchange="javascript:showContentBranch('services-part6', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>" <?= $isShow == 1 ? 'checked' : '1' ?>>
+                <label class="form-check-label" for="switch-services-part6">Show</label>
+            </div>
+        </div>
+    <?php
+    }
+    ?>
+    <?= $this->render('part6', [
+        "sl" => $sl,
+        "dropdown" => $dropdown,
+        "serleft" => $serleft,
+        "sr" => $sr,
+        "serright" => $serright,
+        "canEdit" => $canEdit,
+        "userInThisBranch" => $userInThisBranch,
+        "branchName" => $branchName,
+    ]) ?>
+</div>
+
+<?php
 $isShow = Part::IsShow('services-part3', $branchId);
 ?>
 <div class="col-12" id="services-part3" style="margin-top: 100px;margin-bottom: -10px; opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : '' ?>">
@@ -80,9 +108,10 @@ $isShow = Part::IsShow('services-part3', $branchId);
     ]) ?>
 </div>
 
-<?php
-$isShow = Part::IsShow('services-part4', $branchId);
-?>
+
+<!-- <?php
+        $isShow = Part::IsShow('services-part4', $branchId);
+        ?>
 <div class="col-12" id="services-part4" style="margin-top: 20px; opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : '' ?>">
     <?php
     if ($canEdit == 1 && $userInThisBranch == 1) {
@@ -107,7 +136,7 @@ $isShow = Part::IsShow('services-part4', $branchId);
         "userInThisBranch" => $userInThisBranch,
         "branchName" => $branchName,
     ]) ?>
-</div>
+</div> -->
 
 <?php
 $isShow = Part::IsShow('services-part5', $branchId);
@@ -136,33 +165,7 @@ $isShow = Part::IsShow('services-part5', $branchId);
     ]) ?>
 </div>
 
-<?php
-$isShow = Part::IsShow('services-part6', $branchId);
-?>
-<div class="col-12" id="services-part6" style="opacity: <?= $isShow == 0 ? '0.3' : '1' ?>; display: <?= ($isShow == 0 && $userInThisBranch == 0 && $canEdit == 0) ? 'none' : '' ?>">
-    <?php
-    if ($canEdit == 1 && $userInThisBranch == 1) {
-    ?>
-        <div class="col-12">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" id="switch-services-part6" onchange="javascript:showContentBranch('services-part6', <?= $branchId ?>)" value=" <?= $isShow == 1 ? '0' : '1' ?>" <?= $isShow == 1 ? 'checked' : '1' ?>>
-                <label class="form-check-label" for="switch-services-part6">Show</label>
-            </div>
-        </div>
-    <?php
-    }
-    ?>
-    <?= $this->render('part6', [
-        "sl" => $sl,
-        "dropdown" => $dropdown,
-        "serleft" => $serleft,
-        "sr" => $sr,
-        "serright" => $serright,
-        "canEdit" => $canEdit,
-        "userInThisBranch" => $userInThisBranch,
-        "branchName" => $branchName,
-    ]) ?>
-</div>
+
 
 <?php
 $isShow = Part::IsShow('services-part7', $branchId);

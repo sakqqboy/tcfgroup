@@ -1,6 +1,6 @@
 .image-Vision-page {
     width: 100%;
-    margin-top: 90px;
+    margin-top: 0px;
 }
 
 .text-Our {
@@ -152,76 +152,76 @@
     font-weight: 300;
 }
 
-@media(max-width: 1400px) {
+@media(max-width: 1400px) {}
 
-    .text-Our {
-        margin-top: -380px;
-    }
+.text-Our {
+    margin-top: -380px;
+}
 
-    .text-vision {
-        margin-top: -370px;
-
-    }
-
-    .vlog-1 {
-        margin-top: -250px;
-    }
-
-    .title-color {
-        margin-top: -150px;
-
-    }
-
-    .box-data-1 {
-        margin-top: -280px;
-        padding-left: 40px;
-    }
-
-    .box-data-2 {
-        margin-top: -250px;
-        padding-left: 50px;
-    }
-
-    .box-data-3 {
-        margin-top: -210px;
-        padding-left: 40px;
-    }
-
-    .Block-1 {
-        margin-top: -290px;
-        padding-left: 40px;
-    }
-
-    .Block-2 {
-        margin-top: -260px;
-        padding-left: 50px;
-    }
-
-    .Block-3 {
-        margin-top: -220px;
-        padding-left: 40px;
-    }
-
-    .Type-home-page-one {
-        margin-top: -290px;
-        padding-left: 40px;
-    }
-
-    .Type-home-page-two {
-        margin-top: -220px;
-        line-height: 15px;
-        padding-left: 40px;
-    }
-
-    .padding-box {
-        margin-top: 20px;
-    }
+.text-vision {
+    margin-top: -370px;
 
 }
 
+.vlog-1 {
+    margin-top: -250px;
+}
+
+.title-color {
+    margin-top: -150px;
+
+}
+
+.box-data-1 {
+    margin-top: -280px;
+    padding-left: 40px;
+}
+
+.box-data-2 {
+    margin-top: -250px;
+    padding-left: 50px;
+}
+
+.box-data-3 {
+    margin-top: -210px;
+    padding-left: 40px;
+}
+
+.Block-1 {
+    margin-top: -290px;
+    padding-left: 40px;
+}
+
+.Block-2 {
+    margin-top: -260px;
+    padding-left: 50px;
+}
+
+.Block-3 {
+    margin-top: -220px;
+    padding-left: 40px;
+}
+
+.Type-home-page-one {
+    margin-top: -290px;
+    padding-left: 40px;
+}
+
+.Type-home-page-two {
+    margin-top: -220px;
+    line-height: 15px;
+    padding-left: 40px;
+}
+
+.padding-box {
+    margin-top: 20px;
+}
+
+
+
 @media(max-width: 992px) {
     .image-Vision-page {
-        margin-top: 90px;
+        margin-top: 0px;
 
     }
 
@@ -298,6 +298,10 @@
 }
 
 @media(max-width: 768px) {
+    .image-Vision-page {
+        margin-top: 0px;
+    }
+
     .text-Our {
 
         margin-top: -180px;

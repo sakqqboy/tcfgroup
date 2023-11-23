@@ -591,7 +591,8 @@ class DefaultController extends Controller
 
         $contentbranch = ContentBranch::find()
             ->where(['branchId' => $param["branchId"]])
-            ->andWhere('contentName LIKE :bnt OR title LIKE :bnt', [':bnt' => '%' . $param["bnt"] . '%'])
+            ->andWhere("contentName LIKE '%" . $param["bnt"] . "%'")
+            // ->andWhere('contentName LIKE :bnt OR title LIKE :bnt', [':bnt' => '%' . $param["bnt"] . '%'])
             ->all();
 
         $branchs = Branch::find()

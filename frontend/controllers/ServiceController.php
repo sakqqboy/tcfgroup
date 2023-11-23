@@ -20,7 +20,7 @@ class ServiceController extends Controller
         $dropdown = [];
         $subtopicDetail = [];
 
-        $dropdown = Country::find()->where("status=1")
+        $dropdown = Country::find()->where(["status" => 1, "hasBranch" => 1])
             ->orderBy('countryName')
             ->asArray()
             ->all();

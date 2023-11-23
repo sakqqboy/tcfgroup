@@ -91,11 +91,6 @@
     margin-top: 40px;
 }
 
-.image-ceo {
-    margin-top: 30px;
-    width: 100%;
-}
-
 .title-culture {
     margin-top: 30px;
     padding-left: 70px;
@@ -108,12 +103,107 @@
 
 }
 
+.bang1 {
+    font-size: 18px;
+    position: absolute;
+    margin-top: 240px;
+    padding-left: 20px;
+    color: white;
+    font-weight: 700;
+    font-family: 'klavika';
+    text-transform: uppercase;
 
+}
+
+.bang1-solid {
+    border: solid 3px;
+    position: absolute;
+    margin-top: 270px;
+    margin-left: 20px;
+    color: white;
+    font-family: 'klavika';
+    width: 100px;
+
+}
+
+.title-bang {
+    color: white;
+    font-size: 28px;
+    position: absolute;
+    font-weight: 700;
+    font-family: 'klavika';
+    text-transform: uppercase;
+    margin-top: 280px;
+    padding-left: 20px;
+}
+
+.title-bang2 {
+    color: white;
+    font-size: 28px;
+    position: absolute;
+    font-weight: 700;
+    font-family: 'klavika';
+    text-transform: uppercase;
+    margin-top: 310px;
+    padding-left: 20px;
+}
+
+.c-image {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+
+}
 
 @media(max-width: 992px) {
     .title-empowering {
         font-size: 25px;
         padding-left: 40px;
+    }
+
+    .bang1 {
+        font-size: 12px;
+        position: absolute;
+        margin-top: 190px;
+        padding-left: 20px;
+        color: white;
+        font-weight: 700;
+        font-family: 'klavika';
+        text-transform: uppercase;
+
+    }
+
+    .bang1-solid {
+        border: solid 1px;
+        position: absolute;
+        margin-top: 210px;
+        margin-left: 20px;
+        color: white;
+        font-family: 'klavika';
+        width: 80px;
+
+    }
+
+    .title-bang {
+        color: white;
+        font-size: 17px;
+        position: absolute;
+        font-weight: 700;
+        font-family: 'klavika';
+        text-transform: uppercase;
+        margin-top: 210px;
+        padding-left: 20px;
+    }
+
+    .title-bang2 {
+        color: white;
+        font-size: 17px;
+        position: absolute;
+        font-weight: 700;
+        font-family: 'klavika';
+        text-transform: uppercase;
+        margin-top: 225px;
+        padding-left: 20px;
     }
 
 
@@ -230,4 +320,48 @@
         margin-top: 50px;
     }
 
+    .bang1 {
+        font-size: 12px;
+        position: absolute;
+        margin-top: 190px;
+        padding-left: 20px;
+        color: white;
+        font-weight: 700;
+        font-family: 'klavika';
+        text-transform: uppercase;
+
+    }
+
+    .bang1-solid {
+        border: solid 1px;
+        position: absolute;
+        margin-top: 210px;
+        margin-left: 20px;
+        color: white;
+        font-family: 'klavika';
+        width: 80px;
+
+    }
+
+    .title-bang {
+        color: white;
+        font-size: 15px;
+        position: absolute;
+        font-weight: 700;
+        font-family: 'klavika';
+        text-transform: uppercase;
+        margin-top: 210px;
+        padding-left: 20px;
+    }
+
+    .title-bang2 {
+        color: white;
+        font-size: 15px;
+        position: absolute;
+        font-weight: 700;
+        font-family: 'klavika';
+        text-transform: uppercase;
+        margin-top: 225px;
+        padding-left: 20px;
+    }
 }

@@ -54,9 +54,14 @@ use yii\bootstrap5\Carousel;
                 if (isset($video)  && count($video) > 0) {
                     $i = 0;
                     foreach ($video as $vo) :
+
                 ?>
                         <div class="carousel-item <?= $i == 0 ? 'active' : '' ?>" data-bs-interval="10000" style="">
-                            <img src="<?= Path::backendUrl() . $vo['image'] ?>" class="image-TCF-GROUP"><br>
+                            <div class="col-12">
+                                <div class="our-video">
+                                    <video class="myvideos" controls="" loop="" src="http://vjs.zencdn.net/v/oceans.mp4" width="auto" height="auto" alt=""></video>
+                                </div>
+                            </div>
                             <div class="badge bg-primary life-play mt-3"> <a href="#" class="no-underline4"> <i class="fa fa-play-circle play-auto" aria-hidden="true"></i></a>
                                 <?= $vo['detail'] ?>
                             </div>
@@ -64,6 +69,7 @@ use yii\bootstrap5\Carousel;
 
 
                 <?php
+
                         $i++;
                     endforeach;
                 }

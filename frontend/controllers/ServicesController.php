@@ -48,7 +48,7 @@ class ServicesController extends Controller
 		$branch = Branch::find()->where(["branchName" => $branchName, "status" => 1])->asArray()->one();
 		$country = Country::find()->where(["countryName" => $countryName, "status" => 1])->asArray()->all();
 
-		$dropdown = Country::find()->where("status=1")
+		$dropdown = Country::find()->where(["status" => 1, "hasBranch" => 1])
 			->orderBy('countryName')
 			->asArray()
 			->all();

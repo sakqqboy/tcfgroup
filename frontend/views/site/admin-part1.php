@@ -39,7 +39,7 @@ use yii\bootstrap5\Carousel;
                                 <?= $bn['title'] ?><br>
                                 <?= $bn['detail'] ?> <br>
                                 <?= $bn['detail2'] ?><br>
-                                <button type="button" class="btn btn-primary button-start"> <?= $bn['detail3'] ?></button>
+                                <button type="button" class="btn btn-primary button-start1"> <?= $bn['detail3'] ?></button>
                             </div>
                         </div>
                 <?php

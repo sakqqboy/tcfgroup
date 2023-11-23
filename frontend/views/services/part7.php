@@ -1,8 +1,8 @@
-<?php
+<!-- <?php
 
-use common\helpers\Path;
-use common\models\ModelMaster;
-?>
+        use common\helpers\Path;
+        use common\models\ModelMaster;
+        ?>
 
 
 <div class="col-12 pr12 mt-50">
@@ -145,4 +145,4 @@ use common\models\ModelMaster;
             </div>
         </div>
     </div>
-</div>
+</div> -->

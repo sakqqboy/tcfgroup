@@ -40,13 +40,14 @@ use common\models\ModelMaster;
                     foreach ($insider as $incountry) :
                         if ($i < 26) {
                 ?>
-                            <option selected><?= $incountry['title'] ?></option>
+                            <option><?= $incountry['title'] ?></option>
                 <?php
                         }
                         $i++;
                     endforeach;
                 }
                 ?>
+
             </select>
         </div>
     </div>
@@ -54,11 +55,54 @@ use common\models\ModelMaster;
 <div class="col-12">
     <?php
     if (isset($global) && count($global) > 0) {
-        $i = 0;
+
         foreach ($global as $meetting) :
+
+
+
     ?>
-            <img src="<?= Path::backendUrl() . $meetting['image'] ?>" class="image-ceo">
+            <div class="row mt-50">
+                <div class="col-lg-3 col-md-3 col-sm-5 col-6">
+                    <div class="card crad-secondary">
+                        <img src="<?= Yii::$app->homeUrl ?>image/bang1.jpg" class="c-image">
+                        <div class="bang1">Director </div>
+                        <div class="col-12 bang1-solid"></div>
+                        <div class="title-bang">Tadawoki </div>
+                        <div class="title-bang2">Watanabe </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-5 col-6">
+                    <div class="card crad-secondary">
+                        <img src="<?= Yii::$app->homeUrl ?>image/bang1.jpg" class="c-image">
+                        <div class="bang1">Manager </div>
+                        <div class="col-12 bang1-solid"></div>
+                        <div class="title-bang">Tadawoki </div>
+                        <div class="title-bang2">Watanabe </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-5 col-6">
+                    <div class="card crad-secondary">
+                        <img src="<?= Yii::$app->homeUrl ?>image/bang1.jpg" class="c-image">
+                        <div class="bang1">Japanease Manager </div>
+                        <div class="col-12 bang1-solid"></div>
+                        <div class="title-bang">Tadawoki </div>
+                        <div class="title-bang2">Watanabe </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-5 col-6">
+                    <div class="card crad-secondary">
+                        <img src="<?= Yii::$app->homeUrl ?>image/bang1.jpg" class="c-image">
+                        <div class="bang1">Director </div>
+                        <div class="col-12 bang1-solid"></div>
+                        <div class="title-bang">Tadawoki </div>
+                        <div class="title-bang2">Watanabe </div>
+                    </div>
+                </div>
+            </div>
+
+
     <?php
+
             $i++;
         endforeach;
     }

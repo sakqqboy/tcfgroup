@@ -9,6 +9,10 @@
     z-index: 99;
 }
 
+.button-start1 {
+    margin-left: 10px;
+}
+
 .text-title {
     position: absolute;
     margin-top: -27.5%;
@@ -858,4 +862,10 @@
     .logo-footer {
         margin-left: 50px;
     }
+
+    .button-start1 {
+        margin-left: 1px;
+        font-size: 12px;
+    }
+
 }

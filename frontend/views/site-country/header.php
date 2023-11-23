@@ -7,10 +7,8 @@ use common\models\ModelMaster;
 <!-- image/img/tcg-group-bangladesh.png -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-        <a href="<?= Yii::$app->homeUrl ?>site/index" class="nav-link"><img src="<?= Path::backendUrl() ?>image/tcg-group.png" class="" style="width: 200px;">
-
-        </a>
-        <p class="font-size14 text-primary" style="margin-bottom: -57px;;margin-left:-87px;">
+        <a href="<?= Yii::$app->homeUrl ?>site/index" class="nav-link"><img src="<?= Path::backendUrl() ?>image/tcg-group.png" class="" style="width: 200px;"> </a>
+        <p class="font-size14 text-primary" style="margin-bottom: -57px;margin-left:-87px;">
             <a href="<?= Yii::$app->homeUrl ?>site-country/index/<?= $branchName ?>" class="no-underline">
                 <?= $branchName ?>
         </p>
@@ -34,9 +32,9 @@ use common\models\ModelMaster;
                     <a href="<?= Yii::$app->homeUrl ?>site-country/career" class="nav-link">Career </a>
                 </li> -->
                 <li class="nav-item <?= Yii::$app->controller->id == 'resource' ? 'selected-menu' : '' ?>">
-                    <a href="<?= Yii::$app->homeUrl ?>resource/index/<?= $branchName ?>" class="nav-link">Resources</a>
-                </li>
-                <li class="nav-item <?= Yii::$app->controller->id == 'about-us-country' ? 'selected-menu' : '' ?>">
+                    <a href="<?= Yii::$app->homeUrl ?>resource/index/<?= $branchName ?>" class="nav-link">resource</a>
+                <li class=" nav-item <?= Yii::$app->controller->id == 'about-link">Resources</a>
+                </li>us-country' ? 'selected-menu' : '' ?>">
                     <a href="<?= Yii::$app->homeUrl ?>about-us-country/index/<?= $branchName ?>" class="nav-link">About
                         us</a>
                 </li>

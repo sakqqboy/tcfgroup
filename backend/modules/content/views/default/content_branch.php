@@ -88,7 +88,7 @@ use yii\bootstrap5\ActiveForm;
         </thead>
         <tbody>
             <?php
-            if (isset($contentbranch)) {
+            if (isset($contentbranch) && count($contentbranch) > 0) {
                 $i = 1;
                 foreach ($contentbranch as $x) :
             ?>

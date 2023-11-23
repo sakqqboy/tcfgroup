@@ -12,15 +12,15 @@ use common\models\ModelMaster;
                 $i = 0;
                 foreach ($founder as $o) :
             ?>
-            <div class="col-12 form-select-business mt-20">
-                <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $o['title'] ?>
-            </div>
-            <div class="col-12 mt-20">
-                <img src="<?= Path::backendUrl() . $o['image'] ?>">
-            </div>
-            <div class="col-12 mt-3">
-                <p><?= $o['detail'] ?></p>
-            </div>
+                    <div class="col-12 form-select-business mt-20">
+                        <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $o['title'] ?>
+                    </div>
+                    <div class="col-12 mt-20">
+                        <img src="<?= Path::backendUrl() . $o['image'] ?>">
+                    </div>
+                    <div class="col-12 mt-3">
+                        <p><?= $o['detail'] ?></p>
+                    </div>
             <?php
                     $i++;
                 endforeach;
@@ -28,11 +28,9 @@ use common\models\ModelMaster;
             ?>
             <?php
             if ($admin == 1) { ?>
-            <div class=" col-12 text-end edit-content mt-2">
-                <a class="btn btn-warning bt-line"
-                    href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $o['contentId']]) ?>"
-                    target="_blank">Edit</a>
-            </div>
+                <div class=" col-12 text-end edit-content mt-2">
+                    <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $o['contentId']]) ?>" target="_blank">Edit</a>
+                </div>
             <?php
             }
             ?>
@@ -46,18 +44,16 @@ use common\models\ModelMaster;
                             foreach ($item as $t) :
 
                         ?>
-                        <p><img src="<?= Path::backendUrl() . $t['image'] ?>" style="width: 90px;"></p>
-                        <?php
+                                <p><img src="<?= Path::backendUrl() . $t['image'] ?>" style="width: 90px;"></p>
+                                <?php
                                 if ($admin == 1) { ?>
-                        <div class=" col-12 text-end edit-content mt-2">
-                            <a class="btn btn-warning bt-line"
-                                href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $t['contentId']]) ?>"
-                                target="_blank">Edit</a>
-                        </div>
-                        <?php
+                                    <div class=" col-12 text-end edit-content mt-2">
+                                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $t['contentId']]) ?>" target="_blank">Edit</a>
+                                    </div>
+                                <?php
                                 }
                                 ?>
-                        <?php
+                            <?php
 
                                 $i++;
                             endforeach;
@@ -67,18 +63,16 @@ use common\models\ModelMaster;
                             $i = 0;
                             foreach ($star as $u) :
                             ?>
-                        <p><img src="<?= Path::backendUrl() . $u['image'] ?>" style="width: 90px;"></p>
-                        <?php
+                                <p><img src="<?= Path::backendUrl() . $u['image'] ?>" style="width: 90px;"></p>
+                                <?php
                                 if ($admin == 1) { ?>
-                        <div class=" col-12 text-end edit-content mt-2">
-                            <a class="btn btn-warning bt-line"
-                                href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $u['contentId']]) ?>"
-                                target="_blank">Edit</a>
-                        </div>
-                        <?php
+                                    <div class=" col-12 text-end edit-content mt-2">
+                                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $u['contentId']]) ?>" target="_blank">Edit</a>
+                                    </div>
+                                <?php
                                 }
                                 ?>
-                        <?php
+                            <?php
                                 $i++;
                             endforeach;
                         }
@@ -87,15 +81,13 @@ use common\models\ModelMaster;
                             $i = 0;
                             foreach ($itemstar as $v) :
                             ?>
-                        <p><img src="<?= Path::backendUrl() . $v['image'] ?>" style="width: 90px;"></p>
-                        <?php
+                                <p><img src="<?= Path::backendUrl() . $v['image'] ?>" style="width: 90px;"></p>
+                                <?php
                                 if ($admin == 1) { ?>
-                        <div class=" col-12 text-end edit-content mt-2">
-                            <a class="btn btn-warning bt-line"
-                                href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $v['contentId']]) ?>"
-                                target="_blank">Edit</a>
-                        </div>
-                        <?php
+                                    <div class=" col-12 text-end edit-content mt-2">
+                                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $v['contentId']]) ?>" target="_blank">Edit</a>
+                                    </div>
+                                <?php
                                 }
                                 ?>
                         <?php
@@ -112,18 +104,16 @@ use common\models\ModelMaster;
                             foreach ($detail as $d) :
 
                         ?>
-                        <div class="col-12 ">
-                            <p class="text-Goal"><?= $d['title'] ?></p>
-                            <p class="text-one"><?= $d['detail'] ?></p>
-                        </div>
-                        <?php
+                                <div class="col-12 ">
+                                    <p class="text-Goal"><?= $d['title'] ?></p>
+                                    <p class="text-one"><?= $d['detail'] ?></p>
+                                </div>
+                                <?php
                                 if ($admin == 1) { ?>
-                        <div class=" col-12 text-end edit-content mt-2">
-                            <a class="btn btn-warning bt-line"
-                                href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $d['contentId']]) ?>"
-                                target="_blank">Edit</a>
-                        </div>
-                        <?php
+                                    <div class=" col-12 text-end edit-content mt-2">
+                                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $d['contentId']]) ?>" target="_blank">Edit</a>
+                                    </div>
+                                <?php
                                 }
                                 ?>
 
@@ -139,16 +129,14 @@ use common\models\ModelMaster;
                             $i = 0;
                             foreach ($data as $g) :
                         ?>
-                        <p class="text-Goal"><?= $g['title'] ?></p>
-                        <p class="text-one"><?= $g['detail'] ?></p>
-                        <?php
+                                <p class="text-Goal"><?= $g['title'] ?></p>
+                                <p class="text-one"><?= $g['detail'] ?></p>
+                                <?php
                                 if ($admin == 1) { ?>
-                        <div class=" col-12 text-end edit-content mt-2">
-                            <a class="btn btn-warning bt-line"
-                                href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $g['contentId']]) ?>"
-                                target="_blank">Edit</a>
-                        </div>
-                        <?php
+                                    <div class=" col-12 text-end edit-content mt-2">
+                                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $g['contentId']]) ?>" target="_blank">Edit</a>
+                                    </div>
+                                <?php
                                 }
                                 ?>
                         <?php
@@ -162,16 +150,14 @@ use common\models\ModelMaster;
                             $i = 0;
                             foreach ($drive  as $w) :
                         ?>
-                        <p class="text-Goal"><?= $w['title'] ?></p>
-                        <p class="text-one"><?= $w['detail'] ?></p>
-                        <?php
+                                <p class="text-Goal"><?= $w['title'] ?></p>
+                                <p class="text-one"><?= $w['detail'] ?></p>
+                                <?php
                                 if ($admin == 1) { ?>
-                        <div class=" col-12 text-end edit-content mt-2">
-                            <a class="btn btn-warning bt-line"
-                                href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $w['contentId']]) ?>"
-                                target="_blank">Edit</a>
-                        </div>
-                        <?php
+                                    <div class=" col-12 text-end edit-content mt-2">
+                                        <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $w['contentId']]) ?>" target="_blank">Edit</a>
+                                    </div>
+                                <?php
                                 }
                                 ?>
                         <?php
@@ -186,7 +172,7 @@ use common\models\ModelMaster;
                             foreach ($button  as $q) :
                         ?>
 
-                        <button type="button" class="btn btn-primary"><?= $q['title'] ?></button>
+                                <button type="button" class="btn btn-primary"><?= $q['title'] ?></button>
                         <?php
                                 $i++;
                             endforeach;
@@ -203,7 +189,7 @@ use common\models\ModelMaster;
                 $i = 0;
                 foreach ($button as $q) :
             ?>
-            <img src="<?= Path::backendUrl() . $q['image'] ?>" class="image-Group-6">
+                    <img src="<?= Path::backendUrl() . $q['image'] ?>" class="image-Group-6">
             <?php
 
                     $i++;
@@ -215,11 +201,9 @@ use common\models\ModelMaster;
     </div>
     <?php
     if ($admin == 1) { ?>
-    <div class=" col-12 text-end edit-content mt-2">
-        <a class="btn btn-warning bt-line"
-            href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $q['contentId']]) ?>"
-            target="_blank">Edit(Button inside)</a>
-    </div>
+        <div class=" col-12 text-end edit-content mt-2">
+            <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $q['contentId']]) ?>" target="_blank">Edit(Button inside)</a>
+        </div>
     <?php
     }
     ?>

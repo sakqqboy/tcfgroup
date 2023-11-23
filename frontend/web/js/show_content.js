@@ -8,7 +8,7 @@ $url = $baseUrl;
 
 function showContent(partId) {
     var switches = $("#switch-" + partId).val();
-    if(switches == 1) {
+    if (switches == 1) {
         $("#switch-" + partId).val(0);
     } else {
         $("#switch-" + partId).val(1);
@@ -22,14 +22,14 @@ function showContent(partId) {
         data: {
             switches: switches,
             partId: partId,
-           
+
         },
         success: function (data) {
-            if(data.status) {
-                if(switches == 0) {
-                    $("#"+ partId).css("opacity", "0.3");
+            if (data.status) {
+                if (switches == 0) {
+                    $("#" + partId).css("opacity", "0.3");
                 } else {
-                    $("#"+ partId).css("opacity", "1");
+                    $("#" + partId).css("opacity", "1");
                 }
             }
         }
@@ -46,7 +46,7 @@ $url = $baseUrl;
 
 function showContentBranch(partId, branchId) {
     var switches = $("#switch-" + partId).val();
-    if(switches == 1) {
+    if (switches == 1) {
         $("#switch-" + partId).val(0);
     } else {
         $("#switch-" + partId).val(1);
@@ -61,14 +61,14 @@ function showContentBranch(partId, branchId) {
             switches: switches,
             partId: partId,
             branchId: branchId,
-           
+
         },
         success: function (data) {
-            if(data.status) {
-                if(switches == 0) {
-                    $("#"+ partId).css("opacity", "0.3");
+            if (data.status) {
+                if (switches == 0) {
+                    $("#" + partId).css("opacity", "0.3");
                 } else {
-                    $("#"+ partId).css("opacity", "1");
+                    $("#" + partId).css("opacity", "1");
                 }
             }
         }

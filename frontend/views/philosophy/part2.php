@@ -12,7 +12,7 @@ use common\models\ModelMaster;
             foreach ($pagemain as $l) :
 
         ?>
-        <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $l['detail2'] ?>
+                <img src="<?= Path::backendUrl() ?>image/Rectangle1.png" class="image mr-1"> <?= $l['detail2'] ?>
         <?php
                 $i++;
             endforeach;
@@ -30,9 +30,9 @@ use common\models\ModelMaster;
                     if ($i < 4) {
 
             ?>
-            <div class="col-lg-3 col-md-6 col-12">
-                <img src="<?= Path::backendUrl() . $m['image'] ?>" style="width: 90px;"> <?= $m['title'] ?>
-            </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                            <img src="<?= Path::backendUrl() . $m['image'] ?>" style="width: 90px;"> <?= $m['title'] ?>
+                        </div>
             <?php
                     }
                     $i++;
@@ -43,11 +43,9 @@ use common\models\ModelMaster;
         </div>
         <?php
         if ($admin == 1) { ?>
-        <div class=" col-12 text-end edit-content">
-            <a class="btn btn-warning bt-line"
-                href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $m['contentId']]) ?>"
-                target="_blank">Edit</a>
-        </div>
+            <div class=" col-12 text-end edit-content">
+                <a class="btn btn-warning bt-line" href="<?= Path::backendUrl() . 'content/default/content-detail/' . ModelMaster::encodeParams(["contentId" => $m['contentId']]) ?>" target="_blank">Edit</a>
+            </div>
         <?php
         }
         ?>

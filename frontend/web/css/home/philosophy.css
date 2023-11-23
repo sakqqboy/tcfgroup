@@ -134,14 +134,35 @@
     width: 550px;
 }
 
-.image-screenshot1 {
-    width: 390px;
-
-}
 
 .image-screenshot2 {
     width: 390px;
     margin-left: -150px;
+}
+
+#videosList {
+    max-width: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#videosList2 {
+    max-width: 600px;
+    margin-left: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.video {
+    background-image: url('https://img.youtube.com/vi/nZcejtAwxz4/maxresdefault.jpg');
+    height: 300px;
+    width: 600px;
+    border-radius: 15px;
+
+}
+
+video::-webkit-media-controls {
+    display: none !important;
 }
 
 
@@ -227,5 +248,17 @@
         margin-left: 0px;
     }
 
+    .video {
+        height: 260px;
+        width: 440px;
+        margin-left: 20px;
+        border-radius: 13px;
+    }
 
+    #videosList2 {
+        max-width: 600px;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-left: -10px;
+    }
 }

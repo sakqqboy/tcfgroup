@@ -35,7 +35,7 @@
 }
 
 .button-start {
-    margin-left: -35px;
+    margin-left: 0.5px;
 }
 
 .p-services {
@@ -404,112 +404,6 @@
     font-family: 'klavika';
 }
 
-.width-imggrop-1 {
-    width: 23%;
-    margin-top: 150px;
-    margin-left: 30px;
-    cursor: pointer;
-}
-
-.copy-width-imggrop-1 {
-    width: 23%;
-    margin-top: 150px;
-    margin-left: 30px;
-    cursor: pointer;
-}
-
-.width-imggrop-2 {
-    width: 25%;
-    margin-left: -160px;
-    margin-top: -90px;
-    cursor: pointer;
-}
-
-.copy-width-imggrop-2 {
-    width: 25%;
-    margin-left: -160px;
-    margin-top: -90px;
-    cursor: pointer;
-}
-
-.width-imggrop-3 {
-    width: 21%;
-    margin-left: -90px;
-    margin-top: -210px;
-    cursor: pointer;
-}
-
-.copy-width-imggrop-3 {
-    width: 26%;
-    margin-left: -80px;
-    margin-top: -210px;
-    cursor: pointer;
-}
-
-.width-imggrop-4 {
-    width: 17%;
-    margin-left: -15px;
-    margin-top: -200px;
-    cursor: pointer;
-}
-
-.copy-width-imggrop-4 {
-    width: 22%;
-    margin-left: -20px;
-    margin-top: -210px;
-    cursor: pointer;
-}
-
-
-.width-imggrop-5 {
-    width: 23%;
-    margin-left: -70px;
-    margin-top: -85px;
-    cursor: pointer;
-}
-
-.copy-width-imggrop-5 {
-    width: 23%;
-    margin-left: -70px;
-    margin-top: -85px;
-    cursor: pointer;
-}
-
-.width-imggrop-6 {
-    width: 22%;
-    margin-left: -152px;
-    margin-top: 149px;
-    cursor: pointer;
-}
-
-.copy-width-imggrop-6 {
-    width: 22%;
-    margin-left: -152px;
-    margin-top: 149px;
-    cursor: pointer;
-}
-
-.width-imggrop-7 {
-    width: 24%;
-    margin-left: -210px;
-    margin-top: 400px;
-    cursor: pointer;
-}
-
-.copy-width-imggrop-7 {
-    width: 24%;
-    margin-left: -210px;
-    margin-top: 400px;
-    cursor: pointer;
-}
-
-.width-imggrop-8 {
-    width: 28%;
-    margin-left: -360px;
-    margin-top: 140px;
-}
-
-
 @media(max-width: 992px) {
     .serviecs-h1 {
         padding-top: 120px;
@@ -690,7 +584,7 @@
     }
 
     .width-group {
-        margin-top: -390px;
+        /* margin-top: 10px; */
     }
 
     .service-stage {
@@ -709,11 +603,24 @@
     }
 
     .button-start {
-        margin-top: -140px;
-        margin-left: -20px;
+        /* margin-top: -140px; */
+        margin-left: 0.5px;
     }
 
     .title-busi {
         margin-top: -30px;
+    }
+
+    .form-legal {
+        font-size: 17px;
+        padding-top: 15px;
+    }
+
+    .form-legal-copy {
+        font-size: 20px;
+    }
+
+    .service-part2 {
+        margin-top: -50px !important;
     }
 }

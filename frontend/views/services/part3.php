@@ -1,10 +1,11 @@
 <?php
-    use common\helpers\Path;
-    use common\models\ModelMaster;
+
+use common\helpers\Path;
+use common\models\ModelMaster;
 
 ?>
 
-<div class="col-12 pr12 bk-ser">   
+<div class="col-12 pr12 bk-ser">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-12 col-12">
@@ -28,13 +29,13 @@
                 <div class="col-12 mt-80">
                     <div class="row" style="height: 30px;">
                         <?php
-                            if (isset($understanding) && count($understanding) > 0) { 
+                        if (isset($understanding) && count($understanding) > 0) {
                         ?>
-                        <?php
+                            <?php
                             $i = 1;
                             foreach ($understanding as $std) :
                                 if ($i < 4) {
-                        ?>  
+                            ?>
                                     <div class="col-4 Es1 text-center" id="limited-<?= $i ?>" onmouseover="javascript:showLimited2(<?= $i ?>)">
                                         <?= $std['title'] ?>
                                     </div>
@@ -62,67 +63,68 @@
                 </div>
                 <div class="col-12 Es1"><br>
                     <?php
-                        if (isset($newservices) && count($newservices) > 0) {
+                    if (isset($newservices) && count($newservices) > 0) {
                         $i = 1;
                         foreach ($newservices as $s) :
                             if ($i < 4) {
                     ?>
-                            <div class="row" style="display: <?= $i == 1 ? '' : 'none' ?>;" id="newservices-<?= $i ?>">
-                                <div class="title-newservices">
-                                    <p> <?= $s['title'] ?><p>
+                                <div class="row" style="display: <?= $i == 1 ? '' : 'none' ?>;" id="newservices-<?= $i ?>">
+                                    <div class="title-newservices">
+                                        <p> <?= $s['title'] ?>
+                                        <p>
+                                    </div>
+                                    <div class="detail-newservices">
+                                        <?php
+                                        if ($s['detail'] != '') {
+                                        ?>
+                                            <li><?= $s['detail'] ?></li>
+                                        <?php
+                                        }
+                                        ?>
+                                        <?php
+                                        if ($s['detail2'] != '') {
+                                        ?>
+                                            <li><?= $s['detail2'] ?></li>
+                                        <?php
+                                        }
+                                        ?>
+                                        <?php
+                                        if ($s['detail3'] != '') {
+                                        ?>
+                                            <li><?= $s['detail3'] ?></li>
+                                        <?php
+                                        }
+                                        ?>
+                                        <?php
+                                        if ($s['detail4'] != '') {
+                                        ?>
+                                            <li><?= $s['detail4'] ?></li>
+                                        <?php
+                                        }
+                                        ?>
+                                        <?php
+                                        if ($s['detail5'] != '') {
+                                        ?>
+                                            <li><?= $s['detail5'] ?></li>
+                                        <?php
+                                        }
+                                        ?>
+                                        <?php
+                                        if ($s['detail6'] != '') {
+                                        ?>
+                                            <li><?= $s['detail6'] ?></li>
+                                        <?php
+                                        }
+                                        ?>
+                                        <?php
+                                        if ($s['detail7'] != '') {
+                                        ?>
+                                            <li><?= $s['detail7'] ?></li>
+                                        <?php
+                                        }
+                                        ?>
+                                    </div>
                                 </div>
-                                <div class="detail-newservices">
-                                    <?php
-                                        if( $s['detail'] != '') {
-                                    ?>
-                                        <li><?= $s['detail'] ?></li>
-                                    <?php 
-                                        }
-                                    ?>
-                                    <?php
-                                        if( $s['detail2'] != '') {
-                                    ?>
-                                        <li><?= $s['detail2'] ?></li>
-                                    <?php 
-                                        }
-                                    ?>
-                                    <?php
-                                        if( $s['detail3'] != '') {
-                                    ?>
-                                        <li><?= $s['detail3'] ?></li>
-                                    <?php 
-                                        }
-                                    ?>
-                                    <?php
-                                        if( $s['detail4'] != '') {
-                                    ?>
-                                        <li><?= $s['detail4'] ?></li>
-                                    <?php 
-                                        }
-                                    ?>
-                                    <?php
-                                        if( $s['detail5'] != '') {
-                                    ?>
-                                        <li><?= $s['detail5'] ?></li>
-                                    <?php 
-                                        }
-                                    ?>
-                                    <?php
-                                        if( $s['detail6'] != '') {
-                                    ?>
-                                        <li><?= $s['detail6'] ?></li>
-                                    <?php 
-                                        }
-                                    ?>
-                                    <?php
-                                        if( $s['detail7'] != '') {
-                                    ?>
-                                        <li><?= $s['detail7'] ?></li>
-                                    <?php 
-                                        }
-                                    ?>
-                                </div>
-                            </div>
 
                     <?php
                             }

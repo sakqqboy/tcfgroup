@@ -24,6 +24,7 @@ function previousContent(y) {
     $("#background-" + prev).fadeIn();
 }
 
+
 function servicesPart3(i) {
     var a = 0;
     while (a < 4) { //การซ่อนข้อความที่ไม่ต้องการให้แสดงโดยใช้ while
@@ -32,3 +33,6 @@ function servicesPart3(i) {
     }
     $("#newservices-" + i).show();
 }
+
+
+

@@ -38,7 +38,14 @@ use common\models\ModelMaster;
         ?>
                 <div class="col-lg-6 col-md-6  col-12 mt-50 text-center">
                     <div class="col-12">
-                        <img src="<?= Path::backendUrl() . $shot['image'] ?>" class="image-screenshot1">
+                        <div id="videosList">
+                            <div class="video">
+                                <video class="thevideo" loop preload="none">
+                                    <source src="https://giant.gfycat.com/VerifiableTerrificHind.mp4" type="video/mp4">
+                                    <source src="https://giant.gfycat.com/VerifiableTerrificHind.webm" type="video/webm">
+                                </video>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-12">
                         <span class="badge bg-primary image-BG1"> <a href="#" class="no-underline4"> <i class="fa fa-play-circle link-list" aria-hidden="true"></i> <?= $shot['title'] ?></a></span>
@@ -69,7 +76,15 @@ use common\models\ModelMaster;
         ?>
                 <div class="col-lg-6 col-md-6 col-12 mt-50 text-center">
                     <div class="col-12">
-                        <img src="<?= Path::backendUrl() . $hs['image'] ?>" class="image-screenshot2">
+                        <!-- <img src="<?= Path::backendUrl() . $hs['image'] ?>" class="image-screenshot2"> -->
+                        <div id="videosList2">
+                            <div class="video">
+                                <video class="thevideo" loop preload="none">
+                                    <source src="https://giant.gfycat.com/VerifiableTerrificHind.mp4" type="video/mp4">
+                                    <source src="https://giant.gfycat.com/VerifiableTerrificHind.webm" type="video/webm">
+                                </video>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-12">
                         <span class="badge bg-primary image-BG2"> <a href="#" class="no-underline4"> <i class="fa fa-play-circle link-list" aria-hidden="true"></i> <?= $hs['title'] ?></a></span>
@@ -158,7 +173,15 @@ use common\models\ModelMaster;
         ?>
                 <div class="col-lg-6 col-md-6  col-12 mt-50 text-center">
                     <div class="col-12">
-                        <img src="<?= Path::backendUrl() . $or['image'] ?>" class="image-screenshot1">
+                        <!-- <img src="<?= Path::backendUrl() . $or['image'] ?>" class="image-screenshot1"> -->
+                        <div id="videosList">
+                            <div class="video">
+                                <video class="thevideo" loop preload="none">
+                                    <source src="https://giant.gfycat.com/VerifiableTerrificHind.mp4" type="video/mp4">
+                                    <source src="https://giant.gfycat.com/VerifiableTerrificHind.webm" type="video/webm">
+                                </video>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-12">
                         <span class="badge bg-primary image-BG1"> <a href="#" class="no-underline4"> <i class="fa fa-play-circle link-list" aria-hidden="true"></i> <?= $or['title'] ?></a> </span>
@@ -190,7 +213,15 @@ use common\models\ModelMaster;
         ?>
                 <div class="col-lg-6 col-md-6 col-12  mt-50 text-center">
                     <div class="col-12">
-                        <img src="<?= Path::backendUrl() . $ly['image'] ?>" class="image-screenshot2">
+                        <!-- <img src="<?= Path::backendUrl() . $ly['image'] ?>" class="image-screenshot2"> -->
+                        <div id="videosList2">
+                            <div class="video">
+                                <video class="thevideo" loop preload="none">
+                                    <source src="https://giant.gfycat.com/VerifiableTerrificHind.mp4" type="video/mp4">
+                                    <source src="https://giant.gfycat.com/VerifiableTerrificHind.webm" type="video/webm">
+                                </video>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-12">
                         <span class="badge bg-primary image-BG2"> <a href="#" class="no-underline4"> <i class="fa fa-play-circle link-list" aria-hidden="true"></i> <?= $ly['title'] ?></a></span>

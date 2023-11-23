@@ -216,9 +216,9 @@ $form = ActiveForm::begin([
                         <?php
                                 endforeach;
                         ?>
-                        <?php
-                            }
-                        ?>
+                    <?php
+                        }
+                    ?>
                     </div>
                 </div>
                 <input type="hidden" name="memberId" value="<?= $member->memberId ?>">

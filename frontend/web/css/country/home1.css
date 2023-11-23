@@ -20,7 +20,6 @@
     border-radius: 8px;
 }
 
-
 .main-page-form {
     width: 12rem;
 }
@@ -367,7 +366,7 @@
     }
 
     .link-privacy {
-        padding-left: 10px;
+        padding-left: 35px;
     }
 
     .accordion {
@@ -382,7 +381,11 @@
 
     .calendar-button1 {
         font-size: 10px;
-        margin-left: 10px;
+        margin-left: 7px;
+    }
+
+    .sun-calendar-button1 {
+        margin-left: 25px;
     }
 
     .card-home1 {
@@ -395,7 +398,7 @@
 
     .title-contact-footer1 {
         font-size: 10px;
-        padding-left: 10px;
+        padding-left: 25px;
     }
 
     .footer-global {
@@ -413,7 +416,7 @@
     }
 
     .title-business-footer1 {
-        padding-left: 10px;
+        padding-left: 25px;
     }
 
     .img-iconday {
@@ -430,7 +433,7 @@
     }
 
     .badge-table {
-        padding-left: 10px;
+        padding-left: 25px;
     }
 
     .footer1-country {
@@ -466,6 +469,21 @@
 
     .strong-days {
         font-size: 20px;
+    }
+
+    .card-body {
+        border-radius: 8px;
+        width: 13em;
+    }
+
+    .card-body2 {
+        border-radius: 8px;
+        margin-top: -50px;
+        width: 13em;
+    }
+
+    .day-cal {
+        margin-left: 17px;
     }
 
 }

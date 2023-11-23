@@ -29,15 +29,15 @@ use common\models\ModelMaster;
             if (isset($company) && count($company) > 0) {
                 $i = 0;
                 foreach ($company as $c) :
-                    if ($i < 6) {
+                    // if ($i < 6) {
 
                     ?>
-                        <div class="col-lg-12 Company">
-                            <li onclick="javascript:showContentAdmin(<?= $i ?>)"> <?= $c['title'] ?> </li>
-                        </div>
+                    <div class="col-lg-12 Company">
+                        <li onclick="javascript:showContentAdmin(<?= $i ?>)"> <?= $c['title'] ?> </li>
+                    </div>
 
             <?php
-                    }
+                    // }
                     $i++;
                 endforeach;
             }

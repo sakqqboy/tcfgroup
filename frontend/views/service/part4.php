@@ -120,6 +120,7 @@ use common\models\ModelMaster;
                             if ($i < 6) {
 
                     ?>
+<<<<<<< HEAD
                                 <div class="col-lg-4 col-md-6 col-sm-4 col-8">
                                     <div class="card col-10 mt-20 form-page-text">
                                         <div class="text-center">
@@ -130,6 +131,17 @@ use common\models\ModelMaster;
                                             </div>
                                         </div>
                                     </div>
+=======
+                    <div class="col-lg-4 col-md-6 col-sm-4 col-6">
+                        <div class="card col-10 mt-20 form-page-text">
+                            <div class="text-center">
+                                <img src="<?= Path::backendUrl() . $table['image'] ?>" class="card-img-top">
+                                <div class="card-body text-center">
+                                    <h6> <?= $table['title'] ?></h6>
+                                    <p><?= $table['detail'] ?></p>
+                                    <button type="button"
+                                        class="btn btn-outline-primary"><?= $table['detail2'] ?></button>
+>>>>>>> 5bfcb10bf55c89373f9df8b64bdd06bf670000f5
                                 </div>
                     <?php
                             }

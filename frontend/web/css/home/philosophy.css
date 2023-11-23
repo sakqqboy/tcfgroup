@@ -233,6 +233,7 @@ video::-webkit-media-controls {
     }
 
     .Why-We-Work {
+        padding-left: 10px;
         font-size: 26px;
     }
 

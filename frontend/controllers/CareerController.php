@@ -196,7 +196,7 @@ class CareerController extends Controller
                 //->leftJoin('member_type', 'member_type.memberTypeId = member_has_type.memberTypeId')
                 ->where([
                     "member_has_type.memberId" => Yii::$app->user->id,
-                    "memberTypeName" => "Administrator"
+                    "mt.memberTypeName" => "Administrator"
                 ])
                 ->asArray()
                 ->one();

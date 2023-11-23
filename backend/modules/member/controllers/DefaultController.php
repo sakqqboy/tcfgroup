@@ -13,6 +13,8 @@ use backend\models\tokyoconsulting\TeamPosition;
 use common\helpers\Path;
 use common\models\ModelMaster;
 use Exception;
+use Faker\Provider\ar_EG\Person as Ar_EGPerson;
+use Faker\Provider\ar_JO\Person;
 use Yii;
 use yii\db\Expression;
 use yii\web\Controller;
@@ -523,7 +525,7 @@ class DefaultController extends Controller
             "branchId" => $param["branchId"],
         ]);
     }
-    public function actionSaveMemberCheck() 
+    public function actionSaveMemberCheck()
     {
         if (!Yii::$app->user->id) {
             return $this->redirect(Yii::$app->homeUrl . 'site/login');
@@ -533,13 +535,29 @@ class DefaultController extends Controller
             $check = new MemberHasType();
             $check->memberId = $_POST["memberId"];
             $check->memberTypeId = $_POST["memberTypeId"];
-        
+
             if ($check->save(false)) {
-            
             }
         } else {
             MemberHasType::deleteAll(['memberId' => $_POST["memberId"], 'memberTypeId' => $_POST["memberTypeId"]]);
         }
-        
+    }
+    public function actionTcfGroupCreate()
+    {
+        if (!Yii::$app->user->id) {
+            return $this->redirect(Yii::$app->homeUrl . 'site/login');
+        }
+        if (isset($_POST["personalId"])) {
+            $personal = new Personal();
+            $personal->personalId = $_POST["personalId"];
+            $personal->persnalName = $_POST["personalName"];
+            $personal->pesonalEmail = $_POST["personalEmail"];
+            $personal->personalUsername = $_POST["personalUsername"];
+            $personal->status = 1;
+            $personal->createDatetime = new Expression('NOW()');
+            $personal->updateDateTime = new Expression('NOW()');
+        }
+
+        return $this->render('tcf_group_create');
     }
 }

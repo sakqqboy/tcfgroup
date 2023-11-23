@@ -20,14 +20,12 @@ $form = ActiveForm::begin([
         <div class="row col-lg-10 offset-1 mt-3">
             <div class="font-topic col-lg-12 font-body h4">
                 TYPE<br>
-                <input type="text" name="membertypename" class="font-input form-control col-lg-6"
-                    value="<?= $membertype->memberTypeName ?>" required>
+                <input type="text" name="membertypename" class="font-input form-control col-lg-6" value="<?= $membertype->memberTypeName ?>" required>
             </div>
             <input type="hidden" name="memberTypeId" value="<?= $membertype->memberTypeId ?>">
         </div>
         <div class="col-lg-12 mb-3 text-end">
-            <button type="submit" class="btn btn-success font-button"
-                href="<?= Yii::$app->homeUrl . 'member/default/update-member-type' ?>">Submit</button>
+            <button type="submit" class="btn btn-success font-button" href="<?= Yii::$app->homeUrl . 'member/default/update-member-type' ?>">Submit</button>
         </div>
     </div>
 </div>

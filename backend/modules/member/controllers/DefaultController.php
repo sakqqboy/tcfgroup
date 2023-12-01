@@ -517,6 +517,7 @@ class DefaultController extends Controller
             ->asArray()
             ->all();
 
+
         return $this->render('member_check', [
             "member" => $member,
             "branchs" => $branchs,
@@ -541,23 +542,5 @@ class DefaultController extends Controller
         } else {
             MemberHasType::deleteAll(['memberId' => $_POST["memberId"], 'memberTypeId' => $_POST["memberTypeId"]]);
         }
-    }
-    public function actionTcfGroupCreate()
-    {
-        if (!Yii::$app->user->id) {
-            return $this->redirect(Yii::$app->homeUrl . 'site/login');
-        }
-        if (isset($_POST["personalId"])) {
-            $personal = new Personal();
-            $personal->personalId = $_POST["personalId"];
-            $personal->persnalName = $_POST["personalName"];
-            $personal->pesonalEmail = $_POST["personalEmail"];
-            $personal->personalUsername = $_POST["personalUsername"];
-            $personal->status = 1;
-            $personal->createDatetime = new Expression('NOW()');
-            $personal->updateDateTime = new Expression('NOW()');
-        }
-
-        return $this->render('tcf_group_create');
     }
 }

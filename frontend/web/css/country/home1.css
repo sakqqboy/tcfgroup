@@ -33,30 +33,10 @@
     margin-top: -110px;
     margin-left: 170px;
     line-height: 8px;
-
 }
 
 .img-zgif {
     width: 100%
-}
-
-.img-iconday {
-    margin-left: 0px;
-}
-
-.strong-days {
-    font-size: 30px;
-}
-
-.dayss {
-    font-size: 15px;
-    margin-top: 5px;
-}
-
-.badg-dayss {
-    height: 60px;
-    width: 60px;
-    background-color: #265AA7;
 }
 
 .table-calendar {
@@ -271,6 +251,60 @@
     color: #0B4A8E;
 }
 
+:root {
+    --smaller: .75;
+}
+
+.li {
+    display: inline-block;
+    font-size: 16px;
+    list-style-type: none;
+    color: white;
+    padding-top: 3px;
+    padding-left: 3px;
+    padding-left: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    border: #265AA7 solid;
+    background-color: #265AA7;
+    border-radius: 10px;
+    width: 3.9rem;
+    /* text-transform: uppercase; */
+}
+
+.typedayss {
+    display: block;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.daytime {
+    font-size: 13px;
+}
+
+.emoji {
+    display: none;
+    padding: 1rem;
+}
+
+.emoji .emo {
+    font-size: 10px;
+    padding: 0 .5rem;
+}
+
+@media all and (max-width: 768px) {
+    h1 {
+        font-size: calc(1.5rem * var(--smaller));
+    }
+
+    li {
+        font-size: calc(1.125rem * var(--smaller));
+    }
+
+    li span {
+        font-size: calc(3.375rem * var(--smaller));
+    }
+}
 
 
 
@@ -457,10 +491,6 @@
         padding-left: 30px;
     }
 
-    .dayss {
-        font-size: 12px;
-        margin-top: 5px;
-    }
 
     .badg-dayss {
         height: 50px;

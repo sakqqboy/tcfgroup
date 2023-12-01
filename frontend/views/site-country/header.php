@@ -7,15 +7,9 @@ use common\models\ModelMaster;
 <!-- image/img/tcg-group-bangladesh.png -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-<<<<<<< HEAD
-        <a href="<?= Yii::$app->homeUrl ?>site/index" class="nav-link"><img src="<?= Path::backendUrl() ?>image/tcg-group.png" class="" style="width: 200px;"> </a>
-        <p class="font-size14 text-primary" style="margin-bottom: -57px;margin-left:-87px;">
-=======
-        <a href="<?= Yii::$app->homeUrl ?>site/index" class="nav-link"><img src="<?= Path::backendUrl() ?>image/tcg-group.png" class="" style="width: 200px;">
-
-        </a>
+        <a href="<?= Yii::$app->homeUrl ?>site/index" class="nav-link"><img src="<?= Path::backendUrl() ?>image/tcg-group.png" class="" style="width: 200px;"></a>
         <p class="font-size14 text-primary header-branch">
->>>>>>> 5bfcb10bf55c89373f9df8b64bdd06bf670000f5
+
             <a href="<?= Yii::$app->homeUrl ?>site-country/index/<?= $branchName ?>" class="no-underline">
                 <?= $branchName ?>
         </p>

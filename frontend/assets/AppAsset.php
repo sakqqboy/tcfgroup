@@ -48,6 +48,7 @@ class AppAsset extends AssetBundle
         'js/contact_us.js',
         'js/service.js',
         'js/show_content.js',
+        'js/timeline.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

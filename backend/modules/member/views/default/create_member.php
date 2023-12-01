@@ -39,7 +39,7 @@ $form = ActiveForm::begin([
                 </div>
                 <div class="col-lg-4 input-fields mt-2">
                     Nickname<br>
-                    <input type="text" name="nickname" class="input-data form-control" placeholder="Enter your nickname"required>
+                    <input type="text" name="nickname" class="input-data form-control" placeholder="Enter your nickname" required>
                 </div>
                 <div class="col-lg-4 input-fields mt-2">
                     Date of Birth<br>
@@ -98,14 +98,13 @@ $form = ActiveForm::begin([
             <div class="row mt-3">
                 <div class="col-lg-4 input-fields">
                     <label>Branch</label>
-                    <select class="input-data form-select" name="branchId" id="branchId"
-                        onchange="javascript:findInfo()" required>
+                    <select class="input-data form-select" name="branchId" id="branchId" onchange="javascript:findInfo()" required>
                         <option value="">Please select your branch</option>
                         <?php
                         if (isset($branchs) && count($branchs) > 0) {
                             foreach ($branchs as $a) :
                         ?>
-                        <option value="<?= $a["branchId"] ?>"><?= $a["branchName"] ?></option>
+                                <option value="<?= $a["branchId"] ?>"><?= $a["branchName"] ?></option>
                         <?php
                             endforeach;
                         }
@@ -141,7 +140,7 @@ $form = ActiveForm::begin([
                         if (isset($teampositions) && count($teampositions) > 0) {
                             foreach ($teampositions as $t) :
                         ?>
-                        <option value="<?= $t["id"] ?>"><?= $t["name"] ?></option>
+                                <option value="<?= $t["id"] ?>"><?= $t["name"] ?></option>
                         <?php
                             endforeach;
                         }
@@ -151,20 +150,20 @@ $form = ActiveForm::begin([
                 <div class="col-lg-4 input-field mt-3">
                     <label>Type</label>
                     <div class="row">
-                    <?php
-                        if(isset($memberType) && count($memberType)>0){
-                            foreach($memberType as $type):
-                    ?>
-                        <div class="col-lg-6 mt-1">
-                            <input class="input-checkbox form-check-input" type="checkbox" id="inlineCheckbox1" name="memberType[]" value="<?=$type['memberTypeId']?>">
-                            <label class="input-checkbox form-check-label" for="inlineCheckbox1"><?=$type['memberTypeName']?></label>
-                        </div>
-                    <?php
-                        endforeach;
-                    ?>    
-                    <?php
+                        <?php
+                        if (isset($memberType) && count($memberType) > 0) {
+                            foreach ($memberType as $type) :
+                        ?>
+                                <div class="col-lg-6 mt-1">
+                                    <input class="input-checkbox form-check-input" type="checkbox" id="inlineCheckbox1" name="memberType[]" value="<?= $type['memberTypeId'] ?>">
+                                    <label class="input-checkbox form-check-label" for="inlineCheckbox1"><?= $type['memberTypeName'] ?></label>
+                                </div>
+                            <?php
+                            endforeach;
+                            ?>
+                        <?php
                         }
-                    ?>
+                        ?>
                     </div>
                 </div>
                 <div class="col-lg-12 text-end">

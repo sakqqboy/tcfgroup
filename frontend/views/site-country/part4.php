@@ -26,38 +26,25 @@
 					<img src="<?= Path::backendUrl() . $bangladreshDetail['image'] ?>" class="img-woman">
 					<div class="alert alert-secondary  text-center">
 						<p class="table-calendar"> <i class="fa fa-calendar" aria-hidden="true"> June 2023</i></p>
-						<p> S&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;&nbsp;S
+						<p>S&nbsp;&nbsp;&nbsp;&nbsp;M&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;W&nbsp;&nbsp;&nbsp;&nbsp;T&nbsp;&nbsp;&nbsp;&nbsp;F&nbsp;&nbsp;&nbsp;&nbsp;S
 						</p>
 						<p> 3&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;5 <button class="btn btn-primary calendar-button" type="button">6</button>&nbsp;&nbsp;&nbsp;&nbsp;7&nbsp;&nbsp;&nbsp;&nbsp;8&nbsp;&nbsp;&nbsp;&nbsp;9
 						</p>
 					</div>
 				</div>
-				<div class="col-lg-6 col-md-6 col-6 img-iconday">
-					<div class="row">
-						<div class="col-3">
-							<span class="badge badg-dayss">
-								<strong class="strong-days">09</strong>
-								<p class="dayss">days</p>
-							</span>
-						</div>
-						<div class="col-3">
-							<span class="badge badg-dayss">
-								<strong class="strong-days">14</strong>
-								<p class="dayss">Hours</p>
-							</span>
-						</div>
-						<div class="col-3">
-							<span class="badge badg-dayss">
-								<strong class="strong-days">35</strong>
-								<p class="dayss">Mins</p>
-							</span>
-						</div>
-						<div class="col-3">
-							<span class="badge badg-dayss">
-								<strong class="strong-days">42</strong>
-								<p class="dayss">Secs</p>
-							</span>
-						</div>
+				<div class="col-lg-6 col-md-6 col-6">
+					<div id="countdown">
+						<ul>
+							<li class="li"><span class="typedayss" id="days"></span><span class="daytime">days</span></li>
+							<li class="li"><span class="typedayss" id="hours"></span><span class="daytime">Hours</span></li>
+							<li class="li"><span class="typedayss" id="minutes"></span><span class="daytime">Minutes</span></li>
+							<li class="li"><span class="typedayss" id="seconds"></span><span class="daytime">Seconds</span></li>
+						</ul>
+					</div>
+					<div id="content" class="emoji">
+						<span class="emo">🥳</span>
+						<span class="emo">🎉</span>
+						<span class="emo">🎂</span>
 					</div>
 				</div>
 			</div>

@@ -76,7 +76,6 @@ class DefaultController extends Controller
             $member->teamId = $_POST["teamid"];
             $member->teamPositionId = $_POST["teampositionid"];
 
-
             $imageObj = UploadedFile::getInstanceByName("picture");
             if (isset($imageObj) && !empty($imageObj)) {
                 $urlFolder = Path::getHost() . 'image/member/';
@@ -444,6 +443,7 @@ class DefaultController extends Controller
             }
         }
     }
+
     public function actionDeleteMemberType()
     {
         if (!Yii::$app->user->id) {

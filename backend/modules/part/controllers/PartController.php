@@ -200,6 +200,7 @@ class PartController extends Controller
         //     ->where(['branchId' => $param["branchId"]])
         //     ->andWhere(['like', 'partName', $param["pn"]])
         //     ->all();
+
         $dataProvider = new ActiveDataProvider([
             'query' => Part::find()
 

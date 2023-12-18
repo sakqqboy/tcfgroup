@@ -96,7 +96,7 @@ $form = ActiveForm::begin([
 </div>
 
 <div class="row bg-create pb-5" id="workInfo">
-    <div class="col-lg-12 box-create" id="workinfor"> 
+    <div class="col-lg-12 box-create" id="workinfor">
         <div class="col-lg-12 title-create">
             CREATE MEMBER<br>
         </div>
@@ -109,7 +109,7 @@ $form = ActiveForm::begin([
                     <label>
                         Branch
                     </label>
-                    <select class="input-data form-select" name="branchId" id="branchId"onchange="javascript:findInfo()">
+                    <select class="input-data form-select" name="branchId" id="branchId" onchange="javascript:findInfo()">
                         <option value="<?= $member->branchId ?>">
                             <?= Branch::branchName($member->branchId) ?>
                         </option>
@@ -117,7 +117,7 @@ $form = ActiveForm::begin([
                         if (isset($branch) && count($branch) > 0) {
                             foreach ($branch as $b) :
                         ?>
-                        <option value="<?= $b['branchId'] ?>"><?= $b['branchName'] ?></option>
+                                <option value="<?= $b['branchId'] ?>"><?= $b['branchName'] ?></option>
                         <?php
                             endforeach;
                         }
@@ -133,13 +133,13 @@ $form = ActiveForm::begin([
                             <?= Section::sectionName($member->sectionId) == null ? 'Please select section' : Section::sectionName($member->sectionId) ?>
                         </option>
                         <?php
-                            if (isset($section) && count($section) > 0) {
-                                foreach ($section as $s) :
+                        if (isset($section) && count($section) > 0) {
+                            foreach ($section as $s) :
                         ?>
-                            <option value="<?= $s['sectionId'] ?>"><?= $s['sectionName'] ?></option>
+                                <option value="<?= $s['sectionId'] ?>"><?= $s['sectionName'] ?></option>
                         <?php
-                                endforeach;
-                            }
+                            endforeach;
+                        }
                         ?>
                     </select>
                 </div>
@@ -152,13 +152,13 @@ $form = ActiveForm::begin([
                             <?= Position::positionName($member->positionId) == null ? 'Please select positions' : Position::positionName($member->positionId) ?>
                         </option>
                         <?php
-                            if (isset($position) && count($position) > 0) {
-                                foreach ($position as $p) :
+                        if (isset($position) && count($position) > 0) {
+                            foreach ($position as $p) :
                         ?>
-                        <option value="<?= $p['positionId'] ?>"><?= $p['positionName'] ?></option>
+                                <option value="<?= $p['positionId'] ?>"><?= $p['positionName'] ?></option>
                         <?php
-                                endforeach;
-                            }
+                            endforeach;
+                        }
                         ?>
                     </select>
                 </div>
@@ -171,13 +171,13 @@ $form = ActiveForm::begin([
                             <?= Team::teamName($member->teamId) == null ? 'Please select team' : Team::teamName($member->teamId) ?>
                         </option>
                         <?php
-                            if (isset($team) && count($team) > 0) {
-                                foreach ($team as $t) :
+                        if (isset($team) && count($team) > 0) {
+                            foreach ($team as $t) :
                         ?>
-                        <option value="<?= $t['teamId'] ?>"><?= $t['teamName'] ?></option>
+                                <option value="<?= $t['teamId'] ?>"><?= $t['teamName'] ?></option>
                         <?php
-                                endforeach;
-                            }
+                            endforeach;
+                        }
                         ?>
                     </select>
                 </div>
@@ -190,13 +190,13 @@ $form = ActiveForm::begin([
                             <?= TeamPosition::name($member->teamPositionId) == null ? 'Please select team' : TeamPosition::name($member->teamPositionId) ?>
                         </option>
                         <?php
-                            if (isset($teampositions) && count($teampositions) > 0) {
-                                foreach ($teampositions as $tp) :
+                        if (isset($teampositions) && count($teampositions) > 0) {
+                            foreach ($teampositions as $tp) :
                         ?>
-                        <option value="<?= $tp['id'] ?>"><?= $tp['name'] ?></option>
+                                <option value="<?= $tp['id'] ?>"><?= $tp['name'] ?></option>
                         <?php
-                                endforeach;
-                            }
+                            endforeach;
+                        }
                         ?>
                     </select>
                 </div>
@@ -205,20 +205,20 @@ $form = ActiveForm::begin([
                         Type
                     </label>
                     <div class="row">
-                    <?php
-                        if(isset($memberType) && count($memberType)>0){
-                            foreach($memberType as $type):
-                    ?>
-                            <div class="col-lg-6 mt-1">
-                                <input class="input-checkbox form-check-input" type="checkbox" id="inlineCheckbox1" name="memberType[]" value="<?=$type['memberTypeId']?>" <?=MemberHasType::IsHasType($type['memberTypeId'],$member->memberId)==1?"checked":''?>>
-                                <label class="input-checkbox form-check-label" for="inlineCheckbox1"><?=$type['memberTypeName']?></label>
-                            </div>
                         <?php
-                                endforeach;
+                        if (isset($memberType) && count($memberType) > 0) {
+                            foreach ($memberType as $type) :
                         ?>
-                    <?php
+                                <div class="col-lg-6 mt-1">
+                                    <input class="input-checkbox form-check-input" type="checkbox" id="inlineCheckbox1" name="memberType[]" value="<?= $type['memberTypeId'] ?>" <?= MemberHasType::IsHasType($type['memberTypeId'], $member->memberId) == 1 ? "checked" : '' ?>>
+                                    <label class="input-checkbox form-check-label" for="inlineCheckbox1"><?= $type['memberTypeName'] ?></label>
+                                </div>
+                            <?php
+                            endforeach;
+                            ?>
+                        <?php
                         }
-                    ?>
+                        ?>
                     </div>
                 </div>
                 <input type="hidden" name="memberId" value="<?= $member->memberId ?>">
